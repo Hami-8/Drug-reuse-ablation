@@ -1,0 +1,566 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Gastrointestinal epithelial barrier disorders",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_mesalamine",
+            "via": [
+              "t_inflammatory_marker"
+            ],
+            "to": "p_inflammatory_response",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_mesalamine",
+            "via": [
+              "t_inflammatory_marker"
+            ],
+            "to": "d_Gastrointestinal_epithelial_barrier_disorders",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_infliximab",
+            "via": [
+              "t_cytokine_receptor"
+            ],
+            "to": "p_inflammatory_response",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_infliximab",
+            "via": [
+              "p_inflammatory_response"
+            ],
+            "to": "d_Gastrointestinal_epithelial_barrier_disorders",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_adalimumab",
+            "via": [
+              "t_cytokine_receptor"
+            ],
+            "to": "p_inflammatory_response",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_adalimumab",
+            "via": [
+              "p_inflammatory_response"
+            ],
+            "to": "d_Gastrointestinal_epithelial_barrier_disorders",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_mesalamine",
+          "type": "Drug",
+          "label": "Mesalamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_budesonide",
+          "type": "Drug",
+          "label": "Budesonide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ustekinumab",
+          "type": "Drug",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tocilizumab",
+          "type": "Drug",
+          "label": "Tocilizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_loperamide",
+          "type": "Drug",
+          "label": "Loperamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_probiotics",
+          "type": "Drug",
+          "label": "Probiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_Gastrointestinal_epithelial_barrier_disorders",
+          "type": "Disease",
+          "label": "Gastrointestinal epithelial barrier disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "t_cytokine_receptor",
+          "type": "Target",
+          "label": "Cytokine Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "t_inflammatory_marker",
+          "type": "Target",
+          "label": "Inflammatory Marker",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "p_inflammatory_response",
+          "type": "Pathway",
+          "label": "Inflammatory Response Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "p_barrier_function",
+          "type": "Pathway",
+          "label": "Epithelial Barrier Function Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "p_immune_modulation",
+          "type": "Pathway",
+          "label": "Immune Modulation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Mesalamine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Budesonide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Tocilizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Loperamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Probiotics",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_mesalamine",
+          "target": "t_inflammatory_marker",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于减少肠道炎症"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "t_cytokine_receptor",
+          "relation": "inhibits",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "对 TNF-α 抑制的有效性"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "t_cytokine_receptor",
+          "relation": "inhibits",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "作用机制与 infliximab 类似"
+        },
+        {
+          "source": "drug_budesonide",
+          "target": "p_inflammatory_response",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "类固醇减少免疫反应"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "p_inflammatory_response",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "可减少肠道炎症并降低组织损伤"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "t_cytokine_receptor",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "针对 IL-12/23 的新机制"
+        },
+        {
+          "source": "drug_tocilizumab",
+          "target": "t_cytokine_receptor",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "作用于 IL-6，调节免疫反应"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "p_immune_modulation",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过影响免疫应答来改善症状"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "p_immune_modulation",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "免疫抑制药物，改善肠道健康"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "p_immune_modulation",
+          "relation": "modulates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "常作为免疫抑制治疗"
+        },
+        {
+          "source": "drug_loperamide",
+          "target": "p_barrier_function",
+          "relation": "modulates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "减轻腹泻，可改善屏障功能"
+        },
+        {
+          "source": "drug_probiotics",
+          "target": "p_barrier_function",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "通过调节肠道微生物促进肠道屏障"
+        },
+        {
+          "source": "t_cytokine_receptor",
+          "target": "p_inflammatory_response",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "细胞因子受体在炎症通路中起关键作用"
+        },
+        {
+          "source": "t_inflammatory_marker",
+          "target": "p_inflammatory_response",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "标记物与炎症活动相关"
+        },
+        {
+          "source": "p_inflammatory_response",
+          "target": "d_Gastrointestinal_epithelial_barrier_disorders",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "炎症过程直接影响肠道屏障功能"
+        },
+        {
+          "source": "p_barrier_function",
+          "target": "d_Gastrointestinal_epithelial_barrier_disorders",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "屏障功能损害导致临床表现"
+        },
+        {
+          "source": "p_immune_modulation",
+          "target": "d_Gastrointestinal_epithelial_barrier_disorders",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "免疫调节影响肠道健康"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_mesalamine",
+              "target": "t_inflammatory_marker",
+              "relation": "modulates",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "常用于减少肠道炎症"
+            },
+            {
+              "source": "t_inflammatory_marker",
+              "target": "p_inflammatory_response",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "标记物与炎症活动相关"
+            },
+            {
+              "source": "p_inflammatory_response",
+              "target": "d_Gastrointestinal_epithelial_barrier_disorders",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "炎症过程直接影响肠道屏障功能"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→Target→Pathway→Disease，形成2条不相交路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_mesalamine",
+              "target": "t_inflammatory_marker",
+              "relation": "modulates",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "常用于减少肠道炎症"
+            },
+            {
+              "source": "t_inflammatory_marker",
+              "target": "p_inflammatory_response",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "标记物与炎症活动相关"
+            },
+            {
+              "source": "p_barrier_function",
+              "target": "d_Gastrointestinal_epithelial_barrier_disorders",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "屏障功能损害导致临床表现"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→Target→Pathway→Disease，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [],
+    "next_focus_for_pi": []
+  }
+}
