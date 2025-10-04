@@ -1,0 +1,467 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Inherited white matter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_clozapine",
+          "name": "Clozapine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_valproic_acid",
+          "name": "Valproic Acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_lithium",
+          "name": "Lithium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate Mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_nabumetone",
+          "name": "Nabumetone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sodium_valproate",
+          "name": "Sodium Valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_propranolol",
+          "name": "Propranolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_phenobarbital",
+          "name": "Phenobarbital"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_hydroxyurea",
+          "name": "Hydroxyurea"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_chlorpromazine",
+          "name": "Chlorpromazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_clozapine",
+          "type": "Drug",
+          "label": "Clozapine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_valproic_acid",
+          "type": "Drug",
+          "label": "Valproic Acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate Mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nabumetone",
+          "type": "Drug",
+          "label": "Nabumetone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_propranolol",
+          "type": "Drug",
+          "label": "Propranolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hydroxyurea",
+          "type": "Drug",
+          "label": "Hydroxyurea",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_chlorpromazine",
+          "type": "Drug",
+          "label": "Chlorpromazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_iwd",
+          "type": "Disease",
+          "label": "Inherited White Matter Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_clozapine",
+          "target": "n_iwd",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知可能影响白质病的药物"
+        },
+        {
+          "source": "n_valproic_acid",
+          "target": "n_iwd",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与相似表型关联的常识"
+        },
+        {
+          "source": "n_lithium",
+          "target": "n_iwd",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "类药物疗效与白质病关联"
+        },
+        {
+          "source": "n_carbamazepine",
+          "target": "n_iwd",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知副作用可恶化的表型"
+        },
+        {
+          "source": "n_mycophenolate_mofetil",
+          "target": "n_iwd",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "常识推测与白质病相关性"
+        },
+        {
+          "source": "n_nabumetone",
+          "target": "n_iwd",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "潜在影响白质病的药理"
+        },
+        {
+          "source": "n_sodium_valproate",
+          "target": "n_iwd",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "与相似病程的常识性关联"
+        },
+        {
+          "source": "n_propranolol",
+          "target": "n_iwd",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能对症状产生负影響"
+        },
+        {
+          "source": "n_topiramate",
+          "target": "n_iwd",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与白质病相关性假说"
+        },
+        {
+          "source": "n_phenobarbital",
+          "target": "n_iwd",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "副作用可能与白质病有关"
+        },
+        {
+          "source": "n_hydroxyurea",
+          "target": "n_iwd",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "副作用假设对症状的风险"
+        },
+        {
+          "source": "n_chlorpromazine",
+          "target": "n_iwd",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "潜在影响白质病"
+        },
+        {
+          "source": "n_clozapine",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "形成致病机制闭环"
+        },
+        {
+          "source": "n_valproic_acid",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "形成致病机制闭环"
+        },
+        {
+          "source": "n_lithium",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "形成致病机制闭环"
+        },
+        {
+          "source": "n_carbamazepine",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "形成致病机制闭环"
+        },
+        {
+          "source": "n_mycophenolate_mofetil",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "形成致病机制闭环"
+        },
+        {
+          "source": "n_nabumetone",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "形成致病机制闭环"
+        },
+        {
+          "source": "n_sodium_valproate",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "形成致病机制闭环"
+        },
+        {
+          "source": "n_propranolol",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "形成致病机制闭环"
+        },
+        {
+          "source": "n_topiramate",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "形成致病机制闭环"
+        },
+        {
+          "source": "n_phenobarbital",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "形成致病机制闭环"
+        },
+        {
+          "source": "n_hydroxyurea",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "形成致病机制闭环"
+        },
+        {
+          "source": "n_chlorpromazine",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "形成致病机制闭环"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物均与重度白质疾病有潜在的禁忌关联",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "药物可能通过影响白质病的机制呈现风险",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物成分的机制与部位暴露假说需进一步关注"
+    ],
+    "uncertainties": [
+      "每种药物与该疾病的具体机制尚需临床验证"
+    ],
+    "next_focus_for_pi": [
+      "考虑是否补充针对特定药物的临床数据支持"
+    ]
+  }
+}

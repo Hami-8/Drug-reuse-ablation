@@ -1,0 +1,559 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Epileptic encephalopathy",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "癫痫发作风险",
+            "expectation": "如有证据，请增加高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Bupropion 引发癫痫的可能性",
+            "expectation": "如有明确证据，请加重 refutes 边权重",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Fluoxetine 对癫痫的潜在影响",
+            "expectation": "如有支持证据，请标注为 high权重的 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_cfz",
+          "type": "Drug",
+          "label": "Clofazimine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bup",
+          "type": "Drug",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_flu",
+          "type": "Drug",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cbz",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lam",
+          "type": "Drug",
+          "label": "Lamotrigine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_top",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_zon",
+          "type": "Drug",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tram",
+          "type": "Drug",
+          "label": "Tramadol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lac",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gab",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_prg",
+          "type": "Drug",
+          "label": "Pregabalin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_oxc",
+          "type": "Drug",
+          "label": "Oxcarbazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_epi",
+          "type": "Disease",
+          "label": "Epileptic encephalopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Clofazimine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_clofazimine",
+          "type": "Drug",
+          "label": "Clofazimine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_bupropion",
+          "type": "Drug",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fluoxetine",
+          "type": "Drug",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Lamotrigine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lamotrigine",
+          "type": "Drug",
+          "label": "Lamotrigine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_zonisamide",
+          "type": "Drug",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Tramadol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_tramadol",
+          "type": "Drug",
+          "label": "Tramadol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lacosamide",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Pregabalin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_pregabalin",
+          "type": "Drug",
+          "label": "Pregabalin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Oxcarbazepine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_oxcarbazepine",
+          "type": "Drug",
+          "label": "Oxcarbazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_cfz",
+          "target": "n_epi",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫发作有抑制作用"
+        },
+        {
+          "source": "n_bup",
+          "target": "n_epi",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "可能诱发癫痫发作"
+        },
+        {
+          "source": "n_flu",
+          "target": "n_epi",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "临床观察显示风险"
+        },
+        {
+          "source": "n_cbz",
+          "target": "n_epi",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "广泛用于治疗癫痫"
+        },
+        {
+          "source": "n_lam",
+          "target": "n_epi",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "临床使用显示潜在风险"
+        },
+        {
+          "source": "n_top",
+          "target": "n_epi",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响癫痫发作"
+        },
+        {
+          "source": "n_zon",
+          "target": "n_epi",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知风险"
+        },
+        {
+          "source": "n_tram",
+          "target": "n_epi",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能诱发癫痫"
+        },
+        {
+          "source": "n_lac",
+          "target": "n_epi",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "对癫痫有影响的文献"
+        },
+        {
+          "source": "n_gab",
+          "target": "n_epi",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能导致癫痫发作"
+        },
+        {
+          "source": "n_prg",
+          "target": "n_epi",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "风险不确定性"
+        },
+        {
+          "source": "n_oxc",
+          "target": "n_epi",
+          "relation": "contraindication",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "相关报道较少"
+        },
+        {
+          "source": "n_cfz",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "机制符合假设"
+        },
+        {
+          "source": "n_bup",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "潜在的支持机制"
+        },
+        {
+          "source": "n_flu",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知药理作用"
+        },
+        {
+          "source": "n_cbz",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "基础药物治疗"
+        },
+        {
+          "source": "n_lam",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有效性相关数据"
+        },
+        {
+          "source": "n_top",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已有文献支持"
+        },
+        {
+          "source": "n_zon",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "治疗关联性"
+        },
+        {
+          "source": "n_tram",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "有待深入研究"
+        },
+        {
+          "source": "n_lac",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "初步数据支撑"
+        },
+        {
+          "source": "n_gab",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "药理学合理"
+        },
+        {
+          "source": "n_prg",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "临床实践观察"
+        },
+        {
+          "source": "n_oxc",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "临床数据不足"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates_per_hypothesis": []
+  }
+}

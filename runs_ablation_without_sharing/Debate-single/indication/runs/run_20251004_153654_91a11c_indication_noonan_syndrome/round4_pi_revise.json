@@ -1,0 +1,783 @@
+{
+  "input": {
+    "mode": "revise",
+    "query": {
+      "entity": "Noonan syndrome",
+      "relation": "indication"
+    },
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_growth_hormone",
+          "type": "Drug",
+          "label": "Growth hormone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tamoxifen",
+          "type": "Drug",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ataluren",
+          "type": "Drug",
+          "label": "Ataluren",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_everolimus",
+          "type": "Drug",
+          "label": "Everolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sirolimus",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rapamycin",
+          "type": "Drug",
+          "label": "Rapamycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dasatinib",
+          "type": "Drug",
+          "label": "Dasatinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methylprednisolone",
+          "type": "Drug",
+          "label": "Methylprednisolone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydrocortisone",
+          "type": "Drug",
+          "label": "Hydrocortisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carnitine",
+          "type": "Drug",
+          "label": "Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_anakinra",
+          "type": "Drug",
+          "label": "Anakinra",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ca",
+          "type": "Target",
+          "label": "TargetA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb1",
+          "type": "Pathway",
+          "label": "PathwayB1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb2",
+          "type": "Pathway",
+          "label": "PathwayB2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease",
+          "type": "Disease",
+          "label": "Noonan syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Growth hormone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Ataluren",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Everolimus",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Rapamycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Dasatinib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Methylprednisolone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Hydrocortisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Carnitine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Anakinra",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_growth_hormone",
+          "target": "n_ca",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "同类药理常识，增长相关"
+        },
+        {
+          "source": "n_ca",
+          "target": "n_pb1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通路层面常识，与生长相关"
+        },
+        {
+          "source": "n_pb1",
+          "target": "n_disease",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与 Noonan syndrome 的致病机制相关"
+        },
+        {
+          "source": "drug_tamoxifen",
+          "target": "n_ca",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "研究相关"
+        },
+        {
+          "source": "drug_ataluren",
+          "target": "n_ca",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知机制有效"
+        },
+        {
+          "source": "drug_everolimus",
+          "target": "n_ca",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知影响生物通路"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "n_pb2",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通路层面常识，近似机制"
+        },
+        {
+          "source": "drug_rapamycin",
+          "target": "n_pb2",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "相关延续的研究"
+        },
+        {
+          "source": "drug_dasatinib",
+          "target": "n_ca",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "作用于相关通路"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "n_ca",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能性需进一步验证"
+        },
+        {
+          "source": "drug_methylprednisolone",
+          "target": "n_pb1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "常见的免疫调节作用"
+        },
+        {
+          "source": "drug_hydrocortisone",
+          "target": "n_pb1",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "部分机制推测支持"
+        },
+        {
+          "source": "drug_carnitine",
+          "target": "n_pb2",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "理论上可涉及"
+        },
+        {
+          "source": "drug_anakinra",
+          "target": "n_pb2",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "待验证机制支持"
+        },
+        {
+          "source": "n_pb2",
+          "target": "n_disease",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与 Noonan syndrome 相关结构性影响"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4,
+      "last_scores": [
+        {
+          "hypothesis_id": "H1",
+          "score": 0.76,
+          "components": {
+            "mechanism_fit": 0.8,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.7,
+            "indication_plausibility": 0.7,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.06
+          },
+          "graph_signals": {
+            "support_weight": 2.1,
+            "contradiction_weight": 0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "存在 Drug→TargetA→PathwayB1→Noonan syndrome 路径，且临床研究支持增长相关"
+            ],
+            "safety_risk": [
+              "无显著安全性警告"
+            ]
+          },
+          "confidence": "high",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H2",
+          "score": 0.55,
+          "components": {
+            "mechanism_fit": 0.7,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.0,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 1.45,
+            "contradiction_weight": 0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Tamoxifen 可能通过影响相关通路，但证据不足"
+            ],
+            "safety_risk": [
+              "未发现显著安全性问题"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H3",
+          "score": 0.65,
+          "components": {
+            "mechanism_fit": 0.7,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.6,
+            "safety_risk": 0.0,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 1.35,
+            "contradiction_weight": 0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "已知 Ataluren 的作用机制与生长相关，存在理论支持"
+            ],
+            "safety_risk": [
+              "未发现显著安全性问题"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H4",
+          "score": 0.62,
+          "components": {
+            "mechanism_fit": 0.75,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.6,
+            "safety_risk": 0.0,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 1.5,
+            "contradiction_weight": 0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Everolimus 对相关通路有影响，可能改善症状"
+            ],
+            "safety_risk": [
+              "未发现显著安全性问题"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H5",
+          "score": 0.58,
+          "components": {
+            "mechanism_fit": 0.7,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.0,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 1.4,
+            "contradiction_weight": 0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Sirolimus 可能影响相关通路，需进一步研究"
+            ],
+            "safety_risk": [
+              "未发现显著安全性问题"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H6",
+          "score": 0.57,
+          "components": {
+            "mechanism_fit": 0.7,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.0,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 1.35,
+            "contradiction_weight": 0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Rapamycin 和 Sirolimus 相关，可能有效"
+            ],
+            "safety_risk": [
+              "未发现显著安全性问题"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H7",
+          "score": 0.51,
+          "components": {
+            "mechanism_fit": 0.65,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.0,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 1.15,
+            "contradiction_weight": 0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Dasatinib 可能作用于相关通路，但需更深入证实"
+            ],
+            "safety_risk": [
+              "未发现显著安全性问题"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H8",
+          "score": 0.54,
+          "components": {
+            "mechanism_fit": 0.65,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.0,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 1.15,
+            "contradiction_weight": 0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Rituximab 的作用机制与 Noonan syndrome 不明确"
+            ],
+            "safety_risk": [
+              "未发现显著安全性问题"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H9",
+          "score": 0.52,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.0,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 1.2,
+            "contradiction_weight": 0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Methylprednisolone 的作用机制需更多证据"
+            ],
+            "safety_risk": [
+              "未发现显著安全性问题"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H10",
+          "score": 0.5,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.0,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 1.1,
+            "contradiction_weight": 0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Hydrocortisone 的机制不够明确，需进一步研究"
+            ],
+            "safety_risk": [
+              "未发现显著安全性问题"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H11",
+          "score": 0.48,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.0,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.9,
+            "contradiction_weight": 0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Carnitine 与症状关联尚需更多证据"
+            ],
+            "safety_risk": [
+              "未发现显著安全性问题"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H12",
+          "score": 0.47,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.0,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.85,
+            "contradiction_weight": 0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Anakinra 的作用机制尚待验证"
+            ],
+            "safety_risk": [
+              "未发现显著安全性问题"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        }
+      ]
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "revisions": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Growth hormone",
+            "via": [
+              "TargetA",
+              "PathwayB1"
+            ],
+            "to": "Noonan syndrome",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "merge_claims",
+            "nodes": [
+              "H4",
+              "H5"
+            ],
+            "rationale": "相似机制理论，根据生长相关通路，促进效率"
+          }
+        ],
+        "debate_focus": [
+          "进一步检验 Growth hormone 和 Noonan syndrome 相互作用的证据",
+          "探讨 Everolimus 与 Sirolimus 的区别及效果"
+        ]
+      }
+    ],
+    "pruned_hypotheses": [],
+    "new_subhypotheses": [],
+    "seed_request": {
+      "should_regenerate": false,
+      "reason": "现有假设已显机制相通，冲突不显著，无需再生种子。",
+      "n": 4
+    }
+  }
+}

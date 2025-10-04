@@ -1,0 +1,834 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Hyperammonaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_benzodiazepines",
+          "name": "Benzodiazepines"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_valproic_acid",
+          "name": "Valproic Acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_acetaminophen",
+          "name": "Acetaminophen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_sodium_valproate",
+          "name": "Sodium Valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_lacosamide",
+          "name": "Lacosamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_lamotrigine",
+          "name": "Lamotrigine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_tramadol",
+          "name": "Tramadol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_benzodiazepines",
+          "type": "Target",
+          "label": "OffTarget_Benzodiazepines",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_benzodiazepines",
+          "type": "Pathway",
+          "label": "RiskPathway_Benzodiazepines",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_benzodiazepines",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Benzodiazepines",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_valproic_acid",
+          "type": "Target",
+          "label": "OffTarget_ValproicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_valproic_acid",
+          "type": "Pathway",
+          "label": "RiskPathway_ValproicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_valproic_acid",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_ValproicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_acetaminophen",
+          "type": "Target",
+          "label": "OffTarget_Acetaminophen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_acetaminophen",
+          "type": "Pathway",
+          "label": "RiskPathway_Acetaminophen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_acetaminophen",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Acetaminophen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_topiramate",
+          "type": "Target",
+          "label": "OffTarget_Topiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_topiramate",
+          "type": "Pathway",
+          "label": "RiskPathway_Topiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_topiramate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Topiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sodium_valproate",
+          "type": "Target",
+          "label": "OffTarget_SodiumValproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_valproate",
+          "type": "Pathway",
+          "label": "RiskPathway_SodiumValproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sodium_valproate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_SodiumValproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rifampicin",
+          "type": "Target",
+          "label": "OffTarget_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rifampicin",
+          "type": "Pathway",
+          "label": "RiskPathway_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rifampicin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lacosamide",
+          "type": "Target",
+          "label": "OffTarget_Lacosamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lacosamide",
+          "type": "Pathway",
+          "label": "RiskPathway_Lacosamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lacosamide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Lacosamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gabapentin",
+          "type": "Target",
+          "label": "OffTarget_Gabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gabapentin",
+          "type": "Pathway",
+          "label": "RiskPathway_Gabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gabapentin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Gabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_phenytoin",
+          "type": "Target",
+          "label": "OffTarget_Phenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_phenytoin",
+          "type": "Pathway",
+          "label": "RiskPathway_Phenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_phenytoin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Phenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lamotrigine",
+          "type": "Target",
+          "label": "OffTarget_Lamotrigine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lamotrigine",
+          "type": "Pathway",
+          "label": "RiskPathway_Lamotrigine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lamotrigine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Lamotrigine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_carbamazepine",
+          "type": "Target",
+          "label": "OffTarget_Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_carbamazepine",
+          "type": "Pathway",
+          "label": "RiskPathway_Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_carbamazepine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tramadol",
+          "type": "Target",
+          "label": "OffTarget_Tramadol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_tramadol",
+          "type": "Pathway",
+          "label": "RiskPathway_Tramadol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tramadol",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Tramadol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_benzodiazepines",
+          "target": "n_ot_benzodiazepines",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能对代谢途径干扰"
+        },
+        {
+          "source": "n_ot_benzodiazepines",
+          "target": "n_rp_benzodiazepines",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路"
+        },
+        {
+          "source": "n_rp_benzodiazepines",
+          "target": "n_adv_benzodiazepines",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_benzodiazepines",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_valproic_acid",
+          "target": "n_ot_valproic_acid",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响氨基酸代谢"
+        },
+        {
+          "source": "n_ot_valproic_acid",
+          "target": "n_rp_valproic_acid",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路相关"
+        },
+        {
+          "source": "n_rp_valproic_acid",
+          "target": "n_adv_valproic_acid",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应"
+        },
+        {
+          "source": "n_adv_valproic_acid",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_acetaminophen",
+          "target": "n_ot_acetaminophen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能对代谢造成影响"
+        },
+        {
+          "source": "n_ot_acetaminophen",
+          "target": "n_rp_acetaminophen",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在风险链"
+        },
+        {
+          "source": "n_rp_acetaminophen",
+          "target": "n_adv_acetaminophen",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "引发不良表型的可能性"
+        },
+        {
+          "source": "n_adv_acetaminophen",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "n_ot_topiramate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响氨基酸代谢"
+        },
+        {
+          "source": "n_ot_topiramate",
+          "target": "n_rp_topiramate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险路径相关"
+        },
+        {
+          "source": "n_rp_topiramate",
+          "target": "n_adv_topiramate",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在不良表型"
+        },
+        {
+          "source": "n_adv_topiramate",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "n_ot_sodium_valproate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能对代谢产生干扰"
+        },
+        {
+          "source": "n_ot_sodium_valproate",
+          "target": "n_rp_sodium_valproate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路相关"
+        },
+        {
+          "source": "n_rp_sodium_valproate",
+          "target": "n_adv_sodium_valproate",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_sodium_valproate",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "n_ot_rifampicin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能对药物代谢有影响"
+        },
+        {
+          "source": "n_ot_rifampicin",
+          "target": "n_rp_rifampicin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在风险链"
+        },
+        {
+          "source": "n_rp_rifampicin",
+          "target": "n_adv_rifampicin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_rifampicin",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "n_ot_lacosamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响神经代谢"
+        },
+        {
+          "source": "n_ot_lacosamide",
+          "target": "n_rp_lacosamide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路相关"
+        },
+        {
+          "source": "n_rp_lacosamide",
+          "target": "n_adv_lacosamide",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "存在不良表型风险"
+        },
+        {
+          "source": "n_adv_lacosamide",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "n_ot_gabapentin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能对GABA代谢有干扰"
+        },
+        {
+          "source": "n_ot_gabapentin",
+          "target": "n_rp_gabapentin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_gabapentin",
+          "target": "n_adv_gabapentin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_gabapentin",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "n_ot_phenytoin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响药物代谢"
+        },
+        {
+          "source": "n_ot_phenytoin",
+          "target": "n_rp_phenytoin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路相关"
+        },
+        {
+          "source": "n_rp_phenytoin",
+          "target": "n_adv_phenytoin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_phenytoin",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_lamotrigine",
+          "target": "n_ot_lamotrigine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响神经代谢"
+        },
+        {
+          "source": "n_ot_lamotrigine",
+          "target": "n_rp_lamotrigine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险相关"
+        },
+        {
+          "source": "n_rp_lamotrigine",
+          "target": "n_adv_lamotrigine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在不良表型"
+        },
+        {
+          "source": "n_adv_lamotrigine",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_ot_carbamazepine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响氨基酸代谢"
+        },
+        {
+          "source": "n_ot_carbamazepine",
+          "target": "n_rp_carbamazepine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_carbamazepine",
+          "target": "n_adv_carbamazepine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "存在不良表型风险"
+        },
+        {
+          "source": "n_adv_carbamazepine",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_tramadol",
+          "target": "n_ot_tramadol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响神经递质代谢"
+        },
+        {
+          "source": "n_ot_tramadol",
+          "target": "n_rp_tramadol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_tramadol",
+          "target": "n_adv_tramadol",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在不良表型"
+        },
+        {
+          "source": "n_adv_tramadol",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        }
+      ]
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "以上药物对氨基酸代谢的影响是否会加剧",
+      "急性高氨血症的风险是否得到评估"
+    ],
+    "falsification_tests": [
+      "是否有临床证据显示上述药物安全使用于高氨血症患者？",
+      "是否存在相关不良事件记录以支持上述风险链？"
+    ],
+    "next_focus_for_pi": [
+      "进一步提供更多数据以验证或反驳这些风险链",
+      "对每种药物的潜在不良反应进行详细评估"
+    ]
+  }
+}

@@ -1,0 +1,687 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Generalised pustular psoriasis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Acitretin adverse effects",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Corticosteroids adverse effects",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Methotrexate adverse effects",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_acitretin",
+          "type": "Drug",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_secukinumab",
+          "type": "Drug",
+          "label": "Secukinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ixekizumab",
+          "type": "Drug",
+          "label": "Ixekizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_brodalumab",
+          "type": "Drug",
+          "label": "Brodalumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_neratinib",
+          "type": "Drug",
+          "label": "Neratinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_apremilast",
+          "type": "Drug",
+          "label": "Apremilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tazarotene",
+          "type": "Drug",
+          "label": "Tazarotene",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gp_psoriasis",
+          "type": "Disease",
+          "label": "Generalised Pustular Psoriasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_th17",
+          "type": "Target",
+          "label": "Th17 cells",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_il17",
+          "type": "Target",
+          "label": "IL-17",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_tnf",
+          "type": "Target",
+          "label": "TNF",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_inflammation",
+          "type": "Pathway",
+          "label": "Inflammatory Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_immune_response",
+          "type": "Pathway",
+          "label": "Immune Response Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph1",
+          "type": "Phenotype",
+          "label": "Skin Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph2",
+          "type": "Phenotype",
+          "label": "Pustular Lesions",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_acitretin",
+          "type": "Target",
+          "label": "OffTarget_Acitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_acitretin",
+          "type": "Pathway",
+          "label": "RiskPathway_Acitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_acitretin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Acitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "OffTarget_Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_corticosteroids",
+          "type": "Pathway",
+          "label": "RiskPathway_Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_corticosteroids",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "OffTarget_Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_methotrexate",
+          "type": "Pathway",
+          "label": "RiskPathway_Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_methotrexate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_acitretin",
+          "target": "n_target_th17",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知作用机制"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_target_tnf",
+          "relation": "inhibits",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "常用于抑制炎症"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_pathway_inflammation",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "影响免疫通路"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "n_target_tnf",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抗TNF机制"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "n_target_tnf",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抗TNF机制"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "n_target_il17",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抑制IL-17"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "n_target_tnf",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抗TNF机制"
+        },
+        {
+          "source": "drug_ixekizumab",
+          "target": "n_target_il17",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "抑制IL-17"
+        },
+        {
+          "source": "drug_brodalumab",
+          "target": "n_target_il17",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抑制IL-17"
+        },
+        {
+          "source": "drug_neratinib",
+          "target": "n_pathway_inflammation",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "假设影响炎症"
+        },
+        {
+          "source": "drug_apremilast",
+          "target": "n_pathway_immune_response",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响免疫通路"
+        },
+        {
+          "source": "drug_tazarotene",
+          "target": "n_ph1",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "已知治疗效果"
+        },
+        {
+          "source": "n_target_th17",
+          "target": "n_pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通路联系"
+        },
+        {
+          "source": "n_target_il17",
+          "target": "n_pathway_immune_response",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "通路联系"
+        },
+        {
+          "source": "n_target_tnf",
+          "target": "n_pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "通路联系"
+        },
+        {
+          "source": "n_pathway_inflammation",
+          "target": "n_ph1",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与皮肤炎症相关"
+        },
+        {
+          "source": "n_pathway_inflammation",
+          "target": "n_ph2",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与脓疱损伤相关"
+        },
+        {
+          "source": "n_pathway_immune_response",
+          "target": "n_ph1",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "免疫通路相关结局"
+        },
+        {
+          "source": "n_pathway_immune_response",
+          "target": "n_ph2",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "免疫通路相关结局"
+        },
+        {
+          "source": "drug_acitretin",
+          "target": "n_gp_psoriasis",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "直接支持假设"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_gp_psoriasis",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "直接支持假设"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_gp_psoriasis",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "直接支持假设"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "n_gp_psoriasis",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "直接支持假设"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "n_gp_psoriasis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "直接支持假设"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "n_gp_psoriasis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "直接支持假设"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "n_gp_psoriasis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "直接支持假设"
+        },
+        {
+          "source": "drug_ixekizumab",
+          "target": "n_gp_psoriasis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "直接支持假设"
+        },
+        {
+          "source": "drug_brodalumab",
+          "target": "n_gp_psoriasis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "直接支持假设"
+        },
+        {
+          "source": "drug_neratinib",
+          "target": "n_gp_psoriasis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "直接支持假设"
+        },
+        {
+          "source": "drug_apremilast",
+          "target": "n_gp_psoriasis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "直接支持假设"
+        },
+        {
+          "source": "drug_tazarotene",
+          "target": "n_gp_psoriasis",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "直接支持假设"
+        },
+        {
+          "source": "drug_acitretin",
+          "target": "n_ot_acitretin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在旁路作用可能影响其他靶点"
+        },
+        {
+          "source": "n_ot_acitretin",
+          "target": "n_rp_acitretin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响风险通路"
+        },
+        {
+          "source": "n_rp_acitretin",
+          "target": "n_adv_acitretin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_acitretin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消净获益"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在旁路作用可能影响其他靶点"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp_corticosteroids",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响风险通路"
+        },
+        {
+          "source": "n_rp_corticosteroids",
+          "target": "n_adv_corticosteroids",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_corticosteroids",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消净获益"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在旁路作用可能影响其他靶点"
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp_methotrexate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响风险通路"
+        },
+        {
+          "source": "n_rp_methotrexate",
+          "target": "n_adv_methotrexate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_methotrexate",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消净获益"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成 Acitretin 的安全性压力测试：高权重 refutes 边已连接到假设"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成 Corticosteroids 的安全性压力测试：高权重 refutes 边已连接到假设"
+      },
+      {
+        "action_ref": 2,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成 Methotrexate 的安全性压力测试：高权重 refutes 边已连接到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": []
+  }
+}

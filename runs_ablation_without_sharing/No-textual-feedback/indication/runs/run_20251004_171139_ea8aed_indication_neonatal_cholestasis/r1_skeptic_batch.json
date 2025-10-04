@@ -1,0 +1,848 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_ursodeoxycholic_acid",
+          "name": "Ursodeoxycholic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_sodium_phenylbutyrate",
+          "name": "Sodium phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_silymarin",
+          "name": "Silymarin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_acetylcysteine",
+          "name": "Acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_metronidazole",
+          "name": "Metronidazole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_hydrochlorothiazide",
+          "name": "Hydrochlorothiazide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_simvastatin",
+          "name": "Simvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_lactulose",
+          "name": "Lactulose"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_cenaless",
+          "name": "Cenaless"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_ursodeoxycholic_acid",
+          "type": "Target",
+          "label": "OffTargetUrsodeoxycholicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ursodeoxycholic_acid",
+          "type": "Pathway",
+          "label": "RiskPathwayUrsodeoxycholicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ursodeoxycholic_acid",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeUrsodeoxycholicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cholestyramine",
+          "type": "Target",
+          "label": "OffTargetCholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cholestyramine",
+          "type": "Pathway",
+          "label": "RiskPathwayCholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cholestyramine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fenofibrate",
+          "type": "Target",
+          "label": "OffTargetFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fenofibrate",
+          "type": "Pathway",
+          "label": "RiskPathwayFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fenofibrate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rifampicin",
+          "type": "Target",
+          "label": "OffTargetRifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rifampicin",
+          "type": "Pathway",
+          "label": "RiskPathwayRifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rifampicin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeRifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sodium_phenylbutyrate",
+          "type": "Target",
+          "label": "OffTargetSodiumPhenylbutyrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_phenylbutyrate",
+          "type": "Pathway",
+          "label": "RiskPathwaySodiumPhenylbutyrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sodium_phenylbutyrate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSodiumPhenylbutyrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_silymarin",
+          "type": "Target",
+          "label": "OffTargetSilymarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_silymarin",
+          "type": "Pathway",
+          "label": "RiskPathwaySilymarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_silymarin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSilymarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_acetylcysteine",
+          "type": "Target",
+          "label": "OffTargetAcetylcysteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_acetylcysteine",
+          "type": "Pathway",
+          "label": "RiskPathwayAcetylcysteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_acetylcysteine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAcetylcysteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_metronidazole",
+          "type": "Target",
+          "label": "OffTargetMetronidazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_metronidazole",
+          "type": "Pathway",
+          "label": "RiskPathwayMetronidazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_metronidazole",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMetronidazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_hydrochlorothiazide",
+          "type": "Target",
+          "label": "OffTargetHydrochlorothiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_hydrochlorothiazide",
+          "type": "Pathway",
+          "label": "RiskPathwayHydrochlorothiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_hydrochlorothiazide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeHydrochlorothiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_simvastatin",
+          "type": "Target",
+          "label": "OffTargetSimvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_simvastatin",
+          "type": "Pathway",
+          "label": "RiskPathwaySimvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_simvastatin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSimvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lactulose",
+          "type": "Target",
+          "label": "OffTargetLactulose",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lactulose",
+          "type": "Pathway",
+          "label": "RiskPathwayLactulose",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lactulose",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLactulose",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cenaless",
+          "type": "Target",
+          "label": "OffTargetCenaless",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cenaless",
+          "type": "Pathway",
+          "label": "RiskPathwayCenaless",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cenaless",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCenaless",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "n_ot_ursodeoxycholic_acid",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_ursodeoxycholic_acid",
+          "target": "n_rp_ursodeoxycholic_acid",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应通路"
+        },
+        {
+          "source": "n_rp_ursodeoxycholic_acid",
+          "target": "n_adv_ursodeoxycholic_acid",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_ursodeoxycholic_acid",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在这些风险，将抵消潜在益处"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_ot_cholestyramine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_cholestyramine",
+          "target": "n_rp_cholestyramine",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应通路"
+        },
+        {
+          "source": "n_rp_cholestyramine",
+          "target": "n_adv_cholestyramine",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_cholestyramine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在这些风险，将抵消潜在益处"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "n_ot_fenofibrate",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_fenofibrate",
+          "target": "n_rp_fenofibrate",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应通路"
+        },
+        {
+          "source": "n_rp_fenofibrate",
+          "target": "n_adv_fenofibrate",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_fenofibrate",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在这些风险，将抵消潜在益处"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "n_ot_rifampicin",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_rifampicin",
+          "target": "n_rp_rifampicin",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应通路"
+        },
+        {
+          "source": "n_rp_rifampicin",
+          "target": "n_adv_rifampicin",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_rifampicin",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在这些风险，将抵消潜在益处"
+        },
+        {
+          "source": "drug_sodium_phenylbutyrate",
+          "target": "n_ot_sodium_phenylbutyrate",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_sodium_phenylbutyrate",
+          "target": "n_rp_sodium_phenylbutyrate",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应通路"
+        },
+        {
+          "source": "n_rp_sodium_phenylbutyrate",
+          "target": "n_adv_sodium_phenylbutyrate",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_sodium_phenylbutyrate",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在这些风险，将抵消潜在益处"
+        },
+        {
+          "source": "drug_silymarin",
+          "target": "n_ot_silymarin",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_silymarin",
+          "target": "n_rp_silymarin",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应通路"
+        },
+        {
+          "source": "n_rp_silymarin",
+          "target": "n_adv_silymarin",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_silymarin",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在这些风险，将抵消潜在益处"
+        },
+        {
+          "source": "drug_acetylcysteine",
+          "target": "n_ot_acetylcysteine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_acetylcysteine",
+          "target": "n_rp_acetylcysteine",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应通路"
+        },
+        {
+          "source": "n_rp_acetylcysteine",
+          "target": "n_adv_acetylcysteine",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_acetylcysteine",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在这些风险，将抵消潜在益处"
+        },
+        {
+          "source": "drug_metronidazole",
+          "target": "n_ot_metronidazole",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_metronidazole",
+          "target": "n_rp_metronidazole",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应通路"
+        },
+        {
+          "source": "n_rp_metronidazole",
+          "target": "n_adv_metronidazole",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_metronidazole",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在这些风险，将抵消潜在益处"
+        },
+        {
+          "source": "drug_hydrochlorothiazide",
+          "target": "n_ot_hydrochlorothiazide",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_hydrochlorothiazide",
+          "target": "n_rp_hydrochlorothiazide",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应通路"
+        },
+        {
+          "source": "n_rp_hydrochlorothiazide",
+          "target": "n_adv_hydrochlorothiazide",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_hydrochlorothiazide",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在这些风险，将抵消潜在益处"
+        },
+        {
+          "source": "drug_simvastatin",
+          "target": "n_ot_simvastatin",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_simvastatin",
+          "target": "n_rp_simvastatin",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应通路"
+        },
+        {
+          "source": "n_rp_simvastatin",
+          "target": "n_adv_simvastatin",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_simvastatin",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在这些风险，将抵消潜在益处"
+        },
+        {
+          "source": "drug_lactulose",
+          "target": "n_ot_lactulose",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_lactulose",
+          "target": "n_rp_lactulose",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应通路"
+        },
+        {
+          "source": "n_rp_lactulose",
+          "target": "n_adv_lactulose",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_lactulose",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在这些风险，将抵消潜在益处"
+        },
+        {
+          "source": "drug_cenaless",
+          "target": "n_ot_cenaless",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_cenaless",
+          "target": "n_rp_cenaless",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应通路"
+        },
+        {
+          "source": "n_rp_cenaless",
+          "target": "n_adv_cenaless",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_cenaless",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在这些风险，将抵消潜在益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "可能存在与胆汁淤积机制相关的不良反应风险",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "未考虑与其他疗法的相互作用可能性",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "每种药物对胆汁淤积的作用机制是否充分验证",
+      "潜在不良反应与疾病状态之间的关系"
+    ],
+    "falsification_tests": [
+      "药物对胆汁淤积有无长期疗效的临床数据支持?",
+      "是否存在药物对胆汁络合物影响的机制研究?"
+    ],
+    "next_focus_for_pi": [
+      "提供支持疗效的临床试验数据以确认疗效",
+      "研究潜在不良反应和长期影响"
+    ]
+  }
+}

@@ -1,0 +1,704 @@
+{
+  "input": {
+    "mode": "revise",
+    "query": {
+      "entity": "Inherited white matter disorders",
+      "relation": "contraindication"
+    },
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_target_cns",
+          "type": "Target",
+          "label": "CNS Target",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_inflammation",
+          "type": "Pathway",
+          "label": "Inflammatory Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph1",
+          "type": "Phenotype",
+          "label": "White Matter Disorder Phenotype",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease_inherited",
+          "type": "Disease",
+          "label": "Inherited White Matter Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Anesthetics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_anesthetics",
+          "type": "Drug",
+          "label": "Anesthetics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Chlorpropamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_chlorpropamide",
+          "type": "Drug",
+          "label": "Chlorpropamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Chlorpromazine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_chlorpromazine",
+          "type": "Drug",
+          "label": "Chlorpromazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Clozapine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_clozapine",
+          "type": "Drug",
+          "label": "Clozapine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_doxorubicin",
+          "type": "Drug",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Ephedrine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ephedrine",
+          "type": "Drug",
+          "label": "Ephedrine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Procarbazine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_procarbazine",
+          "type": "Drug",
+          "label": "Procarbazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_vincristine",
+          "type": "Drug",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_anesthetics",
+          "target": "n_target_cns",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知麻醉药物作用于中枢神经系统"
+        },
+        {
+          "source": "n_target_cns",
+          "target": "n_pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "中枢神经系统损伤涉及炎症通路"
+        },
+        {
+          "source": "n_pathway_inflammation",
+          "target": "n_ph1",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "炎症通路与白质疾病表型相关"
+        },
+        {
+          "source": "drug_anesthetics",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "机制链条支持假设 H1"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4,
+      "last_scores": [
+        {
+          "hypothesis_id": "H1",
+          "score": 0.76,
+          "components": {
+            "mechanism_fit": 0.8,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.7,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.75,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "存在 Drug→CNS Target→Inflammatory Pathway→White Matter Disorder Phenotype 路径（由 Pro 提出）"
+            ],
+            "safety_risk": [
+              "未发现严重的安全性风险，不存在反对假设的边"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H2",
+          "score": 0.68,
+          "components": {
+            "mechanism_fit": 0.65,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.7,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.0,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "未找到明确的作用机制路径"
+            ],
+            "safety_risk": [
+              "对儿童及青少年可能存在禁忌"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H3",
+          "score": 0.6,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.4,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.0,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "缺乏已知的作用于白质疾病的机制"
+            ],
+            "safety_risk": [
+              "报告药物可能对中枢神经系统造成损害"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H4",
+          "score": 0.62,
+          "components": {
+            "mechanism_fit": 0.55,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.6,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.0,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "存在对中枢神经系统影响的报道"
+            ],
+            "safety_risk": [
+              "可能在特定情况下引发负面反应"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H5",
+          "score": 0.55,
+          "components": {
+            "mechanism_fit": 0.4,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.0,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "缺乏直接机制支持白质疾病"
+            ],
+            "safety_risk": [
+              "有药物诱导的风险"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H6",
+          "score": 0.64,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.0,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "缺乏对白质疾病的直接关联"
+            ],
+            "safety_risk": [
+              "已知副作用风险"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H7",
+          "score": 0.61,
+          "components": {
+            "mechanism_fit": 0.4,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.0,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "缺少与白质疾病的直接功能关联"
+            ],
+            "safety_risk": [
+              "已知副作用风险"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H8",
+          "score": 0.63,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.0,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "缺乏明确机制支持白质疾病的治疗"
+            ],
+            "safety_risk": [
+              "可能对心血管有影响"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H9",
+          "score": 0.59,
+          "components": {
+            "mechanism_fit": 0.4,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.4,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.0,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "对神经功能的影响尚未明确"
+            ],
+            "safety_risk": [
+              "可能存在与遗传疾病相对的风险"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H10",
+          "score": 0.57,
+          "components": {
+            "mechanism_fit": 0.4,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.4,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.0,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "缺乏对白质疾病的治疗机制说明"
+            ],
+            "safety_risk": [
+              "可能对中枢神经系统产生负面影响"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H11",
+          "score": 0.6,
+          "components": {
+            "mechanism_fit": 0.4,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.4,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.0,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "存在一些对神经的影响，但缺乏直接路径"
+            ],
+            "safety_risk": [
+              "报告增加归因于疗程"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H12",
+          "score": 0.55,
+          "components": {
+            "mechanism_fit": 0.4,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.4,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.0,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "缺乏与白质疾病治疗相关的验证"
+            ],
+            "safety_risk": [
+              "已知可能的副作用风险"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        }
+      ]
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "revisions": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "中枢神经系统安全性",
+            "expectation": "确定麻醉药物对于遗传性白质疾病的具体风险",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "add_disjoint_path",
+            "from": "drug_anesthetics",
+            "via": [
+              "n_target_cns",
+              "n_pathway_inflammation"
+            ],
+            "to": "n_ph1",
+            "success_criteria": "建立不同路径以增加路径独立性",
+            "assignee": "Proponent"
+          }
+        ],
+        "debate_focus": [
+          "麻醉药物在遗传性白质疾病患者中的长期风险",
+          "麻醉药物的具体机制及对炎症通路的影响"
+        ]
+      }
+    ],
+    "pruned_hypotheses": [
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "seed_request": {
+      "should_regenerate": true,
+      "reason": "现有候选缺乏有效支持路径与机制，并且存在较高的安全性风险，有必要再生成具有不同作用机制的种子以补齐图结构。",
+      "n": 4
+    }
+  }
+}

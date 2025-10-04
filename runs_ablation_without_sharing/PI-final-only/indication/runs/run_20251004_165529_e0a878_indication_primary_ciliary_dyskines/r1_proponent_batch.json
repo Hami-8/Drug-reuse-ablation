@@ -1,0 +1,368 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_dornase_alfa",
+          "name": "Dornase alfa"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ipratropium",
+          "name": "Ipratropium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_acetylcysteine",
+          "name": "Acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_bromhexine",
+          "name": "Bromhexine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_montelukast",
+          "name": "Montelukast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_budenoside",
+          "name": "Budenoside"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_gentamicin",
+          "name": "Gentamicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_tobramycin",
+          "name": "Tobramycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ambroxol",
+          "name": "Ambroxol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ipratropium",
+          "type": "Drug",
+          "label": "Ipratropium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_acetylcysteine",
+          "type": "Drug",
+          "label": "Acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bromhexine",
+          "type": "Drug",
+          "label": "Bromhexine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_montelukast",
+          "type": "Drug",
+          "label": "Montelukast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_budenoside",
+          "type": "Drug",
+          "label": "Budenoside",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sildenafil",
+          "type": "Drug",
+          "label": "Sildenafil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gentamicin",
+          "type": "Drug",
+          "label": "Gentamicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tobramycin",
+          "type": "Drug",
+          "label": "Tobramycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ambroxol",
+          "type": "Drug",
+          "label": "Ambroxol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pcm",
+          "type": "Phenotype",
+          "label": "Primary ciliary dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_dornase_alfa",
+          "target": "n_pcm",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "该药用于改善气道黏液稠度"
+        },
+        {
+          "source": "drug_ipratropium",
+          "target": "n_pcm",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "可减少气道分泌和改善呼吸"
+        },
+        {
+          "source": "drug_acetylcysteine",
+          "target": "n_pcm",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知用作粘液溶解药"
+        },
+        {
+          "source": "drug_bromhexine",
+          "target": "n_pcm",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有助于稀释气道分泌物"
+        },
+        {
+          "source": "drug_montelukast",
+          "target": "n_pcm",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可以减轻气道炎症反应"
+        },
+        {
+          "source": "drug_budenoside",
+          "target": "n_pcm",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗炎药物，可减轻气道反应"
+        },
+        {
+          "source": "drug_sildenafil",
+          "target": "n_pcm",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能通过改善血流影响气道功能"
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "n_pcm",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "具有抗炎与免疫调节作用"
+        },
+        {
+          "source": "drug_gentamicin",
+          "target": "n_pcm",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "对细菌感染的潜在相应"
+        },
+        {
+          "source": "drug_tobramycin",
+          "target": "n_pcm",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "适用于呼吸道细菌感染"
+        },
+        {
+          "source": "drug_ambroxol",
+          "target": "n_pcm",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "适用于改善气道黏液排出"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "n_pcm",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "用于治疗分泌物增多的状态"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过不同机制可能对原发性纤毛运动障碍有益",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物有效成分能到达气道目标组织"
+    ],
+    "uncertainties": [
+      "对长期使用安全性及效果尚存不确定性"
+    ],
+    "next_focus_for_pi": [
+      "需考虑是否补充其他可能有效的疗法路径"
+    ]
+  }
+}

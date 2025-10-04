@@ -1,0 +1,368 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_penicillins",
+          "name": "Penicillins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_cephalosporins",
+          "name": "Cephalosporins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_vancomycin",
+          "name": "Vancomycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_gentamicin",
+          "name": "Gentamicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_nsaids",
+          "name": "NSAIDs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_antivirals",
+          "name": "Antivirals"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ace_inhibitors",
+          "name": "ACE inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_arbs",
+          "name": "ARBs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_lithium",
+          "name": "Lithium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_naproxen",
+          "type": "Drug",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_penicillins",
+          "type": "Drug",
+          "label": "Penicillins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cephalosporins",
+          "type": "Drug",
+          "label": "Cephalosporins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vancomycin",
+          "type": "Drug",
+          "label": "Vancomycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gentamicin",
+          "type": "Drug",
+          "label": "Gentamicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_antivirals",
+          "type": "Drug",
+          "label": "Antivirals",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ace_inhibitors",
+          "type": "Drug",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_arbs",
+          "type": "Drug",
+          "label": "ARBs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mpgn",
+          "type": "Disease",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "n_mpgn",
+          "relation": "contraindicates",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "NSAIDs和相关药物可能加重肾脏疾病"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_mpgn",
+          "relation": "contraindicates",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "NSAIDs和相关药物可能加重肾脏疾病"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_mpgn",
+          "relation": "contraindicates",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "NSAIDs和相关药物可能加重肾脏疾病"
+        },
+        {
+          "source": "drug_penicillins",
+          "target": "n_mpgn",
+          "relation": "contraindicates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "某些抗生素在肾功能不全中有潜在影响"
+        },
+        {
+          "source": "drug_cephalosporins",
+          "target": "n_mpgn",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "某些抗生素在肾功能不全中有潜在影响"
+        },
+        {
+          "source": "drug_vancomycin",
+          "target": "n_mpgn",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与肾功能损害相关的抗生素"
+        },
+        {
+          "source": "drug_gentamicin",
+          "target": "n_mpgn",
+          "relation": "contraindicates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常见肾毒性药物"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "n_mpgn",
+          "relation": "contraindicates",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "NSAIDs可能加重肾脏疾病"
+        },
+        {
+          "source": "drug_antivirals",
+          "target": "n_mpgn",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "某些抗病毒药物可能影响肾功能"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "n_mpgn",
+          "relation": "contraindicates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "ACE抑制剂在特定情况下影响肾功能"
+        },
+        {
+          "source": "drug_arbs",
+          "target": "n_mpgn",
+          "relation": "contraindicates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "ARBs在特定情况下影响肾功能"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "n_mpgn",
+          "relation": "contraindicates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "锂治疗可能损害肾功能"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物对原发性肾小管增生性肾小球肾炎具有潜在的禁忌影响",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "药物在肾脏病理情况下的体内行为需要综合考虑"
+    ],
+    "uncertainties": [
+      "禁忌情况可能因个体差异与合并症而异"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步的药物与禁忌关联的例证研究？"
+    ]
+  }
+}

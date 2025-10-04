@@ -1,0 +1,400 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sotalol",
+          "name": "Sotalol"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_dofetilide",
+          "name": "Dofetilide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_metoprolol",
+          "name": "Metoprolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_propranolol",
+          "name": "Propranolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_flecainide",
+          "name": "Flecainide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_carvedilol",
+          "name": "Carvedilol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_ibutilide",
+          "name": "Ibutilide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_digoxin",
+          "name": "Digoxin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_lidocaine",
+          "name": "Lidocaine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_disopyramide",
+          "name": "Disopyramide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_sotalol",
+          "type": "Target",
+          "label": "OffTargetSotalol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sotalol",
+          "type": "Pathway",
+          "label": "RiskPathwaySotalol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sotalol",
+          "type": "Phenotype",
+          "label": "AdverseEffectSotalol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dofetilide",
+          "type": "Target",
+          "label": "OffTargetDofetilide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dofetilide",
+          "type": "Pathway",
+          "label": "RiskPathwayDofetilide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dofetilide",
+          "type": "Phenotype",
+          "label": "AdverseEffectDofetilide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "OffTargetAmiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_amiodarone",
+          "type": "Pathway",
+          "label": "RiskPathwayAmiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_amiodarone",
+          "type": "Phenotype",
+          "label": "AdverseEffectAmiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_metoprolol",
+          "type": "Target",
+          "label": "OffTargetMetoprolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_metoprolol",
+          "type": "Pathway",
+          "label": "RiskPathwayMetoprolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_metoprolol",
+          "type": "Phenotype",
+          "label": "AdverseEffectMetoprolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_sotalol",
+          "target": "n_ot_sotalol",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在旁路作用于其他靶标"
+        },
+        {
+          "source": "n_ot_sotalol",
+          "target": "n_rp_sotalol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致的风险通路"
+        },
+        {
+          "source": "n_rp_sotalol",
+          "target": "n_adv_sotalol",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_sotalol",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效益"
+        },
+        {
+          "source": "drug_dofetilide",
+          "target": "n_ot_dofetilide",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在旁路作用于其他靶标"
+        },
+        {
+          "source": "n_ot_dofetilide",
+          "target": "n_rp_dofetilide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致的风险通路"
+        },
+        {
+          "source": "n_rp_dofetilide",
+          "target": "n_adv_dofetilide",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_dofetilide",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效益"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在旁路作用于其他靶标"
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp_amiodarone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致的风险通路"
+        },
+        {
+          "source": "n_rp_amiodarone",
+          "target": "n_adv_amiodarone",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_amiodarone",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效益"
+        },
+        {
+          "source": "drug_metoprolol",
+          "target": "n_ot_metoprolol",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在旁路作用于其他靶标"
+        },
+        {
+          "source": "n_ot_metoprolol",
+          "target": "n_rp_metoprolol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致的风险通路"
+        },
+        {
+          "source": "n_rp_metoprolol",
+          "target": "n_adv_metoprolol",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_metoprolol",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "不同药物的作用机制可能导致不良反应风险增加",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "相同机制下的药物可能存在交互作用",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物的靶向作用是否足以改善症状",
+      "长期使用的副作用是否已被充分评估"
+    ],
+    "falsification_tests": [
+      "是否有证据显示这些药物在此症状下的安全性",
+      "是否有临床研究验证长期效果"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供具体的数据支持药物有效性",
+      "对潜在交互作用进行进一步评估"
+    ]
+  }
+}

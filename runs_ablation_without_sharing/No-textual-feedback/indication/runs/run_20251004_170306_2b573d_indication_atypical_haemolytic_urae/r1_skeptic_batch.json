@@ -1,0 +1,346 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Atypical haemolytic uraemic syndrome",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_eculizumab",
+          "name": "Eculizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ravulizumab",
+          "name": "Ravulizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_c5_inhibitors",
+          "name": "C5 Inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_complement_inhibitors",
+          "name": "Complement Inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_fostamatinib",
+          "name": "Fostamatinib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_luspatercept",
+          "name": "Luspatercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_tacrolimus",
+          "name": "Tacrolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_sirolimus",
+          "name": "Sirolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_thrombopoietin_receptor_agonists",
+          "name": "Thrombopoietin receptor agonists"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_risk_cin",
+          "type": "Phenotype",
+          "label": "CIN (Contrast-Induced Nephropathy)",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk_infection",
+          "type": "Phenotype",
+          "label": "Infection Risk",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk_thrombosis",
+          "type": "Phenotype",
+          "label": "Thrombosis Risk",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_c5_inhibitor",
+          "type": "Target",
+          "label": "C5 Inhibitor Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_complement_inhibition",
+          "type": "Target",
+          "label": "Complement System Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cin_mechanism",
+          "type": "Pathway",
+          "label": "CIN Mechanism Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_infection_mechanism",
+          "type": "Pathway",
+          "label": "Infection Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thrombosis_mechanism",
+          "type": "Pathway",
+          "label": "Thrombosis Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_eculizumab",
+          "target": "n_ot_c5_inhibitor",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致非特异性靶向效应"
+        },
+        {
+          "source": "drug_ravulizumab",
+          "target": "n_ot_c5_inhibitor",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发旁路作用"
+        },
+        {
+          "source": "n_ot_c5_inhibitor",
+          "target": "n_ot_cin_mechanism",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与 CIN 机制相关"
+        },
+        {
+          "source": "n_ot_c5_inhibitor",
+          "target": "n_ot_infection_mechanism",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能增加感染风险"
+        },
+        {
+          "source": "n_ot_c5_inhibitor",
+          "target": "n_ot_thrombosis_mechanism",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与血栓形成机制相关"
+        },
+        {
+          "source": "n_ot_cin_mechanism",
+          "target": "n_risk_cin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的 CIN 风险"
+        },
+        {
+          "source": "n_ot_infection_mechanism",
+          "target": "n_risk_infection",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "提高感染风险"
+        },
+        {
+          "source": "n_ot_thrombosis_mechanism",
+          "target": "n_risk_thrombosis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致血栓风险"
+        },
+        {
+          "source": "n_risk_cin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "以上风险影响 Eculizumab 的效果"
+        },
+        {
+          "source": "n_risk_infection",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "感染风险与治疗效果相悖"
+        },
+        {
+          "source": "n_risk_thrombosis",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "血栓风险与合并症相悖"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "Drug Side Effects vs Benefits",
+          "pro_nodes": [
+            "H1",
+            "H2",
+            "H3"
+          ],
+          "con_nodes": [
+            "n_risk_cin",
+            "n_risk_infection",
+            "n_risk_thrombosis"
+          ],
+          "note": "药物潜在风险与治疗的正面效果可能存在冲突"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "可能引发 CIN 及相关并发症，与预期益处相悖",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "感染风险可能影响治疗效果",
+        "confidence": "high"
+      },
+      {
+        "id": "K3",
+        "text": "血栓风险与治疗目的相悖",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "C5 抑制是否具有足够安全性支持治疗",
+      "潜在的感染和并发症对疗效的影响"
+    ],
+    "falsification_tests": [
+      "是否存在显示治疗效果可以超过潜在风险的证据？",
+      "对照试验是否已证明长期安全性？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供对冲突热点的进一步解释",
+      "再次评估对风险链的潜在影响"
+    ]
+  }
+}

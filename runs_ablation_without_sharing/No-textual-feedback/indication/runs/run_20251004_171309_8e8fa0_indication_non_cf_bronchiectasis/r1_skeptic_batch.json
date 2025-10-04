@@ -1,0 +1,828 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Non-CF bronchiectasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ipratropium",
+          "name": "Ipratropium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_roflumilast",
+          "name": "Roflumilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_bromhexine",
+          "name": "Bromhexine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_dornase_alfa",
+          "name": "Dornase alfa"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_mannitol",
+          "name": "Mannitol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_carbocisteine",
+          "name": "Carbocisteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_amoxicillin",
+          "name": "Amoxicillin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_clarithromycin",
+          "name": "Clarithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_levofloxacin",
+          "name": "Levofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_fluconazole",
+          "name": "Fluconazole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_azithromycin",
+          "type": "Target",
+          "label": "Azithromycin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_azithromycin",
+          "type": "Pathway",
+          "label": "Azithromycin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_azithromycin",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ipratropium",
+          "type": "Target",
+          "label": "Ipratropium Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ipratropium",
+          "type": "Pathway",
+          "label": "Ipratropium Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ipratropium",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Ipratropium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_roflumilast",
+          "type": "Target",
+          "label": "Roflumilast Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_roflumilast",
+          "type": "Pathway",
+          "label": "Roflumilast Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_roflumilast",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Roflumilast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bromhexine",
+          "type": "Target",
+          "label": "Bromhexine Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bromhexine",
+          "type": "Pathway",
+          "label": "Bromhexine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bromhexine",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Bromhexine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dornase_alfa",
+          "type": "Target",
+          "label": "Dornase alfa Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dornase_alfa",
+          "type": "Pathway",
+          "label": "Dornase alfa Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dornase_alfa",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Dornase alfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mannitol",
+          "type": "Target",
+          "label": "Mannitol Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mannitol",
+          "type": "Pathway",
+          "label": "Mannitol Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mannitol",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Mannitol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_carbocisteine",
+          "type": "Target",
+          "label": "Carbocisteine Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_carbocisteine",
+          "type": "Pathway",
+          "label": "Carbocisteine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_carbocisteine",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Carbocisteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_amoxicillin",
+          "type": "Target",
+          "label": "Amoxicillin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_amoxicillin",
+          "type": "Pathway",
+          "label": "Amoxicillin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_amoxicillin",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Amoxicillin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clarithromycin",
+          "type": "Target",
+          "label": "Clarithromycin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_clarithromycin",
+          "type": "Pathway",
+          "label": "Clarithromycin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clarithromycin",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Clarithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_levofloxacin",
+          "type": "Target",
+          "label": "Levofloxacin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_levofloxacin",
+          "type": "Pathway",
+          "label": "Levofloxacin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_levofloxacin",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Levofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ciprofloxacin",
+          "type": "Target",
+          "label": "Ciprofloxacin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ciprofloxacin",
+          "type": "Pathway",
+          "label": "Ciprofloxacin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ciprofloxacin",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Ciprofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fluconazole",
+          "type": "Target",
+          "label": "Fluconazole Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fluconazole",
+          "type": "Pathway",
+          "label": "Fluconazole Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fluconazole",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Fluconazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_azithromycin",
+          "target": "n_ot_azithromycin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶作用可能引发风险"
+        },
+        {
+          "source": "n_ot_azithromycin",
+          "target": "n_rp_azithromycin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_azithromycin",
+          "target": "n_adv_azithromycin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_azithromycin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_ipratropium",
+          "target": "n_ot_ipratropium",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶作用可能引发风险"
+        },
+        {
+          "source": "n_ot_ipratropium",
+          "target": "n_rp_ipratropium",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_ipratropium",
+          "target": "n_adv_ipratropium",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ipratropium",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_roflumilast",
+          "target": "n_ot_roflumilast",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶作用可能引发风险"
+        },
+        {
+          "source": "n_ot_roflumilast",
+          "target": "n_rp_roflumilast",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_roflumilast",
+          "target": "n_adv_roflumilast",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_roflumilast",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_bromhexine",
+          "target": "n_ot_bromhexine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶作用可能引发风险"
+        },
+        {
+          "source": "n_ot_bromhexine",
+          "target": "n_rp_bromhexine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_bromhexine",
+          "target": "n_adv_bromhexine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_bromhexine",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_dornase_alfa",
+          "target": "n_ot_dornase_alfa",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶作用可能引发风险"
+        },
+        {
+          "source": "n_ot_dornase_alfa",
+          "target": "n_rp_dornase_alfa",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_dornase_alfa",
+          "target": "n_adv_dornase_alfa",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_dornase_alfa",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_mannitol",
+          "target": "n_ot_mannitol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶作用可能引发风险"
+        },
+        {
+          "source": "n_ot_mannitol",
+          "target": "n_rp_mannitol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_mannitol",
+          "target": "n_adv_mannitol",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_mannitol",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_carbocisteine",
+          "target": "n_ot_carbocisteine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶作用可能引发风险"
+        },
+        {
+          "source": "n_ot_carbocisteine",
+          "target": "n_rp_carbocisteine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_carbocisteine",
+          "target": "n_adv_carbocisteine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_carbocisteine",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_amoxicillin",
+          "target": "n_ot_amoxicillin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶作用可能引发风险"
+        },
+        {
+          "source": "n_ot_amoxicillin",
+          "target": "n_rp_amoxicillin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_amoxicillin",
+          "target": "n_adv_amoxicillin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_amoxicillin",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_clarithromycin",
+          "target": "n_ot_clarithromycin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶作用可能引发风险"
+        },
+        {
+          "source": "n_ot_clarithromycin",
+          "target": "n_rp_clarithromycin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_clarithromycin",
+          "target": "n_adv_clarithromycin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_clarithromycin",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_levofloxacin",
+          "target": "n_ot_levofloxacin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶作用可能引发风险"
+        },
+        {
+          "source": "n_ot_levofloxacin",
+          "target": "n_rp_levofloxacin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_levofloxacin",
+          "target": "n_adv_levofloxacin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_levofloxacin",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "n_ot_ciprofloxacin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶作用可能引发风险"
+        },
+        {
+          "source": "n_ot_ciprofloxacin",
+          "target": "n_rp_ciprofloxacin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_ciprofloxacin",
+          "target": "n_adv_ciprofloxacin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ciprofloxacin",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_fluconazole",
+          "target": "n_ot_fluconazole",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶作用可能引发风险"
+        },
+        {
+          "source": "n_ot_fluconazole",
+          "target": "n_rp_fluconazole",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_fluconazole",
+          "target": "n_adv_fluconazole",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_fluconazole",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [],
+    "falsification_tests": [],
+    "next_focus_for_pi": []
+  }
+}

@@ -1,0 +1,488 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Hyperammonaemia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Benzodiazepines",
+            "via": [
+              "n_ot"
+            ],
+            "to": "Hyperammonaemia",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Analgesics",
+            "via": [
+              "n_ot"
+            ],
+            "to": "Hyperammonaemia",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_benzodiazepines",
+          "type": "Drug",
+          "label": "Benzodiazepines",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_analgesics",
+          "type": "Drug",
+          "label": "Analgesics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_acyclovir",
+          "type": "Drug",
+          "label": "Acyclovir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_valproate",
+          "type": "Drug",
+          "label": "Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_theophylline",
+          "type": "Drug",
+          "label": "Theophylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nitrofurantoin",
+          "type": "Drug",
+          "label": "Nitrofurantoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Disease_Hyperammonaemia",
+          "type": "Disease",
+          "label": "Hyperammonaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "OffTarget_Hyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp1",
+          "type": "Pathway",
+          "label": "Hyperammonaemia_Risk_Pathway_1",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp2",
+          "type": "Pathway",
+          "label": "Hyperammonaemia_Risk_Pathway_2",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Hyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_benzodiazepines",
+          "target": "Disease_Hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知对中枢神经抑制作用可能加重高氨血症"
+        },
+        {
+          "source": "drug_analgesics",
+          "target": "Disease_Hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "部分阿片类药物可导致氨基酸代谢异常"
+        },
+        {
+          "source": "drug_acyclovir",
+          "target": "Disease_Hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗病毒药物在肝脏代谢可能影响氨基转移"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "Disease_Hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与高氨血症相关，则可能在该病中引起药物剂量调整"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "Disease_Hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "抗癫痫药物对氨的影响有待进一步研究"
+        },
+        {
+          "source": "drug_theophylline",
+          "target": "Disease_Hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "高氨血症可能影响代谢药物的排泄"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "Disease_Hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "尚无明确角色，但可能与代谢有关"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "Disease_Hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "免疫抑制剂可能引起肝脏代谢异常"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "Disease_Hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能影响肝脏氨代谢"
+        },
+        {
+          "source": "drug_nitrofurantoin",
+          "target": "Disease_Hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "与药物所导致的肝损伤相关"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "Disease_Hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "可能与肝功能损害有关"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "Disease_Hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与Valproate的相似性，值得关注"
+        },
+        {
+          "source": "drug_benzodiazepines",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响尿素循环"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知诱发高氨血症"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp1",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "风险路径关联"
+        },
+        {
+          "source": "n_rp1",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致高氨血症相关不良表型"
+        },
+        {
+          "source": "drug_acyclovir",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在影响肝脏功能"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能增加乳酸水平"
+        },
+        {
+          "source": "drug_nitrofurantoin",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "已知与肝功能损害相关"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp2",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及第二条风险路径"
+        },
+        {
+          "source": "n_rp2",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致高氨血症影响"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将影响疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "已有证据显示风险存在"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使用可能加重不良反应"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_benzodiazepines",
+              "target": "n_ot",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "可能影响尿素循环"
+            },
+            {
+              "source": "n_ot",
+              "target": "n_rp1",
+              "relation": "involved_in",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "相关风险路径"
+            },
+            {
+              "source": "n_rp1",
+              "target": "n_adv",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "导致高氨血症相关不良表型"
+            },
+            {
+              "source": "drug_benzodiazepines",
+              "target": "Disease_Hyperammonaemia",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "已知对中枢神经抑制作用可能加重高氨血症"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Benzodiazepines → OffTarget_Hyperammonaemia → Hyperammonaemia，形成2条不相交路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_analgesics",
+              "target": "n_ot",
+              "relation": "acts_on",
+              "weight": 0.65,
+              "agent": "Proponent",
+              "rationale": "潜在影响氨基酸代谢"
+            },
+            {
+              "source": "n_ot",
+              "target": "n_rp2",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "涉及第二条风险路径"
+            },
+            {
+              "source": "n_rp2",
+              "target": "n_adv",
+              "relation": "causes",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "导致高氨血症影响"
+            },
+            {
+              "source": "drug_analgesics",
+              "target": "Disease_Hyperammonaemia",
+              "relation": "causes",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "部分阿片类药物可导致氨基酸代谢异常"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Analgesics → OffTarget_Hyperammonaemia → Hyperammonaemia，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

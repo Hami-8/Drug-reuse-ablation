@@ -1,0 +1,366 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Familial tumour syndromes of the central and peripheral nervous system",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_thalidomide",
+          "name": "Thalidomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_vincristine",
+          "name": "Vincristine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_doxorubicin",
+          "name": "Doxorubicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_nitrosoureas",
+          "name": "Nitrosoureas"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_etoposide",
+          "name": "Etoposide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_temozolomide",
+          "name": "Temozolomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_topotecan",
+          "name": "Topotecan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ifosfamide",
+          "name": "Ifosfamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_carboplatin",
+          "name": "Carboplatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_gemcitabine",
+          "name": "Gemcitabine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_mt",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_th",
+          "type": "Drug",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_vc",
+          "type": "Drug",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_do",
+          "type": "Drug",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cp",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nu",
+          "type": "Drug",
+          "label": "Nitrosoureas",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_et",
+          "type": "Drug",
+          "label": "Etoposide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tm",
+          "type": "Drug",
+          "label": "Temozolomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tp",
+          "type": "Drug",
+          "label": "Topotecan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_if",
+          "type": "Drug",
+          "label": "Ifosfamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cp",
+          "type": "Drug",
+          "label": "Carboplatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gm",
+          "type": "Drug",
+          "label": "Gemcitabine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cns",
+          "type": "Disease",
+          "label": "Familial tumour syndromes of the central and peripheral nervous system",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_mt",
+          "target": "n_cns",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对肿瘤的抑制作用"
+        },
+        {
+          "source": "n_th",
+          "target": "n_cns",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "有效对抗某些类型的肿瘤"
+        },
+        {
+          "source": "n_vc",
+          "target": "n_cns",
+          "relation": "inhibits",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "与肿瘤治疗相关性高"
+        },
+        {
+          "source": "n_do",
+          "target": "n_cns",
+          "relation": "inhibits",
+          "weight": 0.78,
+          "agent": "Proponent",
+          "rationale": "抗肿瘤药物重要性"
+        },
+        {
+          "source": "n_cp",
+          "target": "n_cns",
+          "relation": "inhibits",
+          "weight": 0.76,
+          "agent": "Proponent",
+          "rationale": [
+            "肿瘤处理的重要贡献",
+            "常用于肿瘤治疗"
+          ],
+          "agent_sources": [
+            "Proponent"
+          ]
+        },
+        {
+          "source": "n_nu",
+          "target": "n_cns",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "在肿瘤治疗中的有效性"
+        },
+        {
+          "source": "n_et",
+          "target": "n_cns",
+          "relation": "inhibits",
+          "weight": 0.72,
+          "agent": "Proponent",
+          "rationale": "用于治疗特定肿瘤类型"
+        },
+        {
+          "source": "n_tm",
+          "target": "n_cns",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "对某些肿瘤表现出疗效"
+        },
+        {
+          "source": "n_tp",
+          "target": "n_cns",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于多种癌症的治疗"
+        },
+        {
+          "source": "n_if",
+          "target": "n_cns",
+          "relation": "inhibits",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "相关的抗肿瘤效果"
+        },
+        {
+          "source": "n_cp",
+          "target": "n_cns",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "肿瘤处理的重要贡献"
+        },
+        {
+          "source": "n_gm",
+          "target": "n_cns",
+          "relation": "inhibits",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "被用于临床肿瘤治疗"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [],
+    "assumptions": [
+      "药物对靶病症的作用需要临床验证（常识判断）"
+    ],
+    "uncertainties": [],
+    "next_focus_for_pi": [
+      "可能需要评估各药物的具体适应症与风险"
+    ]
+  }
+}

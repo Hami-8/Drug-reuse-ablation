@@ -1,0 +1,366 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ezetimibe",
+          "name": "Ezetimibe"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_insulin",
+          "name": "Insulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_lipid_lowering_agents",
+          "name": "Lipid-lowering agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_oral_hypoglycemics",
+          "name": "Oral hypoglycemics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_metformin",
+          "name": "Metformin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_atorvastatin",
+          "name": "Atorvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "omega_3_fatty_acids",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "ezetimibe",
+          "type": "Drug",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "lipid_lowering_agents",
+          "type": "Drug",
+          "label": "Lipid-lowering agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "oral_hypoglycemics",
+          "type": "Drug",
+          "label": "Oral hypoglycemics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "severe_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "fibrates",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Fibrates常用于降低甘油三酯水平"
+        },
+        {
+          "source": "niacin",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Niacin已被证明能有效降低甘油三酯"
+        },
+        {
+          "source": "omega_3_fatty_acids",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Omega-3脂肪酸能显著减轻高甘油三酯"
+        },
+        {
+          "source": "statins",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Statins具有一定的降低甘油三酯的作用"
+        },
+        {
+          "source": "ezetimibe",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Ezetimibe通过降脂机制帮助改善"
+        },
+        {
+          "source": "insulin",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Insulin有助于控制糖尿病患者的甘油三酯"
+        },
+        {
+          "source": "lipid_lowering_agents",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通常用于控制血脂水平"
+        },
+        {
+          "source": "oral_hypoglycemics",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可间接影响糖代谢与脂质代谢"
+        },
+        {
+          "source": "metformin",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "用于糖尿病患者可能影响甘油三酯"
+        },
+        {
+          "source": "gemfibrozil",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Gemfibrozil有效降甘油三酯"
+        },
+        {
+          "source": "fenofibrate",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.88,
+          "agent": "Proponent",
+          "rationale": "Fenofibrate用于治疗高甘油三酯有效"
+        },
+        {
+          "source": "atorvastatin",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Atorvastatin能够降低甘油三酯"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物可用于治疗严重高甘油三酯血症",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "药物具备到达相关靶器官的能力（常识判断）"
+    ],
+    "uncertainties": [],
+    "next_focus_for_pi": [
+      "是否需要进一步探讨药物的具体机制或患者类型"
+    ]
+  }
+}

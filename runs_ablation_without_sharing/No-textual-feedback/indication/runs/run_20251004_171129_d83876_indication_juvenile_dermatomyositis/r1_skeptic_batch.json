@@ -1,0 +1,508 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Juvenile dermatomyositis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_intravenous_immunoglobulin",
+          "name": "Intravenous immunoglobulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_chloroquine",
+          "name": "Chloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_sulfasalazine",
+          "name": "Sulfasalazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_hydroxychloroquine",
+          "name": "Hydroxychloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_mtx",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_aza",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cort",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cycl",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_mmf",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ivig",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_chl",
+          "type": "Drug",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rit",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cy",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_sulfa",
+          "type": "Drug",
+          "label": "Sulfasalazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_hcq",
+          "type": "Drug",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dex",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "RiskPathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_mtx",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_aza",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_cort",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_cycl",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_mmf",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_ivig",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_chl",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_rit",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_cy",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_sulfa",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_hcq",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_dex",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "risk_vs_benefit",
+          "pro_nodes": [
+            "H1",
+            "H2",
+            "H3",
+            "H4",
+            "H5",
+            "H6",
+            "H7",
+            "H8",
+            "H9",
+            "H10",
+            "H11",
+            "H12"
+          ],
+          "con_nodes": [
+            "n_adv"
+          ],
+          "note": "风险可能抵消治疗益处"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "部分药物可能导致严重不良反应",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "长时间使用可能出现耐药性和副作用",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "所有药物的严重副作用风险是否充分评估",
+      "与其他既往治疗的相互作用是否关注"
+    ],
+    "falsification_tests": [
+      "是否存在反映药物与不良反应的关联数据库",
+      "是否有临床试验数据支持长期安全性"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供安全性数据",
+      "分析更具体的药物副作用机制与共病风险链"
+    ]
+  }
+}

@@ -1,0 +1,424 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Bardet-Biedl Syndrome",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_acitretin",
+          "name": "Acitretin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_furosemide",
+          "name": "Furosemide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_tacrolimus",
+          "name": "Tacrolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_thiazolidinediones",
+          "name": "Thiazolidinediones"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_glyburide",
+          "name": "Glyburide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_metformin",
+          "name": "Metformin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_sitagliptin",
+          "name": "Sitagliptin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_acitretin",
+          "type": "Drug",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiazolidinediones",
+          "type": "Drug",
+          "label": "Thiazolidinediones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_glyburide",
+          "type": "Drug",
+          "label": "Glyburide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sitagliptin",
+          "type": "Drug",
+          "label": "Sitagliptin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_bbs",
+          "type": "Target",
+          "label": "Bardet-Biedl Syndrome Target",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_bbs",
+          "type": "Pathway",
+          "label": "Bardet-Biedl Syndrome Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_bbs",
+          "type": "Disease",
+          "label": "Bardet-Biedl Syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_bbs",
+          "type": "Phenotype",
+          "label": "Phenotype of Bardet-Biedl Syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_acitretin",
+          "target": "target_bbs",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物常用于皮肤疾病，可能影响耳闻症状"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "target_bbs",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常规药物，可能影响免疫和代谢通路"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "target_bbs",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "降脂药物，可能影响代谢"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "target_bbs",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗生素，应用不明确，但有风险"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "target_bbs",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "利尿剂可能影响体液平衡"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "target_bbs",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "心脏药物，可影响多种生理功能"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "target_bbs",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于调节代谢"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "target_bbs",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "免疫抑制剂，可能影响相关病理"
+        },
+        {
+          "source": "drug_thiazolidinediones",
+          "target": "target_bbs",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗糖尿病药物，影响代谢通路"
+        },
+        {
+          "source": "drug_glyburide",
+          "target": "target_bbs",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "对糖尿病有影响的药物"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "target_bbs",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "代谢调节药物"
+        },
+        {
+          "source": "drug_sitagliptin",
+          "target": "target_bbs",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "影响葡萄糖代谢"
+        },
+        {
+          "source": "target_bbs",
+          "target": "pathway_bbs",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "靶向点与通路关联"
+        },
+        {
+          "source": "pathway_bbs",
+          "target": "disease_bbs",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通路与疾病结果明确关联"
+        },
+        {
+          "source": "target_bbs",
+          "target": "phenotype_bbs",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "靶点与相关表型联系紧密"
+        },
+        {
+          "source": "pathway_bbs",
+          "target": "phenotype_bbs",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通路作用于疾病表型的机制支持"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "Acitretin、Aspirin和其他药物可能影响Bardet-Biedl综合征的病理机制",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物可能具有生物利用度到达靶点组织（基于常识）"
+    ],
+    "uncertainties": [
+      "每种药物对Bardet-Biedl综合征影响的具体机制尚不完全明确"
+    ],
+    "next_focus_for_pi": [
+      "验证每种药物的具体作用机制及潜在安全性"
+    ]
+  }
+}

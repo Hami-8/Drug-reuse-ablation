@@ -1,0 +1,963 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Familial pulmonary fibrosis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_nintedanib",
+          "name": "Nintedanib"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_pirfenidone",
+          "name": "Pirfenidone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_gemcitabine",
+          "name": "Gemcitabine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_procarbazine",
+          "name": "Procarbazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_tetracycline",
+          "name": "Tetracycline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_nitrofurantoin",
+          "name": "Nitrofurantoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [],
+    "ranking": [],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_nintedanib",
+          "type": "Drug",
+          "label": "Nintedanib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_pirfenidone",
+          "type": "Drug",
+          "label": "Pirfenidone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gemcitabine",
+          "type": "Drug",
+          "label": "Gemcitabine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_procarbazine",
+          "type": "Drug",
+          "label": "Procarbazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tetracycline",
+          "type": "Drug",
+          "label": "Tetracycline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nitrofurantoin",
+          "type": "Drug",
+          "label": "Nitrofurantoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_familial_pulmonary_fibrosis",
+          "type": "Disease",
+          "label": "Familial pulmonary fibrosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_nintedanib",
+          "type": "Target",
+          "label": "OffTarget_Nintedanib",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pirfenidone",
+          "type": "Target",
+          "label": "OffTarget_Pirfenidone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_azathioprine",
+          "type": "Target",
+          "label": "OffTarget_Azathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclophosphamide",
+          "type": "Target",
+          "label": "OffTarget_Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "OffTarget_Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gemcitabine",
+          "type": "Target",
+          "label": "OffTarget_Gemcitabine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_procarbazine",
+          "type": "Target",
+          "label": "OffTarget_Procarbazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mycophenolate_mofetil",
+          "type": "Target",
+          "label": "OffTarget_Mycophenolate_Mofetil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_carbamazepine",
+          "type": "Target",
+          "label": "OffTarget_Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tetracycline",
+          "type": "Target",
+          "label": "OffTarget_Tetracycline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "OffTarget_Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nitrofurantoin",
+          "type": "Target",
+          "label": "OffTarget_Nitrofurantoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fibrosis",
+          "type": "Pathway",
+          "label": "RiskPathway_Fibrosis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fibrosis",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Fibrosis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Nintedanib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Pirfenidone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Gemcitabine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Procarbazine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Tetracycline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Nitrofurantoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_nintedanib",
+          "target": "d_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "针对肺纤维化的作用机制"
+        },
+        {
+          "source": "drug_pirfenidone",
+          "target": "d_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与肺纤维化相关的药理作用"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "d_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知具有相似负面效应"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "d_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知可能导致呼吸系统问题"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "d_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "与肺部健康相关的潜在风险"
+        },
+        {
+          "source": "drug_gemcitabine",
+          "target": "d_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "在肿瘤疗法中观察到的肺部副作用"
+        },
+        {
+          "source": "drug_procarbazine",
+          "target": "d_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "某些患者中的呼吸道不良反应"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "d_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "免疫抑制药可能影响肺功能"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "d_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "潜在的过敏反应与肺部疾病"
+        },
+        {
+          "source": "drug_tetracycline",
+          "target": "d_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "与肺部病状相关的相互作用"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "d_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "已知影响肺组织"
+        },
+        {
+          "source": "drug_nitrofurantoin",
+          "target": "d_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "已知的肺部副作用"
+        },
+        {
+          "source": "drug_nintedanib",
+          "target": "n_ot_nintedanib",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路效应"
+        },
+        {
+          "source": "drug_pirfenidone",
+          "target": "n_ot_pirfenidone",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路效应"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_ot_azathioprine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路效应"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_ot_cyclophosphamide",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路效应"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路效应"
+        },
+        {
+          "source": "drug_gemcitabine",
+          "target": "n_ot_gemcitabine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路效应"
+        },
+        {
+          "source": "drug_procarbazine",
+          "target": "n_ot_procarbazine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路效应"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "n_ot_mycophenolate_mofetil",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路效应"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_ot_carbamazepine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路效应"
+        },
+        {
+          "source": "drug_tetracycline",
+          "target": "n_ot_tetracycline",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路效应"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路效应"
+        },
+        {
+          "source": "drug_nitrofurantoin",
+          "target": "n_ot_nitrofurantoin",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路效应"
+        },
+        {
+          "source": "n_ot_nintedanib",
+          "target": "n_rp_fibrosis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_ot_pirfenidone",
+          "target": "n_rp_fibrosis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_ot_azathioprine",
+          "target": "n_rp_fibrosis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_ot_cyclophosphamide",
+          "target": "n_rp_fibrosis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp_fibrosis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_ot_gemcitabine",
+          "target": "n_rp_fibrosis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_ot_procarbazine",
+          "target": "n_rp_fibrosis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_ot_mycophenolate_mofetil",
+          "target": "n_rp_fibrosis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_ot_carbamazepine",
+          "target": "n_rp_fibrosis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_ot_tetracycline",
+          "target": "n_rp_fibrosis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp_fibrosis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_ot_nitrofurantoin",
+          "target": "n_rp_fibrosis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_rp_fibrosis",
+          "target": "n_adv_fibrosis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致纤维化不良表型"
+        },
+        {
+          "source": "n_adv_fibrosis",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能超过治疗获益"
+        },
+        {
+          "source": "n_adv_fibrosis",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能超过治疗获益"
+        },
+        {
+          "source": "n_adv_fibrosis",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "不良反应可能超过治疗获益"
+        },
+        {
+          "source": "n_adv_fibrosis",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "不良反应可能超过治疗获益"
+        },
+        {
+          "source": "n_adv_fibrosis",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能超过治疗获益"
+        },
+        {
+          "source": "n_adv_fibrosis",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能超过治疗获益"
+        },
+        {
+          "source": "n_adv_fibrosis",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能超过治疗获益"
+        },
+        {
+          "source": "n_adv_fibrosis",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能超过治疗获益"
+        },
+        {
+          "source": "n_adv_fibrosis",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能超过治疗获益"
+        },
+        {
+          "source": "n_adv_fibrosis",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能超过治疗获益"
+        },
+        {
+          "source": "n_adv_fibrosis",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能超过治疗获益"
+        },
+        {
+          "source": "n_adv_fibrosis",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能超过治疗获益"
+        }
+      ],
+      "round_index": 2
+    },
+    "history": {
+      "round": 2
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_nintedanib",
+          "name": "Nintedanib"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H1_round2",
+        "key_assumptions": [
+          "Nintedanib的副作用可能超出治疗获得的益处"
+        ],
+        "caveats": [
+          "对Fibrosis的潜在影响和有效性需要进一步证实"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_pirfenidone",
+          "name": "Pirfenidone"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H2_round2",
+        "key_assumptions": [
+          "Pirfenidone对Familiary Pulmonary Fibrosis的潜在副作用有待进一步探讨"
+        ],
+        "caveats": [
+          "目前的证据表明副作用较为明显"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H3_round2",
+        "key_assumptions": [
+          "Azathioprine的安全性对此疾病尚不明确"
+        ],
+        "caveats": [
+          "尚需更多的数据支持其使用"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Familial pulmonary fibrosis",
+          "reason": "当前建议的药物均显示出副作用与疾病的不一致性"
+        }
+      ],
+      "remaining_gaps": [
+        "药物长期疗效和安全性的进一步评估"
+      ],
+      "uncertainties": [
+        "药物对Familial pulmonary fibrosis的长短期效果的确切影响"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "seed_a",
+            "seed_b"
+          ],
+          "impact_summary": "本轮未生成新种子，聚焦现有药物的安全性与有效性"
+        },
+        {
+          "round": 2,
+          "seeds": [],
+          "impact_summary": "缺乏足够证据支持现有假设"
+        }
+      ],
+      "lessons": [
+        "需要更深入探讨药物的副作用及其对身心健康的影响",
+        "加强对药物与疾病相互作用的研究，尤其是在少见病例中"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "关注更具临床价值的新药，并深入探索其背后的机制"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "明确标注可能的长期副作用，并提出获取最新临床数据的必要性"
+      },
+      {
+        "role": "Explorer",
+        "patch": "探索尚未覆盖的药物类别，以丰富药物选择"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "评估药物适应症",
+        "then": "着重考量长期副作用的潜在风险"
+      },
+      {
+        "when": "Familiary Pulmonary Fibrosis",
+        "then": "考虑现有证据，优先评估药物的综合副作用"
+      }
+    ]
+  }
+}

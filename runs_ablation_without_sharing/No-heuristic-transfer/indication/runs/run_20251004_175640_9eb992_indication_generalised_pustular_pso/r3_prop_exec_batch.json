@@ -1,0 +1,750 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Generalised pustular psoriasis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_acitretin",
+            "via": [
+              "n_tg",
+              "n_pw"
+            ],
+            "to": "d_generalised_pustular_psoriasis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_methotrexate",
+            "via": [
+              "n_tg",
+              "n_pw"
+            ],
+            "to": "d_generalised_pustular_psoriasis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_cyclosporine",
+            "via": [
+              "n_tg",
+              "n_pw"
+            ],
+            "to": "d_generalised_pustular_psoriasis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_acitretin",
+          "type": "Drug",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_secukinumab",
+          "type": "Drug",
+          "label": "Secukinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tildrakizumab",
+          "type": "Drug",
+          "label": "Tildrakizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ustekinumab",
+          "type": "Drug",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_topical_corticosteroids",
+          "type": "Drug",
+          "label": "Topical corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_apremilast",
+          "type": "Drug",
+          "label": "Apremilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_interleukin_17_inhibitors",
+          "type": "Drug",
+          "label": "Interleukin-17 inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg",
+          "type": "Target",
+          "label": "Target for Generalised pustular psoriasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pw",
+          "type": "Pathway",
+          "label": "Pathway for psoriasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_generalised_pustular_psoriasis",
+          "type": "Disease",
+          "label": "Generalised pustular psoriasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_acitretin",
+          "type": "Target",
+          "label": "Acitretin Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_acitretin",
+          "type": "Pathway",
+          "label": "Acitretin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_acitretin",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Acitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "Methotrexate Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_methotrexate",
+          "type": "Pathway",
+          "label": "Methotrexate Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_methotrexate",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclosporine",
+          "type": "Target",
+          "label": "Cyclosporine Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cyclosporine",
+          "type": "Pathway",
+          "label": "Cyclosporine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cyclosporine",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_infliximab",
+          "type": "Target",
+          "label": "Infliximab Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_infliximab",
+          "type": "Pathway",
+          "label": "Infliximab Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_infliximab",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Infliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Secukinumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Tildrakizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Topical corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Apremilast",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Interleukin-17 inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_acitretin",
+          "target": "n_tg",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "常用药物显示效果"
+        },
+        {
+          "source": "n_tg",
+          "target": "n_pw",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通路层面关联"
+        },
+        {
+          "source": "n_pw",
+          "target": "d_generalised_pustular_psoriasis",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通路通向已明确的病症"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_tg",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "有效的免疫抑制药物"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_tg",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "常用于严重病例"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "n_tg",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗体疗法对皮肤病有效"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "n_tg",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "肿瘤坏死因子抑制剂的有效性"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "n_tg",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有效的生物药物"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "n_tg",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "靶向IL-17，适合千疮"
+        },
+        {
+          "source": "drug_tildrakizumab",
+          "target": "n_tg",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "IL-23抑制剂，显示效果"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "n_tg",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "靶向免疫耐受，应用于多种类型"
+        },
+        {
+          "source": "drug_topical_corticosteroids",
+          "target": "n_tg",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "局部治疗常见选择"
+        },
+        {
+          "source": "drug_apremilast",
+          "target": "n_tg",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "小分子药物，可能适合"
+        },
+        {
+          "source": "drug_interleukin_17_inhibitors",
+          "target": "n_tg",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "干扰IL-17信号，有前景"
+        },
+        {
+          "source": "drug_acitretin",
+          "target": "n_ot_acitretin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "离靶作用可能导致不良反应"
+        },
+        {
+          "source": "n_ot_acitretin",
+          "target": "n_rp_acitretin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的风险通路"
+        },
+        {
+          "source": "n_rp_acitretin",
+          "target": "n_adv_acitretin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_acitretin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "离靶作用可能导致不良反应"
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp_methotrexate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的风险通路"
+        },
+        {
+          "source": "n_rp_methotrexate",
+          "target": "n_adv_methotrexate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_methotrexate",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_ot_cyclosporine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "离靶作用可能导致不良反应"
+        },
+        {
+          "source": "n_ot_cyclosporine",
+          "target": "n_rp_cyclosporine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的风险通路"
+        },
+        {
+          "source": "n_rp_cyclosporine",
+          "target": "n_adv_cyclosporine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_cyclosporine",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "n_ot_infliximab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "离靶作用可能导致不良反应"
+        },
+        {
+          "source": "n_ot_infliximab",
+          "target": "n_rp_infliximab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的风险通路"
+        },
+        {
+          "source": "n_rp_infliximab",
+          "target": "n_adv_infliximab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_infliximab",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_acitretin",
+              "target": "n_tg",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "常用药物显示效果"
+            },
+            {
+              "source": "n_tg",
+              "target": "n_pw",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "通路层面关联"
+            },
+            {
+              "source": "n_pw",
+              "target": "d_generalised_pustular_psoriasis",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "通路通向已明确的病症"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Acitretin → Target → Pathway → Generalised pustular psoriasis，形成2条不相交路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_methotrexate",
+              "target": "n_tg",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "有效的免疫抑制药物"
+            },
+            {
+              "source": "n_tg",
+              "target": "n_pw",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "通路层面关联"
+            },
+            {
+              "source": "n_pw",
+              "target": "d_generalised_pustular_psoriasis",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "通路通向已明确的病症"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Methotrexate → Target → Pathway → Generalised pustular psoriasis，形成2条不相交路径"
+      },
+      {
+        "action_ref": 2,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_cyclosporine",
+              "target": "n_tg",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "常用于严重病例"
+            },
+            {
+              "source": "n_tg",
+              "target": "n_pw",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "通路层面关联"
+            },
+            {
+              "source": "n_pw",
+              "target": "d_generalised_pustular_psoriasis",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "通路通向已明确的病症"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Cyclosporine → Target → Pathway → Generalised pustular psoriasis，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

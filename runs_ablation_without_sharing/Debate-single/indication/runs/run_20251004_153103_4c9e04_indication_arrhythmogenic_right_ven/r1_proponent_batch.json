@@ -1,0 +1,496 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sotalol",
+          "name": "Sotalol"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_dronedarone",
+          "name": "Dronedarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-Blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_digoxin",
+          "name": "Digoxin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lidocaine",
+          "name": "Lidocaine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_procainamide",
+          "name": "Procainamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_mexiletine",
+          "name": "Mexiletine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ivabradine",
+          "name": "Ivabradine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_disopyramide",
+          "name": "Disopyramide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_flecainide",
+          "name": "Flecainide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_sotalol",
+          "type": "Drug",
+          "label": "Sotalol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dronedarone",
+          "type": "Drug",
+          "label": "Dronedarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-Blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_digoxin",
+          "type": "Drug",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lidocaine",
+          "type": "Drug",
+          "label": "Lidocaine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_procainamide",
+          "type": "Drug",
+          "label": "Procainamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mexiletine",
+          "type": "Drug",
+          "label": "Mexiletine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_quinidine",
+          "type": "Drug",
+          "label": "Quinidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ivabradine",
+          "type": "Drug",
+          "label": "Ivabradine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_disopyramide",
+          "type": "Drug",
+          "label": "Disopyramide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_flecainide",
+          "type": "Drug",
+          "label": "Flecainide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_ion_channels",
+          "type": "Target",
+          "label": "Ion Channels",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_arrhythmia",
+          "type": "Pathway",
+          "label": "Arrhythmia Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_arrhythmogenic_right_ventricular_cardiomyopathy",
+          "type": "Disease",
+          "label": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_sotalol",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Sotalol为已知的抗心律失常药，作用于心脏离子通道"
+        },
+        {
+          "source": "drug_dronedarone",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Dronedarone影响心脏电生理，适用于多种心律失常"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Amiodarone常用于严重的心律失常管理"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Beta-Blockers可调节心率，减少心律失常风险"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Digoxin可影响心脏传导"
+        },
+        {
+          "source": "drug_lidocaine",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Lidocaine用于急性心律失常的处理"
+        },
+        {
+          "source": "drug_procainamide",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Procainamide用于心律失常治疗"
+        },
+        {
+          "source": "drug_mexiletine",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Mexiletine用于治疗特定的心律失常"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Quinidine适用于多种心律失常"
+        },
+        {
+          "source": "drug_ivabradine",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Ivabradine对心率有调节作用"
+        },
+        {
+          "source": "drug_disopyramide",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Disopyramide以调节心律为主要作用"
+        },
+        {
+          "source": "drug_flecainide",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Flecainide是处理心律失常的常用药物"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "pathway_arrhythmia",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "酸碱平衡及离子通道是心律失常缺陷的主要驱动因素"
+        },
+        {
+          "source": "pathway_arrhythmia",
+          "target": "disease_arrhythmogenic_right_ventricular_cardiomyopathy",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "心律失常通路可能导致右心心肌病"
+        },
+        {
+          "source": "drug_sotalol",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Sotalol对这种疾病具明显的影響"
+        },
+        {
+          "source": "drug_dronedarone",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Dronedarone在心律失常管理中有使用实例"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Amiodarone是心律失常的重要治疗药物"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Beta-Blockers是治疗心律失常的常见药物"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Digoxin可用来管理某些心率失常"
+        },
+        {
+          "source": "drug_lidocaine",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Lidocaine在心律失常急救中常用"
+        },
+        {
+          "source": "drug_procainamide",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Procainamide在临床上用于治疗相关症状"
+        },
+        {
+          "source": "drug_mexiletine",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Mexiletine适用于特定心律失常"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Quinidine在心律失常管理中使用"
+        },
+        {
+          "source": "drug_ivabradine",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Ivabradine调节心率，相关性较好"
+        },
+        {
+          "source": "drug_disopyramide",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Disopyramide可用于相应的症状"
+        },
+        {
+          "source": "drug_flecainide",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Flecainide在心律失常控制中有效"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物对'右心室心肌病'可能存在治疗潜力",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "药物能达到有效靶点并产生所需生物效应"
+    ],
+    "uncertainties": [
+      "在特定个体中的治疗反应可能存在差异"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步验证与其他潜在药物的机制作用？"
+    ]
+  }
+}

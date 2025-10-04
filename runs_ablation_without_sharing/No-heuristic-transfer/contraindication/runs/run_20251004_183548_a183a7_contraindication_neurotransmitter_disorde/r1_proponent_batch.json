@@ -1,0 +1,560 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_fluoxetine",
+          "name": "Fluoxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_paroxetine",
+          "name": "Paroxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_bupropion",
+          "name": "Bupropion"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_sertraline",
+          "name": "Sertraline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_venlafaxine",
+          "name": "Venlafaxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_duloxetine",
+          "name": "Duloxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_amitriptyline",
+          "name": "Amitriptyline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_clomipramine",
+          "name": "Clomipramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_lithium",
+          "name": "Lithium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_trazodone",
+          "name": "Trazodone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_valproate",
+          "name": "Valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_fluoxetine",
+          "type": "Drug",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_paroxetine",
+          "type": "Drug",
+          "label": "Paroxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bupropion",
+          "type": "Drug",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sertraline",
+          "type": "Drug",
+          "label": "Sertraline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_venlafaxine",
+          "type": "Drug",
+          "label": "Venlafaxine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_duloxetine",
+          "type": "Drug",
+          "label": "Duloxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amitriptyline",
+          "type": "Drug",
+          "label": "Amitriptyline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clomipramine",
+          "type": "Drug",
+          "label": "Clomipramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_trazodone",
+          "type": "Drug",
+          "label": "Trazodone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_valproate",
+          "type": "Drug",
+          "label": "Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nt_disorder",
+          "type": "Disease",
+          "label": "Neurotransmitter disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_fluoxetine",
+          "target": "n_nt_disorder",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "主要用药对于抑制神经递质障碍有强关联"
+        },
+        {
+          "source": "drug_paroxetine",
+          "target": "n_nt_disorder",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "相似机制药物针对神经递质障碍"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "n_nt_disorder",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响相关神经递质系统"
+        },
+        {
+          "source": "drug_sertraline",
+          "target": "n_nt_disorder",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于调整神经递质失衡"
+        },
+        {
+          "source": "drug_venlafaxine",
+          "target": "n_nt_disorder",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抗抑郁药物对神经递质相关障碍的影响"
+        },
+        {
+          "source": "drug_duloxetine",
+          "target": "n_nt_disorder",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "双重作用机制对神经递质障碍有良好效果"
+        },
+        {
+          "source": "drug_amitriptyline",
+          "target": "n_nt_disorder",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "传统治疗手段中的有效药物"
+        },
+        {
+          "source": "drug_clomipramine",
+          "target": "n_nt_disorder",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与治疗神经递质障碍有临床相关性"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "n_nt_disorder",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于情绪稳定且影响神经递质"
+        },
+        {
+          "source": "drug_trazodone",
+          "target": "n_nt_disorder",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "在管理神经递质失衡中的作用"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_nt_disorder",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "涉及神经递质调控的抗癫痫药"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "n_nt_disorder",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "对情绪和神经递质的影响"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "在疗效上的积极支持"
+        },
+        {
+          "source": "drug_paroxetine",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "具有类似有效性支持"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "药理学上推测具有支持性"
+        },
+        {
+          "source": "drug_sertraline",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "临床应用支持的药物"
+        },
+        {
+          "source": "drug_venlafaxine",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.74,
+          "agent": "Proponent",
+          "rationale": "在机制上与假设相连"
+        },
+        {
+          "source": "drug_duloxetine",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.73,
+          "agent": "Proponent",
+          "rationale": "在治疗中有良好效果的药物"
+        },
+        {
+          "source": "drug_amitriptyline",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.72,
+          "agent": "Proponent",
+          "rationale": "主流治疗方案中的选择"
+        },
+        {
+          "source": "drug_clomipramine",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.71,
+          "agent": "Proponent",
+          "rationale": "支持治疗的证据"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与假设紧密关联的药物"
+        },
+        {
+          "source": "drug_trazodone",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.69,
+          "agent": "Proponent",
+          "rationale": "用于管理相关症状的药物"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.68,
+          "agent": "Proponent",
+          "rationale": "对神经递质影响的理论支持"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.67,
+          "agent": "Proponent",
+          "rationale": "可能对神经递质有调节作用"
+        },
+        {
+          "source": "H1",
+          "target": "n_nt_disorder",
+          "relation": "entails",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "假设基于药物机制推断"
+        },
+        {
+          "source": "H2",
+          "target": "n_nt_disorder",
+          "relation": "entails",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与机制相一致"
+        },
+        {
+          "source": "H3",
+          "target": "n_nt_disorder",
+          "relation": "entails",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "推论上符合机制"
+        },
+        {
+          "source": "H4",
+          "target": "n_nt_disorder",
+          "relation": "entails",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "支持性证据"
+        },
+        {
+          "source": "H5",
+          "target": "n_nt_disorder",
+          "relation": "entails",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与治疗相关的机制关系"
+        },
+        {
+          "source": "H6",
+          "target": "n_nt_disorder",
+          "relation": "entails",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "在机制上的相互关联"
+        },
+        {
+          "source": "H7",
+          "target": "n_nt_disorder",
+          "relation": "entails",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "对假设的支持"
+        },
+        {
+          "source": "H8",
+          "target": "n_nt_disorder",
+          "relation": "entails",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "治疗方案一致性体现"
+        },
+        {
+          "source": "H9",
+          "target": "n_nt_disorder",
+          "relation": "entails",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "潜在机制指出相关性"
+        },
+        {
+          "source": "H10",
+          "target": "n_nt_disorder",
+          "relation": "entails",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能影响推测"
+        },
+        {
+          "source": "H11",
+          "target": "n_nt_disorder",
+          "relation": "entails",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "推论上支持假设联结"
+        },
+        {
+          "source": "H12",
+          "target": "n_nt_disorder",
+          "relation": "entails",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "理论推测的连接"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种抗抑郁药物与神经递质障碍关联",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物均可安全到达目标部位并影响疾病"
+    ],
+    "uncertainties": [
+      "具体药物的临床效果与个体差异可能存在变动"
+    ],
+    "next_focus_for_pi": [
+      "验证各药物具体作用机制的文献资料"
+    ]
+  }
+}

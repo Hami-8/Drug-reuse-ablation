@@ -1,0 +1,887 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_dornase_alfa",
+            "via": [
+              "n_target_airway_inflammation",
+              "n_pathway_mucociliary_clearing"
+            ],
+            "to": "Primary_ciliary_dyskinesia",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_azithromycin",
+            "via": [
+              "n_target_airway_inflammation"
+            ],
+            "to": "Primary_ciliary_dyskinesia",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lomabtril",
+          "type": "Drug",
+          "label": "Lomabtril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_inhaled_corticosteroids",
+          "type": "Drug",
+          "label": "Inhaled corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_oxygen_therapy",
+          "type": "Drug",
+          "label": "Oxygen therapy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_salbutamol",
+          "type": "Drug",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bronchodilators",
+          "type": "Drug",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_pulmozyme",
+          "type": "Drug",
+          "label": "Pulmozyme",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ritonavir",
+          "type": "Drug",
+          "label": "Ritonavir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_montelukast",
+          "type": "Drug",
+          "label": "Montelukast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hypertonic_saline",
+          "type": "Drug",
+          "label": "Hypertonic saline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Primary_ciliary_dyskinesia",
+          "type": "Disease",
+          "label": "Primary ciliary dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_airway_inflammation",
+          "type": "Target",
+          "label": "Airway inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_mucociliary_clearing",
+          "type": "Pathway",
+          "label": "Mucociliary clearing pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pheno_respiratory_function",
+          "type": "Phenotype",
+          "label": "Respiratory function improvement",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pc_dysfunction",
+          "type": "Disease",
+          "label": "Primary Ciliary Dyskinesia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lomabtril",
+          "type": "Drug",
+          "label": "Lomabtril",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_inhaled_corticosteroids",
+          "type": "Drug",
+          "label": "Inhaled corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_oxygen_therapy",
+          "type": "Drug",
+          "label": "Oxygen therapy",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_salbutamol",
+          "type": "Drug",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_bronchodilators",
+          "type": "Drug",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_pulmozyme",
+          "type": "Drug",
+          "label": "Pulmozyme",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ritonavir",
+          "type": "Drug",
+          "label": "Ritonavir",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_montelukast",
+          "type": "Drug",
+          "label": "Montelukast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_hypertonic_saline",
+          "type": "Drug",
+          "label": "Hypertonic saline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "OffTargetX",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "RiskPathwayY",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeZ",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Lomabtril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Inhaled corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Oxygen therapy",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Pulmozyme",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Ritonavir",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Montelukast",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Hypertonic saline",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_dornase_alfa",
+          "target": "n_target_airway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对气道炎症有正面效果"
+        },
+        {
+          "source": "n_target_airway_inflammation",
+          "target": "n_pathway_mucociliary_clearing",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通路层面与气道保护相关"
+        },
+        {
+          "source": "n_pathway_mucociliary_clearing",
+          "target": "Primary_ciliary_dyskinesia",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "机制通路逻辑符合此疾病"
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "n_target_airway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于抗炎及抗感染"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "n_target_airway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "具化痰作用，改善气道状态"
+        },
+        {
+          "source": "drug_lomabtril",
+          "target": "n_target_airway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能影响气道平滑肌"
+        },
+        {
+          "source": "drug_inhaled_corticosteroids",
+          "target": "n_target_airway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "普遍用于控制气道炎症"
+        },
+        {
+          "source": "drug_oxygen_therapy",
+          "target": "n_pheno_respiratory_function",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "改善呼吸功能"
+        },
+        {
+          "source": "drug_salbutamol",
+          "target": "n_target_airway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "扩张气道，改善呼吸"
+        },
+        {
+          "source": "drug_bronchodilators",
+          "target": "n_target_airway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通用性支气管扩张药"
+        },
+        {
+          "source": "drug_pulmozyme",
+          "target": "n_target_airway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "针对黏液排除的药物"
+        },
+        {
+          "source": "drug_ritonavir",
+          "target": "n_pheno_respiratory_function",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响呼吸通路"
+        },
+        {
+          "source": "drug_montelukast",
+          "target": "n_target_airway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗炎效果可能有助于症状减轻"
+        },
+        {
+          "source": "drug_hypertonic_saline",
+          "target": "n_target_airway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "促进客观通路改善"
+        },
+        {
+          "source": "drug_dornase_alfa",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "直接与病状相关"
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "适用于呼吸道感染情况"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "增强痰液排出效果"
+        },
+        {
+          "source": "drug_lomabtril",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "改善气道功能预期"
+        },
+        {
+          "source": "drug_inhaled_corticosteroids",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "支气管哮喘患者常用选择"
+        },
+        {
+          "source": "drug_oxygen_therapy",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "相关的呼吸道改善"
+        },
+        {
+          "source": "drug_salbutamol",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对气道有直接支持"
+        },
+        {
+          "source": "drug_bronchodilators",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.6499999999999999,
+          "agent": "Proponent",
+          "rationale": "具有相似用途的药物"
+        },
+        {
+          "source": "drug_pulmozyme",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "增强排出气道黏液的效果"
+        },
+        {
+          "source": "drug_ritonavir",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "对呼吸系统可能有副作用"
+        },
+        {
+          "source": "drug_montelukast",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "普及性随访使用"
+        },
+        {
+          "source": "drug_hypertonic_saline",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.44999999999999996,
+          "agent": "Proponent",
+          "rationale": "已有用作气道清理的研究"
+        },
+        {
+          "source": "n_dornase_alfa",
+          "target": "n_pc_dysfunction",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的治疗效果未验证"
+        },
+        {
+          "source": "n_azithromycin",
+          "target": "n_pc_dysfunction",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应未考虑"
+        },
+        {
+          "source": "n_n_acetylcysteine",
+          "target": "n_pc_dysfunction",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "对靶病理作用尚无共识"
+        },
+        {
+          "source": "n_lomabtril",
+          "target": "n_pc_dysfunction",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "机制不确切，需进一步验证"
+        },
+        {
+          "source": "n_inhaled_corticosteroids",
+          "target": "n_pc_dysfunction",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在局部副作用风险"
+        },
+        {
+          "source": "n_oxygen_therapy",
+          "target": "n_pc_dysfunction",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "缺乏长期效果数据"
+        },
+        {
+          "source": "n_salbutamol",
+          "target": "n_pc_dysfunction",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在耐受性问题"
+        },
+        {
+          "source": "n_bronchodilators",
+          "target": "n_pc_dysfunction",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "效果与安全性未充分验证"
+        },
+        {
+          "source": "n_pulmozyme",
+          "target": "n_pc_dysfunction",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "急性改善与长期疗效缺乏直接关联"
+        },
+        {
+          "source": "n_ritonavir",
+          "target": "n_pc_dysfunction",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能与其他药物存在交互作用"
+        },
+        {
+          "source": "n_montelukast",
+          "target": "n_pc_dysfunction",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "提升炎性反应可能不利"
+        },
+        {
+          "source": "n_hypertonic_saline",
+          "target": "n_pc_dysfunction",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的不适应症存在"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路机制引发风险"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "不良反应的风险通路"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消疗效"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_dornase_alfa",
+              "target": "n_target_airway_inflammation",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "已知对气道炎症有正面效果"
+            },
+            {
+              "source": "n_target_airway_inflammation",
+              "target": "n_pathway_mucociliary_clearing",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "通路层面与气道保护相关"
+            },
+            {
+              "source": "n_pathway_mucociliary_clearing",
+              "target": "Primary_ciliary_dyskinesia",
+              "relation": "causes",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "机制通路逻辑符合此疾病"
+            },
+            {
+              "source": "drug_azithromycin",
+              "target": "n_target_airway_inflammation",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "常用于抗炎及抗感染"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Dornase alfa 和 Azithromycin 相关链条，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [
+      "后续可能需要进一步验证各药物对 Primary ciliary dyskinesia 的长期效果"
+    ]
+  }
+}

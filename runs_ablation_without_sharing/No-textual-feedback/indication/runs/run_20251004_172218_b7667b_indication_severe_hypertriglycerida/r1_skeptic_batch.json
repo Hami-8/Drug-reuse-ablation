@@ -1,0 +1,508 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ezetimibe",
+          "name": "Ezetimibe"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_insulin",
+          "name": "Insulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_lipid_lowering_agents",
+          "name": "Lipid-lowering agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_oral_hypoglycemics",
+          "name": "Oral hypoglycemics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_metformin",
+          "name": "Metformin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_atorvastatin",
+          "name": "Atorvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_fibrate",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_omega_3",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_statin",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ezetimibe",
+          "type": "Drug",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lipid_lowering",
+          "type": "Drug",
+          "label": "Lipid-lowering agents",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_oral_hypoglycemics",
+          "type": "Drug",
+          "label": "Oral hypoglycemics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adverse_phenotype",
+          "type": "Phenotype",
+          "label": "Potential Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk_pathway",
+          "type": "Pathway",
+          "label": "Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_fibrate",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_niacin",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_omega_3",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_statin",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_ezetimibe",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_insulin",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_lipid_lowering",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_oral_hypoglycemics",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_metformin",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_gemfibrozil",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_fenofibrate",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_atorvastatin",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_risk_pathway",
+          "target": "n_adverse_phenotype",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致潜在的不良表型"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "drug_efficacy_vs_adverse_effects",
+          "pro_nodes": [
+            "n_fibrate",
+            "n_niacin",
+            "n_omega_3",
+            "n_statin",
+            "n_ezetimibe",
+            "n_insulin",
+            "n_lipid_lowering",
+            "n_oral_hypoglycemics",
+            "n_metformin",
+            "n_gemfibrozil",
+            "n_fenofibrate",
+            "n_atorvastatin"
+          ],
+          "con_nodes": [
+            "n_adverse_phenotype"
+          ],
+          "note": "在治疗高甘油三酯血症时，疗效和险反应可能发生冲突"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "不同药物可能通过不同机制导致不良反应",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "缺乏针对性对照研究以支持疗效和安全性声明",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物的作用机制是否直接作用于高甘油三酯症的核心病理",
+      "药物使用后的不良反应是否被充分评估"
+    ],
+    "falsification_tests": [
+      "是否有数据证明特定药物在安全性方面超出预期",
+      "是否存在系统综述或随机对照试验显示反应与纤维素类药物有效性相比的风险"
+    ],
+    "next_focus_for_pi": [
+      "要求提供不同类别药物的比较研究以评估疗效与不良反应之平衡",
+      "针对冲突热点进行深入讨论和文献支持"
+    ]
+  }
+}

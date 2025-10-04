@@ -1,0 +1,469 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Limb girdle muscular dystrophy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_enalapril",
+          "name": "Enalapril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_carvedilol",
+          "name": "Carvedilol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_lisinopril",
+          "name": "Lisinopril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_aminoglycosides",
+          "name": "Aminoglycosides"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ropinirole",
+          "name": "Ropinirole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_tizanidine",
+          "name": "Tizanidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot1",
+          "type": "Target",
+          "label": "Corticosteroids Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv1",
+          "type": "Phenotype",
+          "label": "Adverse Effects in Limb Girdle Muscular Dystrophy",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot2",
+          "type": "Target",
+          "label": "Dexamethasone Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot3",
+          "type": "Target",
+          "label": "Prednisone Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot4",
+          "type": "Target",
+          "label": "Quinidine Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot5",
+          "type": "Target",
+          "label": "Statins Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot6",
+          "type": "Target",
+          "label": "Enalapril Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot7",
+          "type": "Target",
+          "label": "Carvedilol Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot8",
+          "type": "Target",
+          "label": "Lisinopril Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot9",
+          "type": "Target",
+          "label": "Aminoglycosides Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot10",
+          "type": "Target",
+          "label": "Sildenafil Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot11",
+          "type": "Target",
+          "label": "Ropinirole Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot12",
+          "type": "Target",
+          "label": "Tizanidine Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能干预肌肉功能"
+        },
+        {
+          "source": "n_ot1",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "影响肌肉发育及损伤修复"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ot2",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能干预肌肉功能"
+        },
+        {
+          "source": "n_ot2",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "影响肌肉发育及损伤修复"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能干预肌肉功能"
+        },
+        {
+          "source": "n_ot3",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "影响肌肉发育及损伤修复"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "n_ot4",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在心脏功能副作用"
+        },
+        {
+          "source": "n_ot4",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致心脏并发症"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_ot5",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响肌肉健康"
+        },
+        {
+          "source": "n_ot5",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉疼痛和损伤"
+        },
+        {
+          "source": "drug_enalapril",
+          "target": "n_ot6",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "n_ot6",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉不适"
+        },
+        {
+          "source": "drug_carvedilol",
+          "target": "n_ot7",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响心脏功能"
+        },
+        {
+          "source": "n_ot7",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致心脏并发症"
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "n_ot8",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉健康"
+        },
+        {
+          "source": "n_ot8",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉不适"
+        },
+        {
+          "source": "drug_aminoglycosides",
+          "target": "n_ot9",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉影响"
+        },
+        {
+          "source": "n_ot9",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉疼痛和损伤"
+        },
+        {
+          "source": "drug_sildenafil",
+          "target": "n_ot10",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "潜在血流影响"
+        },
+        {
+          "source": "n_ot10",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重反应"
+        },
+        {
+          "source": "drug_ropinirole",
+          "target": "n_ot11",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "可能影响运动功能"
+        },
+        {
+          "source": "n_ot11",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉无力"
+        },
+        {
+          "source": "drug_tizanidine",
+          "target": "n_ot12",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "n_ot12",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.45,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉损伤"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "Corticosteroids可能加重肌肉损伤",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "其他药物与肌肉健康相关的风险",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "对肌肉功能影响的预期是否合理",
+      "药物副作用是否足以导致严重损伤"
+    ],
+    "falsification_tests": [
+      "是否存在临床证据证明这些药物对肌肉的积极影响",
+      "是否有数据支持药物使用后的肌肉健康改善"
+    ],
+    "next_focus_for_pi": [
+      "要求提供支持使用的机制阐释",
+      "审查风险通路以评估潜在的不良反应"
+    ]
+  }
+}

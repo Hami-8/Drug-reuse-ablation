@@ -1,0 +1,241 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Lactic acidosis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "对 Lactate 固有作用及其区别",
+            "expectation": "若存在负面影响，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_sodium_bicarbonate",
+          "type": "Drug",
+          "label": "Sodium bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiamine",
+          "type": "Drug",
+          "label": "Thiamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_glutamine",
+          "type": "Drug",
+          "label": "Glutamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carnitine",
+          "type": "Drug",
+          "label": "Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lactate",
+          "type": "Drug",
+          "label": "Lactate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dichloroacetate",
+          "type": "Drug",
+          "label": "Dichloroacetate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydroxocobalamin",
+          "type": "Drug",
+          "label": "Hydroxocobalamin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_calcium_carbonate",
+          "type": "Drug",
+          "label": "Calcium carbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vitamin_b12",
+          "type": "Drug",
+          "label": "Vitamin B12",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lactic_acidosis",
+          "type": "Disease",
+          "label": "Lactic acidosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_sodium_bicarbonate",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知治疗乳酸酸中毒"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "可能改善氧化还原状态"
+        },
+        {
+          "source": "drug_thiamine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对乳酸代谢有辅助作用"
+        },
+        {
+          "source": "drug_glutamine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能影响乳酸代谢途径"
+        },
+        {
+          "source": "drug_carnitine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "参与脂肪酸代谢，减少乳酸生成"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可引起乳酸积聚，需慎用"
+        },
+        {
+          "source": "drug_dichloroacetate",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "通过提高细胞能量代谢，降低乳酸"
+        },
+        {
+          "source": "drug_insulin",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "有助于改善代谢状态"
+        },
+        {
+          "source": "drug_hydroxocobalamin",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能在特定情况下有帮助"
+        },
+        {
+          "source": "drug_calcium_carbonate",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可用于酸碱平衡调整"
+        },
+        {
+          "source": "drug_vitamin_b12",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能在营养支持中起到作用"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates_per_hypothesis": []
+  }
+}

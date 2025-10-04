@@ -1,0 +1,645 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sotalol",
+          "name": "Sotalol"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_dronedarone",
+          "name": "Dronedarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_propafenone",
+          "name": "Propafenone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_atenolol",
+          "name": "Atenolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_bisoprolol",
+          "name": "Bisoprolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_carvedilol",
+          "name": "Carvedilol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_mexiletine",
+          "name": "Mexiletine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_digoxin",
+          "name": "Digoxin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_lidocaine",
+          "name": "Lidocaine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_flecainide",
+          "name": "Flecainide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_sotalol",
+          "type": "Target",
+          "label": "OffTarget Sotalol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sotalol",
+          "type": "Pathway",
+          "label": "Risk Pathway Sotalol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dronedarone",
+          "type": "Target",
+          "label": "OffTarget Dronedarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dronedarone",
+          "type": "Pathway",
+          "label": "Risk Pathway Dronedarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "OffTarget Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_amiodarone",
+          "type": "Pathway",
+          "label": "Risk Pathway Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_propafenone",
+          "type": "Target",
+          "label": "OffTarget Propafenone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_propafenone",
+          "type": "Pathway",
+          "label": "Risk Pathway Propafenone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_atenolol",
+          "type": "Target",
+          "label": "OffTarget Atenolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_atenolol",
+          "type": "Pathway",
+          "label": "Risk Pathway Atenolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bisoprolol",
+          "type": "Target",
+          "label": "OffTarget Bisoprolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bisoprolol",
+          "type": "Pathway",
+          "label": "Risk Pathway Bisoprolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_carvedilol",
+          "type": "Target",
+          "label": "OffTarget Carvedilol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_carvedilol",
+          "type": "Pathway",
+          "label": "Risk Pathway Carvedilol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mexiletine",
+          "type": "Target",
+          "label": "OffTarget Mexiletine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mexiletine",
+          "type": "Pathway",
+          "label": "Risk Pathway Mexiletine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_digoxin",
+          "type": "Target",
+          "label": "OffTarget Digoxin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_digoxin",
+          "type": "Pathway",
+          "label": "Risk Pathway Digoxin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_quinidine",
+          "type": "Target",
+          "label": "OffTarget Quinidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_quinidine",
+          "type": "Pathway",
+          "label": "Risk Pathway Quinidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lidocaine",
+          "type": "Target",
+          "label": "OffTarget Lidocaine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lidocaine",
+          "type": "Pathway",
+          "label": "Risk Pathway Lidocaine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_flecainide",
+          "type": "Target",
+          "label": "OffTarget Flecainide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_flecainide",
+          "type": "Pathway",
+          "label": "Risk Pathway Flecainide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_sotalol",
+          "target": "n_ot_sotalol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用与心脏其他机制关联"
+        },
+        {
+          "source": "n_ot_sotalol",
+          "target": "n_rp_sotalol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能通过非特异性作用影响心脏功能"
+        },
+        {
+          "source": "n_rp_sotalol",
+          "target": "H1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "不良表型可能抵消治疗效果"
+        },
+        {
+          "source": "drug_dronedarone",
+          "target": "n_ot_dronedarone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "作用靶点可能导致其他心血管问题"
+        },
+        {
+          "source": "n_ot_dronedarone",
+          "target": "n_rp_dronedarone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知的旁路机制可能造成副作用"
+        },
+        {
+          "source": "n_rp_dronedarone",
+          "target": "H2",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响长期心脏表现"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "副作用与心脏电生理的关联"
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp_amiodarone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "路径可能导致心脏并发症"
+        },
+        {
+          "source": "n_rp_amiodarone",
+          "target": "H3",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "长期使用风险"
+        },
+        {
+          "source": "drug_propafenone",
+          "target": "n_ot_propafenone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与其他药物潜在交互作用"
+        },
+        {
+          "source": "n_ot_propafenone",
+          "target": "n_rp_propafenone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "不良反应时间延迟"
+        },
+        {
+          "source": "n_rp_propafenone",
+          "target": "H4",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能抵消潜在益处"
+        },
+        {
+          "source": "drug_atenolol",
+          "target": "n_ot_atenolol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响血流动力学"
+        },
+        {
+          "source": "n_ot_atenolol",
+          "target": "n_rp_atenolol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险与心率的波动相关"
+        },
+        {
+          "source": "n_rp_atenolol",
+          "target": "H5",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "急性，对长期疗效的负面影响"
+        },
+        {
+          "source": "drug_bisoprolol",
+          "target": "n_ot_bisoprolol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "其他心血管效应可能干扰原病态"
+        },
+        {
+          "source": "n_ot_bisoprolol",
+          "target": "n_rp_bisoprolol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用风险"
+        },
+        {
+          "source": "n_rp_bisoprolol",
+          "target": "H6",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能加重症状"
+        },
+        {
+          "source": "drug_carvedilol",
+          "target": "n_ot_carvedilol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响其他心脏信号通路"
+        },
+        {
+          "source": "n_ot_carvedilol",
+          "target": "n_rp_carvedilol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_carvedilol",
+          "target": "H7",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "长期影响未知"
+        },
+        {
+          "source": "drug_mexiletine",
+          "target": "n_ot_mexiletine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "对心脏机制的影响"
+        },
+        {
+          "source": "n_ot_mexiletine",
+          "target": "n_rp_mexiletine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "不良风险可能超出治疗利益"
+        },
+        {
+          "source": "n_rp_mexiletine",
+          "target": "H8",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "不良效应的潜在性"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "n_ot_digoxin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "急性影响风险"
+        },
+        {
+          "source": "n_ot_digoxin",
+          "target": "n_rp_digoxin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良心脏事件"
+        },
+        {
+          "source": "n_rp_digoxin",
+          "target": "H9",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "长期不良影响"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "n_ot_quinidine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险潜在性"
+        },
+        {
+          "source": "n_ot_quinidine",
+          "target": "n_rp_quinidine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与其他治疗可能相冲突"
+        },
+        {
+          "source": "n_rp_quinidine",
+          "target": "H10",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未认证的长效风险"
+        },
+        {
+          "source": "drug_lidocaine",
+          "target": "n_ot_lidocaine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "对电生理的影响"
+        },
+        {
+          "source": "n_ot_lidocaine",
+          "target": "n_rp_lidocaine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相互作用导致潜在不良后果"
+        },
+        {
+          "source": "n_rp_lidocaine",
+          "target": "H11",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响疗效的未知风险"
+        },
+        {
+          "source": "drug_flecainide",
+          "target": "n_ot_flecainide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "副作用潜在"
+        },
+        {
+          "source": "n_ot_flecainide",
+          "target": "n_rp_flecainide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的致命结果"
+        },
+        {
+          "source": "n_rp_flecainide",
+          "target": "H12",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "长期风险未验证"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "药物对心脏电生理的影响是否已充分审视",
+      "可能的药物间相互作用未被考虑"
+    ],
+    "falsification_tests": [
+      "是否有临床数据支持以上药物安全性与疗效？",
+      "长期使用影响是否有明确证据？"
+    ],
+    "next_focus_for_pi": [
+      "要求提供并证实每种药物的疗效证据",
+      "检查潜在药物间相互作用"
+    ]
+  }
+}

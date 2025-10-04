@@ -1,0 +1,738 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Gastrointestinal epithelial barrier disorders",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_mesalamine",
+            "via": [
+              "n_biological_target",
+              "n_inflammation_pathway"
+            ],
+            "to": "n_GI_disorder",
+            "success_criteria": "射线测试药物对疾病的影响",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_budesonide",
+            "via": [
+              "n_biological_target",
+              "n_inflammation_pathway"
+            ],
+            "to": "n_GI_disorder",
+            "success_criteria": "射线测试药物对疾病的影响",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_mesalamine",
+          "type": "Drug",
+          "label": "Mesalamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_budesonide",
+          "type": "Drug",
+          "label": "Budesonide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sulfasalazine",
+          "type": "Drug",
+          "label": "Sulfasalazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_allocetriptan",
+          "type": "Drug",
+          "label": "Allocetriptan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lansoprazole",
+          "type": "Drug",
+          "label": "Lansoprazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_omeprazole",
+          "type": "Drug",
+          "label": "Omeprazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_balsalazide",
+          "type": "Drug",
+          "label": "Balsalazide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_certolizumab_pegol",
+          "type": "Drug",
+          "label": "Certolizumab pegol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_biological_target",
+          "type": "Target",
+          "label": "Biological Target",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_inflammation_pathway",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_GI_disorder",
+          "type": "Disease",
+          "label": "Gastrointestinal Epithelial Barrier Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_symptom_improvement",
+          "type": "Phenotype",
+          "label": "Symptom Improvement",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_mesalamine",
+          "type": "Target",
+          "label": "OffTarget_Mesalamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mesalamine",
+          "type": "Pathway",
+          "label": "RiskPathway_Mesalamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mesalamine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Mesalamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_budesonide",
+          "type": "Target",
+          "label": "OffTarget_Budesonide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_budesonide",
+          "type": "Pathway",
+          "label": "RiskPathway_Budesonide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_budesonide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Budesonide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_prednisone",
+          "type": "Target",
+          "label": "OffTarget_Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_prednisone",
+          "type": "Pathway",
+          "label": "RiskPathway_Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_prednisone",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Mesalamine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Budesonide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Sulfasalazine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Allocetriptan",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Lansoprazole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Omeprazole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Balsalazide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Certolizumab pegol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_mesalamine",
+          "target": "n_biological_target",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知影响相关靶点"
+        },
+        {
+          "source": "drug_budesonide",
+          "target": "n_biological_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知影响相关靶点"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_biological_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知影响相关靶点"
+        },
+        {
+          "source": "drug_sulfasalazine",
+          "target": "n_biological_target",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知影响相关靶点"
+        },
+        {
+          "source": "drug_allocetriptan",
+          "target": "n_biological_target",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "作为相关机制的候选药物"
+        },
+        {
+          "source": "drug_lansoprazole",
+          "target": "n_biological_target",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "作用机制可能包括对靶点的影响"
+        },
+        {
+          "source": "drug_omeprazole",
+          "target": "n_biological_target",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "作用机制可能包括对靶点的影响"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_biological_target",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "作用机制可能包括对靶点的影响"
+        },
+        {
+          "source": "drug_balsalazide",
+          "target": "n_biological_target",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知影响相关靶点"
+        },
+        {
+          "source": "drug_certolizumab_pegol",
+          "target": "n_biological_target",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "药理作用可用于相关疾病"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "n_biological_target",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "药理作用可用于相关疾病"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "n_biological_target",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "药理作用可用于相关疾病"
+        },
+        {
+          "source": "n_biological_target",
+          "target": "n_inflammation_pathway",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与炎症通路紧密相关"
+        },
+        {
+          "source": "n_inflammation_pathway",
+          "target": "n_GI_disorder",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "验知炎症及相关障碍存在关联"
+        },
+        {
+          "source": "n_GI_disorder",
+          "target": "n_symptom_improvement",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "药物作用最大目标为改善相关表现"
+        },
+        {
+          "source": "n_biological_target",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "直接支持药物作用的假设"
+        },
+        {
+          "source": "n_biological_target",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "直接支持药物作用的假设"
+        },
+        {
+          "source": "n_biological_target",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "直接支持药物作用的假设"
+        },
+        {
+          "source": "n_biological_target",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "直接支持药物作用的假设"
+        },
+        {
+          "source": "n_biological_target",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "直接支持药物作用的假设"
+        },
+        {
+          "source": "drug_mesalamine",
+          "target": "n_ot_mesalamine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路机制存在"
+        },
+        {
+          "source": "n_ot_mesalamine",
+          "target": "n_rp_mesalamine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能影响其他系统"
+        },
+        {
+          "source": "n_rp_mesalamine",
+          "target": "n_adv_mesalamine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致的副作用"
+        },
+        {
+          "source": "n_adv_mesalamine",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消益处"
+        },
+        {
+          "source": "drug_budesonide",
+          "target": "n_ot_budesonide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响其他靶组织"
+        },
+        {
+          "source": "n_ot_budesonide",
+          "target": "n_rp_budesonide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用通路"
+        },
+        {
+          "source": "n_rp_budesonide",
+          "target": "n_adv_budesonide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应于机体"
+        },
+        {
+          "source": "n_adv_budesonide",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在会削弱药物效用"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_prednisone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响全身炎症状态"
+        },
+        {
+          "source": "n_ot_prednisone",
+          "target": "n_rp_prednisone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的致病途径"
+        },
+        {
+          "source": "n_rp_prednisone",
+          "target": "n_adv_prednisone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致糖皮质激素相关不良反应"
+        },
+        {
+          "source": "n_adv_prednisone",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "会影响治疗效果"
+        },
+        {
+          "source": "drug_sulfasalazine",
+          "target": "n_ot_budesonide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响其它免疫途径"
+        },
+        {
+          "source": "drug_allocetriptan",
+          "target": "n_ot_budesonide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "不良反应与靶器官相关"
+        },
+        {
+          "source": "drug_lansoprazole",
+          "target": "n_ot_budesonide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响胃肠道的生理功能"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_mesalamine",
+              "target": "n_biological_target",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "已知影响相关靶点"
+            },
+            {
+              "source": "n_biological_target",
+              "target": "n_inflammation_pathway",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "与炎症通路紧密相关"
+            },
+            {
+              "source": "n_inflammation_pathway",
+              "target": "n_GI_disorder",
+              "relation": "involved_in",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "验知炎症及相关障碍存在关联"
+            },
+            {
+              "source": "n_GI_disorder",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "药物作用最大目标为改善相关表现"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Mesalamine → Biological Target → Inflammation Pathway → Gastrointestinal Epithelial Barrier Disorders 的路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_budesonide",
+              "target": "n_biological_target",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "已知影响相关靶点"
+            },
+            {
+              "source": "n_biological_target",
+              "target": "n_inflammation_pathway",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "与炎症通路紧密相关"
+            },
+            {
+              "source": "n_inflammation_pathway",
+              "target": "n_GI_disorder",
+              "relation": "involved_in",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "验知炎症及相关障碍存在关联"
+            },
+            {
+              "source": "n_GI_disorder",
+              "target": "H2",
+              "relation": "supports",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "药物作用最大目标为改善相关表现"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Budesonide → Biological Target → Inflammation Pathway → Gastrointestinal Epithelial Barrier Disorders 的路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

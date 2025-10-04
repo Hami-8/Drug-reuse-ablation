@@ -1,0 +1,403 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Hyperammonaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_benzodiazepines",
+          "name": "Benzodiazepines"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_valproic_acid",
+          "name": "Valproic Acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_acetaminophen",
+          "name": "Acetaminophen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_sodium_valproate",
+          "name": "Sodium Valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_lacosamide",
+          "name": "Lacosamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_lamotrigine",
+          "name": "Lamotrigine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_tramadol",
+          "name": "Tramadol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_benzodiazepines",
+          "type": "Drug",
+          "label": "Benzodiazepines",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_valproic_acid",
+          "type": "Drug",
+          "label": "Valproic Acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_acetaminophen",
+          "type": "Drug",
+          "label": "Acetaminophen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lacosamide",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lamotrigine",
+          "type": "Drug",
+          "label": "Lamotrigine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tramadol",
+          "type": "Drug",
+          "label": "Tramadol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hyperammonaemia",
+          "type": "Disease",
+          "label": "Hyperammonaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_neurotoxicity",
+          "type": "Phenotype",
+          "label": "Neurotoxicity",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_valproic_acid",
+          "target": "n_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知明确的不良反应"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "n_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "临床观察到不良反应"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "n_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "相关文献报道"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "潜在相关性观察"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_neurotoxicity",
+          "relation": "associated_with",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "常见临床表型"
+        },
+        {
+          "source": "drug_benzodiazepines",
+          "target": "n_neurotoxicity",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "药效学常识关联"
+        },
+        {
+          "source": "drug_acetaminophen",
+          "target": "n_neurotoxicity",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知剂量依赖性神经毒性"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "n_neurotoxicity",
+          "relation": "associated_with",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通过临床使用观察到"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "n_neurotoxicity",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "相关文献支持"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "n_neurotoxicity",
+          "relation": "potentially_causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "需进一步研究验证"
+        },
+        {
+          "source": "drug_tramadol",
+          "target": "n_neurotoxicity",
+          "relation": "associated_with",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "相关副作用需关注"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "n_neurotoxicity",
+          "relation": "potentially_causes",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "理论上可能相关"
+        },
+        {
+          "source": "drug_lamotrigine",
+          "target": "n_neurotoxicity",
+          "relation": "associated_with",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "临床经验观察"
+        },
+        {
+          "source": "drug_acetaminophen",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知风险与表型关联"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "风险与表现症状相符"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物可能会加重高氨血症，导致神经毒性表型",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "高氨血症与神经毒性有明确关联",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "药物具备对靶组织的可达性（常识判断）"
+    ],
+    "uncertainties": [
+      "不同个体对药物反应差异性（需后续验证）"
+    ],
+    "next_focus_for_pi": [
+      "进一步确认支持性因素与潜在机制"
+    ]
+  }
+}

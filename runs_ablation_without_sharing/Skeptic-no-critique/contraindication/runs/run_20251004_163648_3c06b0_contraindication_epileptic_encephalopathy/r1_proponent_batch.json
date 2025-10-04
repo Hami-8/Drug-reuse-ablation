@@ -1,0 +1,362 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Epileptic encephalopathy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_clofazimine",
+          "name": "Clofazimine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_levetiracetam",
+          "name": "Levetiracetam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_phenobarbital",
+          "name": "Phenobarbital"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_valproic_acid",
+          "name": "Valproic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_perampanel",
+          "name": "Perampanel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_lacosamide",
+          "name": "Lacosamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_zonisamide",
+          "name": "Zonisamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_clobazam",
+          "name": "Clobazam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_clofazimine",
+          "type": "Drug",
+          "label": "Clofazimine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_levetiracetam",
+          "type": "Drug",
+          "label": "Levetiracetam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_valproic_acid",
+          "type": "Drug",
+          "label": "Valproic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_perampanel",
+          "type": "Drug",
+          "label": "Perampanel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lacosamide",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_zonisamide",
+          "type": "Drug",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clobazam",
+          "type": "Drug",
+          "label": "Clobazam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_epileptic_encephalopathy",
+          "type": "Disease",
+          "label": "Epileptic encephalopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_clofazimine",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "causes",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "缺乏证据与文献支持"
+        },
+        {
+          "source": "drug_levetiracetam",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "helps",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "有临床证据支持"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "helps",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于控制癫痫类别"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "helps",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "同样适用多种癫痫"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "helps",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知对多种症状有效"
+        },
+        {
+          "source": "drug_valproic_acid",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "helps",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "临床验证有效"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "helps",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "有证据支持"
+        },
+        {
+          "source": "drug_perampanel",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "新型药物，需进一步研究"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "已知用于焦虑及癫痫"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能适合部分患者"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "involved_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "新药物，需确认适应证"
+        },
+        {
+          "source": "drug_clobazam",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "involved_in",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "作为治疗药物的一部分"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [],
+    "assumptions": [
+      "药物对癫痫具有潜在疗效"
+    ],
+    "uncertainties": [
+      "各药物的具体适应症与副作用尚待进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "评估临床试验数据以确认药物的有效性与安全性"
+    ]
+  }
+}

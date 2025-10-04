@@ -1,0 +1,677 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Atypical haemolytic uraemic syndrome",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "CIN, infection risk, thrombosis risk",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "CIN, infection risk, thrombosis risk",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "CIN, infection risk, thrombosis risk",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ravulizumab",
+          "type": "Drug",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_c5_inhibitors",
+          "type": "Drug",
+          "label": "C5 Inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_complement_inhibitors",
+          "type": "Drug",
+          "label": "Complement Inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fostamatinib",
+          "type": "Drug",
+          "label": "Fostamatinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_luspatercept",
+          "type": "Drug",
+          "label": "Luspatercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sirolimus",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thrombopoietin_receptor_agonists",
+          "type": "Drug",
+          "label": "Thrombopoietin receptor agonists",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_aHUS",
+          "type": "Disease",
+          "label": "Atypical Haemolytic Uraemic Syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_risk_cin",
+          "type": "Phenotype",
+          "label": "CIN (Contrast-Induced Nephropathy)",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk_infection",
+          "type": "Phenotype",
+          "label": "Infection Risk",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk_thrombosis",
+          "type": "Phenotype",
+          "label": "Thrombosis Risk",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_c5_inhibitor",
+          "type": "Target",
+          "label": "C5 Inhibitor Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_complement_inhibition",
+          "type": "Target",
+          "label": "Complement System Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cin_mechanism",
+          "type": "Pathway",
+          "label": "CIN Mechanism Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_infection_mechanism",
+          "type": "Pathway",
+          "label": "Infection Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thrombosis_mechanism",
+          "type": "Pathway",
+          "label": "Thrombosis Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "C5 Inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Complement Inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Fostamatinib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Luspatercept",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Thrombopoietin receptor agonists",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_eculizumab",
+          "target": "disease_aHUS",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知对aHUS的有效性"
+        },
+        {
+          "source": "drug_ravulizumab",
+          "target": "disease_aHUS",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与Eculizumab相似的机制"
+        },
+        {
+          "source": "drug_c5_inhibitors",
+          "target": "disease_aHUS",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "同类药物作用于同一个靶点"
+        },
+        {
+          "source": "drug_complement_inhibitors",
+          "target": "disease_aHUS",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "补体途径相关性"
+        },
+        {
+          "source": "drug_fostamatinib",
+          "target": "disease_aHUS",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "治疗效果相关的文献"
+        },
+        {
+          "source": "drug_luspatercept",
+          "target": "disease_aHUS",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "新兴疗法潜力"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "disease_aHUS",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "免疫调节作用"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "disease_aHUS",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "临床用药背景"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "disease_aHUS",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "相关机制推测"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "disease_aHUS",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可考虑作为辅助疗法"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "disease_aHUS",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "针对免疫性异常的作用"
+        },
+        {
+          "source": "drug_thrombopoietin_receptor_agonists",
+          "target": "disease_aHUS",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "用于症状管理的潜力"
+        },
+        {
+          "source": "drug_eculizumab",
+          "target": "n_ot_c5_inhibitor",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致非特异性靶向效应"
+        },
+        {
+          "source": "drug_ravulizumab",
+          "target": "n_ot_c5_inhibitor",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发旁路作用"
+        },
+        {
+          "source": "n_ot_c5_inhibitor",
+          "target": "n_ot_cin_mechanism",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与 CIN 机制相关"
+        },
+        {
+          "source": "n_ot_c5_inhibitor",
+          "target": "n_ot_infection_mechanism",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能增加感染风险"
+        },
+        {
+          "source": "n_ot_c5_inhibitor",
+          "target": "n_ot_thrombosis_mechanism",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与血栓形成机制相关"
+        },
+        {
+          "source": "n_ot_cin_mechanism",
+          "target": "n_risk_cin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的 CIN 风险"
+        },
+        {
+          "source": "n_ot_infection_mechanism",
+          "target": "n_risk_infection",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "提高感染风险"
+        },
+        {
+          "source": "n_ot_thrombosis_mechanism",
+          "target": "n_risk_thrombosis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致血栓风险"
+        },
+        {
+          "source": "n_risk_cin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "以上风险影响 Eculizumab 的效果"
+        },
+        {
+          "source": "n_risk_infection",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "感染风险与治疗效果相悖"
+        },
+        {
+          "source": "n_risk_thrombosis",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "血栓风险与合并症相悖"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_ot_c5_inhibitor",
+              "type": "Target",
+              "label": "C5 Inhibitor Off-Target Effects",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_ot_complement_inhibition",
+              "type": "Target",
+              "label": "Complement System Effects",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_ot_cin_mechanism",
+              "type": "Pathway",
+              "label": "CIN Mechanism Pathway",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_ot_infection_mechanism",
+              "type": "Pathway",
+              "label": "Infection Pathway",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_ot_thrombosis_mechanism",
+              "type": "Pathway",
+              "label": "Thrombosis Pathway",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "drug_eculizumab",
+              "target": "n_ot_c5_inhibitor",
+              "relation": "acts_on",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "可导致非特异性靶向效应"
+            },
+            {
+              "source": "drug_ravulizumab",
+              "target": "n_ot_c5_inhibitor",
+              "relation": "acts_on",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "可能引发旁路作用"
+            },
+            {
+              "source": "n_ot_c5_inhibitor",
+              "target": "n_ot_cin_mechanism",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "与 CIN 机制相关"
+            },
+            {
+              "source": "n_ot_c5_inhibitor",
+              "target": "n_ot_infection_mechanism",
+              "relation": "involved_in",
+              "weight": 0.6,
+              "agent": "Skeptic",
+              "rationale": "可能增加感染风险"
+            },
+            {
+              "source": "n_ot_c5_inhibitor",
+              "target": "n_ot_thrombosis_mechanism",
+              "relation": "involved_in",
+              "weight": 0.6,
+              "agent": "Skeptic",
+              "rationale": "与血栓形成机制相关"
+            },
+            {
+              "source": "n_ot_cin_mechanism",
+              "target": "n_risk_cin",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "潜在的 CIN 风险"
+            },
+            {
+              "source": "n_ot_infection_mechanism",
+              "target": "n_risk_infection",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "提高感染风险"
+            },
+            {
+              "source": "n_ot_thrombosis_mechanism",
+              "target": "n_risk_thrombosis",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "可能导致血栓风险"
+            },
+            {
+              "source": "n_risk_cin",
+              "target": "H1",
+              "relation": "refutes",
+              "weight": 0.9,
+              "agent": "Skeptic",
+              "rationale": "以上风险影响 Eculizumab 的效果"
+            },
+            {
+              "source": "n_risk_infection",
+              "target": "H1",
+              "relation": "refutes",
+              "weight": 0.9,
+              "agent": "Skeptic",
+              "rationale": "感染风险与治疗效果相悖"
+            },
+            {
+              "source": "n_risk_thrombosis",
+              "target": "H1",
+              "relation": "refutes",
+              "weight": 0.9,
+              "agent": "Skeptic",
+              "rationale": "血栓风险与合并症相悖"
+            }
+          ],
+          "conflict_hotspots": [
+            {
+              "topic": "CIN, infection risk, thrombosis risk",
+              "pro_nodes": [],
+              "con_nodes": [
+                "n_risk_cin",
+                "n_risk_infection",
+                "n_risk_thrombosis"
+              ],
+              "note": "风险与期望疗效之间存在明显矛盾"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：以高权重 refutes 边连到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "各类风险的潜在影响未完全消解",
+      "缺乏对长期效果的具体数据支持"
+    ]
+  }
+}

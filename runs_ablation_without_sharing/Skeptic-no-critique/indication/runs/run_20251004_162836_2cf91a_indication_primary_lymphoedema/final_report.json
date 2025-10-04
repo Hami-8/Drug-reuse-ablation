@@ -1,0 +1,980 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Primary lymphoedema",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_diuretics",
+          "name": "Diuretics"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_compression_therapy_devices",
+          "name": "Compression therapy devices"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_pentoxifylline",
+          "name": "Pentoxifylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_benzopyrones",
+          "name": "Benzopyrones"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_mannitol",
+          "name": "Mannitol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lisinopril",
+          "name": "Lisinopril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_losartan",
+          "name": "Losartan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_cilostazol",
+          "name": "Cilostazol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_sodium_thiosulfate",
+          "name": "Sodium thiosulfate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_magnesium_supplements",
+          "name": "Magnesium supplements"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.81,
+        "components": {
+          "mechanism_fit": 0.85,
+          "class_prior": 0.8,
+          "pk_pd_feasibility": 0.75,
+          "indication_plausibility": 0.9,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.08
+        },
+        "graph_signals": {
+          "support_weight": 2.65,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Diuretics通过影响流体平衡及利尿作用直接相关"
+          ],
+          "class_prior": [
+            "许多临床实践中用于水肿条件"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.79,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.7,
+          "pk_pd_feasibility": 0.7,
+          "indication_plausibility": 0.85,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 1.8,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "压迫疗法已被证实对改善静脉健康有效"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.76,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.65,
+          "indication_plausibility": 0.75,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 1.4,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Pentoxifylline改善血流与静脉功能相关"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.75,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.65,
+          "pk_pd_feasibility": 0.7,
+          "indication_plausibility": 0.75,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 1.35,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Benzopyrones已被使用于改善静脉健康"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.73,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 1.3,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Mannitol有助于利尿"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.71,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.55,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.65,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 1.1,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Lisinopril可改善血管保护"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.69,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.55,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.9,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Losartan可能有助于改善血管舒张"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.67,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Cilostazol支持血流功能"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.65,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.55,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Sodium thiosulfate可能在流体状态方面有所帮助"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.63,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Fibrates的主要作用在于血脂改善"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.61,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Rifampicin在水肿条件下支持作用的不确定性"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.59,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "镁补充对流体调节的作用尚不明确"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": []
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_diuretics",
+          "type": "Drug",
+          "label": "Diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_compression_therapy_devices",
+          "type": "Drug",
+          "label": "Compression therapy devices",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_pentoxifylline",
+          "type": "Drug",
+          "label": "Pentoxifylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_benzopyrones",
+          "type": "Drug",
+          "label": "Benzopyrones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mannitol",
+          "type": "Drug",
+          "label": "Mannitol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lisinopril",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_losartan",
+          "type": "Drug",
+          "label": "Losartan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cilostazol",
+          "type": "Drug",
+          "label": "Cilostazol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_thiosulfate",
+          "type": "Drug",
+          "label": "Sodium thiosulfate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_magnesium_supplements",
+          "type": "Drug",
+          "label": "Magnesium supplements",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Disease_Primary_lymphoedema",
+          "type": "Disease",
+          "label": "Primary lymphoedema",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_diuresis",
+          "type": "Target",
+          "label": "Diuresis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_venous_health",
+          "type": "Target",
+          "label": "Venous Health",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_fluid_balance",
+          "type": "Pathway",
+          "label": "Fluid Balance Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_circulation",
+          "type": "Pathway",
+          "label": "Circulation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Diuretics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Compression therapy devices",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Pentoxifylline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Benzopyrones",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Mannitol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Losartan",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Cilostazol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Sodium thiosulfate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Magnesium supplements",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_diuretics",
+          "target": "n_target_diuresis",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "强烈药理作用支持"
+        },
+        {
+          "source": "drug_pentoxifylline",
+          "target": "n_target_venous_health",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "增强静脉健康的机制"
+        },
+        {
+          "source": "drug_mannitol",
+          "target": "n_target_diuresis",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "促进尿液排出常识"
+        },
+        {
+          "source": "drug_benzopyrones",
+          "target": "n_target_venous_health",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "改善静脉功能"
+        },
+        {
+          "source": "n_target_diuresis",
+          "target": "n_pathway_fluid_balance",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "流体平衡通路关键"
+        },
+        {
+          "source": "n_target_venous_health",
+          "target": "n_pathway_circulation",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "循环维持相关"
+        },
+        {
+          "source": "n_pathway_fluid_balance",
+          "target": "Disease_Primary_lymphoedema",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "流体平衡障碍导致水肿"
+        },
+        {
+          "source": "n_pathway_circulation",
+          "target": "Disease_Primary_lymphoedema",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "循环不畅加重病情"
+        },
+        {
+          "source": "drug_compression_therapy_devices",
+          "target": "n_target_venous_health",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "辅助静脉健康"
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "n_target_venous_health",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "血管保护作用"
+        },
+        {
+          "source": "drug_losartan",
+          "target": "n_target_venous_health",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "改善血管舒张"
+        },
+        {
+          "source": "drug_fibrates",
+          "target": "n_target_venous_health",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "改善血脂，支持血管健康"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "n_target_venous_health",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "减少炎症潜在影响"
+        },
+        {
+          "source": "drug_cilostazol",
+          "target": "n_target_diuresis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "促进血流改善肢体状态"
+        },
+        {
+          "source": "drug_sodium_thiosulfate",
+          "target": "n_target_diuresis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响液体状态"
+        },
+        {
+          "source": "drug_magnesium_supplements",
+          "target": "n_target_diuresis",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "维持电解质平衡"
+        },
+        {
+          "source": "drug_benzopyrones",
+          "target": "Disease_Primary_lymphoedema",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "改善淋巴回流"
+        },
+        {
+          "source": "drug_pentoxifylline",
+          "target": "Disease_Primary_lymphoedema",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响病理状态"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_diuretics",
+          "name": "Diuretics"
+        },
+        "score": 0.81,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Diuretics通过影响流体平衡及利尿作用直接相关"
+        ],
+        "caveats": [
+          "尽管有效，但长期使用的安全性需谨慎评估"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_compression_therapy_devices",
+          "name": "Compression therapy devices"
+        },
+        "score": 0.79,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "压迫疗法已被证实对改善静脉健康有效"
+        ],
+        "caveats": [
+          "需要个体化应用，某些患者可能不适合使用"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_pentoxifylline",
+          "name": "Pentoxifylline"
+        },
+        "score": 0.76,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Pentoxifylline改善血流与静脉功能相关"
+        ],
+        "caveats": [
+          "疗效和长期安全性尚不确定"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Diuretics → Diuresis → Fluid Balance Pathway → Primary lymphoedema",
+          "reason": "机制连通性强，支持通过多个节点提出治疗效果"
+        },
+        {
+          "pattern": "Compression therapy devices → Venous Health → Circulation Pathway → Primary lymphoedema",
+          "reason": "压迫疗法对静脉健康影响明确，路径完整"
+        }
+      ],
+      "remaining_gaps": [
+        "部分候选药物的长期安全性与有效性需更多临床数据支撑"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "drug_diuretics"
+          ],
+          "impact_summary": "明确了液体平衡机制基础，支持高分候选的形成"
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "drug_pentoxifylline"
+          ],
+          "impact_summary": "引入了新的作用机制，增加了候选的多样性"
+        }
+      ],
+      "lessons": [
+        "对于临床常用药物，需重点关注其长时间应用下的安全性与适应症改变",
+        "路径的多样性有助于提升最终治疗的全面性与有效性"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "确保图中每个关键关联都有证据支持，特别是在机制与路径驱动层面"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "加重对长期安全性的质疑与分析，尤其是在使用高风险药物时"
+      },
+      {
+        "role": "Explorer",
+        "patch": "在补充新的候选时，重视不同机制与路径的交互影响"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "水肿表型",
+        "then": "优先引入对液体平衡有积极影响的药物"
+      },
+      {
+        "when": "使用药物",
+        "then": "关注药物之间的相互作用与潜在安全风险"
+      }
+    ]
+  }
+}

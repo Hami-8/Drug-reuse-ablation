@@ -1,0 +1,888 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Epileptic encephalopathy",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Carbamazepine风险与疗效的平衡",
+            "expectation": "若安全性风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Phenytoin的安全性与疗效",
+            "expectation": "若存在偏差，要求 Skeptic 标注高权重的 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Lamotrigine的安全性问题",
+            "expectation": "强调其可能的副作用及风险",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Sodium Valproate的潜在风险",
+            "expectation": "若安全风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Topiramate的副作用",
+            "expectation": "需评估其对患者的潜在影响",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Zonisamide的风险评估",
+            "expectation": "根据潜在的副作用提供证据",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Felbamate的风险与好处",
+            "expectation": "要求 Skeptic 提供关于其安全性的强支持",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Lacosamide的副作用审视",
+            "expectation": "强调其安全性问题",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Clonazepam的安全性问题",
+            "expectation": "确定其潜在的不良反应",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Gabapentin的副作用评估",
+            "expectation": "要求提供对其安全性的进一步证据",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Pregabalin的风险分析",
+            "expectation": "强调其潜在危险性",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Vigabatrin的安全性问题",
+            "expectation": "需对其负面影响进行评估",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lamotrigine",
+          "type": "Drug",
+          "label": "Lamotrigine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_zonisamide",
+          "type": "Drug",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_felbamate",
+          "type": "Drug",
+          "label": "Felbamate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lacosamide",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clonazepam",
+          "type": "Drug",
+          "label": "Clonazepam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_pregabalin",
+          "type": "Drug",
+          "label": "Pregabalin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vigabatrin",
+          "type": "Drug",
+          "label": "Vigabatrin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_epileptic_encephalopathy",
+          "type": "Disease",
+          "label": "Epileptic Encephalopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "t_efficacy",
+          "type": "Target",
+          "label": "Target for Antiepileptic Drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "p_seizure_control",
+          "type": "Pathway",
+          "label": "Seizure Control Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "h_safety",
+          "type": "Hypothesis",
+          "label": "Hypothesis on Drug Safety",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_carbamazepine",
+          "type": "Target",
+          "label": "OffTargetCarbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_carbamazepine",
+          "type": "Pathway",
+          "label": "RiskPathwayCarbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_carbamazepine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCarbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_phenytoin",
+          "type": "Target",
+          "label": "OffTargetPhenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_phenytoin",
+          "type": "Pathway",
+          "label": "RiskPathwayPhenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_phenytoin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypePhenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lamotrigine",
+          "type": "Target",
+          "label": "OffTargetLamotrigine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lamotrigine",
+          "type": "Pathway",
+          "label": "RiskPathwayLamotrigine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lamotrigine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLamotrigine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sodium_valproate",
+          "type": "Target",
+          "label": "OffTargetSodiumValproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_valproate",
+          "type": "Pathway",
+          "label": "RiskPathwaySodiumValproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sodium_valproate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSodiumValproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_topiramate",
+          "type": "Target",
+          "label": "OffTargetTopiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_topiramate",
+          "type": "Pathway",
+          "label": "RiskPathwayTopiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_topiramate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTopiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_zonisamide",
+          "type": "Target",
+          "label": "OffTargetZonisamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_zonisamide",
+          "type": "Pathway",
+          "label": "RiskPathwayZonisamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_zonisamide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeZonisamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Lamotrigine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Felbamate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Clonazepam",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Pregabalin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Vigabatrin",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_carbamazepine",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_lamotrigine",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_felbamate",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_clonazepam",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_pregabalin",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_vigabatrin",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "t_efficacy",
+          "target": "p_seizure_control",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗癫痫药物工作机制"
+        },
+        {
+          "source": "p_seizure_control",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "癫痫持续状态影响"
+        },
+        {
+          "source": "t_efficacy",
+          "target": "h_safety",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "假设通路安全性"
+        },
+        {
+          "source": "p_seizure_control",
+          "target": "h_safety",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "假设通路安全性"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_ot_carbamazepine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知的副作用与靶器官失调"
+        },
+        {
+          "source": "n_ot_carbamazepine",
+          "target": "n_rp_carbamazepine",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "相关机制暗示潜在风险通路"
+        },
+        {
+          "source": "n_rp_carbamazepine",
+          "target": "n_adv_carbamazepine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性高"
+        },
+        {
+          "source": "n_adv_carbamazepine",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在风险可能抵消药物的治疗益处"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "n_ot_phenytoin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "已知副作用与靶器官影响"
+        },
+        {
+          "source": "n_ot_phenytoin",
+          "target": "n_rp_phenytoin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "机制链可能导致风险"
+        },
+        {
+          "source": "n_rp_phenytoin",
+          "target": "n_adv_phenytoin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应"
+        },
+        {
+          "source": "n_adv_phenytoin",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应可能否定其益处"
+        },
+        {
+          "source": "drug_lamotrigine",
+          "target": "n_ot_lamotrigine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "靶组织可能遭受不良影响"
+        },
+        {
+          "source": "n_ot_lamotrigine",
+          "target": "n_rp_lamotrigine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_lamotrigine",
+          "target": "n_adv_lamotrigine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引起不良后果的潜力"
+        },
+        {
+          "source": "n_adv_lamotrigine",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消效益"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "n_ot_sodium_valproate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致靶器官的负面影响"
+        },
+        {
+          "source": "n_ot_sodium_valproate",
+          "target": "n_rp_sodium_valproate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险因素可能关联"
+        },
+        {
+          "source": "n_rp_sodium_valproate",
+          "target": "n_adv_sodium_valproate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "会引发负面结果"
+        },
+        {
+          "source": "n_adv_sodium_valproate",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在负面可能性影响治疗效益"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "n_ot_topiramate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "靶器官可能受到影响"
+        },
+        {
+          "source": "n_ot_topiramate",
+          "target": "n_rp_topiramate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "表明风险的机制通路"
+        },
+        {
+          "source": "n_rp_topiramate",
+          "target": "n_adv_topiramate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_topiramate",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能否定药物的益处"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "n_ot_zonisamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "靶器官暴露可能不充分"
+        },
+        {
+          "source": "n_ot_zonisamide",
+          "target": "n_rp_zonisamide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关机制潜在风险链"
+        },
+        {
+          "source": "n_rp_zonisamide",
+          "target": "n_adv_zonisamide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能诱发不良结果"
+        },
+        {
+          "source": "n_adv_zonisamide",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能影响药物的整体疗效"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Carbamazepine风险与疗效的平衡",
+              "pro_nodes": [
+                "h_safety"
+              ],
+              "con_nodes": [
+                "n_adv_carbamazepine"
+              ],
+              "note": "潜在的不良反应与疗效之间的权衡"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：以高权重 refutes 边连到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "与其他药物的潜在共同作用未被评估",
+      "长期使用可能导致的耐受性与药效减退"
+    ]
+  }
+}

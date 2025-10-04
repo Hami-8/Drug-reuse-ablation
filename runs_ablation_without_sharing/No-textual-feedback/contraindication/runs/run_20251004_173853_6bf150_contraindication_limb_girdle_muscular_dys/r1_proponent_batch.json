@@ -1,0 +1,366 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Limb girdle muscular dystrophy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_ataluren",
+          "name": "Ataluren"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_eteplirsen",
+          "name": "Eteplirsen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_rasagiline",
+          "name": "Rasagiline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lisinopril",
+          "name": "Lisinopril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_tadalafil",
+          "name": "Tadalafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_ramipril",
+          "name": "Ramipril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_glycopyrrolate",
+          "name": "Glycopyrrolate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ataluren",
+          "type": "Drug",
+          "label": "Ataluren",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_eteplirsen",
+          "type": "Drug",
+          "label": "Eteplirsen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rasagiline",
+          "type": "Drug",
+          "label": "Rasagiline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lisinopril",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sildenafil",
+          "type": "Drug",
+          "label": "Sildenafil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tadalafil",
+          "type": "Drug",
+          "label": "Tadalafil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ramipril",
+          "type": "Drug",
+          "label": "Ramipril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_glycopyrrolate",
+          "type": "Drug",
+          "label": "Glycopyrrolate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_limb_girdle_muscular_dystrophy",
+          "type": "Disease",
+          "label": "Limb Girdle Muscular Dystrophy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_dexamethasone",
+          "target": "n_limb_girdle_muscular_dystrophy",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "可能对该疾病有影响"
+        },
+        {
+          "source": "n_prednisone",
+          "target": "n_limb_girdle_muscular_dystrophy",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "可能对该疾病有影响"
+        },
+        {
+          "source": "n_ataluren",
+          "target": "n_limb_girdle_muscular_dystrophy",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "可能对该疾病有影响"
+        },
+        {
+          "source": "n_eteplirsen",
+          "target": "n_limb_girdle_muscular_dystrophy",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "可能对该疾病有影响"
+        },
+        {
+          "source": "n_rasagiline",
+          "target": "n_limb_girdle_muscular_dystrophy",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "可能对该疾病有影响"
+        },
+        {
+          "source": "n_lisinopril",
+          "target": "n_limb_girdle_muscular_dystrophy",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "可能对该疾病有影响"
+        },
+        {
+          "source": "n_sildenafil",
+          "target": "n_limb_girdle_muscular_dystrophy",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可能对该疾病有影响"
+        },
+        {
+          "source": "n_tadalafil",
+          "target": "n_limb_girdle_muscular_dystrophy",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能对该疾病有影响"
+        },
+        {
+          "source": "n_ramipril",
+          "target": "n_limb_girdle_muscular_dystrophy",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能对该疾病有影响"
+        },
+        {
+          "source": "n_glycopyrrolate",
+          "target": "n_limb_girdle_muscular_dystrophy",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能对该疾病有影响"
+        },
+        {
+          "source": "n_ibuprofen",
+          "target": "n_limb_girdle_muscular_dystrophy",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能对该疾病有影响"
+        },
+        {
+          "source": "n_aspirin",
+          "target": "n_limb_girdle_muscular_dystrophy",
+          "relation": "causes",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能对该疾病有影响"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物可能影响 Limb Girdle Muscular Dystrophy 表现，需进一步验证",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "所有药物在个体治疗中的安全性与有效性尚需详细评估"
+    ],
+    "uncertainties": [
+      "每种药物对疾病的影响机制尚不明确，需后续研究验证"
+    ],
+    "next_focus_for_pi": [
+      "是否需要对具体药物进行更深入的机制研究？"
+    ]
+  }
+}

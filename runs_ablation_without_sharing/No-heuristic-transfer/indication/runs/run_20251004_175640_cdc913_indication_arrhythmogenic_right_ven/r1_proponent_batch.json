@@ -1,0 +1,560 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sotalol",
+          "name": "Sotalol"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_dronedarone",
+          "name": "Dronedarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_verapamil",
+          "name": "Verapamil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_disopyramide",
+          "name": "Disopyramide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_flecainide",
+          "name": "Flecainide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_procainamide",
+          "name": "Procainamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_digoxin",
+          "name": "Digoxin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_lisinopril",
+          "name": "Lisinopril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_spironolactone",
+          "name": "Spironolactone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_hydrochlorothiazide",
+          "name": "Hydrochlorothiazide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_sotalol",
+          "type": "Drug",
+          "label": "Sotalol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dronedarone",
+          "type": "Drug",
+          "label": "Dronedarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_verapamil",
+          "type": "Drug",
+          "label": "Verapamil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_disopyramide",
+          "type": "Drug",
+          "label": "Disopyramide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_flecainide",
+          "type": "Drug",
+          "label": "Flecainide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_procainamide",
+          "type": "Drug",
+          "label": "Procainamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_digoxin",
+          "type": "Drug",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lisinopril",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_spironolactone",
+          "type": "Drug",
+          "label": "Spironolactone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydrochlorothiazide",
+          "type": "Drug",
+          "label": "Hydrochlorothiazide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Disease_ARVC",
+          "type": "Disease",
+          "label": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Target_Beta_adrenergic_receptor",
+          "type": "Target",
+          "label": "Beta-adrenergic receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Pathway_Heart_regulation",
+          "type": "Pathway",
+          "label": "Heart rate and rhythm regulation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Phenotype_Arrhythmia",
+          "type": "Phenotype",
+          "label": "Arrhythmia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Phenotype_SV_Tachycardia",
+          "type": "Phenotype",
+          "label": "Supraventricular Tachycardia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Phenotype_Ventricular_Tachycardia",
+          "type": "Phenotype",
+          "label": "Ventricular Tachycardia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_sotalol",
+          "target": "Target_Beta_adrenergic_receptor",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Sotalol 是β-拮抗剂，作用于β-肾上腺素受体"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "Target_Beta_adrenergic_receptor",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Amiodarone 通过调节心脏电生理特性影响心率"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "Target_Beta_adrenergic_receptor",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "β-阻滞剂主要通过作用于β-肾上腺素受体来降低心搏频率"
+        },
+        {
+          "source": "drug_dronedarone",
+          "target": "Target_Beta_adrenergic_receptor",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Dronedarone 通过多种机制影响心率，包含对β-受体的作用"
+        },
+        {
+          "source": "drug_verapamil",
+          "target": "Target_Beta_adrenergic_receptor",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Verapamil 作为钙通道阻滞剂影响心脏节律"
+        },
+        {
+          "source": "drug_disopyramide",
+          "target": "Target_Beta_adrenergic_receptor",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Disopyramide 可干预心脏传导与节律"
+        },
+        {
+          "source": "drug_flecainide",
+          "target": "Target_Beta_adrenergic_receptor",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Flecainide 可降低心脏传导速度"
+        },
+        {
+          "source": "drug_procainamide",
+          "target": "Target_Beta_adrenergic_receptor",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Procainamide 可用于治疗心律失常"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "Target_Beta_adrenergic_receptor",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Digoxin 可增强心脏收缩力并影响心律"
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "Target_Beta_adrenergic_receptor",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Lisinopril 可通过改善心脏功能间接影响心律"
+        },
+        {
+          "source": "drug_spironolactone",
+          "target": "Target_Beta_adrenergic_receptor",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Spironolactone 作为利尿剂有助于心脏病患者"
+        },
+        {
+          "source": "drug_hydrochlorothiazide",
+          "target": "Target_Beta_adrenergic_receptor",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Hydrochlorothiazide 可用于减少心脏负担"
+        },
+        {
+          "source": "Target_Beta_adrenergic_receptor",
+          "target": "Pathway_Heart_regulation",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "β-肾上腺素受体在心脏调节通路中的核心作用"
+        },
+        {
+          "source": "Pathway_Heart_regulation",
+          "target": "Phenotype_Arrhythmia",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "心脏调节通路失调可导致心律失常"
+        },
+        {
+          "source": "Pathway_Heart_regulation",
+          "target": "Phenotype_SV_Tachycardia",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "心脏节律失调引起的超心速症"
+        },
+        {
+          "source": "Pathway_Heart_regulation",
+          "target": "Phenotype_Ventricular_Tachycardia",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "心脏电生理异常引起心室心动过速"
+        },
+        {
+          "source": "drug_sotalol",
+          "target": "Disease_ARVC",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Sotalol 用于治疗心律失常，适用于患者"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "Disease_ARVC",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Amiodarone 能有效控制心律失常"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "Disease_ARVC",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "β-阻滞剂广泛应用于心律失常的管理"
+        },
+        {
+          "source": "drug_dronedarone",
+          "target": "Disease_ARVC",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Dronedarone 是心律靶向治疗的重要药物"
+        },
+        {
+          "source": "drug_verapamil",
+          "target": "Disease_ARVC",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Verapamil 作为抗心律药物用途广泛"
+        },
+        {
+          "source": "drug_disopyramide",
+          "target": "Disease_ARVC",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Disopyramide 可改善心率问题"
+        },
+        {
+          "source": "drug_flecainide",
+          "target": "Disease_ARVC",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Flecainide 在某些心律失常中很有效"
+        },
+        {
+          "source": "drug_procainamide",
+          "target": "Disease_ARVC",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Procainamide 在控制心律方面有效"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "Disease_ARVC",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Digoxin 可能对控制心率有积极作用"
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "Disease_ARVC",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Lisinopril 除心率外还改善心脏功能"
+        },
+        {
+          "source": "drug_spironolactone",
+          "target": "Disease_ARVC",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "Spironolactone 可辅助性改善患者心脏功能"
+        },
+        {
+          "source": "drug_hydrochlorothiazide",
+          "target": "Disease_ARVC",
+          "relation": "supports",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "Hydrochlorothiazide 可减轻心脏负担"
+        },
+        {
+          "source": "Phenotype_Arrhythmia",
+          "target": "Disease_ARVC",
+          "relation": "associated_with",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "心律失常是心脏病的一种常见表现"
+        },
+        {
+          "source": "Phenotype_SV_Tachycardia",
+          "target": "Disease_ARVC",
+          "relation": "associated_with",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "超心速症常见于 心脏病患者"
+        },
+        {
+          "source": "Phenotype_Ventricular_Tachycardia",
+          "target": "Disease_ARVC",
+          "relation": "associated_with",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "心室心动过速与心脏病相关性高"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过作用于 β-受体和心脏节律通路来支持治疗心室心肌病",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "所有药物能够有效到达心脏组织并发挥作用"
+    ],
+    "uncertainties": [
+      "某些药物的具体副作用仍需进一步评估"
+    ],
+    "next_focus_for_pi": [
+      "确认是否需要进一步探索其他靶点和药物"
+    ]
+  }
+}

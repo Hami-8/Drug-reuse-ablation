@@ -1,0 +1,368 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_ursodeoxycholic_acid",
+          "name": "Ursodeoxycholic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_sodium_phenylbutyrate",
+          "name": "Sodium phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_silymarin",
+          "name": "Silymarin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_acetylcysteine",
+          "name": "Acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_metronidazole",
+          "name": "Metronidazole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_hydrochlorothiazide",
+          "name": "Hydrochlorothiazide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_simvastatin",
+          "name": "Simvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_lactulose",
+          "name": "Lactulose"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_cenaless",
+          "name": "Cenaless"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_ursodeoxycholic_acid",
+          "type": "Drug",
+          "label": "Ursodeoxycholic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_silymarin",
+          "type": "Drug",
+          "label": "Silymarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_acetylcysteine",
+          "type": "Drug",
+          "label": "Acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metronidazole",
+          "type": "Drug",
+          "label": "Metronidazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydrochlorothiazide",
+          "type": "Drug",
+          "label": "Hydrochlorothiazide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_simvastatin",
+          "type": "Drug",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lactulose",
+          "type": "Drug",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cenaless",
+          "type": "Drug",
+          "label": "Cenaless",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_neonatal_cholestasis",
+          "type": "Disease",
+          "label": "Neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "文献表明有助于胆汁流动改善"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "成分用于胆汁酸排泄，如用药历史支持"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "可调节胆汁酸代谢改善"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可能改善胆道排泄机制"
+        },
+        {
+          "source": "drug_sodium_phenylbutyrate",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过改变胆盐代谢影响病理进程"
+        },
+        {
+          "source": "drug_silymarin",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "具有肝保护作用，可能改善胆汁流动"
+        },
+        {
+          "source": "drug_acetylcysteine",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "潜在的解毒作用，有助于肝功能"
+        },
+        {
+          "source": "drug_metronidazole",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有效性较低的候选药物，需更多研究验证"
+        },
+        {
+          "source": "drug_hydrochlorothiazide",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "作用机制尚不明确，考虑潜在影响"
+        },
+        {
+          "source": "drug_simvastatin",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可以降低胆固醇，有助胆道健康"
+        },
+        {
+          "source": "drug_lactulose",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "改善肠道菌群，可能影响胆汁代谢"
+        },
+        {
+          "source": "drug_cenaless",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "实验阶段药物，需进一步验证"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物显示对新生儿胆汁淤积的潜在治疗作用",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "每种药物的安全性和有效性在该病症中尚待验证"
+    ],
+    "uncertainties": [
+      "现有文献支持的机制和长远效果仍需进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "考虑是否需要对每种药物的剂量和给药途径进行更深入探索"
+    ]
+  }
+}

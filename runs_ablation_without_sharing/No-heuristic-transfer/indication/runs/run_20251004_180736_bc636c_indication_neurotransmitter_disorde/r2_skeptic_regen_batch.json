@@ -1,0 +1,417 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_levodopa",
+          "name": "Levodopa"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_dopamine",
+          "name": "Dopamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_selegiline",
+          "name": "Selegiline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_rasagiline",
+          "name": "Rasagiline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_amantadine",
+          "name": "Amantadine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_pramipexole",
+          "name": "Pramipexole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_ropinirole",
+          "name": "Ropinirole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_bromocriptine",
+          "name": "Bromocriptine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_entacapone",
+          "name": "Entacapone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_cabergoline",
+          "name": "Cabergoline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_fluoxetine",
+          "name": "Fluoxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_venlafaxine",
+          "name": "Venlafaxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_levodopa",
+          "type": "Target",
+          "label": "Levodopa Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_levodopa",
+          "type": "Pathway",
+          "label": "Levodopa Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_levodopa",
+          "type": "Phenotype",
+          "label": "Levodopa Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dopamine",
+          "type": "Target",
+          "label": "Dopamine Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dopamine",
+          "type": "Pathway",
+          "label": "Dopamine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dopamine",
+          "type": "Phenotype",
+          "label": "Dopamine Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_selegiline",
+          "type": "Target",
+          "label": "Selegiline Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_selegiline",
+          "type": "Pathway",
+          "label": "Selegiline Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_selegiline",
+          "type": "Phenotype",
+          "label": "Selegiline Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rasagiline",
+          "type": "Target",
+          "label": "Rasagiline Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rasagiline",
+          "type": "Pathway",
+          "label": "Rasagiline Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rasagiline",
+          "type": "Phenotype",
+          "label": "Rasagiline Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_levodopa",
+          "target": "n_ot_levodopa",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路或离靶作用"
+        },
+        {
+          "source": "n_ot_levodopa",
+          "target": "n_rp_levodopa",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能存在"
+        },
+        {
+          "source": "n_rp_levodopa",
+          "target": "n_adv_levodopa",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应的可能性"
+        },
+        {
+          "source": "n_adv_levodopa",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果该风险链成立，将抵消净获益"
+        },
+        {
+          "source": "drug_dopamine",
+          "target": "n_ot_dopamine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路或离靶作用"
+        },
+        {
+          "source": "n_ot_dopamine",
+          "target": "n_rp_dopamine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能存在"
+        },
+        {
+          "source": "n_rp_dopamine",
+          "target": "n_adv_dopamine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应的可能性"
+        },
+        {
+          "source": "n_adv_dopamine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果该风险链成立，将抵消净获益"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "n_ot_selegiline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路或离靶作用"
+        },
+        {
+          "source": "n_ot_selegiline",
+          "target": "n_rp_selegiline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能存在"
+        },
+        {
+          "source": "n_rp_selegiline",
+          "target": "n_adv_selegiline",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应的可能性"
+        },
+        {
+          "source": "n_adv_selegiline",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果该风险链成立，将抵消净获益"
+        },
+        {
+          "source": "drug_rasagiline",
+          "target": "n_ot_rasagiline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路或离靶作用"
+        },
+        {
+          "source": "n_ot_rasagiline",
+          "target": "n_rp_rasagiline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能存在"
+        },
+        {
+          "source": "n_rp_rasagiline",
+          "target": "n_adv_rasagiline",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应的可能性"
+        },
+        {
+          "source": "n_adv_rasagiline",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果该风险链成立，将抵消净获益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "off_target_effects",
+          "pro_nodes": [
+            "n_ot_levodopa",
+            "n_ot_dopamine",
+            "n_ot_selegiline",
+            "n_ot_rasagiline"
+          ],
+          "con_nodes": [
+            "n_adv_levodopa",
+            "n_adv_dopamine",
+            "n_adv_selegiline",
+            "n_adv_rasagiline"
+          ],
+          "note": "靶向治疗可能导致未知的离靶效应"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "存在诱发不良反应的机制链，可能抵消疗效",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "靶向效果不一定改善核心症状，可能导致并发症",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "假设药物靶向疗效足够强以覆盖潜在风险",
+      "是否存在有效机制确保疗法的安全性"
+    ],
+    "falsification_tests": [
+      "是否存在临床试验显示该药物长期效果的证据？",
+      "是否有数据表明其安全性在特定人群中足够好？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供对潜在离靶效应的具体数据",
+      "探讨可能的安全性边际与疗效权衡"
+    ]
+  }
+}

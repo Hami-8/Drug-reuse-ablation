@@ -1,0 +1,617 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary lymphoedema",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_bendamustine",
+            "via": [
+              "target_immune_response"
+            ],
+            "to": "disease_primary_lymphoedema",
+            "success_criteria": "形成直接作用于Primary lymphoedema的链条",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_dexamethasone",
+            "via": [
+              "target_immune_response"
+            ],
+            "to": "disease_primary_lymphoedema",
+            "success_criteria": "形成直接作用于Primary lymphoedema的链条",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_bendamustine",
+          "type": "Drug",
+          "label": "Bendamustine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etoposide",
+          "type": "Drug",
+          "label": "Etoposide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_interferon_alpha",
+          "type": "Drug",
+          "label": "Interferon alpha",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lymphedema_compression_pump",
+          "type": "Drug",
+          "label": "Lymphedema compression pump",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_pantoprazole",
+          "type": "Drug",
+          "label": "Pantoprazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sirolimus",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tamoxifen",
+          "type": "Drug",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thalidomide",
+          "type": "Drug",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_trastuzumab",
+          "type": "Drug",
+          "label": "Trastuzumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vincristine",
+          "type": "Drug",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_primary_lymphoedema",
+          "type": "Disease",
+          "label": "Primary lymphoedema",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_immune_response",
+          "type": "Target",
+          "label": "Immune Response",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_cell_cycle",
+          "type": "Target",
+          "label": "Cell Cycle",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_apoptosis",
+          "type": "Pathway",
+          "label": "Apoptosis Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_inflammation",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_reduction_swelling",
+          "type": "Phenotype",
+          "label": "Reduction in Swelling",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_immune_modulation",
+          "type": "Phenotype",
+          "label": "Immune Modulation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_bendamustine",
+          "type": "Target",
+          "label": "OffTarget_Bendamustine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bendamustine",
+          "type": "Pathway",
+          "label": "RiskPath_Bendamustine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bendamustine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Bendamustine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dexamethasone",
+          "type": "Target",
+          "label": "OffTarget_Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dexamethasone",
+          "type": "Pathway",
+          "label": "RiskPath_Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dexamethasone",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Bendamustine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Etoposide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Interferon alpha",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Lymphedema compression pump",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Pantoprazole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Trastuzumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_bendamustine",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "用于免疫相关疾病的治疗"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "广泛用于控制炎症和免疫反应"
+        },
+        {
+          "source": "drug_etoposide",
+          "target": "target_cell_cycle",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抑制细胞周期的抗癌药物"
+        },
+        {
+          "source": "drug_interferon_alpha",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "在多种免疫疾病中的应用"
+        },
+        {
+          "source": "drug_lymphedema_compression_pump",
+          "target": "phenotype_reduction_swelling",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "直接针对淋巴水肿的治疗"
+        },
+        {
+          "source": "drug_pantoprazole",
+          "target": "pathway_inflammation",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "潜在的抗炎作用"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于自身免疫疾病和癌症的治疗"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "在免疫调节中的应用"
+        },
+        {
+          "source": "drug_tamoxifen",
+          "target": "target_cell_cycle",
+          "relation": "inhibits",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "抗癌药物，通过影响细胞分裂"
+        },
+        {
+          "source": "drug_thalidomide",
+          "target": "pathway_inflammation",
+          "relation": "modulates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "免疫调节及抗炎特性"
+        },
+        {
+          "source": "drug_trastuzumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "用于HER2阳性癌症的靶向药物"
+        },
+        {
+          "source": "drug_vincristine",
+          "target": "target_cell_cycle",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "具有抑制细胞分裂作用的抗癌药物"
+        },
+        {
+          "source": "target_immune_response",
+          "target": "phenotype_immune_modulation",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与免疫调节相关表型的联系"
+        },
+        {
+          "source": "target_cell_cycle",
+          "target": "phenotype_reduction_swelling",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响细胞分裂的药物与水肿改变间关系"
+        },
+        {
+          "source": "pathway_apoptosis",
+          "target": "disease_primary_lymphoedema",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "相关通路在病理表现中的作用"
+        },
+        {
+          "source": "pathway_inflammation",
+          "target": "disease_primary_lymphoedema",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "炎症通路与淋巴水肿的关系"
+        },
+        {
+          "source": "drug_bendamustine",
+          "target": "n_ot_bendamustine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在对非靶组织的影响"
+        },
+        {
+          "source": "n_ot_bendamustine",
+          "target": "n_rp_bendamustine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良路径"
+        },
+        {
+          "source": "n_rp_bendamustine",
+          "target": "n_adv_bendamustine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应"
+        },
+        {
+          "source": "n_adv_bendamustine",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险成立则可能抵消疗效"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ot_dexamethasone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在干扰靶组织的风险"
+        },
+        {
+          "source": "n_ot_dexamethasone",
+          "target": "n_rp_dexamethasone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的不良路径风险"
+        },
+        {
+          "source": "n_rp_dexamethasone",
+          "target": "n_adv_dexamethasone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应"
+        },
+        {
+          "source": "n_adv_dexamethasone",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险成立则可能抵消疗效"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_bendamustine",
+              "target": "target_immune_response",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "用于免疫相关疾病的治疗"
+            },
+            {
+              "source": "target_immune_response",
+              "target": "disease_primary_lymphoedema",
+              "relation": "supports",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "增强免疫功能可能有助于改善水肿"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Bendamustine → Immune Response → Primary Lymphoedema 的链条"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_dexamethasone",
+              "target": "target_immune_response",
+              "relation": "acts_on",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "广泛用于控制炎症和免疫反应"
+            },
+            {
+              "source": "target_immune_response",
+              "target": "disease_primary_lymphoedema",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "免疫调节可能对淋巴水肿有缓解作用"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Dexamethasone → Immune Response → Primary Lymphoedema 的链条"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [],
+    "next_focus_for_pi": []
+  }
+}

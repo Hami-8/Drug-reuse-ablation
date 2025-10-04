@@ -1,0 +1,288 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_ursodeoxycholic_acid",
+          "name": "ursodeoxycholic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_clofenotune",
+          "name": "clofenotune"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_rifampin",
+          "name": "rifampin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_metronidazole",
+          "name": "metronidazole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_naltrexone",
+          "name": "naltrexone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_silymarin",
+          "name": "silymarin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "n-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_vitamin_e",
+          "name": "vitamin E"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_lactulose",
+          "name": "lactulose"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_ursodeoxycholic_acid",
+          "type": "Target",
+          "label": "OffTarget_UrsodeoxycholicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ursodeoxycholic_acid",
+          "type": "Pathway",
+          "label": "RiskPathway_UrsodeoxycholicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ursodeoxycholic_acid",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_UrsodeoxycholicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cholestyramine",
+          "type": "Target",
+          "label": "OffTarget_Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cholestyramine",
+          "type": "Pathway",
+          "label": "RiskPathway_Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cholestyramine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "n_ot_ursodeoxycholic_acid",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_ursodeoxycholic_acid",
+          "target": "n_rp_ursodeoxycholic_acid",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路参与"
+        },
+        {
+          "source": "n_rp_ursodeoxycholic_acid",
+          "target": "n_adv_ursodeoxycholic_acid",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_ursodeoxycholic_acid",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消预期益处"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_ot_cholestyramine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_cholestyramine",
+          "target": "n_rp_cholestyramine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路参与"
+        },
+        {
+          "source": "n_rp_cholestyramine",
+          "target": "n_adv_cholestyramine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_cholestyramine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消预期益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "药物可能引发明显的离靶作用，增加不良反应风险",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "不良表型与潜在机制之间的关系尚需验证",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物安全性与疗效关系是否明确",
+      "与其他治疗方案的比较效益是否充分"
+    ],
+    "falsification_tests": [
+      "是否存在大规模临床试验支持该药物的长期疗效及安全性?",
+      "不良反应发生率是否在文献中有明确数据?"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 进一步阐明药物的安全性与疗效关系",
+      "提供支持药物疗效与持久性改善的证据"
+    ]
+  }
+}

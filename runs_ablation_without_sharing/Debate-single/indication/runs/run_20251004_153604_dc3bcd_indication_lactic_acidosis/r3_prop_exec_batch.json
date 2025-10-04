@@ -1,0 +1,350 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Lactic acidosis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Sodium bicarbonate",
+            "via": [
+              "Bicarbonate Transporters"
+            ],
+            "to": "Lactic acidosis",
+            "success_criteria": "与乳酸酸中毒形成有效的连接路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Thiamine",
+            "via": [],
+            "to": "Lactic acidosis",
+            "success_criteria": "能证明 Thiamine 减轻乳酸生成的机制",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_drug_sodium_bicarbonate",
+          "type": "Drug",
+          "label": "Sodium bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_drug_thiamine",
+          "type": "Drug",
+          "label": "Thiamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_drug_carnitine",
+          "type": "Drug",
+          "label": "Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_drug_dichloroacetate",
+          "type": "Drug",
+          "label": "Dichloroacetate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_drug_bicarbonate",
+          "type": "Drug",
+          "label": "Bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_drug_humira",
+          "type": "Drug",
+          "label": "Humira",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_drug_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_drug_lactate",
+          "type": "Drug",
+          "label": "Lactate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_drug_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_drug_glucose",
+          "type": "Drug",
+          "label": "Glucose",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta1",
+          "type": "Target",
+          "label": "Bicarbonate Transporters",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb1",
+          "type": "Pathway",
+          "label": "Acid-Base Homeostasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease_lactic_acidosis",
+          "type": "Disease",
+          "label": "Lactic acidosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_drug_sodium_bicarbonate",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知作用于碳酸氢根转运体"
+        },
+        {
+          "source": "n_drug_bicarbonate",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "常识性作用于碳酸氢根转运体"
+        },
+        {
+          "source": "n_ta1",
+          "target": "n_pb1",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与酸碱稳态相关"
+        },
+        {
+          "source": "n_pb1",
+          "target": "n_disease_lactic_acidosis",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通路与乳酸酸中毒相关"
+        },
+        {
+          "source": "n_drug_thiamine",
+          "target": "n_pb1",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与能量代谢相关，可能减轻乳酸产生"
+        },
+        {
+          "source": "n_drug_metformin",
+          "target": "n_tb1",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抑制肝脏的乳酸生成"
+        },
+        {
+          "source": "n_drug_insulin",
+          "target": "n_pb1",
+          "relation": "modulates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "在糖代谢中作用，可能影响乳酸水平"
+        },
+        {
+          "source": "n_drug_n_acetylcysteine",
+          "target": "n_pb1",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "已知可以改善线粒体功能，调节代谢"
+        },
+        {
+          "source": "n_drug_carnitine",
+          "target": "n_pb1",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "参与脂肪酸氧化，可能减少乳酸积聚"
+        },
+        {
+          "source": "n_drug_dichloroacetate",
+          "target": "n_pb1",
+          "relation": "modulates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可以促进细胞有氧呼吸，减少乳酸"
+        },
+        {
+          "source": "n_drug_furosemide",
+          "target": "n_pb1",
+          "relation": "involved_in",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能通过利尿调节体内酸碱平衡"
+        },
+        {
+          "source": "n_drug_glucose",
+          "target": "n_pb1",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "提高血糖水平可能导致乳酸积累"
+        },
+        {
+          "source": "n_drug_humira",
+          "target": "n_pb1",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "有助于控制炎症反应，可能影响乳酸水平"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "n_drug_sodium_bicarbonate",
+              "target": "n_ta1",
+              "relation": "acts_on",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "已知作用于碳酸氢根转运体"
+            },
+            {
+              "source": "n_ta1",
+              "target": "n_pb1",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "与酸碱稳态相关"
+            },
+            {
+              "source": "n_pb1",
+              "target": "n_disease_lactic_acidosis",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "通路与乳酸酸中毒相关"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Sodium bicarbonate → Bicarbonate Transporters → Acid-Base Homeostasis → Lactic acidosis，形成有效路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "n_drug_thiamine",
+              "target": "n_pb1",
+              "relation": "modulates",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "与能量代谢相关，可能减轻乳酸产生"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Thiamine → Acid-Base Homeostasis 的连接"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

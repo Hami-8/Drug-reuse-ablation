@@ -1,0 +1,1430 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "胆汁淤积风险",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "与胆汁淤积相关的肝功能",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "与胆汁淤积相关的风险",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "胆汁流出障碍的可能性",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_chloramphenicol",
+          "type": "Drug",
+          "label": "Chloramphenicol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_propranolol",
+          "type": "Drug",
+          "label": "Propranolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gentamicin",
+          "type": "Drug",
+          "label": "Gentamicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_erythromycin",
+          "type": "Drug",
+          "label": "Erythromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sulfamethoxazole",
+          "type": "Drug",
+          "label": "Sulfamethoxazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_trimethoprim",
+          "type": "Drug",
+          "label": "Trimethoprim",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_neonatal_cholestasis",
+          "type": "Disease",
+          "label": "Neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "OffTarget_Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_amiodarone",
+          "type": "Pathway",
+          "label": "RiskPathway_Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_amiodarone",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ciprofloxacin",
+          "type": "Target",
+          "label": "OffTarget_Ciprofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ciprofloxacin",
+          "type": "Pathway",
+          "label": "RiskPathway_Ciprofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ciprofloxacin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Ciprofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_chloramphenicol",
+          "type": "Target",
+          "label": "OffTarget_Chloramphenicol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_chloramphenicol",
+          "type": "Pathway",
+          "label": "RiskPathway_Chloramphenicol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_chloramphenicol",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Chloramphenicol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_propranolol",
+          "type": "Target",
+          "label": "OffTarget_Propranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_propranolol",
+          "type": "Pathway",
+          "label": "RiskPathway_Propranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_propranolol",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Propranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rifampicin",
+          "type": "Target",
+          "label": "OffTarget_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rifampicin",
+          "type": "Pathway",
+          "label": "RiskPathway_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rifampicin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_phenobarbital",
+          "type": "Target",
+          "label": "OffTarget_Phenobarbital",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_phenobarbital",
+          "type": "Pathway",
+          "label": "RiskPathway_Phenobarbital",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_phenobarbital",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Phenobarbital",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_phenytoin",
+          "type": "Target",
+          "label": "OffTarget_Phenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_phenytoin",
+          "type": "Pathway",
+          "label": "RiskPathway_Phenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_phenytoin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Phenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gentamicin",
+          "type": "Target",
+          "label": "OffTarget_Gentamicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gentamicin",
+          "type": "Pathway",
+          "label": "RiskPathway_Gentamicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gentamicin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Gentamicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_erythromycin",
+          "type": "Target",
+          "label": "OffTarget_Erythromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_erythromycin",
+          "type": "Pathway",
+          "label": "RiskPathway_Erythromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_erythromycin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Erythromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sulfamethoxazole",
+          "type": "Target",
+          "label": "OffTarget_Sulfamethoxazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sulfamethoxazole",
+          "type": "Pathway",
+          "label": "RiskPathway_Sulfamethoxazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sulfamethoxazole",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Sulfamethoxazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_trimethoprim",
+          "type": "Target",
+          "label": "OffTarget_Trimethoprim",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_trimethoprim",
+          "type": "Pathway",
+          "label": "RiskPathway_Trimethoprim",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_trimethoprim",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Trimethoprim",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "OffTarget_Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_methotrexate",
+          "type": "Pathway",
+          "label": "RiskPathway_Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_methotrexate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Chloramphenicol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_chloramphenicol",
+          "type": "Drug",
+          "label": "Chloramphenicol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Propranolol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_propranolol",
+          "type": "Drug",
+          "label": "Propranolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Gentamicin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_gentamicin",
+          "type": "Drug",
+          "label": "Gentamicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Erythromycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_erythromycin",
+          "type": "Drug",
+          "label": "Erythromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Sulfamethoxazole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sulfamethoxazole",
+          "type": "Drug",
+          "label": "Sulfamethoxazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Trimethoprim",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_trimethoprim",
+          "type": "Drug",
+          "label": "Trimethoprim",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_amiodarone",
+          "target": "n_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知的药物相关风险"
+        },
+        {
+          "source": "n_ciprofloxacin",
+          "target": "n_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "相关文献支持"
+        },
+        {
+          "source": "n_chloramphenicol",
+          "target": "n_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "药物安全性关注"
+        },
+        {
+          "source": "n_propranolol",
+          "target": "n_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "药物影响肝功能"
+        },
+        {
+          "source": "n_rifampicin",
+          "target": "n_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响胆汁分泌"
+        },
+        {
+          "source": "n_phenobarbital",
+          "target": "n_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "文献中提及肝脏代谢"
+        },
+        {
+          "source": "n_phenytoin",
+          "target": "n_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "已知的副作用"
+        },
+        {
+          "source": "n_gentamicin",
+          "target": "n_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能引发肝病风险"
+        },
+        {
+          "source": "n_erythromycin",
+          "target": "n_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能加重肝负担"
+        },
+        {
+          "source": "n_sulfamethoxazole",
+          "target": "n_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "与胆汁淤积相关"
+        },
+        {
+          "source": "n_trimethoprim",
+          "target": "n_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.25,
+          "agent": "Proponent",
+          "rationale": "潜在肝脏影响"
+        },
+        {
+          "source": "n_methotrexate",
+          "target": "n_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.2,
+          "agent": "Proponent",
+          "rationale": "长期使用风险"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响胆汁排泄机制"
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp_amiodarone",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致胆道阻塞风险"
+        },
+        {
+          "source": "n_rp_amiodarone",
+          "target": "n_adv_amiodarone",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "反向影响新生儿胆汁生成"
+        },
+        {
+          "source": "n_adv_amiodarone",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，可能加重新生儿胆汁淤积"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "n_ot_ciprofloxacin",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能影响肝脏代谢"
+        },
+        {
+          "source": "n_ot_ciprofloxacin",
+          "target": "n_rp_ciprofloxacin",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "与胆汁生成相关的风险通路"
+        },
+        {
+          "source": "n_rp_ciprofloxacin",
+          "target": "n_adv_ciprofloxacin",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能导致胆汁淤积"
+        },
+        {
+          "source": "n_adv_ciprofloxacin",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "增强胆汁浓度现象"
+        },
+        {
+          "source": "drug_chloramphenicol",
+          "target": "n_ot_chloramphenicol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响肝脏代谢"
+        },
+        {
+          "source": "n_ot_chloramphenicol",
+          "target": "n_rp_chloramphenicol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肝毒性与胆汁潴留"
+        },
+        {
+          "source": "n_rp_chloramphenicol",
+          "target": "n_adv_chloramphenicol",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "加剧胆汁淤积"
+        },
+        {
+          "source": "n_adv_chloramphenicol",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能影响新生儿健康"
+        },
+        {
+          "source": "drug_propranolol",
+          "target": "n_ot_propranolol",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "对肝脏有潜在影响"
+        },
+        {
+          "source": "n_ot_propranolol",
+          "target": "n_rp_propranolol",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能与胆汁代谢相关"
+        },
+        {
+          "source": "n_rp_propranolol",
+          "target": "n_adv_propranolol",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致胆汁潴留"
+        },
+        {
+          "source": "n_adv_propranolol",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能加重胆汁淤积"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "n_ot_rifampicin",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "影响肝脏药物代谢"
+        },
+        {
+          "source": "n_ot_rifampicin",
+          "target": "n_rp_rifampicin",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能引发胆道问题"
+        },
+        {
+          "source": "n_rp_rifampicin",
+          "target": "n_adv_rifampicin",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能导致新生儿胆汁淤积"
+        },
+        {
+          "source": "n_adv_rifampicin",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "增加潜在风险"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "n_ot_phenobarbital",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响胆汁排泄"
+        },
+        {
+          "source": "n_ot_phenobarbital",
+          "target": "n_rp_phenobarbital",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "增加肝脏负担"
+        },
+        {
+          "source": "n_rp_phenobarbital",
+          "target": "n_adv_phenobarbital",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致胆汁淤积"
+        },
+        {
+          "source": "n_adv_phenobarbital",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能加重新生儿胆汁淤积"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "n_ot_phenytoin",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响肝脏代谢"
+        },
+        {
+          "source": "n_ot_phenytoin",
+          "target": "n_rp_phenytoin",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能引发胆道问题"
+        },
+        {
+          "source": "n_rp_phenytoin",
+          "target": "n_adv_phenytoin",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "导致新生儿胆汁淤积"
+        },
+        {
+          "source": "n_adv_phenytoin",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在不良后果"
+        },
+        {
+          "source": "drug_gentamicin",
+          "target": "n_ot_gentamicin",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响肝脏处理"
+        },
+        {
+          "source": "n_ot_gentamicin",
+          "target": "n_rp_gentamicin",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "风险增加"
+        },
+        {
+          "source": "n_rp_gentamicin",
+          "target": "n_adv_gentamicin",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "新生儿胆汁淤积风险增加"
+        },
+        {
+          "source": "n_adv_gentamicin",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重后果"
+        },
+        {
+          "source": "drug_erythromycin",
+          "target": "n_ot_erythromycin",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响胆汁排泄"
+        },
+        {
+          "source": "n_ot_erythromycin",
+          "target": "n_rp_erythromycin",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "增加胆汁排泄负担"
+        },
+        {
+          "source": "n_rp_erythromycin",
+          "target": "n_adv_erythromycin",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致胆汁淤积"
+        },
+        {
+          "source": "n_adv_erythromycin",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "加重临床表现"
+        },
+        {
+          "source": "drug_sulfamethoxazole",
+          "target": "n_ot_sulfamethoxazole",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响肝脏代谢"
+        },
+        {
+          "source": "n_ot_sulfamethoxazole",
+          "target": "n_rp_sulfamethoxazole",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "增加胆汁淤积风险"
+        },
+        {
+          "source": "n_rp_sulfamethoxazole",
+          "target": "n_adv_sulfamethoxazole",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "风险增加"
+        },
+        {
+          "source": "n_adv_sulfamethoxazole",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在负面影响"
+        },
+        {
+          "source": "drug_trimethoprim",
+          "target": "n_ot_trimethoprim",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响胆汁排泄"
+        },
+        {
+          "source": "n_ot_trimethoprim",
+          "target": "n_rp_trimethoprim",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能调节胆汁代谢"
+        },
+        {
+          "source": "n_rp_trimethoprim",
+          "target": "n_adv_trimethoprim",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "加大胆汁淤积风险"
+        },
+        {
+          "source": "n_adv_trimethoprim",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "影响新生儿健康"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响肝脏代谢"
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp_methotrexate",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在胆道风险"
+        },
+        {
+          "source": "n_rp_methotrexate",
+          "target": "n_adv_methotrexate",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "导致胆汁潴留"
+        },
+        {
+          "source": "n_adv_methotrexate",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在不良影响"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_ot_amiodarone",
+              "type": "Target",
+              "label": "OffTarget_Amiodarone",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_rp_amiodarone",
+              "type": "Pathway",
+              "label": "RiskPathway_Amiodarone",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_amiodarone",
+              "type": "Phenotype",
+              "label": "AdversePhenotype_Amiodarone",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "drug_amiodarone",
+              "target": "n_ot_amiodarone",
+              "relation": "acts_on",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "可能影响胆汁排泄机制"
+            },
+            {
+              "source": "n_ot_amiodarone",
+              "target": "n_rp_amiodarone",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "导致胆道阻塞风险"
+            },
+            {
+              "source": "n_rp_amiodarone",
+              "target": "n_adv_amiodarone",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "反向影响新生儿胆汁生成"
+            },
+            {
+              "source": "n_adv_amiodarone",
+              "target": "H1",
+              "relation": "refutes",
+              "weight": 0.9,
+              "agent": "Skeptic",
+              "rationale": "若该风险成立，可能加重新生儿胆汁淤积"
+            }
+          ],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成针对 Amiodarone 的安全性压力测试：已标注高权重 refutes 边至假设"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_ot_ciprofloxacin",
+              "type": "Target",
+              "label": "OffTarget_Ciprofloxacin",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_rp_ciprofloxacin",
+              "type": "Pathway",
+              "label": "RiskPathway_Ciprofloxacin",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_ciprofloxacin",
+              "type": "Phenotype",
+              "label": "AdversePhenotype_Ciprofloxacin",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "drug_ciprofloxacin",
+              "target": "n_ot_ciprofloxacin",
+              "relation": "acts_on",
+              "weight": 0.65,
+              "agent": "Skeptic",
+              "rationale": "可能影响肝脏代谢"
+            },
+            {
+              "source": "n_ot_ciprofloxacin",
+              "target": "n_rp_ciprofloxacin",
+              "relation": "involved_in",
+              "weight": 0.65,
+              "agent": "Skeptic",
+              "rationale": "与胆汁生成相关的风险通路"
+            },
+            {
+              "source": "n_rp_ciprofloxacin",
+              "target": "n_adv_ciprofloxacin",
+              "relation": "causes",
+              "weight": 0.65,
+              "agent": "Skeptic",
+              "rationale": "可能导致胆汁淤积"
+            },
+            {
+              "source": "n_adv_ciprofloxacin",
+              "target": "H2",
+              "relation": "refutes",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "增强胆汁浓度现象"
+            }
+          ],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成针对 Ciprofloxacin 的安全性压力测试：已标注高权重 refutes 边至假设"
+      },
+      {
+        "action_ref": 2,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_ot_chloramphenicol",
+              "type": "Target",
+              "label": "OffTarget_Chloramphenicol",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_rp_chloramphenicol",
+              "type": "Pathway",
+              "label": "RiskPathway_Chloramphenicol",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_chloramphenicol",
+              "type": "Phenotype",
+              "label": "AdversePhenotype_Chloramphenicol",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "drug_chloramphenicol",
+              "target": "n_ot_chloramphenicol",
+              "relation": "acts_on",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "影响肝脏代谢"
+            },
+            {
+              "source": "n_ot_chloramphenicol",
+              "target": "n_rp_chloramphenicol",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "可能导致肝毒性与胆汁潴留"
+            },
+            {
+              "source": "n_rp_chloramphenicol",
+              "target": "n_adv_chloramphenicol",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "加剧胆汁淤积"
+            },
+            {
+              "source": "n_adv_chloramphenicol",
+              "target": "H3",
+              "relation": "refutes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "若风险成立，可能影响新生儿健康"
+            }
+          ],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成针对 Chloramphenicol 的安全性压力测试：已标注高权重 refutes 边至假设"
+      },
+      {
+        "action_ref": 3,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_ot_propranolol",
+              "type": "Target",
+              "label": "OffTarget_Propranolol",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_rp_propranolol",
+              "type": "Pathway",
+              "label": "RiskPathway_Propranolol",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_propranolol",
+              "type": "Phenotype",
+              "label": "AdversePhenotype_Propranolol",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "drug_propranolol",
+              "target": "n_ot_propranolol",
+              "relation": "acts_on",
+              "weight": 0.6,
+              "agent": "Skeptic",
+              "rationale": "对肝脏有潜在影响"
+            },
+            {
+              "source": "n_ot_propranolol",
+              "target": "n_rp_propranolol",
+              "relation": "involved_in",
+              "weight": 0.6,
+              "agent": "Skeptic",
+              "rationale": "可能与胆汁代谢相关"
+            },
+            {
+              "source": "n_rp_propranolol",
+              "target": "n_adv_propranolol",
+              "relation": "causes",
+              "weight": 0.6,
+              "agent": "Skeptic",
+              "rationale": "可能导致胆汁潴留"
+            },
+            {
+              "source": "n_adv_propranolol",
+              "target": "H4",
+              "relation": "refutes",
+              "weight": 0.75,
+              "agent": "Skeptic",
+              "rationale": "若风险成立，可能加重胆汁淤积"
+            }
+          ],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成针对 Propranolol 的安全性压力测试：已标注高权重 refutes 边至假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": []
+  }
+}

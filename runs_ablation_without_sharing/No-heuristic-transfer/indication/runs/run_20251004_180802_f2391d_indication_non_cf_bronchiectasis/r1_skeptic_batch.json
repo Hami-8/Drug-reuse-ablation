@@ -1,0 +1,374 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Non-CF bronchiectasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_colistin",
+          "name": "Colistin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_dornase_alfa",
+          "name": "Dornase alfa"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_levofloxacin",
+          "name": "Levofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lansoprazole",
+          "name": "Lansoprazole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_moxifloxacin",
+          "name": "Moxifloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_tobramycin",
+          "name": "Tobramycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_hydrochlorothiazide",
+          "name": "Hydrochlorothiazide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_amoxicillin",
+          "name": "Amoxicillin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_bronchiectasis",
+          "type": "Disease",
+          "label": "Non-CF bronchiectasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_colistin",
+          "type": "Drug",
+          "label": "Colistin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_levofloxacin",
+          "type": "Drug",
+          "label": "Levofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lansoprazole",
+          "type": "Drug",
+          "label": "Lansoprazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_moxifloxacin",
+          "type": "Drug",
+          "label": "Moxifloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_tobramycin",
+          "type": "Drug",
+          "label": "Tobramycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_hydrochlorothiazide",
+          "type": "Drug",
+          "label": "Hydrochlorothiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_amoxicillin",
+          "type": "Drug",
+          "label": "Amoxicillin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_bronchiectasis",
+          "target": "n_azithromycin",
+          "relation": "indicated_for",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "未知的长远疗效和安全性"
+        },
+        {
+          "source": "n_bronchiectasis",
+          "target": "n_colistin",
+          "relation": "indicated_for",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重耐药及安全隐患"
+        },
+        {
+          "source": "n_bronchiectasis",
+          "target": "n_dornase_alfa",
+          "relation": "indicated_for",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能仅适用于特定临床情形"
+        },
+        {
+          "source": "n_bronchiectasis",
+          "target": "n_n_acetylcysteine",
+          "relation": "indicated_for",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "效益与风险没有充分数据支持"
+        },
+        {
+          "source": "n_bronchiectasis",
+          "target": "n_levofloxacin",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "耐药性问题影响疗效"
+        },
+        {
+          "source": "n_bronchiectasis",
+          "target": "n_lansoprazole",
+          "relation": "indicated_for",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "适应症不明确"
+        },
+        {
+          "source": "n_bronchiectasis",
+          "target": "n_moxifloxacin",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能存在未识别的不良反应"
+        },
+        {
+          "source": "n_bronchiectasis",
+          "target": "n_rifampicin",
+          "relation": "indicated_for",
+          "weight": 0.55,
+          "agent": "Skeptic",
+          "rationale": "潜在的药物相互作用风险"
+        },
+        {
+          "source": "n_bronchiectasis",
+          "target": "n_tobramycin",
+          "relation": "indicated_for",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "不同患者的病理生理差异"
+        },
+        {
+          "source": "n_bronchiectasis",
+          "target": "n_ciprofloxacin",
+          "relation": "indicated_for",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "常见的副作用与病情加重的可能"
+        },
+        {
+          "source": "n_bronchiectasis",
+          "target": "n_hydrochlorothiazide",
+          "relation": "indicated_for",
+          "weight": 0.45,
+          "agent": "Skeptic",
+          "rationale": "适用性存在争议"
+        },
+        {
+          "source": "n_bronchiectasis",
+          "target": "n_amoxicillin",
+          "relation": "indicated_for",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "未知的长期效果"
+        }
+      ],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "缺乏长期安全性和有效性数据，可能存在耐药性问题",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "不同药物在该病理状态下作用机制未充分阐明",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "每种药物的作用机制是否对疾病有效",
+      "长期使用的安全性和耐受性是否得到保证"
+    ],
+    "falsification_tests": [
+      "是否有系统评价支持药物在非囊性纤维化支气管扩张症的有效性",
+      "临床试验结果是否显示长期效益"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供更多的疗效数据和长期安全性监测",
+      "对冲突热点进行权重重估或节点拆分"
+    ]
+  }
+}

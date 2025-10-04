@@ -1,0 +1,389 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Gastrointestinal epithelial barrier disorders",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_mesalamine",
+          "name": "Mesalamine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_budesonide",
+          "name": "Budesonide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ustekinumab",
+          "name": "Ustekinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_certolizumab_pegol",
+          "name": "Certolizumab pegol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_golimumab",
+          "name": "Golimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_vedolizumab",
+          "name": "Vedolizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_linaclotide",
+          "name": "Linaclotide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_rifaximin",
+          "name": "Rifaximin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_eluxadoline",
+          "name": "Eluxadoline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 4
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_mesalamine",
+          "type": "Drug",
+          "label": "Mesalamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_budesonide",
+          "type": "Drug",
+          "label": "Budesonide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ustekinumab",
+          "type": "Drug",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_certolizumab_pegol",
+          "type": "Drug",
+          "label": "Certolizumab pegol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_golimumab",
+          "type": "Drug",
+          "label": "Golimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vedolizumab",
+          "type": "Drug",
+          "label": "Vedolizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_gastrointestinal_disorder",
+          "type": "Disease",
+          "label": "Gastrointestinal epithelial barrier disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_TNF_alpha",
+          "type": "Target",
+          "label": "TNF-alpha",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_inflammatory_response",
+          "type": "Pathway",
+          "label": "Inflammatory Response Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_mucosal_healing",
+          "type": "Phenotype",
+          "label": "Mucosal Healing",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_inflammation_management",
+          "type": "Phenotype",
+          "label": "Inflammation Management",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_mesalamine",
+          "target": "target_TNF_alpha",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知 Mesalamine 对 TNF-alpha 的抑制作用"
+        },
+        {
+          "source": "target_TNF_alpha",
+          "target": "pathway_inflammatory_response",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "TNF-alpha 在炎症反应通路中的核心作用"
+        },
+        {
+          "source": "pathway_inflammatory_response",
+          "target": "disease_gastrointestinal_disorder",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "炎症通路与胃肠上皮屏障障碍相关"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "target_TNF_alpha",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Infliximab 直接靶向 TNF-alpha"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "pathway_inflammatory_response",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Azathioprine 通过调节免疫通路改善炎症"
+        },
+        {
+          "source": "drug_budesonide",
+          "target": "pathway_inflammatory_response",
+          "relation": "activates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Budesonide 通过促进抗炎细胞因子发挥作用"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "target_TNF_alpha",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Ustekinumab 抑制 TNF-alpha 途径"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "pathway_inflammatory_response",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Methotrexate 通过抑制细胞增殖改善炎症"
+        },
+        {
+          "source": "drug_golimumab",
+          "target": "target_TNF_alpha",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Golimumab 对 TNF-alpha 的特异性抑制"
+        },
+        {
+          "source": "drug_vedolizumab",
+          "target": "pathway_inflammatory_response",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Vedolizumab 对肠道局部炎症有针对性作用"
+        },
+        {
+          "source": "target_TNF_alpha",
+          "target": "phenotype_mucosal_healing",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抑制 TNF-alpha 可促进黏膜愈合"
+        },
+        {
+          "source": "pathway_inflammatory_response",
+          "target": "phenotype_inflammation_management",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Inflammatory Response Pathway 相关于炎症管理"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "phenotype_inflammation_management",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Azathioprine 在炎症管理中的应用"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过抑制 TNF-alpha 及调节炎症通路来改善胃肠上皮屏障障碍",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "药物对黏膜愈合和炎症管理的影响与其各自的作用靶点相关联",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "假设药物能够有效到达肠道组织并产生生物活性。"
+    ],
+    "uncertainties": [
+      "各药物的长期安全性与有效性仍需进一步研究。"
+    ],
+    "next_focus_for_pi": [
+      "是否需要评估更多与靶点有关的通路或其他潜在药物？"
+    ]
+  }
+}

@@ -1,0 +1,1289 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_disjoint_path",
+            "from": "drug_aminosalicylates",
+            "via": [],
+            "to": "phenotype_renal_failure",
+            "success_criteria": "增加2条不相交的支持路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_disjoint_path",
+            "from": "drug_antivirals",
+            "via": [],
+            "to": "phenotype_renal_failure",
+            "success_criteria": "增加2条不相交的支持路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "add_disjoint_path",
+            "from": "drug_ace_inhibitors",
+            "via": [],
+            "to": "phenotype_renal_failure",
+            "success_criteria": "增加2条不相交的支持路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_aminosalicylates",
+          "type": "Drug",
+          "label": "Aminosalicylates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_antivirals",
+          "type": "Drug",
+          "label": "Antivirals",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ace_inhibitors",
+          "type": "Drug",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_diuretics",
+          "type": "Drug",
+          "label": "Diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_immunosuppressants",
+          "type": "Drug",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_angiotensin_ii_receptor_blockers",
+          "type": "Drug",
+          "label": "Angiotensin II receptor blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_epoetin_alfa",
+          "type": "Drug",
+          "label": "Epoetin alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gemcitabine",
+          "type": "Drug",
+          "label": "Gemcitabine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_primary_membranoproliferative_glomerulonephritis",
+          "type": "Disease",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_immunological_response",
+          "type": "Target",
+          "label": "Immunological Response",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_immunity_regulation",
+          "type": "Pathway",
+          "label": "Immunity Regulation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_inflammation",
+          "type": "Phenotype",
+          "label": "Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_renal_failure",
+          "type": "Phenotype",
+          "label": "Renal Failure",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_aminosalicylates",
+          "type": "Target",
+          "label": "OffTarget_Aminosalicylates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aminosalicylates",
+          "type": "Pathway",
+          "label": "RiskPathway_Aminosalicylates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aminosalicylates",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Aminosalicylates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_antivirals",
+          "type": "Target",
+          "label": "OffTarget_Antivirals",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_antivirals",
+          "type": "Pathway",
+          "label": "RiskPathway_Antivirals",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_antivirals",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Antivirals",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ace_inhibitors",
+          "type": "Target",
+          "label": "OffTarget_Ace_Inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ace_inhibitors",
+          "type": "Pathway",
+          "label": "RiskPathway_Ace_Inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ace_inhibitors",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Ace_Inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_beta_blockers",
+          "type": "Target",
+          "label": "OffTarget_Beta_Blockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_beta_blockers",
+          "type": "Pathway",
+          "label": "RiskPathway_Beta_Blockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_beta_blockers",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Beta_Blockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nsaids",
+          "type": "Target",
+          "label": "OffTarget_NSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nsaids",
+          "type": "Pathway",
+          "label": "RiskPathway_NSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nsaids",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_NSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_diuretics",
+          "type": "Target",
+          "label": "OffTarget_Diuretics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_diuretics",
+          "type": "Pathway",
+          "label": "RiskPathway_Diuretics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_diuretics",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Diuretics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "OffTarget_Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_corticosteroids",
+          "type": "Pathway",
+          "label": "RiskPathway_Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_corticosteroids",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_immunosuppressants",
+          "type": "Target",
+          "label": "OffTarget_Immunosuppressants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_immunosuppressants",
+          "type": "Pathway",
+          "label": "RiskPathway_Immunosuppressants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_immunosuppressants",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Immunosuppressants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclosporine",
+          "type": "Target",
+          "label": "OffTarget_Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cyclosporine",
+          "type": "Pathway",
+          "label": "RiskPathway_Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cyclosporine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_angiotensin_ii_receptor_blockers",
+          "type": "Target",
+          "label": "OffTarget_Angiotensin_II_Receptor_Blockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_angiotensin_ii_receptor_blockers",
+          "type": "Pathway",
+          "label": "RiskPathway_Angiotensin_II_Receptor_Blockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_angiotensin_ii_receptor_blockers",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Angiotensin_II_Receptor_Blockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_epoetin_alfa",
+          "type": "Target",
+          "label": "OffTarget_Epoetin_Alfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_epoetin_alfa",
+          "type": "Pathway",
+          "label": "RiskPathway_Epoetin_Alfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_epoetin_alfa",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Epoetin_Alfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gemcitabine",
+          "type": "Target",
+          "label": "OffTarget_Gemcitabine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gemcitabine",
+          "type": "Pathway",
+          "label": "RiskPathway_Gemcitabine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gemcitabine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Gemcitabine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Aminosalicylates",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Antivirals",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Diuretics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Angiotensin II receptor blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Epoetin alfa",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Gemcitabine",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_aminosalicylates",
+          "target": "target_immunological_response",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常见免疫调节作用"
+        },
+        {
+          "source": "drug_antivirals",
+          "target": "target_immunological_response",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "能影响病毒引起的免疫反应"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "target_immunological_response",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "调节肾血流与免疫状态"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "target_immunological_response",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与应激反应有互作作用"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "target_immunological_response",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "减少炎症反应"
+        },
+        {
+          "source": "drug_diuretics",
+          "target": "target_immunological_response",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "调节水钠平衡，影响肾功能"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "target_immunological_response",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "免疫抑制效果明显"
+        },
+        {
+          "source": "drug_immunosuppressants",
+          "target": "target_immunological_response",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "直接影响免疫反应"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "target_immunological_response",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "用于防止器官排斥反应"
+        },
+        {
+          "source": "drug_angiotensin_ii_receptor_blockers",
+          "target": "target_immunological_response",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "在肾脏疾病中应用"
+        },
+        {
+          "source": "drug_epoetin_alfa",
+          "target": "target_immunological_response",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与肾功能和免疫功能相关"
+        },
+        {
+          "source": "drug_gemcitabine",
+          "target": "target_immunological_response",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "在某些免疫相关疾病中应用"
+        },
+        {
+          "source": "target_immunological_response",
+          "target": "phenotype_inflammation",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响炎症反应"
+        },
+        {
+          "source": "target_immunological_response",
+          "target": "phenotype_renal_failure",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与肾功能损害相关"
+        },
+        {
+          "source": "phenotype_inflammation",
+          "target": "disease_primary_membranoproliferative_glomerulonephritis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "炎症导致肾小管病"
+        },
+        {
+          "source": "phenotype_renal_failure",
+          "target": "disease_primary_membranoproliferative_glomerulonephritis",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "肾功能衰竭直接相关"
+        },
+        {
+          "source": "drug_aminosalicylates",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "支持抗炎作用"
+        },
+        {
+          "source": "drug_antivirals",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "支持对感染性病因的控制"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "支持肾血流调节"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "减轻血压对肾脏影响"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有助于炎症控制"
+        },
+        {
+          "source": "drug_diuretics",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "益于水分管理"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "显著影响免疫反应"
+        },
+        {
+          "source": "drug_immunosuppressants",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于抑制免疫反应"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于肾移植患者"
+        },
+        {
+          "source": "drug_angiotensin_ii_receptor_blockers",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "改善肾功能"
+        },
+        {
+          "source": "drug_epoetin_alfa",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "改善贫血与肾功能"
+        },
+        {
+          "source": "drug_gemcitabine",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响某些免疫疾病"
+        },
+        {
+          "source": "drug_aminosalicylates",
+          "target": "n_ot_aminosalicylates",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致血液肾损伤"
+        },
+        {
+          "source": "n_ot_aminosalicylates",
+          "target": "n_rp_aminosalicylates",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的肾毒性机制"
+        },
+        {
+          "source": "n_rp_aminosalicylates",
+          "target": "n_adv_aminosalicylates",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致肾功能恶化的表型"
+        },
+        {
+          "source": "n_adv_aminosalicylates",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消潜在益处"
+        },
+        {
+          "source": "drug_antivirals",
+          "target": "n_ot_antivirals",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响免疫功能"
+        },
+        {
+          "source": "n_ot_antivirals",
+          "target": "n_rp_antivirals",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致病情加重"
+        },
+        {
+          "source": "n_rp_antivirals",
+          "target": "n_adv_antivirals",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引起肾功能恶化的表型"
+        },
+        {
+          "source": "n_adv_antivirals",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若证实此风险，将影响疗效"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "n_ot_ace_inhibitors",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致低血压及肾衰竭"
+        },
+        {
+          "source": "n_ot_ace_inhibitors",
+          "target": "n_rp_ace_inhibitors",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响肾脏血流动力学"
+        },
+        {
+          "source": "n_rp_ace_inhibitors",
+          "target": "n_adv_ace_inhibitors",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致急性肾损伤"
+        },
+        {
+          "source": "n_adv_ace_inhibitors",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如该机制成立，净受益可能减少"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_ot_beta_blockers",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响心血管系统，可能加重病情"
+        },
+        {
+          "source": "n_ot_beta_blockers",
+          "target": "n_rp_beta_blockers",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致肾功能不全"
+        },
+        {
+          "source": "n_rp_beta_blockers",
+          "target": "n_adv_beta_blockers",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致低血压及相关并发症"
+        },
+        {
+          "source": "n_adv_beta_blockers",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "若声称的风险成立，将削弱疗效"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "n_ot_nsaids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "已知引发肾毒性"
+        },
+        {
+          "source": "n_ot_nsaids",
+          "target": "n_rp_nsaids",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肾小管损伤"
+        },
+        {
+          "source": "n_rp_nsaids",
+          "target": "n_adv_nsaids",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致肾功能急剧下滑"
+        },
+        {
+          "source": "n_adv_nsaids",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险成立时可抵消好处"
+        },
+        {
+          "source": "drug_diuretics",
+          "target": "n_ot_diuretics",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响电解质及液体平衡"
+        },
+        {
+          "source": "n_ot_diuretics",
+          "target": "n_rp_diuretics",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成肾功能受损"
+        },
+        {
+          "source": "n_rp_diuretics",
+          "target": "n_adv_diuretics",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引起急性肾损伤"
+        },
+        {
+          "source": "n_adv_diuretics",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，净得益或被抵消"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致免疫抑制"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp_corticosteroids",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致感染风险增加"
+        },
+        {
+          "source": "n_rp_corticosteroids",
+          "target": "n_adv_corticosteroids",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肾功能损害"
+        },
+        {
+          "source": "n_adv_corticosteroids",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如成立，潜在不利效应增加"
+        },
+        {
+          "source": "drug_immunosuppressants",
+          "target": "n_ot_immunosuppressants",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发感染及肾功能问题"
+        },
+        {
+          "source": "n_ot_immunosuppressants",
+          "target": "n_rp_immunosuppressants",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响免疫系统"
+        },
+        {
+          "source": "n_rp_immunosuppressants",
+          "target": "n_adv_immunosuppressants",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良的肾脏表型"
+        },
+        {
+          "source": "n_adv_immunosuppressants",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如证实风险，疗效可能削弱"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_ot_cyclosporine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "已知肾毒性"
+        },
+        {
+          "source": "n_ot_cyclosporine",
+          "target": "n_rp_cyclosporine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响肾功能"
+        },
+        {
+          "source": "n_rp_cyclosporine",
+          "target": "n_adv_cyclosporine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能加速肾功能下降"
+        },
+        {
+          "source": "n_adv_cyclosporine",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "一旦风险证实，可能抵消疗效"
+        },
+        {
+          "source": "drug_angiotensin_ii_receptor_blockers",
+          "target": "n_ot_angiotensin_ii_receptor_blockers",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏功能"
+        },
+        {
+          "source": "n_ot_angiotensin_ii_receptor_blockers",
+          "target": "n_rp_angiotensin_ii_receptor_blockers",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发低血压及肾损伤"
+        },
+        {
+          "source": "n_rp_angiotensin_ii_receptor_blockers",
+          "target": "n_adv_angiotensin_ii_receptor_blockers",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致肾脏损害"
+        },
+        {
+          "source": "n_adv_angiotensin_ii_receptor_blockers",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，影响疗效"
+        },
+        {
+          "source": "drug_epoetin_alfa",
+          "target": "n_ot_epoetin_alfa",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能刺激红细胞生成"
+        },
+        {
+          "source": "n_ot_epoetin_alfa",
+          "target": "n_rp_epoetin_alfa",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响肾功能动态"
+        },
+        {
+          "source": "n_rp_epoetin_alfa",
+          "target": "n_adv_epoetin_alfa",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致肾功能不全"
+        },
+        {
+          "source": "n_adv_epoetin_alfa",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如证实，可能抵消效果"
+        },
+        {
+          "source": "drug_gemcitabine",
+          "target": "n_ot_gemcitabine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的肾毒性"
+        },
+        {
+          "source": "n_ot_gemcitabine",
+          "target": "n_rp_gemcitabine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响肾脏功能"
+        },
+        {
+          "source": "n_rp_gemcitabine",
+          "target": "n_adv_gemcitabine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肾损害"
+        },
+        {
+          "source": "n_adv_gemcitabine",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，可能导致不良后果"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_t_aminosalicylates",
+              "type": "Target",
+              "label": "Target_Aminosalicylates",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            },
+            {
+              "id": "n_p_aminosalicylates",
+              "type": "Pathway",
+              "label": "Pathway_Aminosalicylates",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            },
+            {
+              "id": "n_ph_aminosalicylates",
+              "type": "Phenotype",
+              "label": "Phenotype_Aminosalicylates",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "drug_aminosalicylates",
+              "target": "n_t_aminosalicylates",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "支持抗炎作用"
+            },
+            {
+              "source": "n_t_aminosalicylates",
+              "target": "n_p_aminosalicylates",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "通路层面常识"
+            },
+            {
+              "source": "n_p_aminosalicylates",
+              "target": "phenotype_renal_failure",
+              "relation": "causes",
+              "weight": 0.65,
+              "agent": "Proponent",
+              "rationale": "可能诱导肾功能障碍"
+            },
+            {
+              "source": "drug_aminosalicylates",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "形成支持路径"
+            }
+          ]
+        },
+        "notes": "已增加对 Renal Failure 的影响路径，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [
+      {
+        "action_ref": 1,
+        "status": "skipped",
+        "reason": "与支持性目标不符或信息不足"
+      },
+      {
+        "action_ref": 2,
+        "status": "skipped",
+        "reason": "与支持性目标不符或信息不足"
+      }
+    ],
+    "residual_gaps": [
+      "依旧缺少对可能的长期肾损伤的深入机制链接"
+    ]
+  }
+}

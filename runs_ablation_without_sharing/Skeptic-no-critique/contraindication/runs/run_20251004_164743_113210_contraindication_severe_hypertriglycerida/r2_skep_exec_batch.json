@@ -1,0 +1,452 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "高甘油三酯患者的潜在风险",
+            "expectation": "探讨Fibrates对此患者群体的安全性，若有严重风险标注高权重refutes边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Statins在高甘油三酯患者中的安全性问题",
+            "expectation": "调查对甘油三酯控制可能产生的不良影响，若出现标注相关refutes边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiazolidinediones",
+          "type": "Drug",
+          "label": "Thiazolidinediones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bile_acid_sequestrants",
+          "type": "Drug",
+          "label": "Bile acid sequestrants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_orlistat",
+          "type": "Drug",
+          "label": "Orlistat",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_glucocorticoids",
+          "type": "Drug",
+          "label": "Glucocorticoids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_aminodarone",
+          "type": "Drug",
+          "label": "Aminodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_antipsychotics",
+          "type": "Drug",
+          "label": "Antipsychotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_protease_inhibitors",
+          "type": "Drug",
+          "label": "Protease inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_quetiapine",
+          "type": "Drug",
+          "label": "Quetiapine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_htg",
+          "type": "Phenotype",
+          "label": "Severe hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Statins",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Thiazolidinediones",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Bile acid sequestrants",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Orlistat",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Glucocorticoids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Aminodarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Antipsychotics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Protease inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Quetiapine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_fibrates",
+          "target": "n_htg",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Fibrates有效降低甘油三酯水平"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_htg",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Statins用于降低血脂，特别是甘油三酯"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "n_htg",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Niacin已知减少甘油三酯和提升HDL"
+        },
+        {
+          "source": "drug_thiazolidinediones",
+          "target": "n_htg",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "此类药物在糖代谢中发挥作用，有助于改善甘油三酯"
+        },
+        {
+          "source": "drug_bile_acid_sequestrants",
+          "target": "n_htg",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于降低血液中的胆固醇水平，可以间接影响甘油三酯"
+        },
+        {
+          "source": "drug_orlistat",
+          "target": "n_htg",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Orlistat通过减少脂肪吸收有助于控制体重，与甘油三酯水平相关"
+        },
+        {
+          "source": "drug_glucocorticoids",
+          "target": "n_htg",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知某些类固醇可增加甘油三酯水平"
+        },
+        {
+          "source": "drug_aminodarone",
+          "target": "n_htg",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "药理特性可能与甘油三酯变化相关"
+        },
+        {
+          "source": "drug_antipsychotics",
+          "target": "n_htg",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "某些抗精神病药物与体重增加和甘油三酯水平升高有关"
+        },
+        {
+          "source": "drug_protease_inhibitors",
+          "target": "n_htg",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "已知此类药物可能导致代谢变化"
+        },
+        {
+          "source": "drug_quetiapine",
+          "target": "n_htg",
+          "relation": "causes",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "此药物导致代谢效应可能 elevates 甘油三酯"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_htg",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Corticosteroids 与甘油三酯升高的关联"
+        },
+        {
+          "source": "drug_fibrates",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "作用机制直接支持表型改善"
+        },
+        {
+          "source": "drug_statins",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "降低甘油三酯的重要药物"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "直接作用于甘油三酯指标"
+        },
+        {
+          "source": "drug_thiazolidinediones",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "相关机制影响油脂代谢"
+        },
+        {
+          "source": "drug_bile_acid_sequestrants",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "通过影响胆固醇类别降低甘油三酯"
+        },
+        {
+          "source": "drug_orlistat",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "减少脂肪吸收利于甘油三酯管理"
+        },
+        {
+          "source": "drug_glucocorticoids",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响甘油三酯的已知机制"
+        },
+        {
+          "source": "drug_aminodarone",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响甘油三酯"
+        },
+        {
+          "source": "drug_antipsychotics",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "与代谢效应直接相关"
+        },
+        {
+          "source": "drug_protease_inhibitors",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "服用后可能对甘油三酯有影响"
+        },
+        {
+          "source": "drug_quetiapine",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "部分类似药物研究"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与甘油三酯升高已有文献关联"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates_per_hypothesis": []
+  }
+}

@@ -1,0 +1,642 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Levodopa Adverse Effects",
+            "expectation": "若安全性风险链成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Dopamine Adverse Effects",
+            "expectation": "若安全性风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_levodopa",
+          "type": "Drug",
+          "label": "Levodopa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dopamine",
+          "type": "Drug",
+          "label": "Dopamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_selegiline",
+          "type": "Drug",
+          "label": "Selegiline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rasagiline",
+          "type": "Drug",
+          "label": "Rasagiline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amantadine",
+          "type": "Drug",
+          "label": "Amantadine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_pramipexole",
+          "type": "Drug",
+          "label": "Pramipexole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ropinirole",
+          "type": "Drug",
+          "label": "Ropinirole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bromocriptine",
+          "type": "Drug",
+          "label": "Bromocriptine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_entacapone",
+          "type": "Drug",
+          "label": "Entacapone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cabergoline",
+          "type": "Drug",
+          "label": "Cabergoline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fluoxetine",
+          "type": "Drug",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_venlafaxine",
+          "type": "Drug",
+          "label": "Venlafaxine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_dopamine_receptor",
+          "type": "Target",
+          "label": "Dopamine Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_dopaminergic_pathway",
+          "type": "Pathway",
+          "label": "Dopaminergic Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease_neurotransmitter_disorder",
+          "type": "Disease",
+          "label": "Neurotransmitter Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph_phenotype_x",
+          "type": "Phenotype",
+          "label": "Phenotype X",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph_phenotype_y",
+          "type": "Phenotype",
+          "label": "Phenotype Y",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_levodopa",
+          "type": "Target",
+          "label": "Levodopa Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_levodopa",
+          "type": "Pathway",
+          "label": "Levodopa Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_levodopa",
+          "type": "Phenotype",
+          "label": "Levodopa Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dopamine",
+          "type": "Target",
+          "label": "Dopamine Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dopamine",
+          "type": "Pathway",
+          "label": "Dopamine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dopamine",
+          "type": "Phenotype",
+          "label": "Dopamine Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_selegiline",
+          "type": "Target",
+          "label": "Selegiline Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_selegiline",
+          "type": "Pathway",
+          "label": "Selegiline Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_selegiline",
+          "type": "Phenotype",
+          "label": "Selegiline Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rasagiline",
+          "type": "Target",
+          "label": "Rasagiline Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rasagiline",
+          "type": "Pathway",
+          "label": "Rasagiline Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rasagiline",
+          "type": "Phenotype",
+          "label": "Rasagiline Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Levodopa",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Dopamine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Selegiline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Rasagiline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Amantadine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Pramipexole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Ropinirole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Bromocriptine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Entacapone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Cabergoline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Venlafaxine",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_levodopa",
+          "target": "n_target_dopamine_receptor",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "作用于多巴胺受体，治疗神经递质失调相关症状"
+        },
+        {
+          "source": "drug_dopamine",
+          "target": "n_target_dopamine_receptor",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "直接用于补充多巴胺，对神经递质失调有直接影响"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "n_target_dopamine_receptor",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抑制单胺氧化酶，增强多巴胺的效力"
+        },
+        {
+          "source": "drug_rasagiline",
+          "target": "n_target_dopamine_receptor",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "类似于Selegiline，增加神经传递促进效应"
+        },
+        {
+          "source": "drug_amantadine",
+          "target": "n_target_dopamine_receptor",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "提高多巴胺的传递及释放"
+        },
+        {
+          "source": "drug_pramipexole",
+          "target": "n_target_dopamine_receptor",
+          "relation": "activates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "选择性激动多巴胺受体，主要用于帕金森病治疗"
+        },
+        {
+          "source": "drug_ropinirole",
+          "target": "n_target_dopamine_receptor",
+          "relation": "activates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "类似机制，用于帕金森病相关治疗"
+        },
+        {
+          "source": "drug_bromocriptine",
+          "target": "n_target_dopamine_receptor",
+          "relation": "activates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "dopamine agonists对治疗有明确效用"
+        },
+        {
+          "source": "n_target_dopamine_receptor",
+          "target": "n_pathway_dopaminergic_pathway",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "多巴胺受体是多巴胺通路的重要组成部分"
+        },
+        {
+          "source": "n_pathway_dopaminergic_pathway",
+          "target": "n_disease_neurotransmitter_disorder",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "多巴胺通路异常导致神经递质失调"
+        },
+        {
+          "source": "n_target_dopamine_receptor",
+          "target": "n_ph_phenotype_x",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响神经递质功能的药物直接关联症状表现"
+        },
+        {
+          "source": "n_target_dopamine_receptor",
+          "target": "n_ph_phenotype_y",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "调节多巴胺的药物会影响多种表型特征"
+        },
+        {
+          "source": "drug_levodopa",
+          "target": "n_ot_levodopa",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路或离靶作用"
+        },
+        {
+          "source": "n_ot_levodopa",
+          "target": "n_rp_levodopa",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能存在"
+        },
+        {
+          "source": "n_rp_levodopa",
+          "target": "n_adv_levodopa",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应的可能性"
+        },
+        {
+          "source": "n_adv_levodopa",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果该风险链成立，将抵消净获益"
+        },
+        {
+          "source": "drug_dopamine",
+          "target": "n_ot_dopamine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路或离靶作用"
+        },
+        {
+          "source": "n_ot_dopamine",
+          "target": "n_rp_dopamine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能存在"
+        },
+        {
+          "source": "n_rp_dopamine",
+          "target": "n_adv_dopamine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应的可能性"
+        },
+        {
+          "source": "n_adv_dopamine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果该风险链成立，将抵消净获益"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "n_ot_selegiline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路或离靶作用"
+        },
+        {
+          "source": "n_ot_selegiline",
+          "target": "n_rp_selegiline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能存在"
+        },
+        {
+          "source": "n_rp_selegiline",
+          "target": "n_adv_selegiline",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应的可能性"
+        },
+        {
+          "source": "n_adv_selegiline",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果该风险链成立，将抵消净获益"
+        },
+        {
+          "source": "drug_rasagiline",
+          "target": "n_ot_rasagiline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路或离靶作用"
+        },
+        {
+          "source": "n_ot_rasagiline",
+          "target": "n_rp_rasagiline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能存在"
+        },
+        {
+          "source": "n_rp_rasagiline",
+          "target": "n_adv_rasagiline",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应的可能性"
+        },
+        {
+          "source": "n_adv_rasagiline",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果该风险链成立，将抵消净获益"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [],
+          "add_nodes": [],
+          "add_edges": [],
+          "remove_edges": []
+        },
+        "notes": "安全性压力测试已完成，指向假设的边已标注高权重"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [],
+          "add_nodes": [],
+          "add_edges": [],
+          "remove_edges": []
+        },
+        "notes": "安全性压力测试已完成，指向假设的边已标注高权重"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": []
+  }
+}

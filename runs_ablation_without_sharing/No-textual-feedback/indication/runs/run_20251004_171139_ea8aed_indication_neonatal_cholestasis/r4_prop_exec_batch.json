@@ -1,0 +1,398 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_ursodeoxycholic_acid",
+            "via": [
+              "n_target_bile_acid_transport",
+              "n_pathway_bile_acid_metabolism"
+            ],
+            "to": "n_disease_neonatal_cholestasis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_cholestyramine",
+            "via": [
+              "n_target_bile_acid_transport",
+              "n_pathway_bile_acid_metabolism"
+            ],
+            "to": "n_disease_neonatal_cholestasis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_ursodeoxycholic_acid",
+          "type": "Drug",
+          "label": "Ursodeoxycholic Acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_s_adenosylmethionine",
+          "type": "Drug",
+          "label": "S-adenosylmethionine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_obeticholic_acid",
+          "type": "Drug",
+          "label": "Obeticholic Acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_silibinin",
+          "type": "Drug",
+          "label": "Silibinin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_l_carnitine",
+          "type": "Drug",
+          "label": "L-carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vitamina_e",
+          "type": "Drug",
+          "label": "Vitamina E",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_bile_acid_transport",
+          "type": "Target",
+          "label": "Bile Acid Transporter",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_bile_acid_metabolism",
+          "type": "Pathway",
+          "label": "Bile Acid Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease_neonatal_cholestasis",
+          "type": "Disease",
+          "label": "Neonatal Cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "OffTargetX",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "RiskPathwayY",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeZ",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "n_target_bile_acid_transport",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知影响胆汁酸排泄"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_target_bile_acid_transport",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过束缚胆盐影响代谢"
+        },
+        {
+          "source": "drug_sodium_phenylbutyrate",
+          "target": "n_pathway_bile_acid_metabolism",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知提高胆盐代谢"
+        },
+        {
+          "source": "drug_s_adenosylmethionine",
+          "target": "n_pathway_bile_acid_metabolism",
+          "relation": "activates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过促进代谢有潜在影响"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "n_pathway_bile_acid_metabolism",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与胆汁酸代谢相关的通路"
+        },
+        {
+          "source": "drug_obeticholic_acid",
+          "target": "n_target_bile_acid_transport",
+          "relation": "activates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "类似机制的药物"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "n_target_bile_acid_transport",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响肝药物代谢"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "n_pathway_bile_acid_metabolism",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过抗氧化作用可能影响胆汁流动"
+        },
+        {
+          "source": "drug_silibinin",
+          "target": "n_target_bile_acid_transport",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "潜在改善肝功能"
+        },
+        {
+          "source": "drug_l_carnitine",
+          "target": "n_pathway_bile_acid_metabolism",
+          "relation": "activates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "与脂质代谢有关"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_pathway_bile_acid_metabolism",
+          "relation": "modulates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "通过干预代谢途径有潜力的作用"
+        },
+        {
+          "source": "drug_vitamina_e",
+          "target": "n_pathway_bile_acid_metabolism",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "抗氧化剂可能影响肝细胞"
+        },
+        {
+          "source": "n_target_bile_acid_transport",
+          "target": "n_pathway_bile_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "作用机制中的关键环节"
+        },
+        {
+          "source": "n_pathway_bile_acid_metabolism",
+          "target": "n_disease_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "胆汁酸代谢失调可能导致疾病"
+        },
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁靶作用"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险路径关联"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将影响净获益"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_ursodeoxycholic_acid",
+              "target": "n_target_bile_acid_transport",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "已知影响胆汁酸排泄"
+            },
+            {
+              "source": "n_target_bile_acid_transport",
+              "target": "n_pathway_bile_acid_metabolism",
+              "relation": "involved_in",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "作用机制中的关键环节"
+            },
+            {
+              "source": "n_pathway_bile_acid_metabolism",
+              "target": "n_disease_neonatal_cholestasis",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "胆汁酸代谢失调可能导致疾病"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→TargetBileAcidTransport→PathwayBileAcidMetabolism→DiseaseNeonatalCholestasis，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

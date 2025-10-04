@@ -5,6 +5,7 @@
 #     * indication: 使用列 is_gold_indication==1 作为正例；若列缺失，则 conclusion ∈ {"适应症线索","可能适应症且需注意安全"} 视为正例
 #     * contraindication: 使用列 is_gold_contraindication==1 作为正例；若列缺失，则 conclusion == "禁忌信号" 视为正例
 # - 为每个配置分别产出 <out_dir>/<ConfigTag>/<subset>/_records.jsonl
+# - 不同消融配置互不共享 seeds（去除 --share_seeds）
 
 import os, re, json, argparse, threading
 from typing import Dict, Any, List, Tuple, Optional
@@ -120,7 +121,7 @@ def make_bio_prompt(subset: str, disease: str, n: int) -> str:
         )
 
 
-# -------------------- 种子生成/缓存（共享以保证公平） --------------------
+# -------------------- 种子生成（单配置内最小缓存；不同配置互不共享） --------------------
 def gen_or_get_seeds(disease: str, subset: str, n_seeds: int,
                      cache: Dict[str, List[str]],
                      textual_feedback: bool,
@@ -128,6 +129,7 @@ def gen_or_get_seeds(disease: str, subset: str, n_seeds: int,
     """
     - textual_feedback=True：给 Explorer 完整 bio_prompt；否则传空（去文本反馈消融）。
     - 失败时兜底：从该病的 CSV 候选中抽取，优先正例，再补其它，去重到 n_seeds。
+    - cache 为当前配置/子任务的本地缓存，不在不同配置之间共享。
     """
     key = f"{subset}::{disease}"
     if key in cache:
@@ -233,11 +235,13 @@ def run_subset(subset: str,
                textual_feedback: bool,
                n_seeds: int,
                workers: int,
-               resume: bool,
-               shared_seed_cache: Dict[str, List[str]]):
+               resume: bool):
     ensure_dir(out_dir)
     jsonl_path = os.path.join(out_dir, "_records.jsonl")
     done = read_done_indices(jsonl_path) if resume else set()
+
+    # 每个配置/子任务的本地 seed cache（不同配置之间不共享）
+    local_seed_cache: Dict[str, List[str]] = {}
 
     # 唯一病种
     diseases = sorted(df_all["disease"].astype(str).unique().tolist())
@@ -254,10 +258,10 @@ def run_subset(subset: str,
         idx, disease, gold_drugs = job
         relation = "indication" if subset == "indication" else "contraindication"
         try:
-            # 生成/复用 seeds（共享以保证各配置公平，默认 True）
+            # 生成 seeds（仅在当前配置内缓存；不同配置不共享）
             seeds = gen_or_get_seeds(
                 disease=disease, subset=subset, n_seeds=n_seeds,
-                cache=shared_seed_cache, textual_feedback=textual_feedback,
+                cache=local_seed_cache, textual_feedback=textual_feedback,
                 df_all=df_all
             )
             if not seeds:
@@ -354,11 +358,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ind_all", type=str, default="filtered_indication_all.csv", help="filtered_indication_all.csv")
     ap.add_argument("--contra_all", type=str, default="filtered_contraindication_all.csv", help="filtered_contraindication_all.csv")
-    ap.add_argument("--out_dir", type=str, default="runs_ablation")
+    ap.add_argument("--out_dir", type=str, default="runs_ablation_without_sharing", help="output root dir for all configs")
     ap.add_argument("--n_seeds", type=int, default=12)
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--resume", action="store_true")
-    ap.add_argument("--share_seeds", action="store_true", default=False, help="不同配置共享同一批 seeds（推荐开启保证公平）")
+    # 移除 --share_seeds
     args = ap.parse_args()
 
     ensure_dir(args.out_dir)
@@ -367,7 +371,7 @@ def main():
     df_ind = load_all_csv_with_labels(args.ind_all, subset="indication")
     df_contra = load_all_csv_with_labels(args.contra_all, subset="contraindication")
 
-    # 定义消融配置（RareAgent 必须第一个，以便共享种子时由它先生成）
+    # 定义消融配置
     configs = [
         ("Debate-single", True),          # 单代理（禁用 Skeptic）
         ("Skeptic-no-critique", True),    # Skeptic 不输出反证
@@ -375,8 +379,6 @@ def main():
         ("No-textual-feedback", False),   # Explorer 去文本提示
         ("No-heuristic-transfer", True),  # 移除 heuristic_priors
     ]
-
-    shared_seed_cache: Dict[str, List[str]] = {} if args.share_seeds else {}
 
     for tag, textual_feedback in configs:
         print(f"\n==== Running config: {tag} ====")
@@ -393,8 +395,7 @@ def main():
                 textual_feedback=textual_feedback,
                 n_seeds=args.n_seeds,
                 workers=args.workers,
-                resume=args.resume,
-                shared_seed_cache=shared_seed_cache
+                resume=args.resume
             )
             # contraindication
             run_subset(
@@ -405,8 +406,7 @@ def main():
                 textual_feedback=textual_feedback,
                 n_seeds=args.n_seeds,
                 workers=args.workers,
-                resume=args.resume,
-                shared_seed_cache=shared_seed_cache
+                resume=args.resume
             )
 
     print("\nAll configurations finished. Each _records.jsonl is under <out_dir>/<ConfigTag>/<subset>/")

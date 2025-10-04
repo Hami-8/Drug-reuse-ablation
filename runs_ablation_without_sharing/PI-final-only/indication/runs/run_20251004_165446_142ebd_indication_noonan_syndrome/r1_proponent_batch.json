@@ -1,0 +1,437 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Noonan syndrome",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_growth_hormone",
+          "name": "Growth hormone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_anastrozole",
+          "name": "Anastrozole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_simvastatin",
+          "name": "Simvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_albuterol",
+          "name": "Albuterol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_echocardiogram",
+          "name": "Echocardiogram"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_enalapril",
+          "name": "Enalapril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_octreotide",
+          "name": "Octreotide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_lisinopril",
+          "name": "Lisinopril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_methylphenidate",
+          "name": "Methylphenidate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_growth_hormone",
+          "type": "Drug",
+          "label": "Growth hormone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_anastrozole",
+          "type": "Drug",
+          "label": "Anastrozole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_simvastatin",
+          "type": "Drug",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_albuterol",
+          "type": "Drug",
+          "label": "Albuterol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_echocardiogram",
+          "type": "Drug",
+          "label": "Echocardiogram",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_enalapril",
+          "type": "Drug",
+          "label": "Enalapril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_octreotide",
+          "type": "Drug",
+          "label": "Octreotide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sildenafil",
+          "type": "Drug",
+          "label": "Sildenafil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lisinopril",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_methylphenidate",
+          "type": "Drug",
+          "label": "Methylphenidate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_noonan_syndrome",
+          "type": "Disease",
+          "label": "Noonan syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_growth_hormone_target",
+          "type": "Target",
+          "label": "Growth hormone receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_growth_hormone_pathway",
+          "type": "Pathway",
+          "label": "Growth Hormone Signaling Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_symptom_growth_short_stature",
+          "type": "Phenotype",
+          "label": "Growth short stature",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_symptom_cardiac_anomalies",
+          "type": "Phenotype",
+          "label": "Cardiac anomalies",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_growth_hormone",
+          "target": "n_growth_hormone_target",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知与生长激素受体相互作用"
+        },
+        {
+          "source": "n_growth_hormone_target",
+          "target": "n_growth_hormone_pathway",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "相关信号通路已知"
+        },
+        {
+          "source": "n_growth_hormone_pathway",
+          "target": "n_noonan_syndrome",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "该通路影响相关表型"
+        },
+        {
+          "source": "n_growth_hormone",
+          "target": "n_symptom_growth_short_stature",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "生长迟缓为Noonan综合症常见症状"
+        },
+        {
+          "source": "n_growth_hormone",
+          "target": "n_symptom_cardiac_anomalies",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "心脏畸形与生长激素相关"
+        },
+        {
+          "source": "n_anastrozole",
+          "target": "n_noonan_syndrome",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "对某些生长相关功能有影响"
+        },
+        {
+          "source": "n_simvastatin",
+          "target": "n_noonan_syndrome",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能在代谢方面对症状有益"
+        },
+        {
+          "source": "n_albuterol",
+          "target": "n_noonan_syndrome",
+          "relation": "supports",
+          "weight": 0.58,
+          "agent": "Proponent",
+          "rationale": "呼吸道症状管理可能相关"
+        },
+        {
+          "source": "n_ibuprofen",
+          "target": "n_noonan_syndrome",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "炎症管理与表型相关"
+        },
+        {
+          "source": "n_echocardiogram",
+          "target": "n_noonan_syndrome",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "心脏评估有助于管理"
+        },
+        {
+          "source": "n_enalapril",
+          "target": "n_noonan_syndrome",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "对心脏健康可能有益"
+        },
+        {
+          "source": "n_octreotide",
+          "target": "n_noonan_syndrome",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能影响代谢和生长"
+        },
+        {
+          "source": "n_sildenafil",
+          "target": "n_noonan_syndrome",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "对心血管系统可能有益"
+        },
+        {
+          "source": "n_lisinopril",
+          "target": "n_noonan_syndrome",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "低血压管理相关"
+        },
+        {
+          "source": "n_aspirin",
+          "target": "n_noonan_syndrome",
+          "relation": "supports",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "用于相关并发症的对策"
+        },
+        {
+          "source": "n_methylphenidate",
+          "target": "n_noonan_syndrome",
+          "relation": "supports",
+          "weight": 0.25,
+          "agent": "Proponent",
+          "rationale": "可能改善注意力有益"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "Growth hormone 可通过激活生长激素受体影响 Noonan syndrome 的症状",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "Anastrozole 和 Simvastatin 等药物可能对 Noonan syndrome 相关症状有正面影响",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "上述药物需要达到相关组织的治疗水平"
+    ],
+    "uncertainties": [
+      "不同药物的具体效果和潜在风险需进一步确认"
+    ],
+    "next_focus_for_pi": [
+      "评估每个药物对 Noonan syndrome 的潜在作用和临床试验的必要性"
+    ]
+  }
+}

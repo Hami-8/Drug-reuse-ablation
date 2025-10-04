@@ -1,0 +1,429 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Epileptic encephalopathy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_lamotrigine",
+          "name": "Lamotrigine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_sodium_valproate",
+          "name": "Sodium Valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_zonisamide",
+          "name": "Zonisamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_felbamate",
+          "name": "Felbamate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_lacosamide",
+          "name": "Lacosamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_clonazepam",
+          "name": "Clonazepam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_pregabalin",
+          "name": "Pregabalin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_vigabatrin",
+          "name": "Vigabatrin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lamotrigine",
+          "type": "Drug",
+          "label": "Lamotrigine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_zonisamide",
+          "type": "Drug",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_felbamate",
+          "type": "Drug",
+          "label": "Felbamate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lacosamide",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clonazepam",
+          "type": "Drug",
+          "label": "Clonazepam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_pregabalin",
+          "type": "Drug",
+          "label": "Pregabalin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vigabatrin",
+          "type": "Drug",
+          "label": "Vigabatrin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_epileptic_encephalopathy",
+          "type": "Disease",
+          "label": "Epileptic Encephalopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "t_efficacy",
+          "type": "Target",
+          "label": "Target for Antiepileptic Drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "p_seizure_control",
+          "type": "Pathway",
+          "label": "Seizure Control Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "h_safety",
+          "type": "Hypothesis",
+          "label": "Hypothesis on Drug Safety",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_carbamazepine",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_lamotrigine",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_felbamate",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_clonazepam",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_pregabalin",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "drug_vigabatrin",
+          "target": "t_efficacy",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "已知对癫痫有效"
+        },
+        {
+          "source": "t_efficacy",
+          "target": "p_seizure_control",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗癫痫药物工作机制"
+        },
+        {
+          "source": "p_seizure_control",
+          "target": "d_epileptic_encephalopathy",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "癫痫持续状态影响"
+        },
+        {
+          "source": "t_efficacy",
+          "target": "h_safety",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "假设通路安全性"
+        },
+        {
+          "source": "p_seizure_control",
+          "target": "h_safety",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "假设通路安全性"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种抗癫痫药物通过相似靶点影响癫痫持续状态",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "支持药物在癫痫治疗中的作用，但风险需进一步验证",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物已知对癫痫控制有效（常识判断）"
+    ],
+    "uncertainties": [
+      "药物对特定癫痫类型的安全性尚需进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "是否需要针对特定药物的效能与副作用进行进一步审查？"
+    ]
+  }
+}

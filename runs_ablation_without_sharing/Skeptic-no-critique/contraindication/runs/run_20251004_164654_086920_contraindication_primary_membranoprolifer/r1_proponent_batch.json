@@ -1,0 +1,464 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_lithium",
+          "name": "Lithium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_ace_inhibitors",
+          "name": "ACE inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_angiotensin_receptor_blockers",
+          "name": "Angiotensin receptor blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_nsaids",
+          "name": "NSAIDs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_diuretics",
+          "name": "Diuretics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_tacrolimus",
+          "name": "Tacrolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_antiproliferative_agents",
+          "name": "Antiproliferative agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_penicillamine",
+          "name": "Penicillamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_naproxen",
+          "type": "Drug",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ace_inhibitors",
+          "type": "Drug",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_angiotensin_receptor_blockers",
+          "type": "Drug",
+          "label": "Angiotensin receptor blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_diuretics",
+          "type": "Drug",
+          "label": "Diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_antiproliferative_agents",
+          "type": "Drug",
+          "label": "Antiproliferative agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_penicillamine",
+          "type": "Drug",
+          "label": "Penicillamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mpgn",
+          "type": "Disease",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_mpgn",
+          "relation": "contraindicated",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知对肾脏有影响"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_mpgn",
+          "relation": "contraindicated",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "同类药物对肾脏有潜在风险"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "n_mpgn",
+          "relation": "contraindicated",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "影响肾功能"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "n_mpgn",
+          "relation": "contraindicated",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "可能导致肾脏不良反应"
+        },
+        {
+          "source": "drug_angiotensin_receptor_blockers",
+          "target": "n_mpgn",
+          "relation": "contraindicated",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响肾脏功能"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "n_mpgn",
+          "relation": "contraindicated",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "对肾脏有已知危害"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_mpgn",
+          "relation": "contraindicated",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能导致肾损害"
+        },
+        {
+          "source": "drug_diuretics",
+          "target": "n_mpgn",
+          "relation": "contraindicated",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能影响肾功能"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_mpgn",
+          "relation": "contraindicated",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对肾脏功能有潜在影响"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "n_mpgn",
+          "relation": "contraindicated",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知影响肾脏"
+        },
+        {
+          "source": "drug_antiproliferative_agents",
+          "target": "n_mpgn",
+          "relation": "contraindicated",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响肾脏"
+        },
+        {
+          "source": "drug_penicillamine",
+          "target": "n_mpgn",
+          "relation": "contraindicated",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "对肾功能影响"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "对 MPGN 有已知禁忌"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "对 MPGN 有已知禁忌"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "对 MPGN 有已知禁忌"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "对 MPGN 有已知禁忌"
+        },
+        {
+          "source": "drug_angiotensin_receptor_blockers",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对 MPGN 有已知禁忌"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "对 MPGN 有已知禁忌"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "对 MPGN 有已知禁忌"
+        },
+        {
+          "source": "drug_diuretics",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "对 MPGN 有已知禁忌"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对 MPGN 有已知禁忌"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "对 MPGN 有已知禁忌"
+        },
+        {
+          "source": "drug_antiproliferative_agents",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "对 MPGN 有已知禁忌"
+        },
+        {
+          "source": "drug_penicillamine",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "对 MPGN 有已知禁忌"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物对 Primary membranoproliferative glomerulonephritis 存在禁忌",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物在适用时具有已知的风险影响"
+    ],
+    "uncertainties": [
+      "具体药物副作用的个体差异需要进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需要探索更多可能的药物与禁忌的关系？"
+    ]
+  }
+}

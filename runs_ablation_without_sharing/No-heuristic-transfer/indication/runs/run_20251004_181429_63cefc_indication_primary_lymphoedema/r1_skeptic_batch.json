@@ -1,0 +1,243 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary lymphoedema",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_bendroflumethiazide",
+          "name": "Bendroflumethiazide"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_lymfactin",
+          "name": "Lymfactin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_daltaparin",
+          "name": "Daltaparin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_benzopyrone",
+          "name": "Benzopyrone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_tricyclic_antidepressants",
+          "name": "Tricyclic antidepressants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_pentoxifylline",
+          "name": "Pentoxifylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_micronized_purified_flavonoid_fraction",
+          "name": "Micronized purified flavonoid fraction"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_surgical_compression_devices",
+          "name": "Surgical compression devices"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_mannitol",
+          "name": "Mannitol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_nintedanib",
+          "name": "Nintedanib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_bendroflumethiazide",
+          "type": "Target",
+          "label": "OffTargetBendroflumethiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bendroflumethiazide",
+          "type": "Pathway",
+          "label": "RiskPathwayBendroflumethiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bendroflumethiazide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBendroflumethiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_bendroflumethiazide",
+          "target": "n_ot_bendroflumethiazide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能激活旁路/离靶机制"
+        },
+        {
+          "source": "n_ot_bendroflumethiazide",
+          "target": "n_rp_bendroflumethiazide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_bendroflumethiazide",
+          "target": "n_adv_bendroflumethiazide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_bendroflumethiazide",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消药物获益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "疗效 vs 不良反应",
+          "pro_nodes": [
+            "n_ot_bendroflumethiazide"
+          ],
+          "con_nodes": [
+            "n_adv_bendroflumethiazide"
+          ],
+          "note": "治疗效果与潜在不良反应之间的矛盾"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "可能导致电解质失衡，影响治疗效果",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "未识别长期使用的安全性问题，存在风险",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "Bendroflumethiazide 是否能有效渗透靶部位",
+      "其作用路径是否与降水肿的机制相符"
+    ],
+    "falsification_tests": [
+      "是否存在充分证据支持 Bendroflumethiazide 改善长期疗效？",
+      "是否已有研究表明该药物在淋巴水肿中的具体适应性？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供关于药物安全性与疗效的更多数据",
+      "分析冲突热点及其对综述结论的影响"
+    ]
+  }
+}

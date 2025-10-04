@@ -1,0 +1,872 @@
+{
+  "input": {
+    "mode": "revise",
+    "query": {
+      "entity": "Lactic acidosis",
+      "relation": "indication"
+    },
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_bicarbonate",
+          "type": "Drug",
+          "label": "Sodium Bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiamine",
+          "type": "Drug",
+          "label": "Thiamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carnitine",
+          "type": "Drug",
+          "label": "Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dichloroacetate",
+          "type": "Drug",
+          "label": "Dichloroacetate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydroxycobalamin",
+          "type": "Drug",
+          "label": "Hydroxycobalamin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_arginine",
+          "type": "Drug",
+          "label": "Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_l_arginine",
+          "type": "Drug",
+          "label": "L-arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_l_carnitine",
+          "type": "Drug",
+          "label": "L-carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_b_vitamin_complex",
+          "type": "Drug",
+          "label": "B-vitamin complex",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_la",
+          "type": "Phenotype",
+          "label": "Lactic acidosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_met_target",
+          "type": "Target",
+          "label": "Target of Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bicarb_target",
+          "type": "Target",
+          "label": "Target of Sodium Bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thiamine_target",
+          "type": "Target",
+          "label": "Target of Thiamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_carnitine_target",
+          "type": "Target",
+          "label": "Target of Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dichloroacetate_target",
+          "type": "Target",
+          "label": "Target of Dichloroacetate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hydroxycobalamin_target",
+          "type": "Target",
+          "label": "Target of Hydroxycobalamin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_n_acetylcysteine_target",
+          "type": "Target",
+          "label": "Target of N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_arginine_target",
+          "type": "Target",
+          "label": "Target of Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_l_arginine_target",
+          "type": "Target",
+          "label": "Target of L-arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_l_carnitine_target",
+          "type": "Target",
+          "label": "Target of L-carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_b_vitamin_target",
+          "type": "Target",
+          "label": "Target of B-vitamin complex",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_insulin_target",
+          "type": "Target",
+          "label": "Target of Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_metformin",
+          "target": "n_met_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知作用机制"
+        },
+        {
+          "source": "n_met_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Metformin 对酸碱代谢的影响"
+        },
+        {
+          "source": "drug_sodium_bicarbonate",
+          "target": "n_bicarb_target",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "用于缓解酸中毒的常识"
+        },
+        {
+          "source": "n_bicarb_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "提高血液pH使乳酸中和"
+        },
+        {
+          "source": "drug_thiamine",
+          "target": "n_thiamine_target",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已表明与能量代谢相关"
+        },
+        {
+          "source": "n_thiamine_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能改善乳酸代谢"
+        },
+        {
+          "source": "drug_carnitine",
+          "target": "n_carnitine_target",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "在脂肪酸代谢中发挥作用"
+        },
+        {
+          "source": "n_carnitine_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能改善乳酸排除"
+        },
+        {
+          "source": "drug_dichloroacetate",
+          "target": "n_dichloroacetate_target",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于改善葡萄糖代谢"
+        },
+        {
+          "source": "n_dichloroacetate_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能抑制乳酸生成"
+        },
+        {
+          "source": "drug_hydroxycobalamin",
+          "target": "n_hydroxycobalamin_target",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "有助于降低体内毒素"
+        },
+        {
+          "source": "n_hydroxycobalamin_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能通过改善代谢支持"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "n_n_acetylcysteine_target",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "有助于氧化应激反应"
+        },
+        {
+          "source": "n_n_acetylcysteine_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能改善代谢支持"
+        },
+        {
+          "source": "drug_arginine",
+          "target": "n_arginine_target",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通过促进一氧化氮生成"
+        },
+        {
+          "source": "n_arginine_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能有助于乳酸代谢"
+        },
+        {
+          "source": "drug_l_arginine",
+          "target": "n_l_arginine_target",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "与氨基酸代谢相关"
+        },
+        {
+          "source": "n_l_arginine_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能改善乳酸清除"
+        },
+        {
+          "source": "drug_l_carnitine",
+          "target": "n_l_carnitine_target",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "在能量代谢中重要"
+        },
+        {
+          "source": "n_l_carnitine_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能改善乳酸代谢"
+        },
+        {
+          "source": "drug_b_vitamin_complex",
+          "target": "n_b_vitamin_target",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与维生素缺乏有直接关联"
+        },
+        {
+          "source": "n_b_vitamin_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能通过维生素补充改善代谢"
+        },
+        {
+          "source": "drug_insulin",
+          "target": "n_insulin_target",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "已知对代谢有影响"
+        },
+        {
+          "source": "n_insulin_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能改善高乳酸血症"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4,
+      "last_scores": [
+        {
+          "hypothesis_id": "H1",
+          "score": 0.79,
+          "components": {
+            "mechanism_fit": 0.85,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.7,
+            "indication_plausibility": 0.75,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.2,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.56,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "存在 Metformin → 目标 → 乳酸中毒的有效机制链"
+            ],
+            "indication_plausibility": [
+              "已知 Metformin 可导致代谢性酸中毒，但在合适人群中使用可能有利于改善乳酸水平"
+            ]
+          },
+          "confidence": "high",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H2",
+          "score": 0.73,
+          "components": {
+            "mechanism_fit": 0.8,
+            "class_prior": 0.7,
+            "pk_pd_feasibility": 0.75,
+            "indication_plausibility": 0.8,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.03
+          },
+          "graph_signals": {
+            "support_weight": 0.58,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Sodium Bicarbonate 通过提高 pH 直接作用于乳酸中毒的病理机制"
+            ],
+            "indication_plausibility": [
+              "普遍被用于缓解酸中毒，且相关证据支持其对乳酸中毒有效"
+            ]
+          },
+          "confidence": "high",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H3",
+          "score": 0.68,
+          "components": {
+            "mechanism_fit": 0.7,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.65,
+            "indication_plausibility": 0.7,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.05,
+            "conflict_penalty": 0.01
+          },
+          "graph_signals": {
+            "support_weight": 0.48,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Thiamine 被认为与能量代谢相关，可能有助于乳酸代谢"
+            ],
+            "indication_plausibility": [
+              "有部分研究支持其在代谢性酸中毒中的应用，但证据有限"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H4",
+          "score": 0.65,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.55,
+            "indication_plausibility": 0.65,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.05,
+            "conflict_penalty": 0.0
+          },
+          "graph_signals": {
+            "support_weight": 0.44,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Carnitine 可能通过影响脂肪酸代谢来改善乳酸排除"
+            ],
+            "indication_plausibility": [
+              "在某些情况下，可能对乳酸水平有所帮助，但远不如其他候选药物有效"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H5",
+          "score": 0.63,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.7,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.05,
+            "conflict_penalty": 0.02
+          },
+          "graph_signals": {
+            "support_weight": 0.43,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Dichloroacetate 可能通过促进酮体代谢和减少乳酸生成改善整体代谢"
+            ],
+            "indication_plausibility": [
+              "已有研究表明其在乳酸中毒的潜在应用，但证据仍不全面"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H6",
+          "score": 0.6,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.6,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.05,
+            "conflict_penalty": 0.03
+          },
+          "graph_signals": {
+            "support_weight": 0.42,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Hydroxycobalamin 可能通过影响代谢支持乳酸水平"
+            ],
+            "indication_plausibility": [
+              "但证据对其在乳酸中毒的直接疗效缺乏强有力支持"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H7",
+          "score": 0.58,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.55,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.05,
+            "conflict_penalty": 0.02
+          },
+          "graph_signals": {
+            "support_weight": 0.43,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "N-acetylcysteine 在氧化应激中起作用，因此可能间接影响乳酸水平"
+            ],
+            "indication_plausibility": [
+              "但在乳酸中毒直接应用的证据缺乏"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H8",
+          "score": 0.54,
+          "components": {
+            "mechanism_fit": 0.55,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.05,
+            "conflict_penalty": 0.03
+          },
+          "graph_signals": {
+            "support_weight": 0.42,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Arginine 可能通过促进一氧化氮生成影响代谢"
+            ],
+            "indication_plausibility": [
+              "有可能帮助乳酸代谢，但证据较弱"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H9",
+          "score": 0.52,
+          "components": {
+            "mechanism_fit": 0.55,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.05,
+            "conflict_penalty": 0.03
+          },
+          "graph_signals": {
+            "support_weight": 0.41,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "L-arginine 可能与氨基酸代谢相关"
+            ],
+            "indication_plausibility": [
+              "但对乳酸中毒的直接适应症仍需更多研究"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H10",
+          "score": 0.5,
+          "components": {
+            "mechanism_fit": 0.55,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.05,
+            "conflict_penalty": 0.03
+          },
+          "graph_signals": {
+            "support_weight": 0.4,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "L-carnitine 对能量代谢有一定作用"
+            ],
+            "indication_plausibility": [
+              "但对乳酸中毒的特定适应症缺乏明确证据"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H11",
+          "score": 0.48,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.45,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.05,
+            "conflict_penalty": 0.03
+          },
+          "graph_signals": {
+            "support_weight": 0.39,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "B-vitamin complex 对能量代谢有影响"
+            ],
+            "indication_plausibility": [
+              "可能有助于乳酸代谢，但支持证据不足"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H12",
+          "score": 0.45,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.4,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.05,
+            "conflict_penalty": 0.03
+          },
+          "graph_signals": {
+            "support_weight": 0.38,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Insulin 可能通过改善代谢影响乳酸"
+            ],
+            "indication_plausibility": [
+              "但其在乳酸中毒中的特定适应症不明确"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        }
+      ]
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "revisions": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Metformin可能导致的代谢性酸中毒风险",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ],
+        "debate_focus": [
+          "探讨 Metformin 在特定患者中的应用与风险平衡"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [],
+        "debate_focus": []
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [],
+        "debate_focus": []
+      },
+      {
+        "hypothesis_id": "H4",
+        "graph_actions": [],
+        "debate_focus": []
+      },
+      {
+        "hypothesis_id": "H5",
+        "graph_actions": [],
+        "debate_focus": []
+      },
+      {
+        "hypothesis_id": "H6",
+        "graph_actions": [],
+        "debate_focus": []
+      },
+      {
+        "hypothesis_id": "H7",
+        "graph_actions": [],
+        "debate_focus": []
+      },
+      {
+        "hypothesis_id": "H8",
+        "graph_actions": [],
+        "debate_focus": []
+      },
+      {
+        "hypothesis_id": "H9",
+        "graph_actions": [],
+        "debate_focus": []
+      },
+      {
+        "hypothesis_id": "H10",
+        "graph_actions": [],
+        "debate_focus": []
+      },
+      {
+        "hypothesis_id": "H11",
+        "graph_actions": [],
+        "debate_focus": []
+      },
+      {
+        "hypothesis_id": "H12",
+        "graph_actions": [],
+        "debate_focus": []
+      }
+    ],
+    "pruned_hypotheses": [],
+    "new_subhypotheses": [],
+    "seed_request": {
+      "should_regenerate": false,
+      "reason": "评估 Metformin 相关的安全性与有效性风险，确定是否需进一步探索其他药物。",
+      "n": 4
+    }
+  }
+}

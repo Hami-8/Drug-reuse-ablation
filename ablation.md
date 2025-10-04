@@ -1,8 +1,8 @@
-| Configuration                  | AUPRC↑ | AUROC↑ | P@10↑ | R@10↑ (%) | AvgRank↓ |
+| Configuration                  | AUPRC↑ | AUROC↑ | P@10↑ | R@10↑ | AvgRank↓ |
 |--------------------------------|--------|--------|-----------|-----------|-----------|
-| **RareAgent**                  | 0.374     | 0.533     | 0.0412   |  0.2745   | 10.549        |
-| - Debate (single-agent)        | 0.364     | 0.528     | 0.0294       | 0.1863       | 11.549       |
-| - Skeptic (no critique)        | ——     | ——     | ——        | ——        | ——        |
-| - PI interrupts (final-only)   | ——     | ——     | ——        | ——        | ——        |
-| - Textual feedback             | ——     | ——     | ——        | ——        | ——        |
-| - Heuristic transfer           | ——     | ——     | ——        | ——        | ——        |
+| **RareAgent**                  | 0.4381     | 0.6623     | 0.0412   |  0.2745   | 10.549        |
+| - Debate (single-agent)        | 0.4067     | 0.6364     | 0.0412       | 0.2353       | 10.637       |
+| - Skeptic (no critique)        | 0.4314     | 0.6570    | 0.0353        | 0.2451        | 10.755        |
+| - PI interrupts (final-only)   | 0.4145     | 0.6364     | 0.0412       | 0.2647        | 10.725       |
+| - Textual feedback             | 0.3018     | 0.5556     | 0.0412        | 0.2647       | 10.671       |
+| - Heuristic transfer           | 0.3877     | 0.6518     | 0.0353       | 0.2353        | 10.873        |

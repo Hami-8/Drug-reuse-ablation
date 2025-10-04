@@ -1,0 +1,463 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Hereditary haemorrhagic telangiectasia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "验证关于阿司匹林的禁忌，标注相应的高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估华法林的安全性，检视其禁忌效果",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "确认氯吡格雷在该病症下的使用限制",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_heparin",
+          "type": "Drug",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nsaid",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thrombolytics",
+          "type": "Drug",
+          "label": "Thrombolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rivaroxaban",
+          "type": "Drug",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dabigatran",
+          "type": "Drug",
+          "label": "Dabigatran",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_apixaban",
+          "type": "Drug",
+          "label": "Apixaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ticlopidine",
+          "type": "Drug",
+          "label": "Ticlopidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dipyridamole",
+          "type": "Drug",
+          "label": "Dipyridamole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_coxibs",
+          "type": "Drug",
+          "label": "Coxibs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hht",
+          "type": "Disease",
+          "label": "Hereditary haemorrhagic telangiectasia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_heparin",
+          "type": "Drug",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Thrombolytics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_thrombolytics",
+          "type": "Drug",
+          "label": "Thrombolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rivaroxaban",
+          "type": "Drug",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Dabigatran",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dabigatran",
+          "type": "Drug",
+          "label": "Dabigatran",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Apixaban",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_apixaban",
+          "type": "Drug",
+          "label": "Apixaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Ticlopidine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ticlopidine",
+          "type": "Drug",
+          "label": "Ticlopidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Dipyridamole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dipyridamole",
+          "type": "Drug",
+          "label": "Dipyridamole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Coxibs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_coxibs",
+          "type": "Drug",
+          "label": "Coxibs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_aspirin",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知与出血风险相关"
+        },
+        {
+          "source": "n_warfarin",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.95,
+          "agent": "Proponent",
+          "rationale": "用于抗凝，出血风险高"
+        },
+        {
+          "source": "n_clopidogrel",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "类聚集抑制作用，可能导致出血"
+        },
+        {
+          "source": "n_heparin",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗凝效应，相关出血风险"
+        },
+        {
+          "source": "n_nsaid",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "常见出血风险提示"
+        },
+        {
+          "source": "n_thrombolytics",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "增加出血风险"
+        },
+        {
+          "source": "n_rivaroxaban",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "属于抗凝剂，出血风险"
+        },
+        {
+          "source": "n_dabigatran",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗凝性质，风险增加"
+        },
+        {
+          "source": "n_apixaban",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "抗凝作用相关"
+        },
+        {
+          "source": "n_ticlopidine",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能引起出血风险"
+        },
+        {
+          "source": "n_dipyridamole",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "增大出血风险"
+        },
+        {
+          "source": "n_coxibs",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "NSAID类药物相关风险"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates_per_hypothesis": []
+  }
+}

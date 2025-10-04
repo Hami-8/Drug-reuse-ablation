@@ -1,0 +1,1625 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ezetimibe",
+          "name": "Ezetimibe"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_insulin",
+          "name": "Insulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_lipid_lowering_agents",
+          "name": "Lipid-lowering agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_oral_hypoglycemics",
+          "name": "Oral hypoglycemics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_metformin",
+          "name": "Metformin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_atorvastatin",
+          "name": "Atorvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.87,
+        "components": {
+          "mechanism_fit": 0.9,
+          "class_prior": 0.85,
+          "pk_pd_feasibility": 0.95,
+          "indication_plausibility": 0.9,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.9,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects",
+              "pro": [
+                "n_fibrate"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Fibrates有效降低甘油三酯水平"
+          ],
+          "safety_risk": [
+            "潜在不良反应可能抵消益处"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.84,
+        "components": {
+          "mechanism_fit": 0.87,
+          "class_prior": 0.8,
+          "pk_pd_feasibility": 0.9,
+          "indication_plausibility": 0.85,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects",
+              "pro": [
+                "n_niacin"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Niacin已被证明能有效降低甘油三酯"
+          ],
+          "safety_risk": [
+            "潜在不良反应可能抵消益处"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.81,
+        "components": {
+          "mechanism_fit": 0.85,
+          "class_prior": 0.75,
+          "pk_pd_feasibility": 0.8,
+          "indication_plausibility": 0.75,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects",
+              "pro": [
+                "n_omega_3"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Omega-3脂肪酸能显著减轻高甘油三酯"
+          ],
+          "safety_risk": [
+            "潜在不良反应可能抵消益处"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.78,
+        "components": {
+          "mechanism_fit": 0.8,
+          "class_prior": 0.7,
+          "pk_pd_feasibility": 0.75,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects",
+              "pro": [
+                "n_statin"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Statins具有一定的降低甘油三酯的作用"
+          ],
+          "safety_risk": [
+            "潜在不良反应可能抵消益处"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.75,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.65,
+          "pk_pd_feasibility": 0.7,
+          "indication_plausibility": 0.65,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects",
+              "pro": [
+                "n_ezetimibe"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Ezetimibe通过降脂机制帮助改善"
+          ],
+          "safety_risk": [
+            "潜在不良反应可能抵消益处"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.7,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.55,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects",
+              "pro": [
+                "n_insulin"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Insulin有助于控制糖尿病患者的甘油三酯"
+          ],
+          "safety_risk": [
+            "潜在不良反应可能抵消益处"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.68,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects",
+              "pro": [
+                "n_lipid_lowering"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "通常用于控制血脂水平"
+          ],
+          "safety_risk": [
+            "潜在不良反应可能抵消益处"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.65,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.45,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.35,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects",
+              "pro": [
+                "n_oral_hypoglycemics"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "可间接影响糖代谢与脂质代谢"
+          ],
+          "safety_risk": [
+            "潜在不良反应可能抵消益处"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.63,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.45,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.35,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects",
+              "pro": [
+                "n_metformin"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "用于糖尿病患者可能影响甘油三酯"
+          ],
+          "safety_risk": [
+            "潜在不良反应可能抵消益处"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.85,
+        "components": {
+          "mechanism_fit": 0.9,
+          "class_prior": 0.8,
+          "pk_pd_feasibility": 0.85,
+          "indication_plausibility": 0.85,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.9,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects",
+              "pro": [
+                "n_gemfibrozil"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Gemfibrozil有效降甘油三酯"
+          ],
+          "safety_risk": [
+            "潜在不良反应可能抵消益处"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.83,
+        "components": {
+          "mechanism_fit": 0.85,
+          "class_prior": 0.75,
+          "pk_pd_feasibility": 0.8,
+          "indication_plausibility": 0.8,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.88,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects",
+              "pro": [
+                "n_fenofibrate"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Fenofibrate用于治疗高甘油三酯有效"
+          ],
+          "safety_risk": [
+            "潜在不良反应可能抵消益处"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.79,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.65,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.65,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects",
+              "pro": [
+                "n_atorvastatin"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Atorvastatin能够降低甘油三酯"
+          ],
+          "safety_risk": [
+            "潜在不良反应可能抵消益处"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H10",
+      "H2",
+      "H11",
+      "H3",
+      "H12",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "omega_3_fatty_acids",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "ezetimibe",
+          "type": "Drug",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "lipid_lowering_agents",
+          "type": "Drug",
+          "label": "Lipid-lowering agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "oral_hypoglycemics",
+          "type": "Drug",
+          "label": "Oral hypoglycemics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "severe_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fibrate",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_omega_3",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_statin",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ezetimibe",
+          "type": "Drug",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lipid_lowering",
+          "type": "Drug",
+          "label": "Lipid-lowering agents",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_oral_hypoglycemics",
+          "type": "Drug",
+          "label": "Oral hypoglycemics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adverse_phenotype",
+          "type": "Phenotype",
+          "label": "Potential Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk_pathway",
+          "type": "Pathway",
+          "label": "Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_omega_3_fatty_acids",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Statins",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ezetimibe",
+          "type": "Drug",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Lipid-lowering agents",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lipid_lowering_agents",
+          "type": "Drug",
+          "label": "Lipid-lowering agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Oral hypoglycemics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_oral_hypoglycemics",
+          "type": "Drug",
+          "label": "Oral hypoglycemics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "fibrates",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Fibrates常用于降低甘油三酯水平"
+        },
+        {
+          "source": "niacin",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Niacin已被证明能有效降低甘油三酯"
+        },
+        {
+          "source": "omega_3_fatty_acids",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Omega-3脂肪酸能显著减轻高甘油三酯"
+        },
+        {
+          "source": "statins",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Statins具有一定的降低甘油三酯的作用"
+        },
+        {
+          "source": "ezetimibe",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Ezetimibe通过降脂机制帮助改善"
+        },
+        {
+          "source": "insulin",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Insulin有助于控制糖尿病患者的甘油三酯"
+        },
+        {
+          "source": "lipid_lowering_agents",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通常用于控制血脂水平"
+        },
+        {
+          "source": "oral_hypoglycemics",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可间接影响糖代谢与脂质代谢"
+        },
+        {
+          "source": "metformin",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "用于糖尿病患者可能影响甘油三酯"
+        },
+        {
+          "source": "gemfibrozil",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Gemfibrozil有效降甘油三酯"
+        },
+        {
+          "source": "fenofibrate",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.88,
+          "agent": "Proponent",
+          "rationale": "Fenofibrate用于治疗高甘油三酯有效"
+        },
+        {
+          "source": "atorvastatin",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Atorvastatin能够降低甘油三酯"
+        },
+        {
+          "source": "n_fibrate",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_niacin",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_omega_3",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_statin",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_ezetimibe",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_insulin",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_lipid_lowering",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_oral_hypoglycemics",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_metformin",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_gemfibrozil",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_fenofibrate",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_atorvastatin",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良效应可能通过风险通路实现"
+        },
+        {
+          "source": "n_risk_pathway",
+          "target": "n_adverse_phenotype",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致潜在的不良表型"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消益处"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        },
+        "score": 0.87,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Fibrates有效降低甘油三酯水平",
+          "潜在不良反应可能抵消益处"
+        ],
+        "caveats": [
+          "不良反应的风险仍需进一步评估"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H10",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "score": 0.85,
+        "graph_snapshot_ref": "GE_H10_round4",
+        "key_assumptions": [
+          "Gemfibrozil有效降甘油三酯",
+          "潜在不良反应可能抵消益处"
+        ],
+        "caveats": [
+          "安全性与长期疗效需关注"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "score": 0.84,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Niacin能够有效降低甘油三酯",
+          "潜在不良反应可能抵消益处"
+        ],
+        "caveats": [
+          "长期使用的安全性需要进一步研究"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H11",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "score": 0.83,
+        "graph_snapshot_ref": "GE_H11_round4",
+        "key_assumptions": [
+          "Fenofibrate用于治疗高甘油三酯有效",
+          "潜在不良反应可能抵消益处"
+        ],
+        "caveats": [
+          "不良反应需监测"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "score": 0.81,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Omega-3脂肪酸能显著减轻高甘油三酯",
+          "潜在不良反应可能抵消益处"
+        ],
+        "caveats": [
+          "长期效果不确定"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H12",
+        "candidate": {
+          "id": "drug_atorvastatin",
+          "name": "Atorvastatin"
+        },
+        "score": 0.79,
+        "graph_snapshot_ref": "GE_H12_round4",
+        "key_assumptions": [
+          "Atorvastatin能够降低甘油三酯",
+          "潜在不良反应可能抵消益处"
+        ],
+        "caveats": [
+          "针对不良反应的监测需增强"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "score": 0.78,
+        "graph_snapshot_ref": "GE_H4_round4",
+        "key_assumptions": [
+          "Statins具有一定的降低甘油三酯的作用",
+          "潜在不良反应可能抵消益处"
+        ],
+        "caveats": [
+          "需考虑不良反应的风险"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H5",
+        "candidate": {
+          "id": "drug_ezetimibe",
+          "name": "Ezetimibe"
+        },
+        "score": 0.75,
+        "graph_snapshot_ref": "GE_H5_round4",
+        "key_assumptions": [
+          "Ezetimibe通过降脂机制帮助改善",
+          "潜在不良反应可能抵消益处"
+        ],
+        "caveats": [
+          "临床效果需进一步验证"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H6",
+        "candidate": {
+          "id": "drug_insulin",
+          "name": "Insulin"
+        },
+        "score": 0.7,
+        "graph_snapshot_ref": "GE_H6_round4",
+        "key_assumptions": [
+          "Insulin有助于控制糖尿病患者的甘油三酯",
+          "潜在不良反应可能抵消益处"
+        ],
+        "caveats": [
+          "不良反应的监测需加强"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H7",
+        "candidate": {
+          "id": "drug_lipid_lowering_agents",
+          "name": "Lipid-lowering agents"
+        },
+        "score": 0.68,
+        "graph_snapshot_ref": "GE_H7_round4",
+        "key_assumptions": [
+          "常用于控制血脂水平",
+          "潜在不良反应可能抵消益处"
+        ],
+        "caveats": [
+          "效果因个体差异可能不同"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H8",
+        "candidate": {
+          "id": "drug_oral_hypoglycemics",
+          "name": "Oral hypoglycemics"
+        },
+        "score": 0.65,
+        "graph_snapshot_ref": "GE_H8_round4",
+        "key_assumptions": [
+          "可间接影响糖代谢与脂质代谢",
+          "潜在不良反应可能抵消益处"
+        ],
+        "caveats": [
+          "效果与甘油三酯的直接关系不明"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H9",
+        "candidate": {
+          "id": "drug_metformin",
+          "name": "Metformin"
+        },
+        "score": 0.63,
+        "graph_snapshot_ref": "GE_H9_round4",
+        "key_assumptions": [
+          "用于糖尿病患者可能影响甘油三酯",
+          "潜在不良反应可能抵消益处"
+        ],
+        "caveats": [
+          "影响机制尚未阐明"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Fibrates→Lower TG",
+          "reason": "fibrates被证实能有效降低甘油三酯水平"
+        }
+      ],
+      "remaining_gaps": [
+        "潜在不良反应与长效效果之间的具体联系"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "impact_summary": "引入多种降脂药物的不同机制，提升了覆盖率"
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "E",
+            "F"
+          ],
+          "impact_summary": "扩展了不同作用机制下的评估，对整体推理链有助"
+        },
+        {
+          "round": 3,
+          "seeds": [
+            "G",
+            "H"
+          ],
+          "impact_summary": "增强了特定药物的比较性分析，对于潜在不良反应有更清晰的视角"
+        }
+      ],
+      "lessons": [
+        "关注安全性与疗效之间的平衡，避免因潜在不良反应而冲突",
+        "引入不同机制的药物可为综合治疗增加选择性"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "继续强调潜在不良反应并评估治疗利益的平衡"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "在不良反应的潜在影响上深入探讨，提及患者个体差异的重要性"
+      },
+      {
+        "role": "Explorer",
+        "patch": "确保新引入的候选与当前治疗路径相一致，避免重复"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "降脂药物",
+        "then": "逐步分析机制与不良反应的关系，避免不必要的使用"
+      },
+      {
+        "when": "糖代谢干预",
+        "then": "考虑其对甘油三酯的间接影响以及与其他药物的交互作用"
+      }
+    ]
+  }
+}

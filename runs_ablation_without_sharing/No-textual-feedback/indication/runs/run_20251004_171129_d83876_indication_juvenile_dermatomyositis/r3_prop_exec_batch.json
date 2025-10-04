@@ -1,0 +1,883 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Juvenile dermatomyositis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Methotrexate",
+            "via": [
+              "TargetA1",
+              "PathwayB1"
+            ],
+            "to": "Juvenile dermatomyositis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Azathioprine",
+            "via": [
+              "TargetA1",
+              "PathwayB1"
+            ],
+            "to": "Juvenile dermatomyositis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_intravenous_immunoglobulin",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_chloroquine",
+          "type": "Drug",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sulfasalazine",
+          "type": "Drug",
+          "label": "Sulfasalazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydroxychloroquine",
+          "type": "Drug",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta1",
+          "type": "Target",
+          "label": "TargetA1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta2",
+          "type": "Target",
+          "label": "TargetA2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway1",
+          "type": "Pathway",
+          "label": "PathwayB1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway2",
+          "type": "Pathway",
+          "label": "PathwayB2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease",
+          "type": "Disease",
+          "label": "Juvenile dermatomyositis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mtx",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_aza",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cort",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cycl",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_mmf",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ivig",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_chl",
+          "type": "Drug",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rit",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cy",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_sulfa",
+          "type": "Drug",
+          "label": "Sulfasalazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_hcq",
+          "type": "Drug",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dex",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "RiskPathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Sulfasalazine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常见药理机制"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "免疫抑制特性"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抗炎作用显著"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_ta2",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "相关靶点叠加"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "n_ta2",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "经典的免疫抑制剂"
+        },
+        {
+          "source": "drug_intravenous_immunoglobulin",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "调节免疫反应"
+        },
+        {
+          "source": "drug_chloroquine",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "有助于降低炎症"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "n_ta2",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "针对B细胞的治疗"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_ta2",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "抑制T细胞活性"
+        },
+        {
+          "source": "drug_sulfasalazine",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "抗炎机制"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可影响免疫反应"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "强有效的抗炎药物"
+        },
+        {
+          "source": "n_ta1",
+          "target": "n_pathway1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "包含参与机制"
+        },
+        {
+          "source": "n_ta2",
+          "target": "n_pathway2",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "不同靶点路径"
+        },
+        {
+          "source": "n_pathway1",
+          "target": "n_disease",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "直接关联疾病"
+        },
+        {
+          "source": "n_pathway2",
+          "target": "n_disease",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "另一通路影响"
+        },
+        {
+          "source": "n_mtx",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_aza",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_cort",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_cycl",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_mmf",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_ivig",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_chl",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_rit",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_cy",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_sulfa",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_hcq",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_dex",
+          "target": "n_rp",
+          "relation": "potential_risk",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用与风险通路"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "如出现副作用，将抵消获益"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_methotrexate",
+              "target": "n_ta1",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "常见药理机制"
+            },
+            {
+              "source": "n_ta1",
+              "target": "n_pathway1",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "包含参与机制"
+            },
+            {
+              "source": "n_pathway1",
+              "target": "n_disease",
+              "relation": "causes",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "直接关联疾病"
+            },
+            {
+              "source": "n_pathway2",
+              "target": "n_disease",
+              "relation": "causes",
+              "weight": 0.65,
+              "agent": "Proponent",
+              "rationale": "另一通路影响"
+            },
+            {
+              "source": "drug_azathioprine",
+              "target": "n_ta1",
+              "relation": "acts_on",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "免疫抑制特性"
+            },
+            {
+              "source": "n_ta2",
+              "target": "n_pathway2",
+              "relation": "involved_in",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "不同靶点路径"
+            },
+            {
+              "source": "n_ta1",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "形成机制支撑"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Methotrexate → TargetA1 → PathwayB1 → Juvenile dermatomyositis, 形成不相交路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_azathioprine",
+              "target": "n_ta1",
+              "relation": "acts_on",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "免疫抑制特性"
+            },
+            {
+              "source": "n_ta1",
+              "target": "n_pathway1",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "包含参与机制"
+            },
+            {
+              "source": "n_pathway1",
+              "target": "n_disease",
+              "relation": "causes",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "直接关联疾病"
+            },
+            {
+              "source": "drug_azathioprine",
+              "target": "n_ta2",
+              "relation": "acts_on",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "免疫抑制特性"
+            },
+            {
+              "source": "n_ta2",
+              "target": "n_pathway2",
+              "relation": "involved_in",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "不同靶点路径"
+            },
+            {
+              "source": "n_pathway2",
+              "target": "n_disease",
+              "relation": "causes",
+              "weight": 0.65,
+              "agent": "Proponent",
+              "rationale": "另一通路影响"
+            },
+            {
+              "source": "n_ta2",
+              "target": "H2",
+              "relation": "supports",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "形成机制支撑"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Azathioprine → TargetA1/TargetA2 → PathwayB1/PathwayB2 → Juvenile dermatomyositis, 形成不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [],
+    "next_focus_for_pi": []
+  }
+}

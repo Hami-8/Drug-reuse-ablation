@@ -1,0 +1,424 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Distal myopathies",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "氯喹对肌肉弱化的影响",
+            "expectation": "若风险存在，请提供证据并适当标注 refutes 边",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "氯喹与肌肉代谢的潜在禁忌",
+            "expectation": "请提供关于该禁忌的更详细证据",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "类固醇对肌肉的负面影响",
+            "expectation": "提供相关文献以支持或反驳其在Distal myopathies中的应用",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_ck",
+          "type": "Target",
+          "label": "Creatine Kinase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_m1",
+          "type": "Pathway",
+          "label": "Muscle Metabolism Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_m2",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_d",
+          "type": "Disease",
+          "label": "Distal Myopathies",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph1",
+          "type": "Phenotype",
+          "label": "Muscle Weakness",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph2",
+          "type": "Phenotype",
+          "label": "Muscle Atrophy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph3",
+          "type": "Phenotype",
+          "label": "Myopathic Changes",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_chloroquine",
+          "type": "Drug",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_simvastatin",
+          "type": "Drug",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Increased dosage of Creatine Kinase Inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_increased_dosage_of_creatine_kinase_inhibitors",
+          "type": "Drug",
+          "label": "Increased dosage of Creatine Kinase Inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Fluoroquinolones",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fluoroquinolones",
+          "type": "Drug",
+          "label": "Fluoroquinolones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Colchicine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_colchicine",
+          "type": "Drug",
+          "label": "Colchicine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_chloroquine",
+          "target": "n_ck",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "机制符合，前期研究发现氯喹可影响肌肉代谢"
+        },
+        {
+          "source": "n_ck",
+          "target": "n_m1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": [
+            "影响肌肉代谢的关键酶",
+            "肌肉代谢与肌酐激酶相关"
+          ],
+          "agent_sources": [
+            "Proponent"
+          ]
+        },
+        {
+          "source": "n_m1",
+          "target": "n_ph1",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "肌肉代谢异常可能导致肌肉无力"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_m2",
+          "relation": "activates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "类固醇药物与炎症通路有显著关联"
+        },
+        {
+          "source": "n_m2",
+          "target": "n_ph2",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "慢性炎症可能导致肌肉萎缩"
+        },
+        {
+          "source": "drug_simvastatin",
+          "target": "n_ck",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "他汀类药物可降低肌酐激酶水平"
+        },
+        {
+          "source": "drug_atorvastatin",
+          "target": "n_ck",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "竞争机制与他汀相似"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_m2",
+          "relation": "activates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "增强抗炎作用，与通路相关"
+        },
+        {
+          "source": "drug_fluoroquinolones",
+          "target": "n_m1",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能引起肌肉并发症"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "n_m1",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "利尿作用可能影响肌肉代谢"
+        },
+        {
+          "source": "n_ph1",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "氯喹可以通过影响代谢引起肌无力"
+        },
+        {
+          "source": "n_ph2",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "类固醇可能引发肌肉萎缩"
+        },
+        {
+          "source": "n_ph3",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "他汀类药物可引起肌肉病变"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates_per_hypothesis": []
+  }
+}

@@ -1,0 +1,408 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Familial cerebral small vessel disease",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_acenocoumarol",
+          "name": "Acenocoumarol"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_clopidogrel",
+          "name": "Clopidogrel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_dipyridamole",
+          "name": "Dipyridamole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_heparin",
+          "name": "Heparin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_warfarin",
+          "name": "Warfarin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_methylprednisolone",
+          "name": "Methylprednisolone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_rosuvastatin",
+          "name": "Rosuvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_svd",
+          "type": "Disease",
+          "label": "Familial cerebral small vessel disease",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk of hemorrhage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse cerebral hemorrhage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_acenocoumarol",
+          "target": "n_svd",
+          "relation": "contraindicates",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知会引起出血风险"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_svd",
+          "relation": "contraindicates",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "增加脑出血风险"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_svd",
+          "relation": "contraindicates",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "与出血风险相关"
+        },
+        {
+          "source": "drug_dipyridamole",
+          "target": "n_svd",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能加重出血倾向"
+        },
+        {
+          "source": "drug_heparin",
+          "target": "n_svd",
+          "relation": "contraindicates",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高风险引发出血"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "n_svd",
+          "relation": "contraindicates",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "严重增加出血风险"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_svd",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血问题"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_svd",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与出血风险吻合"
+        },
+        {
+          "source": "drug_methylprednisolone",
+          "target": "n_svd",
+          "relation": "possible_contradiction",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用未明确"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_svd",
+          "relation": "possible_contradiction",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "未知长期影响"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_svd",
+          "relation": "possible_contradiction",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能影响免疫与出血"
+        },
+        {
+          "source": "drug_rosuvastatin",
+          "target": "n_svd",
+          "relation": "possible_contradiction",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "影响机制尚不明确"
+        },
+        {
+          "source": "n_svd",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及出血风险途径"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "该风险显著抵消潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险高于预期收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能引起严重出血事件"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "缺乏足够安全性数据"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险不容小觑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "增加出血风险的担忧"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与出血风险相关"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "长期影响不清"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在出血风险问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "潜在作用机制不明确"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "所有提到的药物均指向出血风险，可能加重疾病状态",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "机制与疾病进展相关的证据不足，需确立更多数据",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "所提药物安全性是否足够，尤其在出血风险评估中",
+      "所有假设间的效果与风险认知是否一致"
+    ],
+    "falsification_tests": [
+      "是否有证据显示这些药物能够安全应用于此疾病？",
+      "药物的潜在损害是否被真正验证？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 针对每种药物提供详细安全性研究",
+      "检查相互作用与药物治疗方案的合理性"
+    ]
+  }
+}

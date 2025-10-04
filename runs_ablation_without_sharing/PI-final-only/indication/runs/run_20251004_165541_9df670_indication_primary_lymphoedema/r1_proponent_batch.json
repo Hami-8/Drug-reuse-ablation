@@ -1,0 +1,294 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary lymphoedema",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_benzopyrone",
+          "name": "Benzopyrone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_doxycycline",
+          "name": "Doxycycline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_amlodipine",
+          "name": "Amlodipine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_cavinton",
+          "name": "Cavinton"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ropivacaine",
+          "name": "Ropivacaine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_pentoxifylline",
+          "name": "Pentoxifylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_hydroxyzine",
+          "name": "Hydroxyzine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_bupivacaine",
+          "name": "Bupivacaine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_low_molecular_weight_heparins",
+          "name": "Low molecular weight heparins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_lymphatic_enhancement_therapies",
+          "name": "Lymphatic enhancement therapies"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_fludrocortisone",
+          "name": "Fludrocortisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_target_lymphatics",
+          "type": "Target",
+          "label": "Lymphatic system",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_inflammation",
+          "type": "Pathway",
+          "label": "Inflammation pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phenotype_swelling",
+          "type": "Phenotype",
+          "label": "Limb swelling",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_benzopyrone",
+          "type": "Target",
+          "label": "Benzopyrone activity",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_doxycycline",
+          "type": "Target",
+          "label": "Doxycycline action",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_amlodipine",
+          "type": "Target",
+          "label": "Amlodipine action",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_benzopyrone",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知具有改善淋巴回流的作用"
+        },
+        {
+          "source": "n_target_lymphatics",
+          "target": "n_pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与淋巴系统相关的炎症反应"
+        },
+        {
+          "source": "n_pathway_inflammation",
+          "target": "n_phenotype_swelling",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "炎症通路是导致肢体肿胀的主要机制"
+        },
+        {
+          "source": "drug_doxycycline",
+          "target": "n_target_doxycycline",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "适用于减少淋巴系统中的炎症"
+        },
+        {
+          "source": "drug_amlodipine",
+          "target": "n_target_amlodipine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知改善血流，降低肿胀可能性"
+        },
+        {
+          "source": "n_target_doxycycline",
+          "target": "n_pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抑制炎症反应"
+        },
+        {
+          "source": "n_target_amlodipine",
+          "target": "n_pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "有助于改善脉搏血流"
+        },
+        {
+          "source": "drug_benzopyrone",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "通过淋巴靶标促进"
+        },
+        {
+          "source": "drug_doxycycline",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.83,
+          "agent": "Proponent",
+          "rationale": "通过抑制炎症来潜在改善"
+        },
+        {
+          "source": "drug_amlodipine",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "可能通过血流改善支持效果"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "Benzopyrone, Doxycycline 和 Amlodipine 可通过不同靶点减轻原发性淋巴水肿的影响",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "药物能有效到达淋巴系统并发挥作用"
+    ],
+    "uncertainties": [
+      "具体药物在淋巴系统的生物利用度和作用机制仍需进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "探索可能的功能性支持路径以增强机制的全面性"
+    ]
+  }
+}

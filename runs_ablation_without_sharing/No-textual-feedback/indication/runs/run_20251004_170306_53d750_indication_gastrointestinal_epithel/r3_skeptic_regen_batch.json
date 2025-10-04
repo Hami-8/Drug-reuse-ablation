@@ -1,0 +1,828 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Gastrointestinal epithelial barrier disorders",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_mesalamine",
+          "name": "Mesalamine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_budesonide",
+          "name": "Budesonide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_6_mercaptopurine",
+          "name": "6-Mercaptopurine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_ticagrelor",
+          "name": "Ticagrelor"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_ustekinumab",
+          "name": "Ustekinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_vedolizumab",
+          "name": "Vedolizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tofacitinib",
+          "name": "Tofacitinib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_rifaximin",
+          "name": "Rifaximin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_mesalamine",
+          "type": "Target",
+          "label": "Mesalamine Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mesalamine",
+          "type": "Pathway",
+          "label": "Mesalamine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mesalamine",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Mesalamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_budesonide",
+          "type": "Target",
+          "label": "Budesonide Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_budesonide",
+          "type": "Pathway",
+          "label": "Budesonide Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_budesonide",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Budesonide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_prednisone",
+          "type": "Target",
+          "label": "Prednisone Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_prednisone",
+          "type": "Pathway",
+          "label": "Prednisone Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_prednisone",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_azathioprine",
+          "type": "Target",
+          "label": "Azathioprine Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_azathioprine",
+          "type": "Pathway",
+          "label": "Azathioprine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_azathioprine",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Azathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_6mercaptopurine",
+          "type": "Target",
+          "label": "6-Mercaptopurine Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_6mercaptopurine",
+          "type": "Pathway",
+          "label": "6-Mercaptopurine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_6mercaptopurine",
+          "type": "Phenotype",
+          "label": "Adverse Effects of 6-Mercaptopurine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_infliximab",
+          "type": "Target",
+          "label": "Infliximab Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_infliximab",
+          "type": "Pathway",
+          "label": "Infliximab Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_infliximab",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Infliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_adalimumab",
+          "type": "Target",
+          "label": "Adalimumab Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_adalimumab",
+          "type": "Pathway",
+          "label": "Adalimumab Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_adalimumab",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Adalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ticagrelor",
+          "type": "Target",
+          "label": "Ticagrelor Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ticagrelor",
+          "type": "Pathway",
+          "label": "Ticagrelor Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ticagrelor",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Ticagrelor",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ustekinumab",
+          "type": "Target",
+          "label": "Ustekinumab Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ustekinumab",
+          "type": "Pathway",
+          "label": "Ustekinumab Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ustekinumab",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Ustekinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_vedolizumab",
+          "type": "Target",
+          "label": "Vedolizumab Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_vedolizumab",
+          "type": "Pathway",
+          "label": "Vedolizumab Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_vedolizumab",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Vedolizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tofacitinib",
+          "type": "Target",
+          "label": "Tofacitinib Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_tofacitinib",
+          "type": "Pathway",
+          "label": "Tofacitinib Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tofacitinib",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Tofacitinib",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rifaximin",
+          "type": "Target",
+          "label": "Rifaximin Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rifaximin",
+          "type": "Pathway",
+          "label": "Rifaximin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rifaximin",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Rifaximin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_mesalamine",
+          "target": "n_ot_mesalamine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应导致风险"
+        },
+        {
+          "source": "n_ot_mesalamine",
+          "target": "n_rp_mesalamine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_mesalamine",
+          "target": "n_adv_mesalamine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv_mesalamine",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如若风险成立，将抵消效益"
+        },
+        {
+          "source": "drug_budesonide",
+          "target": "n_ot_budesonide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应导致风险"
+        },
+        {
+          "source": "n_ot_budesonide",
+          "target": "n_rp_budesonide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_budesonide",
+          "target": "n_adv_budesonide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv_budesonide",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如若风险成立，将抵消效益"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_prednisone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应导致风险"
+        },
+        {
+          "source": "n_ot_prednisone",
+          "target": "n_rp_prednisone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_prednisone",
+          "target": "n_adv_prednisone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv_prednisone",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如若风险成立，将抵消效益"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_ot_azathioprine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应导致风险"
+        },
+        {
+          "source": "n_ot_azathioprine",
+          "target": "n_rp_azathioprine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_azathioprine",
+          "target": "n_adv_azathioprine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv_azathioprine",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如若风险成立，将抵消效益"
+        },
+        {
+          "source": "drug_6_mercaptopurine",
+          "target": "n_ot_6mercaptopurine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应导致风险"
+        },
+        {
+          "source": "n_ot_6mercaptopurine",
+          "target": "n_rp_6mercaptopurine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_6mercaptopurine",
+          "target": "n_adv_6mercaptopurine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv_6mercaptopurine",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如若风险成立，将抵消效益"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "n_ot_infliximab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应导致风险"
+        },
+        {
+          "source": "n_ot_infliximab",
+          "target": "n_rp_infliximab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_infliximab",
+          "target": "n_adv_infliximab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv_infliximab",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如若风险成立，将抵消效益"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "n_ot_adalimumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应导致风险"
+        },
+        {
+          "source": "n_ot_adalimumab",
+          "target": "n_rp_adalimumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_adalimumab",
+          "target": "n_adv_adalimumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv_adalimumab",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如若风险成立，将抵消效益"
+        },
+        {
+          "source": "drug_ticagrelor",
+          "target": "n_ot_ticagrelor",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应导致风险"
+        },
+        {
+          "source": "n_ot_ticagrelor",
+          "target": "n_rp_ticagrelor",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_ticagrelor",
+          "target": "n_adv_ticagrelor",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv_ticagrelor",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如若风险成立，将抵消效益"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "n_ot_ustekinumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应导致风险"
+        },
+        {
+          "source": "n_ot_ustekinumab",
+          "target": "n_rp_ustekinumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_ustekinumab",
+          "target": "n_adv_ustekinumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv_ustekinumab",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如若风险成立，将抵消效益"
+        },
+        {
+          "source": "drug_vedolizumab",
+          "target": "n_ot_vedolizumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应导致风险"
+        },
+        {
+          "source": "n_ot_vedolizumab",
+          "target": "n_rp_vedolizumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_vedolizumab",
+          "target": "n_adv_vedolizumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv_vedolizumab",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如若风险成立，将抵消效益"
+        },
+        {
+          "source": "drug_tofacitinib",
+          "target": "n_ot_tofacitinib",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应导致风险"
+        },
+        {
+          "source": "n_ot_tofacitinib",
+          "target": "n_rp_tofacitinib",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_tofacitinib",
+          "target": "n_adv_tofacitinib",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv_tofacitinib",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如若风险成立，将抵消效益"
+        },
+        {
+          "source": "drug_rifaximin",
+          "target": "n_ot_rifaximin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应导致风险"
+        },
+        {
+          "source": "n_ot_rifaximin",
+          "target": "n_rp_rifaximin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_rifaximin",
+          "target": "n_adv_rifaximin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成不良反应"
+        },
+        {
+          "source": "n_adv_rifaximin",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如若风险成立，将抵消效益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [],
+    "falsification_tests": [],
+    "next_focus_for_pi": []
+  }
+}

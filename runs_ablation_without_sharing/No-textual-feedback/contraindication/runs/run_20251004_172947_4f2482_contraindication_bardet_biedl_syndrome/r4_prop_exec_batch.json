@@ -1,0 +1,1283 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Bardet-Biedl Syndrome",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_acetazolamide",
+            "via": [
+              "target_a"
+            ],
+            "to": "disease_bardet_biedl_syndrome",
+            "success_criteria": "形成不相交路径以支持药物机制",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_aspirin",
+            "via": [
+              "target_a"
+            ],
+            "to": "disease_bardet_biedl_syndrome",
+            "success_criteria": "形成不相交路径以支持药物机制",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_cholestyramine",
+            "via": [
+              "target_a"
+            ],
+            "to": "disease_bardet_biedl_syndrome",
+            "success_criteria": "形成不相交路径以支持药物机制",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_acetazolamide",
+          "type": "Drug",
+          "label": "Acetazolamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sulfonamides",
+          "type": "Drug",
+          "label": "Sulfonamides",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiazide",
+          "type": "Drug",
+          "label": "Thiazide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_bardet_biedl_syndrome",
+          "type": "Disease",
+          "label": "Bardet-Biedl Syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_a",
+          "type": "Target",
+          "label": "TargetA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_a",
+          "type": "Pathway",
+          "label": "PathwayA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_a",
+          "type": "Phenotype",
+          "label": "PhenotypeA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_b",
+          "type": "Phenotype",
+          "label": "PhenotypeB",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_acetazolamide",
+          "type": "Target",
+          "label": "OffTarget_Acetazolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_acetazolamide",
+          "type": "Pathway",
+          "label": "RiskPathway_Acetazolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_acetazolamide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Acetazolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "OffTarget_Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aspirin",
+          "type": "Pathway",
+          "label": "RiskPathway_Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aspirin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cholestyramine",
+          "type": "Target",
+          "label": "OffTarget_Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cholestyramine",
+          "type": "Pathway",
+          "label": "RiskPathway_Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cholestyramine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ciprofloxacin",
+          "type": "Target",
+          "label": "OffTarget_Ciprofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ciprofloxacin",
+          "type": "Pathway",
+          "label": "RiskPathway_Ciprofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ciprofloxacin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Ciprofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_furosemide",
+          "type": "Target",
+          "label": "OffTarget_Furosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_furosemide",
+          "type": "Pathway",
+          "label": "RiskPathway_Furosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_furosemide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Furosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ibuprofen",
+          "type": "Target",
+          "label": "OffTarget_Ibuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ibuprofen",
+          "type": "Pathway",
+          "label": "RiskPathway_Ibuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ibuprofen",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Ibuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lithium",
+          "type": "Target",
+          "label": "OffTarget_Lithium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lithium",
+          "type": "Pathway",
+          "label": "RiskPathway_Lithium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lithium",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Lithium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_metformin",
+          "type": "Target",
+          "label": "OffTarget_Metformin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_metformin",
+          "type": "Pathway",
+          "label": "RiskPathway_Metformin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_metformin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Metformin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "OffTarget_Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_methotrexate",
+          "type": "Pathway",
+          "label": "RiskPathway_Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_methotrexate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sodium_valproate",
+          "type": "Target",
+          "label": "OffTarget_SodiumValproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_valproate",
+          "type": "Pathway",
+          "label": "RiskPathway_SodiumValproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sodium_valproate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_SodiumValproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sulfonamides",
+          "type": "Target",
+          "label": "OffTarget_Sulfonamides",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sulfonamides",
+          "type": "Pathway",
+          "label": "RiskPathway_Sulfonamides",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sulfonamides",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Sulfonamides",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thiazide",
+          "type": "Target",
+          "label": "OffTarget_Thiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_thiazide",
+          "type": "Pathway",
+          "label": "RiskPathway_Thiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_thiazide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Thiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Acetazolamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Sulfonamides",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Thiazide",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_acetazolamide",
+          "target": "target_a",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知作用靶点"
+        },
+        {
+          "source": "target_a",
+          "target": "pathway_a",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "关联通路常识"
+        },
+        {
+          "source": "pathway_a",
+          "target": "disease_bardet_biedl_syndrome",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "生物过程关联"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "target_a",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "同类药理常识"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "target_a",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "药效学相似性"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "target_a",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "效用研究支持"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "target_a",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "相关生理机制"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "target_a",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有助于缓解症状"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "target_a",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "暂时性机制推测"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "target_a",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "与代谢相关通路联系"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "target_a",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能作用于免疫机制"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "target_a",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "未确立直接机制"
+        },
+        {
+          "source": "drug_sulfonamides",
+          "target": "target_a",
+          "relation": "acts_on",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "需进一步研究"
+        },
+        {
+          "source": "drug_thiazide",
+          "target": "target_a",
+          "relation": "acts_on",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "基于作用机制假设"
+        },
+        {
+          "source": "drug_acetazolamide",
+          "target": "phenotype_a",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与表型相关"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "phenotype_a",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "潜在增益"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "phenotype_a",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "影响相似表型"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "phenotype_b",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "假设路径"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "phenotype_b",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能带来益处"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "phenotype_b",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "相似机制考量"
+        },
+        {
+          "source": "drug_acetazolamide",
+          "target": "n_ot_acetazolamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能作用于禁忌靶点"
+        },
+        {
+          "source": "n_ot_acetazolamide",
+          "target": "n_rp_acetazolamide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp_acetazolamide",
+          "target": "n_adv_acetazolamide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_acetazolamide",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则假设无效"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能作用于禁忌靶点"
+        },
+        {
+          "source": "n_ot_aspirin",
+          "target": "n_rp_aspirin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp_aspirin",
+          "target": "n_adv_aspirin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_aspirin",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则假设无效"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_ot_cholestyramine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能作用于禁忌靶点"
+        },
+        {
+          "source": "n_ot_cholestyramine",
+          "target": "n_rp_cholestyramine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp_cholestyramine",
+          "target": "n_adv_cholestyramine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_cholestyramine",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则假设无效"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "n_ot_ciprofloxacin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能作用于禁忌靶点"
+        },
+        {
+          "source": "n_ot_ciprofloxacin",
+          "target": "n_rp_ciprofloxacin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp_ciprofloxacin",
+          "target": "n_adv_ciprofloxacin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_ciprofloxacin",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则假设无效"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "n_ot_furosemide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能作用于禁忌靶点"
+        },
+        {
+          "source": "n_ot_furosemide",
+          "target": "n_rp_furosemide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp_furosemide",
+          "target": "n_adv_furosemide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_furosemide",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则假设无效"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_ot_ibuprofen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能作用于禁忌靶点"
+        },
+        {
+          "source": "n_ot_ibuprofen",
+          "target": "n_rp_ibuprofen",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp_ibuprofen",
+          "target": "n_adv_ibuprofen",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_ibuprofen",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则假设无效"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "n_ot_lithium",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能作用于禁忌靶点"
+        },
+        {
+          "source": "n_ot_lithium",
+          "target": "n_rp_lithium",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp_lithium",
+          "target": "n_adv_lithium",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_lithium",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则假设无效"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "n_ot_metformin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能作用于禁忌靶点"
+        },
+        {
+          "source": "n_ot_metformin",
+          "target": "n_rp_metformin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp_metformin",
+          "target": "n_adv_metformin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_metformin",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则假设无效"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能作用于禁忌靶点"
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp_methotrexate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp_methotrexate",
+          "target": "n_adv_methotrexate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_methotrexate",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则假设无效"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "n_ot_sodium_valproate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能作用于禁忌靶点"
+        },
+        {
+          "source": "n_ot_sodium_valproate",
+          "target": "n_rp_sodium_valproate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp_sodium_valproate",
+          "target": "n_adv_sodium_valproate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_sodium_valproate",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则假设无效"
+        },
+        {
+          "source": "drug_sulfonamides",
+          "target": "n_ot_sulfonamides",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能作用于禁忌靶点"
+        },
+        {
+          "source": "n_ot_sulfonamides",
+          "target": "n_rp_sulfonamides",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp_sulfonamides",
+          "target": "n_adv_sulfonamides",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_sulfonamides",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则假设无效"
+        },
+        {
+          "source": "drug_thiazide",
+          "target": "n_ot_thiazide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能作用于禁忌靶点"
+        },
+        {
+          "source": "n_ot_thiazide",
+          "target": "n_rp_thiazide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp_thiazide",
+          "target": "n_adv_thiazide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_thiazide",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则假设无效"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_acetazolamide",
+              "target": "target_a",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "已知作用靶点"
+            },
+            {
+              "source": "target_a",
+              "target": "pathway_a",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "关联通路常识"
+            },
+            {
+              "source": "pathway_a",
+              "target": "disease_bardet_biedl_syndrome",
+              "relation": "causes",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "生物过程关联"
+            },
+            {
+              "source": "drug_acetazolamide",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "形成支持性机制路径"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已形成 Drug→TargetA→PathwayA→DiseaseY 的支持性路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_aspirin",
+              "target": "target_a",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "同类药理常识"
+            },
+            {
+              "source": "target_a",
+              "target": "pathway_a",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "关联通路常识"
+            },
+            {
+              "source": "pathway_a",
+              "target": "disease_bardet_biedl_syndrome",
+              "relation": "causes",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "生物过程关联"
+            },
+            {
+              "source": "drug_aspirin",
+              "target": "H2",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "形成支持性机制路径"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已形成 Drug→TargetA→PathwayA→DiseaseY 的支持性路径"
+      },
+      {
+        "action_ref": 2,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_cholestyramine",
+              "target": "target_a",
+              "relation": "acts_on",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "药效学相似性"
+            },
+            {
+              "source": "target_a",
+              "target": "pathway_a",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "关联通路常识"
+            },
+            {
+              "source": "pathway_a",
+              "target": "disease_bardet_biedl_syndrome",
+              "relation": "causes",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "生物过程关联"
+            },
+            {
+              "source": "drug_cholestyramine",
+              "target": "H3",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "形成支持性机制路径"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已形成 Drug→TargetA→PathwayA→DiseaseY 的支持性路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

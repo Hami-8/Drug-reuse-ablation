@@ -1,0 +1,469 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Familial pulmonary fibrosis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_bleomycin",
+          "name": "Bleomycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_etoposide",
+          "name": "Etoposide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_nitrofurantoin",
+          "name": "Nitrofurantoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_busulfan",
+          "name": "Busulfan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_doxorubicin",
+          "name": "Doxorubicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_radiation_therapy",
+          "name": "Radiation therapy"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_gemcitabine",
+          "name": "Gemcitabine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_sodium_dicloxacillin",
+          "name": "Sodium dicloxacillin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bleomycin",
+          "type": "Drug",
+          "label": "Bleomycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etoposide",
+          "type": "Drug",
+          "label": "Etoposide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nitrofurantoin",
+          "type": "Drug",
+          "label": "Nitrofurantoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_busulfan",
+          "type": "Drug",
+          "label": "Busulfan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_doxorubicin",
+          "type": "Drug",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_radiation_therapy",
+          "type": "Drug",
+          "label": "Radiation therapy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gemcitabine",
+          "type": "Drug",
+          "label": "Gemcitabine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_dicloxacillin",
+          "type": "Drug",
+          "label": "Sodium dicloxacillin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_familial_pulmonary_fibrosis",
+          "type": "Disease",
+          "label": "Familial pulmonary fibrosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_amiodarone",
+          "target": "disease_familial_pulmonary_fibrosis",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Amiodarone 在文献中被报道与肺纤维化风险相关"
+        },
+        {
+          "source": "drug_bleomycin",
+          "target": "disease_familial_pulmonary_fibrosis",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Bleomycin 已知可引起肺部毒性，关联肺纤维化"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "disease_familial_pulmonary_fibrosis",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Cyclophosphamide 与肺损伤风险的关联性存在"
+        },
+        {
+          "source": "drug_etoposide",
+          "target": "disease_familial_pulmonary_fibrosis",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Etoposide 有潜在肺部副作用的报道"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "disease_familial_pulmonary_fibrosis",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Methotrexate 可能导致肺部相关不良反应"
+        },
+        {
+          "source": "drug_nitrofurantoin",
+          "target": "disease_familial_pulmonary_fibrosis",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Nitrofurantoin 被报道可能与肺部并发症相关"
+        },
+        {
+          "source": "drug_busulfan",
+          "target": "disease_familial_pulmonary_fibrosis",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Busulfan 已链接到肺纤维化的风险"
+        },
+        {
+          "source": "drug_doxorubicin",
+          "target": "disease_familial_pulmonary_fibrosis",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Doxorubicin 有可能相关于肺组织损害"
+        },
+        {
+          "source": "drug_radiation_therapy",
+          "target": "disease_familial_pulmonary_fibrosis",
+          "relation": "causes",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "放射疗法已知与肺纤维化相关"
+        },
+        {
+          "source": "drug_gemcitabine",
+          "target": "disease_familial_pulmonary_fibrosis",
+          "relation": "causes",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Gemcitabine 与肺部损伤的潜在风险存在"
+        },
+        {
+          "source": "drug_sodium_dicloxacillin",
+          "target": "disease_familial_pulmonary_fibrosis",
+          "relation": "causes",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "Sodium dicloxacillin 有潜在不良反应"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "disease_familial_pulmonary_fibrosis",
+          "relation": "causes",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "Azathioprine 可能导致肺纤维化的报告"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与肺纤维化风险的关联性"
+        },
+        {
+          "source": "drug_bleomycin",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Bleomycin 已知引起肺纤维化"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Cyclophosphamide 与肺损伤风险的关联性"
+        },
+        {
+          "source": "drug_etoposide",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Etoposide 可能导致肺部副作用"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Methotrexate 可能与肺部不良反应有关"
+        },
+        {
+          "source": "drug_nitrofurantoin",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Nitrofurantoin 与肺并发症的潜在关联"
+        },
+        {
+          "source": "drug_busulfan",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Busulfan 的风险报告"
+        },
+        {
+          "source": "drug_doxorubicin",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Doxorubicin 相关损害的潜在风险"
+        },
+        {
+          "source": "drug_radiation_therapy",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "关于放射疗法与肺纤维化的报道"
+        },
+        {
+          "source": "drug_gemcitabine",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Gemcitabine 的肺部风险"
+        },
+        {
+          "source": "drug_sodium_dicloxacillin",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "Sodium dicloxacillin 的不良报告"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "Azathioprine 与肺纤维化风险关联"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物与家族性肺纤维化存在风险关系",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "以上药物均可能与家族性肺纤维化相关",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物均可能对肺部产生不良反应"
+    ],
+    "uncertainties": [
+      "尚需额外临床数据来验证药物与肺纤维化的具体机制"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步的文献支持来强化各个边的强度？"
+    ]
+  }
+}

@@ -1,0 +1,642 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Atypical haemolytic uraemic syndrome",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_eculizumab",
+            "via": [
+              "Target_C5",
+              "Pathway_complement_system"
+            ],
+            "to": "Disease_aHUS",
+            "success_criteria": "形成功能性的机制联系，可支持其在治疗 aHUS 中的应用",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_ravulizumab",
+            "via": [
+              "Target_C5",
+              "Pathway_complement_system"
+            ],
+            "to": "Disease_aHUS",
+            "success_criteria": "形成功能性的机制联系，支持其在治疗 aHUS 中的应用",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ravulizumab",
+          "type": "Drug",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thrombopoietin_receptor_agonists",
+          "type": "Drug",
+          "label": "Thrombopoietin receptor agonists",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sirolimus",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_belatacept",
+          "type": "Drug",
+          "label": "Belatacept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Target_C5",
+          "type": "Target",
+          "label": "C5 Complement Protein",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Pathway_complement_system",
+          "type": "Pathway",
+          "label": "Complement System",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Disease_aHUS",
+          "type": "Disease",
+          "label": "Atypical Haemolytic Uraemic Syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Phenotype_renal_failure",
+          "type": "Phenotype",
+          "label": "Renal Failure",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Phenotype_thrombocytopenia",
+          "type": "Phenotype",
+          "label": "Thrombocytopenia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ravulizumab",
+          "type": "Drug",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_thrombopoietin_receptor_agonists",
+          "type": "Drug",
+          "label": "Thrombopoietin receptor agonists",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_sirolimus",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_belatacept",
+          "type": "Drug",
+          "label": "Belatacept",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_phenotype",
+          "type": "Phenotype",
+          "label": "Adverse Phenotypes of Atypical Haemolytic Uraemic Syndrome",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_eculizumab",
+          "type": "Target",
+          "label": "Off-target effects of Eculizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ravulizumab",
+          "type": "Target",
+          "label": "Off-target effects of Ravulizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "Off-target effects of Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk associated pathways",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_eculizumab",
+          "target": "Target_C5",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "针对C5补体蛋白的靶向作用"
+        },
+        {
+          "source": "drug_ravulizumab",
+          "target": "Target_C5",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "针对C5补体蛋白的靶向作用"
+        },
+        {
+          "source": "Target_C5",
+          "target": "Pathway_complement_system",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "补体系统的关键成分"
+        },
+        {
+          "source": "Pathway_complement_system",
+          "target": "Disease_aHUS",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "补体系统异常与aHUS相关"
+        },
+        {
+          "source": "Pathway_complement_system",
+          "target": "Phenotype_renal_failure",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与肾功能衰竭的直接关联"
+        },
+        {
+          "source": "Pathway_complement_system",
+          "target": "Phenotype_thrombocytopenia",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与血小板减少症的直接关联"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "Phenotype_thrombocytopenia",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于管理相关并发症"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "Phenotype_thrombocytopenia",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于免疫抑制治疗"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "Phenotype_thrombocytopenia",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "对于免疫相关疾病的治疗"
+        },
+        {
+          "source": "drug_thrombopoietin_receptor_agonists",
+          "target": "Phenotype_thrombocytopenia",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "刺激血小板生成的潜在疗法"
+        },
+        {
+          "source": "drug_plasmapheresis",
+          "target": "Disease_aHUS",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "血浆置换在aHUS治疗中的应用"
+        },
+        {
+          "source": "drug_anticoagulants",
+          "target": "Phenotype_thrombocytopenia",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "防止血栓形成的处理"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "Phenotype_thrombocytopenia",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "在血小板减少症的辅助使用"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "Phenotype_thrombocytopenia",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "用于控制免疫反应"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "Phenotype_thrombocytopenia",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "治疗免疫性疾病"
+        },
+        {
+          "source": "drug_belatacept",
+          "target": "Phenotype_thrombocytopenia",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "作为免疫抑制剂的应用"
+        },
+        {
+          "source": "n_eculizumab",
+          "target": "n_ot_eculizumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用导致不良反应"
+        },
+        {
+          "source": "n_ravulizumab",
+          "target": "n_ot_ravulizumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用导致不良反应"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用导致不良反应"
+        },
+        {
+          "source": "n_ot_eculizumab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路"
+        },
+        {
+          "source": "n_ot_ravulizumab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_phenotype",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与不良表型相关时可能加重病情"
+        },
+        {
+          "source": "n_ph__enotype",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果存在离靶效应，则Eculizumab的疗效将受到影响"
+        },
+        {
+          "source": "n_ph__enotype",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果存在离靶效应，则Ravulizumab的疗效将受到影响"
+        },
+        {
+          "source": "n_ph__enotype",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果存在离靶效应，则Corticosteroids的疗效将受到影响"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_eculizumab",
+              "target": "Target_C5",
+              "relation": "acts_on",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "针对C5补体蛋白的靶向作用"
+            },
+            {
+              "source": "Target_C5",
+              "target": "Pathway_complement_system",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "补体系统的关键成分"
+            },
+            {
+              "source": "Pathway_complement_system",
+              "target": "Disease_aHUS",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "补体系统异常与aHUS相关"
+            },
+            {
+              "source": "drug_eculizumab",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "机制闭环支持其在治疗aHUS中的应用"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Eculizumab→C5→Complement Pathway→aHUS 的机制链"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_ravulizumab",
+              "target": "Target_C5",
+              "relation": "acts_on",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "针对C5补体蛋白的靶向作用"
+            },
+            {
+              "source": "Target_C5",
+              "target": "Pathway_complement_system",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "补体系统的关键成分"
+            },
+            {
+              "source": "Pathway_complement_system",
+              "target": "Disease_aHUS",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "补体系统异常与aHUS相关"
+            },
+            {
+              "source": "drug_ravulizumab",
+              "target": "H2",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "机制闭环支持其在治疗aHUS中的应用"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Ravulizumab→C5→Complement Pathway→aHUS 的机制链"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [
+      "当前图未包含对潜在离靶效应的风险评估"
+    ]
+  }
+}

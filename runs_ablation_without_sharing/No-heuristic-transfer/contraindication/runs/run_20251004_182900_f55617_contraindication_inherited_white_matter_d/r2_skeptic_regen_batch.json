@@ -1,0 +1,769 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Inherited white matter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_busulfan",
+          "name": "Busulfan"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_chlorambucil",
+          "name": "Chlorambucil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_mechlorethamine",
+          "name": "Mechlorethamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_doxorubicin",
+          "name": "Doxorubicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_vincristine",
+          "name": "Vincristine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_nitrosourea",
+          "name": "Nitrosourea"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_carboplatin",
+          "name": "Carboplatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_tamoxifen",
+          "name": "Tamoxifen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_thalidomide",
+          "name": "Thalidomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_gemcitabine",
+          "name": "Gemcitabine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_Busulfan",
+          "type": "Target",
+          "label": "OffTarget_Busulfan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_Busulfan",
+          "type": "Pathway",
+          "label": "RiskPathway_Busulfan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_Busulfan",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Busulfan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_Cyclophosphamide",
+          "type": "Target",
+          "label": "OffTarget_Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_Cyclophosphamide",
+          "type": "Pathway",
+          "label": "RiskPathway_Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_Cyclophosphamide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_Chlorambucil",
+          "type": "Target",
+          "label": "OffTarget_Chlorambucil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_Chlorambucil",
+          "type": "Pathway",
+          "label": "RiskPathway_Chlorambucil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_Chlorambucil",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Chlorambucil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_Mechlorethamine",
+          "type": "Target",
+          "label": "OffTarget_Mechlorethamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_Mechlorethamine",
+          "type": "Pathway",
+          "label": "RiskPathway_Mechlorethamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_Mechlorethamine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Mechlorethamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_Doxorubicin",
+          "type": "Target",
+          "label": "OffTarget_Doxorubicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_Doxorubicin",
+          "type": "Pathway",
+          "label": "RiskPathway_Doxorubicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_Doxorubicin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Doxorubicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_Vincristine",
+          "type": "Target",
+          "label": "OffTarget_Vincristine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_Vincristine",
+          "type": "Pathway",
+          "label": "RiskPathway_Vincristine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_Vincristine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Vincristine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_Nitrosourea",
+          "type": "Target",
+          "label": "OffTarget_Nitrosourea",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_Nitrosourea",
+          "type": "Pathway",
+          "label": "RiskPathway_Nitrosourea",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_Nitrosourea",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Nitrosourea",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_Carboplatin",
+          "type": "Target",
+          "label": "OffTarget_Carboplatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_Carboplatin",
+          "type": "Pathway",
+          "label": "RiskPathway_Carboplatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_Carboplatin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Carboplatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_Tamoxifen",
+          "type": "Target",
+          "label": "OffTarget_Tamoxifen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_Tamoxifen",
+          "type": "Pathway",
+          "label": "RiskPathway_Tamoxifen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_Tamoxifen",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Tamoxifen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_Thalidomide",
+          "type": "Target",
+          "label": "OffTarget_Thalidomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_Thalidomide",
+          "type": "Pathway",
+          "label": "RiskPathway_Thalidomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_Thalidomide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Thalidomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_Gemcitabine",
+          "type": "Target",
+          "label": "OffTarget_Gemcitabine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_Gemcitabine",
+          "type": "Pathway",
+          "label": "RiskPathway_Gemcitabine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_Gemcitabine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Gemcitabine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_busulfan",
+          "target": "n_ot_Busulfan",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的靶外作用"
+        },
+        {
+          "source": "n_ot_Busulfan",
+          "target": "n_rp_Busulfan",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_Busulfan",
+          "target": "n_adv_Busulfan",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_Busulfan",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_ot_Cyclophosphamide",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的靶外作用"
+        },
+        {
+          "source": "n_ot_Cyclophosphamide",
+          "target": "n_rp_Cyclophosphamide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_Cyclophosphamide",
+          "target": "n_adv_Cyclophosphamide",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_Cyclophosphamide",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_chlorambucil",
+          "target": "n_ot_Chlorambucil",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的靶外作用"
+        },
+        {
+          "source": "n_ot_Chlorambucil",
+          "target": "n_rp_Chlorambucil",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_Chlorambucil",
+          "target": "n_adv_Chlorambucil",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_Chlorambucil",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_mechlorethamine",
+          "target": "n_ot_Mechlorethamine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的靶外作用"
+        },
+        {
+          "source": "n_ot_Mechlorethamine",
+          "target": "n_rp_Mechlorethamine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_Mechlorethamine",
+          "target": "n_adv_Mechlorethamine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_Mechlorethamine",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_doxorubicin",
+          "target": "n_ot_Doxorubicin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的靶外作用"
+        },
+        {
+          "source": "n_ot_Doxorubicin",
+          "target": "n_rp_Doxorubicin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_Doxorubicin",
+          "target": "n_adv_Doxorubicin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_Doxorubicin",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_vincristine",
+          "target": "n_ot_Vincristine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的靶外作用"
+        },
+        {
+          "source": "n_ot_Vincristine",
+          "target": "n_rp_Vincristine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_Vincristine",
+          "target": "n_adv_Vincristine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_Vincristine",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_nitrosourea",
+          "target": "n_ot_Nitrosourea",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的靶外作用"
+        },
+        {
+          "source": "n_ot_Nitrosourea",
+          "target": "n_rp_Nitrosourea",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_Nitrosourea",
+          "target": "n_adv_Nitrosourea",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_Nitrosourea",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_carboplatin",
+          "target": "n_ot_Carboplatin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的靶外作用"
+        },
+        {
+          "source": "n_ot_Carboplatin",
+          "target": "n_rp_Carboplatin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_Carboplatin",
+          "target": "n_adv_Carboplatin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_Carboplatin",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_tamoxifen",
+          "target": "n_ot_Tamoxifen",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的靶外作用"
+        },
+        {
+          "source": "n_ot_Tamoxifen",
+          "target": "n_rp_Tamoxifen",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_Tamoxifen",
+          "target": "n_adv_Tamoxifen",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_Tamoxifen",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_thalidomide",
+          "target": "n_ot_Thalidomide",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的靶外作用"
+        },
+        {
+          "source": "n_ot_Thalidomide",
+          "target": "n_rp_Thalidomide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_Thalidomide",
+          "target": "n_adv_Thalidomide",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_Thalidomide",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_gemcitabine",
+          "target": "n_ot_Gemcitabine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的靶外作用"
+        },
+        {
+          "source": "n_ot_Gemcitabine",
+          "target": "n_rp_Gemcitabine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_Gemcitabine",
+          "target": "n_adv_Gemcitabine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_Gemcitabine",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        }
+      ]
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "假设药物对白质缺陷的安全性足够高",
+      "假设未考虑药物与遗传因素的相互作用"
+    ],
+    "falsification_tests": [
+      "是否有数据表明这些药物会显著加重白质缺陷的症状？",
+      "是否有实验显示其靶向作用对白质异常有效？"
+    ],
+    "next_focus_for_pi": [
+      "调查药物与白质缺陷的明确机制关系",
+      "评估联合用药的潜在风险与相互作用"
+    ]
+  }
+}

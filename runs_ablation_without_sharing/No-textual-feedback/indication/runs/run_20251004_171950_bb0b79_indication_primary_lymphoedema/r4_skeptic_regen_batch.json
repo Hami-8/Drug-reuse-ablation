@@ -1,0 +1,344 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary lymphoedema",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_dorzolamide",
+          "name": "Dorzolamide"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_bromfenac",
+          "name": "Bromfenac"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_pentoxifylline",
+          "name": "Pentoxifylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_amiloride",
+          "name": "Amiloride"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_lisinopril",
+          "name": "Lisinopril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_furosemide",
+          "name": "Furosemide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_nifedipine",
+          "name": "Nifedipine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_hydrochlorothiazide",
+          "name": "Hydrochlorothiazide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_amlodipine",
+          "name": "Amlodipine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_mannitol",
+          "name": "Mannitol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_spironolactone",
+          "name": "Spironolactone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_triamterene",
+          "name": "Triamterene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_dorzolamide",
+          "type": "Target",
+          "label": "OffTarget_Dorzolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dorzolamide",
+          "type": "Pathway",
+          "label": "RiskPathway_Dorzolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dorzolamide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Dorzolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bromfenac",
+          "type": "Target",
+          "label": "OffTarget_Bromfenac",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bromfenac",
+          "type": "Pathway",
+          "label": "RiskPathway_Bromfenac",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bromfenac",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Bromfenac",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pentoxifylline",
+          "type": "Target",
+          "label": "OffTarget_Pentoxifylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pentoxifylline",
+          "type": "Pathway",
+          "label": "RiskPathway_Pentoxifylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pentoxifylline",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Pentoxifylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_dorzolamide",
+          "target": "n_ot_dorzolamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用造成不良反应"
+        },
+        {
+          "source": "n_ot_dorzolamide",
+          "target": "n_rp_dorzolamide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及的风险通路可能存在"
+        },
+        {
+          "source": "n_rp_dorzolamide",
+          "target": "n_adv_dorzolamide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_dorzolamide",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将减少假设的净获益"
+        },
+        {
+          "source": "drug_bromfenac",
+          "target": "n_ot_bromfenac",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的离靶作用"
+        },
+        {
+          "source": "n_ot_bromfenac",
+          "target": "n_rp_bromfenac",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险机制"
+        },
+        {
+          "source": "n_rp_bromfenac",
+          "target": "n_adv_bromfenac",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引起的不良反应链"
+        },
+        {
+          "source": "n_adv_bromfenac",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险会削减潜在益处"
+        },
+        {
+          "source": "drug_pentoxifylline",
+          "target": "n_ot_pentoxifylline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "离靶作用风险"
+        },
+        {
+          "source": "n_ot_pentoxifylline",
+          "target": "n_rp_pentoxifylline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联的风险通路"
+        },
+        {
+          "source": "n_rp_pentoxifylline",
+          "target": "n_adv_pentoxifylline",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_pentoxifylline",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险将影响假设的有效性"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "可能存在针对靶组织的离靶作用，导致不良结果风险",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "缺乏足够的临床证据支持这些药物在此适应症的正确性和有效性",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "每种药物的机制作用与主要病理通路是否真实有效",
+      "药物对淋巴水肿的真实疗效与安全性"
+    ],
+    "falsification_tests": [
+      "是否存在药物在临床上导致淋巴水肿患者恶化的案例报告？",
+      "是否有长期间隔的证据显示药物效果不如预期？"
+    ],
+    "next_focus_for_pi": [
+      "请求提供每种药物针对淋巴水肿的长效临床数据",
+      "进一步探讨相关药物的安全性问题"
+    ]
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Atypical haemolytic uraemic syndrome",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_eculizumab",
+          "name": "Eculizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ravulizumab",
+          "name": "Ravulizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_furosemide",
+          "name": "Furosemide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_angiotensin_ii_receptor_blockers",
+          "name": "Angiotensin II receptor blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_plasmapheresis",
+          "name": "Plasmapheresis"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_complement_inhibitors",
+          "name": "Complement inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_steroids",
+          "name": "Steroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_anticoagulants",
+          "name": "Anticoagulants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_dialysis",
+          "name": "Dialysis"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_supportive_care",
+          "name": "Supportive care"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ravulizumab",
+          "type": "Drug",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_angiotensin_ii_receptor_blockers",
+          "type": "Drug",
+          "label": "Angiotensin II receptor blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_complement_inhibitors",
+          "type": "Drug",
+          "label": "Complement inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_steroids",
+          "type": "Drug",
+          "label": "Steroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dialysis",
+          "type": "Drug",
+          "label": "Dialysis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_supportive_care",
+          "type": "Drug",
+          "label": "Supportive care",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg1",
+          "type": "Target",
+          "label": "Complement system",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg2",
+          "type": "Target",
+          "label": "Kidney function regulation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway1",
+          "type": "Pathway",
+          "label": "Complement activation pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway2",
+          "type": "Pathway",
+          "label": "Renal function pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease",
+          "type": "Disease",
+          "label": "Atypical haemolytic uraemic syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_eculizumab",
+          "target": "n_tg1",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知抑制补体活化"
+        },
+        {
+          "source": "drug_ravulizumab",
+          "target": "n_tg1",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "类似于Eculizumab，补体抑制"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "n_tg2",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "常用于调节肾脏功能"
+        },
+        {
+          "source": "drug_angiotensin_ii_receptor_blockers",
+          "target": "n_tg2",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知影响肾功能"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_tg1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有免疫抑制作用，可能影响病理"
+        },
+        {
+          "source": "drug_plasmapheresis",
+          "target": "n_tg1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于移除补体成分"
+        },
+        {
+          "source": "drug_complement_inhibitors",
+          "target": "n_tg1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "直接靶向补体系统"
+        },
+        {
+          "source": "drug_steroids",
+          "target": "n_tg1",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "用于减轻炎症反应"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "n_tg1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "作为免疫抑制剂可能相关"
+        },
+        {
+          "source": "drug_anticoagulants",
+          "target": "n_tg2",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能影响血液流动性"
+        },
+        {
+          "source": "drug_dialysis",
+          "target": "n_tg2",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "用于肾功能替代治疗"
+        },
+        {
+          "source": "drug_supportive_care",
+          "target": "n_tg2",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "旨在改善整体状况"
+        },
+        {
+          "source": "n_tg1",
+          "target": "n_pathway1",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "补体系统激活是多个病理通路的基础"
+        },
+        {
+          "source": "n_tg2",
+          "target": "n_pathway2",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "影響腎功能的通路"
+        },
+        {
+          "source": "n_pathway1",
+          "target": "n_disease",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "补体激活与该病相关"
+        },
+        {
+          "source": "n_pathway2",
+          "target": "n_disease",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "肾脏功能障碍促进症状发展"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过靶向补体系统或肾功能影响Atypical haemolytic uraemic syndrome的进程",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "药物可以有效到达相关组织的最小暴露（基于药理常识）"
+    ],
+    "uncertainties": [
+      "各药物之间效果的相对优劣尚需进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "是否需要追加其他药物作为潜在选择？"
+    ]
+  }
+}

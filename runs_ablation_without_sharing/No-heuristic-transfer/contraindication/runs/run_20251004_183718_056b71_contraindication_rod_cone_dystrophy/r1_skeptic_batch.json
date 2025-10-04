@@ -1,0 +1,243 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Rod-cone dystrophy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_chloroquine",
+          "name": "Chloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_hydroxychloroquine",
+          "name": "Hydroxychloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_thioridazine",
+          "name": "Thioridazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_phenothiazine",
+          "name": "Phenothiazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_tamoxifen",
+          "name": "Tamoxifen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_cisplatin",
+          "name": "Cisplatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_gentamicin",
+          "name": "Gentamicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_viagra",
+          "name": "Viagra"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_fluoroquinolones",
+          "name": "Fluoroquinolones"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tetracycline",
+          "name": "Tetracycline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_digoxin",
+          "name": "Digoxin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_1",
+          "type": "Target",
+          "label": "Off-target Chloroquine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_1",
+          "type": "Pathway",
+          "label": "Risk pathway for Rod-cone dystrophy",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_1",
+          "type": "Phenotype",
+          "label": "Adverse effects on vision",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_chloroquine",
+          "target": "n_ot_1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知可能影响视网膜功能的靶点"
+        },
+        {
+          "source": "n_ot_1",
+          "target": "n_rp_1",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在风险通路通过视网膜损伤"
+        },
+        {
+          "source": "n_rp_1",
+          "target": "n_adv_1",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "眼部不良反应可能导致视力下降"
+        },
+        {
+          "source": "n_adv_1",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "存在强烈证据支持风险影响假设"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "药物与视网膜健康的兼容性",
+          "pro_nodes": [
+            "n_rp_1"
+          ],
+          "con_nodes": [
+            "n_adv_1"
+          ],
+          "note": "药物或可改善某些症状，但对视网膜构成显著风险"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "Chloroquine 可能在其他环节产生视网膜损伤",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "当前数据支持其对视网膜具有潜在危险",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "Chloroquine 对视网膜的影响是否被充分评估",
+      "对视力的影响是否被重视"
+    ],
+    "falsification_tests": [
+      "是否有临床试验显示 Chloroquine 的安全性没有问题？",
+      "是否存在有效的监测机制来评估治疗过程中的视力变化?"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供 Chloroquine 影响视网膜的详细机制数据",
+      "评估 Chloroquine 的副作用与长期使用的影响"
+    ]
+  }
+}

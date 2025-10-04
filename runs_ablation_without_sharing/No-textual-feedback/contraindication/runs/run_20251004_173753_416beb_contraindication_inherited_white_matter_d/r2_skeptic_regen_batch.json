@@ -1,0 +1,848 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Inherited white matter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_amitriptyline",
+          "name": "Amitriptyline"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_duloxetine",
+          "name": "Duloxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_pregabalin",
+          "name": "Pregabalin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_venlafaxine",
+          "name": "Venlafaxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_citalopram",
+          "name": "Citalopram"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sertraline",
+          "name": "Sertraline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_mirtazapine",
+          "name": "Mirtazapine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_fluoxetine",
+          "name": "Fluoxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_nitrazepam",
+          "name": "Nitrazepam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_clonazepam",
+          "name": "Clonazepam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_amitriptyline",
+          "type": "Target",
+          "label": "OffTargetAmitriptyline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_amitriptyline",
+          "type": "Pathway",
+          "label": "RiskPathwayAmitriptyline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_amitriptyline",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAmitriptyline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gabapentin",
+          "type": "Target",
+          "label": "OffTargetGabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gabapentin",
+          "type": "Pathway",
+          "label": "RiskPathwayGabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gabapentin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeGabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_duloxetine",
+          "type": "Target",
+          "label": "OffTargetDuloxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_duloxetine",
+          "type": "Pathway",
+          "label": "RiskPathwayDuloxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_duloxetine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeDuloxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pregabalin",
+          "type": "Target",
+          "label": "OffTargetPregabalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pregabalin",
+          "type": "Pathway",
+          "label": "RiskPathwayPregabalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pregabalin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypePregabalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_venlafaxine",
+          "type": "Target",
+          "label": "OffTargetVenlafaxine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_venlafaxine",
+          "type": "Pathway",
+          "label": "RiskPathwayVenlafaxine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_venlafaxine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeVenlafaxine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_citalopram",
+          "type": "Target",
+          "label": "OffTargetCitalopram",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_citalopram",
+          "type": "Pathway",
+          "label": "RiskPathwayCitalopram",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_citalopram",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCitalopram",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sertraline",
+          "type": "Target",
+          "label": "OffTargetSertraline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sertraline",
+          "type": "Pathway",
+          "label": "RiskPathwaySertraline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sertraline",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSertraline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mirtazapine",
+          "type": "Target",
+          "label": "OffTargetMirtazapine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mirtazapine",
+          "type": "Pathway",
+          "label": "RiskPathwayMirtazapine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mirtazapine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMirtazapine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fluoxetine",
+          "type": "Target",
+          "label": "OffTargetFluoxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fluoxetine",
+          "type": "Pathway",
+          "label": "RiskPathwayFluoxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fluoxetine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeFluoxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nitrazepam",
+          "type": "Target",
+          "label": "OffTargetNitrazepam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nitrazepam",
+          "type": "Pathway",
+          "label": "RiskPathwayNitrazepam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nitrazepam",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeNitrazepam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clonazepam",
+          "type": "Target",
+          "label": "OffTargetClonazepam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_clonazepam",
+          "type": "Pathway",
+          "label": "RiskPathwayClonazepam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clonazepam",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeClonazepam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_topiramate",
+          "type": "Target",
+          "label": "OffTargetTopiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_topiramate",
+          "type": "Pathway",
+          "label": "RiskPathwayTopiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_topiramate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTopiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_amitriptyline",
+          "target": "n_ot_amitriptyline",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用影响关键通路"
+        },
+        {
+          "source": "n_ot_amitriptyline",
+          "target": "n_rp_amitriptyline",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应通路"
+        },
+        {
+          "source": "n_rp_amitriptyline",
+          "target": "n_adv_amitriptyline",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_amitriptyline",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效果"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "n_ot_gabapentin",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用影响关键通路"
+        },
+        {
+          "source": "n_ot_gabapentin",
+          "target": "n_rp_gabapentin",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应通路"
+        },
+        {
+          "source": "n_rp_gabapentin",
+          "target": "n_adv_gabapentin",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_gabapentin",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效果"
+        },
+        {
+          "source": "drug_duloxetine",
+          "target": "n_ot_duloxetine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用影响关键通路"
+        },
+        {
+          "source": "n_ot_duloxetine",
+          "target": "n_rp_duloxetine",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应通路"
+        },
+        {
+          "source": "n_rp_duloxetine",
+          "target": "n_adv_duloxetine",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_duloxetine",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效果"
+        },
+        {
+          "source": "drug_pregabalin",
+          "target": "n_ot_pregabalin",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用影响关键通路"
+        },
+        {
+          "source": "n_ot_pregabalin",
+          "target": "n_rp_pregabalin",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应通路"
+        },
+        {
+          "source": "n_rp_pregabalin",
+          "target": "n_adv_pregabalin",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_pregabalin",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效果"
+        },
+        {
+          "source": "drug_venlafaxine",
+          "target": "n_ot_venlafaxine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用影响关键通路"
+        },
+        {
+          "source": "n_ot_venlafaxine",
+          "target": "n_rp_venlafaxine",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应通路"
+        },
+        {
+          "source": "n_rp_venlafaxine",
+          "target": "n_adv_venlafaxine",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_venlafaxine",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效果"
+        },
+        {
+          "source": "drug_citalopram",
+          "target": "n_ot_citalopram",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用影响关键通路"
+        },
+        {
+          "source": "n_ot_citalopram",
+          "target": "n_rp_citalopram",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应通路"
+        },
+        {
+          "source": "n_rp_citalopram",
+          "target": "n_adv_citalopram",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_citalopram",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效果"
+        },
+        {
+          "source": "drug_sertraline",
+          "target": "n_ot_sertraline",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用影响关键通路"
+        },
+        {
+          "source": "n_ot_sertraline",
+          "target": "n_rp_sertraline",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应通路"
+        },
+        {
+          "source": "n_rp_sertraline",
+          "target": "n_adv_sertraline",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_sertraline",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效果"
+        },
+        {
+          "source": "drug_mirtazapine",
+          "target": "n_ot_mirtazapine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用影响关键通路"
+        },
+        {
+          "source": "n_ot_mirtazapine",
+          "target": "n_rp_mirtazapine",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应通路"
+        },
+        {
+          "source": "n_rp_mirtazapine",
+          "target": "n_adv_mirtazapine",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_mirtazapine",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效果"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "n_ot_fluoxetine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用影响关键通路"
+        },
+        {
+          "source": "n_ot_fluoxetine",
+          "target": "n_rp_fluoxetine",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应通路"
+        },
+        {
+          "source": "n_rp_fluoxetine",
+          "target": "n_adv_fluoxetine",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_fluoxetine",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效果"
+        },
+        {
+          "source": "drug_nitrazepam",
+          "target": "n_ot_nitrazepam",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用影响关键通路"
+        },
+        {
+          "source": "n_ot_nitrazepam",
+          "target": "n_rp_nitrazepam",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应通路"
+        },
+        {
+          "source": "n_rp_nitrazepam",
+          "target": "n_adv_nitrazepam",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_nitrazepam",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效果"
+        },
+        {
+          "source": "drug_clonazepam",
+          "target": "n_ot_clonazepam",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用影响关键通路"
+        },
+        {
+          "source": "n_ot_clonazepam",
+          "target": "n_rp_clonazepam",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应通路"
+        },
+        {
+          "source": "n_rp_clonazepam",
+          "target": "n_adv_clonazepam",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_clonazepam",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效果"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "n_ot_topiramate",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用影响关键通路"
+        },
+        {
+          "source": "n_ot_topiramate",
+          "target": "n_rp_topiramate",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应通路"
+        },
+        {
+          "source": "n_rp_topiramate",
+          "target": "n_adv_topiramate",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_topiramate",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消预期效果"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "大多数药物在遗传性白质疾病中缺乏有效性和安全性验证",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "药物可能加重与疾病相关的神经损害",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "这些药物对遗传性白质疾病的有效性",
+      "长期使用的安全性和潜在的不良反应"
+    ],
+    "falsification_tests": [
+      "是否存在针对这些药物的针对遗传性白质疾病的临床试验数据？",
+      "是否有证据支持这些药物在该疾病中安全有效的长期使用？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 数据支持或文献证明",
+      "考虑对比使用毫无争议的替代药物"
+    ]
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Inherited white matter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_interferon_beta",
+          "name": "Interferon beta"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_hydroxyurea",
+          "name": "Hydroxyurea"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_l_carbetapentane",
+          "name": "L-carbetapentane"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_valproic_acid",
+          "name": "Valproic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_dimethyl_fumarate",
+          "name": "Dimethyl fumarate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_thalidomide",
+          "name": "Thalidomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_amifampridine",
+          "name": "Amifampridine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_immunoglobulin_therapy",
+          "name": "Immunoglobulin therapy"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "Off-target effects of interferon beta",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot2",
+          "type": "Target",
+          "label": "Oxidative stress related pathways",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse effects in inherited white matter disorders",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_interferon_beta",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能干扰正常神经活动"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起不良表型"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "n_ot2",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能激活抗氧化途径"
+        },
+        {
+          "source": "drug_hydroxyurea",
+          "target": "n_ot2",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "或导致氧化应激增加"
+        },
+        {
+          "source": "n_ot2",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能加重遗传性白质病的症状"
+        }
+      ],
+      "set_weights": [
+        {
+          "edge_id": "e_k1",
+          "weight": 0.85,
+          "rationale": "不良反应及干扰机制被证实关键性高"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "drug efficacy vs safety",
+          "pro_nodes": [
+            "drug_interferon_beta"
+          ],
+          "con_nodes": [
+            "n_ot",
+            "n_adv"
+          ],
+          "note": "干扰正常功能的风险是否被低估"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "干扰素β可能对神经功能产生负面影响",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "氢氧化脲可能导致氧化应激，甚至加重病症",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "干扰素β在特定遗传性白质疾病中的作用机制是否被准确理解",
+      "N-乙酰半胱氨酸及氢氧化脲对氧化应激的影响是否被低估"
+    ],
+    "falsification_tests": [
+      "是否有研究显示干扰素β在遗传性白质病患者上的安全性数据",
+      "是否存在有效的对照研究以支持此类疗法的长期安全性"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供具体机制路径确保无重大风险",
+      "针对冲突热点进行后续讨论"
+    ]
+  }
+}

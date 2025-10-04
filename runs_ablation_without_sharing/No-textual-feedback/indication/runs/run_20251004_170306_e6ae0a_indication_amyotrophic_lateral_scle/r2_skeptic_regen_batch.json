@@ -1,0 +1,344 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Amyotrophic lateral sclerosis or motor neuron disease",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_riluzole",
+          "name": "Riluzole"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_edaravone",
+          "name": "Edaravone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_nuedexta",
+          "name": "Nuedexta"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_amx0035",
+          "name": "AMX0035"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_tafamidis",
+          "name": "Tafamidis"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_baclofen",
+          "name": "Baclofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_dextromethorphan",
+          "name": "Dextromethorphan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_tizanidine",
+          "name": "Tizanidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_lacosamide",
+          "name": "Lacosamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_piracetam",
+          "name": "Piracetam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_levetiracetam",
+          "name": "Levetiracetam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_riluzole",
+          "type": "Target",
+          "label": "OffTarget_Riluzole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_riluzole",
+          "type": "Pathway",
+          "label": "RiskPathway_Riluzole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_riluzole",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Riluzole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_edav",
+          "type": "Target",
+          "label": "OffTarget_Edaravone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_edav",
+          "type": "Pathway",
+          "label": "RiskPathway_Edaravone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_edav",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Edaravone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nuedexta",
+          "type": "Target",
+          "label": "OffTarget_Nuedexta",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nuedexta",
+          "type": "Pathway",
+          "label": "RiskPathway_Nuedexta",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nuedexta",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Nuedexta",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_riluzole",
+          "target": "n_ot_riluzole",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_riluzole",
+          "target": "n_rp_riluzole",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_riluzole",
+          "target": "n_adv_riluzole",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_riluzole",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消预期获益"
+        },
+        {
+          "source": "drug_edav",
+          "target": "n_ot_edav",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_edav",
+          "target": "n_rp_edav",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_edav",
+          "target": "n_adv_edav",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_edav",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消预期获益"
+        },
+        {
+          "source": "drug_nuedexta",
+          "target": "n_ot_nuedexta",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_nuedexta",
+          "target": "n_rp_nuedexta",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_nuedexta",
+          "target": "n_adv_nuedexta",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_nuedexta",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消预期获益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "可能存在无法达到靶组织的药代动力学障碍",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "存在导致不良反应的机制链，影响治疗效果",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物对关键神经通路的影响是否恰当",
+      "药物在靶组织的有效浓度是否能保证疗效"
+    ],
+    "falsification_tests": [
+      "是否存在对药物长期效果的系统评估数据？",
+      "相应药物的血脑屏障穿透能力如何？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供针对每个药物的靶向机制的潜在补充数据",
+      "对反驳链中的权重进行整理与确认"
+    ]
+  }
+}

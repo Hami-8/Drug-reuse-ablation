@@ -1,0 +1,645 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_ceftriaxone",
+          "name": "Ceftriaxone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_chloramphenicol",
+          "name": "Chloramphenicol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_azole_antifungals",
+          "name": "Azole antifungals"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_clindamycin",
+          "name": "Clindamycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_phenobarbital",
+          "name": "Phenobarbital"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_tetracycline",
+          "name": "Tetracycline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_nitrofurantoin",
+          "name": "Nitrofurantoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_st_john_s_wort",
+          "name": "St. John's Wort"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_sulfamethoxazole",
+          "name": "Sulfamethoxazole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_valproate",
+          "name": "Valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_cef",
+          "type": "Target",
+          "label": "Ceftriaxone Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cef",
+          "type": "Phenotype",
+          "label": "Risk of Neonatal Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_chl",
+          "type": "Target",
+          "label": "Chloramphenicol Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_chl",
+          "type": "Phenotype",
+          "label": "Chloramphenicol Risk of Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_azoles",
+          "type": "Target",
+          "label": "Azole Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_azoles",
+          "type": "Phenotype",
+          "label": "Azole Risk of Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ami",
+          "type": "Target",
+          "label": "Amiodarone Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ami",
+          "type": "Phenotype",
+          "label": "Amiodarone Risk of Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cy",
+          "type": "Target",
+          "label": "Cyclosporine Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cy",
+          "type": "Phenotype",
+          "label": "Cyclosporine Risk of Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cli",
+          "type": "Target",
+          "label": "Clindamycin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cli",
+          "type": "Phenotype",
+          "label": "Clindamycin Risk of Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_phen",
+          "type": "Target",
+          "label": "Phenobarbital Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_phen",
+          "type": "Phenotype",
+          "label": "Phenobarbital Risk of Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tetr",
+          "type": "Target",
+          "label": "Tetracycline Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tetr",
+          "type": "Phenotype",
+          "label": "Tetracycline Risk of Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nitro",
+          "type": "Target",
+          "label": "Nitrofurantoin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nitro",
+          "type": "Phenotype",
+          "label": "Nitrofurantoin Risk of Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_stj",
+          "type": "Target",
+          "label": "St. John's Wort Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_stj",
+          "type": "Phenotype",
+          "label": "St. John's Wort Risk of Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sulf",
+          "type": "Target",
+          "label": "Sulfamethoxazole Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sulf",
+          "type": "Phenotype",
+          "label": "Sulfamethoxazole Risk of Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_valp",
+          "type": "Target",
+          "label": "Valproate Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_valp",
+          "type": "Phenotype",
+          "label": "Valproate Risk of Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_ceftriaxone",
+          "target": "n_ot_cef",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路效应"
+        },
+        {
+          "source": "n_ot_cef",
+          "target": "n_adv_cef",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与胆汁淤积相关的作用机制"
+        },
+        {
+          "source": "n_adv_cef",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，使用 ceftriaxone 可能导致胆汁淤积"
+        },
+        {
+          "source": "drug_chloramphenicol",
+          "target": "n_ot_chl",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路效应"
+        },
+        {
+          "source": "n_ot_chl",
+          "target": "n_adv_chl",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与胆汁淤积相关的作用机制"
+        },
+        {
+          "source": "n_adv_chl",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，使用 chloramphenicol 可能导致胆汁淤积"
+        },
+        {
+          "source": "drug_azole_antifungals",
+          "target": "n_ot_azoles",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路效应"
+        },
+        {
+          "source": "n_ot_azoles",
+          "target": "n_adv_azoles",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与胆汁淤积相关的作用机制"
+        },
+        {
+          "source": "n_adv_azoles",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，使用 azole 类抗真菌药物可能导致胆汁淤积"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_ami",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路效应"
+        },
+        {
+          "source": "n_ot_ami",
+          "target": "n_adv_ami",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与胆汁淤积相关的作用机制"
+        },
+        {
+          "source": "n_adv_ami",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，使用 amiodarone 可能导致胆汁淤积"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_ot_cy",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路效应"
+        },
+        {
+          "source": "n_ot_cy",
+          "target": "n_adv_cy",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与胆汁淤积相关的作用机制"
+        },
+        {
+          "source": "n_adv_cy",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，使用 cyclosporine 可能导致胆汁淤积"
+        },
+        {
+          "source": "drug_clindamycin",
+          "target": "n_ot_cli",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路效应"
+        },
+        {
+          "source": "n_ot_cli",
+          "target": "n_adv_cli",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与胆汁淤积相关的作用机制"
+        },
+        {
+          "source": "n_adv_cli",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，使用 clindamycin 可能导致胆汁淤积"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "n_ot_phen",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路效应"
+        },
+        {
+          "source": "n_ot_phen",
+          "target": "n_adv_phen",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与胆汁淤积相关的作用机制"
+        },
+        {
+          "source": "n_adv_phen",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，使用 phenobarbital 可能导致胆汁淤积"
+        },
+        {
+          "source": "drug_tetracycline",
+          "target": "n_ot_tetr",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路效应"
+        },
+        {
+          "source": "n_ot_tetr",
+          "target": "n_adv_tetr",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与胆汁淤积相关的作用机制"
+        },
+        {
+          "source": "n_adv_tetr",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，使用 tetracycline 可能导致胆汁淤积"
+        },
+        {
+          "source": "drug_nitrofurantoin",
+          "target": "n_ot_nitro",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路效应"
+        },
+        {
+          "source": "n_ot_nitro",
+          "target": "n_adv_nitro",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与胆汁淤积相关的作用机制"
+        },
+        {
+          "source": "n_adv_nitro",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，使用 nitrofurantoin 可能导致胆汁淤积"
+        },
+        {
+          "source": "drug_st_john_s_wort",
+          "target": "n_ot_stj",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路效应"
+        },
+        {
+          "source": "n_ot_stj",
+          "target": "n_adv_stj",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与胆汁淤积相关的作用机制"
+        },
+        {
+          "source": "n_adv_stj",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，使用 st. john's wort 可能导致胆汁淤积"
+        },
+        {
+          "source": "drug_sulfamethoxazole",
+          "target": "n_ot_sulf",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路效应"
+        },
+        {
+          "source": "n_ot_sulf",
+          "target": "n_adv_sulf",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与胆汁淤积相关的作用机制"
+        },
+        {
+          "source": "n_adv_sulf",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，使用 sulfamethoxazole 可能导致胆汁淤积"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "n_ot_valp",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路效应"
+        },
+        {
+          "source": "n_ot_valp",
+          "target": "n_adv_valp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与胆汁淤积相关的作用机制"
+        },
+        {
+          "source": "n_adv_valp",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，使用 valproate 可能导致胆汁淤积"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "这些药物是否会对新生儿的胆汁流动产生影响",
+      "潜在的药物相互作用是否足以引起胆汁淤积风险"
+    ],
+    "falsification_tests": [
+      "是否有证据证明上述药物与新生儿胆汁淤积之间的确切联系",
+      "不同药物在新生儿胆汁淤积状况下的安全性和有效性数据"
+    ],
+    "next_focus_for_pi": [
+      "评估是否存在对新生儿胆汁流动的明确影响机理",
+      "确定是否有支持的临床数据或文献"
+    ]
+  }
+}

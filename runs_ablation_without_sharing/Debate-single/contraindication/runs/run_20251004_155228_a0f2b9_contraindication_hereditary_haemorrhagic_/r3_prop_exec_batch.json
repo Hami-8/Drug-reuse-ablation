@@ -1,0 +1,322 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Hereditary haemorrhagic telangiectasia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Aspirin",
+            "via": [],
+            "to": "Hereditary haemorrhagic telangiectasia",
+            "success_criteria": "需要补充对 Aspirin 不良反应机制的解释",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "add_mechanism_link",
+            "from": "Warfarin",
+            "via": [],
+            "to": "Hereditary haemorrhagic telangiectasia",
+            "success_criteria": "需要补充对 Warfarin 不良反应机制的解释",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "add_mechanism_link",
+            "from": "Clopidogrel",
+            "via": [],
+            "to": "Hereditary haemorrhagic telangiectasia",
+            "success_criteria": "需要补充对 Clopidogrel 不良反应机制的解释",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_heparin",
+          "type": "Drug",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nsaid",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thrombolytics",
+          "type": "Drug",
+          "label": "Thrombolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rivaroxaban",
+          "type": "Drug",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dabigatran",
+          "type": "Drug",
+          "label": "Dabigatran",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_apixaban",
+          "type": "Drug",
+          "label": "Apixaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ticlopidine",
+          "type": "Drug",
+          "label": "Ticlopidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dipyridamole",
+          "type": "Drug",
+          "label": "Dipyridamole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_coxibs",
+          "type": "Drug",
+          "label": "Coxibs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hht",
+          "type": "Disease",
+          "label": "Hereditary haemorrhagic telangiectasia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_aspirin",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知与出血风险相关"
+        },
+        {
+          "source": "n_warfarin",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.95,
+          "agent": "Proponent",
+          "rationale": "用于抗凝，出血风险高"
+        },
+        {
+          "source": "n_clopidogrel",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "类聚集抑制作用，可能导致出血"
+        },
+        {
+          "source": "n_heparin",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗凝效应，相关出血风险"
+        },
+        {
+          "source": "n_nsaid",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "常见出血风险提示"
+        },
+        {
+          "source": "n_thrombolytics",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "增加出血风险"
+        },
+        {
+          "source": "n_rivaroxaban",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "属于抗凝剂，出血风险"
+        },
+        {
+          "source": "n_dabigatran",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗凝性质，风险增加"
+        },
+        {
+          "source": "n_apixaban",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "抗凝作用相关"
+        },
+        {
+          "source": "n_ticlopidine",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能引起出血风险"
+        },
+        {
+          "source": "n_dipyridamole",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "增大出血风险"
+        },
+        {
+          "source": "n_coxibs",
+          "target": "n_hht",
+          "relation": "contraindicates",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "NSAID类药物相关风险"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "skipped",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "与支持性目标不符或信息不足"
+      },
+      {
+        "action_ref": 1,
+        "status": "skipped",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "与支持性目标不符或信息不足"
+      },
+      {
+        "action_ref": 2,
+        "status": "skipped",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "与支持性目标不符或信息不足"
+      }
+    ],
+    "unexecuted_actions": [
+      {
+        "action_ref": 0,
+        "status": "skipped",
+        "reason": "未能提供对 Aspirin 不良反应机制的解释"
+      },
+      {
+        "action_ref": 1,
+        "status": "skipped",
+        "reason": "未能提供对 Warfarin 不良反应机制的解释"
+      },
+      {
+        "action_ref": 2,
+        "status": "skipped",
+        "reason": "未能提供对 Clopidogrel 不良反应机制的解释"
+      }
+    ],
+    "residual_gaps": [
+      "缺少对这些药物的详细机制解释以理解其与遗传性出血性毛细血管扩张的相关性。"
+    ]
+  }
+}

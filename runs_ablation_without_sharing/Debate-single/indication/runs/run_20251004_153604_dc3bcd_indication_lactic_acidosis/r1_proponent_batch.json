@@ -1,0 +1,368 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Lactic acidosis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sodium_bicarbonate",
+          "name": "Sodium bicarbonate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_thiamine",
+          "name": "Thiamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_l_carnitine",
+          "name": "L-carnitine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_dichloroacetate",
+          "name": "Dichloroacetate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_metformin",
+          "name": "Metformin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_aminophylline",
+          "name": "Aminophylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_hydroxocobalamin",
+          "name": "Hydroxocobalamin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_insulin",
+          "name": "Insulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_bromocriptine",
+          "name": "Bromocriptine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_oxalate",
+          "name": "Oxalate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_arginine",
+          "name": "Arginine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_sodium_bicarbonate",
+          "type": "Drug",
+          "label": "Sodium bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thiamine",
+          "type": "Drug",
+          "label": "Thiamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_l_carnitine",
+          "type": "Drug",
+          "label": "L-carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dichloroacetate",
+          "type": "Drug",
+          "label": "Dichloroacetate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_aminophylline",
+          "type": "Drug",
+          "label": "Aminophylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hydroxocobalamin",
+          "type": "Drug",
+          "label": "Hydroxocobalamin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bromocriptine",
+          "type": "Drug",
+          "label": "Bromocriptine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_oxalate",
+          "type": "Drug",
+          "label": "Oxalate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_arginine",
+          "type": "Drug",
+          "label": "Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lactic_acidosis",
+          "type": "Disease",
+          "label": "Lactic acidosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_sodium_bicarbonate",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "缓解酸中毒的常见药物"
+        },
+        {
+          "source": "n_thiamine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于代谢性疾病的维生素"
+        },
+        {
+          "source": "n_l_carnitine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "促进脂肪酸代谢，可能影响乳酸水平"
+        },
+        {
+          "source": "n_dichloroacetate",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通过影响糖酵解降低乳酸"
+        },
+        {
+          "source": "n_metformin",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "与乳酸酸中毒相关的经典药物"
+        },
+        {
+          "source": "n_n_acetylcysteine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "抗氧化剂，可能改善代谢"
+        },
+        {
+          "source": "n_aminophylline",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可改善血氧并可能影响乳酸"
+        },
+        {
+          "source": "n_hydroxocobalamin",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "用于治疗高乳酸的潜在药物"
+        },
+        {
+          "source": "n_insulin",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "促进葡萄糖代谢，可能影响乳酸"
+        },
+        {
+          "source": "n_bromocriptine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "影响代谢的潜在药物"
+        },
+        {
+          "source": "n_oxalate",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "可能与乳酸水平相关"
+        },
+        {
+          "source": "n_arginine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.25,
+          "agent": "Proponent",
+          "rationale": "通过一氧化氮医学效应可能影响代谢"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物可能对乳酸酸中毒有支持治疗作用",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物能够到达相关组织并发挥作用"
+    ],
+    "uncertainties": [
+      "每种药物的具体机制仍需进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "是否进一步探索药物之间的相互作用？"
+    ]
+  }
+}

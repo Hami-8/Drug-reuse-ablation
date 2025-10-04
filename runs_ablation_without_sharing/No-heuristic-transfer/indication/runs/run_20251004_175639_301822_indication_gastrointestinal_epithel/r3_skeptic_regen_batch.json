@@ -1,0 +1,848 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Gastrointestinal epithelial barrier disorders",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_mesalazine",
+          "name": "Mesalazine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_budesonide",
+          "name": "Budesonide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_sulfasalazine",
+          "name": "Sulfasalazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_tegaserod",
+          "name": "Tegaserod"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_probiotics",
+          "name": "Probiotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_vedolizumab",
+          "name": "Vedolizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_balsalazide",
+          "name": "Balsalazide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_loperamide",
+          "name": "Loperamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_octreotide",
+          "name": "Octreotide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_mesalazine",
+          "type": "Target",
+          "label": "OffTargetMesalazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mesalazine",
+          "type": "Pathway",
+          "label": "RiskPathwayMesalazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mesalazine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMesalazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_azathioprine",
+          "type": "Target",
+          "label": "OffTargetAzathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_azathioprine",
+          "type": "Pathway",
+          "label": "RiskPathwayAzathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_azathioprine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAzathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_budesonide",
+          "type": "Target",
+          "label": "OffTargetBudesonide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_budesonide",
+          "type": "Pathway",
+          "label": "RiskPathwayBudesonide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_budesonide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBudesonide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sulfasalazine",
+          "type": "Target",
+          "label": "OffTargetSulfasalazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sulfasalazine",
+          "type": "Pathway",
+          "label": "RiskPathwaySulfasalazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sulfasalazine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSulfasalazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tegaserod",
+          "type": "Target",
+          "label": "OffTargetTegaserod",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_tegaserod",
+          "type": "Pathway",
+          "label": "RiskPathwayTegaserod",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tegaserod",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTegaserod",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_probiotics",
+          "type": "Target",
+          "label": "OffTargetProbiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_probiotics",
+          "type": "Pathway",
+          "label": "RiskPathwayProbiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_probiotics",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeProbiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_infliximab",
+          "type": "Target",
+          "label": "OffTargetInfliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_infliximab",
+          "type": "Pathway",
+          "label": "RiskPathwayInfliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_infliximab",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeInfliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_adalimumab",
+          "type": "Target",
+          "label": "OffTargetAdalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_adalimumab",
+          "type": "Pathway",
+          "label": "RiskPathwayAdalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_adalimumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAdalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_vedolizumab",
+          "type": "Target",
+          "label": "OffTargetVedolizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_vedolizumab",
+          "type": "Pathway",
+          "label": "RiskPathwayVedolizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_vedolizumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeVedolizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_balsalazide",
+          "type": "Target",
+          "label": "OffTargetBalsalazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_balsalazide",
+          "type": "Pathway",
+          "label": "RiskPathwayBalsalazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_balsalazide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBalsalazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_loperamide",
+          "type": "Target",
+          "label": "OffTargetLoperamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_loperamide",
+          "type": "Pathway",
+          "label": "RiskPathwayLoperamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_loperamide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLoperamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_octreotide",
+          "type": "Target",
+          "label": "OffTargetOctreotide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_octreotide",
+          "type": "Pathway",
+          "label": "RiskPathwayOctreotide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_octreotide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeOctreotide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_mesalazine",
+          "target": "n_ot_mesalazine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_mesalazine",
+          "target": "n_rp_mesalazine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_mesalazine",
+          "target": "n_adv_mesalazine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_mesalazine",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该机制成立，将抵消潜在益处"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_ot_azathioprine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_azathioprine",
+          "target": "n_rp_azathioprine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_azathioprine",
+          "target": "n_adv_azathioprine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_azathioprine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该机制成立，将抵消潜在益处"
+        },
+        {
+          "source": "drug_budesonide",
+          "target": "n_ot_budesonide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_budesonide",
+          "target": "n_rp_budesonide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_budesonide",
+          "target": "n_adv_budesonide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_budesonide",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该机制成立，将抵消潜在益处"
+        },
+        {
+          "source": "drug_sulfasalazine",
+          "target": "n_ot_sulfasalazine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_sulfasalazine",
+          "target": "n_rp_sulfasalazine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_sulfasalazine",
+          "target": "n_adv_sulfasalazine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_sulfasalazine",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该机制成立，将抵消潜在益处"
+        },
+        {
+          "source": "drug_tegaserod",
+          "target": "n_ot_tegaserod",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_tegaserod",
+          "target": "n_rp_tegaserod",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_tegaserod",
+          "target": "n_adv_tegaserod",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_tegaserod",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该机制成立，将抵消潜在益处"
+        },
+        {
+          "source": "drug_probiotics",
+          "target": "n_ot_probiotics",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_probiotics",
+          "target": "n_rp_probiotics",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_probiotics",
+          "target": "n_adv_probiotics",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_probiotics",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该机制成立，将抵消潜在益处"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "n_ot_infliximab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_infliximab",
+          "target": "n_rp_infliximab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_infliximab",
+          "target": "n_adv_infliximab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_infliximab",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该机制成立，将抵消潜在益处"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "n_ot_adalimumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_adalimumab",
+          "target": "n_rp_adalimumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_adalimumab",
+          "target": "n_adv_adalimumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_adalimumab",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该机制成立，将抵消潜在益处"
+        },
+        {
+          "source": "drug_vedolizumab",
+          "target": "n_ot_vedolizumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_vedolizumab",
+          "target": "n_rp_vedolizumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_vedolizumab",
+          "target": "n_adv_vedolizumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_vedolizumab",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该机制成立，将抵消潜在益处"
+        },
+        {
+          "source": "drug_balsalazide",
+          "target": "n_ot_balsalazide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_balsalazide",
+          "target": "n_rp_balsalazide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_balsalazide",
+          "target": "n_adv_balsalazide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_balsalazide",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该机制成立，将抵消潜在益处"
+        },
+        {
+          "source": "drug_loperamide",
+          "target": "n_ot_loperamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_loperamide",
+          "target": "n_rp_loperamide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_loperamide",
+          "target": "n_adv_loperamide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_loperamide",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该机制成立，将抵消潜在益处"
+        },
+        {
+          "source": "drug_octreotide",
+          "target": "n_ot_octreotide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_octreotide",
+          "target": "n_rp_octreotide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_octreotide",
+          "target": "n_adv_octreotide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_octreotide",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该机制成立，将抵消潜在益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "导致非靶标器官的副作用风险未被充分考量",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "可能存在对靶器官的反向作用",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物对胃肠道屏障病变的具体作用机制",
+      "临床有效性数据与安全性之间的平衡"
+    ],
+    "falsification_tests": [
+      "是否存在确认靶向治疗效果的随机对照试验？",
+      "是否有证据表明副作用风险被低估？"
+    ],
+    "next_focus_for_pi": [
+      "调研药物机制与不良反应的相关文献",
+      "寻找更多不同机制的潜在药物以验证假设"
+    ]
+  }
+}

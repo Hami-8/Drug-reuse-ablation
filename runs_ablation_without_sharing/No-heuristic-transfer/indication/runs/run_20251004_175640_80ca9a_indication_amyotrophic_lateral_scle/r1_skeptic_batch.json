@@ -1,0 +1,850 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Amyotrophic lateral sclerosis or motor neuron disease",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_riluzole",
+          "name": "Riluzole"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_edaravone",
+          "name": "Edaravone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_dexpramipexole",
+          "name": "Dexpramipexole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_nuedexta",
+          "name": "Nuedexta"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_gilenya",
+          "name": "Gilenya"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_nerinetide",
+          "name": "Nerinetide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_radicava",
+          "name": "Radicava"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_tirasemtiv",
+          "name": "Tirasemtiv"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_pentoxifylline",
+          "name": "Pentoxifylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_thalidomide",
+          "name": "Thalidomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_baclofen",
+          "name": "Baclofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_vigabatrin",
+          "name": "Vigabatrin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_riluzole",
+          "type": "Target",
+          "label": "Riluzole Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_riluzole",
+          "type": "Pathway",
+          "label": "Riluzole Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_riluzole",
+          "type": "Phenotype",
+          "label": "Riluzole Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ed",
+          "type": "Target",
+          "label": "Edaravone Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ed",
+          "type": "Pathway",
+          "label": "Edaravone Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ed",
+          "type": "Phenotype",
+          "label": "Edaravone Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dexpramipexole",
+          "type": "Target",
+          "label": "Dexpramipexole Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dexpramipexole",
+          "type": "Pathway",
+          "label": "Dexpramipexole Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dexpramipexole",
+          "type": "Phenotype",
+          "label": "Dexpramipexole Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nuedexta",
+          "type": "Target",
+          "label": "Nuedexta Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nuedexta",
+          "type": "Pathway",
+          "label": "Nuedexta Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nuedexta",
+          "type": "Phenotype",
+          "label": "Nuedexta Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gilenya",
+          "type": "Target",
+          "label": "Gilenya Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gilenya",
+          "type": "Pathway",
+          "label": "Gilenya Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gilenya",
+          "type": "Phenotype",
+          "label": "Gilenya Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nerinetide",
+          "type": "Target",
+          "label": "Nerinetide Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nerinetide",
+          "type": "Pathway",
+          "label": "Nerinetide Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nerinetide",
+          "type": "Phenotype",
+          "label": "Nerinetide Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_radicava",
+          "type": "Target",
+          "label": "Radicava Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_radicava",
+          "type": "Pathway",
+          "label": "Radicava Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_radicava",
+          "type": "Phenotype",
+          "label": "Radicava Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tirasemtiv",
+          "type": "Target",
+          "label": "Tirasemtiv Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_tirasemtiv",
+          "type": "Pathway",
+          "label": "Tirasemtiv Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tirasemtiv",
+          "type": "Phenotype",
+          "label": "Tirasemtiv Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pentoxifylline",
+          "type": "Target",
+          "label": "Pentoxifylline Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pentoxifylline",
+          "type": "Pathway",
+          "label": "Pentoxifylline Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pentoxifylline",
+          "type": "Phenotype",
+          "label": "Pentoxifylline Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thalidomide",
+          "type": "Target",
+          "label": "Thalidomide Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_thalidomide",
+          "type": "Pathway",
+          "label": "Thalidomide Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_thalidomide",
+          "type": "Phenotype",
+          "label": "Thalidomide Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_baclofen",
+          "type": "Target",
+          "label": "Baclofen Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_baclofen",
+          "type": "Pathway",
+          "label": "Baclofen Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_baclofen",
+          "type": "Phenotype",
+          "label": "Baclofen Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_vigabatrin",
+          "type": "Target",
+          "label": "Vigabatrin Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_vigabatrin",
+          "type": "Pathway",
+          "label": "Vigabatrin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_vigabatrin",
+          "type": "Phenotype",
+          "label": "Vigabatrin Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_riluzole",
+          "target": "n_ot_riluzole",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能会影响其他靶标"
+        },
+        {
+          "source": "n_ot_riluzole",
+          "target": "n_rp_riluzole",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联的风险通路存在"
+        },
+        {
+          "source": "n_rp_riluzole",
+          "target": "n_adv_riluzole",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_riluzole",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "严重风险会抵消效果"
+        },
+        {
+          "source": "drug_ed_aravone",
+          "target": "n_ot_ed",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在的离靶效应"
+        },
+        {
+          "source": "n_ot_ed",
+          "target": "n_rp_ed",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能相关风险通路"
+        },
+        {
+          "source": "n_rp_ed",
+          "target": "n_adv_ed",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致表型变化"
+        },
+        {
+          "source": "n_adv_ed",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "不良作用可能抵消治疗益处"
+        },
+        {
+          "source": "drug_dexpramipexole",
+          "target": "n_ot_dexpramipexole",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响其他生物通路"
+        },
+        {
+          "source": "n_ot_dexpramipexole",
+          "target": "n_rp_dexpramipexole",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_dexpramipexole",
+          "target": "n_adv_dexpramipexole",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能出现不良表型"
+        },
+        {
+          "source": "n_adv_dexpramipexole",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消药物效果"
+        },
+        {
+          "source": "drug_nuedexta",
+          "target": "n_ot_nuedexta",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶效应"
+        },
+        {
+          "source": "n_ot_nuedexta",
+          "target": "n_rp_nuedexta",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在风险通路"
+        },
+        {
+          "source": "n_rp_nuedexta",
+          "target": "n_adv_nuedexta",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_nuedexta",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "假设的益处可能被风险抵消"
+        },
+        {
+          "source": "drug_gilenya",
+          "target": "n_ot_gilenya",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响其他靶标"
+        },
+        {
+          "source": "n_ot_gilenya",
+          "target": "n_rp_gilenya",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "立即风险通路存在"
+        },
+        {
+          "source": "n_rp_gilenya",
+          "target": "n_adv_gilenya",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_gilenya",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "不良后果反击药物效果"
+        },
+        {
+          "source": "drug_nerinetide",
+          "target": "n_ot_nerinetide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在的离靶效应"
+        },
+        {
+          "source": "n_ot_nerinetide",
+          "target": "n_rp_nerinetide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_nerinetide",
+          "target": "n_adv_nerinetide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_nerinetide",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消药物效果"
+        },
+        {
+          "source": "drug_radicava",
+          "target": "n_ot_radicava",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶损伤"
+        },
+        {
+          "source": "n_ot_radicava",
+          "target": "n_rp_radicava",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_radicava",
+          "target": "n_adv_radicava",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良影响"
+        },
+        {
+          "source": "n_adv_radicava",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的损害抵消治疗效果"
+        },
+        {
+          "source": "drug_tirasemtiv",
+          "target": "n_ot_tirasemtiv",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在的离靶效应"
+        },
+        {
+          "source": "n_ot_tirasemtiv",
+          "target": "n_rp_tirasemtiv",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_tirasemtiv",
+          "target": "n_adv_tirasemtiv",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_tirasemtiv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良反应可能抵消治疗的好处"
+        },
+        {
+          "source": "drug_pentoxifylline",
+          "target": "n_ot_pentoxifylline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响其他健康因素"
+        },
+        {
+          "source": "n_ot_pentoxifylline",
+          "target": "n_rp_pentoxifylline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_pentoxifylline",
+          "target": "n_adv_pentoxifylline",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_pentoxifylline",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "不良影响可能抵消药物效果"
+        },
+        {
+          "source": "drug_thalidomide",
+          "target": "n_ot_thalidomide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响其他靶标"
+        },
+        {
+          "source": "n_ot_thalidomide",
+          "target": "n_rp_thalidomide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险通路"
+        },
+        {
+          "source": "n_rp_thalidomide",
+          "target": "n_adv_thalidomide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_thalidomide",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能影响治疗效果"
+        },
+        {
+          "source": "drug_baclofen",
+          "target": "n_ot_baclofen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在离靶效应"
+        },
+        {
+          "source": "n_ot_baclofen",
+          "target": "n_rp_baclofen",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险通路"
+        },
+        {
+          "source": "n_rp_baclofen",
+          "target": "n_adv_baclofen",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_baclofen",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消效果"
+        },
+        {
+          "source": "drug_vigabatrin",
+          "target": "n_ot_vigabatrin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响其他靶标"
+        },
+        {
+          "source": "n_ot_vigabatrin",
+          "target": "n_rp_vigabatrin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在风险通路"
+        },
+        {
+          "source": "n_rp_vigabatrin",
+          "target": "n_adv_vigabatrin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_vigabatrin",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良作用可能抵消药物效果"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "多种药物可能引发严重的不良反应",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "效果与不良反应之间可能存在冲突",
+        "confidence": "high"
+      },
+      {
+        "id": "K3",
+        "text": "药物对神经元保护机制可能不充分",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物是否能充分靶向ALS关键机制",
+      "离靶效应是否影响临床结果"
+    ],
+    "falsification_tests": [
+      "是否存在反映长期临床效果的不良反应记录？",
+      "是否有足够证据表明药物的独特性与有效性？"
+    ],
+    "next_focus_for_pi": [
+      "要求提供对每种药物的独立研究支持",
+      "确认目前已有疗法的安全性及其临床结果"
+    ]
+  }
+}

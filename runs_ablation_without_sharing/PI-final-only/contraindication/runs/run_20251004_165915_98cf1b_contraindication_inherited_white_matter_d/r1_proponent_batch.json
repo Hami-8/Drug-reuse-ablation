@@ -1,0 +1,362 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Inherited white matter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_clonazepam",
+          "name": "Clonazepam"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_valproic_acid",
+          "name": "Valproic Acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_primidone",
+          "name": "Primidone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lithium",
+          "name": "Lithium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_antidepressants",
+          "name": "Antidepressants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_antipsychotics",
+          "name": "Antipsychotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_chlordiazepoxide",
+          "name": "Chlordiazepoxide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_benzodiazepines",
+          "name": "Benzodiazepines"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_thioridazine",
+          "name": "Thioridazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_sodium_oxybate",
+          "name": "Sodium Oxybate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_clonazepam",
+          "type": "Drug",
+          "label": "Clonazepam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_valproic_acid",
+          "type": "Drug",
+          "label": "Valproic Acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_primidone",
+          "type": "Drug",
+          "label": "Primidone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_antidepressants",
+          "type": "Drug",
+          "label": "Antidepressants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_antipsychotics",
+          "type": "Drug",
+          "label": "Antipsychotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_chlordiazepoxide",
+          "type": "Drug",
+          "label": "Chlordiazepoxide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_benzodiazepines",
+          "type": "Drug",
+          "label": "Benzodiazepines",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thioridazine",
+          "type": "Drug",
+          "label": "Thioridazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_oxybate",
+          "type": "Drug",
+          "label": "Sodium Oxybate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_inherited_white_matter_disorders",
+          "type": "Phenotype",
+          "label": "Inherited White Matter Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_clonazepam",
+          "target": "phenotype_inherited_white_matter_disorders",
+          "relation": "associated_with",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知的药物-疾病关联"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "phenotype_inherited_white_matter_disorders",
+          "relation": "associated_with",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "药物在类似条件下表现出负面影响"
+        },
+        {
+          "source": "drug_valproic_acid",
+          "target": "phenotype_inherited_white_matter_disorders",
+          "relation": "associated_with",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有文献报告显示潜在风险"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "phenotype_inherited_white_matter_disorders",
+          "relation": "associated_with",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "历史用药经验指向风险"
+        },
+        {
+          "source": "drug_primidone",
+          "target": "phenotype_inherited_white_matter_disorders",
+          "relation": "associated_with",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "机制上可能加重此类疾病"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "phenotype_inherited_white_matter_disorders",
+          "relation": "associated_with",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "药物干预可能影响病理变化"
+        },
+        {
+          "source": "drug_antidepressants",
+          "target": "phenotype_inherited_white_matter_disorders",
+          "relation": "associated_with",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "用药与疾病间有不良反应报道"
+        },
+        {
+          "source": "drug_antipsychotics",
+          "target": "phenotype_inherited_white_matter_disorders",
+          "relation": "associated_with",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有潜在影响的临床观察"
+        },
+        {
+          "source": "drug_chlordiazepoxide",
+          "target": "phenotype_inherited_white_matter_disorders",
+          "relation": "associated_with",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能与疾病有所关联"
+        },
+        {
+          "source": "drug_benzodiazepines",
+          "target": "phenotype_inherited_white_matter_disorders",
+          "relation": "associated_with",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "药物类别与表型研究相符"
+        },
+        {
+          "source": "drug_thioridazine",
+          "target": "phenotype_inherited_white_matter_disorders",
+          "relation": "associated_with",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "顾及到药物的潜在影响"
+        },
+        {
+          "source": "drug_sodium_oxybate",
+          "target": "phenotype_inherited_white_matter_disorders",
+          "relation": "associated_with",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "不足够的证据支持其安全性"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [],
+    "assumptions": [
+      "药物使用可能对表型有负面影响"
+    ],
+    "uncertainties": [
+      "缺乏针对特定遗传性白质疾病的严格临床数据"
+    ],
+    "next_focus_for_pi": [
+      "是否进一步梳理指导性数据或文献支持"
+    ]
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Amyotrophic lateral sclerosis or motor neuron disease",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_riluzole",
+          "name": "Riluzole"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_edaravone",
+          "name": "Edaravone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_nuedexta",
+          "name": "Nuedexta"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_dextromethorphan",
+          "name": "Dextromethorphan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_memantine",
+          "name": "Memantine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_tizanidine",
+          "name": "Tizanidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_baclofen",
+          "name": "Baclofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_sodium_phenylbutyrate",
+          "name": "Sodium phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_lacosamide",
+          "name": "Lacosamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_trophic_factors",
+          "name": "Trophic factors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_monosialotetrahexosylganglioside_gm1",
+          "name": "Monosialotetrahexosylganglioside (GM1)"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_riluzole",
+          "type": "Drug",
+          "label": "Riluzole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_edavarone",
+          "type": "Drug",
+          "label": "Edaravone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nuedexta",
+          "type": "Drug",
+          "label": "Nuedexta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dextromethorphan",
+          "type": "Drug",
+          "label": "Dextromethorphan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_memantine",
+          "type": "Drug",
+          "label": "Memantine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tizanidine",
+          "type": "Drug",
+          "label": "Tizanidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_baclofen",
+          "type": "Drug",
+          "label": "Baclofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lacosamide",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_trophic_factors",
+          "type": "Drug",
+          "label": "Trophic factors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_monosialotetrahexosylganglioside_gm1",
+          "type": "Drug",
+          "label": "Monosialotetrahexosylganglioside (GM1)",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Disease_AMN",
+          "type": "Disease",
+          "label": "Amyotrophic lateral sclerosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_riluzole",
+          "target": "Disease_AMN",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Riluzole已被证明对该疾病有效"
+        },
+        {
+          "source": "drug_edavarone",
+          "target": "Disease_AMN",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Edaravone在临床中用于ALS患者"
+        },
+        {
+          "source": "drug_nuedexta",
+          "target": "Disease_AMN",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于ALS患者的症状管理"
+        },
+        {
+          "source": "drug_dextromethorphan",
+          "target": "Disease_AMN",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Dextromethorphan对ALS相关的症状有帮助"
+        },
+        {
+          "source": "drug_memantine",
+          "target": "Disease_AMN",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有潜在的认知保护作用，可能对ALS有益"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "Disease_AMN",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "用于缓解ALS引起的疼痛"
+        },
+        {
+          "source": "drug_tizanidine",
+          "target": "Disease_AMN",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于肌肉痉挛的症状管理"
+        },
+        {
+          "source": "drug_baclofen",
+          "target": "Disease_AMN",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "缓解ALS相关的痉挛"
+        },
+        {
+          "source": "drug_sodium_phenylbutyrate",
+          "target": "Disease_AMN",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "了解其在ALS中的潜在作用"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "Disease_AMN",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "具备对神经保护作用的可能"
+        },
+        {
+          "source": "drug_trophic_factors",
+          "target": "Disease_AMN",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能通过神经保护机制发挥作用"
+        },
+        {
+          "source": "drug_monosialotetrahexosylganglioside_gm1",
+          "target": "Disease_AMN",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "有助于神经保护的研究证据"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物对ALS及相似病理机制的效果，支持他们作为治疗候选药物",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "上述药物具备有效到达靶器官的能力"
+    ],
+    "uncertainties": [
+      "对每种药物的长期效益和安全性仍需进行深入研究"
+    ],
+    "next_focus_for_pi": [
+      "考虑是否需要更多的数据和验证支持边的机制"
+    ]
+  }
+}

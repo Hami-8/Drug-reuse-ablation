@@ -1,0 +1,421 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ezetimibe",
+          "name": "Ezetimibe"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lipid_lowering_agents",
+          "name": "Lipid-lowering agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_metformin",
+          "name": "Metformin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_thiazolidinediones",
+          "name": "Thiazolidinediones"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_insulin",
+          "name": "Insulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_clofibrate",
+          "name": "Clofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_atorvastatin",
+          "name": "Atorvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_omega_3_fatty_acids",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ezetimibe",
+          "type": "Drug",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lipid_lowering_agents",
+          "type": "Drug",
+          "label": "Lipid-lowering agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiazolidinediones",
+          "type": "Drug",
+          "label": "Thiazolidinediones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clofibrate",
+          "type": "Drug",
+          "label": "Clofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fatty_acid_pathway",
+          "type": "Pathway",
+          "label": "Fatty Acid Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lipid_metabolism_pathway",
+          "type": "Pathway",
+          "label": "Lipid Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dyslipidemia",
+          "type": "Disease",
+          "label": "Dyslipidemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_severe_hypertriglyceridaemia",
+          "type": "Phenotype",
+          "label": "Severe Hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_fibrates",
+          "target": "n_fatty_acid_pathway",
+          "relation": "activates",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Fibrates已知激活脂肪酸代谢途径"
+        },
+        {
+          "source": "n_fatty_acid_pathway",
+          "target": "n_dyslipidemia",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "脂肪酸代谢与脂质代谢障碍关联"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_lipid_metabolism_pathway",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Statins抑制胆固醇合成，改善血脂"
+        },
+        {
+          "source": "n_lipid_metabolism_pathway",
+          "target": "n_dyslipidemia",
+          "relation": "associated_with",
+          "weight": 0.78,
+          "agent": "Proponent",
+          "rationale": "脂质代谢异常与脂质异常相关"
+        },
+        {
+          "source": "n_dyslipidemia",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "causes",
+          "weight": 0.87,
+          "agent": "Proponent",
+          "rationale": "脂质代谢紊乱导致严重高甘油三酯血症"
+        },
+        {
+          "source": "drug_omega_3_fatty_acids",
+          "target": "n_fatty_acid_pathway",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Omega-3脂肪酸调节脂肪酸代谢"
+        },
+        {
+          "source": "drug_ezetimibe",
+          "target": "n_lipid_metabolism_pathway",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Ezetimibe通过抑制胆固醇吸收改善血脂"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "n_lipid_metabolism_pathway",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Niacin通过多种机制改善血脂"
+        },
+        {
+          "source": "drug_lipid_lowering_agents",
+          "target": "n_dyslipidemia",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "各类降脂药物普遍用于治疗脂质异常"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "n_lipid_metabolism_pathway",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Metformin对脂质代谢之影响已有研究"
+        },
+        {
+          "source": "drug_thiazolidinediones",
+          "target": "n_lipid_metabolism_pathway",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Thiazolidinediones调节脂质代谢"
+        },
+        {
+          "source": "drug_insulin",
+          "target": "n_dyslipidemia",
+          "relation": "modulates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Insulin可影响脂质代谢"
+        },
+        {
+          "source": "drug_clofibrate",
+          "target": "n_fatty_acid_pathway",
+          "relation": "activates",
+          "weight": 0.57,
+          "agent": "Proponent",
+          "rationale": "Clofibrate已知激活脂肪酸代谢"
+        },
+        {
+          "source": "drug_atorvastatin",
+          "target": "n_lipid_metabolism_pathway",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Atorvastatin有效改善血脂"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "n_fatty_acid_pathway",
+          "relation": "activates",
+          "weight": 0.72,
+          "agent": "Proponent",
+          "rationale": "Gemfibrozil激活脂肪酸代谢机制"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "通过各种途径（如脂肪酸代谢和脂质代谢的调节）影响严重高甘油三酯血症",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "不同药物均具有改善高甘油三酯血症的潜力和机制",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物具备达到靶器官的有效浓度（常识判断）"
+    ],
+    "uncertainties": [
+      "长期效果和个体差异需进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "评估各药物作用于严重高甘油三酯血症的有效性和安全性"
+    ]
+  }
+}

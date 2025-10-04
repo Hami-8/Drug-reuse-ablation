@@ -1,0 +1,416 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Noonan syndrome",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_growth_hormone",
+          "name": "Growth hormone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_tamoxifen",
+          "name": "Tamoxifen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_ataluren",
+          "name": "Ataluren"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_everolimus",
+          "name": "Everolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_sirolimus",
+          "name": "Sirolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_rapamycin",
+          "name": "Rapamycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_dasatinib",
+          "name": "Dasatinib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_methylprednisolone",
+          "name": "Methylprednisolone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_hydrocortisone",
+          "name": "Hydrocortisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_carnitine",
+          "name": "Carnitine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_anakinra",
+          "name": "Anakinra"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_growth_hormone",
+          "type": "Drug",
+          "label": "Growth hormone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tamoxifen",
+          "type": "Drug",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ataluren",
+          "type": "Drug",
+          "label": "Ataluren",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_everolimus",
+          "type": "Drug",
+          "label": "Everolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sirolimus",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rapamycin",
+          "type": "Drug",
+          "label": "Rapamycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dasatinib",
+          "type": "Drug",
+          "label": "Dasatinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methylprednisolone",
+          "type": "Drug",
+          "label": "Methylprednisolone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydrocortisone",
+          "type": "Drug",
+          "label": "Hydrocortisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carnitine",
+          "type": "Drug",
+          "label": "Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_anakinra",
+          "type": "Drug",
+          "label": "Anakinra",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ca",
+          "type": "Target",
+          "label": "TargetA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb1",
+          "type": "Pathway",
+          "label": "PathwayB1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb2",
+          "type": "Pathway",
+          "label": "PathwayB2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease",
+          "type": "Disease",
+          "label": "Noonan syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_growth_hormone",
+          "target": "n_ca",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "同类药理常识，增长相关"
+        },
+        {
+          "source": "n_ca",
+          "target": "n_pb1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通路层面常识，与生长相关"
+        },
+        {
+          "source": "n_pb1",
+          "target": "n_disease",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与 Noonan syndrome 的致病机制相关"
+        },
+        {
+          "source": "drug_tamoxifen",
+          "target": "n_ca",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "研究相关"
+        },
+        {
+          "source": "drug_ataluren",
+          "target": "n_ca",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知机制有效"
+        },
+        {
+          "source": "drug_everolimus",
+          "target": "n_ca",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知影响生物通路"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "n_pb2",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通路层面常识，近似机制"
+        },
+        {
+          "source": "drug_rapamycin",
+          "target": "n_pb2",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "相关延续的研究"
+        },
+        {
+          "source": "drug_dasatinib",
+          "target": "n_ca",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "作用于相关通路"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "n_ca",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能性需进一步验证"
+        },
+        {
+          "source": "drug_methylprednisolone",
+          "target": "n_pb1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "常见的免疫调节作用"
+        },
+        {
+          "source": "drug_hydrocortisone",
+          "target": "n_pb1",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "部分机制推测支持"
+        },
+        {
+          "source": "drug_carnitine",
+          "target": "n_pb2",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "理论上可涉及"
+        },
+        {
+          "source": "drug_anakinra",
+          "target": "n_pb2",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "待验证机制支持"
+        },
+        {
+          "source": "n_pb2",
+          "target": "n_disease",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与 Noonan syndrome 相关结构性影响"
+        }
+      ],
+      "set_weights": [],
+      "merge": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "Growth hormone 及其他药物可能通过多条机制影响 Noonan syndrome",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物通过常用给药途径可到达靶器官（常识判断）"
+    ],
+    "uncertainties": [
+      "药物交互作用及与患者个体差异的影响需进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需对与其他候选药物的支持性取证进行深入研究？"
+    ]
+  }
+}

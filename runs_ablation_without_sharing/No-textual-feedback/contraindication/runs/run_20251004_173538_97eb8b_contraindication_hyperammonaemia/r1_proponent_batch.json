@@ -1,0 +1,416 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Hyperammonaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sodium_benzoate",
+          "name": "Sodium Benzoate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_l_carnitine",
+          "name": "L-Carnitine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_arginine",
+          "name": "Arginine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_nitisinone",
+          "name": "Nitisinone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_l_arginine",
+          "name": "L-Arginine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_rifaximin",
+          "name": "Rifaximin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sodium_phenylbutyrate",
+          "name": "Sodium Phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_thiopental",
+          "name": "Thiopental"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_valproate",
+          "name": "Valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_lysine",
+          "name": "Lysine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ammonul",
+          "name": "Ammonul"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_acetylcysteine",
+          "name": "Acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_sodium_benzoate",
+          "type": "Drug",
+          "label": "Sodium Benzoate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_l_carnitine",
+          "type": "Drug",
+          "label": "L-Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_arginine",
+          "type": "Drug",
+          "label": "Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nitisinone",
+          "type": "Drug",
+          "label": "Nitisinone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_l_arginine",
+          "type": "Drug",
+          "label": "L-Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rifaximin",
+          "type": "Drug",
+          "label": "Rifaximin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium Phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thiopental",
+          "type": "Drug",
+          "label": "Thiopental",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_valproate",
+          "type": "Drug",
+          "label": "Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lysine",
+          "type": "Drug",
+          "label": "Lysine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ammonul",
+          "type": "Drug",
+          "label": "Ammonul",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_acetylcysteine",
+          "type": "Drug",
+          "label": "Acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hyperammonaemia",
+          "type": "Disease",
+          "label": "Hyperammonaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_urea_cycle",
+          "type": "Pathway",
+          "label": "Urea Cycle",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_ammonia_metabolism",
+          "type": "Pathway",
+          "label": "Ammonia Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phenotype_metabolic_disorder",
+          "type": "Phenotype",
+          "label": "Metabolic Disorder",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_sodium_benzoate",
+          "target": "n_pathway_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知作用于尿素循环"
+        },
+        {
+          "source": "n_l_carnitine",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于氨代谢调节"
+        },
+        {
+          "source": "n_arginine",
+          "target": "n_pathway_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "尿素循环中的重要中介"
+        },
+        {
+          "source": "n_nitisinone",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可能影响氨的代谢途径"
+        },
+        {
+          "source": "n_l_arginine",
+          "target": "n_pathway_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "尿素循环中重要氨基酸"
+        },
+        {
+          "source": "n_rifaximin",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有助于减少肠道内氨"
+        },
+        {
+          "source": "n_sodium_phenylbutyrate",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于氨的生物转化"
+        },
+        {
+          "source": "n_thiopental",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能与氨代谢有关"
+        },
+        {
+          "source": "n_valproate",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知影响氨的代谢"
+        },
+        {
+          "source": "n_lysine",
+          "target": "n_pathway_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "氨基酸代谢的部分"
+        },
+        {
+          "source": "n_ammonul",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于氨中毒的处理"
+        },
+        {
+          "source": "n_acetylcysteine",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能通过调节氨的代谢"
+        },
+        {
+          "source": "n_pathway_urea_cycle",
+          "target": "n_hyperammonaemia",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "尿素循环障碍导致高氨血症"
+        },
+        {
+          "source": "n_pathway_ammonia_metabolism",
+          "target": "n_hyperammonaemia",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "氨代谢异常造成高氨血症"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_phenotype_metabolic_disorder",
+          "relation": "causes",
+          "weight": 0.95,
+          "agent": "Proponent",
+          "rationale": "高氨血症会导致代谢紊乱"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多条药物通过修复尿素循环及氨代谢途径影响高氨血症",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物都具有一定的靶向能力到达相关组织"
+    ],
+    "uncertainties": [
+      "药效学相互作用需实验证实"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步探索与其他药物组合的潜在互动？"
+    ]
+  }
+}

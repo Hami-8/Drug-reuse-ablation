@@ -1,0 +1,808 @@
+{
+  "input": {
+    "mode": "revise",
+    "query": {
+      "entity": "Lactic acidosis",
+      "relation": "indication"
+    },
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_sodium_bicarbonate",
+          "type": "Drug",
+          "label": "Sodium bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dichloroacetate",
+          "type": "Drug",
+          "label": "Dichloroacetate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_thiamine",
+          "type": "Drug",
+          "label": "Thiamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ethanol",
+          "type": "Drug",
+          "label": "Ethanol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_calcium_carbonate",
+          "type": "Drug",
+          "label": "Calcium carbonate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_l_carnitine",
+          "type": "Drug",
+          "label": "L-carnitine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_hydroxocobalamin",
+          "type": "Drug",
+          "label": "Hydroxocobalamin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rocuronium",
+          "type": "Drug",
+          "label": "Rocuronium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_levocarnitine",
+          "type": "Drug",
+          "label": "Levocarnitine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lactic_acidosis",
+          "type": "Disease",
+          "label": "Lactic acidosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_metabolism",
+          "type": "Pathway",
+          "label": "Metabolism Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_acidosis_response",
+          "type": "Phenotype",
+          "label": "Acidosis Response",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_la",
+          "type": "Disease",
+          "label": "Lactic acidosis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_nabicarb",
+          "type": "Drug",
+          "label": "Sodium bicarbonate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_metformin_rp",
+          "type": "Pathway",
+          "label": "Metformin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_nabicarb_rp",
+          "type": "Pathway",
+          "label": "Sodium Bicarbonate Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dichloroacetate_rp",
+          "type": "Pathway",
+          "label": "Dichloroacetate Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_metformin",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已经用于减轻乳酸酸中毒的机制"
+        },
+        {
+          "source": "n_sodium_bicarbonate",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "典型的乳酸中毒治疗药物"
+        },
+        {
+          "source": "n_dichloroacetate",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与乳酸代谢相关的治疗"
+        },
+        {
+          "source": "n_thiamine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "可能影响乳酸代谢的补充剂"
+        },
+        {
+          "source": "n_insulin",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "在代谢调节中发挥作用"
+        },
+        {
+          "source": "n_ethanol",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "与乳酸积累的潜在交互"
+        },
+        {
+          "source": "n_calcium_carbonate",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于支持酸碱平衡"
+        },
+        {
+          "source": "n_l_carnitine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响脂肪酸代谢，减轻乳酸积累"
+        },
+        {
+          "source": "n_n_acetylcysteine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "抗氧化作用可能间接支持代谢"
+        },
+        {
+          "source": "n_hydroxocobalamin",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能通过糖代谢影响乳酸"
+        },
+        {
+          "source": "n_rocuronium",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "评估中的对比药物"
+        },
+        {
+          "source": "n_levocarnitine",
+          "target": "n_lactic_acidosis",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "潜在的代谢调节作用"
+        },
+        {
+          "source": "n_metformin",
+          "target": "n_la",
+          "relation": "indicated_for",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知与乳酸性酸中毒相关的风险"
+        },
+        {
+          "source": "n_nabicarb",
+          "target": "n_la",
+          "relation": "indicated_for",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能与乳酸性酸中毒的机制相悖"
+        },
+        {
+          "source": "n_dichloroacetate",
+          "target": "n_la",
+          "relation": "indicated_for",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的副作用风险"
+        },
+        {
+          "source": "n_thiamine",
+          "target": "n_la",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "效果不明确，机制存在争议"
+        },
+        {
+          "source": "n_insulin",
+          "target": "n_la",
+          "relation": "indicated_for",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能造成代谢负担问题"
+        },
+        {
+          "source": "n_ethanol",
+          "target": "n_la",
+          "relation": "indicated_for",
+          "weight": 0.55,
+          "agent": "Skeptic",
+          "rationale": "双重影响路径不确定"
+        },
+        {
+          "source": "n_calcium_carbonate",
+          "target": "n_la",
+          "relation": "indicated_for",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "疗效存在争议，可能产生风险"
+        },
+        {
+          "source": "n_l_carnitine",
+          "target": "n_la",
+          "relation": "indicated_for",
+          "weight": 0.45,
+          "agent": "Skeptic",
+          "rationale": "缺乏足够证据支持疗效"
+        },
+        {
+          "source": "n_n_acetylcysteine",
+          "target": "n_la",
+          "relation": "indicated_for",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "风险与效果之间的平衡待验证"
+        },
+        {
+          "source": "n_hydroxocobalamin",
+          "target": "n_la",
+          "relation": "indicated_for",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "副作用可能影响效果"
+        },
+        {
+          "source": "n_rocuronium",
+          "target": "n_la",
+          "relation": "indicated_for",
+          "weight": 0.35,
+          "agent": "Skeptic",
+          "rationale": "对代谢的影响未充分评估"
+        },
+        {
+          "source": "n_levocarnitine",
+          "target": "n_la",
+          "relation": "indicated_for",
+          "weight": 0.3,
+          "agent": "Skeptic",
+          "rationale": "风险尚待明晰"
+        },
+        {
+          "source": "n_la",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在上述风险，将对假设造成重大挑战"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4,
+      "last_scores": [
+        {
+          "hypothesis_id": "H1",
+          "score": 0.24,
+          "components": {
+            "mechanism_fit": 0.4,
+            "class_prior": 0.3,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.2,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.15
+          },
+          "graph_signals": {
+            "support_weight": 2.3,
+            "contradiction_weight": 1.55,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Lactic acidosis treatment",
+                "pro": [
+                  "n_metformin"
+                ],
+                "con": [
+                  "n_la"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Metformin has known mechanisms but has risks of causing lactic acidosis."
+            ],
+            "safety_risk": [
+              "Skeptic points out significant risks associated with Metformin use in lactic acidosis."
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "Lack of clear mechanisms connecting Metformin to alleviating lactic acidosis."
+          ]
+        },
+        {
+          "hypothesis_id": "H2",
+          "score": 0.45,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.7,
+            "indication_plausibility": 0.4,
+            "safety_risk": 0.15,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.3
+          },
+          "graph_signals": {
+            "support_weight": 2.5,
+            "contradiction_weight": 1.5,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Sodium bicarbonate is commonly used to counteract acidosis."
+            ],
+            "indication_plausibility": [
+              "Well-supported clinical use in lactic acidosis treatment."
+            ]
+          },
+          "confidence": "high",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H3",
+          "score": 0.33,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.3,
+            "safety_risk": 0.25,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.3
+          },
+          "graph_signals": {
+            "support_weight": 1.8,
+            "contradiction_weight": 1.2,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Dichloroacetate is involved in lactate metabolism."
+            ],
+            "safety_risk": [
+              "Potential side effects require careful consideration."
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H4",
+          "score": 0.31,
+          "components": {
+            "mechanism_fit": 0.4,
+            "class_prior": 0.3,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.3,
+            "safety_risk": 0.15,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.3
+          },
+          "graph_signals": {
+            "support_weight": 1.7,
+            "contradiction_weight": 1.15,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Thiamine may affect lactate metabolism."
+            ],
+            "indication_plausibility": [
+              "Effects are unclear with potential conflicting evidence."
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H5",
+          "score": 0.27,
+          "components": {
+            "mechanism_fit": 0.4,
+            "class_prior": 0.3,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.2,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.25
+          },
+          "graph_signals": {
+            "support_weight": 1.5,
+            "contradiction_weight": 1.1,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Insulin plays a role in metabolic regulation."
+            ],
+            "safety_risk": [
+              "Issues related to metabolic burden may arise."
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H6",
+          "score": 0.22,
+          "components": {
+            "mechanism_fit": 0.3,
+            "class_prior": 0.3,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.2,
+            "safety_risk": 0.25,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.2
+          },
+          "graph_signals": {
+            "support_weight": 1.3,
+            "contradiction_weight": 1.2,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Ethanol is involved in lactate accumulation."
+            ],
+            "safety_risk": [
+              "Potential interactions complicate efficacy."
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H7",
+          "score": 0.19,
+          "components": {
+            "mechanism_fit": 0.3,
+            "class_prior": 0.2,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.2,
+            "safety_risk": 0.15,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.25
+          },
+          "graph_signals": {
+            "support_weight": 1.1,
+            "contradiction_weight": 1.05,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Calcium carbonate supports acid-base balance."
+            ],
+            "indication_plausibility": [
+              "Effectiveness in acidosis treatment is unclear."
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H8",
+          "score": 0.17,
+          "components": {
+            "mechanism_fit": 0.25,
+            "class_prior": 0.2,
+            "pk_pd_feasibility": 0.35,
+            "indication_plausibility": 0.15,
+            "safety_risk": 0.15,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.25
+          },
+          "graph_signals": {
+            "support_weight": 1.0,
+            "contradiction_weight": 1.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "L-carnitine may influence fatty acid metabolism."
+            ],
+            "indication_plausibility": [
+              "Uncertain benefits for lactic acidosis."
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H9",
+          "score": 0.16,
+          "components": {
+            "mechanism_fit": 0.25,
+            "class_prior": 0.2,
+            "pk_pd_feasibility": 0.3,
+            "indication_plausibility": 0.15,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.25
+          },
+          "graph_signals": {
+            "support_weight": 0.9,
+            "contradiction_weight": 1.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "N-acetylcysteine has antioxidant properties."
+            ],
+            "indication_plausibility": [
+              "Benefits in lactic acidosis treatment are uncertain."
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H10",
+          "score": 0.15,
+          "components": {
+            "mechanism_fit": 0.2,
+            "class_prior": 0.2,
+            "pk_pd_feasibility": 0.25,
+            "indication_plausibility": 0.1,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.2
+          },
+          "graph_signals": {
+            "support_weight": 0.8,
+            "contradiction_weight": 1.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Hydroxocobalamin may influence carbohydrate metabolism."
+            ],
+            "indication_plausibility": [
+              "Lack of direct evidence for efficacy in acidosis."
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H11",
+          "score": 0.14,
+          "components": {
+            "mechanism_fit": 0.2,
+            "class_prior": 0.1,
+            "pk_pd_feasibility": 0.25,
+            "indication_plausibility": 0.1,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.2
+          },
+          "graph_signals": {
+            "support_weight": 0.7,
+            "contradiction_weight": 0.9,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Rocuronium has a temporary effect."
+            ],
+            "indication_plausibility": [
+              "Insufficient evidence for relevance to lactic acidosis."
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H12",
+          "score": 0.13,
+          "components": {
+            "mechanism_fit": 0.2,
+            "class_prior": 0.1,
+            "pk_pd_feasibility": 0.25,
+            "indication_plausibility": 0.1,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.15
+          },
+          "graph_signals": {
+            "support_weight": 0.6,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Levocarnitine has an unclear mechanism."
+            ],
+            "indication_plausibility": [
+              "Efficacy for lactic acidosis is poorly evidenced."
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        }
+      ]
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "revisions": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Metformin use in lactic acidosis",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "add_mechanism_link",
+            "from": "Metformin",
+            "via": [
+              "Metabolism Pathway"
+            ],
+            "to": "Lactic acidosis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ],
+        "debate_focus": [
+          "明确 Metformin 机制与乳酸酸中毒的关系",
+          "Skeptic 提出的风险评估标准与依据"
+        ]
+      }
+    ],
+    "pruned_hypotheses": [],
+    "new_subhypotheses": [],
+    "seed_request": {
+      "should_regenerate": false,
+      "reason": "机制与适应症关联薄弱，已通过补充讨论来探索潜在风险影响。",
+      "n": 4
+    }
+  }
+}

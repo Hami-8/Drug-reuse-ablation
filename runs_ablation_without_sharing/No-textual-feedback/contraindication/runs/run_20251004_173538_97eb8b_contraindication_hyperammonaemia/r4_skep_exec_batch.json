@@ -1,0 +1,704 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Hyperammonaemia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "高氨血症风险",
+            "expectation": "如果 Sodium Benzoate 被证实加重高氨血症，需标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "高氨血症风险",
+            "expectation": "如果 L-Carnitine 被证实加重高氨血症，需标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "高氨血症风险",
+            "expectation": "如果 Arginine 被证实加重高氨血症，需标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_sodium_benzoate",
+          "type": "Drug",
+          "label": "Sodium Benzoate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_l_carnitine",
+          "type": "Drug",
+          "label": "L-Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_arginine",
+          "type": "Drug",
+          "label": "Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nitisinone",
+          "type": "Drug",
+          "label": "Nitisinone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_l_arginine",
+          "type": "Drug",
+          "label": "L-Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rifaximin",
+          "type": "Drug",
+          "label": "Rifaximin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium Phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thiopental",
+          "type": "Drug",
+          "label": "Thiopental",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_valproate",
+          "type": "Drug",
+          "label": "Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lysine",
+          "type": "Drug",
+          "label": "Lysine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ammonul",
+          "type": "Drug",
+          "label": "Ammonul",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_acetylcysteine",
+          "type": "Drug",
+          "label": "Acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hyperammonaemia",
+          "type": "Disease",
+          "label": "Hyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_pathway_urea_cycle",
+          "type": "Pathway",
+          "label": "Urea Cycle",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_ammonia_metabolism",
+          "type": "Pathway",
+          "label": "Ammonia Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phenotype_metabolic_disorder",
+          "type": "Phenotype",
+          "label": "Metabolic Disorder",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_sodium_benzoate",
+          "type": "Target",
+          "label": "OffTargetSodiumBenzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_benzoate",
+          "type": "Pathway",
+          "label": "RiskPathwaySodiumBenzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sodium_benzoate",
+          "type": "Phenotype",
+          "label": "AdverseEffectSodiumBenzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_l_carnitine",
+          "type": "Target",
+          "label": "OffTargetLCarnitine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_l_carnitine",
+          "type": "Pathway",
+          "label": "RiskPathwayLCarnitine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_l_carnitine",
+          "type": "Phenotype",
+          "label": "AdverseEffectLCarnitine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_arginine",
+          "type": "Target",
+          "label": "OffTargetArginine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_arginine",
+          "type": "Pathway",
+          "label": "RiskPathwayArginine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_arginine",
+          "type": "Phenotype",
+          "label": "AdverseEffectArginine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Sodium Benzoate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sodium_benzoate",
+          "type": "Drug",
+          "label": "Sodium Benzoate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "L-Carnitine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_l_carnitine",
+          "type": "Drug",
+          "label": "L-Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Arginine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_arginine",
+          "type": "Drug",
+          "label": "Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Nitisinone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nitisinone",
+          "type": "Drug",
+          "label": "Nitisinone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "L-Arginine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_l_arginine",
+          "type": "Drug",
+          "label": "L-Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Rifaximin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rifaximin",
+          "type": "Drug",
+          "label": "Rifaximin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Sodium Phenylbutyrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium Phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Thiopental",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_thiopental",
+          "type": "Drug",
+          "label": "Thiopental",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Valproate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_valproate",
+          "type": "Drug",
+          "label": "Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Lysine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lysine",
+          "type": "Drug",
+          "label": "Lysine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Ammonul",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ammonul",
+          "type": "Drug",
+          "label": "Ammonul",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Acetylcysteine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_acetylcysteine",
+          "type": "Drug",
+          "label": "Acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_sodium_benzoate",
+          "target": "n_pathway_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知作用于尿素循环"
+        },
+        {
+          "source": "n_l_carnitine",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于氨代谢调节"
+        },
+        {
+          "source": "n_arginine",
+          "target": "n_pathway_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "尿素循环中的重要中介"
+        },
+        {
+          "source": "n_nitisinone",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可能影响氨的代谢途径"
+        },
+        {
+          "source": "n_l_arginine",
+          "target": "n_pathway_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "尿素循环中重要氨基酸"
+        },
+        {
+          "source": "n_rifaximin",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有助于减少肠道内氨"
+        },
+        {
+          "source": "n_sodium_phenylbutyrate",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于氨的生物转化"
+        },
+        {
+          "source": "n_thiopental",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能与氨代谢有关"
+        },
+        {
+          "source": "n_valproate",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知影响氨的代谢"
+        },
+        {
+          "source": "n_lysine",
+          "target": "n_pathway_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "氨基酸代谢的部分"
+        },
+        {
+          "source": "n_ammonul",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于氨中毒的处理"
+        },
+        {
+          "source": "n_acetylcysteine",
+          "target": "n_pathway_ammonia_metabolism",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能通过调节氨的代谢"
+        },
+        {
+          "source": "n_pathway_urea_cycle",
+          "target": "n_hyperammonaemia",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "尿素循环障碍导致高氨血症"
+        },
+        {
+          "source": "n_pathway_ammonia_metabolism",
+          "target": "n_hyperammonaemia",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "氨代谢异常造成高氨血症"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_phenotype_metabolic_disorder",
+          "relation": "causes",
+          "weight": 0.95,
+          "agent": "Proponent",
+          "rationale": "高氨血症会导致代谢紊乱"
+        },
+        {
+          "source": "drug_sodium_benzoate",
+          "target": "n_ot_sodium_benzoate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响肝脏代谢"
+        },
+        {
+          "source": "n_ot_sodium_benzoate",
+          "target": "n_rp_sodium_benzoate",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "干扰氨基酸代谢通路"
+        },
+        {
+          "source": "n_rp_sodium_benzoate",
+          "target": "n_adv_sodium_benzoate",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "可能导致急性或加重高氨血症"
+        },
+        {
+          "source": "n_adv_sodium_benzoate",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "引发对立风险"
+        },
+        {
+          "source": "drug_l_carnitine",
+          "target": "n_ot_l_carnitine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能对能量代谢产生影响"
+        },
+        {
+          "source": "n_ot_l_carnitine",
+          "target": "n_rp_l_carnitine",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与氨代谢有关"
+        },
+        {
+          "source": "n_rp_l_carnitine",
+          "target": "n_adv_l_carnitine",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "加重高氨血症的风险"
+        },
+        {
+          "source": "n_adv_l_carnitine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在的负面影响"
+        },
+        {
+          "source": "drug_arginine",
+          "target": "n_ot_arginine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引起氮代谢紊乱"
+        },
+        {
+          "source": "n_ot_arginine",
+          "target": "n_rp_arginine",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可以影响氨基酸代谢"
+        },
+        {
+          "source": "n_rp_arginine",
+          "target": "n_adv_arginine",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "可能加重或诱发高氨血症"
+        },
+        {
+          "source": "n_adv_arginine",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "存在负面影响的可能性"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "conflict_hotspots": [
+            {
+              "topic": "高氨血症风险",
+              "pro_nodes": [
+                "n_adv_sodium_benzoate"
+              ],
+              "con_nodes": [
+                "n_rp_sodium_benzoate"
+              ],
+              "note": "静脉给药可能导致高氨血症恶化"
+            }
+          ]
+        },
+        "notes": "已完成对 Sodium Benzoate 的安全性压力测试：发现可能加重高氨血症的风险，将以高权重 refutes 边连接到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "Sodium Benzoate 对高氨血症的影响与其他治疗方案存在交叉风险"
+    ]
+  }
+}

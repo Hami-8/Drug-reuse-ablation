@@ -1,0 +1,400 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Generalised pustular psoriasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_secukinumab",
+          "name": "Secukinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ustekinumab",
+          "name": "Ustekinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_brodalumab",
+          "name": "Brodalumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_tildrakizumab",
+          "name": "Tildrakizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_guselkumab",
+          "name": "Guselkumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_apremilast",
+          "name": "Apremilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_acitretin",
+          "name": "Acitretin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_secukinumab",
+          "type": "Drug",
+          "label": "Secukinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ustekinumab",
+          "type": "Drug",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_brodalumab",
+          "type": "Drug",
+          "label": "Brodalumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tildrakizumab",
+          "type": "Drug",
+          "label": "Tildrakizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_guselkumab",
+          "type": "Drug",
+          "label": "Guselkumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_apremilast",
+          "type": "Drug",
+          "label": "Apremilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_acitretin",
+          "type": "Drug",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_tnf_alpha",
+          "type": "Target",
+          "label": "TNF-α",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_inflammation",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_generalised_pustular_psoriasis",
+          "type": "Disease",
+          "label": "Generalised Pustular Psoriasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_adalimumab",
+          "target": "target_tnf_alpha",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "抗TNF-α药物，常用于化脓性脓疱型银屑病"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "target_tnf_alpha",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "抗TNF-α药物，已知对该病有效"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "target_tnf_alpha",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "抗TNF-α药物，能改善皮肤症状"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "target_tnf_alpha",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "可通过干扰炎症通路影响该病"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "target_tnf_alpha",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "作用于IL-12与IL-23通路，降低炎症"
+        },
+        {
+          "source": "drug_brodalumab",
+          "target": "target_tnf_alpha",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过抑制IL-17通路减轻症状"
+        },
+        {
+          "source": "drug_tildrakizumab",
+          "target": "target_tnf_alpha",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过作用于IL-23途径改善症状"
+        },
+        {
+          "source": "drug_guselkumab",
+          "target": "target_tnf_alpha",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过调节炎症反应，改善相关症状"
+        },
+        {
+          "source": "drug_apremilast",
+          "target": "pathway_inflammation",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通过PDE4抑制作用降低炎症"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "pathway_inflammation",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抑制免疫反应，可能改善症状"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "pathway_inflammation",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "免疫抑制，可能对病情有促进作用"
+        },
+        {
+          "source": "drug_acitretin",
+          "target": "pathway_inflammation",
+          "relation": "modulates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可通过调节角质形成细胞作用改善病情"
+        },
+        {
+          "source": "target_tnf_alpha",
+          "target": "pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "TNF-α在炎症通路中的关键作用"
+        },
+        {
+          "source": "pathway_inflammation",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "炎症反应与该疾病密切相关"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过不同机制作用于炎症通路，从而对化脓性脓疱型银屑病产生疗效",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "药物能够有效到达皮肤组织，展现其药理作用"
+    ],
+    "uncertainties": [
+      "不同药物的长期安全性尚待评估"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步探讨其他潜在靶点或药物？"
+    ]
+  }
+}

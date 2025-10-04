@@ -1,0 +1,974 @@
+{
+  "input": {
+    "mode": "score",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_isotretinoin",
+          "name": "Isotretinoin"
+        }
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        }
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_nicotinic_acid",
+          "name": "Nicotinic acid"
+        }
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_thiazide_diuretics",
+          "name": "Thiazide diuretics"
+        }
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        }
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_estrogens",
+          "name": "Estrogens"
+        }
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        }
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_tamoxifen",
+          "name": "Tamoxifen"
+        }
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        }
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_dronedarone",
+          "name": "Dronedarone"
+        }
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_glucocorticoids",
+          "name": "Glucocorticoids"
+        }
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_sitagliptin",
+          "name": "Sitagliptin"
+        }
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_isotretinoin",
+          "type": "Drug",
+          "label": "Isotretinoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nicotinic_acid",
+          "type": "Drug",
+          "label": "Nicotinic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thiazide_diuretics",
+          "type": "Drug",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_estrogens",
+          "type": "Drug",
+          "label": "Estrogens",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tamoxifen",
+          "type": "Drug",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dronedarone",
+          "type": "Drug",
+          "label": "Dronedarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_glucocorticoids",
+          "type": "Drug",
+          "label": "Glucocorticoids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sitagliptin",
+          "type": "Drug",
+          "label": "Sitagliptin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_severe_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_isotretinoin",
+          "type": "Target",
+          "label": "Off-target effects of Isotretinoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_isotretinoin",
+          "type": "Pathway",
+          "label": "Risk pathway for hypertriglyceridemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_isotretinoin",
+          "type": "Phenotype",
+          "label": "Adverse effects in hypertriglyceridemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Isotretinoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_isotretinoin",
+          "type": "Drug",
+          "label": "Isotretinoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Nicotinic acid",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nicotinic_acid",
+          "type": "Drug",
+          "label": "Nicotinic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_thiazide_diuretics",
+          "type": "Drug",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Estrogens",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_estrogens",
+          "type": "Drug",
+          "label": "Estrogens",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_tamoxifen",
+          "type": "Drug",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Dronedarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dronedarone",
+          "type": "Drug",
+          "label": "Dronedarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Glucocorticoids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_glucocorticoids",
+          "type": "Drug",
+          "label": "Glucocorticoids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Sitagliptin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sitagliptin",
+          "type": "Drug",
+          "label": "Sitagliptin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_isotretinoin",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知对高甘油三酯症的潜在影响"
+        },
+        {
+          "source": "n_gemfibrozil",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "主要用于降低甘油三酯水平"
+        },
+        {
+          "source": "n_nicotinic_acid",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知降低甘油三酯，常见应用"
+        },
+        {
+          "source": "n_thiazide_diuretics",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能影响脂质代谢"
+        },
+        {
+          "source": "n_beta_blockers",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "对心血管影响相关联"
+        },
+        {
+          "source": "n_estrogens",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能改善脂质状态"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知可引起高甘油三酯"
+        },
+        {
+          "source": "n_tamoxifen",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "对脂质代谢有影响"
+        },
+        {
+          "source": "n_fibrates",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "直接针对高甘油三酯治疗"
+        },
+        {
+          "source": "n_dronedarone",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响甘油三酯水平"
+        },
+        {
+          "source": "n_glucocorticoids",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知可引起高甘油三酯"
+        },
+        {
+          "source": "n_sitagliptin",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有益于脂质表现"
+        },
+        {
+          "source": "drug_isotretinoin",
+          "target": "n_ot_isotretinoin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知对脂质代谢有负面影响"
+        },
+        {
+          "source": "n_ot_isotretinoin",
+          "target": "n_rp_isotretinoin",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "诱发严重高三酰甘油血症的机制链"
+        },
+        {
+          "source": "n_rp_isotretinoin",
+          "target": "n_adv_isotretinoin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_isotretinoin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若此风险成立，将抵消潜在治疗益处"
+        }
+      ],
+      "round_index": 1
+    },
+    "history": {
+      "round": 1,
+      "last_scores": []
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "scoring_summary": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.18,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.1,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.9,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Hypertriglyceridaemia risk",
+              "pro": [
+                "n_isotretinoin"
+              ],
+              "con": [
+                "n_adv_isotretinoin"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "已知对高甘油三酯症有潜在影响，但也存在负面作用"
+          ],
+          "safety_risk": [
+            "存在明显的潜在风险链导致严重高甘油三酯血症"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "图中对 Isotretinoin 的机制描述较复杂，需进一步验证"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.58,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.8,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 3,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "主要用于降低甘油三酯水平，证据充分"
+          ],
+          "safety_risk": [
+            "没有明显的安全性反对证据"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.54,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "已知降低甘油三酯，常见应用"
+          ],
+          "safety_risk": [
+            "没有显著安全性警示"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.32,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.2,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "可能影响脂质代谢，但证据不强"
+          ],
+          "safety_risk": [
+            "不确定性较高，需更多数据"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏更明确的机制关联"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.38,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.3,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "对心血管影响相关联，但对甘油三酯水平的直接作用不明确"
+          ],
+          "safety_risk": [
+            "风险程度需要评估"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏足够支持降脂效果的证据"
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.49,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "可能改善脂质状态，证据一般"
+          ],
+          "safety_risk": [
+            "较少的安全性问题指向"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏更多直接关联数据"
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.26,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.3,
+          "safety_risk": 0.6,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "已知可能导致脂质代谢问题"
+          ],
+          "safety_risk": [
+            "高甘油三酯风险，支持弱但潜在增加伤害"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.35,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.3,
+          "indication_plausibility": 0.2,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "对脂质代谢有影响，但支持有限"
+          ],
+          "safety_risk": [
+            "可能存在风险，提高高甘油三酯可能性"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.68,
+        "components": {
+          "mechanism_fit": 0.9,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.8,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "直接针对高甘油三酯治疗，证据充分"
+          ],
+          "safety_risk": [
+            "没有明显的风险证据"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.4,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "可能影响甘油三酯水平，但证实较少"
+          ],
+          "safety_risk": [
+            "缺乏对高甘油三酯血症的直接应用证据"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.29,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.3,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "对脂质代谢有一定影响，但不明确"
+          ],
+          "safety_risk": [
+            "存在风险，但数据有限"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.2,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.2,
+          "safety_risk": 0.6,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.2
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "已有的一些研究表明可能有一定影响"
+          ],
+          "safety_risk": [
+            "安全性考虑要求进一步分析"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      }
+    ],
+    "ranking": [
+      "H2",
+      "H9",
+      "H3",
+      "H5",
+      "H6",
+      "H4",
+      "H8",
+      "H10",
+      "H11",
+      "H7",
+      "H1",
+      "H12"
+    ],
+    "delta_since_last_round": 0.0,
+    "stop_decision": {
+      "should_stop": false,
+      "reasons": []
+    }
+  }
+}

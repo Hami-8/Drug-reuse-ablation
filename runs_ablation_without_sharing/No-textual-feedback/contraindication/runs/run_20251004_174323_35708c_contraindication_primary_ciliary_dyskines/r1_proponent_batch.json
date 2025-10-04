@@ -1,0 +1,360 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_ketorolac",
+          "name": "Ketorolac"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_diclofenac",
+          "name": "Diclofenac"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_celecoxib",
+          "name": "Celecoxib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_indomethacin",
+          "name": "Indomethacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_acetaminophen",
+          "name": "Acetaminophen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_meloxicam",
+          "name": "Meloxicam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_piroxicam",
+          "name": "Piroxicam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_sulfinpyrazone",
+          "name": "Sulfinpyrazone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_mefenamic_acid",
+          "name": "Mefenamic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ketorolac",
+          "type": "Drug",
+          "label": "Ketorolac",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_naproxen",
+          "type": "Drug",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_diclofenac",
+          "type": "Drug",
+          "label": "Diclofenac",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_celecoxib",
+          "type": "Drug",
+          "label": "Celecoxib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_indomethacin",
+          "type": "Drug",
+          "label": "Indomethacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_acetaminophen",
+          "type": "Drug",
+          "label": "Acetaminophen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_meloxicam",
+          "type": "Drug",
+          "label": "Meloxicam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_piroxicam",
+          "type": "Drug",
+          "label": "Piroxicam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sulfinpyrazone",
+          "type": "Drug",
+          "label": "Sulfinpyrazone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mefenamic_acid",
+          "type": "Drug",
+          "label": "Mefenamic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_primary_ciliary_dyskinesia",
+          "type": "Disease",
+          "label": "Primary ciliary dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "contraindication",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "常见药物已知对该疾病可能存在不良反应"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "contraindication",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "同类药物可能有类似机制"
+        },
+        {
+          "source": "drug_ketorolac",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "NSAIDs 可能加重症状"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "同类药理作用推测"
+        },
+        {
+          "source": "drug_diclofenac",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药理机制推测可能相关"
+        },
+        {
+          "source": "drug_celecoxib",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知影响气道反应性"
+        },
+        {
+          "source": "drug_indomethacin",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可能有减弱黏膜分泌作用的风险"
+        },
+        {
+          "source": "drug_acetaminophen",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "有人提及对呼吸道的潜在影响"
+        },
+        {
+          "source": "drug_meloxicam",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "NSAID 可能加重某些症状"
+        },
+        {
+          "source": "drug_piroxicam",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "相关副作用尚待进一步验证"
+        },
+        {
+          "source": "drug_sulfinpyrazone",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "类药物或有类似风险"
+        },
+        {
+          "source": "drug_mefenamic_acid",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "潜在的心脏和呼吸系统影响"
+        }
+      ]
+    },
+    "subconclusions": [],
+    "assumptions": [
+      "各药物对该疾病的影响尚需进一步的实验证据"
+    ],
+    "uncertainties": [
+      "药物对具体症状的潜在影响尚不明确"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步探索不同药物之间的相互作用"
+    ]
+  }
+}

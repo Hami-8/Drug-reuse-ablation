@@ -1,0 +1,421 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_tamoxifen",
+          "name": "Tamoxifen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_calcineurin_inhibitors",
+          "name": "Calcineurin inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_eculizumab",
+          "name": "Eculizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_vincristine",
+          "name": "Vincristine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_interferon_alpha",
+          "name": "Interferon-alpha"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tamoxifen",
+          "type": "Drug",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_calcineurin_inhibitors",
+          "type": "Drug",
+          "label": "Calcineurin inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vincristine",
+          "type": "Drug",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_primary_membranoproliferative_glomerulonephritis",
+          "type": "Disease",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_cd20",
+          "type": "Target",
+          "label": "CD20",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_b_cell_depletion",
+          "type": "Pathway",
+          "label": "B Cell Depletion Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_improved_renal_function",
+          "type": "Phenotype",
+          "label": "Improved Renal Function",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_rituximab",
+          "target": "target_cd20",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Rituximab targets CD20 on B cells."
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "target_cd20",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Cyclophosphamide has immunosuppressive effects potentially impacting B cells."
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "target_cd20",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Mycophenolate mofetil modulates immune responses affecting B cells."
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "target_cd20",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Azathioprine is an immunosuppressant affecting B cell activity."
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "target_cd20",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Prednisone has general immunosuppressive properties."
+        },
+        {
+          "source": "drug_eculizumab",
+          "target": "target_cd20",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Eculizumab is used for conditions involving complement-mediated damage."
+        },
+        {
+          "source": "drug_tamoxifen",
+          "target": "target_cd20",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Tamoxifen may affect immune modulation."
+        },
+        {
+          "source": "drug_calcineurin_inhibitors",
+          "target": "target_cd20",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Calcineurin inhibitors suppress T-cell activation, influencing B cells indirectly."
+        },
+        {
+          "source": "target_cd20",
+          "target": "pathway_b_cell_depletion",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "CD20 is essential in B-cell depletion pathways."
+        },
+        {
+          "source": "pathway_b_cell_depletion",
+          "target": "disease_primary_membranoproliferative_glomerulonephritis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "B-cell depletion can alter disease progression."
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "phenotype_improved_renal_function",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Rituximab is linked to improved renal outcomes."
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "phenotype_improved_renal_function",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Cyclophosphamide can improve renal function in glomerulonephritis."
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "phenotype_improved_renal_function",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Mycophenolate improves renal outcomes."
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "phenotype_improved_renal_function",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Azathioprine may contribute to improved renal function."
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "phenotype_improved_renal_function",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Prednisone may provide symptomatic relief."
+        },
+        {
+          "source": "drug_eculizumab",
+          "target": "phenotype_improved_renal_function",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Eculizumab may help in certain renal conditions."
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "Rituximab and other drugs may improve renal outcomes in Primary membranoproliferative glomerulonephritis via B-cell modulation.",
+        "confidence": "medium"
+      },
+      {
+        "id": "C2",
+        "text": "B cell depletion is a key pathway affecting the progression of Primary membranoproliferative glomerulonephritis.",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物可有效到达肾脏等相关组织"
+    ],
+    "uncertainties": [
+      "不同药物之间的具体疗效及副作用需进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "是否需要更详细的疾病相关通路分析？"
+    ]
+  }
+}

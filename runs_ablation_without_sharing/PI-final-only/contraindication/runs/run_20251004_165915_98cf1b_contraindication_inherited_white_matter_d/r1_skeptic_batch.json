@@ -1,0 +1,382 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Inherited white matter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_clonazepam",
+          "name": "Clonazepam"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_valproic_acid",
+          "name": "Valproic Acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_primidone",
+          "name": "Primidone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lithium",
+          "name": "Lithium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_antidepressants",
+          "name": "Antidepressants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_antipsychotics",
+          "name": "Antipsychotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_chlordiazepoxide",
+          "name": "Chlordiazepoxide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_benzodiazepines",
+          "name": "Benzodiazepines"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_thioridazine",
+          "name": "Thioridazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_sodium_oxybate",
+          "name": "Sodium Oxybate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_cns_effect",
+          "type": "Pathway",
+          "label": "CNS Depression Risk",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adverse_effect",
+          "type": "Phenotype",
+          "label": "Exacerbated White Matter Disorders",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_clonazepam",
+          "target": "n_cns_effect",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知催眠作用导致中枢神经抑制"
+        },
+        {
+          "source": "drug_clonazepam",
+          "target": "n_adverse_effect",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "抑制作用可能加重白质病变"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_cns_effect",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "同类药物，引发中枢神经抑制"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_adverse_effect",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "加重已有病症的风险"
+        },
+        {
+          "source": "drug_valproic_acid",
+          "target": "n_cns_effect",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "同样引起中枢抑制"
+        },
+        {
+          "source": "drug_valproic_acid",
+          "target": "n_adverse_effect",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致预期外的病理变化"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "n_cns_effect",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "已知中枢抑制作用"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "n_adverse_effect",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能对现有白质问题产生负面影响"
+        },
+        {
+          "source": "drug_primidone",
+          "target": "n_cns_effect",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "引发中枢神经抑制的潜在机制"
+        },
+        {
+          "source": "drug_primidone",
+          "target": "n_adverse_effect",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在对白质损害的加重"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "n_cns_effect",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响神经传导，可能加重症状"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "n_adverse_effect",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "与当前病症的不良交互"
+        },
+        {
+          "source": "drug_antidepressants",
+          "target": "n_cns_effect",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致情绪促进对症状的反弹"
+        },
+        {
+          "source": "drug_antidepressants",
+          "target": "n_adverse_effect",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "提及已有白质病的伴随症状加重"
+        },
+        {
+          "source": "drug_antipsychotics",
+          "target": "n_cns_effect",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "对中枢神经的影响"
+        },
+        {
+          "source": "drug_antipsychotics",
+          "target": "n_adverse_effect",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "加重已有白质病症"
+        },
+        {
+          "source": "drug_chlordiazepoxide",
+          "target": "n_cns_effect",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "抑制中枢神经活动"
+        },
+        {
+          "source": "drug_chlordiazepoxide",
+          "target": "n_adverse_effect",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "可能加重相关症状"
+        },
+        {
+          "source": "drug_benzodiazepines",
+          "target": "n_cns_effect",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "已知风险，抑制中枢神经"
+        },
+        {
+          "source": "drug_benzodiazepines",
+          "target": "n_adverse_effect",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "加重白质相关症状"
+        },
+        {
+          "source": "drug_thioridazine",
+          "target": "n_cns_effect",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "对中枢神经有抑制作用"
+        },
+        {
+          "source": "drug_thioridazine",
+          "target": "n_adverse_effect",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "导致已有病症的加重"
+        },
+        {
+          "source": "drug_sodium_oxybate",
+          "target": "n_cns_effect",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "抑制神经活动"
+        },
+        {
+          "source": "drug_sodium_oxybate",
+          "target": "n_adverse_effect",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "风险考量可能性加重"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "Drug Safety in Inherited White Matter Disorders",
+          "pro_nodes": [
+            "n_cns_effect"
+          ],
+          "con_nodes": [
+            "n_adverse_effect"
+          ],
+          "note": "中枢神经抑制与白质病症加重之间的直接冲突"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "现有证据支持部分药物仍在特定期间内使用，使用时需谨慎监督",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "某些患者可能在短期内有可接受的治疗响应，但长期使用风险未明",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "中心性药物的安全性对于白质疾病患者的充分数据是否足够",
+      "每种药物对白质结构的具体影响是否得到了充分理解"
+    ],
+    "falsification_tests": [
+      "临床研究是否显示特定药物的长期使用与白质病患者的进展相关",
+      "是否有证据表明短期使用不会导致不良长期效果"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供损害与效益的详细对比资料",
+      "审查已知冲突及边际效益的文献"
+    ]
+  }
+}

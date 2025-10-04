@@ -1,0 +1,406 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Familial cerebral small vessel disease",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_acenocoumarol",
+          "name": "Acenocoumarol"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_clopidogrel",
+          "name": "Clopidogrel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_dipyridamole",
+          "name": "Dipyridamole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_heparin",
+          "name": "Heparin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_warfarin",
+          "name": "Warfarin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_methylprednisolone",
+          "name": "Methylprednisolone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_rosuvastatin",
+          "name": "Rosuvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_target_1",
+          "type": "Target",
+          "label": "Factor X",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_2",
+          "type": "Target",
+          "label": "Cyclooxygenase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_3",
+          "type": "Target",
+          "label": "P2Y12 receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_4",
+          "type": "Target",
+          "label": "Adenosine Uptake Inhibitor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_5",
+          "type": "Target",
+          "label": "Thrombin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_1",
+          "type": "Pathway",
+          "label": "Coagulation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_2",
+          "type": "Pathway",
+          "label": "Anti-inflammatory Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease",
+          "type": "Disease",
+          "label": "Familial cerebral small vessel disease",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_acenocoumarol",
+          "target": "n_target_1",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗凝血药物作用于凝血因子"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_target_2",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "阿司匹林抑制COX，减少血栓形成"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_target_3",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "克拉吡格雷针对P2Y12受体，影响血小板聚集"
+        },
+        {
+          "source": "drug_dipyridamole",
+          "target": "n_target_4",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过调节腺苷的作用，形成抗凝和抗炎机制"
+        },
+        {
+          "source": "drug_heparin",
+          "target": "n_target_5",
+          "relation": "inhibits",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "肝素通过直接抑制 thrombin 施加抗凝作用"
+        },
+        {
+          "source": "n_target_1",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响凝血通路"
+        },
+        {
+          "source": "n_target_2",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "影响抗炎通路"
+        },
+        {
+          "source": "n_target_3",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与血小板聚集相关的通路"
+        },
+        {
+          "source": "n_pathway_1",
+          "target": "n_disease",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "凝血机制影响小血管病变"
+        },
+        {
+          "source": "n_pathway_2",
+          "target": "n_disease",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗炎机制可能与疾病病理相关"
+        },
+        {
+          "source": "drug_acenocoumarol",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过抗凝路径影响疾病"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "通过抗炎作用支持疾病关联"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "抗血小板机制对疾病影响"
+        },
+        {
+          "source": "drug_dipyridamole",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "调节腺苷作用影响病理"
+        },
+        {
+          "source": "drug_heparin",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "直接抗凝机制影响小血管病"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "通过抗凝机制影响疾病"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗炎作用可能影响疾病发展"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗炎作用与疾病相关"
+        },
+        {
+          "source": "drug_methylprednisolone",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能通过免疫调节影响病理"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能对免疫和炎症有影响"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "免疫抑制可能影响疾病"
+        },
+        {
+          "source": "drug_rosuvastatin",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能通过代谢机制影响疾病路径"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多个抗凝药物与炎症机制通过靶向不同通路影响小血管病",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物可有效到达相关组织并发挥作用"
+    ],
+    "uncertainties": [
+      "药物对疾病长期影响尚不明确（需后续验证）"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步明确第二条与新靶点或通路的关系"
+    ]
+  }
+}

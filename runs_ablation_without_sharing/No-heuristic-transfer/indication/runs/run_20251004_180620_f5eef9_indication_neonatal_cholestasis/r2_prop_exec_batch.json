@@ -1,0 +1,606 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_ursodeoxycholic_acid",
+            "via": [
+              "n_target_1",
+              "n_pathway_1"
+            ],
+            "to": "neonatal_cholestasis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_cholestyramine",
+            "via": [
+              "n_target_1",
+              "n_pathway_2"
+            ],
+            "to": "neonatal_cholestasis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_ursodeoxycholic_acid",
+          "type": "Drug",
+          "label": "Ursodeoxycholic Acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clofenotune",
+          "type": "Drug",
+          "label": "Clofenotune",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampin",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metronidazole",
+          "type": "Drug",
+          "label": "Metronidazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_naltrexone",
+          "type": "Drug",
+          "label": "Naltrexone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_silymarin",
+          "type": "Drug",
+          "label": "Silymarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-Acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vitamin_e",
+          "type": "Drug",
+          "label": "Vitamin E",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lactulose",
+          "type": "Drug",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "neonatal_cholestasis",
+          "type": "Disease",
+          "label": "Neonatal Cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_1",
+          "type": "Target",
+          "label": "Bile Acid Transporter",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_1",
+          "type": "Pathway",
+          "label": "Bile Acid Secretion Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_2",
+          "type": "Target",
+          "label": "Liver Enzyme Modulator",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_2",
+          "type": "Pathway",
+          "label": "Detoxification Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_ursodeoxycholic_acid",
+          "type": "Target",
+          "label": "OffTarget_UrsodeoxycholicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ursodeoxycholic_acid",
+          "type": "Pathway",
+          "label": "RiskPathway_UrsodeoxycholicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ursodeoxycholic_acid",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_UrsodeoxycholicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cholestyramine",
+          "type": "Target",
+          "label": "OffTarget_Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cholestyramine",
+          "type": "Pathway",
+          "label": "RiskPathway_Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cholestyramine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "ursodeoxycholic acid",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "cholestyramine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "clofenotune",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "rifampin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "metronidazole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "naltrexone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "silymarin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "n-acetylcysteine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "fenofibrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "vitamin E",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "lactulose",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "n_target_1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于改善胆汁酸排泄"
+        },
+        {
+          "source": "n_target_1",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与胆汁酸通路相关"
+        },
+        {
+          "source": "n_pathway_1",
+          "target": "neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响胆汁排泄与病症关联"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_target_1",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于降低胆汁酸吸收"
+        },
+        {
+          "source": "n_target_1",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "影响胆汁酸通路与解毒通路"
+        },
+        {
+          "source": "n_pathway_2",
+          "target": "neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "解毒机制与病理有关"
+        },
+        {
+          "source": "drug_clofenotune",
+          "target": "n_target_2",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "具有调节肝酶的可能作用"
+        },
+        {
+          "source": "drug_rifampin",
+          "target": "n_target_2",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗生素，有可能对胆汁代谢有影响"
+        },
+        {
+          "source": "drug_metronidazole",
+          "target": "n_target_2",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "其他药物对胆汁代谢可能的调节"
+        },
+        {
+          "source": "drug_naltrexone",
+          "target": "n_target_2",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响肝功能"
+        },
+        {
+          "source": "drug_silymarin",
+          "target": "n_target_2",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "已知有保护肝脏的潜力"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "n_target_2",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能影响解毒通路的药物"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "n_target_2",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "降低胆固醇，对胆汁合成的间接影响"
+        },
+        {
+          "source": "drug_vitamin_e",
+          "target": "n_target_2",
+          "relation": "acts_on",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "可能对肝脏健康有积极作用"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_target_2",
+          "relation": "acts_on",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "具有抗炎作用，对肝脏有潜在益处"
+        },
+        {
+          "source": "drug_lactulose",
+          "target": "n_target_2",
+          "relation": "acts_on",
+          "weight": 0.25,
+          "agent": "Proponent",
+          "rationale": "可能通过改善肠道环境帮助肝脏功能"
+        },
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "n_ot_ursodeoxycholic_acid",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_ursodeoxycholic_acid",
+          "target": "n_rp_ursodeoxycholic_acid",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路参与"
+        },
+        {
+          "source": "n_rp_ursodeoxycholic_acid",
+          "target": "n_adv_ursodeoxycholic_acid",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_ursodeoxycholic_acid",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消预期益处"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_ot_cholestyramine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_cholestyramine",
+          "target": "n_rp_cholestyramine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路参与"
+        },
+        {
+          "source": "n_rp_cholestyramine",
+          "target": "n_adv_cholestyramine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_cholestyramine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消预期益处"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_ursodeoxycholic_acid",
+              "target": "n_target_1",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "常用于改善胆汁酸排泄"
+            },
+            {
+              "source": "n_target_1",
+              "target": "n_pathway_1",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "与胆汁酸通路相关"
+            },
+            {
+              "source": "n_pathway_1",
+              "target": "neonatal_cholestasis",
+              "relation": "causes",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "影响胆汁排泄与病症关联"
+            },
+            {
+              "source": "drug_cholestyramine",
+              "target": "n_target_1",
+              "relation": "acts_on",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "用于降低胆汁酸吸收"
+            },
+            {
+              "source": "n_target_1",
+              "target": "n_pathway_2",
+              "relation": "involved_in",
+              "weight": 0.65,
+              "agent": "Proponent",
+              "rationale": "影响胆汁酸通路与解毒通路"
+            },
+            {
+              "source": "n_pathway_2",
+              "target": "neonatal_cholestasis",
+              "relation": "causes",
+              "weight": 0.55,
+              "agent": "Proponent",
+              "rationale": "解毒机制与病理有关"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→Target→Pathway→Disease，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

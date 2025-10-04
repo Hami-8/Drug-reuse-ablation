@@ -1,0 +1,837 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_acebutolol",
+          "name": "Acebutolol"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_atenolol",
+          "name": "Atenolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_bromocriptine",
+          "name": "Bromocriptine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_clonidine",
+          "name": "Clonidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_dopamine",
+          "name": "Dopamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_epinephrine",
+          "name": "Epinephrine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_ipratropium",
+          "name": "Ipratropium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_propranolol",
+          "name": "Propranolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_sotalol",
+          "name": "Sotalol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_verapamil",
+          "name": "Verapamil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_acebutolol",
+          "type": "Target",
+          "label": "OffTarget_Acebutolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_acebutolol",
+          "type": "Pathway",
+          "label": "RiskPathway_Acebutolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_acebutolol",
+          "type": "Phenotype",
+          "label": "AdverseEffects_Acebutolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "OffTarget_Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_amiodarone",
+          "type": "Pathway",
+          "label": "RiskPathway_Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_amiodarone",
+          "type": "Phenotype",
+          "label": "AdverseEffects_Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_atenolol",
+          "type": "Target",
+          "label": "OffTarget_Atenolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_atenolol",
+          "type": "Pathway",
+          "label": "RiskPathway_Atenolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_atenolol",
+          "type": "Phenotype",
+          "label": "AdverseEffects_Atenolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bromocriptine",
+          "type": "Target",
+          "label": "OffTarget_Bromocriptine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bromocriptine",
+          "type": "Pathway",
+          "label": "RiskPathway_Bromocriptine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bromocriptine",
+          "type": "Phenotype",
+          "label": "AdverseEffects_Bromocriptine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clonidine",
+          "type": "Target",
+          "label": "OffTarget_Clonidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_clonidine",
+          "type": "Pathway",
+          "label": "RiskPathway_Clonidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clonidine",
+          "type": "Phenotype",
+          "label": "AdverseEffects_Clonidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dopamine",
+          "type": "Target",
+          "label": "OffTarget_Dopamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dopamine",
+          "type": "Pathway",
+          "label": "RiskPathway_Dopamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dopamine",
+          "type": "Phenotype",
+          "label": "AdverseEffects_Dopamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_epinephrine",
+          "type": "Target",
+          "label": "OffTarget_Epinephrine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_epinephrine",
+          "type": "Pathway",
+          "label": "RiskPathway_Epinephrine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_epinephrine",
+          "type": "Phenotype",
+          "label": "AdverseEffects_Epinephrine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ipratropium",
+          "type": "Target",
+          "label": "OffTarget_Ipratropium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ipratropium",
+          "type": "Pathway",
+          "label": "RiskPathway_Ipratropium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ipratropium",
+          "type": "Phenotype",
+          "label": "AdverseEffects_Ipratropium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_propranolol",
+          "type": "Target",
+          "label": "OffTarget_Propranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_propranolol",
+          "type": "Pathway",
+          "label": "RiskPathway_Propranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_propranolol",
+          "type": "Phenotype",
+          "label": "AdverseEffects_Propranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_quinidine",
+          "type": "Target",
+          "label": "OffTarget_Quinidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_quinidine",
+          "type": "Pathway",
+          "label": "RiskPathway_Quinidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_quinidine",
+          "type": "Phenotype",
+          "label": "AdverseEffects_Quinidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sotalol",
+          "type": "Target",
+          "label": "OffTarget_Sotalol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sotalol",
+          "type": "Pathway",
+          "label": "RiskPathway_Sotalol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sotalol",
+          "type": "Phenotype",
+          "label": "AdverseEffects_Sotalol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_verapamil",
+          "type": "Target",
+          "label": "OffTarget_Verapamil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_verapamil",
+          "type": "Pathway",
+          "label": "RiskPathway_Verapamil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_verapamil",
+          "type": "Phenotype",
+          "label": "AdverseEffects_Verapamil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_acebutolol",
+          "target": "n_ot_acebutolol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肺功能下降"
+        },
+        {
+          "source": "n_ot_acebutolol",
+          "target": "n_rp_acebutolol",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "临床使用需考虑"
+        },
+        {
+          "source": "n_rp_acebutolol",
+          "target": "n_adv_acebutolol",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发严重副作用"
+        },
+        {
+          "source": "n_adv_acebutolol",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "假设将被验证为不成立"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在影响气道平滑肌"
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp_amiodarone",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能增加肺损伤风险"
+        },
+        {
+          "source": "n_rp_amiodarone",
+          "target": "n_adv_amiodarone",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "与病情相悖"
+        },
+        {
+          "source": "n_adv_amiodarone",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "假设将被验证为不成立"
+        },
+        {
+          "source": "drug_atenolol",
+          "target": "n_ot_atenolol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致支气管收缩"
+        },
+        {
+          "source": "n_ot_atenolol",
+          "target": "n_rp_atenolol",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "对呼吸功能影响"
+        },
+        {
+          "source": "n_rp_atenolol",
+          "target": "n_adv_atenolol",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良反应"
+        },
+        {
+          "source": "n_adv_atenolol",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "假设将被验证为不成立"
+        },
+        {
+          "source": "drug_bromocriptine",
+          "target": "n_ot_bromocriptine",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能引发呼吸道并发症"
+        },
+        {
+          "source": "n_ot_bromocriptine",
+          "target": "n_rp_bromocriptine",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "影响气道清除"
+        },
+        {
+          "source": "n_rp_bromocriptine",
+          "target": "n_adv_bromocriptine",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能导致急性加重"
+        },
+        {
+          "source": "n_adv_bromocriptine",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "假设将被验证为不成立"
+        },
+        {
+          "source": "drug_clonidine",
+          "target": "n_ot_clonidine",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能引起呼吸抑制"
+        },
+        {
+          "source": "n_ot_clonidine",
+          "target": "n_rp_clonidine",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "对肺功能的影响"
+        },
+        {
+          "source": "n_rp_clonidine",
+          "target": "n_adv_clonidine",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用"
+        },
+        {
+          "source": "n_adv_clonidine",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "假设将被验证为不成立"
+        },
+        {
+          "source": "drug_dopamine",
+          "target": "n_ot_dopamine",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可影响呼吸道通气"
+        },
+        {
+          "source": "n_ot_dopamine",
+          "target": "n_rp_dopamine",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能导致支气管收缩"
+        },
+        {
+          "source": "n_rp_dopamine",
+          "target": "n_adv_dopamine",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应"
+        },
+        {
+          "source": "n_adv_dopamine",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "假设将被验证为不成立"
+        },
+        {
+          "source": "drug_epinephrine",
+          "target": "n_ot_epinephrine",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "激活交感神经系统"
+        },
+        {
+          "source": "n_ot_epinephrine",
+          "target": "n_rp_epinephrine",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "影响气道功能"
+        },
+        {
+          "source": "n_rp_epinephrine",
+          "target": "n_adv_epinephrine",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能引发副反应"
+        },
+        {
+          "source": "n_adv_epinephrine",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "假设将被验证为不成立"
+        },
+        {
+          "source": "drug_ipratropium",
+          "target": "n_ot_ipratropium",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致气道阻塞"
+        },
+        {
+          "source": "n_ot_ipratropium",
+          "target": "n_rp_ipratropium",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能加重症状"
+        },
+        {
+          "source": "n_rp_ipratropium",
+          "target": "n_adv_ipratropium",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "引发危害"
+        },
+        {
+          "source": "n_adv_ipratropium",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "假设将被验证为不成立"
+        },
+        {
+          "source": "drug_propranolol",
+          "target": "n_ot_propranolol",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "对气道有抑制作用"
+        },
+        {
+          "source": "n_ot_propranolol",
+          "target": "n_rp_propranolol",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能产生不良反应"
+        },
+        {
+          "source": "n_rp_propranolol",
+          "target": "n_adv_propranolol",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能加重病情"
+        },
+        {
+          "source": "n_adv_propranolol",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "假设将被验证为不成立"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "n_ot_quinidine",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响气道畅通"
+        },
+        {
+          "source": "n_ot_quinidine",
+          "target": "n_rp_quinidine",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "潜在对呼吸系统的影响"
+        },
+        {
+          "source": "n_rp_quinidine",
+          "target": "n_adv_quinidine",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能加重疾病"
+        },
+        {
+          "source": "n_adv_quinidine",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "假设将被验证为不成立"
+        },
+        {
+          "source": "drug_sotalol",
+          "target": "n_ot_sotalol",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "对心肺功能有不利影响"
+        },
+        {
+          "source": "n_ot_sotalol",
+          "target": "n_rp_sotalol",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良状态"
+        },
+        {
+          "source": "n_rp_sotalol",
+          "target": "n_adv_sotalol",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能引发并发症"
+        },
+        {
+          "source": "n_adv_sotalol",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "假设将被验证为不成立"
+        },
+        {
+          "source": "drug_verapamil",
+          "target": "n_ot_verapamil",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能引起支气管收缩"
+        },
+        {
+          "source": "n_ot_verapamil",
+          "target": "n_rp_verapamil",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "对呼吸功能影响明显"
+        },
+        {
+          "source": "n_rp_verapamil",
+          "target": "n_adv_verapamil",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重并发症"
+        },
+        {
+          "source": "n_adv_verapamil",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "假设将被验证为不成立"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "以上药物对呼吸功能影响是否充分理解",
+      "是否存在替代的安全治疗方案"
+    ],
+    "falsification_tests": [
+      "是否有研究确认以上药物对ciliary dysfunction患者的明确禁忌",
+      "是否可以证明这些药物不产生长期的不良反应"
+    ],
+    "next_focus_for_pi": [
+      "审查每种药物的安全性及指定禁忌的具体证据",
+      "要求针对呼吸系统的影响提供详细数据"
+    ]
+  }
+}

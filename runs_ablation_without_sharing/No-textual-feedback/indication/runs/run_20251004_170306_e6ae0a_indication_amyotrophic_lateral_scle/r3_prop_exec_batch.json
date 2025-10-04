@@ -1,0 +1,623 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Amyotrophic lateral sclerosis or motor neuron disease",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_riluzole",
+            "via": [
+              "target_glutamate_receptor",
+              "pathway_glutamate_signaling"
+            ],
+            "to": "phenotype_muscle_weakness",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_edaraone",
+            "via": [
+              "target_glutamate_receptor",
+              "pathway_glutamate_signaling"
+            ],
+            "to": "phenotype_muscle_weakness",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_riluzole",
+          "type": "Drug",
+          "label": "Riluzole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_edaraone",
+          "type": "Drug",
+          "label": "Edaravone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nuedexta",
+          "type": "Drug",
+          "label": "Nuedexta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amx0035",
+          "type": "Drug",
+          "label": "AMX0035",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tafamidis",
+          "type": "Drug",
+          "label": "Tafamidis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_baclofen",
+          "type": "Drug",
+          "label": "Baclofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dextromethorphan",
+          "type": "Drug",
+          "label": "Dextromethorphan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tizanidine",
+          "type": "Drug",
+          "label": "Tizanidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lacosamide",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_piracetam",
+          "type": "Drug",
+          "label": "Piracetam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_levetiracetam",
+          "type": "Drug",
+          "label": "Levetiracetam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_glutamate_receptor",
+          "type": "Target",
+          "label": "Glutamate Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_glutamate_signaling",
+          "type": "Pathway",
+          "label": "Glutamate Signaling Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_muscle_weakness",
+          "type": "Phenotype",
+          "label": "Muscle Weakness",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_spasticity",
+          "type": "Phenotype",
+          "label": "Spasticity",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_riluzole",
+          "type": "Target",
+          "label": "OffTarget_Riluzole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_riluzole",
+          "type": "Pathway",
+          "label": "RiskPathway_Riluzole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_riluzole",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Riluzole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_edav",
+          "type": "Target",
+          "label": "OffTarget_Edaravone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_edav",
+          "type": "Pathway",
+          "label": "RiskPathway_Edaravone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_edav",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Edaravone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nuedexta",
+          "type": "Target",
+          "label": "OffTarget_Nuedexta",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nuedexta",
+          "type": "Pathway",
+          "label": "RiskPathway_Nuedexta",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nuedexta",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Nuedexta",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_riluzole",
+          "target": "target_glutamate_receptor",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知靶向谷氨酸受体的药理作用"
+        },
+        {
+          "source": "target_glutamate_receptor",
+          "target": "pathway_glutamate_signaling",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "谷氨酸信号通路与运动神经元病相关"
+        },
+        {
+          "source": "pathway_glutamate_signaling",
+          "target": "phenotype_muscle_weakness",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通路影响表现型"
+        },
+        {
+          "source": "drug_edaraone",
+          "target": "target_glutamate_receptor",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与Riluzole机制相似"
+        },
+        {
+          "source": "drug_nuedexta",
+          "target": "target_glutamate_receptor",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有助于缓解肌肉无力"
+        },
+        {
+          "source": "drug_amx0035",
+          "target": "target_glutamate_receptor",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "调节相应通路"
+        },
+        {
+          "source": "drug_tafamidis",
+          "target": "target_glutamate_receptor",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能影响运动神经元病"
+        },
+        {
+          "source": "drug_baclofen",
+          "target": "phenotype_spasticity",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "缓解痉挛效果"
+        },
+        {
+          "source": "drug_dextromethorphan",
+          "target": "phenotype_muscle_weakness",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可能减轻肌肉无力"
+        },
+        {
+          "source": "drug_tizanidine",
+          "target": "phenotype_spasticity",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "临床应用于缓解肌肉痉挛"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "phenotype_spasticity",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "有助于处理肌肉痉挛症状"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "phenotype_muscle_weakness",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能改善运动控制"
+        },
+        {
+          "source": "drug_piracetam",
+          "target": "phenotype_muscle_weakness",
+          "relation": "inhibits",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能对肌肉功能有益"
+        },
+        {
+          "source": "drug_levetiracetam",
+          "target": "phenotype_spasticity",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "减轻肌肉痉挛的可能性"
+        },
+        {
+          "source": "drug_riluzole",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "明确的作用路径支持该假设"
+        },
+        {
+          "source": "drug_edaraone",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "确立的临床证据"
+        },
+        {
+          "source": "drug_nuedexta",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "相关机制与症状改善相关"
+        },
+        {
+          "source": "drug_amx0035",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "新兴疗法有潜力"
+        },
+        {
+          "source": "drug_tafamidis",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "基础研究支持该假设"
+        },
+        {
+          "source": "drug_baclofen",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已有应用于相关症状"
+        },
+        {
+          "source": "drug_dextromethorphan",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "潜在的改善治疗效果"
+        },
+        {
+          "source": "drug_tizanidine",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "已知用于减轻肌肉痉挛"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "对抗疼痛的可能性"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能涉及神经保护作用"
+        },
+        {
+          "source": "drug_piracetam",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "对认知功能的影响"
+        },
+        {
+          "source": "drug_levetiracetam",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "有助于神经调节"
+        },
+        {
+          "source": "drug_riluzole",
+          "target": "n_ot_riluzole",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_riluzole",
+          "target": "n_rp_riluzole",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_riluzole",
+          "target": "n_adv_riluzole",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_riluzole",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消预期获益"
+        },
+        {
+          "source": "drug_edav",
+          "target": "n_ot_edav",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_edav",
+          "target": "n_rp_edav",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_edav",
+          "target": "n_adv_edav",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_edav",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消预期获益"
+        },
+        {
+          "source": "drug_nuedexta",
+          "target": "n_ot_nuedexta",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_nuedexta",
+          "target": "n_rp_nuedexta",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_nuedexta",
+          "target": "n_adv_nuedexta",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_nuedexta",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消预期获益"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_riluzole",
+              "target": "target_glutamate_receptor",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "已知靶向谷氨酸受体的药理作用"
+            },
+            {
+              "source": "target_glutamate_receptor",
+              "target": "pathway_glutamate_signaling",
+              "relation": "involved_in",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "谷氨酸信号通路与运动神经元病相关"
+            },
+            {
+              "source": "pathway_glutamate_signaling",
+              "target": "phenotype_muscle_weakness",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "通路影响表现型"
+            },
+            {
+              "source": "drug_riluzole",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "明确的作用路径支持该假设"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Riluzole→Glutamate Receptor→Glutamate Signaling Pathway→Muscle Weakness，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [],
+    "next_focus_for_pi": []
+  }
+}

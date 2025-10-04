@@ -1,0 +1,333 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_ursodeoxycholic_acid",
+            "via": [
+              "n_bile_acid_metabolism"
+            ],
+            "to": "d_neonatal_cholestasis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_ursodeoxycholic_acid",
+          "type": "Drug",
+          "label": "Ursodeoxycholic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisolone",
+          "type": "Drug",
+          "label": "Prednisolone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampin",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methylprednisolone",
+          "type": "Drug",
+          "label": "Methylprednisolone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lactulose",
+          "type": "Drug",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_simvastatin",
+          "type": "Drug",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_orlistat",
+          "type": "Drug",
+          "label": "Orlistat",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bile_acid_metabolism",
+          "type": "Pathway",
+          "label": "Bile Acid Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phenobarbital_mechanism",
+          "type": "Pathway",
+          "label": "Phenobarbital Mechanism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_neonatal_cholestasis",
+          "type": "Disease",
+          "label": "Neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "n_bile_acid_metabolism",
+          "relation": "modulates",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知对胆汁酸代谢的影响"
+        },
+        {
+          "source": "n_bile_acid_metabolism",
+          "target": "d_neonatal_cholestasis",
+          "relation": "involved_in",
+          "weight": 0.78,
+          "agent": "Proponent",
+          "rationale": "胆汁酸代谢与新生儿胆汁淤积相关"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "n_phenobarbital_mechanism",
+          "relation": "activates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对新生儿胆道功能的激活"
+        },
+        {
+          "source": "n_phenobarbital_mechanism",
+          "target": "d_neonatal_cholestasis",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "促进胆道通畅与新生儿胆汁淤积关联"
+        },
+        {
+          "source": "drug_sodium_phenylbutyrate",
+          "target": "n_bile_acid_metabolism",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可能影响胆汁酸排泄的机制"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_bile_acid_metabolism",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "抑制胆酸再吸收，相关机制"
+        },
+        {
+          "source": "drug_prednisolone",
+          "target": "n_bile_acid_metabolism",
+          "relation": "modulates",
+          "weight": 0.68,
+          "agent": "Proponent",
+          "rationale": "可以影响胆道的另一个方面"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "d_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "对肝脏和胆道功能的潜在支持"
+        },
+        {
+          "source": "drug_rifampin",
+          "target": "d_neonatal_cholestasis",
+          "relation": "associated_with",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能干预胆汁流动"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "d_neonatal_cholestasis",
+          "relation": "associated_with",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "影响细胞增殖，影响肝脏健康"
+        },
+        {
+          "source": "drug_methylprednisolone",
+          "target": "d_neonatal_cholestasis",
+          "relation": "associated_with",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "长期激素治疗对肝脏有影响"
+        },
+        {
+          "source": "drug_lactulose",
+          "target": "n_bile_acid_metabolism",
+          "relation": "modulates",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可影响肠道微生物与胆汁酸排泄"
+        },
+        {
+          "source": "drug_simvastatin",
+          "target": "n_bile_acid_metabolism",
+          "relation": "modulates",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "影响胆固醇代谢可能影响胆汁分泌"
+        },
+        {
+          "source": "drug_orlistat",
+          "target": "n_bile_acid_metabolism",
+          "relation": "inhibits",
+          "weight": 0.42,
+          "agent": "Proponent",
+          "rationale": "通过抑制脂肪吸收影响胆汁酸"
+        },
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "形成了新的支持路径"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "形成了新的支持路径"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_ursodeoxycholic_acid",
+              "target": "n_bile_acid_metabolism",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "已知影响胆汁酸代谢"
+            },
+            {
+              "source": "n_bile_acid_metabolism",
+              "target": "d_neonatal_cholestasis",
+              "relation": "involved_in",
+              "weight": 0.78,
+              "agent": "Proponent",
+              "rationale": "胆汁酸代谢与新生儿胆汁淤积相关"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已形成 Drug→Target→Pathway→Disease 的不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

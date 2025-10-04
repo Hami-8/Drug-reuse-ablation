@@ -1,0 +1,884 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Epileptic encephalopathy",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_levetiracetam",
+          "name": "Levetiracetam"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_valproate",
+          "name": "Valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_lacosamide",
+          "name": "Lacosamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_zonisamide",
+          "name": "Zonisamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_perampanel",
+          "name": "Perampanel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_benzodiazepines",
+          "name": "Benzodiazepines"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_clobazam",
+          "name": "Clobazam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_felbamate",
+          "name": "Felbamate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_lamotrigine",
+          "name": "Lamotrigine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_rufinamide",
+          "name": "Rufinamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_leve",
+          "type": "Target",
+          "label": "Off-target effects of Levetiracetam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_leve",
+          "type": "Pathway",
+          "label": "Adverse effects pathway of Levetiracetam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_leve",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Levetiracetam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_valp",
+          "type": "Target",
+          "label": "Off-target effects of Valproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_valp",
+          "type": "Pathway",
+          "label": "Adverse effects pathway of Valproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_valp",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Valproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_laco",
+          "type": "Target",
+          "label": "Off-target effects of Lacosamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_laco",
+          "type": "Pathway",
+          "label": "Adverse effects pathway of Lacosamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_laco",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Lacosamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_topi",
+          "type": "Target",
+          "label": "Off-target effects of Topiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_topi",
+          "type": "Pathway",
+          "label": "Adverse effects pathway of Topiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_topi",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Topiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_zoni",
+          "type": "Target",
+          "label": "Off-target effects of Zonisamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_zoni",
+          "type": "Pathway",
+          "label": "Adverse effects pathway of Zonisamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_zoni",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Zonisamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pera",
+          "type": "Target",
+          "label": "Off-target effects of Perampanel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pera",
+          "type": "Pathway",
+          "label": "Adverse effects pathway of Perampanel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pera",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Perampanel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_benz",
+          "type": "Target",
+          "label": "Off-target effects of Benzodiazepines",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_benz",
+          "type": "Pathway",
+          "label": "Adverse effects pathway of Benzodiazepines",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_benz",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Benzodiazepines",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clob",
+          "type": "Target",
+          "label": "Off-target effects of Clobazam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_clob",
+          "type": "Pathway",
+          "label": "Adverse effects pathway of Clobazam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clob",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Clobazam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_felb",
+          "type": "Target",
+          "label": "Off-target effects of Felbamate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_felb",
+          "type": "Pathway",
+          "label": "Adverse effects pathway of Felbamate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_felb",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Felbamate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lamo",
+          "type": "Target",
+          "label": "Off-target effects of Lamotrigine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lamo",
+          "type": "Pathway",
+          "label": "Adverse effects pathway of Lamotrigine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lamo",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Lamotrigine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_carb",
+          "type": "Target",
+          "label": "Off-target effects of Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_carb",
+          "type": "Pathway",
+          "label": "Adverse effects pathway of Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_carb",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rufi",
+          "type": "Target",
+          "label": "Off-target effects of Rufinamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rufi",
+          "type": "Pathway",
+          "label": "Adverse effects pathway of Rufinamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rufi",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Rufinamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_levetiracetam",
+          "target": "n_ot_leve",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的书面不良反应"
+        },
+        {
+          "source": "n_ot_leve",
+          "target": "n_rp_leve",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_leve",
+          "target": "n_adv_leve",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_leve",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "n_ot_valp",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的身体不适"
+        },
+        {
+          "source": "n_ot_valp",
+          "target": "n_rp_valp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险路径潜在"
+        },
+        {
+          "source": "n_rp_valp",
+          "target": "n_adv_valp",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_valp",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在可能影响疗效"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "n_ot_laco",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的不良影响"
+        },
+        {
+          "source": "n_ot_laco",
+          "target": "n_rp_laco",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险链关联"
+        },
+        {
+          "source": "n_rp_laco",
+          "target": "n_adv_laco",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发负面效果"
+        },
+        {
+          "source": "n_adv_laco",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的负面影响可能抵消优势"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "n_ot_topi",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在不良效果"
+        },
+        {
+          "source": "n_ot_topi",
+          "target": "n_rp_topi",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险链"
+        },
+        {
+          "source": "n_rp_topi",
+          "target": "n_adv_topi",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_topi",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险链相关可能抵消期望效果"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "n_ot_zoni",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在负面影响"
+        },
+        {
+          "source": "n_ot_zoni",
+          "target": "n_rp_zoni",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险关联"
+        },
+        {
+          "source": "n_rp_zoni",
+          "target": "n_adv_zoni",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_zoni",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在风险可能影响疗效"
+        },
+        {
+          "source": "drug_perampanel",
+          "target": "n_ot_pera",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的不良效果"
+        },
+        {
+          "source": "n_ot_pera",
+          "target": "n_rp_pera",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在危险链"
+        },
+        {
+          "source": "n_rp_pera",
+          "target": "n_adv_pera",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致负面影响"
+        },
+        {
+          "source": "n_adv_pera",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险指向对效果的潜在影响"
+        },
+        {
+          "source": "drug_benzodiazepines",
+          "target": "n_ot_benz",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在副作用"
+        },
+        {
+          "source": "n_ot_benz",
+          "target": "n_rp_benz",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险关联"
+        },
+        {
+          "source": "n_rp_benz",
+          "target": "n_adv_benz",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_benz",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在风险可能影响疗效"
+        },
+        {
+          "source": "drug_clobazam",
+          "target": "n_ot_clob",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的负面作用"
+        },
+        {
+          "source": "n_ot_clob",
+          "target": "n_rp_clob",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险路径潜在"
+        },
+        {
+          "source": "n_rp_clob",
+          "target": "n_adv_clob",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引起不良效果"
+        },
+        {
+          "source": "n_adv_clob",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能影响预期疗效"
+        },
+        {
+          "source": "drug_felbamate",
+          "target": "n_ot_felb",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在负面反应"
+        },
+        {
+          "source": "n_ot_felb",
+          "target": "n_rp_felb",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险链"
+        },
+        {
+          "source": "n_rp_felb",
+          "target": "n_adv_felb",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发负面效果"
+        },
+        {
+          "source": "n_adv_felb",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响疗效的风险"
+        },
+        {
+          "source": "drug_lamotrigine",
+          "target": "n_ot_lamo",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良作用"
+        },
+        {
+          "source": "n_ot_lamo",
+          "target": "n_rp_lamo",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险链相关"
+        },
+        {
+          "source": "n_rp_lamo",
+          "target": "n_adv_lamo",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_lamo",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能对疗效产生负面影响"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_ot_carb",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能性的不良影响"
+        },
+        {
+          "source": "n_ot_carb",
+          "target": "n_rp_carb",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险相关"
+        },
+        {
+          "source": "n_rp_carb",
+          "target": "n_adv_carb",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_carb",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消预期效果"
+        },
+        {
+          "source": "drug_rufinamide",
+          "target": "n_ot_rufi",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应"
+        },
+        {
+          "source": "n_ot_rufi",
+          "target": "n_rp_rufi",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险链可能"
+        },
+        {
+          "source": "n_rp_rufi",
+          "target": "n_adv_rufi",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效果"
+        },
+        {
+          "source": "n_adv_rufi",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险链可能影响疗效"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "risk_benefit_ratio",
+          "pro_nodes": [
+            "H1",
+            "H2",
+            "H3",
+            "H4",
+            "H5",
+            "H6",
+            "H7",
+            "H8",
+            "H9",
+            "H10",
+            "H11",
+            "H12"
+          ],
+          "con_nodes": [
+            "n_adv_leve",
+            "n_adv_valp",
+            "n_adv_laco",
+            "n_adv_topi",
+            "n_adv_zoni",
+            "n_adv_pera",
+            "n_adv_benz",
+            "n_adv_clob",
+            "n_adv_felb",
+            "n_adv_lamo",
+            "n_adv_carb",
+            "n_adv_rufi"
+          ],
+          "note": "不同药物的治疗效果 vs 潜在副作用的风险"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "各药物的不良反应可能超过其预期获益",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "与其他常用药物存在风险重叠",
+        "confidence": "medium"
+      },
+      {
+        "id": "K3",
+        "text": "对个别患者不良反应反应不同，临床疗效未能一致",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "各药物疗效预期是否真实可行",
+      "个体差异对药物不良反应的影响是否充分考虑"
+    ],
+    "falsification_tests": [
+      "是否能够收集到各药物的不良反应证据",
+      "是否存在监测与评估患者疗效的一致性标准"
+    ],
+    "next_focus_for_pi": [
+      "要求Proponent提出各药物的全面临床数据以评估效果",
+      "审视风险与益处之比，并对冲突热点进行深入分析"
+    ]
+  }
+}

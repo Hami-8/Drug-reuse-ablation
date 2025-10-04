@@ -1,0 +1,989 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Non-CF bronchiectasis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Azithromycin adverse effects",
+            "expectation": "评估副作用风险的临床影响，若风险成立，高权重标注 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Ipratropium adverse effects",
+            "expectation": "分析副作用对临床应用的影响，设定高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ipratropium",
+          "type": "Drug",
+          "label": "Ipratropium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bromhexine",
+          "type": "Drug",
+          "label": "Bromhexine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_salbutamol",
+          "type": "Drug",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_levalbuterol",
+          "type": "Drug",
+          "label": "Levalbuterol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tiotropium",
+          "type": "Drug",
+          "label": "Tiotropium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_roflumilast",
+          "type": "Drug",
+          "label": "Roflumilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_theophylline",
+          "type": "Drug",
+          "label": "Theophylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_montelukast",
+          "type": "Drug",
+          "label": "Montelukast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "non_cf_bronchiectasis",
+          "type": "Disease",
+          "label": "Non-CF Bronchiectasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_inflammation",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_mucus_clearing",
+          "type": "Pathway",
+          "label": "Mucus Clearing Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_azithromycin",
+          "type": "Target",
+          "label": "OffTargetAzithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_azithromycin",
+          "type": "Pathway",
+          "label": "RiskPathwayAzithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_azithromycin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAzithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ipratropium",
+          "type": "Target",
+          "label": "OffTargetIpratropium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ipratropium",
+          "type": "Pathway",
+          "label": "RiskPathwayIpratropium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ipratropium",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeIpratropium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bromhexine",
+          "type": "Target",
+          "label": "OffTargetBromhexine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bromhexine",
+          "type": "Pathway",
+          "label": "RiskPathwayBromhexine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bromhexine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBromhexine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_n_acetylcysteine",
+          "type": "Target",
+          "label": "OffTargetN-acetylcysteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_n_acetylcysteine",
+          "type": "Pathway",
+          "label": "RiskPathwayN-acetylcysteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_n_acetylcysteine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeN-acetylcysteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dornase_alfa",
+          "type": "Target",
+          "label": "OffTargetDornaseAlfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dornase_alfa",
+          "type": "Pathway",
+          "label": "RiskPathwayDornaseAlfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dornase_alfa",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeDornaseAlfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_salbutamol",
+          "type": "Target",
+          "label": "OffTargetSalbutamol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_salbutamol",
+          "type": "Pathway",
+          "label": "RiskPathwaySalbutamol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_salbutamol",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSalbutamol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_levalbuterol",
+          "type": "Target",
+          "label": "OffTargetLevalbuterol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_levalbuterol",
+          "type": "Pathway",
+          "label": "RiskPathwayLevalbuterol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_levalbuterol",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLevalbuterol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tiotropium",
+          "type": "Target",
+          "label": "OffTargetTiotropium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_tiotropium",
+          "type": "Pathway",
+          "label": "RiskPathwayTiotropium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tiotropium",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTiotropium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "OffTargetCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_corticosteroids",
+          "type": "Pathway",
+          "label": "RiskPathwayCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_corticosteroids",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_roflumilast",
+          "type": "Target",
+          "label": "OffTargetRoflumilast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_roflumilast",
+          "type": "Pathway",
+          "label": "RiskPathwayRoflumilast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_roflumilast",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeRoflumilast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_theophylline",
+          "type": "Target",
+          "label": "OffTargetTheophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_theophylline",
+          "type": "Pathway",
+          "label": "RiskPathwayTheophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_theophylline",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTheophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_montelukast",
+          "type": "Target",
+          "label": "OffTargetMontelukast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_montelukast",
+          "type": "Pathway",
+          "label": "RiskPathwayMontelukast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_montelukast",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMontelukast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_azithromycin",
+          "target": "pathway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗炎作用，有助于支气管扩张"
+        },
+        {
+          "source": "drug_ipratropium",
+          "target": "pathway_mucus_clearing",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "通过抗胆碱作用促进气道通畅"
+        },
+        {
+          "source": "drug_bromhexine",
+          "target": "pathway_mucus_clearing",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "促进粘液排出，改善呼吸"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "pathway_mucus_clearing",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "稀释粘液，促进排出"
+        },
+        {
+          "source": "drug_dornase_alfa",
+          "target": "pathway_mucus_clearing",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "特异性分解DNA，改善呼吸道阻塞"
+        },
+        {
+          "source": "drug_salbutamol",
+          "target": "pathway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.73,
+          "agent": "Proponent",
+          "rationale": "支气管扩张，有助于改善症状"
+        },
+        {
+          "source": "drug_levalbuterol",
+          "target": "pathway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.72,
+          "agent": "Proponent",
+          "rationale": "更特异性支气管扩张药"
+        },
+        {
+          "source": "drug_tiotropium",
+          "target": "pathway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.74,
+          "agent": "Proponent",
+          "rationale": "长效支气管扩张，有助于气道舒缓"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "pathway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.78,
+          "agent": "Proponent",
+          "rationale": "减轻支气管炎症和反应"
+        },
+        {
+          "source": "drug_roflumilast",
+          "target": "pathway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抑制炎症反应，改善肺功能"
+        },
+        {
+          "source": "drug_theophylline",
+          "target": "pathway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通过平滑肌松弛改善气道通过"
+        },
+        {
+          "source": "drug_montelukast",
+          "target": "pathway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.68,
+          "agent": "Proponent",
+          "rationale": "抗白三烯，减轻炎症"
+        },
+        {
+          "source": "pathway_inflammation",
+          "target": "non_cf_bronchiectasis",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与非囊性纤维化肺疾病相关"
+        },
+        {
+          "source": "pathway_mucus_clearing",
+          "target": "non_cf_bronchiectasis",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "粘液清除障碍与疾病病理相关"
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "n_ot_azithromycin",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用"
+        },
+        {
+          "source": "n_ot_azithromycin",
+          "target": "n_rp_azithromycin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能与疗效相悖"
+        },
+        {
+          "source": "n_rp_azithromycin",
+          "target": "n_adv_azithromycin",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_azithromycin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "只要存在该风险，假设将被证伪"
+        },
+        {
+          "source": "drug_ipratropium",
+          "target": "n_ot_ipratropium",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用"
+        },
+        {
+          "source": "n_ot_ipratropium",
+          "target": "n_rp_ipratropium",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能与疗效相悖"
+        },
+        {
+          "source": "n_rp_ipratropium",
+          "target": "n_adv_ipratropium",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_ipratropium",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "只要存在该风险，假设将被证伪"
+        },
+        {
+          "source": "drug_bromhexine",
+          "target": "n_ot_bromhexine",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用"
+        },
+        {
+          "source": "n_ot_bromhexine",
+          "target": "n_rp_bromhexine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能与疗效相悖"
+        },
+        {
+          "source": "n_rp_bromhexine",
+          "target": "n_adv_bromhexine",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_bromhexine",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "只要存在该风险，假设将被证伪"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "n_ot_n_acetylcysteine",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用"
+        },
+        {
+          "source": "n_ot_n_acetylcysteine",
+          "target": "n_rp_n_acetylcysteine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能与疗效相悖"
+        },
+        {
+          "source": "n_rp_n_acetylcysteine",
+          "target": "n_adv_n_acetylcysteine",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_n_acetylcysteine",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "只要存在该风险，假设将被证伪"
+        },
+        {
+          "source": "drug_dornase_alfa",
+          "target": "n_ot_dornase_alfa",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用"
+        },
+        {
+          "source": "n_ot_dornase_alfa",
+          "target": "n_rp_dornase_alfa",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能与疗效相悖"
+        },
+        {
+          "source": "n_rp_dornase_alfa",
+          "target": "n_adv_dornase_alfa",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_dornase_alfa",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "只要存在该风险，假设将被证伪"
+        },
+        {
+          "source": "drug_salbutamol",
+          "target": "n_ot_salbutamol",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用"
+        },
+        {
+          "source": "n_ot_salbutamol",
+          "target": "n_rp_salbutamol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能与疗效相悖"
+        },
+        {
+          "source": "n_rp_salbutamol",
+          "target": "n_adv_salbutamol",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_salbutamol",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "只要存在该风险，假设将被证伪"
+        },
+        {
+          "source": "drug_levalbuterol",
+          "target": "n_ot_levalbuterol",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用"
+        },
+        {
+          "source": "n_ot_levalbuterol",
+          "target": "n_rp_levalbuterol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能与疗效相悖"
+        },
+        {
+          "source": "n_rp_levalbuterol",
+          "target": "n_adv_levalbuterol",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_levalbuterol",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "只要存在该风险，假设将被证伪"
+        },
+        {
+          "source": "drug_tiotropium",
+          "target": "n_ot_tiotropium",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用"
+        },
+        {
+          "source": "n_ot_tiotropium",
+          "target": "n_rp_tiotropium",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能与疗效相悖"
+        },
+        {
+          "source": "n_rp_tiotropium",
+          "target": "n_adv_tiotropium",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_tiotropium",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "只要存在该风险，假设将被证伪"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp_corticosteroids",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能与疗效相悖"
+        },
+        {
+          "source": "n_rp_corticosteroids",
+          "target": "n_adv_corticosteroids",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_corticosteroids",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "只要存在该风险，假设将被证伪"
+        },
+        {
+          "source": "drug_roflumilast",
+          "target": "n_ot_roflumilast",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用"
+        },
+        {
+          "source": "n_ot_roflumilast",
+          "target": "n_rp_roflumilast",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能与疗效相悖"
+        },
+        {
+          "source": "n_rp_roflumilast",
+          "target": "n_adv_roflumilast",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_roflumilast",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "只要存在该风险，假设将被证伪"
+        },
+        {
+          "source": "drug_theophylline",
+          "target": "n_ot_theophylline",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用"
+        },
+        {
+          "source": "n_ot_theophylline",
+          "target": "n_rp_theophylline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能与疗效相悖"
+        },
+        {
+          "source": "n_rp_theophylline",
+          "target": "n_adv_theophylline",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_theophylline",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "只要存在该风险，假设将被证伪"
+        },
+        {
+          "source": "drug_montelukast",
+          "target": "n_ot_montelukast",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在离靶作用"
+        },
+        {
+          "source": "n_ot_montelukast",
+          "target": "n_rp_montelukast",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能与疗效相悖"
+        },
+        {
+          "source": "n_rp_montelukast",
+          "target": "n_adv_montelukast",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_montelukast",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "只要存在该风险，假设将被证伪"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "conflict_hotspots": [
+            {
+              "topic": "Azithromycin adverse effects",
+              "pro_nodes": [
+                "drug_azithromycin"
+              ],
+              "con_nodes": [
+                "n_adv_azithromycin"
+              ],
+              "note": "若存在副作用，将影响疗效"
+            }
+          ]
+        },
+        "notes": "已完成对 Azithromycin 的安全性压力测试，评估副作用风险"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "Azithromycin 的副作用潜在影响及其临床应用的有效性未能澄清"
+    ]
+  }
+}

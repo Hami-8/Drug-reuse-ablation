@@ -1,0 +1,408 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Non-CF bronchiectasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ipratropium",
+          "name": "Ipratropium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_bromhexine",
+          "name": "Bromhexine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_theophylline",
+          "name": "Theophylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_mucolytics",
+          "name": "Mucolytics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_dornase_alfa",
+          "name": "Dornase alfa"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_salbutamol",
+          "name": "Salbutamol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_montelukast",
+          "name": "Montelukast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_levofloxacin",
+          "name": "Levofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_amoxicillin",
+          "name": "Amoxicillin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ipratropium",
+          "type": "Drug",
+          "label": "Ipratropium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bromhexine",
+          "type": "Drug",
+          "label": "Bromhexine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_theophylline",
+          "type": "Drug",
+          "label": "Theophylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mucolytics",
+          "type": "Drug",
+          "label": "Mucolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_salbutamol",
+          "type": "Drug",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_montelukast",
+          "type": "Drug",
+          "label": "Montelukast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_levofloxacin",
+          "type": "Drug",
+          "label": "Levofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_amoxicillin",
+          "type": "Drug",
+          "label": "Amoxicillin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_cough_reduction",
+          "type": "Target",
+          "label": "Cough Reduction",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_inflammation_reduction",
+          "type": "Pathway",
+          "label": "Inflammation Reduction",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_mucus_clearance",
+          "type": "Pathway",
+          "label": "Mucus Clearance",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_non_cf_bronchiectasis",
+          "type": "Disease",
+          "label": "Non-CF Bronchiectasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_azithromycin",
+          "target": "n_target_cough_reduction",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知抗生素对炎症情况的影响"
+        },
+        {
+          "source": "n_ipratropium",
+          "target": "n_target_cough_reduction",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗胆碱药物减轻呼吸道反应"
+        },
+        {
+          "source": "n_bromhexine",
+          "target": "n_pathway_mucus_clearance",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知药物作用于黏液清除"
+        },
+        {
+          "source": "n_theophylline",
+          "target": "n_pathway_inflammation_reduction",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "常见作用于扩张气道减轻炎症"
+        },
+        {
+          "source": "n_mucolytics",
+          "target": "n_pathway_mucus_clearance",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知黏液溶解药物对于类似患者的效果"
+        },
+        {
+          "source": "n_dornase_alfa",
+          "target": "n_pathway_mucus_clearance",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "增强黏液清除已被证明有效"
+        },
+        {
+          "source": "n_salbutamol",
+          "target": "n_target_cough_reduction",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "支气管扩张剂对改善症状有效"
+        },
+        {
+          "source": "n_prednisone",
+          "target": "n_pathway_inflammation_reduction",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "皮质类固醇在治疗中作用显著"
+        },
+        {
+          "source": "n_n_acetylcysteine",
+          "target": "n_pathway_mucus_clearance",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知其作用于黏液清除的机制"
+        },
+        {
+          "source": "n_montelukast",
+          "target": "n_target_cough_reduction",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗白三烯药物在呼吸道症状改善中的应用"
+        },
+        {
+          "source": "n_levofloxacin",
+          "target": "n_target_cough_reduction",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抗生素可用于预防二次感染"
+        },
+        {
+          "source": "n_amoxicillin",
+          "target": "n_target_cough_reduction",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "用于治疗伴随感染的治愈"
+        },
+        {
+          "source": "n_pathway_mucus_clearance",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "两者之间的病理连接"
+        },
+        {
+          "source": "n_pathway_inflammation_reduction",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "病理过程相互关联"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过减少咳嗽、改善黏液清除、降低炎症影响非囊性纤维化支气管扩张症",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物可有效传递至气道，发挥预期作用"
+    ],
+    "uncertainties": [
+      "对气道反应的个体差异可能影响疗效"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步验证各药物对非囊性纤维化支气管扩张症的长期效果"
+    ]
+  }
+}

@@ -1,0 +1,1158 @@
+{
+  "input": {
+    "mode": "score",
+    "query": {
+      "entity": "Distal myopathies",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        }
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        }
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        }
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        }
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        }
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_daptomycin",
+          "name": "Daptomycin"
+        }
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_colchicine",
+          "name": "Colchicine"
+        }
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_chloroquine",
+          "name": "Chloroquine"
+        }
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        }
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_hydroxychloroquine",
+          "name": "Hydroxychloroquine"
+        }
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_aminoglycosides",
+          "name": "Aminoglycosides"
+        }
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_procainamide",
+          "name": "Procainamide"
+        }
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_target_muscle",
+          "type": "Target",
+          "label": "Muscle Target",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_inflammation",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease_distal_myopathies",
+          "type": "Disease",
+          "label": "Distal Myopathies",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph_weakness",
+          "type": "Phenotype",
+          "label": "Muscle Weakness",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph_pain",
+          "type": "Phenotype",
+          "label": "Muscle Pain",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot1",
+          "type": "Target",
+          "label": "Corticosteroids Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp1",
+          "type": "Pathway",
+          "label": "Corticosteroids Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv1",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot2",
+          "type": "Target",
+          "label": "Statins Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp2",
+          "type": "Pathway",
+          "label": "Statins Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv2",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot3",
+          "type": "Target",
+          "label": "Beta-blockers Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp3",
+          "type": "Pathway",
+          "label": "Beta-blockers Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv3",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Beta-blockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot4",
+          "type": "Target",
+          "label": "Quinidine Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp4",
+          "type": "Pathway",
+          "label": "Quinidine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv4",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Quinidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot5",
+          "type": "Target",
+          "label": "Carbamazepine Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp5",
+          "type": "Pathway",
+          "label": "Carbamazepine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv5",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot6",
+          "type": "Target",
+          "label": "Daptomycin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp6",
+          "type": "Pathway",
+          "label": "Daptomycin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv6",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Daptomycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot7",
+          "type": "Target",
+          "label": "Colchicine Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp7",
+          "type": "Pathway",
+          "label": "Colchicine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv7",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Colchicine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot8",
+          "type": "Target",
+          "label": "Chloroquine Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp8",
+          "type": "Pathway",
+          "label": "Chloroquine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv8",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Chloroquine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot9",
+          "type": "Target",
+          "label": "Cyclosporine Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp9",
+          "type": "Pathway",
+          "label": "Cyclosporine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv9",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot10",
+          "type": "Target",
+          "label": "Hydroxychloroquine Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp10",
+          "type": "Pathway",
+          "label": "Hydroxychloroquine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv10",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Hydroxychloroquine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot11",
+          "type": "Target",
+          "label": "Aminoglycosides Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp11",
+          "type": "Pathway",
+          "label": "Aminoglycosides Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv11",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Aminoglycosides",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot12",
+          "type": "Target",
+          "label": "Procainamide Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp12",
+          "type": "Pathway",
+          "label": "Procainamide Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv12",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Procainamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Statins",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Quinidine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_quinidine",
+          "type": "Drug",
+          "label": "Quinidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Daptomycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_daptomycin",
+          "type": "Drug",
+          "label": "Daptomycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Colchicine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_colchicine",
+          "type": "Drug",
+          "label": "Colchicine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_chloroquine",
+          "type": "Drug",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_hydroxychloroquine",
+          "type": "Drug",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Aminoglycosides",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_aminoglycosides",
+          "type": "Drug",
+          "label": "Aminoglycosides",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Procainamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_procainamide",
+          "type": "Drug",
+          "label": "Procainamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_target_muscle",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Corticosteroids常用来抑制炎症反应"
+        },
+        {
+          "source": "n_target_muscle",
+          "target": "n_pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "肌肉靶标影响炎症通路"
+        },
+        {
+          "source": "n_pathway_inflammation",
+          "target": "n_disease_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "炎症通路在Distal myopathies 中的角色"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_target_muscle",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Statins对肌肉相关代谢有影响"
+        },
+        {
+          "source": "n_target_muscle",
+          "target": "n_ph_weakness",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "肌肉靶标直接影响肌肉无力"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_ph_pain",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "β-adrenergic阻滞剂可能与肌肉疼痛相关"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "n_pathway_inflammation",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Quinidine可能影响与炎症通路相关的机制"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_ph_weakness",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Carbamazepine可影响导致肌肉无力的信号通路"
+        },
+        {
+          "source": "drug_daptomycin",
+          "target": "n_target_muscle",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Daptomycin对肌肉组织有潜在的影响"
+        },
+        {
+          "source": "drug_colchicine",
+          "target": "n_ph_pain",
+          "relation": "associated_with",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Colchicine与肌肉疼痛表型相关"
+        },
+        {
+          "source": "drug_chloroquine",
+          "target": "n_pathway_inflammation",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "抗炎属性可能影响肌肉病理"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_ph_weakness",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "免疫抑制疗法影响肌肉状态"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "n_pathway_inflammation",
+          "relation": "inhibits",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能通过抑制炎症影响病理"
+        },
+        {
+          "source": "drug_aminoglycosides",
+          "target": "n_ph_weakness",
+          "relation": "causes",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "已知与肌肉无力相关的副作用"
+        },
+        {
+          "source": "drug_procainamide",
+          "target": "n_ph_pain",
+          "relation": "causes",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "心律不齐治疗可能影响肌肉表现"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "已知的药物作用与靶外效应"
+        },
+        {
+          "source": "n_ot1",
+          "target": "n_rp1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "作用于他靶点可能诱发并发症"
+        },
+        {
+          "source": "n_rp1",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重不良反应"
+        },
+        {
+          "source": "n_adv1",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_ot2",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "靶向机制与已知副作用存在冲突"
+        },
+        {
+          "source": "n_ot2",
+          "target": "n_rp2",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致代谢性负担"
+        },
+        {
+          "source": "n_rp2",
+          "target": "n_adv2",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与进一步的肌肉损伤相关"
+        },
+        {
+          "source": "n_adv2",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能发生的不良反应削弱预期效果"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_ot3",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "心脏负担对已有肌肉问题可能不利"
+        },
+        {
+          "source": "n_ot3",
+          "target": "n_rp3",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致血流分布不均"
+        },
+        {
+          "source": "n_rp3",
+          "target": "n_adv3",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "肌肉功能进一步受损"
+        },
+        {
+          "source": "n_adv3",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "不利效应可能阻碍治疗效果"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "n_ot4",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引起心脏传导异常"
+        },
+        {
+          "source": "n_ot4",
+          "target": "n_rp4",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "心脏风险可能加剧症状"
+        },
+        {
+          "source": "n_rp4",
+          "target": "n_adv4",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "加重运动相关的不适"
+        },
+        {
+          "source": "n_adv4",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致预期效益的降低"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_ot5",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "已知的副作用可能会加重病情"
+        },
+        {
+          "source": "n_ot5",
+          "target": "n_rp5",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响神经肌肉功能"
+        },
+        {
+          "source": "n_rp5",
+          "target": "n_adv5",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "肌肉损伤风险上升"
+        },
+        {
+          "source": "n_adv5",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "不良效应可严重影响病程"
+        },
+        {
+          "source": "drug_daptomycin",
+          "target": "n_ot6",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与肌肉损伤风险相关"
+        },
+        {
+          "source": "n_ot6",
+          "target": "n_rp6",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "肌肉强烈反应可能导致并发症"
+        },
+        {
+          "source": "n_rp6",
+          "target": "n_adv6",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引起急性肌肉损伤"
+        },
+        {
+          "source": "n_adv6",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "存在的风险可能抵消预期获益"
+        },
+        {
+          "source": "drug_colchicine",
+          "target": "n_ot7",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "已知的副作用与肌肉无力相关"
+        },
+        {
+          "source": "n_ot7",
+          "target": "n_rp7",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "导致神经肌肉敏感性增加"
+        },
+        {
+          "source": "n_rp7",
+          "target": "n_adv7",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与非预期的肌肉反应相关"
+        },
+        {
+          "source": "n_adv7",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能加重病情的不利效应"
+        },
+        {
+          "source": "drug_chloroquine",
+          "target": "n_ot8",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与已知肌肉副作用相关"
+        },
+        {
+          "source": "n_ot8",
+          "target": "n_rp8",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉小管变性"
+        },
+        {
+          "source": "n_rp8",
+          "target": "n_adv8",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "引起肌肉无力"
+        },
+        {
+          "source": "n_adv8",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险抵消治疗的净效益"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_ot9",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发肌肉麻痹的风险"
+        },
+        {
+          "source": "n_ot9",
+          "target": "n_rp9",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与肌肉反应相关的风险"
+        },
+        {
+          "source": "n_rp9",
+          "target": "n_adv9",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致肌肉受损"
+        },
+        {
+          "source": "n_adv9",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发的损害削弱了预期效果"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "n_ot10",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与已知的肌肉耐受性差"
+        },
+        {
+          "source": "n_ot10",
+          "target": "n_rp10",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能对肌肉产生负面影响"
+        },
+        {
+          "source": "n_rp10",
+          "target": "n_adv10",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致功能缺失"
+        },
+        {
+          "source": "n_adv10",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的肌肉副作用阻碍治疗效果"
+        },
+        {
+          "source": "drug_aminoglycosides",
+          "target": "n_ot11",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与肌肉无力和损伤的风险相关"
+        },
+        {
+          "source": "n_ot11",
+          "target": "n_rp11",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "对神经肌肉功能产生不良影响"
+        },
+        {
+          "source": "n_rp11",
+          "target": "n_adv11",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "增强的肌肉损伤风险"
+        },
+        {
+          "source": "n_adv11",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在影响可能显著降低治疗收益"
+        },
+        {
+          "source": "drug_procainamide",
+          "target": "n_ot12",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能对肌肉产生负面效果"
+        },
+        {
+          "source": "n_ot12",
+          "target": "n_rp12",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "影响肌肉的代谢"
+        },
+        {
+          "source": "n_rp12",
+          "target": "n_adv12",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "肌肉功能及状态风险增加"
+        },
+        {
+          "source": "n_adv12",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "不良影响可能削弱治疗效果"
+        }
+      ],
+      "round_index": 1
+    },
+    "history": {
+      "round": 1,
+      "last_scores": []
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "scoring_summary": [],
+    "ranking": [],
+    "delta_since_last_round": 0.1,
+    "stop_decision": {
+      "should_stop": false,
+      "reason": "final-only ablation"
+    }
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Inherited white matter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_interferon_beta",
+          "name": "Interferon beta"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_hydroxyurea",
+          "name": "Hydroxyurea"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_l_carbetapentane",
+          "name": "L-carbetapentane"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_valproic_acid",
+          "name": "Valproic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_dimethyl_fumarate",
+          "name": "Dimethyl fumarate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_thalidomide",
+          "name": "Thalidomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_amifampridine",
+          "name": "Amifampridine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_immunoglobulin_therapy",
+          "name": "Immunoglobulin therapy"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ifn",
+          "type": "Drug",
+          "label": "Interferon beta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nac",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hu",
+          "type": "Drug",
+          "label": "Hydroxyurea",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lc",
+          "type": "Drug",
+          "label": "L-carbetapentane",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_va",
+          "type": "Drug",
+          "label": "Valproic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_df",
+          "type": "Drug",
+          "label": "Dimethyl fumarate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_th",
+          "type": "Drug",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_am",
+          "type": "Drug",
+          "label": "Amifampridine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cs",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rz",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_it",
+          "type": "Drug",
+          "label": "Immunoglobulin therapy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dx",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_iwd",
+          "type": "Disease",
+          "label": "Inherited white matter disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_ifn",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "机制研究表明可能不适用"
+        },
+        {
+          "source": "n_nac",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "实验数据支持"
+        },
+        {
+          "source": "n_hu",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "临床观察一致"
+        },
+        {
+          "source": "n_lc",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用药经验表明冲突"
+        },
+        {
+          "source": "n_va",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "使用与病理关系调研"
+        },
+        {
+          "source": "n_df",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "部分案例不良反应"
+        },
+        {
+          "source": "n_th",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "特殊病例的药物反应"
+        },
+        {
+          "source": "n_am",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "临床试验记录"
+        },
+        {
+          "source": "n_cs",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "风险评估提示"
+        },
+        {
+          "source": "n_rz",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "需谨慎观察"
+        },
+        {
+          "source": "n_it",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "文献回顾发现关联"
+        },
+        {
+          "source": "n_dx",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "不良预期反馈"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [],
+    "assumptions": [
+      "药物在目标组织内可达到有效浓度（常识判断）"
+    ],
+    "uncertainties": [
+      "药物的长期安全性与局限性尚未充分验证（需进一步研究）"
+    ],
+    "next_focus_for_pi": [
+      "是否需要更多关于药物相互作用的细节？"
+    ]
+  }
+}

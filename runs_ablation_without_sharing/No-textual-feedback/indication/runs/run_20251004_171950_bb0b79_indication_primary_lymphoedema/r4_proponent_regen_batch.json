@@ -1,0 +1,494 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary lymphoedema",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_dorzolamide",
+          "name": "Dorzolamide"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_bromfenac",
+          "name": "Bromfenac"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_pentoxifylline",
+          "name": "Pentoxifylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_amiloride",
+          "name": "Amiloride"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_lisinopril",
+          "name": "Lisinopril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_furosemide",
+          "name": "Furosemide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_nifedipine",
+          "name": "Nifedipine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_hydrochlorothiazide",
+          "name": "Hydrochlorothiazide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_amlodipine",
+          "name": "Amlodipine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_mannitol",
+          "name": "Mannitol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_spironolactone",
+          "name": "Spironolactone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_triamterene",
+          "name": "Triamterene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 4
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_dorzolamide",
+          "type": "Drug",
+          "label": "Dorzolamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bromfenac",
+          "type": "Drug",
+          "label": "Bromfenac",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pentoxifylline",
+          "type": "Drug",
+          "label": "Pentoxifylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_amiloride",
+          "type": "Drug",
+          "label": "Amiloride",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lisinopril",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nifedipine",
+          "type": "Drug",
+          "label": "Nifedipine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hydrochlorothiazide",
+          "type": "Drug",
+          "label": "Hydrochlorothiazide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_amlodipine",
+          "type": "Drug",
+          "label": "Amlodipine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mannitol",
+          "type": "Drug",
+          "label": "Mannitol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_spironolactone",
+          "type": "Drug",
+          "label": "Spironolactone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_triamterene",
+          "type": "Drug",
+          "label": "Triamterene",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_lymphatics",
+          "type": "Target",
+          "label": "Lymphatic System",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_fluids",
+          "type": "Pathway",
+          "label": "Fluid Regulation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease_primary_lymphoedema",
+          "type": "Disease",
+          "label": "Primary Lymphoedema",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_dorzolamide",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "阻止气体和水分在淋巴道中积聚"
+        },
+        {
+          "source": "n_bromfenac",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "可能调节淋巴系统功能"
+        },
+        {
+          "source": "n_pentoxifylline",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "促进血液流动，有助于淋巴功能"
+        },
+        {
+          "source": "n_amiloride",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过抑制淋巴液重吸收协助减轻水肿"
+        },
+        {
+          "source": "n_lisinopril",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过降低血压促进淋巴引流"
+        },
+        {
+          "source": "n_furosemide",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "通过利尿作用降低液体积聚"
+        },
+        {
+          "source": "n_nifedipine",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能促进血管扩张，改善淋巴流"
+        },
+        {
+          "source": "n_hydrochlorothiazide",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通过利尿减轻浮肿"
+        },
+        {
+          "source": "n_amlodipine",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能帮助改善淋巴循环"
+        },
+        {
+          "source": "n_mannitol",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "通过提取水分减轻水肿"
+        },
+        {
+          "source": "n_spironolactone",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "通过平衡钠和水分有助于减少肿胀"
+        },
+        {
+          "source": "n_triamterene",
+          "target": "n_target_lymphatics",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "通过利尿作用减轻淋巴水肿"
+        },
+        {
+          "source": "n_target_lymphatics",
+          "target": "n_pathway_fluids",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "调控淋巴和体液平衡通路"
+        },
+        {
+          "source": "n_pathway_fluids",
+          "target": "n_disease_primary_lymphoedema",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "通路失调导致淋巴水肿症状"
+        },
+        {
+          "source": "n_dorzolamide",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持初步假设"
+        },
+        {
+          "source": "n_bromfenac",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "提供对淋巴系统功能的潜在支持"
+        },
+        {
+          "source": "n_pentoxifylline",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "促进淋巴功能的理论支持"
+        },
+        {
+          "source": "n_amiloride",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与减轻淋巴水肿理论一致"
+        },
+        {
+          "source": "n_lisinopril",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "理论上有助于淋巴引流"
+        },
+        {
+          "source": "n_furosemide",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "作为利尿剂支持淋巴水肿减轻"
+        },
+        {
+          "source": "n_nifedipine",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "改善血液流动与淋巴流动相关"
+        },
+        {
+          "source": "n_hydrochlorothiazide",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "有助于控制水肿的药理支持"
+        },
+        {
+          "source": "n_amlodipine",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "对淋巴循环的潜在增强"
+        },
+        {
+          "source": "n_mannitol",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "利水作用可能减轻症状"
+        },
+        {
+          "source": "n_spironolactone",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能有助于减轻水肿"
+        },
+        {
+          "source": "n_triamterene",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "通过利尿减轻水肿的能力"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多个药物通过作用于淋巴系统和液体调控路径支持对初级淋巴水肿的潜在治疗",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物具有到达淋巴组织的有效浓度（常识判断）"
+    ],
+    "uncertainties": [
+      "药物对淋巴水肿的具体疗效需要后续临床验证"
+    ],
+    "next_focus_for_pi": [
+      "是否需要深入探索特定药物的临床研究证据？"
+    ]
+  }
+}

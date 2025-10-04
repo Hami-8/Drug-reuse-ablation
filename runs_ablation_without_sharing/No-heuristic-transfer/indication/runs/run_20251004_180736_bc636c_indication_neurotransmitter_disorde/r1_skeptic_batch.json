@@ -1,0 +1,318 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_levodopa",
+          "name": "Levodopa"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_bupropion",
+          "name": "Bupropion"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_donepezil",
+          "name": "Donepezil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_selegiline",
+          "name": "Selegiline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_rasagiline",
+          "name": "Rasagiline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_modafinil",
+          "name": "Modafinil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_l_methylfolate",
+          "name": "L-methylfolate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_amantadine",
+          "name": "Amantadine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_fluoxetine",
+          "name": "Fluoxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_venlafaxine",
+          "name": "Venlafaxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_sertraline",
+          "name": "Sertraline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_carbidopa",
+          "name": "Carbidopa"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "Dopaminergic Receptors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Dopaminergic Dysregulation",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp1",
+          "type": "Pathway",
+          "label": "Excessive Dopamine Levels",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp2",
+          "type": "Pathway",
+          "label": "Reduced Dopamine Availability",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp3",
+          "type": "Pathway",
+          "label": "Serotonin Modulation",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp4",
+          "type": "Pathway",
+          "label": "Neurotransmitter Imbalance",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp5",
+          "type": "Pathway",
+          "label": "Downstream Signal Alteration",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_levodopa",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "激活多巴胺受体可能引起旁路作用"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "多巴胺过量可导致负面效应"
+        },
+        {
+          "source": "n_adv",
+          "target": "n_rp1",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "间接导致多巴胺水平失调"
+        },
+        {
+          "source": "n_adv",
+          "target": "n_rp2",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "减少多巴胺可造成抑郁相关症状"
+        },
+        {
+          "source": "n_adv",
+          "target": "n_rp3",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引起血清素调节异常"
+        },
+        {
+          "source": "n_rp2",
+          "target": "n_rp4",
+          "relation": "leads_to",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "多巴胺缺乏可导致神经递质失衡"
+        },
+        {
+          "source": "n_rp3",
+          "target": "n_rp4",
+          "relation": "leads_to",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "血清素变化影响神经递质整体平衡"
+        },
+        {
+          "source": "n_rp4",
+          "target": "n_rp5",
+          "relation": "results_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "神经递质失衡可能改变下游信号"
+        },
+        {
+          "source": "n_rp5",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若多巴胺受体调节产生风险，H1 假设内部矛盾"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "therapeutic vs adverse effects",
+          "pro_nodes": [
+            "drug_levodopa"
+          ],
+          "con_nodes": [
+            "n_adv",
+            "n_rp1",
+            "n_rp2",
+            "n_rp3"
+          ],
+          "note": "有效治疗与潜在不良反应之间的矛盾"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "多巴胺激动剂导致不可预见的副作用，影响疗效",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "疗效与副作用间的权衡未充分验证",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "多巴胺水平的提升是否适应所有患者",
+      "潜在副作用影响是否约束疗效的显著性"
+    ],
+    "falsification_tests": [
+      "是否存在大规模临床证据支持疗效与风险之间的平衡？",
+      "是否有数据表明该疗法在长期使用中不会引发严重副作用？"
+    ],
+    "next_focus_for_pi": [
+      "确保 Proponent 提供多巴胺受体激动作用的安全性数据",
+      "重估多巴胺相关机制对长期疗效的影响"
+    ]
+  }
+}

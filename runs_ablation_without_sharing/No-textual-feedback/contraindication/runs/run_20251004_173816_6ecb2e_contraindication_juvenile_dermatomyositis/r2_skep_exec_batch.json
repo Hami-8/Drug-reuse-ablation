@@ -1,0 +1,522 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Juvenile dermatomyositis",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Chloroquine的副作用",
+            "expectation": "调查副作用对疗效的具体影响，并用高权重的refutes边标注",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Prednisone的潜在新健康风险",
+            "expectation": "评估新健康风险对疗效的影响",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_chloroquine",
+          "type": "Drug",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ivig",
+          "type": "Drug",
+          "label": "IVIG",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tocilizumab",
+          "type": "Drug",
+          "label": "Tocilizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_abatacept",
+          "type": "Drug",
+          "label": "Abatacept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "juvenile_dermatomyositis",
+          "type": "Disease",
+          "label": "Juvenile dermatomyositis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease",
+          "type": "Disease",
+          "label": "Juvenile dermatomyositis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cq",
+          "type": "Target",
+          "label": "OffTarget_Chloroquine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cq",
+          "type": "Pathway",
+          "label": "RiskPathway_Chloroquine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cq",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Chloroquine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pr",
+          "type": "Target",
+          "label": "OffTarget_Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pr",
+          "type": "Pathway",
+          "label": "RiskPathway_Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pr",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "IVIG",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Tocilizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Abatacept",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_chloroquine",
+          "target": "juvenile_dermatomyositis",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "前期研究显示药物对肌炎有抑制作用"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "juvenile_dermatomyositis",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "类固醇药物常用于减少炎症"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "juvenile_dermatomyositis",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "免疫抑制作用对治疗有效"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "juvenile_dermatomyositis",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "类似使用于自身免疫疾病"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "juvenile_dermatomyositis",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "强效免疫抑制，常适用于重症"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "juvenile_dermatomyositis",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "显示在肌炎中的疗效"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "juvenile_dermatomyositis",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抑制B细胞活性，可能改善病情"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "juvenile_dermatomyositis",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "经典类固醇，用于减轻急性发作"
+        },
+        {
+          "source": "drug_ivig",
+          "target": "juvenile_dermatomyositis",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "用于增强免疫，辅助治疗"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "juvenile_dermatomyositis",
+          "relation": "inhibits",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可降低肿瘤坏死因子"
+        },
+        {
+          "source": "drug_tocilizumab",
+          "target": "juvenile_dermatomyositis",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "对抗IL-6可能带来益处"
+        },
+        {
+          "source": "drug_abatacept",
+          "target": "juvenile_dermatomyositis",
+          "relation": "inhibits",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "作为免疫调节剂可能有效"
+        },
+        {
+          "source": "drug_chloroquine",
+          "target": "n_ot_cq",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响其他免疫路径"
+        },
+        {
+          "source": "n_ot_cq",
+          "target": "n_rp_cq",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的副作用通路"
+        },
+        {
+          "source": "n_rp_cq",
+          "target": "n_adv_cq",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应"
+        },
+        {
+          "source": "n_adv_cq",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "副作用可能抵消疗效"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_pr",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响基础疾病进展"
+        },
+        {
+          "source": "n_ot_pr",
+          "target": "n_rp_pr",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险通路"
+        },
+        {
+          "source": "n_rp_pr",
+          "target": "n_adv_pr",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致特定不良表型"
+        },
+        {
+          "source": "n_adv_pr",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致新的健康风险"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Chloroquine的副作用",
+              "pro_nodes": [],
+              "con_nodes": [
+                "n_adv_cq"
+              ],
+              "note": "副作用对疗效的可能矛盾"
+            }
+          ]
+        },
+        "notes": "已完成Chloroquine的副作用压力测试：高权重refutes边标注到假设H1"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Prednisone的潜在新健康风险",
+              "pro_nodes": [],
+              "con_nodes": [
+                "n_adv_pr"
+              ],
+              "note": "潜在新健康风险与疗效的冲突"
+            }
+          ]
+        },
+        "notes": "已完成Prednisone的潜在新健康风险压力测试：高权重refutes边标注到假设H2"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": []
+  }
+}

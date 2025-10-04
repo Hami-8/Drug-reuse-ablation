@@ -1,0 +1,848 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_aminophylline",
+          "name": "Aminophylline"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_bromocriptine",
+          "name": "Bromocriptine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_caffeine",
+          "name": "Caffeine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_clonidine",
+          "name": "Clonidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_dextromethorphan",
+          "name": "Dextromethorphan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_hydrocodone",
+          "name": "Hydrocodone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_mucolytics",
+          "name": "Mucolytics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_narcotics",
+          "name": "Narcotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_propranolol",
+          "name": "Propranolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_pseudoephedrine",
+          "name": "Pseudoephedrine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_theophylline",
+          "name": "Theophylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_aminophylline",
+          "type": "Target",
+          "label": "OffTargetAminophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aminophylline",
+          "type": "Pathway",
+          "label": "RiskPathwayAminophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aminophylline",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAminophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bromocriptine",
+          "type": "Target",
+          "label": "OffTargetBromocriptine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bromocriptine",
+          "type": "Pathway",
+          "label": "RiskPathwayBromocriptine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bromocriptine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBromocriptine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_caffeine",
+          "type": "Target",
+          "label": "OffTargetCaffeine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_caffeine",
+          "type": "Pathway",
+          "label": "RiskPathwayCaffeine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_caffeine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCaffeine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clonidine",
+          "type": "Target",
+          "label": "OffTargetClonidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_clonidine",
+          "type": "Pathway",
+          "label": "RiskPathwayClonidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clonidine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeClonidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dextromethorphan",
+          "type": "Target",
+          "label": "OffTargetDextromethorphan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dextromethorphan",
+          "type": "Pathway",
+          "label": "RiskPathwayDextromethorphan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dextromethorphan",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeDextromethorphan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_hydrocodone",
+          "type": "Target",
+          "label": "OffTargetHydrocodone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_hydrocodone",
+          "type": "Pathway",
+          "label": "RiskPathwayHydrocodone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_hydrocodone",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeHydrocodone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ibuprofen",
+          "type": "Target",
+          "label": "OffTargetIbuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ibuprofen",
+          "type": "Pathway",
+          "label": "RiskPathwayIbuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ibuprofen",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeIbuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mucolytics",
+          "type": "Target",
+          "label": "OffTargetMucolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mucolytics",
+          "type": "Pathway",
+          "label": "RiskPathwayMucolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mucolytics",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMucolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_narcotics",
+          "type": "Target",
+          "label": "OffTargetNarcotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_narcotics",
+          "type": "Pathway",
+          "label": "RiskPathwayNarcotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_narcotics",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeNarcotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_propranolol",
+          "type": "Target",
+          "label": "OffTargetPropranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_propranolol",
+          "type": "Pathway",
+          "label": "RiskPathwayPropranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_propranolol",
+          "type": "Phenotype",
+          "label": "AdversePhenotypePropranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pseudoephedrine",
+          "type": "Target",
+          "label": "OffTargetPseudoephedrine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pseudoephedrine",
+          "type": "Pathway",
+          "label": "RiskPathwayPseudoephedrine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pseudoephedrine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypePseudoephedrine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_theophylline",
+          "type": "Target",
+          "label": "OffTargetTheophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_theophylline",
+          "type": "Pathway",
+          "label": "RiskPathwayTheophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_theophylline",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTheophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_aminophylline",
+          "target": "n_ot_aminophylline",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响气道功能"
+        },
+        {
+          "source": "n_ot_aminophylline",
+          "target": "n_rp_aminophylline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致气道不畅的风险通路"
+        },
+        {
+          "source": "n_rp_aminophylline",
+          "target": "n_adv_aminophylline",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能造成症状加重"
+        },
+        {
+          "source": "n_adv_aminophylline",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险证实会增加治疗困难"
+        },
+        {
+          "source": "drug_bromocriptine",
+          "target": "n_ot_bromocriptine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响气道运动"
+        },
+        {
+          "source": "n_ot_bromocriptine",
+          "target": "n_rp_bromocriptine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "牵涉此风险通路"
+        },
+        {
+          "source": "n_rp_bromocriptine",
+          "target": "n_adv_bromocriptine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险可能导致症状加剧"
+        },
+        {
+          "source": "n_adv_bromocriptine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险严重可能影响治疗"
+        },
+        {
+          "source": "drug_caffeine",
+          "target": "n_ot_caffeine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响气道扩张"
+        },
+        {
+          "source": "n_ot_caffeine",
+          "target": "n_rp_caffeine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可影响气道通气的路径"
+        },
+        {
+          "source": "n_rp_caffeine",
+          "target": "n_adv_caffeine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可导致呼吸道问题"
+        },
+        {
+          "source": "n_adv_caffeine",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能削弱疗效"
+        },
+        {
+          "source": "drug_clonidine",
+          "target": "n_ot_clonidine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能抑制呼吸中枢"
+        },
+        {
+          "source": "n_ot_clonidine",
+          "target": "n_rp_clonidine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与呼吸抑制风险相关"
+        },
+        {
+          "source": "n_rp_clonidine",
+          "target": "n_adv_clonidine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重影响"
+        },
+        {
+          "source": "n_adv_clonidine",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "对病情控制可能产生影响"
+        },
+        {
+          "source": "drug_dextromethorphan",
+          "target": "n_ot_dextromethorphan",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响咳嗽反射"
+        },
+        {
+          "source": "n_ot_dextromethorphan",
+          "target": "n_rp_dextromethorphan",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "牵涉此风险路径"
+        },
+        {
+          "source": "n_rp_dextromethorphan",
+          "target": "n_adv_dextromethorphan",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可加重症状"
+        },
+        {
+          "source": "n_adv_dextromethorphan",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消治疗效果"
+        },
+        {
+          "source": "drug_hydrocodone",
+          "target": "n_ot_hydrocodone",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响呼吸率"
+        },
+        {
+          "source": "n_ot_hydrocodone",
+          "target": "n_rp_hydrocodone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_rp_hydrocodone",
+          "target": "n_adv_hydrocodone",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致呼吸抑制"
+        },
+        {
+          "source": "n_adv_hydrocodone",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "会造成严重呼吸问题"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_ot_ibuprofen",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能刺激气道"
+        },
+        {
+          "source": "n_ot_ibuprofen",
+          "target": "n_rp_ibuprofen",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与呼吸道风险相关"
+        },
+        {
+          "source": "n_rp_ibuprofen",
+          "target": "n_adv_ibuprofen",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致气道问题加重"
+        },
+        {
+          "source": "n_adv_ibuprofen",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致症状加剧"
+        },
+        {
+          "source": "drug_mucolytics",
+          "target": "n_ot_mucolytics",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能对气道产生负面影响"
+        },
+        {
+          "source": "n_ot_mucolytics",
+          "target": "n_rp_mucolytics",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险链"
+        },
+        {
+          "source": "n_rp_mucolytics",
+          "target": "n_adv_mucolytics",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对气道健康可能有负面影响"
+        },
+        {
+          "source": "n_adv_mucolytics",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "影响治疗结果"
+        },
+        {
+          "source": "drug_narcotics",
+          "target": "n_ot_narcotics",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可引起呼吸抑制"
+        },
+        {
+          "source": "n_ot_narcotics",
+          "target": "n_rp_narcotics",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能涉及呼吸抑制"
+        },
+        {
+          "source": "n_rp_narcotics",
+          "target": "n_adv_narcotics",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可导致严重呼吸问题"
+        },
+        {
+          "source": "n_adv_narcotics",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "会影响病情控制"
+        },
+        {
+          "source": "drug_propranolol",
+          "target": "n_ot_propranolol",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能抑制呼吸功能"
+        },
+        {
+          "source": "n_ot_propranolol",
+          "target": "n_rp_propranolol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能与呼吸抑制有关"
+        },
+        {
+          "source": "n_rp_propranolol",
+          "target": "n_adv_propranolol",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可加剧气道问题"
+        },
+        {
+          "source": "n_adv_propranolol",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消治疗效益"
+        },
+        {
+          "source": "drug_pseudoephedrine",
+          "target": "n_ot_pseudoephedrine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可刺激气道"
+        },
+        {
+          "source": "n_ot_pseudoephedrine",
+          "target": "n_rp_pseudoephedrine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能对气道有负面影响"
+        },
+        {
+          "source": "n_rp_pseudoephedrine",
+          "target": "n_adv_pseudoephedrine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "有可能造成症状恶化"
+        },
+        {
+          "source": "n_adv_pseudoephedrine",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能受到负面影响"
+        },
+        {
+          "source": "drug_theophylline",
+          "target": "n_ot_theophylline",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响气道反应性"
+        },
+        {
+          "source": "n_ot_theophylline",
+          "target": "n_rp_theophylline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与气道问题相关"
+        },
+        {
+          "source": "n_rp_theophylline",
+          "target": "n_adv_theophylline",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能加重症状"
+        },
+        {
+          "source": "n_adv_theophylline",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能影响疗效"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "这些药物可能加重呼吸道问题，影响病情控制",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "所有列出的药物都有可能通过不同机制影响气道健康",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "假设药物对气道没有负面影响",
+      "假设这些药物能改善而非恶化症状"
+    ],
+    "falsification_tests": [
+      "是否有证据显示这些药物在PCD患者中安全有效？",
+      "是否存在任何相关的临床试验支持这些药物的适用性？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供临床数据支持这些药物的安全性与有效性",
+      "询问对症治疗中这些药物的具体应用方案"
+    ]
+  }
+}

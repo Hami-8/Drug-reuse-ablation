@@ -1,0 +1,324 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Limb girdle muscular dystrophy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_steroids",
+          "name": "Steroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_gentamicin",
+          "name": "Gentamicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_amikacin",
+          "name": "Amikacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_erythromycin",
+          "name": "Erythromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_tetracycline",
+          "name": "Tetracycline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_chloroquine",
+          "name": "Chloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_hmg_coa_reductase_inhibitors",
+          "name": "HMG-CoA reductase inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_calcium_channel_blockers",
+          "name": "Calcium channel blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_succinylcholine",
+          "name": "Succinylcholine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "OffTargetEffects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp1",
+          "type": "Pathway",
+          "label": "CorticosteroidEffects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp2",
+          "type": "Pathway",
+          "label": "AntibioticRisks",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv1",
+          "type": "Phenotype",
+          "label": "AdverseEffectsCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv2",
+          "type": "Phenotype",
+          "label": "AdverseEffectsAntibiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发系统性副作用"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "高糖皮质激素的副作用风险"
+        },
+        {
+          "source": "drug_steroids",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "共通副作用风险"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "n_rp2",
+          "relation": "interacts_with",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉相关问题"
+        },
+        {
+          "source": "drug_gentamicin",
+          "target": "n_rp2",
+          "relation": "interacts_with",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "高风险肾毒性"
+        },
+        {
+          "source": "drug_amikacin",
+          "target": "n_rp2",
+          "relation": "interacts_with",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发耳毒性"
+        },
+        {
+          "source": "drug_erythromycin",
+          "target": "n_rp2",
+          "relation": "interacts_with",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "drug_tetracycline",
+          "target": "n_rp2",
+          "relation": "interacts_with",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与肌肉问题的潜在关联"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "导致严重不良反应的风险"
+        },
+        {
+          "source": "n_rp2",
+          "target": "n_adv2",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能诱发严重副作用"
+        },
+        {
+          "source": "n_adv1",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "潜在的副作用相互冲突"
+        },
+        {
+          "source": "n_adv2",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "抗生素的副作用影响穆斯克功能"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "类固醇与抗生素的相互作用",
+          "pro_nodes": [
+            "drug_prednisone",
+            "drug_dexamethasone",
+            "drug_steroids"
+          ],
+          "con_nodes": [
+            "n_adv1",
+            "n_adv2"
+          ],
+          "note": "类固醇与抗生素的使用可能导致严重的副作用"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "高剂量类固醇可能与疾病进展不符",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "抗生素的使用可能导致不良结果风险加大",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "类固醇对患者的机制是否适得其反",
+      "抗生素与肌肉功能之间的相互作用是否得到验证"
+    ],
+    "falsification_tests": [
+      "是否存在临床数据证实类固醇治疗导致肌肉功能障碍？",
+      "是否有证据表明抗生素加重患者的病情？"
+    ],
+    "next_focus_for_pi": [
+      "提供针对抗生素和类固醇组合使用的安全性评估",
+      "探讨加重副作用的机制"
+    ]
+  }
+}

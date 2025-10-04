@@ -1,0 +1,566 @@
+{
+  "input": {
+    "mode": "score",
+    "query": {
+      "entity": "Limb girdle muscular dystrophy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        }
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        }
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_steroids",
+          "name": "Steroids"
+        }
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        }
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_gentamicin",
+          "name": "Gentamicin"
+        }
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_amikacin",
+          "name": "Amikacin"
+        }
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_erythromycin",
+          "name": "Erythromycin"
+        }
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_tetracycline",
+          "name": "Tetracycline"
+        }
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_chloroquine",
+          "name": "Chloroquine"
+        }
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_hmg_coa_reductase_inhibitors",
+          "name": "HMG-CoA reductase inhibitors"
+        }
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_calcium_channel_blockers",
+          "name": "Calcium channel blockers"
+        }
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_succinylcholine",
+          "name": "Succinylcholine"
+        }
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_steroids",
+          "type": "Drug",
+          "label": "Steroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gentamicin",
+          "type": "Drug",
+          "label": "Gentamicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amikacin",
+          "type": "Drug",
+          "label": "Amikacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_erythromycin",
+          "type": "Drug",
+          "label": "Erythromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tetracycline",
+          "type": "Drug",
+          "label": "Tetracycline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_chloroquine",
+          "type": "Drug",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hmg_coa_reductase_inhibitors",
+          "type": "Drug",
+          "label": "HMG-CoA reductase inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_calcium_channel_blockers",
+          "type": "Drug",
+          "label": "Calcium channel blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_succinylcholine",
+          "type": "Drug",
+          "label": "Succinylcholine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Limb girdle muscular dystrophy",
+          "type": "Disease",
+          "label": "Limb girdle muscular dystrophy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "OffTargetEffects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp1",
+          "type": "Pathway",
+          "label": "CorticosteroidEffects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp2",
+          "type": "Pathway",
+          "label": "AntibioticRisks",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv1",
+          "type": "Phenotype",
+          "label": "AdverseEffectsCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv2",
+          "type": "Phenotype",
+          "label": "AdverseEffectsAntibiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Steroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Gentamicin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Amikacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Erythromycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Tetracycline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "HMG-CoA reductase inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Calcium channel blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Succinylcholine",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_prednisone",
+          "target": "Limb girdle muscular dystrophy",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知副作用与此类疾病不匹配"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "Limb girdle muscular dystrophy",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知副作用与此类疾病不匹配"
+        },
+        {
+          "source": "drug_steroids",
+          "target": "Limb girdle muscular dystrophy",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知副作用与此类疾病不匹配"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "Limb girdle muscular dystrophy",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗生素可能引发并发症"
+        },
+        {
+          "source": "drug_gentamicin",
+          "target": "Limb girdle muscular dystrophy",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗生素可能引发并发症"
+        },
+        {
+          "source": "drug_amikacin",
+          "target": "Limb girdle muscular dystrophy",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗生素可能引发并发症"
+        },
+        {
+          "source": "drug_erythromycin",
+          "target": "Limb girdle muscular dystrophy",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗生素可能引发并发症"
+        },
+        {
+          "source": "drug_tetracycline",
+          "target": "Limb girdle muscular dystrophy",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗生素可能引发并发症"
+        },
+        {
+          "source": "drug_chloroquine",
+          "target": "Limb girdle muscular dystrophy",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能引发肌肉副作用"
+        },
+        {
+          "source": "drug_hmg_coa_reductase_inhibitors",
+          "target": "Limb girdle muscular dystrophy",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "drug_calcium_channel_blockers",
+          "target": "Limb girdle muscular dystrophy",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "drug_succinylcholine",
+          "target": "Limb girdle muscular dystrophy",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "已知对肌肉产生负面影响"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发系统性副作用"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "高糖皮质激素的副作用风险"
+        },
+        {
+          "source": "drug_steroids",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "共通副作用风险"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "n_rp2",
+          "relation": "interacts_with",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉相关问题"
+        },
+        {
+          "source": "drug_gentamicin",
+          "target": "n_rp2",
+          "relation": "interacts_with",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "高风险肾毒性"
+        },
+        {
+          "source": "drug_amikacin",
+          "target": "n_rp2",
+          "relation": "interacts_with",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发耳毒性"
+        },
+        {
+          "source": "drug_erythromycin",
+          "target": "n_rp2",
+          "relation": "interacts_with",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "drug_tetracycline",
+          "target": "n_rp2",
+          "relation": "interacts_with",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与肌肉问题的潜在关联"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "导致严重不良反应的风险"
+        },
+        {
+          "source": "n_rp2",
+          "target": "n_adv2",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能诱发严重副作用"
+        },
+        {
+          "source": "n_adv1",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "潜在的副作用相互冲突"
+        },
+        {
+          "source": "n_adv2",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "抗生素的副作用影响穆斯克功能"
+        }
+      ],
+      "round_index": 2
+    },
+    "history": {
+      "round": 2,
+      "last_scores": []
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "scoring_summary": [],
+    "ranking": [],
+    "delta_since_last_round": 0.1,
+    "stop_decision": {
+      "should_stop": false,
+      "reason": "final-only ablation"
+    }
+  }
+}

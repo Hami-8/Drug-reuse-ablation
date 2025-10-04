@@ -1,0 +1,848 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Hereditary haemorrhagic telangiectasia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_nsaids",
+          "name": "NSAIDs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_warfarin",
+          "name": "Warfarin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_clopidogrel",
+          "name": "Clopidogrel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_enoxaparin",
+          "name": "Enoxaparin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_heparin",
+          "name": "Heparin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_rivaroxaban",
+          "name": "Rivaroxaban"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_dabigatran",
+          "name": "Dabigatran"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_cilostazol",
+          "name": "Cilostazol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ticlopidine",
+          "name": "Ticlopidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "Aspirin Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aspirin",
+          "type": "Pathway",
+          "label": "Aspirin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aspirin",
+          "type": "Phenotype",
+          "label": "Aspirin Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nsaids",
+          "type": "Target",
+          "label": "NSAIDs Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nsaids",
+          "type": "Pathway",
+          "label": "NSAIDs Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nsaids",
+          "type": "Phenotype",
+          "label": "NSAIDs Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_warfarin",
+          "type": "Target",
+          "label": "Warfarin Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_warfarin",
+          "type": "Pathway",
+          "label": "Warfarin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_warfarin",
+          "type": "Phenotype",
+          "label": "Warfarin Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clopidogrel",
+          "type": "Target",
+          "label": "Clopidogrel Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_clopidogrel",
+          "type": "Pathway",
+          "label": "Clopidogrel Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clopidogrel",
+          "type": "Phenotype",
+          "label": "Clopidogrel Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ibuprofen",
+          "type": "Target",
+          "label": "Ibuprofen Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ibuprofen",
+          "type": "Pathway",
+          "label": "Ibuprofen Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ibuprofen",
+          "type": "Phenotype",
+          "label": "Ibuprofen Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_naproxen",
+          "type": "Target",
+          "label": "Naproxen Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_naproxen",
+          "type": "Pathway",
+          "label": "Naproxen Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_naproxen",
+          "type": "Phenotype",
+          "label": "Naproxen Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_enoxaparin",
+          "type": "Target",
+          "label": "Enoxaparin Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_enoxaparin",
+          "type": "Pathway",
+          "label": "Enoxaparin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_enoxaparin",
+          "type": "Phenotype",
+          "label": "Enoxaparin Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_heparin",
+          "type": "Target",
+          "label": "Heparin Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_heparin",
+          "type": "Pathway",
+          "label": "Heparin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_heparin",
+          "type": "Phenotype",
+          "label": "Heparin Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rivaroxaban",
+          "type": "Target",
+          "label": "Rivaroxaban Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rivaroxaban",
+          "type": "Pathway",
+          "label": "Rivaroxaban Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rivaroxaban",
+          "type": "Phenotype",
+          "label": "Rivaroxaban Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dabigatran",
+          "type": "Target",
+          "label": "Dabigatran Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dabigatran",
+          "type": "Pathway",
+          "label": "Dabigatran Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dabigatran",
+          "type": "Phenotype",
+          "label": "Dabigatran Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cilostazol",
+          "type": "Target",
+          "label": "Cilostazol Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cilostazol",
+          "type": "Pathway",
+          "label": "Cilostazol Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cilostazol",
+          "type": "Phenotype",
+          "label": "Cilostazol Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ticlopidine",
+          "type": "Target",
+          "label": "Ticlopidine Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ticlopidine",
+          "type": "Pathway",
+          "label": "Ticlopidine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ticlopidine",
+          "type": "Phenotype",
+          "label": "Ticlopidine Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知出血风险与靶组织作用"
+        },
+        {
+          "source": "n_ot_aspirin",
+          "target": "n_rp_aspirin",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血机制路径相关"
+        },
+        {
+          "source": "n_rp_aspirin",
+          "target": "n_adv_aspirin",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致重大的出血并发症"
+        },
+        {
+          "source": "n_adv_aspirin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消益处"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "n_ot_nsaids",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知出血风险与靶组织作用"
+        },
+        {
+          "source": "n_ot_nsaids",
+          "target": "n_rp_nsaids",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血机制路径相关"
+        },
+        {
+          "source": "n_rp_nsaids",
+          "target": "n_adv_nsaids",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致重大的出血并发症"
+        },
+        {
+          "source": "n_adv_nsaids",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消益处"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "n_ot_warfarin",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知出血风险与靶组织作用"
+        },
+        {
+          "source": "n_ot_warfarin",
+          "target": "n_rp_warfarin",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血机制路径相关"
+        },
+        {
+          "source": "n_rp_warfarin",
+          "target": "n_adv_warfarin",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致重大的出血并发症"
+        },
+        {
+          "source": "n_adv_warfarin",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消益处"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_ot_clopidogrel",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知出血风险与靶组织作用"
+        },
+        {
+          "source": "n_ot_clopidogrel",
+          "target": "n_rp_clopidogrel",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血机制路径相关"
+        },
+        {
+          "source": "n_rp_clopidogrel",
+          "target": "n_adv_clopidogrel",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致重大的出血并发症"
+        },
+        {
+          "source": "n_adv_clopidogrel",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消益处"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_ot_ibuprofen",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知出血风险与靶组织作用"
+        },
+        {
+          "source": "n_ot_ibuprofen",
+          "target": "n_rp_ibuprofen",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血机制路径相关"
+        },
+        {
+          "source": "n_rp_ibuprofen",
+          "target": "n_adv_ibuprofen",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致重大的出血并发症"
+        },
+        {
+          "source": "n_adv_ibuprofen",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消益处"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_ot_naproxen",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知出血风险与靶组织作用"
+        },
+        {
+          "source": "n_ot_naproxen",
+          "target": "n_rp_naproxen",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血机制路径相关"
+        },
+        {
+          "source": "n_rp_naproxen",
+          "target": "n_adv_naproxen",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致重大的出血并发症"
+        },
+        {
+          "source": "n_adv_naproxen",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消益处"
+        },
+        {
+          "source": "drug_enoxaparin",
+          "target": "n_ot_enoxaparin",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知出血风险与靶组织作用"
+        },
+        {
+          "source": "n_ot_enoxaparin",
+          "target": "n_rp_enoxaparin",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血机制路径相关"
+        },
+        {
+          "source": "n_rp_enoxaparin",
+          "target": "n_adv_enoxaparin",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致重大的出血并发症"
+        },
+        {
+          "source": "n_adv_enoxaparin",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消益处"
+        },
+        {
+          "source": "drug_heparin",
+          "target": "n_ot_heparin",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知出血风险与靶组织作用"
+        },
+        {
+          "source": "n_ot_heparin",
+          "target": "n_rp_heparin",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血机制路径相关"
+        },
+        {
+          "source": "n_rp_heparin",
+          "target": "n_adv_heparin",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致重大的出血并发症"
+        },
+        {
+          "source": "n_adv_heparin",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消益处"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "n_ot_rivaroxaban",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知出血风险与靶组织作用"
+        },
+        {
+          "source": "n_ot_rivaroxaban",
+          "target": "n_rp_rivaroxaban",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血机制路径相关"
+        },
+        {
+          "source": "n_rp_rivaroxaban",
+          "target": "n_adv_rivaroxaban",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致重大的出血并发症"
+        },
+        {
+          "source": "n_adv_rivaroxaban",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消益处"
+        },
+        {
+          "source": "drug_dabigatran",
+          "target": "n_ot_dabigatran",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知出血风险与靶组织作用"
+        },
+        {
+          "source": "n_ot_dabigatran",
+          "target": "n_rp_dabigatran",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血机制路径相关"
+        },
+        {
+          "source": "n_rp_dabigatran",
+          "target": "n_adv_dabigatran",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致重大的出血并发症"
+        },
+        {
+          "source": "n_adv_dabigatran",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消益处"
+        },
+        {
+          "source": "drug_cilostazol",
+          "target": "n_ot_cilostazol",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知出血风险与靶组织作用"
+        },
+        {
+          "source": "n_ot_cilostazol",
+          "target": "n_rp_cilostazol",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血机制路径相关"
+        },
+        {
+          "source": "n_rp_cilostazol",
+          "target": "n_adv_cilostazol",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致重大的出血并发症"
+        },
+        {
+          "source": "n_adv_cilostazol",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消益处"
+        },
+        {
+          "source": "drug_ticlopidine",
+          "target": "n_ot_ticlopidine",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知出血风险与靶组织作用"
+        },
+        {
+          "source": "n_ot_ticlopidine",
+          "target": "n_rp_ticlopidine",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血机制路径相关"
+        },
+        {
+          "source": "n_rp_ticlopidine",
+          "target": "n_adv_ticlopidine",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致重大的出血并发症"
+        },
+        {
+          "source": "n_adv_ticlopidine",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能抵消益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "抗凝药物和NSAIDs可能导致出血增加，尤其是针对遗传性出血性毛细血管扩张症患者。",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "这些药物的使用可能引起不良反应或加重病情，特定机制尚需进一步验证。",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "这些药物对出血的影响是否被足够理解",
+      "对遗传性出血性毛细血管扩张症患者的长期风险评估是否准确"
+    ],
+    "falsification_tests": [
+      "对应药物是否有关于出血风险的具体和全面数据？",
+      "这些药物是否在该人群中有效且安全？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供针对每种药物的具体风险管理策略",
+      "考虑进行临床试验以检验长效安全性"
+    ]
+  }
+}

@@ -1,0 +1,570 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Familial tumour syndromes of the central and peripheral nervous system",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_temozolomide",
+            "via": [
+              "Methylated O(6)-methylguanine-DNA methyltransferase",
+              "DNA damage response"
+            ],
+            "to": "Familial tumour syndromes of the central and peripheral nervous system",
+            "success_criteria": "形成至少两条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_dexamethasone",
+            "via": [
+              "Vascular endothelial growth factor receptor",
+              "Angiogenesis"
+            ],
+            "to": "Familial tumour syndromes of the central and peripheral nervous system",
+            "success_criteria": "形成至少两条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_ta1",
+          "type": "Target",
+          "label": "Methylated O(6)-methylguanine-DNA methyltransferase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta2",
+          "type": "Target",
+          "label": "Vascular endothelial growth factor receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb1",
+          "type": "Pathway",
+          "label": "DNA damage response",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb2",
+          "type": "Pathway",
+          "label": "Angiogenesis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dis",
+          "type": "Disease",
+          "label": "Familial tumour syndromes of the central and peripheral nervous system",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_temo",
+          "type": "Target",
+          "label": "OffTargetTemozolomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_temo",
+          "type": "Pathway",
+          "label": "RiskPathwayTemozolomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_temo",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTemozolomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dexa",
+          "type": "Target",
+          "label": "OffTargetDexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dexa",
+          "type": "Pathway",
+          "label": "RiskPathwayDexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dexa",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeDexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Temozolomide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_temozolomide",
+          "type": "Drug",
+          "label": "Temozolomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Pemetrexed",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_pemetrexed",
+          "type": "Drug",
+          "label": "Pemetrexed",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Lapatinib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lapatinib",
+          "type": "Drug",
+          "label": "Lapatinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Carmustine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_carmustine",
+          "type": "Drug",
+          "label": "Carmustine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Trametinib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_trametinib",
+          "type": "Drug",
+          "label": "Trametinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Anaplastic lymphoma kinase inhibitor",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_anaplastic_lymphoma_kinase_inhibitor",
+          "type": "Drug",
+          "label": "Anaplastic lymphoma kinase inhibitor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Etoposide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_etoposide",
+          "type": "Drug",
+          "label": "Etoposide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_vincristine",
+          "type": "Drug",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Nivolumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nivolumab",
+          "type": "Drug",
+          "label": "Nivolumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Atezolizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_atezolizumab",
+          "type": "Drug",
+          "label": "Atezolizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Bevacizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_bevacizumab",
+          "type": "Drug",
+          "label": "Bevacizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_temozolomide",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Established efficacy in brain tumors."
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ta2",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Commonly used for neuro-oncological conditions."
+        },
+        {
+          "source": "n_ta1",
+          "target": "n_pb1",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Mechanism through DNA repair inhibition."
+        },
+        {
+          "source": "n_ta2",
+          "target": "n_pb2",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Role in promoting vascular growth."
+        },
+        {
+          "source": "n_pb1",
+          "target": "n_dis",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Pathological link established."
+        },
+        {
+          "source": "n_pb2",
+          "target": "n_dis",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Angiogenesis contributes to tumor progression."
+        },
+        {
+          "source": "drug_temozolomide",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Mechanism aligns with disease treatment."
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Mechanism aligns with disease management."
+        },
+        {
+          "source": "drug_temozolomide",
+          "target": "n_ot_temo",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向组织"
+        },
+        {
+          "source": "n_ot_temo",
+          "target": "n_rp_temo",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_temo",
+          "target": "n_adv_temo",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_temo",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ot_dexa",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向组织"
+        },
+        {
+          "source": "n_ot_dexa",
+          "target": "n_rp_dexa",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_dexa",
+          "target": "n_adv_dexa",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_dexa",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_temozolomide",
+              "target": "n_ta1",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "Established efficacy in brain tumors."
+            },
+            {
+              "source": "drug_temozolomide",
+              "target": "n_pb1",
+              "relation": "involved_in",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "Mechanism through DNA repair inhibition."
+            },
+            {
+              "source": "n_pb1",
+              "target": "n_dis",
+              "relation": "causes",
+              "weight": 0.65,
+              "agent": "Proponent",
+              "rationale": "Pathological link established."
+            },
+            {
+              "source": "drug_temozolomide",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "Mechanism aligns with disease treatment."
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Temozolomide→Target→Pathway→Disease，形成两条不相交路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_dexamethasone",
+              "target": "n_ta2",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "Commonly used for neuro-oncological conditions."
+            },
+            {
+              "source": "drug_dexamethasone",
+              "target": "n_pb2",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "Role in promoting vascular growth."
+            },
+            {
+              "source": "n_pb2",
+              "target": "n_dis",
+              "relation": "causes",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "Angiogenesis contributes to tumor progression."
+            },
+            {
+              "source": "drug_dexamethasone",
+              "target": "H2",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "Mechanism aligns with disease management."
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Dexamethasone→Target→Pathway→Disease，形成两条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Noonan syndrome",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_growth_hormone",
+          "name": "Growth hormone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_midodrine",
+          "name": "Midodrine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_desmopressin",
+          "name": "Desmopressin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_l_arginine",
+          "name": "L-Arginine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_ketorolac",
+          "name": "Ketorolac"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_propranolol",
+          "name": "Propranolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_angiotensin_ii",
+          "name": "Angiotensin II"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_epinephrine",
+          "name": "Epinephrine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_somatostatin",
+          "name": "Somatostatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_octreotide",
+          "name": "Octreotide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_levothyroxine",
+          "name": "Levothyroxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_dexamethasone",
+          "type": "Target",
+          "label": "OffTarget_Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dexamethasone",
+          "type": "Pathway",
+          "label": "RiskPathway_Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dexamethasone",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_growth_hormone",
+          "type": "Target",
+          "label": "OffTarget_GrowthHormone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_growth_hormone",
+          "type": "Pathway",
+          "label": "RiskPathway_GrowthHormone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_growth_hormone",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_GrowthHormone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ot_dexamethasone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_dexamethasone",
+          "target": "n_rp_dexamethasone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_dexamethasone",
+          "target": "n_adv_dexamethasone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致内分泌失调"
+        },
+        {
+          "source": "n_adv_dexamethasone",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "长时间使用可能影响生长"
+        },
+        {
+          "source": "drug_growth_hormone",
+          "target": "n_ot_growth_hormone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "非靶作用潜在增加"
+        },
+        {
+          "source": "n_ot_growth_hormone",
+          "target": "n_rp_growth_hormone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路潜在冲突"
+        },
+        {
+          "source": "n_rp_growth_hormone",
+          "target": "n_adv_growth_hormone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致心血管风险"
+        },
+        {
+          "source": "n_adv_growth_hormone",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "副作用可能抵消益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "药物安全性",
+          "pro_nodes": [
+            "n_adv_dexamethasone"
+          ],
+          "con_nodes": [
+            "n_adv_growth_hormone"
+          ],
+          "note": "不同药物的安全性和副作用存在冲突"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "可能存在显著副作用，如内分泌干扰",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "共病状态下使用可能加重心血管风险",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物的长期效应及多靶点作用未充分评估",
+      "共病状态对疗效和安全性的影响"
+    ],
+    "falsification_tests": [
+      "是否有实证支持药物在Noonan综合征患者中的安全性？",
+      "是否存在针对多靶点药物作用机制的临床研究数据？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供有关副作用和长期效果的更多数据",
+      "针对冲突热点进行深入讨论与细化"
+    ]
+  }
+}

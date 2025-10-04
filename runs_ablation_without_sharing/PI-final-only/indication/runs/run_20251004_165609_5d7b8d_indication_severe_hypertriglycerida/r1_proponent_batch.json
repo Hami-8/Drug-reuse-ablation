@@ -1,0 +1,371 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ezetimibe",
+          "name": "Ezetimibe"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lomitapide",
+          "name": "Lomitapide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_pcsk9_inhibitors",
+          "name": "PCSK9 inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_triglyceride_lowering_agents",
+          "name": "Triglyceride-lowering agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_cetilistat",
+          "name": "Cetilistat"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_orlistat",
+          "name": "Orlistat"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_bempedoic_acid",
+          "name": "Bempedoic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_sofosbuvir",
+          "name": "Sofosbuvir"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_omega_3_fatty_acids",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ezetimibe",
+          "type": "Drug",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lomitapide",
+          "type": "Drug",
+          "label": "Lomitapide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_pcsk9_inhibitors",
+          "type": "Drug",
+          "label": "PCSK9 inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_triglyceride_lowering_agents",
+          "type": "Drug",
+          "label": "Triglyceride-lowering agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_severe_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_lipid_metabolism",
+          "type": "Pathway",
+          "label": "Lipid metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_ppar_alpha",
+          "type": "Target",
+          "label": "PPAR-alpha",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_lpl",
+          "type": "Target",
+          "label": "Lipoprotein lipase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_improved_lipid_profile",
+          "type": "Phenotype",
+          "label": "Improved lipid profile",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_fibrates",
+          "target": "target_ppar_alpha",
+          "relation": "activates",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知对 PPAR-alpha 的活化作用"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "target_lpl",
+          "relation": "activates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "强化脂蛋白酯酶活性"
+        },
+        {
+          "source": "drug_omega_3_fatty_acids",
+          "target": "target_lpl",
+          "relation": "activates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "常识：改善甘油三酯代谢"
+        },
+        {
+          "source": "drug_statins",
+          "target": "pathway_lipid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "普遍应用于脂质代谢通路"
+        },
+        {
+          "source": "drug_ezetimibe",
+          "target": "pathway_lipid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过抑制胆固醇吸收参与"
+        },
+        {
+          "source": "drug_lomitapide",
+          "target": "target_lpl",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过抑制 VLDL 产生作用"
+        },
+        {
+          "source": "drug_pcsk9_inhibitors",
+          "target": "target_lpl",
+          "relation": "activates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "通过降低 LDL 受体降解"
+        },
+        {
+          "source": "drug_triglyceride_lowering_agents",
+          "target": "pathway_lipid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "针对甘油三酯代谢的综合治疗"
+        },
+        {
+          "source": "target_ppar_alpha",
+          "target": "phenotype_improved_lipid_profile",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "PPAR-alpha 通路影响血脂"
+        },
+        {
+          "source": "target_lpl",
+          "target": "phenotype_improved_lipid_profile",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响甘油三酯清除"
+        },
+        {
+          "source": "pathway_lipid_metabolism",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "脂质代谢失常与病症关联"
+        },
+        {
+          "source": "phenotype_improved_lipid_profile",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "改善表型可降低疾病风险"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "通过 PPAR-alpha 与脂蛋白酯酶靶点，影响脂质代谢，与疾病进程密切相关，多个药物均有潜在作用",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "改善甘油三酯水平的药物可直接影响严重高甘油三酯血症相关表型",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "这些药物能够有效达到靶器官，并发挥作用"
+    ],
+    "uncertainties": [
+      "个体反应存在变异，长期效果及安全性需要进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需进一步探索其他药物的补充机制"
+    ]
+  }
+}

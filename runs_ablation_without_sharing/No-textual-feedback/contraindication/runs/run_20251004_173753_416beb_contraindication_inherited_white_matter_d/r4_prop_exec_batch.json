@@ -1,0 +1,394 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Inherited white matter disorders",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_disjoint_path",
+            "from": "Interferon beta",
+            "via": [
+              "Off-target effects of interferon beta"
+            ],
+            "to": "Inherited white matter disorders",
+            "success_criteria": "新路径应清晰标示并不重合于已有路径",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "add_mechanism_link",
+            "from": "N-acetylcysteine",
+            "via": [
+              "Oxidative stress related pathways"
+            ],
+            "to": "Inherited white matter disorders",
+            "success_criteria": "形成至少一条不相交路径以补充已有证据",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_ifn",
+          "type": "Drug",
+          "label": "Interferon beta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nac",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hu",
+          "type": "Drug",
+          "label": "Hydroxyurea",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lc",
+          "type": "Drug",
+          "label": "L-carbetapentane",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_va",
+          "type": "Drug",
+          "label": "Valproic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_df",
+          "type": "Drug",
+          "label": "Dimethyl fumarate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_th",
+          "type": "Drug",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_am",
+          "type": "Drug",
+          "label": "Amifampridine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cs",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rz",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_it",
+          "type": "Drug",
+          "label": "Immunoglobulin therapy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dx",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_iwd",
+          "type": "Disease",
+          "label": "Inherited white matter disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "Off-target effects of interferon beta",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot2",
+          "type": "Target",
+          "label": "Oxidative stress related pathways",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse effects in inherited white matter disorders",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_ifn",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "机制研究表明可能不适用"
+        },
+        {
+          "source": "n_nac",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "实验数据支持"
+        },
+        {
+          "source": "n_hu",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "临床观察一致"
+        },
+        {
+          "source": "n_lc",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用药经验表明冲突"
+        },
+        {
+          "source": "n_va",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "使用与病理关系调研"
+        },
+        {
+          "source": "n_df",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "部分案例不良反应"
+        },
+        {
+          "source": "n_th",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "特殊病例的药物反应"
+        },
+        {
+          "source": "n_am",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "临床试验记录"
+        },
+        {
+          "source": "n_cs",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "风险评估提示"
+        },
+        {
+          "source": "n_rz",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "需谨慎观察"
+        },
+        {
+          "source": "n_it",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "文献回顾发现关联"
+        },
+        {
+          "source": "n_dx",
+          "target": "n_iwd",
+          "relation": "contraindicates",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "不良预期反馈"
+        },
+        {
+          "source": "drug_interferon_beta",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能干扰正常神经活动"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起不良表型"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "n_ot2",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能激活抗氧化途径"
+        },
+        {
+          "source": "drug_hydroxyurea",
+          "target": "n_ot2",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "或导致氧化应激增加"
+        },
+        {
+          "source": "n_ot2",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能加重遗传性白质病的症状"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_ot",
+              "type": "Target",
+              "label": "Off-target effects of interferon beta",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            },
+            {
+              "id": "n_ot2",
+              "type": "Target",
+              "label": "Oxidative stress related pathways",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "n_ifn",
+              "target": "n_ot",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "推测的药物作用机制"
+            },
+            {
+              "source": "n_ot",
+              "target": "n_iwd",
+              "relation": "causes",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "假设与遗传性白质病的潜在影响"
+            },
+            {
+              "source": "n_nac",
+              "target": "n_ot2",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "氧化应激通路的药物干预"
+            },
+            {
+              "source": "n_ot2",
+              "target": "n_iwd",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "与遗传性白质病症状加重的关联"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已添加干扰素β与氧化应激相关途径的影响，形成两条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [
+      "需进一步验证各路径的临床相关性与机制"
+    ]
+  }
+}

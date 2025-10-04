@@ -1,0 +1,271 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Distal myopathies",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Distal myopathies",
+            "expectation": "针对潜在的药物禁忌，需评估其影响",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Distal myopathies",
+            "expectation": "评估类固醇类药物的安全性和相对影响",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Distal myopathies",
+            "expectation": "评估肌病风险及潜在证据",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_cholesterol",
+          "type": "Drug",
+          "label": "Cholesterol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_daptomycin",
+          "type": "Drug",
+          "label": "Daptomycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fluoroquinolones",
+          "type": "Drug",
+          "label": "Fluoroquinolones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gentamicin",
+          "type": "Drug",
+          "label": "Gentamicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hydrochlorothiazide",
+          "type": "Drug",
+          "label": "Hydrochlorothiazide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_interferon",
+          "type": "Drug",
+          "label": "Interferon",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sodium_channel_blockers",
+          "type": "Drug",
+          "label": "Sodium channel blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tetracyclines",
+          "type": "Drug",
+          "label": "Tetracyclines",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_vincristine",
+          "type": "Drug",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_distal_myopathies",
+          "type": "Disease",
+          "label": "Distal myopathies",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_cholesterol",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "潜在的影响机制推测"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "类固醇类药物可能诱发或加重病症"
+        },
+        {
+          "source": "n_daptomycin",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与肌病风险关联"
+        },
+        {
+          "source": "n_fluoroquinolones",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知与肌肉副作用相关"
+        },
+        {
+          "source": "n_gentamicin",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与肌病风险相关"
+        },
+        {
+          "source": "n_hydrochlorothiazide",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能导致电解质紊乱"
+        },
+        {
+          "source": "n_ibuprofen",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "非甾体抗炎药可能影响肌肉功能"
+        },
+        {
+          "source": "n_interferon",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响免疫反应，可能导致肌肉病理"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知与肌病风险相关"
+        },
+        {
+          "source": "n_sodium_channel_blockers",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能影响神经肌肉功能"
+        },
+        {
+          "source": "n_tetracyclines",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能与肌病风险有关"
+        },
+        {
+          "source": "n_vincristine",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知化疗药物可影响肌肉功能"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates_per_hypothesis": []
+  }
+}

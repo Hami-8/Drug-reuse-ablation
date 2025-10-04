@@ -1,0 +1,500 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_digoxin",
+          "name": "Digoxin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_tacrolimus",
+          "name": "Tacrolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_angiotensin_converting_enzyme_inhibitors",
+          "name": "Angiotensin converting enzyme inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_non_steroidal_anti_inflammatory_drugs",
+          "name": "Non-steroidal anti-inflammatory drugs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_lithium",
+          "name": "Lithium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_dopamine",
+          "name": "Dopamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_vancomycin",
+          "name": "Vancomycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_amphotericin_b",
+          "name": "Amphotericin B"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_naproxen",
+          "type": "Drug",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_digoxin",
+          "type": "Drug",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ace_inhibitors",
+          "type": "Drug",
+          "label": "Angiotensin converting enzyme inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_nsaid",
+          "type": "Drug",
+          "label": "Non-steroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dopamine",
+          "type": "Drug",
+          "label": "Dopamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_vancomycin",
+          "type": "Drug",
+          "label": "Vancomycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_amphotericin_b",
+          "type": "Drug",
+          "label": "Amphotericin B",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk",
+          "type": "Pathway",
+          "label": "Risk of worsening kidney function",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adverse_phenotype",
+          "type": "Phenotype",
+          "label": "Acute kidney injury",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_ibuprofen",
+          "target": "n_risk",
+          "relation": "increases",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知对肾功能的不良影响"
+        },
+        {
+          "source": "n_naproxen",
+          "target": "n_risk",
+          "relation": "increases",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知对肾功能的不良影响"
+        },
+        {
+          "source": "n_aspirin",
+          "target": "n_risk",
+          "relation": "increases",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "与肾功能恶化相关"
+        },
+        {
+          "source": "n_digoxin",
+          "target": "n_risk",
+          "relation": "interacts_with",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在肾脏影响的药物相互作用"
+        },
+        {
+          "source": "n_cyclosporine",
+          "target": "n_risk",
+          "relation": "exacerbates",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对肾功能有明显的抑制作用"
+        },
+        {
+          "source": "n_tacrolimus",
+          "target": "n_risk",
+          "relation": "exacerbates",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对肾功能有明显的抑制作用"
+        },
+        {
+          "source": "n_ace_inhibitors",
+          "target": "n_risk",
+          "relation": "could_increase",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾功能"
+        },
+        {
+          "source": "n_nsaid",
+          "target": "n_risk",
+          "relation": "increases",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知对肾功能的不良影响"
+        },
+        {
+          "source": "n_lithium",
+          "target": "n_risk",
+          "relation": "increases",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肾功能损害"
+        },
+        {
+          "source": "n_dopamine",
+          "target": "n_risk",
+          "relation": "may_affect",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "对肾脏影响尚待明确"
+        },
+        {
+          "source": "n_vancomycin",
+          "target": "n_risk",
+          "relation": "could_exacerbate",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "肾毒性风险"
+        },
+        {
+          "source": "n_amphotericin_b",
+          "target": "n_risk",
+          "relation": "increases",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "已知肾毒性极高"
+        },
+        {
+          "source": "n_risk",
+          "target": "n_adverse_phenotype",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致急性肾损伤"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将严重影响疗效"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将严重影响疗效"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将严重影响疗效"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将严重影响疗效"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将严重影响疗效"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将严重影响疗效"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将严重影响疗效"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将严重影响疗效"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将严重影响疗效"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将严重影响疗效"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将严重影响疗效"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将严重影响疗效"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "药物使用与肾功能的潜在冲突",
+          "pro_nodes": [
+            "n_ibuprofen",
+            "n_naproxen",
+            "n_aspirin"
+          ],
+          "con_nodes": [
+            "n_risk",
+            "n_adverse_phenotype"
+          ],
+          "note": "使用这些药物可能加重肾损害"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "这些药物在肾病患者中的使用普遍且需谨慎调节剂量",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "肾功能损害的风险与药物类型和剂量相关",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "使用这些药物是否违背了慢性肾病的安全指南",
+      "不同药物对肾功能的潜在影响是否足够不同"
+    ],
+    "falsification_tests": [
+      "是否有研究显示这些药物在肾病患者中使用的安全性",
+      "是否能找到反驳剂量依赖性肾毒性的证据"
+    ],
+    "next_focus_for_pi": [
+      "提供不同药物使用时肾功能监测的数据支持",
+      "研究如何安全管理肾病患者的药物治疗"
+    ]
+  }
+}

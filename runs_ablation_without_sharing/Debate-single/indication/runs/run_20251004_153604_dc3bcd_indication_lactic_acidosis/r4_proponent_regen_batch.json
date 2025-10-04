@@ -1,0 +1,560 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Lactic acidosis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_metformin",
+          "name": "Metformin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_sodium_bicarbonate",
+          "name": "Sodium Bicarbonate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_thiamine",
+          "name": "Thiamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_carnitine",
+          "name": "Carnitine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_dichloroacetate",
+          "name": "Dichloroacetate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_hydroxycobalamin",
+          "name": "Hydroxycobalamin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_arginine",
+          "name": "Arginine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_l_arginine",
+          "name": "L-arginine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_l_carnitine",
+          "name": "L-carnitine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_b_vitamin_complex",
+          "name": "B-vitamin complex"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_insulin",
+          "name": "Insulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 4
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_bicarbonate",
+          "type": "Drug",
+          "label": "Sodium Bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiamine",
+          "type": "Drug",
+          "label": "Thiamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carnitine",
+          "type": "Drug",
+          "label": "Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dichloroacetate",
+          "type": "Drug",
+          "label": "Dichloroacetate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydroxycobalamin",
+          "type": "Drug",
+          "label": "Hydroxycobalamin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_arginine",
+          "type": "Drug",
+          "label": "Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_l_arginine",
+          "type": "Drug",
+          "label": "L-arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_l_carnitine",
+          "type": "Drug",
+          "label": "L-carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_b_vitamin_complex",
+          "type": "Drug",
+          "label": "B-vitamin complex",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_la",
+          "type": "Phenotype",
+          "label": "Lactic acidosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_met_target",
+          "type": "Target",
+          "label": "Target of Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bicarb_target",
+          "type": "Target",
+          "label": "Target of Sodium Bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thiamine_target",
+          "type": "Target",
+          "label": "Target of Thiamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_carnitine_target",
+          "type": "Target",
+          "label": "Target of Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dichloroacetate_target",
+          "type": "Target",
+          "label": "Target of Dichloroacetate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hydroxycobalamin_target",
+          "type": "Target",
+          "label": "Target of Hydroxycobalamin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_n_acetylcysteine_target",
+          "type": "Target",
+          "label": "Target of N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_arginine_target",
+          "type": "Target",
+          "label": "Target of Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_l_arginine_target",
+          "type": "Target",
+          "label": "Target of L-arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_l_carnitine_target",
+          "type": "Target",
+          "label": "Target of L-carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_b_vitamin_target",
+          "type": "Target",
+          "label": "Target of B-vitamin complex",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_insulin_target",
+          "type": "Target",
+          "label": "Target of Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_metformin",
+          "target": "n_met_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知作用机制"
+        },
+        {
+          "source": "n_met_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Metformin 对酸碱代谢的影响"
+        },
+        {
+          "source": "drug_sodium_bicarbonate",
+          "target": "n_bicarb_target",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "用于缓解酸中毒的常识"
+        },
+        {
+          "source": "n_bicarb_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "提高血液pH使乳酸中和"
+        },
+        {
+          "source": "drug_thiamine",
+          "target": "n_thiamine_target",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已表明与能量代谢相关"
+        },
+        {
+          "source": "n_thiamine_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能改善乳酸代谢"
+        },
+        {
+          "source": "drug_carnitine",
+          "target": "n_carnitine_target",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "在脂肪酸代谢中发挥作用"
+        },
+        {
+          "source": "n_carnitine_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能改善乳酸排除"
+        },
+        {
+          "source": "drug_dichloroacetate",
+          "target": "n_dichloroacetate_target",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于改善葡萄糖代谢"
+        },
+        {
+          "source": "n_dichloroacetate_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能抑制乳酸生成"
+        },
+        {
+          "source": "drug_hydroxycobalamin",
+          "target": "n_hydroxycobalamin_target",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "有助于降低体内毒素"
+        },
+        {
+          "source": "n_hydroxycobalamin_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能通过改善代谢支持"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "n_n_acetylcysteine_target",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "有助于氧化应激反应"
+        },
+        {
+          "source": "n_n_acetylcysteine_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能改善代谢支持"
+        },
+        {
+          "source": "drug_arginine",
+          "target": "n_arginine_target",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通过促进一氧化氮生成"
+        },
+        {
+          "source": "n_arginine_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能有助于乳酸代谢"
+        },
+        {
+          "source": "drug_l_arginine",
+          "target": "n_l_arginine_target",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "与氨基酸代谢相关"
+        },
+        {
+          "source": "n_l_arginine_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能改善乳酸清除"
+        },
+        {
+          "source": "drug_l_carnitine",
+          "target": "n_l_carnitine_target",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "在能量代谢中重要"
+        },
+        {
+          "source": "n_l_carnitine_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能改善乳酸代谢"
+        },
+        {
+          "source": "drug_b_vitamin_complex",
+          "target": "n_b_vitamin_target",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与维生素缺乏有直接关联"
+        },
+        {
+          "source": "n_b_vitamin_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能通过维生素补充改善代谢"
+        },
+        {
+          "source": "drug_insulin",
+          "target": "n_insulin_target",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "已知对代谢有影响"
+        },
+        {
+          "source": "n_insulin_target",
+          "target": "n_la",
+          "relation": "involved_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能改善高乳酸血症"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过不同机制可能有助于改善乳酸中毒",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "所有药物具有最小的生物可利用度以达到靶器官"
+    ],
+    "uncertainties": [
+      "各个药物机制在临床应用中的有效性与安全性仍需进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需要考虑更多的药物或结合治疗方案的潜在效率？"
+    ]
+  }
+}

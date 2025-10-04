@@ -1,0 +1,333 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Distal myopathies",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_daptomycin",
+          "name": "Daptomycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_colchicine",
+          "name": "Colchicine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_chloroquine",
+          "name": "Chloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_hydroxychloroquine",
+          "name": "Hydroxychloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_aminoglycosides",
+          "name": "Aminoglycosides"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_procainamide",
+          "name": "Procainamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_target_muscle",
+          "type": "Target",
+          "label": "Muscle Target",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_inflammation",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease_distal_myopathies",
+          "type": "Disease",
+          "label": "Distal Myopathies",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph_weakness",
+          "type": "Phenotype",
+          "label": "Muscle Weakness",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph_pain",
+          "type": "Phenotype",
+          "label": "Muscle Pain",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_target_muscle",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Corticosteroids常用来抑制炎症反应"
+        },
+        {
+          "source": "n_target_muscle",
+          "target": "n_pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "肌肉靶标影响炎症通路"
+        },
+        {
+          "source": "n_pathway_inflammation",
+          "target": "n_disease_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "炎症通路在Distal myopathies 中的角色"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_target_muscle",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Statins对肌肉相关代谢有影响"
+        },
+        {
+          "source": "n_target_muscle",
+          "target": "n_ph_weakness",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "肌肉靶标直接影响肌肉无力"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_ph_pain",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "β-adrenergic阻滞剂可能与肌肉疼痛相关"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "n_pathway_inflammation",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Quinidine可能影响与炎症通路相关的机制"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_ph_weakness",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Carbamazepine可影响导致肌肉无力的信号通路"
+        },
+        {
+          "source": "drug_daptomycin",
+          "target": "n_target_muscle",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Daptomycin对肌肉组织有潜在的影响"
+        },
+        {
+          "source": "drug_colchicine",
+          "target": "n_ph_pain",
+          "relation": "associated_with",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Colchicine与肌肉疼痛表型相关"
+        },
+        {
+          "source": "drug_chloroquine",
+          "target": "n_pathway_inflammation",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "抗炎属性可能影响肌肉病理"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_ph_weakness",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "免疫抑制疗法影响肌肉状态"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "n_pathway_inflammation",
+          "relation": "inhibits",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能通过抑制炎症影响病理"
+        },
+        {
+          "source": "drug_aminoglycosides",
+          "target": "n_ph_weakness",
+          "relation": "causes",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "已知与肌肉无力相关的副作用"
+        },
+        {
+          "source": "drug_procainamide",
+          "target": "n_ph_pain",
+          "relation": "causes",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "心律不齐治疗可能影响肌肉表现"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "通过影响肌肉靶点和相关通路，Corticosteroids可能与Distal myopathies相关",
+        "confidence": "medium"
+      },
+      {
+        "id": "C2",
+        "text": "Statins及其他药物作用于炎症通路，可能影响Distal myopathies",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "所有药物的作用机制均基于现有文献与已有共同机制的推断"
+    ],
+    "uncertainties": [
+      "药物对Distal myopathies是否绝对禁忌仍需临床验证"
+    ],
+    "next_focus_for_pi": [
+      "是否需要针对特定药物进行更多机制解析以确认影响"
+    ]
+  }
+}

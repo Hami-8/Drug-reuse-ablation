@@ -1,0 +1,448 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Gastrointestinal epithelial barrier disorders",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_mesalamine",
+          "name": "Mesalamine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_budesonide",
+          "name": "Budesonide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_sulfasalazine",
+          "name": "Sulfasalazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_golimumab",
+          "name": "Golimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_certolizumab_pegol",
+          "name": "Certolizumab pegol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_pentoxifylline",
+          "name": "Pentoxifylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_zinc_sulfate",
+          "name": "Zinc sulfate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_probiotics",
+          "name": "Probiotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_antibiotics",
+          "name": "Antibiotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_loperamide",
+          "name": "Loperamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_mesalamine",
+          "type": "Drug",
+          "label": "Mesalamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_budesonide",
+          "type": "Drug",
+          "label": "Budesonide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_sulfasalazine",
+          "type": "Drug",
+          "label": "Sulfasalazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_golimumab",
+          "type": "Drug",
+          "label": "Golimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_certolizumab_pegol",
+          "type": "Drug",
+          "label": "Certolizumab pegol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_pentoxifylline",
+          "type": "Drug",
+          "label": "Pentoxifylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_zinc_sulfate",
+          "type": "Drug",
+          "label": "Zinc sulfate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_probiotics",
+          "type": "Drug",
+          "label": "Probiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_loperamide",
+          "type": "Drug",
+          "label": "Loperamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_gastrointestinal_disorder",
+          "type": "Disease",
+          "label": "Gastrointestinal epithelial barrier disorders",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot1",
+          "type": "Target",
+          "label": "Off-Target Mechanism 1",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp1",
+          "type": "Pathway",
+          "label": "Risk Pathway 1",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv1",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype 1",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_mesalamine",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶机制影响表型"
+        },
+        {
+          "source": "n_budesonide",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶机制影响表型"
+        },
+        {
+          "source": "n_sulfasalazine",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶机制影响表型"
+        },
+        {
+          "source": "n_infliximab",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶机制影响表型"
+        },
+        {
+          "source": "n_adalimumab",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶机制影响表型"
+        },
+        {
+          "source": "n_golimumab",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶机制影响表型"
+        },
+        {
+          "source": "n_certolizumab_pegol",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶机制影响表型"
+        },
+        {
+          "source": "n_pentoxifylline",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶机制影响表型"
+        },
+        {
+          "source": "n_zinc_sulfate",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶机制影响表型"
+        },
+        {
+          "source": "n_probiotics",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶机制影响表型"
+        },
+        {
+          "source": "n_antibiotics",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶机制影响表型"
+        },
+        {
+          "source": "n_loperamide",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶机制影响表型"
+        },
+        {
+          "source": "n_ot1",
+          "target": "n_rp1",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险路径相关"
+        },
+        {
+          "source": "n_rp1",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv1",
+          "target": "n_gastrointestinal_disorder",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消治疗效益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "治疗效益与不良反应间的权衡",
+          "pro_nodes": [
+            "n_mesalamine",
+            "n_budesonide",
+            "n_sulfasalazine",
+            "n_infliximab",
+            "n_adalimumab",
+            "n_golimumab",
+            "n_certolizumab_pegol",
+            "n_pentoxifylline",
+            "n_zinc_sulfate",
+            "n_probiotics",
+            "n_antibiotics",
+            "n_loperamide"
+          ],
+          "con_nodes": [
+            "n_ot1",
+            "n_rp1",
+            "n_adv1"
+          ],
+          "note": "各类药物对不良反应的影响需进一步确认"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "可能通过非靶机制影响肠道屏障功能",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "存在导致特定不良反应的机制链，可能会影响临床效益",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "治疗与不良反应之间的权衡是否经过充分研究",
+      "药物是否能达到适应症所需的靶组织暴露"
+    ],
+    "falsification_tests": [
+      "是否存在对任何药物长期安全性或效果的研究证据",
+      "是否有数据支持药物在靶组织的有效暴露"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 针对可能的副作用提供数据支撑",
+      "评估现有证据的完整性与一致性"
+    ]
+  }
+}
