@@ -135,7 +135,7 @@ def load_records(jsonl_path: str) -> List[Dict[str, Any]]:
 
 def evaluate_records(records: List[Dict[str, Any]]) -> Tuple[Dict[str, float], List[Dict[str, Any]]]:
     per_dis = []
-    p10s, p100s, r100s, avgrs = [], [], [], []
+    p10s, p100s, r10s ,r100s, avgrs = [], [],[], [], []
 
     for rec in records:
         disease = rec.get("disease","")
@@ -148,6 +148,7 @@ def evaluate_records(records: List[Dict[str, Any]]) -> Tuple[Dict[str, float], L
 
         p10  = precision_at_k(preds, golds, 10)
         p100 = precision_at_k(preds, golds, 100)
+        r10 = recall_at_k(preds, golds, 10)
         r100 = recall_at_k(preds, golds, 100)
         ar   = avg_rank_with_seed_cap(preds, golds, seed_count)
 
@@ -157,6 +158,7 @@ def evaluate_records(records: List[Dict[str, Any]]) -> Tuple[Dict[str, float], L
             "num_preds(seeds)": seed_count,
             "P@10": round(p10, 4),
             "P@100": round(p100, 4),
+            "R@10": round(r10, 4),
             "R@100": round(r100, 4),
             "AvgRank": round(ar, 3),
             "seeds": seeds_raw,  # 全部种子
@@ -165,12 +167,14 @@ def evaluate_records(records: List[Dict[str, Any]]) -> Tuple[Dict[str, float], L
 
         p10s.append(p10)
         p100s.append(p100)
+        r10s.append(r10)
         r100s.append(r100)
         avgrs.append(ar)
 
     macro = {
         "macro_P@10": round(sum(p10s)/len(p10s), 4) if p10s else 0.0,
         "macro_P@100": round(sum(p100s)/len(p100s), 4) if p100s else 0.0,
+        "macro_R@10": round(sum(r10s)/len(r10s), 4) if r10s else 0.0,
         "macro_R@100": round(sum(r100s)/len(r100s), 4) if r100s else 0.0,
         "macro_AvgRank": round(sum(avgrs)/len(avgrs), 3) if avgrs else 0.0,
         "num_diseases": len(per_dis),
@@ -178,7 +182,7 @@ def evaluate_records(records: List[Dict[str, Any]]) -> Tuple[Dict[str, float], L
     return macro, per_dis
 
 def save_per_disease_csv(per_dis: List[Dict[str,Any]], path: str):
-    keys = ["disease","num_gold","num_preds(seeds)","P@10","P@100","R@100","AvgRank","gold","seeds"]
+    keys = ["disease","num_gold","num_preds(seeds)","P@10","P@100","R@10","R@100","AvgRank","gold","seeds"]
     with open(path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=keys)
         w.writeheader()
@@ -190,10 +194,10 @@ def save_per_disease_csv(per_dis: List[Dict[str,Any]], path: str):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--records", type=str, default="indication_records.jsonl", help="path to indication/_records.jsonl")
-    ap.add_argument("--out_dir", type=str, default="eval_out_indication")
-    ap.add_argument("--save_csv", action="store_true")
-    ap.add_argument("--save_json", action="store_true")
+    ap.add_argument("--records", type=str, default=r"runs_ablation\Debate-single\indication\_records.jsonl", help="path to indication/_records.jsonl")
+    ap.add_argument("--out_dir", type=str, default="eval_out_Debate-single_indication")
+    ap.add_argument("--save_csv", action="store_true",default=True)
+    ap.add_argument("--save_json", action="store_true",default=True)
     args = ap.parse_args()
 
     os.makedirs(args.out_dir, exist_ok=True)

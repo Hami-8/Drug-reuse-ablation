@@ -1,11 +1,11 @@
 # rare_ablation_eval.py
-import os, json, argparse, re, math
-from typing import Dict, Any, List, Tuple, Optional
+import os, re, csv, json, argparse, glob
+from typing import List, Dict, Any, Tuple, Set
 import numpy as np
-import pandas as pd
+from collections import defaultdict, OrderedDict
+from datetime import datetime
 
-
-# ========================= 近似归一化 =========================
+# ---------------- 近似归一化 & 别名 ----------------
 SALT_OR_FORM_WORDS = {
     "sodium","potassium","hydrochloride","hydrobromide","sulfate","phosphate",
     "acetate","tartrate","mesylate","citrate","maleate","succinate","nitrate",
@@ -13,9 +13,9 @@ SALT_OR_FORM_WORDS = {
     "drops","eye","oral","product","placebo","tablet","tablets","injection",
     "spray","cream","patch","extended","release","er","xr","sr","mg","ug","µg"
 }
-PUNCT_TO_SPACE = re.compile(r"[®™\-\_/\\,;:()\[\]\+]+")   # + 也归一为空格
-MULTISPACE = re.compile(r"\s+")
-DIGITS = re.compile(r"^\d+(\.\d+)?$")
+PUNCT_TO_SPACE = re.compile(r"[®™\-\_/\\,;:()\[\]]+")
+MULTISPACE      = re.compile(r"\s+")
+DIGITS          = re.compile(r"\b\d+(\.\d+)?\b")
 
 ALIAS_GROUPS = [
     {"nuedexta", "dextromethorphan + quinidine", "dextromethorphan quinidine"},
@@ -26,40 +26,88 @@ ALIAS_GROUPS = [
     {"ciprofloxacin dpi", "ciprofloxacin inhalation powder", "ciprofloxacin dry powder inhaler"},
 ]
 
-# 预处理别名（先规范再建映射）
-def _norm_base(s: str) -> str:
-    if not isinstance(s, str): return ""
-    s = s.lower().strip()
-    s = PUNCT_TO_SPACE.sub(" ", s)
-    s = s.replace(" and ", " ")
-    s = MULTISPACE.sub(" ", s).strip()
-    toks = [t for t in s.split() if t and (t not in SALT_OR_FORM_WORDS) and (not DIGITS.match(t))]
-    s = " ".join(toks)
-    # 进一步规整若干常见写法
-    s = s.replace("omega-3", "omega 3")
-    s = MULTISPACE.sub(" ", s).strip()
-    return s
+def _normalize_for_key(s: str) -> str:
+    if not s:
+        return ""
+    x = s.lower().strip()
+    x = PUNCT_TO_SPACE.sub(" ", x)
+    x = x.replace("+", " ")
+    x = DIGITS.sub(" ", x)  # 去掉剂量数字
+    toks = [t for t in MULTISPACE.sub(" ", x).split(" ") if t]
+    toks = [t for t in toks if t not in SALT_OR_FORM_WORDS]
+    return " ".join(toks).strip()
 
-_ALIAS_CANON: Dict[str, str] = {}
-def _build_alias():
-    for grp in ALIAS_GROUPS:
-        normed = sorted({_norm_base(x) for x in grp if _norm_base(x)})
-        if not normed: continue
-        canon = normed[0]  # 选词典序最小作代表
-        for n in normed:
-            _ALIAS_CANON[n] = canon
-_build_alias()
+# alias map（用归一化后的键）
+_ALIAS_MAP: Dict[str, str] = {}
+for group in ALIAS_GROUPS:
+    norm_group = {_normalize_for_key(g) for g in group}
+    rep = sorted(norm_group)[0] if norm_group else None
+    if rep:
+        for a in norm_group:
+            _ALIAS_MAP[a] = rep
 
-def canon_name(s: str) -> str:
-    b = _norm_base(s)
-    return _ALIAS_CANON.get(b, b)
+def _alias_key(norm: str) -> str:
+    return _ALIAS_MAP.get(norm, norm)
 
+def canon(s: str) -> str:
+    return _alias_key(_normalize_for_key(s))
 
-# ========================= 指标 =========================
+def is_match(a: str, b: str) -> bool:
+    return canon(a) == canon(b)
+
+def uniq_preserve(seq: List[str]) -> List[str]:
+    seen = set()
+    out = []
+    for s in seq:
+        k = canon(s)
+        if k and k not in seen:
+            seen.add(k); out.append(s)
+    return out
+
+# ----------------- P@K / R@K（按用户指定） -----------------
+def precision_at_k(preds: List[str], golds: List[str], K: int) -> float:
+    use = preds[:K]
+    matched_gold: Set[int] = set()
+    for p in use:
+        for gi, g in enumerate(golds):
+            if gi in matched_gold:
+                continue
+            if is_match(p, g):
+                matched_gold.add(gi)
+                break
+    return len(matched_gold) / K if K > 0 else 0.0
+
+def recall_at_k(preds: List[str], golds: List[str], K: int) -> float:
+    if not golds:
+        return 0.0
+    use = preds[:K]
+    matched_gold: Set[int] = set()
+    for p in use:
+        for gi, g in enumerate(golds):
+            if gi in matched_gold:
+                continue
+            if is_match(p, g):
+                matched_gold.add(gi)
+                break
+    return len(matched_gold) / len(golds)
+
+def avg_rank(preds: List[str], golds: List[str]) -> float:
+    """对每个 gold 求其在 preds 的首命中rank；未命中则 rank=len(preds)+1；对所有 gold 取均值。"""
+    if not golds:
+        return float("nan")
+    ranks = []
+    n = len(preds)
+    for g in golds:
+        r = n + 1
+        for i, p in enumerate(preds):
+            if is_match(p, g):
+                r = i + 1
+                break
+        ranks.append(r)
+    return float(np.mean(ranks)) if ranks else float("nan")
+
+# ----------------- AUPRC(AP) / AUROC -----------------
 def average_precision(y_true: np.ndarray, y_score: np.ndarray) -> float:
-    """
-    AUPRC 的 AP(平均精度)“排名定义”：对所有正例在其排名处的 precision@k 取均值。
-    """
     order = np.argsort(-y_score)
     y_true_sorted = y_true[order]
     cum_tp = 0
@@ -73,19 +121,14 @@ def average_precision(y_true: np.ndarray, y_score: np.ndarray) -> float:
     return float(np.mean(precisions))
 
 def auroc(y_true: np.ndarray, y_score: np.ndarray) -> float:
-    """
-    AUROC 用 Mann–Whitney U / 秩和实现；对并列分数使用平均秩。
-    """
     pos = y_score[y_true == 1]
     neg = y_score[y_true == 0]
     n_pos, n_neg = len(pos), len(neg)
     if n_pos == 0 or n_neg == 0:
         return float('nan')
-    # 稳定排序求秩
     order = np.argsort(y_score, kind="mergesort")
     ranks = np.empty_like(order, dtype=float)
     ranks[order] = np.arange(1, len(y_score) + 1)
-    # 并列平均秩
     uniq, inv, cnts = np.unique(y_score, return_inverse=True, return_counts=True)
     start_rank = {}
     cur = 1
@@ -102,233 +145,218 @@ def auroc(y_true: np.ndarray, y_score: np.ndarray) -> float:
     U = R_pos - n_pos * (n_pos + 1) / 2.0
     return float(U / (n_pos * n_neg))
 
+# ----------------- 载入 gold（来自 *_all.csv） -----------------
+def load_gold_and_pool(csv_path: str, label_col: str) -> Dict[str, Dict[str, List[str]]]:
+    """
+    返回:
+      disease -> {
+         "gold": [drug1, ...],            # 由 is_gold_* == 1 决定
+         "pool": [drug1, drug2, ...],     # 该病在 CSV 中出现过的全部 normalized_drug（去重）
+      }
+    """
+    by_dis: Dict[str, Dict[str, List[str]]] = {}
+    tmp_gold: Dict[str, Set[str]] = defaultdict(set)
+    tmp_pool: Dict[str, Set[str]] = defaultdict(set)
 
-# ========================= 评测主逻辑 =========================
-def load_all_csv(path: str) -> pd.DataFrame:
-    df = pd.read_csv(path)
-    # 只需要 disease / normalized_drug
-    if "disease" not in df.columns or "normalized_drug" not in df.columns:
-        raise RuntimeError(f"{path} 缺少 disease 或 normalized_drug 列")
-    df = df[["disease", "normalized_drug"]].copy()
-    df["disease"] = df["disease"].astype(str).str.strip()
-    df["normalized_drug"] = df["normalized_drug"].astype(str).str.strip()
-    # 近似归一化
-    df["disease_norm"] = df["disease"].astype(str)
-    df["drug_canon"] = df["normalized_drug"].apply(canon_name)
-    # 同病种去重
-    df = df.groupby(["disease_norm", "drug_canon"], as_index=False).size()
-    return df[["disease_norm", "drug_canon"]]
+    with open(csv_path, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            dis = (row.get("disease") or "").strip()
+            drug = (row.get("normalized_drug") or row.get("drug") or "").strip()
+            if not dis or not drug:
+                continue
+            cdis = dis  # 保持原串作键（records 里一般同样字符串）
+            tmp_pool[cdis].add(drug)
+            try:
+                is_pos = int(row.get(label_col, "0")) == 1
+            except Exception:
+                is_pos = False
+            if is_pos:
+                tmp_gold[cdis].add(drug)
 
-def read_records(jsonl_path: str) -> List[Dict[str, Any]]:
+    for dis in set(tmp_pool.keys()) | set(tmp_gold.keys()):
+        pool_list = list(tmp_pool.get(dis, set()))
+        gold_list = list(tmp_gold.get(dis, set()))
+        # 去重保序（以 canon 为键）
+        pool_list = uniq_preserve(pool_list)
+        gold_list = uniq_preserve(gold_list)
+        by_dis[dis] = {"gold": gold_list, "pool": pool_list}
+    return by_dis
+
+# ----------------- 读取 _records.jsonl（用 seeds 作为预测） -----------------
+def load_records_jsonl(path: str) -> List[Dict[str, Any]]:
     out = []
-    with open(jsonl_path, "r", encoding="utf-8") as f:
+    if not os.path.exists(path):
+        return out
+    with open(path, "r", encoding="utf-8") as f:
         for line in f:
-            line=line.strip()
+            line = line.strip()
             if not line: continue
             try:
                 obj = json.loads(line)
             except Exception:
                 continue
-            if not isinstance(obj, dict): continue
-            out.append(obj)
+            if isinstance(obj, dict) and isinstance(obj.get("seeds"), list):
+                out.append(obj)
     return out
 
-def eval_one_disease(
-    disease: str,
-    seeds: List[str],
-    gold: List[str],
-    universe_from_allcsv: List[str],
-    k: int = 10
-) -> Dict[str, Any]:
-    # 近似归一化
-    seeds_c = []
-    seen = set()
-    for s in seeds:
-        c = canon_name(s)
-        if c and c not in seen:
-            seeds_c.append(c); seen.add(c)
+def seeds_by_disease(records: List[Dict[str, Any]]) -> Dict[str, List[str]]:
+    """
+    聚合到 disease 粒度；若同病多条，取第一条非空 seeds；并做近似归一化下的去重保序
+    """
+    group: Dict[str, List[str]] = {}
+    for r in records:
+        dis = r.get("disease") or ""
+        if not dis: 
+            continue
+        if dis in group:
+            continue
+        seeds = r.get("seeds") or []
+        group[dis] = uniq_preserve(seeds)
+    return group
 
-    gold_set = {canon_name(x) for x in gold if canon_name(x)}
-    universe = set(universe_from_allcsv)
-    # 把 seeds 也并入全集（模型可能给出 all.csv 之外的说法）
-    universe |= set(seeds_c)
-    # 从全集里删掉空串
-    universe.discard("")
+# ----------------- 评分（每个 disease） -----------------
+def scores_from_seeds(seeds: List[str]) -> Dict[str, float]:
+    """将 seeds 排名映射为分数（1.0 -> 1/n 线性递减）；键为 canon"""
+    n = len(seeds)
+    if n == 0:
+        return {}
+    return {canon(s): float(n - i) / n for i, s in enumerate(seeds)}
 
-    # ---------- Top-K 指标 ----------
-    topk = seeds_c[:k]
-    tp_topk = sum(1 for x in topk if x in gold_set)
-    denom = max(1, min(k, len(seeds_c)))  # 防 0
-    p_at_k = 100.0 * tp_topk / denom
-    r_at_k = 100.0 * (tp_topk / max(1, len(gold_set)))
+def per_disease_eval(seeds: List[str], golds: List[str], pool: List[str], K: int) -> Dict[str, Any]:
+    # P@K / R@K / AvgRank 在 seeds vs golds 上算
+    Pk = precision_at_k(seeds, golds, K)
+    Rk = recall_at_k(seeds, golds, K)
+    AR = avg_rank(seeds, golds)
 
-    # ---------- AvgRank ----------
-    m = len(seeds_c)
-    rank_map = {d: i+1 for i, d in enumerate(seeds_c)}  # 1-based
-    if len(gold_set) == 0:
-        avg_rank = float('nan')
-    else:
-        ranks = [rank_map.get(g, m + 1) for g in gold_set]
-        avg_rank = float(np.mean(ranks))
+    # AUPRC / AUROC：用 *_all.csv 的候选池（pool）构造 0/1 标签；
+    # 对于不在 seeds 的候选，score=0
+    gold_canon = {canon(x) for x in golds}
+    score_map = scores_from_seeds(seeds)
 
-    # ---------- AUPRC / AUROC ----------
-    # 构造评分（seeds 按排名线性递减；其他均为 0）
-    # 候选顺序只影响 AP；AUROC 用秩和对并列做平均
-    m = len(seeds_c)
-    scores = {}
-    for i, d in enumerate(seeds_c, start=1):
-        scores[d] = (m - i + 1) / m if m > 0 else 0.0
-    for d in universe:
-        scores.setdefault(d, 0.0)
+    y_true, y_score = [], []
+    for cand in pool:
+        cc = canon(cand)
+        y_true.append(1 if cc in gold_canon else 0)
+        y_score.append(score_map.get(cc, 0.0))
+    y_true = np.array(y_true, dtype=int)
+    y_score = np.array(y_score, dtype=float)
 
-    cand_list = list(scores.keys())
-    y_score = np.array([scores[d] for d in cand_list], dtype=float)
-    y_true = np.array([1 if d in gold_set else 0 for d in cand_list], dtype=int)
-
-    ap = average_precision(y_true, y_score)
-    roc = auroc(y_true, y_score)
+    AP = average_precision(y_true, y_score) if len(y_true) else float("nan")
+    ROC = auroc(y_true, y_score) if len(y_true) else float("nan")
 
     return {
-        "disease": disease,
-        "num_gold": len(gold_set),
-        "seed_count": len(seeds_c),
-        "P@10": p_at_k,
-        "R@10": r_at_k,
-        "AvgRank": avg_rank,
-        "AUPRC": ap,
-        "AUROC": roc,
-        "seeds": seeds_c,
-        "gold": sorted(list(gold_set)),
+        "num_gold": len(golds),
+        "num_pool": len(pool),
+        "num_seeds": len(seeds),
+        "P@K": Pk, "R@K": Rk, "AvgRank": AR,
+        "AUPRC": AP, "AUROC": ROC
     }
 
+def macro_average(dicts: List[Dict[str, Any]], keys: List[str]) -> Dict[str, float]:
+    res = {}
+    for k in keys:
+        vals = [d[k] for d in dicts if k in d and not (isinstance(d[k], float) and np.isnan(d[k]))]
+        res[k] = float(np.mean(vals)) if vals else float("nan")
+    return res
 
-def evaluate_records_one_subset(
-    records_path: str,
-    all_csv_path: str,
-    k: int = 10,
-    save_dir: Optional[str] = None
-) -> Dict[str, Any]:
-    if not os.path.exists(records_path):
-        raise FileNotFoundError(records_path)
-    if not os.path.exists(all_csv_path):
-        raise FileNotFoundError(all_csv_path)
+# ----------------- 主流程（统一 CLI） -----------------
+def evaluate_config(config_dir: str, ind_all: str, contra_all: str, K: int) -> Dict[str, Any]:
+    """
+    针对单个 ConfigTag 目录，分别评测 indication 与 contraindication，然后给出 combined 宏平均
+    """
+    out = {"config_tag": os.path.basename(config_dir), "subsets": {}}
 
-    df_all = load_all_csv(all_csv_path)
-    # disease -> 全集药物
-    uni_map: Dict[str, List[str]] = {}
-    for dis, subdf in df_all.groupby("disease_norm"):
-        uni_map[dis] = subdf["drug_canon"].tolist()
+    # 载入标准集
+    gold_ind = load_gold_and_pool(ind_all, label_col="is_gold_indication")
+    gold_con = load_gold_and_pool(contra_all, label_col="is_gold_contraindication")
 
-    recs = read_records(records_path)
-    per_disease = []
-    for r in recs:
-        disease = str(r.get("disease","")).strip()
-        seeds = [s for s in (r.get("seeds") or []) if isinstance(s, str)]
-        gold = [g for g in (r.get("gold_drugs") or []) if isinstance(g, str)]
-        if not disease:
+    for subset, goldmap in [("indication", gold_ind), ("contraindication", gold_con)]:
+        rec_path = os.path.join(config_dir, subset, "_records.jsonl")
+        if not os.path.exists(rec_path):
             continue
-        uni = uni_map.get(disease, [])
-        res = eval_one_disease(disease, seeds, gold, uni, k=k)
-        per_disease.append(res)
+        records = load_records_jsonl(rec_path)
+        pred_map = seeds_by_disease(records)
 
-    # 宏平均（忽略 NaN）
-    def _nanmean(key):
-        arr = np.array([x[key] for x in per_disease], dtype=float)
-        return float(np.nanmean(arr)) if len(arr) else float('nan')
+        per_dis_list = []
+        for dis, seeds in pred_map.items():
+            gm = goldmap.get(dis)
+            if not gm:
+                # 找不到该疾病的标准集条目则跳过
+                continue
+            golds = gm["gold"]
+            pool  = gm["pool"]
+            res = per_disease_eval(seeds, golds, pool, K)
+            per_dis_list.append({
+                "disease": dis,
+                "num_gold": res["num_gold"], "num_pool": res["num_pool"], "num_seeds": res["num_seeds"],
+                "P@K": res["P@K"], "R@K": res["R@K"], "AvgRank": res["AvgRank"],
+                "AUPRC": res["AUPRC"], "AUROC": res["AUROC"]
+            })
 
-    summary = {
-        "num_diseases": len(per_disease),
-        "K": k,
-        "AUPRC": _nanmean("AUPRC"),
-        "AUROC": _nanmean("AUROC"),
-        "P@10": _nanmean("P@10"),
-        "R@10": _nanmean("R@10"),
-        "AvgRank": _nanmean("AvgRank")
+        macro = macro_average(per_dis_list, ["P@K","R@K","AvgRank","AUPRC","AUROC"])
+        out["subsets"][subset] = {
+            "count_diseases": len(per_dis_list),
+            "macro": macro,
+            "per_disease": per_dis_list
+        }
+
+    # combined（把两个子集的疾病结果合在一起再宏平均）
+    combined_list = []
+    for subset in ("indication","contraindication"):
+        if subset in out["subsets"]:
+            combined_list.extend(out["subsets"][subset]["per_disease"])
+    out["combined"] = {
+        "count_diseases": len(combined_list),
+        "macro": macro_average(combined_list, ["P@K","R@K","AvgRank","AUPRC","AUROC"])
     }
-
-    # 保存
-    if save_dir:
-        os.makedirs(save_dir, exist_ok=True)
-        with open(os.path.join(save_dir, "per_disease.json"), "w", encoding="utf-8") as f:
-            json.dump(per_disease, f, ensure_ascii=False, indent=2)
-        with open(os.path.join(save_dir, "summary.json"), "w", encoding="utf-8") as f:
-            json.dump(summary, f, ensure_ascii=False, indent=2)
-
-    return summary
-
-
-def find_configs(out_dir: str) -> List[str]:
-    if not os.path.isdir(out_dir):
-        return []
-    items = []
-    for name in os.listdir(out_dir):
-        p = os.path.join(out_dir, name)
-        if os.path.isdir(p):
-            items.append(name)
-    items.sort()
-    return items
-
+    return out
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out_dir", type=str, default="runs_ablation", help="ablation 输出根目录（包含多个 ConfigTag 子目录）")
-    ap.add_argument("--ind_all", type=str, required=True, help="filtered_indication_all.csv")
-    ap.add_argument("--contra_all", type=str, required=True, help="filtered_contraindication_all.csv")
+    ap.add_argument("--out_dir", type=str, default="runs_ablation",
+                    help="ablation 输出根目录（包含多个 ConfigTag 子目录）")
+    ap.add_argument("--ind_all", type=str, default="filtered_indication_all.csv",
+                    help="filtered_indication_all.csv")
+    ap.add_argument("--contra_all", type=str, default="filtered_contraindication_all.csv",
+                    help="filtered_contraindication_all.csv")
     ap.add_argument("--k", type=int, default=10)
     args = ap.parse_args()
 
-    configs = find_configs(args.out_dir)
-    if not configs:
-        raise RuntimeError(f"未在 {args.out_dir} 下发现消融子目录")
+    if not os.path.isdir(args.out_dir):
+        raise SystemExit(f"--out_dir 不存在：{args.out_dir}")
 
-    table_rows = []
-    for cfg in configs:
-        base_cfg = os.path.join(args.out_dir, cfg)
+    config_dirs = [os.path.join(args.out_dir, d) for d in os.listdir(args.out_dir)
+                   if os.path.isdir(os.path.join(args.out_dir, d))]
 
-        # indication
-        ind_dir = os.path.join(base_cfg, "indication")
-        ind_rec = os.path.join(ind_dir, "_records.jsonl")
-        if os.path.exists(ind_rec):
-            s_ind = evaluate_records_one_subset(
-                records_path=ind_rec,
-                all_csv_path=args.ind_all,
-                k=args.k,
-                save_dir=ind_dir
-            )
-        else:
-            s_ind = {"AUPRC": float('nan'), "AUROC": float('nan'), "P@10": float('nan'),
-                     "R@10": float('nan'), "AvgRank": float('nan'), "num_diseases": 0}
+    results = {"timestamp": datetime.now().isoformat(timespec="seconds"),
+               "args": vars(args), "configs": []}
 
-        # contraindication
-        con_dir = os.path.join(base_cfg, "contraindication")
-        con_rec = os.path.join(con_dir, "_records.jsonl")
-        if os.path.exists(con_rec):
-            s_con = evaluate_records_one_subset(
-                records_path=con_rec,
-                all_csv_path=args.contra_all,
-                k=args.k,
-                save_dir=con_dir
-            )
-        else:
-            s_con = {"AUPRC": float('nan'), "AUROC": float('nan'), "P@10": float('nan'),
-                     "R@10": float('nan'), "AvgRank": float('nan'), "num_diseases": 0}
+    for cfg in sorted(config_dirs):
+        res = evaluate_config(cfg, args.ind_all, args.contra_all, args.k)
+        results["configs"].append(res)
 
-        table_rows.append((cfg, s_ind, s_con))
+    # 打印概览
+    print("\n===== Ablation Summary (macro) =====")
+    for res in results["configs"]:
+        tag = res["config_tag"]
+        comb = res["combined"]["macro"]
+        print(f"[{tag}]  N={res['combined']['count_diseases']}"
+              f" | P@{args.k}={comb['P@K']:.3f}  R@{args.k}={comb['R@K']:.3f}"
+              f" | AvgRank={comb['AvgRank']:.3f}  AUPRC={comb['AUPRC']:.3f}  AUROC={comb['AUROC']:.3f}")
 
-    # 打印一个简表
-    def _fmt(x): 
-        if x != x or x is None:  # NaN
-            return "—"
-        return f"{x:.3f}"
-
-    print("\n==== Ablation Evaluation (macro-averaged) ====")
-    print("Config".ljust(26),
-          "| IND  AUPRC  AUROC  P@10%  R@10%  AvgRank |",
-          "CONTRA  AUPRC  AUROC  P@10%  R@10%  AvgRank")
-    for cfg, si, sc in table_rows:
-        print(cfg.ljust(26),
-              f"| {_fmt(si['AUPRC'])}  {_fmt(si['AUROC'])}  {_fmt(si['P@10'])}  {_fmt(si['R@10'])}  {_fmt(si['AvgRank'])} |",
-              f"{_fmt(sc['AUPRC'])}  {_fmt(sc['AUROC'])}  {_fmt(sc['P@10'])}  {_fmt(sc['R@10'])}  {_fmt(sc['AvgRank'])}")
+        for subset in ("indication","contraindication"):
+            if subset in res["subsets"]:
+                m = res["subsets"][subset]["macro"]
+                n = res["subsets"][subset]["count_diseases"]
+                print(f"  └─ {subset:<16} N={n}"
+                      f" | P@{args.k}={m['P@K']:.3f}  R@{args.k}={m['R@K']:.3f}"
+                      f" | AvgRank={m['AvgRank']:.3f}  AUPRC={m['AUPRC']:.3f}  AUROC={m['AUROC']:.3f}")
+    # 保存 JSON
+    out_json = os.path.join(args.out_dir, "ablation_eval_summary.json")
+    with open(out_json, "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
+    print(f"\nSaved summary to: {out_json}")
 
 if __name__ == "__main__":
     main()
