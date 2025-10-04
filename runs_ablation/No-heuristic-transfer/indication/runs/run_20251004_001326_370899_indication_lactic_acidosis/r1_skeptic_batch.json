@@ -1,0 +1,359 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Lactic acidosis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sodium_bicarbonate",
+          "name": "Sodium bicarbonate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ethanol",
+          "name": "Ethanol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_metformin",
+          "name": "Metformin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_dichloroacetate",
+          "name": "Dichloroacetate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_l_carnitine",
+          "name": "L-carnitine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_thiamine",
+          "name": "Thiamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_vitamin_b12",
+          "name": "Vitamin B12"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_insulin",
+          "name": "Insulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_bicarbonate",
+          "name": "Bicarbonate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_acetazolamide",
+          "name": "Acetazolamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_carnitine",
+          "name": "Carnitine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_glycerol",
+          "name": "Glycerol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_sodium_bicarbonate",
+          "type": "Target",
+          "label": "OffTarget_SodiumBicarbonate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_bicarbonate",
+          "type": "Pathway",
+          "label": "RiskPathway_SodiumBicarbonate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sodium_bicarbonate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_SodiumBicarbonate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ethanol",
+          "type": "Target",
+          "label": "OffTarget_Ethanol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ethanol",
+          "type": "Pathway",
+          "label": "RiskPathway_Ethanol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ethanol",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Ethanol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_metformin",
+          "type": "Target",
+          "label": "OffTarget_Metformin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_metformin",
+          "type": "Pathway",
+          "label": "RiskPathway_Metformin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_metformin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Metformin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_sodium_bicarbonate",
+          "target": "n_ot_sodium_bicarbonate",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的不良影响路径"
+        },
+        {
+          "source": "n_ot_sodium_bicarbonate",
+          "target": "n_rp_sodium_bicarbonate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_sodium_bicarbonate",
+          "target": "n_adv_sodium_bicarbonate",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_sodium_bicarbonate",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_ethanol",
+          "target": "n_ot_ethanol",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用路径"
+        },
+        {
+          "source": "n_ot_ethanol",
+          "target": "n_rp_ethanol",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与安全性风险关联"
+        },
+        {
+          "source": "n_rp_ethanol",
+          "target": "n_adv_ethanol",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在不良影响"
+        },
+        {
+          "source": "n_adv_ethanol",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，对疗效的期望将受损"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "n_ot_metformin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的不良影响"
+        },
+        {
+          "source": "n_ot_metformin",
+          "target": "n_rp_metformin",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险路径连接"
+        },
+        {
+          "source": "n_rp_metformin",
+          "target": "n_adv_metformin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险的可能导致不良表型"
+        },
+        {
+          "source": "n_adv_metformin",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消net benefit"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "drug_effect_vs_adverse_effect",
+          "pro_nodes": [
+            "n_ot_sodium_bicarbonate",
+            "n_ot_ethanol",
+            "n_ot_metformin"
+          ],
+          "con_nodes": [
+            "n_adv_sodium_bicarbonate",
+            "n_adv_ethanol",
+            "n_adv_metformin"
+          ],
+          "note": "疗效与潜在的负面效果之间的对立"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "缺乏针对靶器官的证据，疗效或减弱",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "可能诱发严重的不良反应，抵消益处",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "如何确保疗效与安全性的平衡",
+      "靶向作用的有效性是否经过验证"
+    ],
+    "falsification_tests": [
+      "是否存在记录明确疗效的临床数据？",
+      "是否有数据支持靶向作用的安全性？"
+    ],
+    "next_focus_for_pi": [
+      "评估潜在的非靶向性效果与安全性问题",
+      "定义明确的机制链以反驳已知风险"
+    ]
+  }
+}

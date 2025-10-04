@@ -1,0 +1,336 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_phenelzine",
+          "name": "Phenelzine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_selegiline",
+          "name": "Selegiline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_fluoxetine",
+          "name": "Fluoxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_paroxetine",
+          "name": "Paroxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_bupropion",
+          "name": "Bupropion"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_clomipramine",
+          "name": "Clomipramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sertraline",
+          "name": "Sertraline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_venlafaxine",
+          "name": "Venlafaxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_thioridazine",
+          "name": "Thioridazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_risperidone",
+          "name": "Risperidone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tranylcypromine",
+          "name": "Tranylcypromine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_citalopram",
+          "name": "Citalopram"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_t1",
+          "type": "Target",
+          "label": "Monoamine Oxidase A (MAO-A)",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_t2",
+          "type": "Target",
+          "label": "Serotonin Transporter",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_t3",
+          "type": "Target",
+          "label": "Norepinephrine Transporter",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_d1",
+          "type": "Disease",
+          "label": "Depression",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_d2",
+          "type": "Disease",
+          "label": "Anxiety Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_p1",
+          "type": "Pathway",
+          "label": "Monoamine Signaling Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_p2",
+          "type": "Pathway",
+          "label": "Serotonin Reuptake Inhibition Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_phenelzine",
+          "target": "n_t1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知作用于 MAO-A"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "n_t1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过抑制 MAO-A 提升单胺水平"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "n_t2",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知选择性抑制5-HT再摄取"
+        },
+        {
+          "source": "drug_paroxetine",
+          "target": "n_t2",
+          "relation": "acts_on",
+          "weight": 0.88,
+          "agent": "Proponent",
+          "rationale": "选择性5-HT再摄取抑制"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "n_t3",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响去甲肾上腺素和多巴胺转运"
+        },
+        {
+          "source": "n_t1",
+          "target": "n_p1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与单胺信号通路相关"
+        },
+        {
+          "source": "n_t2",
+          "target": "n_p2",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "影响5-HT的再摄取"
+        },
+        {
+          "source": "n_p1",
+          "target": "n_d1",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知影响抑郁症相关"
+        },
+        {
+          "source": "n_p2",
+          "target": "n_d2",
+          "relation": "causes",
+          "weight": 0.76,
+          "agent": "Proponent",
+          "rationale": "已知与焦虑症相关"
+        },
+        {
+          "source": "drug_phenelzine",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "通过MAO-A作用支持假设"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过MAO抑制支持假设"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "通过选择性抑制5-HT支持假设"
+        },
+        {
+          "source": "drug_paroxetine",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "选择性抑制作用支持假设"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "多巴胺及去甲肾上腺素机制支持假设"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "药物通过靶向单胺信号通路影响抑郁症及焦虑症相关机制",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物具有足够的靶向生物可及性以发挥疗效"
+    ],
+    "uncertainties": [
+      "不同患者的反应性可能因个体差异而异（需深入研究）"
+    ],
+    "next_focus_for_pi": [
+      "考虑进一步探索其他路径或机制"
+    ]
+  }
+}

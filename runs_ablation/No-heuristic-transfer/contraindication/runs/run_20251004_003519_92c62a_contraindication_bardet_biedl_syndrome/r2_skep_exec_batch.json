@@ -1,0 +1,1250 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Bardet-Biedl Syndrome",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "肾功能风险",
+            "expectation": "若风险成立，治疗收益将被抵消并标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "低钾血症风险",
+            "expectation": "如有证据表明将影响肾功能，需强调高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "认知功能影响",
+            "expectation": "需标注若风险成立，表明对治疗效果的严重威胁",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "电解质失调风险",
+            "expectation": "如确认风险，则确认对治疗的整体影响",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_acetazolamide",
+          "type": "Drug",
+          "label": "Acetazolamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thiazide_diuretics",
+          "type": "Drug",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_atenolol",
+          "type": "Drug",
+          "label": "Atenolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_metoprolol",
+          "type": "Drug",
+          "label": "Metoprolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_digoxin",
+          "type": "Drug",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bardet_biedl_syndrome",
+          "type": "Disease",
+          "label": "Bardet-Biedl Syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_renal_pathway",
+          "type": "Pathway",
+          "label": "Renal Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cardiovascular_pathway",
+          "type": "Pathway",
+          "label": "Cardiovascular Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phenotype_related",
+          "type": "Phenotype",
+          "label": "Phenotype related to Bardet-Biedl Syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_acetazolamide",
+          "type": "Target",
+          "label": "OffTargetAcetazolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_acetazolamide",
+          "type": "Pathway",
+          "label": "RiskPathwayAcetazolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_acetazolamide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAcetazolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_furosemide",
+          "type": "Target",
+          "label": "OffTargetFurosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_furosemide",
+          "type": "Pathway",
+          "label": "RiskPathwayFurosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_furosemide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeFurosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sodium_valproate",
+          "type": "Target",
+          "label": "OffTargetSodiumValproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_valproate",
+          "type": "Pathway",
+          "label": "RiskPathwaySodiumValproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sodium_valproate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSodiumValproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thiazide_diuretics",
+          "type": "Target",
+          "label": "OffTargetThiazideDiuretics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_thiazide_diuretics",
+          "type": "Pathway",
+          "label": "RiskPathwayThiazideDiuretics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_thiazide_diuretics",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeThiazideDiuretics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ibuprofen",
+          "type": "Target",
+          "label": "OffTargetIbuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ibuprofen",
+          "type": "Pathway",
+          "label": "RiskPathwayIbuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ibuprofen",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeIbuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_atenolol",
+          "type": "Target",
+          "label": "OffTargetAtenolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_atenolol",
+          "type": "Pathway",
+          "label": "RiskPathwayAtenolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_atenolol",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAtenolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_metoprolol",
+          "type": "Target",
+          "label": "OffTargetMetoprolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_metoprolol",
+          "type": "Pathway",
+          "label": "RiskPathwayMetoprolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_metoprolol",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMetoprolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_beta_blockers",
+          "type": "Target",
+          "label": "OffTargetBetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_beta_blockers",
+          "type": "Pathway",
+          "label": "RiskPathwayBetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_beta_blockers",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_topiramate",
+          "type": "Target",
+          "label": "OffTargetTopiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_topiramate",
+          "type": "Pathway",
+          "label": "RiskPathwayTopiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_topiramate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTopiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_digoxin",
+          "type": "Target",
+          "label": "OffTargetDigoxin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_digoxin",
+          "type": "Pathway",
+          "label": "RiskPathwayDigoxin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_digoxin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeDigoxin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_phenytoin",
+          "type": "Target",
+          "label": "OffTargetPhenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_phenytoin",
+          "type": "Pathway",
+          "label": "RiskPathwayPhenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_phenytoin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypePhenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lithium",
+          "type": "Target",
+          "label": "OffTargetLithium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lithium",
+          "type": "Pathway",
+          "label": "RiskPathwayLithium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lithium",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLithium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Acetazolamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_acetazolamide",
+          "type": "Drug",
+          "label": "Acetazolamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_thiazide_diuretics",
+          "type": "Drug",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Atenolol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_atenolol",
+          "type": "Drug",
+          "label": "Atenolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Metoprolol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_metoprolol",
+          "type": "Drug",
+          "label": "Metoprolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_digoxin",
+          "type": "Drug",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_acetazolamide",
+          "target": "n_renal_pathway",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于利尿作用，影响肾脏功能"
+        },
+        {
+          "source": "n_furosemide",
+          "target": "n_renal_pathway",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "强效利尿药，影响肾脏"
+        },
+        {
+          "source": "n_thiazide_diuretics",
+          "target": "n_renal_pathway",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "同类利尿药物作用于肾脏"
+        },
+        {
+          "source": "n_atenolol",
+          "target": "n_cardiovascular_pathway",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "调节心血管系统，相关流体平衡"
+        },
+        {
+          "source": "n_metoprolol",
+          "target": "n_cardiovascular_pathway",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "同类药物，影响心血管功能"
+        },
+        {
+          "source": "n_beta_blockers",
+          "target": "n_cardiovascular_pathway",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响心血管系统功能"
+        },
+        {
+          "source": "n_ibuprofen",
+          "target": "n_phenotype_related",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响炎症过程"
+        },
+        {
+          "source": "n_sodium_valproate",
+          "target": "n_phenotype_related",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于多种精神及神经疾病"
+        },
+        {
+          "source": "n_topiramate",
+          "target": "n_phenotype_related",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响神经功能"
+        },
+        {
+          "source": "n_",
+          "target": "n_bardet_biedl_syndrome",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "各类药物与症状相关"
+        },
+        {
+          "source": "n_digoxin",
+          "target": "n_cardiovascular_pathway",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响心脏功能"
+        },
+        {
+          "source": "n_phenytoin",
+          "target": "n_phenotype_related",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响神经病理过程"
+        },
+        {
+          "source": "n_lithium",
+          "target": "n_phenotype_related",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可影响多种表型"
+        },
+        {
+          "source": "drug_acetazolamide",
+          "target": "n_ot_acetazolamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏功能，导致电解质失衡"
+        },
+        {
+          "source": "n_ot_acetazolamide",
+          "target": "n_rp_acetazolamide",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与肾功能下降相关"
+        },
+        {
+          "source": "n_rp_acetazolamide",
+          "target": "n_adv_acetazolamide",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致慢性肾病风险增加"
+        },
+        {
+          "source": "n_adv_acetazolamide",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，治疗收益将被抵消"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "n_ot_furosemide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致低钾血症"
+        },
+        {
+          "source": "n_ot_furosemide",
+          "target": "n_rp_furosemide",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "肾功能影响相关通路"
+        },
+        {
+          "source": "n_rp_furosemide",
+          "target": "n_adv_furosemide",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱发肾衰竭风险"
+        },
+        {
+          "source": "n_adv_furosemide",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "证实风险抵消治疗效果"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "n_ot_sodium_valproate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在影响神经系统"
+        },
+        {
+          "source": "n_ot_sodium_valproate",
+          "target": "n_rp_sodium_valproate",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能干扰认知功能通路"
+        },
+        {
+          "source": "n_rp_sodium_valproate",
+          "target": "n_adv_sodium_valproate",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "引发认知功能障碍"
+        },
+        {
+          "source": "n_adv_sodium_valproate",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若确实影响，将减弱亨特综合征的治疗效果"
+        },
+        {
+          "source": "drug_thiazide_diuretics",
+          "target": "n_ot_thiazide_diuretics",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响钠钾排泄"
+        },
+        {
+          "source": "n_ot_thiazide_diuretics",
+          "target": "n_rp_thiazide_diuretics",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致低电解质状态"
+        },
+        {
+          "source": "n_rp_thiazide_diuretics",
+          "target": "n_adv_thiazide_diuretics",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "增加肾功能障碍风险"
+        },
+        {
+          "source": "n_adv_thiazide_diuretics",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消治疗效果"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_ot_ibuprofen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "易致肾毒性"
+        },
+        {
+          "source": "n_ot_ibuprofen",
+          "target": "n_rp_ibuprofen",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "肾毒性相关路径"
+        },
+        {
+          "source": "n_rp_ibuprofen",
+          "target": "n_adv_ibuprofen",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发肾功能衰竭"
+        },
+        {
+          "source": "n_adv_ibuprofen",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良效应将抵消治疗益处"
+        },
+        {
+          "source": "drug_atenolol",
+          "target": "n_ot_atenolol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响心血管系统"
+        },
+        {
+          "source": "n_ot_atenolol",
+          "target": "n_rp_atenolol",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能诱发心律失常"
+        },
+        {
+          "source": "n_rp_atenolol",
+          "target": "n_adv_atenolol",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "加剧心血管疾病风险"
+        },
+        {
+          "source": "n_adv_atenolol",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "一旦风险成立，将影响治疗优势"
+        },
+        {
+          "source": "drug_metoprolol",
+          "target": "n_ot_metoprolol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响心脏功能"
+        },
+        {
+          "source": "n_ot_metoprolol",
+          "target": "n_rp_metoprolol",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "心脏问题相关风险"
+        },
+        {
+          "source": "n_rp_metoprolol",
+          "target": "n_adv_metoprolol",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致心脏衰竭"
+        },
+        {
+          "source": "n_adv_metoprolol",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，会减弱治疗效益"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_ot_beta_blockers",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致血压不稳定"
+        },
+        {
+          "source": "n_ot_beta_blockers",
+          "target": "n_rp_beta_blockers",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "心血管系统风险"
+        },
+        {
+          "source": "n_rp_beta_blockers",
+          "target": "n_adv_beta_blockers",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "增加心脏疾病风险"
+        },
+        {
+          "source": "n_adv_beta_blockers",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "一旦风险成立，将影响治疗效果"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "n_ot_topiramate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致代谢性碱中毒"
+        },
+        {
+          "source": "n_ot_topiramate",
+          "target": "n_rp_topiramate",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干扰代谢途径"
+        },
+        {
+          "source": "n_rp_topiramate",
+          "target": "n_adv_topiramate",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发肾功能障碍"
+        },
+        {
+          "source": "n_adv_topiramate",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "效用可能因不良反应而降低"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "n_ot_digoxin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响心脏电生理"
+        },
+        {
+          "source": "n_ot_digoxin",
+          "target": "n_rp_digoxin",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "心脏相关风险"
+        },
+        {
+          "source": "n_rp_digoxin",
+          "target": "n_adv_digoxin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致心脏功能衰竭"
+        },
+        {
+          "source": "n_adv_digoxin",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "效益可能会因此降低"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "n_ot_phenytoin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在影响神经系统"
+        },
+        {
+          "source": "n_ot_phenytoin",
+          "target": "n_rp_phenytoin",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "神经毒性风险"
+        },
+        {
+          "source": "n_rp_phenytoin",
+          "target": "n_adv_phenytoin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "引发认知功能损害"
+        },
+        {
+          "source": "n_adv_phenytoin",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "效益可能因认知损伤而被削弱"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "n_ot_lithium",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致内分泌问题"
+        },
+        {
+          "source": "n_ot_lithium",
+          "target": "n_rp_lithium",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "内分泌调节风险"
+        },
+        {
+          "source": "n_rp_lithium",
+          "target": "n_adv_lithium",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致甲状腺功能减退"
+        },
+        {
+          "source": "n_adv_lithium",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "效益可能会受到影响"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_ot_acetazolamide",
+              "type": "Target",
+              "label": "OffTargetAcetazolamide",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_rp_acetazolamide",
+              "type": "Pathway",
+              "label": "RiskPathwayAcetazolamide",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_acetazolamide",
+              "type": "Phenotype",
+              "label": "AdversePhenotypeAcetazolamide",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "drug_acetazolamide",
+              "target": "n_ot_acetazolamide",
+              "relation": "acts_on",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "可能影响肾脏功能，导致电解质失衡"
+            },
+            {
+              "source": "n_ot_acetazolamide",
+              "target": "n_rp_acetazolamide",
+              "relation": "involved_in",
+              "weight": 0.6,
+              "agent": "Skeptic",
+              "rationale": "与肾功能下降相关"
+            },
+            {
+              "source": "n_rp_acetazolamide",
+              "target": "n_adv_acetazolamide",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "导致慢性肾病风险增加"
+            },
+            {
+              "source": "n_adv_acetazolamide",
+              "target": "H1",
+              "relation": "refutes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "若风险成立，治疗收益将被抵消"
+            }
+          ],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成安全性压力测试：以高权重 refutes 边连到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": []
+  }
+}

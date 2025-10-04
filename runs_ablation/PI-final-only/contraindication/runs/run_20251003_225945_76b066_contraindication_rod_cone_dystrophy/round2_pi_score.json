@@ -1,0 +1,918 @@
+{
+  "input": {
+    "mode": "score",
+    "query": {
+      "entity": "Rod-cone dystrophy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_tadalafil",
+          "name": "Tadalafil"
+        }
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        }
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_viagra",
+          "name": "Viagra"
+        }
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        }
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        }
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_thioridazine",
+          "name": "Thioridazine"
+        }
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_quinine",
+          "name": "Quinine"
+        }
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_clomiphene",
+          "name": "Clomiphene"
+        }
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_fluoroquinolones",
+          "name": "Fluoroquinolones"
+        }
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_isotretinoin",
+          "name": "Isotretinoin"
+        }
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_hydrochlorothiazide",
+          "name": "Hydrochlorothiazide"
+        }
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_clozapine",
+          "name": "Clozapine"
+        }
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_ta1",
+          "type": "Target",
+          "label": "Phosphodiesterase 5",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta2",
+          "type": "Target",
+          "label": "Histamine H1 receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_d1",
+          "type": "Disease",
+          "label": "Rod-cone dystrophy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_path1",
+          "type": "Pathway",
+          "label": "cGMP Signaling Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph1",
+          "type": "Phenotype",
+          "label": "Visual impairment",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph2",
+          "type": "Phenotype",
+          "label": "Retinitis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_tadalafil",
+          "type": "Target",
+          "label": "OffTarget_Tadalafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_tadalafil",
+          "type": "Pathway",
+          "label": "RiskPathway_Tadalafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tadalafil",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_RodConeDystrophy",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sildenafil",
+          "type": "Target",
+          "label": "OffTarget_Sildenafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sildenafil",
+          "type": "Pathway",
+          "label": "RiskPathway_Sildenafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "OffTarget_Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_amiodarone",
+          "type": "Pathway",
+          "label": "RiskPathway_Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "OffTarget_Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_corticosteroids",
+          "type": "Pathway",
+          "label": "RiskPathway_Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thioridazine",
+          "type": "Target",
+          "label": "OffTarget_Thioridazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_thioridazine",
+          "type": "Pathway",
+          "label": "RiskPathway_Thioridazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_quinine",
+          "type": "Target",
+          "label": "OffTarget_Quinine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_quinine",
+          "type": "Pathway",
+          "label": "RiskPathway_Quinine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fluoroquinolones",
+          "type": "Target",
+          "label": "OffTarget_Fluoroquinolones",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fluoroquinolones",
+          "type": "Pathway",
+          "label": "RiskPathway_Fluoroquinolones",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_isotretinoin",
+          "type": "Target",
+          "label": "OffTarget_Isotretinoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_isotretinoin",
+          "type": "Pathway",
+          "label": "RiskPathway_Isotretinoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_hydrochlorothiazide",
+          "type": "Target",
+          "label": "OffTarget_Hydrochlorothiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_hydrochlorothiazide",
+          "type": "Pathway",
+          "label": "RiskPathway_Hydrochlorothiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Tadalafil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_tadalafil",
+          "type": "Drug",
+          "label": "Tadalafil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Sildenafil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sildenafil",
+          "type": "Drug",
+          "label": "Sildenafil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Viagra",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_viagra",
+          "type": "Drug",
+          "label": "Viagra",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Thioridazine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_thioridazine",
+          "type": "Drug",
+          "label": "Thioridazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Quinine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_quinine",
+          "type": "Drug",
+          "label": "Quinine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Clomiphene",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_clomiphene",
+          "type": "Drug",
+          "label": "Clomiphene",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Fluoroquinolones",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fluoroquinolones",
+          "type": "Drug",
+          "label": "Fluoroquinolones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Isotretinoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_isotretinoin",
+          "type": "Drug",
+          "label": "Isotretinoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Hydrochlorothiazide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_hydrochlorothiazide",
+          "type": "Drug",
+          "label": "Hydrochlorothiazide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Clozapine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_clozapine",
+          "type": "Drug",
+          "label": "Clozapine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_tadalafil",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知靶点与作用机制一致"
+        },
+        {
+          "source": "drug_sildenafil",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知靶点与作用机制一致"
+        },
+        {
+          "source": "drug_viagra",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知靶点与作用机制一致"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ta2",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "对抗心脏相关机制"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ph1",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对抗炎症反应相关"
+        },
+        {
+          "source": "drug_thioridazine",
+          "target": "n_ph2",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知影响视网膜功能"
+        },
+        {
+          "source": "n_path1",
+          "target": "n_d1",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与视觉相关的信号通路"
+        },
+        {
+          "source": "n_ph1",
+          "target": "n_d1",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "视觉损伤可造成该病"
+        },
+        {
+          "source": "n_ph2",
+          "target": "n_d1",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "视网膜炎症可导致该病"
+        },
+        {
+          "source": "drug_tadalafil",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与潜在靶点及相关性支持"
+        },
+        {
+          "source": "drug_sildenafil",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与潜在靶点及相关性支持"
+        },
+        {
+          "source": "drug_viagra",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与潜在靶点及相关性支持"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与潜在靶点及相关性支持"
+        },
+        {
+          "source": "drug_tadalafil",
+          "target": "n_ot_tadalafil",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_tadalafil",
+          "target": "n_rp_tadalafil",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜病理关联"
+        },
+        {
+          "source": "n_rp_tadalafil",
+          "target": "n_adv_tadalafil",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致视网膜退行性变"
+        },
+        {
+          "source": "n_adv_tadalafil",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消治疗获益"
+        },
+        {
+          "source": "drug_sildenafil",
+          "target": "n_ot_sildenafil",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_sildenafil",
+          "target": "n_rp_sildenafil",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜病理关联"
+        },
+        {
+          "source": "n_rp_sildenafil",
+          "target": "n_adv_tadalafil",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致视网膜退行性变"
+        },
+        {
+          "source": "n_adv_sildenafil",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消治疗获益"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp_amiodarone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜病理关联"
+        },
+        {
+          "source": "n_rp_amiodarone",
+          "target": "n_adv_tadalafil",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致视网膜退行性变"
+        },
+        {
+          "source": "n_adv_amiodarone",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消治疗获益"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp_corticosteroids",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜病理关联"
+        },
+        {
+          "source": "n_rp_corticosteroids",
+          "target": "n_adv_tadalafil",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致视网膜退行性变"
+        },
+        {
+          "source": "n_adv_corticosteroids",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消治疗获益"
+        },
+        {
+          "source": "drug_thioridazine",
+          "target": "n_ot_thioridazine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_thioridazine",
+          "target": "n_rp_thioridazine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜病理关联"
+        },
+        {
+          "source": "n_rp_thioridazine",
+          "target": "n_adv_tadalafil",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致视网膜退行性变"
+        },
+        {
+          "source": "n_adv_thioridazine",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消治疗获益"
+        },
+        {
+          "source": "drug_quinine",
+          "target": "n_ot_quinine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_quinine",
+          "target": "n_rp_quinine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜病理关联"
+        },
+        {
+          "source": "n_rp_quinine",
+          "target": "n_adv_tadalafil",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致视网膜退行性变"
+        },
+        {
+          "source": "n_adv_quinine",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消治疗获益"
+        },
+        {
+          "source": "drug_fluoroquinolones",
+          "target": "n_ot_fluoroquinolones",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_fluoroquinolones",
+          "target": "n_rp_fluoroquinolones",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜病理关联"
+        },
+        {
+          "source": "n_rp_fluoroquinolones",
+          "target": "n_adv_tadalafil",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致视网膜退行性变"
+        },
+        {
+          "source": "n_adv_fluoroquinolones",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消治疗获益"
+        },
+        {
+          "source": "drug_isotretinoin",
+          "target": "n_ot_isotretinoin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_isotretinoin",
+          "target": "n_rp_isotretinoin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜病理关联"
+        },
+        {
+          "source": "n_rp_isotretinoin",
+          "target": "n_adv_tadalafil",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致视网膜退行性变"
+        },
+        {
+          "source": "n_adv_isotretinoin",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消治疗获益"
+        },
+        {
+          "source": "drug_hydrochlorothiazide",
+          "target": "n_ot_hydrochlorothiazide",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_hydrochlorothiazide",
+          "target": "n_rp_hydrochlorothiazide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜病理关联"
+        },
+        {
+          "source": "n_rp_hydrochlorothiazide",
+          "target": "n_adv_tadalafil",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致视网膜退行性变"
+        },
+        {
+          "source": "n_adv_hydrochlorothiazide",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消治疗获益"
+        }
+      ],
+      "round_index": 2
+    },
+    "history": {
+      "round": 2,
+      "last_scores": []
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "scoring_summary": [],
+    "ranking": [],
+    "delta_since_last_round": 0.1,
+    "stop_decision": {
+      "should_stop": false,
+      "reason": "final-only ablation"
+    }
+  }
+}

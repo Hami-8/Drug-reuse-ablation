@@ -1,0 +1,848 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_l_dopa",
+          "name": "L-DOPA"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ritalin",
+          "name": "Ritalin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_adderall",
+          "name": "Adderall"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_bupropion",
+          "name": "Bupropion"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_sertraline",
+          "name": "Sertraline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_fluoxetine",
+          "name": "Fluoxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_venlafaxine",
+          "name": "Venlafaxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_duloxetine",
+          "name": "Duloxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_clonidine",
+          "name": "Clonidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_trazodone",
+          "name": "Trazodone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_methylphenidate",
+          "name": "Methylphenidate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_ldopa",
+          "type": "Target",
+          "label": "OffTargetL-DOPA",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ldopa",
+          "type": "Pathway",
+          "label": "RiskPathwayL-DOPA",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ldopa",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeL-DOPA",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ritalin",
+          "type": "Target",
+          "label": "OffTargetRitalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ritalin",
+          "type": "Pathway",
+          "label": "RiskPathwayRitalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ritalin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeRitalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_adderall",
+          "type": "Target",
+          "label": "OffTargetAdderall",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_adderall",
+          "type": "Pathway",
+          "label": "RiskPathwayAdderall",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_adderall",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAdderall",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bupropion",
+          "type": "Target",
+          "label": "OffTargetBupropion",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bupropion",
+          "type": "Pathway",
+          "label": "RiskPathwayBupropion",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bupropion",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBupropion",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sertraline",
+          "type": "Target",
+          "label": "OffTargetSertraline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sertraline",
+          "type": "Pathway",
+          "label": "RiskPathwaySertraline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sertraline",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSertraline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fluoxetine",
+          "type": "Target",
+          "label": "OffTargetFluoxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fluoxetine",
+          "type": "Pathway",
+          "label": "RiskPathwayFluoxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fluoxetine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeFluoxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_venlafaxine",
+          "type": "Target",
+          "label": "OffTargetVenlafaxine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_venlafaxine",
+          "type": "Pathway",
+          "label": "RiskPathwayVenlafaxine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_venlafaxine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeVenlafaxine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_duloxetine",
+          "type": "Target",
+          "label": "OffTargetDuloxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_duloxetine",
+          "type": "Pathway",
+          "label": "RiskPathwayDuloxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_duloxetine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeDuloxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clonidine",
+          "type": "Target",
+          "label": "OffTargetClonidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_clonidine",
+          "type": "Pathway",
+          "label": "RiskPathwayClonidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clonidine",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeClonidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_trazodone",
+          "type": "Target",
+          "label": "OffTargetTrazodone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_trazodone",
+          "type": "Pathway",
+          "label": "RiskPathwayTrazodone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_trazodone",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTrazodone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methylphenidate",
+          "type": "Target",
+          "label": "OffTargetMethylphenidate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_methylphenidate",
+          "type": "Pathway",
+          "label": "RiskPathwayMethylphenidate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_methylphenidate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMethylphenidate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gabapentin",
+          "type": "Target",
+          "label": "OffTargetGabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gabapentin",
+          "type": "Pathway",
+          "label": "RiskPathwayGabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gabapentin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeGabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_l_dopa",
+          "target": "n_ot_ldopa",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_ldopa",
+          "target": "n_rp_ldopa",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_ldopa",
+          "target": "n_adv_ldopa",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_ldopa",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应会抵消益处"
+        },
+        {
+          "source": "drug_ritalin",
+          "target": "n_ot_ritalin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_ritalin",
+          "target": "n_rp_ritalin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_ritalin",
+          "target": "n_adv_ritalin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_ritalin",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应会抵消益处"
+        },
+        {
+          "source": "drug_adderall",
+          "target": "n_ot_adderall",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_adderall",
+          "target": "n_rp_adderall",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_adderall",
+          "target": "n_adv_adderall",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_adderall",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应会抵消益处"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "n_ot_bupropion",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_bupropion",
+          "target": "n_rp_bupropion",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_bupropion",
+          "target": "n_adv_bupropion",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_bupropion",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应会抵消益处"
+        },
+        {
+          "source": "drug_sertraline",
+          "target": "n_ot_sertraline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_sertraline",
+          "target": "n_rp_sertraline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_sertraline",
+          "target": "n_adv_sertraline",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_sertraline",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应会抵消益处"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "n_ot_fluoxetine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_fluoxetine",
+          "target": "n_rp_fluoxetine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_fluoxetine",
+          "target": "n_adv_fluoxetine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_fluoxetine",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应会抵消益处"
+        },
+        {
+          "source": "drug_venlafaxine",
+          "target": "n_ot_venlafaxine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_venlafaxine",
+          "target": "n_rp_venlafaxine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_venlafaxine",
+          "target": "n_adv_venlafaxine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_venlafaxine",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应会抵消益处"
+        },
+        {
+          "source": "drug_duloxetine",
+          "target": "n_ot_duloxetine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_duloxetine",
+          "target": "n_rp_duloxetine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_duloxetine",
+          "target": "n_adv_duloxetine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_duloxetine",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应会抵消益处"
+        },
+        {
+          "source": "drug_clonidine",
+          "target": "n_ot_clonidine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_clonidine",
+          "target": "n_rp_clonidine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_clonidine",
+          "target": "n_adv_clonidine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_clonidine",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应会抵消益处"
+        },
+        {
+          "source": "drug_trazodone",
+          "target": "n_ot_trazodone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_trazodone",
+          "target": "n_rp_trazodone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_trazodone",
+          "target": "n_adv_trazodone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_trazodone",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应会抵消益处"
+        },
+        {
+          "source": "drug_methylphenidate",
+          "target": "n_ot_methylphenidate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_methylphenidate",
+          "target": "n_rp_methylphenidate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_methylphenidate",
+          "target": "n_adv_methylphenidate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_methylphenidate",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应会抵消益处"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "n_ot_gabapentin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用"
+        },
+        {
+          "source": "n_ot_gabapentin",
+          "target": "n_rp_gabapentin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_gabapentin",
+          "target": "n_adv_gabapentin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_gabapentin",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应会抵消益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "未能充分考虑药物与神经递质失调之间的安全性和有效性关系",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "所有候选药物在长期使用中存在不良反应的风险",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "每种药物的疗效是否足够支持其作为推荐治疗",
+      "与现有治疗方案相比，风险是否被低估"
+    ],
+    "falsification_tests": [
+      "是否存在显示药物安全性的长期研究数据？",
+      "是否有证据表明药物有效改善神经递质失调的核心症状？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提交长期有效性与安全性的临床证据",
+      "审视不同药物间的相对风险与效益"
+    ]
+  }
+}

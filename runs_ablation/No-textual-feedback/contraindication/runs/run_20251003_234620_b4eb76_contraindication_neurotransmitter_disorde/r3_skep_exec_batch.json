@@ -1,0 +1,960 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Adverse Effect Fluo",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Adverse Effect Paro",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_fluoxetine",
+          "type": "Drug",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_paroxetine",
+          "type": "Drug",
+          "label": "Paroxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_venlafaxine",
+          "type": "Drug",
+          "label": "Venlafaxine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bupropion",
+          "type": "Drug",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sertraline",
+          "type": "Drug",
+          "label": "Sertraline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_citalopram",
+          "type": "Drug",
+          "label": "Citalopram",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_escitalopram",
+          "type": "Drug",
+          "label": "Escitalopram",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_duloxetine",
+          "type": "Drug",
+          "label": "Duloxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_trazodone",
+          "type": "Drug",
+          "label": "Trazodone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mirtazapine",
+          "type": "Drug",
+          "label": "Mirtazapine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_buspirone",
+          "type": "Drug",
+          "label": "Buspirone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disorder_neurotransmitter",
+          "type": "Disease",
+          "label": "Neurotransmitter disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_fluoxetine",
+          "type": "Target",
+          "label": "OffTarget Fluo",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fluoxetine",
+          "type": "Pathway",
+          "label": "Risk Pathway Fluo",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fluoxetine",
+          "type": "Phenotype",
+          "label": "Adverse Effect Fluo",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_paroxetine",
+          "type": "Target",
+          "label": "OffTarget Paro",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_paroxetine",
+          "type": "Pathway",
+          "label": "Risk Pathway Paro",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_paroxetine",
+          "type": "Phenotype",
+          "label": "Adverse Effect Paro",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_venlafaxine",
+          "type": "Target",
+          "label": "OffTarget Ven",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_venlafaxine",
+          "type": "Pathway",
+          "label": "Risk Pathway Ven",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_venlafaxine",
+          "type": "Phenotype",
+          "label": "Adverse Effect Ven",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bupropion",
+          "type": "Target",
+          "label": "OffTarget Bup",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bupropion",
+          "type": "Pathway",
+          "label": "Risk Pathway Bup",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bupropion",
+          "type": "Phenotype",
+          "label": "Adverse Effect Bup",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sertraline",
+          "type": "Target",
+          "label": "OffTarget Ser",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sertraline",
+          "type": "Pathway",
+          "label": "Risk Pathway Ser",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sertraline",
+          "type": "Phenotype",
+          "label": "Adverse Effect Ser",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_citalopram",
+          "type": "Target",
+          "label": "OffTarget Cita",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_citalopram",
+          "type": "Pathway",
+          "label": "Risk Pathway Cita",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_citalopram",
+          "type": "Phenotype",
+          "label": "Adverse Effect Cita",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_escitalopram",
+          "type": "Target",
+          "label": "OffTarget Escita",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_escitalopram",
+          "type": "Pathway",
+          "label": "Risk Pathway Escita",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_escitalopram",
+          "type": "Phenotype",
+          "label": "Adverse Effect Escita",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_duloxetine",
+          "type": "Target",
+          "label": "OffTarget Dul",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_duloxetine",
+          "type": "Pathway",
+          "label": "Risk Pathway Dul",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_duloxetine",
+          "type": "Phenotype",
+          "label": "Adverse Effect Dul",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_trazodone",
+          "type": "Target",
+          "label": "OffTarget Traz",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_trazodone",
+          "type": "Pathway",
+          "label": "Risk Pathway Traz",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_trazodone",
+          "type": "Phenotype",
+          "label": "Adverse Effect Traz",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mirtazapine",
+          "type": "Target",
+          "label": "OffTarget Mir",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mirtazapine",
+          "type": "Pathway",
+          "label": "Risk Pathway Mir",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mirtazapine",
+          "type": "Phenotype",
+          "label": "Adverse Effect Mir",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_buspirone",
+          "type": "Target",
+          "label": "OffTarget Bus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_buspirone",
+          "type": "Pathway",
+          "label": "Risk Pathway Bus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_buspirone",
+          "type": "Phenotype",
+          "label": "Adverse Effect Bus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lithium",
+          "type": "Target",
+          "label": "OffTarget Lith",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lithium",
+          "type": "Pathway",
+          "label": "Risk Pathway Lith",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lithium",
+          "type": "Phenotype",
+          "label": "Adverse Effect Lith",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_fluoxetine",
+          "target": "disorder_neurotransmitter",
+          "relation": "contraindication",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "为常见选择药物与相关疾病"
+        },
+        {
+          "source": "drug_paroxetine",
+          "target": "disorder_neurotransmitter",
+          "relation": "contraindication",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "为常见选择药物与相关疾病"
+        },
+        {
+          "source": "drug_venlafaxine",
+          "target": "disorder_neurotransmitter",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "为常见选择药物与相关疾病"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "disorder_neurotransmitter",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "为常见选择药物与相关疾病"
+        },
+        {
+          "source": "drug_sertraline",
+          "target": "disorder_neurotransmitter",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "为常见选择药物与相关疾病"
+        },
+        {
+          "source": "drug_citalopram",
+          "target": "disorder_neurotransmitter",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "为常见选择药物与相关疾病"
+        },
+        {
+          "source": "drug_escitalopram",
+          "target": "disorder_neurotransmitter",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "为常见选择药物与相关疾病"
+        },
+        {
+          "source": "drug_duloxetine",
+          "target": "disorder_neurotransmitter",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "为常见选择药物与相关疾病"
+        },
+        {
+          "source": "drug_trazodone",
+          "target": "disorder_neurotransmitter",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "为常见选择药物与相关疾病"
+        },
+        {
+          "source": "drug_mirtazapine",
+          "target": "disorder_neurotransmitter",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "为常见选择药物与相关疾病"
+        },
+        {
+          "source": "drug_buspirone",
+          "target": "disorder_neurotransmitter",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "为常见选择药物与相关疾病"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "disorder_neurotransmitter",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "为常见选择药物与相关疾病"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "n_ot_fluoxetine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导严重副作用"
+        },
+        {
+          "source": "n_ot_fluoxetine",
+          "target": "n_rp_fluoxetine",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的风险通路"
+        },
+        {
+          "source": "n_rp_fluoxetine",
+          "target": "n_adv_fluoxetine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使得更严重的不良表型"
+        },
+        {
+          "source": "n_adv_fluoxetine",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "该风险成立则抵消潜在益处"
+        },
+        {
+          "source": "drug_paroxetine",
+          "target": "n_ot_paroxetine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导严重副作用"
+        },
+        {
+          "source": "n_ot_paroxetine",
+          "target": "n_rp_paroxetine",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的风险通路"
+        },
+        {
+          "source": "n_rp_paroxetine",
+          "target": "n_adv_paroxetine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使得更严重的不良表型"
+        },
+        {
+          "source": "n_adv_paroxetine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "该风险成立则抵消潜在益处"
+        },
+        {
+          "source": "drug_venlafaxine",
+          "target": "n_ot_venlafaxine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导严重副作用"
+        },
+        {
+          "source": "n_ot_venlafaxine",
+          "target": "n_rp_venlafaxine",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的风险通路"
+        },
+        {
+          "source": "n_rp_venlafaxine",
+          "target": "n_adv_venlafaxine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使得更严重的不良表型"
+        },
+        {
+          "source": "n_adv_venlafaxine",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "该风险成立则抵消潜在益处"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "n_ot_bupropion",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导严重副作用"
+        },
+        {
+          "source": "n_ot_bupropion",
+          "target": "n_rp_bupropion",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的风险通路"
+        },
+        {
+          "source": "n_rp_bupropion",
+          "target": "n_adv_bupropion",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使得更严重的不良表型"
+        },
+        {
+          "source": "n_adv_bupropion",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "该风险成立则抵消潜在益处"
+        },
+        {
+          "source": "drug_sertraline",
+          "target": "n_ot_sertraline",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导严重副作用"
+        },
+        {
+          "source": "n_ot_sertraline",
+          "target": "n_rp_sertraline",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的风险通路"
+        },
+        {
+          "source": "n_rp_sertraline",
+          "target": "n_adv_sertraline",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使得更严重的不良表型"
+        },
+        {
+          "source": "n_adv_sertraline",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "该风险成立则抵消潜在益处"
+        },
+        {
+          "source": "drug_citalopram",
+          "target": "n_ot_citalopram",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导严重副作用"
+        },
+        {
+          "source": "n_ot_citalopram",
+          "target": "n_rp_citalopram",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的风险通路"
+        },
+        {
+          "source": "n_rp_citalopram",
+          "target": "n_adv_citalopram",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使得更严重的不良表型"
+        },
+        {
+          "source": "n_adv_citalopram",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "该风险成立则抵消潜在益处"
+        },
+        {
+          "source": "drug_escitalopram",
+          "target": "n_ot_escitalopram",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导严重副作用"
+        },
+        {
+          "source": "n_ot_escitalopram",
+          "target": "n_rp_escitalopram",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的风险通路"
+        },
+        {
+          "source": "n_rp_escitalopram",
+          "target": "n_adv_escitalopram",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使得更严重的不良表型"
+        },
+        {
+          "source": "n_adv_escitalopram",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "该风险成立则抵消潜在益处"
+        },
+        {
+          "source": "drug_duloxetine",
+          "target": "n_ot_duloxetine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导严重副作用"
+        },
+        {
+          "source": "n_ot_duloxetine",
+          "target": "n_rp_duloxetine",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的风险通路"
+        },
+        {
+          "source": "n_rp_duloxetine",
+          "target": "n_adv_duloxetine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使得更严重的不良表型"
+        },
+        {
+          "source": "n_adv_duloxetine",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "该风险成立则抵消潜在益处"
+        },
+        {
+          "source": "drug_trazodone",
+          "target": "n_ot_trazodone",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导严重副作用"
+        },
+        {
+          "source": "n_ot_trazodone",
+          "target": "n_rp_trazodone",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的风险通路"
+        },
+        {
+          "source": "n_rp_trazodone",
+          "target": "n_adv_trazodone",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使得更严重的不良表型"
+        },
+        {
+          "source": "n_adv_trazodone",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "该风险成立则抵消潜在益处"
+        },
+        {
+          "source": "drug_mirtazapine",
+          "target": "n_ot_mirtazapine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导严重副作用"
+        },
+        {
+          "source": "n_ot_mirtazapine",
+          "target": "n_rp_mirtazapine",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的风险通路"
+        },
+        {
+          "source": "n_rp_mirtazapine",
+          "target": "n_adv_mirtazapine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使得更严重的不良表型"
+        },
+        {
+          "source": "n_adv_mirtazapine",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "该风险成立则抵消潜在益处"
+        },
+        {
+          "source": "drug_buspirone",
+          "target": "n_ot_buspirone",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导严重副作用"
+        },
+        {
+          "source": "n_ot_buspirone",
+          "target": "n_rp_buspirone",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的风险通路"
+        },
+        {
+          "source": "n_rp_buspirone",
+          "target": "n_adv_buspirone",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使得更严重的不良表型"
+        },
+        {
+          "source": "n_adv_buspirone",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "该风险成立则抵消潜在益处"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "n_ot_lithium",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导严重副作用"
+        },
+        {
+          "source": "n_ot_lithium",
+          "target": "n_rp_lithium",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的风险通路"
+        },
+        {
+          "source": "n_rp_lithium",
+          "target": "n_adv_lithium",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "使得更严重的不良表型"
+        },
+        {
+          "source": "n_adv_lithium",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "该风险成立则抵消潜在益处"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成为 Fluoxetine 的安全性压力测试，已连接高权重 refutes 边到假设"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成为 Paroxetine 的安全性压力测试，已连接高权重 refutes 边到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": []
+  }
+}

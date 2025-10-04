@@ -1,0 +1,693 @@
+{
+  "input": {
+    "mode": "revise",
+    "query": {
+      "entity": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+      "relation": "indication"
+    },
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sotalol",
+          "type": "Drug",
+          "label": "Sotalol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dronedarone",
+          "type": "Drug",
+          "label": "Dronedarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mexiletine",
+          "type": "Drug",
+          "label": "Mexiletine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_quinidine",
+          "type": "Drug",
+          "label": "Quinidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_digoxin",
+          "type": "Drug",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_procainamide",
+          "type": "Drug",
+          "label": "Procainamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lidocaine",
+          "type": "Drug",
+          "label": "Lidocaine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_atenolol",
+          "type": "Drug",
+          "label": "Atenolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carvedilol",
+          "type": "Drug",
+          "label": "Carvedilol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_arvc",
+          "type": "Disease",
+          "label": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_cc",
+          "type": "Target",
+          "label": "Calcium Channels",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_ar",
+          "type": "Pathway",
+          "label": "Arrhythmia Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_target_cc",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常见的抗心律失常药物作用靶点"
+        },
+        {
+          "source": "drug_sotalol",
+          "target": "n_target_cc",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "针对心律失常的酮类药物作用机制"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_target_cc",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "经典药物对心脏膜去极化影响"
+        },
+        {
+          "source": "n_target_cc",
+          "target": "n_pathway_ar",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响心律的生化路径"
+        },
+        {
+          "source": "n_pathway_ar",
+          "target": "n_arvc",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知心律失常与 ARVC 的关系"
+        },
+        {
+          "source": "n_target_cc",
+          "target": "n_arvc",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "靶向机制联系等"
+        },
+        {
+          "source": "drug_dronedarone",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "新型抗心律失常药物作用于相同通路"
+        },
+        {
+          "source": "drug_mexiletine",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "对内源性机制的影响"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "传统抗心律失常药物作用"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "影响心脏功能和节律"
+        },
+        {
+          "source": "drug_procainamide",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与心律失常相关"
+        },
+        {
+          "source": "drug_atenolol",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "β-阻滞剂类别下的作用"
+        },
+        {
+          "source": "drug_carvedilol",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "兼具抗心律失常效果"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_arvc",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "潜在辅助用药，需更多研究"
+        }
+      ],
+      "round_index": 3
+    },
+    "history": {
+      "round": 3,
+      "last_scores": [
+        {
+          "hypothesis_id": "H1",
+          "score": 0.83,
+          "components": {
+            "mechanism_fit": 0.9,
+            "class_prior": 0.7,
+            "pk_pd_feasibility": 0.8,
+            "indication_plausibility": 0.85,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.8,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Beta-blockers作用于钙通道，影响心律并与ARVC的机制关联紧密。"
+            ],
+            "class_prior": [
+              "已知β-阻滞剂在心律失常管理中的有效性。"
+            ]
+          },
+          "confidence": "high",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H2",
+          "score": 0.82,
+          "components": {
+            "mechanism_fit": 0.88,
+            "class_prior": 0.7,
+            "pk_pd_feasibility": 0.78,
+            "indication_plausibility": 0.8,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.85,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Sotalol对钙通道的作用符合ARVC的机制。"
+            ],
+            "class_prior": [
+              "Sotalol为管理心律失常的有效药物。"
+            ]
+          },
+          "confidence": "high",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H3",
+          "score": 0.8,
+          "components": {
+            "mechanism_fit": 0.85,
+            "class_prior": 0.7,
+            "pk_pd_feasibility": 0.75,
+            "indication_plausibility": 0.75,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.8,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Dronedarone对心律的影响符合ARVC的管理机制。"
+            ],
+            "class_prior": [
+              "使用Dronedarone治疗心律失常已有临床支持。"
+            ]
+          },
+          "confidence": "high",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H4",
+          "score": 0.79,
+          "components": {
+            "mechanism_fit": 0.84,
+            "class_prior": 0.7,
+            "pk_pd_feasibility": 0.73,
+            "indication_plausibility": 0.73,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.9,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Amiodarone作用靶点与ARVC相关。"
+            ],
+            "class_prior": [
+              "在心律失常中使用Amiodarone是常见的疗法。"
+            ]
+          },
+          "confidence": "high",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H5",
+          "score": 0.75,
+          "components": {
+            "mechanism_fit": 0.78,
+            "class_prior": 0.7,
+            "pk_pd_feasibility": 0.68,
+            "indication_plausibility": 0.7,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.65,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Mexiletine作用机制对ARVC有潜在益处。"
+            ],
+            "class_prior": [
+              "虽然少见，但有应用于心律失常的历史。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H6",
+          "score": 0.72,
+          "components": {
+            "mechanism_fit": 0.7,
+            "class_prior": 0.7,
+            "pk_pd_feasibility": 0.65,
+            "indication_plausibility": 0.68,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.6,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Quinidine作用于钙通道，一定程度上影响ARVC。"
+            ],
+            "class_prior": [
+              "长期用于心律失常的治疗，支持性数据存在。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H7",
+          "score": 0.68,
+          "components": {
+            "mechanism_fit": 0.65,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.63,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.55,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Digoxin对心率的影响可能缓解某些ARVC症状。"
+            ],
+            "class_prior": [
+              "在心脏功能异常中有应用，支持使用。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H8",
+          "score": 0.65,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.55,
+            "indication_plausibility": 0.58,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.5,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Procainamide对心律的影响与ARVC潜在关系较弱。"
+            ],
+            "class_prior": [
+              "过去用于心律失常的案例有限。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H9",
+          "score": 0.62,
+          "components": {
+            "mechanism_fit": 0.55,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.55,
+            "indication_plausibility": 0.53,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.55,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Lidocaine对急性心律失常有效，但对ARVC适应症有限。"
+            ],
+            "class_prior": [
+              "应用于其他类型的心律失常，但相对不常见。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H10",
+          "score": 0.6,
+          "components": {
+            "mechanism_fit": 0.55,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.52,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.45,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Atenolol作为β-阻滞剂对心律管理有基础。"
+            ],
+            "class_prior": [
+              "心律失常临床应用常见，支持使用。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H11",
+          "score": 0.55,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.4,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Carvedilol对心律有一定影响，但相对较弱。"
+            ],
+            "class_prior": [
+              "心律失常的应用支持有限。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H12",
+          "score": 0.5,
+          "components": {
+            "mechanism_fit": 0.45,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.42,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 0.35,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Dexamethasone对心律的影响较小，适应症较弱。"
+            ],
+            "class_prior": [
+              "未普遍用于ARVC的治疗。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        }
+      ]
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "revisions": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_beta_blockers",
+            "via": [
+              "n_target_cc"
+            ],
+            "to": "n_arvc",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "使用β-阻滞剂对ARVC患者的长期影响",
+            "expectation": "评估安全性与疗效之间的平衡",
+            "assignee": "Skeptic"
+          }
+        ],
+        "debate_focus": [
+          "区分不同β-阻滞剂对不同ARVC表型的具体疗效",
+          "阐明对于心脏功能的潜在影响与长期预后的关系"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_sotalol",
+            "via": [
+              "n_target_cc"
+            ],
+            "to": "n_arvc",
+            "success_criteria": "至少形成2条不相交的机制路径",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "Sotalol在ARVC患者中的安全性",
+            "expectation": "评估潜在的心脏节律障碍风险",
+            "assignee": "Skeptic"
+          }
+        ],
+        "debate_focus": [
+          "药物相互作用对心律管理的具体影响",
+          "Sotalol在临床应用中的效果与不良反应"
+        ]
+      }
+    ],
+    "pruned_hypotheses": [],
+    "new_subhypotheses": [],
+    "seed_request": {
+      "should_regenerate": false,
+      "reason": "现有候选在机制连通性良好且有足够支持信号，无需再生种子。",
+      "n": 4
+    }
+  }
+}

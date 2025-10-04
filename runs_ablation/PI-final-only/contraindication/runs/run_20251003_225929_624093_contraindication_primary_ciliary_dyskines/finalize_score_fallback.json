@@ -1,0 +1,1182 @@
+{
+  "input": {
+    "mode": "score",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        }
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        }
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        }
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        }
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        }
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        }
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_verapamil",
+          "name": "Verapamil"
+        }
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_theophylline",
+          "name": "Theophylline"
+        }
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_lisinopril",
+          "name": "Lisinopril"
+        }
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_enalapril",
+          "name": "Enalapril"
+        }
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        }
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        }
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_target1",
+          "type": "Target",
+          "label": "Cyclooxygenase (COX)",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway1",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease",
+          "type": "Disease",
+          "label": "Primary Ciliary Dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target2",
+          "type": "Target",
+          "label": "Sodium Channels",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway2",
+          "type": "Pathway",
+          "label": "Cardiac Conductance Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph1",
+          "type": "Phenotype",
+          "label": "Respiratory Dysfunction",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph2",
+          "type": "Phenotype",
+          "label": "Arrhythmia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "OffTargetAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aspirin",
+          "type": "Pathway",
+          "label": "RiskPathwayAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aspirin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ibuprofen",
+          "type": "Target",
+          "label": "OffTargetIbuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ibuprofen",
+          "type": "Pathway",
+          "label": "RiskPathwayIbuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ibuprofen",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeIbuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_naproxen",
+          "type": "Target",
+          "label": "OffTargetNaproxen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_naproxen",
+          "type": "Pathway",
+          "label": "RiskPathwayNaproxen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_naproxen",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeNaproxen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_phenytoin",
+          "type": "Target",
+          "label": "OffTargetPhenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_phenytoin",
+          "type": "Pathway",
+          "label": "RiskPathwayPhenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_phenytoin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypePhenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "OffTargetAmiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_amiodarone",
+          "type": "Pathway",
+          "label": "RiskPathwayAmiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_amiodarone",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAmiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dexamethasone",
+          "type": "Target",
+          "label": "OffTargetDexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dexamethasone",
+          "type": "Pathway",
+          "label": "RiskPathwayDexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dexamethasone",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeDexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_verapamil",
+          "type": "Target",
+          "label": "OffTargetVerapamil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_verapamil",
+          "type": "Pathway",
+          "label": "RiskPathwayVerapamil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_verapamil",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeVerapamil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_theophylline",
+          "type": "Target",
+          "label": "OffTargetTheophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_theophylline",
+          "type": "Pathway",
+          "label": "RiskPathwayTheophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_theophylline",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTheophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lisinopril",
+          "type": "Target",
+          "label": "OffTargetLisinopril",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lisinopril",
+          "type": "Pathway",
+          "label": "RiskPathwayLisinopril",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lisinopril",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLisinopril",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_enalapril",
+          "type": "Target",
+          "label": "OffTargetEnalapril",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_enalapril",
+          "type": "Pathway",
+          "label": "RiskPathwayEnalapril",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_enalapril",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeEnalapril",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_beta_blockers",
+          "type": "Target",
+          "label": "OffTargetBetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_beta_blockers",
+          "type": "Pathway",
+          "label": "RiskPathwayBetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_beta_blockers",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "OffTargetMethotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_methotrexate",
+          "type": "Pathway",
+          "label": "RiskPathwayMethotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_methotrexate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMethotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_naproxen",
+          "type": "Drug",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Verapamil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_verapamil",
+          "type": "Drug",
+          "label": "Verapamil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Theophylline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_theophylline",
+          "type": "Drug",
+          "label": "Theophylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lisinopril",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Enalapril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_enalapril",
+          "type": "Drug",
+          "label": "Enalapril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "n_target1",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Aspirin inhibits COX enzymes, relevant in inflammation."
+        },
+        {
+          "source": "n_target1",
+          "target": "n_pathway1",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "COX activity is central in inflammation pathways."
+        },
+        {
+          "source": "n_pathway1",
+          "target": "n_disease",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Inflammation is associated with respiratory dysfunction."
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_target1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Similar mechanism to aspirin in inhibiting COX."
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_target1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Also inhibits COX, like aspirin and ibuprofen."
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "n_target2",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Phenytoin affects sodium channels relevant in cardiac functions."
+        },
+        {
+          "source": "n_target2",
+          "target": "n_pathway2",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Sodium channels are crucial for cardiac conduction."
+        },
+        {
+          "source": "n_pathway2",
+          "target": "n_ph2",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Dysfunction in cardiac conductance leads to arrhythmia."
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_target2",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Amiodarone modulates sodium channels in cardiomyocytes."
+        },
+        {
+          "source": "drug_verapamil",
+          "target": "n_target2",
+          "relation": "acts_on",
+          "weight": 0.68,
+          "agent": "Proponent",
+          "rationale": "Calcium channel blocker impacting cardiac pathway."
+        },
+        {
+          "source": "drug_theophylline",
+          "target": "n_target1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Theophylline has anti-inflammatory properties."
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "n_target2",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "ACE inhibitor influencing cardiac function."
+        },
+        {
+          "source": "drug_enalapril",
+          "target": "n_target2",
+          "relation": "acts_on",
+          "weight": 0.54,
+          "agent": "Proponent",
+          "rationale": "Similar action as lisinopril."
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_target2",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Beta-blockers alter cardiac conduction."
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_pathway1",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Anti-inflammatory but less direct relation."
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_pathway1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Corticosteroid influencing inflammation."
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的靶外作用"
+        },
+        {
+          "source": "n_ot_aspirin",
+          "target": "n_rp_aspirin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_aspirin",
+          "target": "n_adv_aspirin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_aspirin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能否定该假设"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_ot_ibuprofen",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的靶外作用"
+        },
+        {
+          "source": "n_ot_ibuprofen",
+          "target": "n_rp_ibuprofen",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_ibuprofen",
+          "target": "n_adv_ibuprofen",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ibuprofen",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能否定该假设"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_ot_naproxen",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的靶外作用"
+        },
+        {
+          "source": "n_ot_naproxen",
+          "target": "n_rp_naproxen",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_naproxen",
+          "target": "n_adv_naproxen",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_naproxen",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能否定该假设"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "n_ot_phenytoin",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的靶外作用"
+        },
+        {
+          "source": "n_ot_phenytoin",
+          "target": "n_rp_phenytoin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_phenytoin",
+          "target": "n_adv_phenytoin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_phenytoin",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能否定该假设"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的靶外作用"
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp_amiodarone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_amiodarone",
+          "target": "n_adv_amiodarone",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_amiodarone",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能否定该假设"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ot_dexamethasone",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的靶外作用"
+        },
+        {
+          "source": "n_ot_dexamethasone",
+          "target": "n_rp_dexamethasone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_dexamethasone",
+          "target": "n_adv_dexamethasone",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_dexamethasone",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能否定该假设"
+        },
+        {
+          "source": "drug_verapamil",
+          "target": "n_ot_verapamil",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的靶外作用"
+        },
+        {
+          "source": "n_ot_verapamil",
+          "target": "n_rp_verapamil",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_verapamil",
+          "target": "n_adv_verapamil",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_verapamil",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能否定该假设"
+        },
+        {
+          "source": "drug_theophylline",
+          "target": "n_ot_theophylline",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的靶外作用"
+        },
+        {
+          "source": "n_ot_theophylline",
+          "target": "n_rp_theophylline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_theophylline",
+          "target": "n_adv_theophylline",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_theophylline",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能否定该假设"
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "n_ot_lisinopril",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的靶外作用"
+        },
+        {
+          "source": "n_ot_lisinopril",
+          "target": "n_rp_lisinopril",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_lisinopril",
+          "target": "n_adv_lisinopril",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_lisinopril",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能否定该假设"
+        },
+        {
+          "source": "drug_enalapril",
+          "target": "n_ot_enalapril",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的靶外作用"
+        },
+        {
+          "source": "n_ot_enalapril",
+          "target": "n_rp_enalapril",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_enalapril",
+          "target": "n_adv_enalapril",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_enalapril",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能否定该假设"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_ot_beta_blockers",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的靶外作用"
+        },
+        {
+          "source": "n_ot_beta_blockers",
+          "target": "n_rp_beta_blockers",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_beta_blockers",
+          "target": "n_adv_beta_blockers",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_beta_blockers",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能否定该假设"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的靶外作用"
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp_methotrexate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp_methotrexate",
+          "target": "n_adv_methotrexate",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_methotrexate",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能否定该假设"
+        }
+      ],
+      "round_index": 2
+    },
+    "history": {
+      "round": 2,
+      "last_scores": []
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "scoring_summary": [],
+    "ranking": [],
+    "delta_since_last_round": 0.1,
+    "stop_decision": {
+      "should_stop": false,
+      "reason": "final-only ablation"
+    }
+  }
+}

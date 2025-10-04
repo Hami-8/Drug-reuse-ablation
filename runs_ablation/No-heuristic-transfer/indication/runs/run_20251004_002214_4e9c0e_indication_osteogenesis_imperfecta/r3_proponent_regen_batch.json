@@ -1,0 +1,389 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Osteogenesis imperfecta",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_bisphosphonates",
+          "name": "Bisphosphonates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_teriparatide",
+          "name": "Teriparatide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_denosumab",
+          "name": "Denosumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_calcitonin",
+          "name": "Calcitonin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_growth_hormone",
+          "name": "Growth Hormone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_risedronate",
+          "name": "Risedronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_alendronate",
+          "name": "Alendronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_zoledronic_acid",
+          "name": "Zoledronic Acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_strontium_ranelate",
+          "name": "Strontium Ranelate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_pamidronate",
+          "name": "Pamidronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_nandrolone_decanoate",
+          "name": "Nandrolone Decanoate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_cacitonin_salmon",
+          "name": "Cacitonin-Salmon"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_bisphosphonates",
+          "type": "Drug",
+          "label": "Bisphosphonates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_teriparatide",
+          "type": "Drug",
+          "label": "Teriparatide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_denosumab",
+          "type": "Drug",
+          "label": "Denosumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_calcitonin",
+          "type": "Drug",
+          "label": "Calcitonin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_growth_hormone",
+          "type": "Drug",
+          "label": "Growth Hormone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_risedronate",
+          "type": "Drug",
+          "label": "Risedronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_alendronate",
+          "type": "Drug",
+          "label": "Alendronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_zoledronic_acid",
+          "type": "Drug",
+          "label": "Zoledronic Acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_strontium_ranelate",
+          "type": "Drug",
+          "label": "Strontium Ranelate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pamidronate",
+          "type": "Drug",
+          "label": "Pamidronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nandrolone_decanoate",
+          "type": "Drug",
+          "label": "Nandrolone Decanoate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cacitonin_salmon",
+          "type": "Drug",
+          "label": "Cacitonin-Salmon",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_oi",
+          "type": "Disease",
+          "label": "Osteogenesis imperfecta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fracture_reduction",
+          "type": "Phenotype",
+          "label": "Fracture Reduction",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bone_density",
+          "type": "Phenotype",
+          "label": "Bone Density Improvement",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_bisphosphonates",
+          "target": "n_oi",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Bisphosphonates用于骨质疏松症相关治疗"
+        },
+        {
+          "source": "n_teriparatide",
+          "target": "n_oi",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Teriparatide促进骨形成"
+        },
+        {
+          "source": "n_denosumab",
+          "target": "n_oi",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Denosumab抑制骨吸收"
+        },
+        {
+          "source": "n_calcitonin",
+          "target": "n_oi",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Calcitonin用于降低骨吸收"
+        },
+        {
+          "source": "n_growth_hormone",
+          "target": "n_bone_density",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "生长激素促进骨密度"
+        },
+        {
+          "source": "n_risedronate",
+          "target": "n_oi",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Risedronate用于改善骨密度"
+        },
+        {
+          "source": "n_alendronate",
+          "target": "n_oi",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Alendronate用于骨质疏松症治疗"
+        },
+        {
+          "source": "n_zoledronic_acid",
+          "target": "n_oi",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Zoledronic Acid用于骨质疏松症治疗"
+        },
+        {
+          "source": "n_strontium_ranelate",
+          "target": "n_oi",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Strontium Ranelate改善骨密度"
+        },
+        {
+          "source": "n_pamidronate",
+          "target": "n_oi",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Pamidronate用于骨质疏松症予防"
+        },
+        {
+          "source": "n_nandrolone_decanoate",
+          "target": "n_bone_density",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Nandrolone促进骨质增加"
+        },
+        {
+          "source": "n_cacitonin_salmon",
+          "target": "n_oi",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Cacitonin-Salmon可用于改善骨的健康"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过增加骨密度和降低骨折风险影响Osteogenesis imperfecta",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "诺克特·治骨药物机制中存在一定交叉支持",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物在正常剂量下可到达骨组织"
+    ],
+    "uncertainties": [
+      "不同药物的长期安全性和有效性尚需评估"
+    ],
+    "next_focus_for_pi": [
+      "需要进一步确定各药物的机制细节与适应症"
+    ]
+  }
+}

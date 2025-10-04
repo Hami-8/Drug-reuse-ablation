@@ -1,0 +1,522 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Osteogenesis imperfecta",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_bisphosphonates",
+          "name": "Bisphosphonates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_teriparatide",
+          "name": "Teriparatide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_zoledronic_acid",
+          "name": "Zoledronic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_calcitonin",
+          "name": "Calcitonin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_growth_hormone",
+          "name": "Growth hormone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_pamidronate",
+          "name": "Pamidronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_alendronate",
+          "name": "Alendronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_risedronate",
+          "name": "Risedronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_denosumab",
+          "name": "Denosumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_vitamin_d3",
+          "name": "Vitamin D3"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_calcium_supplements",
+          "name": "Calcium supplements"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_romosozumab",
+          "name": "Romosozumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_bisphosphonates",
+          "type": "Drug",
+          "label": "Bisphosphonates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_teriparatide",
+          "type": "Drug",
+          "label": "Teriparatide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_zoledronic_acid",
+          "type": "Drug",
+          "label": "Zoledronic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_calcitonin",
+          "type": "Drug",
+          "label": "Calcitonin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_growth_hormone",
+          "type": "Drug",
+          "label": "Growth hormone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_pamidronate",
+          "type": "Drug",
+          "label": "Pamidronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_alendronate",
+          "type": "Drug",
+          "label": "Alendronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_risedronate",
+          "type": "Drug",
+          "label": "Risedronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_denosumab",
+          "type": "Drug",
+          "label": "Denosumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vitamin_d3",
+          "type": "Drug",
+          "label": "Vitamin D3",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_calcium_supplements",
+          "type": "Drug",
+          "label": "Calcium supplements",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_romosozumab",
+          "type": "Drug",
+          "label": "Romosozumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_osteogenesis_imperfecta",
+          "type": "Disease",
+          "label": "Osteogenesis imperfecta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_bone_density",
+          "type": "Target",
+          "label": "Bone Density",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_bone_remodeling",
+          "type": "Pathway",
+          "label": "Bone Remodeling Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_bone_fractures",
+          "type": "Phenotype",
+          "label": "Bone Fractures",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_bone_weakness",
+          "type": "Phenotype",
+          "label": "Bone Weakness",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_bisphosphonates",
+          "target": "target_bone_density",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Bisphosphonates are known to improve bone density."
+        },
+        {
+          "source": "drug_teriparatide",
+          "target": "target_bone_density",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Teriparatide stimulates new bone formation."
+        },
+        {
+          "source": "drug_zoledronic_acid",
+          "target": "target_bone_density",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Zoledronic acid is effective in managing osteoporosis."
+        },
+        {
+          "source": "drug_calcitonin",
+          "target": "target_bone_density",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Calcitonin helps in regulating bone metabolism."
+        },
+        {
+          "source": "drug_growth_hormone",
+          "target": "target_bone_density",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Growth hormone may influence bone growth."
+        },
+        {
+          "source": "drug_pamidronate",
+          "target": "target_bone_density",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Pamidronate is used to treat bone diseases."
+        },
+        {
+          "source": "drug_alendronate",
+          "target": "target_bone_density",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Alendronate is a first-line treatment for osteoporosis."
+        },
+        {
+          "source": "drug_risedronate",
+          "target": "target_bone_density",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Risedronate effectively increases bone density."
+        },
+        {
+          "source": "drug_denosumab",
+          "target": "target_bone_density",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Denosumab inhibits bone resorption."
+        },
+        {
+          "source": "drug_vitamin_d3",
+          "target": "target_bone_density",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Vitamin D is crucial for calcium absorption."
+        },
+        {
+          "source": "drug_calcium_supplements",
+          "target": "target_bone_density",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Calcium is essential for maintaining bone mass."
+        },
+        {
+          "source": "drug_romosozumab",
+          "target": "target_bone_density",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Romosozumab helps increase bone formation."
+        },
+        {
+          "source": "target_bone_density",
+          "target": "pathway_bone_remodeling",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Bone density directly affects remodeling processes."
+        },
+        {
+          "source": "pathway_bone_remodeling",
+          "target": "disease_osteogenesis_imperfecta",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Disruption in remodeling leads to osteogenesis imperfecta."
+        },
+        {
+          "source": "target_bone_density",
+          "target": "phenotype_bone_fractures",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Bone density impacts fracture risk."
+        },
+        {
+          "source": "target_bone_density",
+          "target": "phenotype_bone_weakness",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Weak bones correlate with low density."
+        },
+        {
+          "source": "drug_bisphosphonates",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Mechanism supports hypothesis H1."
+        },
+        {
+          "source": "drug_teriparatide",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Mechanism supports hypothesis H2."
+        },
+        {
+          "source": "drug_zoledronic_acid",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Mechanism supports hypothesis H3."
+        },
+        {
+          "source": "drug_calcitonin",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Mechanism supports hypothesis H4."
+        },
+        {
+          "source": "drug_growth_hormone",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Mechanism supports hypothesis H5."
+        },
+        {
+          "source": "drug_pamidronate",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Mechanism supports hypothesis H6."
+        },
+        {
+          "source": "drug_alendronate",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Mechanism supports hypothesis H7."
+        },
+        {
+          "source": "drug_risedronate",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.64,
+          "agent": "Proponent",
+          "rationale": "Mechanism supports hypothesis H8."
+        },
+        {
+          "source": "drug_denosumab",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Mechanism supports hypothesis H9."
+        },
+        {
+          "source": "drug_vitamin_d3",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Mechanism supports hypothesis H10."
+        },
+        {
+          "source": "drug_calcium_supplements",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Mechanism supports hypothesis H11."
+        },
+        {
+          "source": "drug_romosozumab",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Mechanism supports hypothesis H12."
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [],
+    "assumptions": [
+      "所有药物具有足够的生物利用度和目标组织可达性（口服或注射）"
+    ],
+    "uncertainties": [
+      "长期的安全性和效果尚需进一步观察"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步探索其他潜在的药物或机制？"
+    ]
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Lactic acidosis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sodium_bicarbonate",
+          "name": "Sodium bicarbonate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ethanol",
+          "name": "Ethanol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_metformin",
+          "name": "Metformin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_dichloroacetate",
+          "name": "Dichloroacetate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_l_carnitine",
+          "name": "L-carnitine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_thiamine",
+          "name": "Thiamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_vitamin_b12",
+          "name": "Vitamin B12"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_insulin",
+          "name": "Insulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_bicarbonate",
+          "name": "Bicarbonate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_acetazolamide",
+          "name": "Acetazolamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_carnitine",
+          "name": "Carnitine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_glycerol",
+          "name": "Glycerol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_sodium_bicarbonate",
+          "type": "Drug",
+          "label": "Sodium bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ethanol",
+          "type": "Drug",
+          "label": "Ethanol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dichloroacetate",
+          "type": "Drug",
+          "label": "Dichloroacetate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_l_carnitine",
+          "type": "Drug",
+          "label": "L-carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiamine",
+          "type": "Drug",
+          "label": "Thiamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vitamin_b12",
+          "type": "Drug",
+          "label": "Vitamin B12",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bicarbonate",
+          "type": "Drug",
+          "label": "Bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_acetazolamide",
+          "type": "Drug",
+          "label": "Acetazolamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carnitine",
+          "type": "Drug",
+          "label": "Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_glycerol",
+          "type": "Drug",
+          "label": "Glycerol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_a",
+          "type": "Target",
+          "label": "TargetA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_b",
+          "type": "Pathway",
+          "label": "PathwayB",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phototype_x",
+          "type": "Phenotype",
+          "label": "Acidosis Phenotype",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_sodium_bicarbonate",
+          "target": "n_target_a",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "药物已用于类似表型"
+        },
+        {
+          "source": "n_target_a",
+          "target": "n_pathway_b",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "靶点涉及代谢通路"
+        },
+        {
+          "source": "n_pathway_b",
+          "target": "n_phototype_x",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通路与酸中毒表型关联"
+        },
+        {
+          "source": "drug_ethanol",
+          "target": "n_target_a",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "类似机制的药物"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "n_target_a",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于酸中毒的研究支持"
+        },
+        {
+          "source": "drug_dichloroacetate",
+          "target": "n_target_a",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知作用机制关联"
+        },
+        {
+          "source": "drug_l_carnitine",
+          "target": "n_target_a",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "有助于改善代谢"
+        },
+        {
+          "source": "drug_thiamine",
+          "target": "n_target_a",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "常用于相关代谢问题"
+        },
+        {
+          "source": "drug_vitamin_b12",
+          "target": "n_target_a",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "参与能量代谢"
+        },
+        {
+          "source": "drug_insulin",
+          "target": "n_target_a",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可改善代谢状态"
+        },
+        {
+          "source": "drug_bicarbonate",
+          "target": "n_target_a",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "直接用于调节体内酸碱"
+        },
+        {
+          "source": "drug_acetazolamide",
+          "target": "n_target_a",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响代谢"
+        },
+        {
+          "source": "drug_carnitine",
+          "target": "n_target_a",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有助于提高能量水平"
+        },
+        {
+          "source": "drug_glycerol",
+          "target": "n_target_a",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与能量代谢相关"
+        },
+        {
+          "source": "drug_sodium_bicarbonate",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "直接证据支持"
+        },
+        {
+          "source": "drug_ethanol",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "适用于相关症状"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "同样可影响代谢"
+        },
+        {
+          "source": "drug_dichloroacetate",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "机制相似，支持性证据"
+        },
+        {
+          "source": "drug_l_carnitine",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有理论支持"
+        },
+        {
+          "source": "drug_thiamine",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "在相关研究中有用"
+        },
+        {
+          "source": "drug_vitamin_b12",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "部分研究支持使用"
+        },
+        {
+          "source": "drug_insulin",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "理论上适用"
+        },
+        {
+          "source": "drug_bicarbonate",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "直接证据支持"
+        },
+        {
+          "source": "drug_acetazolamide",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "潜在作用适应"
+        },
+        {
+          "source": "drug_carnitine",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "有关文献支持"
+        },
+        {
+          "source": "drug_glycerol",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "相关机制推测"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物在乳酸性酸中毒中可能有治疗作用",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "假设上述药物有能力到达相关靶器官"
+    ],
+    "uncertainties": [
+      "药物相互作用与长期效果尚需进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步探索与其他药物的联合治疗效果？"
+    ]
+  }
+}

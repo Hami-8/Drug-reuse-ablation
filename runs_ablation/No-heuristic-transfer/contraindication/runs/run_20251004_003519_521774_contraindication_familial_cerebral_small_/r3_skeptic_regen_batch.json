@@ -1,0 +1,413 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Familial cerebral small vessel disease",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_antiplatelet_agents",
+          "name": "Antiplatelet agents"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_warfarin",
+          "name": "Warfarin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_clopidogrel",
+          "name": "Clopidogrel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_dabigatran",
+          "name": "Dabigatran"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_rivaroxaban",
+          "name": "Rivaroxaban"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "name": "Nonsteroidal anti-inflammatory drugs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_thiazolidinediones",
+          "name": "Thiazolidinediones"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_fibrinolytics",
+          "name": "Fibrinolytics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_anticonvulsants",
+          "name": "Anticonvulsants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_antiplatelet",
+          "type": "Target",
+          "label": "Off-Target Antiplatelet Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_antiplatelet",
+          "type": "Phenotype",
+          "label": "Increased Risk of Hemorrhage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_warfarin",
+          "type": "Target",
+          "label": "Off-Target Warfarin Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_warfarin",
+          "type": "Phenotype",
+          "label": "Increased Risk of Bleeding",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clopidogrel",
+          "type": "Target",
+          "label": "Off-Target Clopidogrel Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clopidogrel",
+          "type": "Phenotype",
+          "label": "Increased Risk of Hemorrhage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dabigatran",
+          "type": "Target",
+          "label": "Off-Target Dabigatran Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dabigatran",
+          "type": "Phenotype",
+          "label": "Increased Risk of Gastrointestinal Bleeding",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rivaroxaban",
+          "type": "Target",
+          "label": "Off-Target Rivaroxaban Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rivaroxaban",
+          "type": "Phenotype",
+          "label": "Increased Risk of Bleeding",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "Off-Target Aspirin Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aspirin",
+          "type": "Phenotype",
+          "label": "Gastrointestinal Bleeding Risk",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nsaid",
+          "type": "Target",
+          "label": "Off-Target NSAID Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nsaid",
+          "type": "Phenotype",
+          "label": "Increased Risk of Cardiovascular Events",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_antiplatelet_agents",
+          "target": "n_ot_antiplatelet",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致旁路作用"
+        },
+        {
+          "source": "n_ot_antiplatelet",
+          "target": "n_adv_antiplatelet",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险增加"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "n_ot_warfarin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的非靶作用"
+        },
+        {
+          "source": "n_ot_warfarin",
+          "target": "n_adv_warfarin",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险增加"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_ot_clopidogrel",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的非靶作用"
+        },
+        {
+          "source": "n_ot_clopidogrel",
+          "target": "n_adv_clopidogrel",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险增加"
+        },
+        {
+          "source": "drug_dabigatran",
+          "target": "n_ot_dabigatran",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的非靶作用"
+        },
+        {
+          "source": "n_ot_dabigatran",
+          "target": "n_adv_dabigatran",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在的消化道出血风险"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "n_ot_rivaroxaban",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的非靶作用"
+        },
+        {
+          "source": "n_ot_rivaroxaban",
+          "target": "n_adv_rivaroxaban",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险增加"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的非靶作用"
+        },
+        {
+          "source": "n_ot_aspirin",
+          "target": "n_adv_aspirin",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "增加胃肠道出血风险"
+        },
+        {
+          "source": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "target": "n_ot_nsaid",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起非靶作用"
+        },
+        {
+          "source": "n_ot_nsaid",
+          "target": "n_adv_nsaid",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能引发心血管事件风险"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "anticoagulation_effects",
+          "pro_nodes": [
+            "drug_antiplatelet_agents",
+            "drug_warfarin"
+          ],
+          "con_nodes": [
+            "n_adv_antiplatelet",
+            "n_adv_warfarin"
+          ],
+          "note": "抗血小板药物与抗凝药物可能相互影响，导致出血风险"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "多种药物作用机制可能导致不良反应",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "同时使用抗凝剂与抗血小板药物风险增大",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "所有药物对小血管病的安全性是否充分验证",
+      "抗血小板药物的预期益处是否真实"
+    ],
+    "falsification_tests": [
+      "是否有临床试验显示这些药物在小血管病中安全有效？",
+      "是否有数据支持联合用药的安全性？"
+    ],
+    "next_focus_for_pi": [
+      "评估新添加的反驳链的潜在影响",
+      "要求 Proponent 提供关于安全性的数据支持"
+    ]
+  }
+}

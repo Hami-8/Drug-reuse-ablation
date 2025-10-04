@@ -1,0 +1,760 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Hereditary haemorrhagic telangiectasia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_estrogen",
+          "name": "Estrogen"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_nsaids",
+          "name": "NSAIDs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_clopidogrel",
+          "name": "Clopidogrel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_warfarin",
+          "name": "Warfarin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "name": "Nonsteroidal anti-inflammatory drugs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_heparin",
+          "name": "Heparin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_thrombolytics",
+          "name": "Thrombolytics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_anticoagulants",
+          "name": "Anticoagulants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_antiplatelet_agents",
+          "name": "Antiplatelet agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_bromocriptine",
+          "name": "Bromocriptine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_estrogen",
+          "type": "Target",
+          "label": "OffTargetEstrogen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_estrogen",
+          "type": "Pathway",
+          "label": "RiskPathwayEstrogen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_estrogen",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeEstrogen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_asprin",
+          "type": "Target",
+          "label": "OffTargetAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_asprin",
+          "type": "Pathway",
+          "label": "RiskPathwayAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_asprin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nsaid",
+          "type": "Target",
+          "label": "OffTargetNSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nsaid",
+          "type": "Pathway",
+          "label": "RiskPathwayNSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nsaid",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeNSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clopidogrel",
+          "type": "Target",
+          "label": "OffTargetClopidogrel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_clopidogrel",
+          "type": "Pathway",
+          "label": "RiskPathwayClopidogrel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clopidogrel",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeClopidogrel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_warfarin",
+          "type": "Target",
+          "label": "OffTargetWarfarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_warfarin",
+          "type": "Pathway",
+          "label": "RiskPathwayWarfarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_warfarin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeWarfarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nsaid_general",
+          "type": "Target",
+          "label": "OffTargetNSAIDsGeneral",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nsaid_general",
+          "type": "Pathway",
+          "label": "RiskPathwayNSAIDsGeneral",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nsaid_general",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeNSAIDsGeneral",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_heparin",
+          "type": "Target",
+          "label": "OffTargetHeparin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_heparin",
+          "type": "Pathway",
+          "label": "RiskPathwayHeparin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_heparin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeHeparin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thrombolytics",
+          "type": "Target",
+          "label": "OffTargetThrombolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_thrombolytics",
+          "type": "Pathway",
+          "label": "RiskPathwayThrombolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_thrombolytics",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeThrombolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_anticoagulants",
+          "type": "Target",
+          "label": "OffTargetAnticoagulants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_anticoagulants",
+          "type": "Pathway",
+          "label": "RiskPathwayAnticoagulants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_anticoagulants",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAnticoagulants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_antiplatelet_agents",
+          "type": "Target",
+          "label": "OffTargetAntiplatelet",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_antiplatelet_agents",
+          "type": "Pathway",
+          "label": "RiskPathwayAntiplatelet",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_antiplatelet_agents",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAntiplatelet",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "OffTargetCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_corticosteroids",
+          "type": "Pathway",
+          "label": "RiskPathwayCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_corticosteroids",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_estrogen",
+          "target": "n_ot_estrogen",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响血管生成"
+        },
+        {
+          "source": "n_ot_estrogen",
+          "target": "n_rp_estrogen",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及出血风险"
+        },
+        {
+          "source": "n_rp_estrogen",
+          "target": "n_adv_estrogen",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致与HHT相冲突的表型"
+        },
+        {
+          "source": "n_adv_estrogen",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若此风险成立，将抵消净益"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_asprin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发出血事件"
+        },
+        {
+          "source": "n_ot_asprin",
+          "target": "n_rp_asprin",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "出血风险通路"
+        },
+        {
+          "source": "n_rp_asprin",
+          "target": "n_adv_asprin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可引起不良表型"
+        },
+        {
+          "source": "n_adv_asprin",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "影响HHT患者的安全性"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "n_ot_nsaid",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可引发血小板功能抑制"
+        },
+        {
+          "source": "n_ot_nsaid",
+          "target": "n_rp_nsaid",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在出血路径"
+        },
+        {
+          "source": "n_rp_nsaid",
+          "target": "n_adv_nsaid",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与HHT不良结果相冲突"
+        },
+        {
+          "source": "n_adv_nsaid",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对患者构成安全隐患"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_ot_clopidogrel",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致血液稀释"
+        },
+        {
+          "source": "n_ot_clopidogrel",
+          "target": "n_rp_clopidogrel",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "影响出血风险"
+        },
+        {
+          "source": "n_rp_clopidogrel",
+          "target": "n_adv_clopidogrel",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "不良表型的风险增加"
+        },
+        {
+          "source": "n_adv_clopidogrel",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "增加出血的可能性"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "n_ot_warfarin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "抗凝作用可能加剧出血"
+        },
+        {
+          "source": "n_ot_warfarin",
+          "target": "n_rp_warfarin",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对出血路径的影响"
+        },
+        {
+          "source": "n_rp_warfarin",
+          "target": "n_adv_warfarin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的致命出血风险"
+        },
+        {
+          "source": "n_adv_warfarin",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "使用风险显著增加"
+        },
+        {
+          "source": "drug_heparin",
+          "target": "n_ot_heparin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可显著增加出血"
+        },
+        {
+          "source": "n_ot_heparin",
+          "target": "n_rp_heparin",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "相关出血途径"
+        },
+        {
+          "source": "n_rp_heparin",
+          "target": "n_adv_heparin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可导致致命性出血"
+        },
+        {
+          "source": "n_adv_heparin",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "与HHT患者风险相悖"
+        },
+        {
+          "source": "drug_thrombolytics",
+          "target": "n_ot_thrombolytics",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "极高出血风险"
+        },
+        {
+          "source": "n_ot_thrombolytics",
+          "target": "n_rp_thrombolytics",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "加重出血风险"
+        },
+        {
+          "source": "n_rp_thrombolytics",
+          "target": "n_adv_thrombolytics",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起致命性风险"
+        },
+        {
+          "source": "n_adv_thrombolytics",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "与严重出血的相关性"
+        },
+        {
+          "source": "drug_anticoagulants",
+          "target": "n_ot_anticoagulants",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "加重出血风险"
+        },
+        {
+          "source": "n_ot_anticoagulants",
+          "target": "n_rp_anticoagulants",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在出血机制"
+        },
+        {
+          "source": "n_rp_anticoagulants",
+          "target": "n_adv_anticoagulants",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "显著增加出血可能性"
+        },
+        {
+          "source": "n_adv_anticoagulants",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "潜在的高风险"
+        },
+        {
+          "source": "drug_antiplatelet_agents",
+          "target": "n_ot_antiplatelet_agents",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致血小板抑制"
+        },
+        {
+          "source": "n_ot_antiplatelet_agents",
+          "target": "n_rp_antiplatelet_agents",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "影响出血风险"
+        },
+        {
+          "source": "n_rp_antiplatelet_agents",
+          "target": "n_adv_antiplatelet_agents",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "提高不良表型的风险"
+        },
+        {
+          "source": "n_adv_antiplatelet_agents",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "可能加大出血的风险"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致血管壁减弱"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp_corticosteroids",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关出血途径"
+        },
+        {
+          "source": "n_rp_corticosteroids",
+          "target": "n_adv_corticosteroids",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致出血风险增加"
+        },
+        {
+          "source": "n_adv_corticosteroids",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血风险相抵触"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "上述药物均存在潜在加重出血风险",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "有关机制与HHT病理过程相互抵触，可能增加症状的严重程度",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "对以上药物的安全性评估是否充分",
+      "影响HHT患者的长期结果是否得到验证"
+    ],
+    "falsification_tests": [
+      "是否有证据显示这些药物在HHT患者中的使用安全有效？",
+      "是否存在长期跟踪研究表明上述药物不会增加风险？"
+    ],
+    "next_focus_for_pi": [
+      "要求Proponent提供相应药物在HHT患者中的数据支持",
+      "对相应风险进行系统评估与讨论"
+    ]
+  }
+}

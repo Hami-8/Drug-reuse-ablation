@@ -1,0 +1,538 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Distal myopathies",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_procainamide",
+          "name": "Procainamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_dantrolene",
+          "name": "Dantrolene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_dopamine",
+          "name": "Dopamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_rocuronium",
+          "name": "Rocuronium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_skeletal_muscle_relaxants",
+          "name": "Skeletal muscle relaxants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_cort",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_stat",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_quin",
+          "type": "Drug",
+          "label": "Quinidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_proc",
+          "type": "Drug",
+          "label": "Procainamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dan",
+          "type": "Drug",
+          "label": "Dantrolene",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_chol",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ami",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_gab",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dop",
+          "type": "Drug",
+          "label": "Dopamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cip",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_roc",
+          "type": "Drug",
+          "label": "Rocuronium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_muscle_relaxants",
+          "type": "Drug",
+          "label": "Skeletal muscle relaxants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk_p",
+          "type": "Pathway",
+          "label": "Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ph",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_cort",
+          "target": "n_risk_p",
+          "relation": "can_lead_to",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发肌肉无力，影响肌肉功能"
+        },
+        {
+          "source": "n_stat",
+          "target": "n_risk_p",
+          "relation": "can_lead_to",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "已知造成肌肉损伤，特别在长时间使用时"
+        },
+        {
+          "source": "n_quin",
+          "target": "n_risk_p",
+          "relation": "can_lead_to",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响神经肌肉传导"
+        },
+        {
+          "source": "n_proc",
+          "target": "n_risk_p",
+          "relation": "can_lead_to",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "已报道肌肉相关不良反应"
+        },
+        {
+          "source": "n_dan",
+          "target": "n_risk_p",
+          "relation": "can_lead_to",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "对肌肉有潜在的不良影响"
+        },
+        {
+          "source": "n_chol",
+          "target": "n_risk_p",
+          "relation": "can_lead_to",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉疼痛和无力"
+        },
+        {
+          "source": "n_ami",
+          "target": "n_risk_p",
+          "relation": "can_lead_to",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能引起肌肉损伤"
+        },
+        {
+          "source": "n_gab",
+          "target": "n_risk_p",
+          "relation": "can_lead_to",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "n_dop",
+          "target": "n_risk_p",
+          "relation": "can_lead_to",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "存在潜在肌肉影响"
+        },
+        {
+          "source": "n_cip",
+          "target": "n_risk_p",
+          "relation": "can_lead_to",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "n_roc",
+          "target": "n_risk_p",
+          "relation": "can_lead_to",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉无力"
+        },
+        {
+          "source": "n_muscle_relaxants",
+          "target": "n_risk_p",
+          "relation": "can_lead_to",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "已知导致肌肉放松和无力"
+        },
+        {
+          "source": "n_risk_p",
+          "target": "n_adv_ph",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "引发不良表型"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能严重影响治疗效果"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在，可能抵消治疗利益"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "强自相矛盾，影响治疗效果"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "风险链影响使用策略"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "该药物实施可能逆转期望利益"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "药物安全性存疑，风险影响意义重大"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的冲突，需进一步验证"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "风险引发矛盾，可能反映不良作用"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "风险可能影响药效"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "抗生素的潜在风险和矛盾"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.45,
+          "agent": "Skeptic",
+          "rationale": "可能引发肌肉功能问题"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.45,
+          "agent": "Skeptic",
+          "rationale": "可能导致不利的副作用"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "Corticosteroids 已知会加重肌肉弱点并导致不良反应",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "Statins 与肌肉疾病有相关性，可能加重病情",
+        "confidence": "high"
+      },
+      {
+        "id": "K3",
+        "text": "Quinidine 可能影响肌肉的神经传导",
+        "confidence": "medium"
+      },
+      {
+        "id": "K4",
+        "text": "Procainamide 有已知的肌肉不良反应",
+        "confidence": "medium"
+      },
+      {
+        "id": "K5",
+        "text": "Dantrolene 对肌肉功能的影响未被充分评估",
+        "confidence": "medium"
+      },
+      {
+        "id": "K6",
+        "text": "Cholestyramine 使用与肌肉疼痛相关",
+        "confidence": "medium"
+      },
+      {
+        "id": "K7",
+        "text": "Amiodarone 的肌肉相关副作用未完全评估",
+        "confidence": "medium"
+      },
+      {
+        "id": "K8",
+        "text": "Gabapentin 可能影响肌肉的健康和功能",
+        "confidence": "medium"
+      },
+      {
+        "id": "K9",
+        "text": "Dopamine 与肌肉疾患的关系尚不明确",
+        "confidence": "low"
+      },
+      {
+        "id": "K10",
+        "text": "Ciprofloxacin 的副作用可能与肌肉无力有关",
+        "confidence": "medium"
+      },
+      {
+        "id": "K11",
+        "text": "Rocuronium 已知风险可能影响肌肉功能",
+        "confidence": "high"
+      },
+      {
+        "id": "K12",
+        "text": "肌肉松弛剂通常会导致肌肉无力，风险显著",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "相关药物对肌肉功能的潜在影响",
+      "肌肉疾病患者使用这些药物的安全性是否得到验证"
+    ],
+    "falsification_tests": [
+      "是否有证据显示与这些药物使用相连的不良反应？",
+      "是否有临床试验表明对肌肉疾病患者治疗效果的改善？"
+    ],
+    "next_focus_for_pi": [
+      "要求进一步的数据和临床证据来支持药物使用的有效性和安全性",
+      "对潜在的药物与肌肉疾病之间的相互作用进行更多评估"
+    ]
+  }
+}

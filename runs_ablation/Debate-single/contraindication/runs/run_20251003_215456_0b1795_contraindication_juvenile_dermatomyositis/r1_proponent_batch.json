@@ -1,0 +1,360 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Juvenile dermatomyositis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_chloroquine",
+          "name": "Chloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_hydroxychloroquine",
+          "name": "Hydroxychloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_penicillamine",
+          "name": "Penicillamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_immunosuppressants",
+          "name": "Immunosuppressants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_tetracycline",
+          "name": "Tetracycline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ace_inhibitors",
+          "name": "ACE inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_biologics",
+          "name": "Biologics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_chloroquine",
+          "type": "Drug",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydroxychloroquine",
+          "type": "Drug",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_penicillamine",
+          "type": "Drug",
+          "label": "Penicillamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_immunosuppressants",
+          "type": "Drug",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tetracycline",
+          "type": "Drug",
+          "label": "Tetracycline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ace_inhibitors",
+          "type": "Drug",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_biologics",
+          "type": "Drug",
+          "label": "Biologics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_juvenile_dermatomyositis",
+          "type": "Disease",
+          "label": "Juvenile dermatomyositis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_chloroquine",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知对皮肤病变有影响"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与类风湿性疾病相关的不良反应"
+        },
+        {
+          "source": "drug_penicillamine",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "可能引起皮肤病加重"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "免疫抑制相关风险"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可能导致肌肉无力加重"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "免疫抑制可能加重病情"
+        },
+        {
+          "source": "drug_immunosuppressants",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "对其他免疫系统影响未知"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能加重皮肤症状"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与其他免疫抑制剂的合并作用需评估"
+        },
+        {
+          "source": "drug_tetracycline",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能对皮肤反应有不良影响"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "对儿童心血管有潜在影响"
+        },
+        {
+          "source": "drug_biologics",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "contraindication",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "需要临床数据支持其使用"
+        }
+      ]
+    },
+    "subconclusions": [],
+    "assumptions": [
+      "药物的适应症与临床效果受患者个体差异影响"
+    ],
+    "uncertainties": [
+      "对不同药物在青少年皮肤病的影响需进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需要评估药物组合潜在影响"
+    ]
+  }
+}

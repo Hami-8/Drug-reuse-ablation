@@ -1,0 +1,790 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Juvenile dermatomyositis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Methotrexate off-target effects",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "Azathioprine off-target effects",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "Prednisone off-target effects",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "Rituximab off-target effects",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "Cyclophosphamide off-target effects",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_mtx",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_aza",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pred",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ritux",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cyc",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mmf",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ivig",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_etn",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_toci",
+          "type": "Drug",
+          "label": "Tocilizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_vism",
+          "type": "Drug",
+          "label": "Vismodegib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_siro",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_beli",
+          "type": "Drug",
+          "label": "Belimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_jdm",
+          "type": "Disease",
+          "label": "Juvenile dermatomyositis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_1",
+          "type": "Pathway",
+          "label": "Pathway 1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_2",
+          "type": "Pathway",
+          "label": "Pathway 2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_mtx",
+          "type": "Target",
+          "label": "Off-target effects of Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mtx",
+          "type": "Pathway",
+          "label": "Methotrexate Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mtx",
+          "type": "Phenotype",
+          "label": "Adverse effects from Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aza",
+          "type": "Target",
+          "label": "Off-target effects of Azathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aza",
+          "type": "Pathway",
+          "label": "Azathioprine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aza",
+          "type": "Phenotype",
+          "label": "Adverse effects from Azathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pred",
+          "type": "Target",
+          "label": "Off-target effects of Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pred",
+          "type": "Pathway",
+          "label": "Prednisone Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pred",
+          "type": "Phenotype",
+          "label": "Adverse effects from Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ritux",
+          "type": "Target",
+          "label": "Off-target effects of Rituximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ritux",
+          "type": "Pathway",
+          "label": "Rituximab Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ritux",
+          "type": "Phenotype",
+          "label": "Adverse effects from Rituximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclo",
+          "type": "Target",
+          "label": "Off-target effects of Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cyclo",
+          "type": "Pathway",
+          "label": "Cyclophosphamide Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cyclo",
+          "type": "Phenotype",
+          "label": "Adverse effects from Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_mtx",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于自身免疫疾病的药理"
+        },
+        {
+          "source": "n_aza",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "自免疫疾病治疗常规药物"
+        },
+        {
+          "source": "n_pred",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "广泛用于炎症性疾病"
+        },
+        {
+          "source": "n_ritux",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "靶向治疗常见"
+        },
+        {
+          "source": "n_cyc",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对于重症患者有效"
+        },
+        {
+          "source": "n_mmf",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于慢性病的有效选择"
+        },
+        {
+          "source": "n_ivig",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "补充免疫且具安全性"
+        },
+        {
+          "source": "n_etn",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "生物制剂应用可能性"
+        },
+        {
+          "source": "n_toci",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "靶向治疗潜能"
+        },
+        {
+          "source": "n_vism",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "新兴治疗方案"
+        },
+        {
+          "source": "n_siro",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "抑制免疫相关"
+        },
+        {
+          "source": "n_beli",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "自免疫调节"
+        },
+        {
+          "source": "n_pathway_1",
+          "target": "n_jdm",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知影响该疾病的通路"
+        },
+        {
+          "source": "n_pathway_2",
+          "target": "n_jdm",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "新兴的路径研究数据"
+        },
+        {
+          "source": "n_mtx",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "机制完整性支持假设"
+        },
+        {
+          "source": "n_aza",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.83,
+          "agent": "Proponent",
+          "rationale": "良好临床效果支撑"
+        },
+        {
+          "source": "n_pred",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "广泛应用与效果显著"
+        },
+        {
+          "source": "n_ritux",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "靶向疗法知名"
+        },
+        {
+          "source": "n_cyc",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对严重病人有效"
+        },
+        {
+          "source": "n_mmf",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.68,
+          "agent": "Proponent",
+          "rationale": "相关研究支持"
+        },
+        {
+          "source": "n_ivig",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "临床应用获得认可"
+        },
+        {
+          "source": "n_etn",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.64,
+          "agent": "Proponent",
+          "rationale": "新的治疗方向"
+        },
+        {
+          "source": "n_toci",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已有前期证据"
+        },
+        {
+          "source": "n_vism",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "新药objectivity"
+        },
+        {
+          "source": "n_siro",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "潜在的适应症研究"
+        },
+        {
+          "source": "n_beli",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "临床观察支持"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_mtx",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_mtx",
+          "target": "n_rp_mtx",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_mtx",
+          "target": "n_adv_mtx",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_mtx",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_ot_aza",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_aza",
+          "target": "n_rp_aza",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_aza",
+          "target": "n_adv_aza",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_aza",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_pred",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_pred",
+          "target": "n_rp_pred",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_pred",
+          "target": "n_adv_pred",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_pred",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "n_ot_ritux",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_ritux",
+          "target": "n_rp_ritux",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_ritux",
+          "target": "n_adv_ritux",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ritux",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_ot_cyclo",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_cyclo",
+          "target": "n_rp_cyclo",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_cyclo",
+          "target": "n_adv_cyclo",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_cyclo",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Methotrexate off-target effects",
+              "pro_nodes": [],
+              "con_nodes": [
+                "n_adv_mtx"
+              ],
+              "note": "若该风险成立，将抵消净获益"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：以高权重 refutes 边连到假设"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Azathioprine off-target effects",
+              "pro_nodes": [],
+              "con_nodes": [
+                "n_adv_aza"
+              ],
+              "note": "若该风险成立，将抵消净获益"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：以高权重 refutes 边连到假设"
+      },
+      {
+        "action_ref": 2,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Prednisone off-target effects",
+              "pro_nodes": [],
+              "con_nodes": [
+                "n_adv_pred"
+              ],
+              "note": "若该风险成立，将抵消净获益"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：以高权重 refutes 边连到假设"
+      },
+      {
+        "action_ref": 3,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Rituximab off-target effects",
+              "pro_nodes": [],
+              "con_nodes": [
+                "n_adv_ritux"
+              ],
+              "note": "若该风险成立，将抵消净获益"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：以高权重 refutes 边连到假设"
+      },
+      {
+        "action_ref": 4,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Cyclophosphamide off-target effects",
+              "pro_nodes": [],
+              "con_nodes": [
+                "n_adv_cyclo"
+              ],
+              "note": "若该风险成立，将抵消净获益"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：以高权重 refutes 边连到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": []
+  }
+}

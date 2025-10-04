@@ -1,0 +1,364 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_lomitapide",
+          "name": "Lomitapide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_mipomersen",
+          "name": "Mipomersen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_evolocumab",
+          "name": "Evolocumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_alirocumab",
+          "name": "Alirocumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_clofibrate",
+          "name": "Clofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_bezafibrate",
+          "name": "Bezafibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "omega_3_fatty_acids",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "lomitapide",
+          "type": "Drug",
+          "label": "Lomitapide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "mipomersen",
+          "type": "Drug",
+          "label": "Mipomersen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "evolocumab",
+          "type": "Drug",
+          "label": "Evolocumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "alirocumab",
+          "type": "Drug",
+          "label": "Alirocumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "clofibrate",
+          "type": "Drug",
+          "label": "Clofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "bezafibrate",
+          "type": "Drug",
+          "label": "Bezafibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "severe_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "fibrates",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知对高甘油三酯血症的疗效"
+        },
+        {
+          "source": "niacin",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于治疗高甘油三酯的传统药物"
+        },
+        {
+          "source": "omega_3_fatty_acids",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.78,
+          "agent": "Proponent",
+          "rationale": "通过降低血脂影响高甘油三酯"
+        },
+        {
+          "source": "statins",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有助于改善脂质谱"
+        },
+        {
+          "source": "lomitapide",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "特定用途治疗遗传性高甘油三酯血症"
+        },
+        {
+          "source": "mipomersen",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "脂质代谢干预药物"
+        },
+        {
+          "source": "evolocumab",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "新型PCSK9抑制剂，影响脂质水平"
+        },
+        {
+          "source": "alirocumab",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.58,
+          "agent": "Proponent",
+          "rationale": "相似机制的PCSK9抑制剂"
+        },
+        {
+          "source": "aspirin",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "有助于改善血管健康，间接影响血脂"
+        },
+        {
+          "source": "clofibrate",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.54,
+          "agent": "Proponent",
+          "rationale": "早期药物用于调节血脂"
+        },
+        {
+          "source": "bezafibrate",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.53,
+          "agent": "Proponent",
+          "rationale": "降脂作用与三酯控制有关"
+        },
+        {
+          "source": "fenofibrate",
+          "target": "severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.52,
+          "agent": "Proponent",
+          "rationale": "显著影响甘油三酯水平"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物在降低严重高甘油三酯血症中存在显著支持证据",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [],
+    "uncertainties": [],
+    "next_focus_for_pi": [
+      "是否需要对每种药物的具体机制和临床数据进行深入验证？"
+    ]
+  }
+}

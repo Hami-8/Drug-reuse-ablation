@@ -1,0 +1,510 @@
+{
+  "input": {
+    "mode": "score",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        }
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        }
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_clofibrate",
+          "name": "Clofibrate"
+        }
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        }
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_estrogens",
+          "name": "Estrogens"
+        }
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_thiazolidinediones",
+          "name": "Thiazolidinediones"
+        }
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sodium_glucose_cotransporter_2_inhibitors",
+          "name": "Sodium-glucose cotransporter-2 inhibitors"
+        }
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        }
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_bosentan",
+          "name": "Bosentan"
+        }
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_glitazones",
+          "name": "Glitazones"
+        }
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        }
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_progestins",
+          "name": "Progestins"
+        }
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clofibrate",
+          "type": "Drug",
+          "label": "Clofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_estrogens",
+          "type": "Drug",
+          "label": "Estrogens",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiazolidinediones",
+          "type": "Drug",
+          "label": "Thiazolidinediones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_glucose_cotransporter_2_inhibitors",
+          "type": "Drug",
+          "label": "Sodium-glucose cotransporter-2 inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bosentan",
+          "type": "Drug",
+          "label": "Bosentan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_glitazones",
+          "type": "Drug",
+          "label": "Glitazones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_progestins",
+          "type": "Drug",
+          "label": "Progestins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_severe_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_ppar_alpha",
+          "type": "Target",
+          "label": "PPAR-alpha",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_ppar_gamma",
+          "type": "Target",
+          "label": "PPAR-gamma",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_lipid_metabolism",
+          "type": "Pathway",
+          "label": "Lipid Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "Off-targets of Gemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk Pathway leading to adverse effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse effects due to Drug Interaction",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Clofibrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Estrogens",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Thiazolidinediones",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Sodium-glucose cotransporter-2 inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Bosentan",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Glitazones",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Progestins",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_gemfibrozil",
+          "target": "target_ppar_alpha",
+          "relation": "activates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Gemfibrozil活化PPAR-alpha，常用于高甘油三酯血症"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "target_ppar_alpha",
+          "relation": "activates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Fenofibrate通过激活PPAR-alpha降低甘油三酯"
+        },
+        {
+          "source": "drug_clofibrate",
+          "target": "target_ppar_alpha",
+          "relation": "activates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Clofibrate已知激活PPAR-alpha"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "pathway_lipid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Niacin影响脂质代谢通路，降低甘油三酯"
+        },
+        {
+          "source": "drug_estrogens",
+          "target": "target_ppar_gamma",
+          "relation": "activates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Estrogens可能激活PPAR-gamma影响脂质"
+        },
+        {
+          "source": "drug_thiazolidinediones",
+          "target": "target_ppar_gamma",
+          "relation": "activates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Thiazolidinediones激活PPAR-gamma，相关脂质代谢"
+        },
+        {
+          "source": "drug_sodium_glucose_cotransporter_2_inhibitors",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "associated_with",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "相关研究显示SGLT-2抑制剂与甘油三酯影响"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "associated_with",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Corticosteroids已知引发高甘油三酯"
+        },
+        {
+          "source": "drug_bosentan",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "associated_with",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Bosentan可能与甘油三酯调节有关"
+        },
+        {
+          "source": "drug_glitazones",
+          "target": "target_ppar_gamma",
+          "relation": "activates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Glitazones激活PPAR-gamma，参与脂质代谢"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "associated_with",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "部分研究表明β阻滞剂影响甘油三酯"
+        },
+        {
+          "source": "drug_progestins",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "associated_with",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Progestins可能影响甘油三酯代谢"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肝脏代谢导致高甘油三酯血症"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "肝脏受影响，增加副作用风险"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型，如胰腺炎"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消 Gemfibrozil 的获益"
+        }
+      ],
+      "round_index": 2
+    },
+    "history": {
+      "round": 2,
+      "last_scores": []
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "scoring_summary": [],
+    "ranking": [],
+    "delta_since_last_round": 0.1,
+    "stop_decision": {
+      "should_stop": false,
+      "reason": "final-only ablation"
+    }
+  }
+}

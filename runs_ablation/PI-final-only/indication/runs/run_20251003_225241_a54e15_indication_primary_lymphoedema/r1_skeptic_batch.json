@@ -1,0 +1,837 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary lymphoedema",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_doxycycline",
+          "name": "Doxycycline"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_sodium_thiosulfate",
+          "name": "Sodium Thiosulfate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_sirolimus",
+          "name": "Sirolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_lymfactin",
+          "name": "Lymfactin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_beraprost",
+          "name": "Beraprost"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_bosentan",
+          "name": "Bosentan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_vasopressin",
+          "name": "Vasopressin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_furosemide",
+          "name": "Furosemide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_losartan",
+          "name": "Losartan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_pentoxifylline",
+          "name": "Pentoxifylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_nattokinase",
+          "name": "Nattokinase"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_doxycycline",
+          "type": "Target",
+          "label": "OffTargetDoxycycline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_doxycycline",
+          "type": "Pathway",
+          "label": "RiskPathwayDoxycycline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_doxycycline",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeDoxycycline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sodium_thiosulfate",
+          "type": "Target",
+          "label": "OffTargetSodiumThiosulfate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_thiosulfate",
+          "type": "Pathway",
+          "label": "RiskPathwaySodiumThiosulfate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sodium_thiosulfate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSodiumThiosulfate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sirolimus",
+          "type": "Target",
+          "label": "OffTargetSirolimus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sirolimus",
+          "type": "Pathway",
+          "label": "RiskPathwaySirolimus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sirolimus",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSirolimus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lymfactin",
+          "type": "Target",
+          "label": "OffTargetLymfactin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lymfactin",
+          "type": "Pathway",
+          "label": "RiskPathwayLymfactin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lymfactin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLymfactin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_beraprost",
+          "type": "Target",
+          "label": "OffTargetBeraprost",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_beraprost",
+          "type": "Pathway",
+          "label": "RiskPathwayBeraprost",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_beraprost",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBeraprost",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bosentan",
+          "type": "Target",
+          "label": "OffTargetBosentan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bosentan",
+          "type": "Pathway",
+          "label": "RiskPathwayBosentan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bosentan",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBosentan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_vasopressin",
+          "type": "Target",
+          "label": "OffTargetVasopressin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_vasopressin",
+          "type": "Pathway",
+          "label": "RiskPathwayVasopressin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_vasopressin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeVasopressin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_furosemide",
+          "type": "Target",
+          "label": "OffTargetFurosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_furosemide",
+          "type": "Pathway",
+          "label": "RiskPathwayFurosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_furosemide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeFurosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_losartan",
+          "type": "Target",
+          "label": "OffTargetLosartan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_losartan",
+          "type": "Pathway",
+          "label": "RiskPathwayLosartan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_losartan",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLosartan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pentoxifylline",
+          "type": "Target",
+          "label": "OffTargetPentoxifylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pentoxifylline",
+          "type": "Pathway",
+          "label": "RiskPathwayPentoxifylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pentoxifylline",
+          "type": "Phenotype",
+          "label": "AdversePhenotypePentoxifylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nattokinase",
+          "type": "Target",
+          "label": "OffTargetNattokinase",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nattokinase",
+          "type": "Pathway",
+          "label": "RiskPathwayNattokinase",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nattokinase",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeNattokinase",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "OffTargetAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aspirin",
+          "type": "Pathway",
+          "label": "RiskPathwayAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aspirin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_doxycycline",
+          "target": "n_ot_doxycycline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_doxycycline",
+          "target": "n_rp_doxycycline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_doxycycline",
+          "target": "n_adv_doxycycline",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_doxycycline",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如果存在该风险，可能抵消疗效"
+        },
+        {
+          "source": "drug_sodium_thiosulfate",
+          "target": "n_ot_sodium_thiosulfate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_sodium_thiosulfate",
+          "target": "n_rp_sodium_thiosulfate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_sodium_thiosulfate",
+          "target": "n_adv_sodium_thiosulfate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_sodium_thiosulfate",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如果存在该风险，可能抵消疗效"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "n_ot_sirolimus",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_sirolimus",
+          "target": "n_rp_sirolimus",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_sirolimus",
+          "target": "n_adv_sirolimus",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_sirolimus",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如果存在该风险，可能抵消疗效"
+        },
+        {
+          "source": "drug_lymfactin",
+          "target": "n_ot_lymfactin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_lymfactin",
+          "target": "n_rp_lymfactin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_lymfactin",
+          "target": "n_adv_lymfactin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_lymfactin",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如果存在该风险，可能抵消疗效"
+        },
+        {
+          "source": "drug_beraprost",
+          "target": "n_ot_beraprost",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_beraprost",
+          "target": "n_rp_beraprost",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_beraprost",
+          "target": "n_adv_beraprost",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_beraprost",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如果存在该风险，可能抵消疗效"
+        },
+        {
+          "source": "drug_bosentan",
+          "target": "n_ot_bosentan",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_bosentan",
+          "target": "n_rp_bosentan",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_bosentan",
+          "target": "n_adv_bosentan",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_bosentan",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如果存在该风险，可能抵消疗效"
+        },
+        {
+          "source": "drug_vasopressin",
+          "target": "n_ot_vasopressin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_vasopressin",
+          "target": "n_rp_vasopressin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_vasopressin",
+          "target": "n_adv_vasopressin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_vasopressin",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如果存在该风险，可能抵消疗效"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "n_ot_furosemide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_furosemide",
+          "target": "n_rp_furosemide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_furosemide",
+          "target": "n_adv_furosemide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_furosemide",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如果存在该风险，可能抵消疗效"
+        },
+        {
+          "source": "drug_losartan",
+          "target": "n_ot_losartan",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_losartan",
+          "target": "n_rp_losartan",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_losartan",
+          "target": "n_adv_losartan",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_losartan",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如果存在该风险，可能抵消疗效"
+        },
+        {
+          "source": "drug_pentoxifylline",
+          "target": "n_ot_pentoxifylline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_pentoxifylline",
+          "target": "n_rp_pentoxifylline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_pentoxifylline",
+          "target": "n_adv_pentoxifylline",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_pentoxifylline",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如果存在该风险，可能抵消疗效"
+        },
+        {
+          "source": "drug_nattokinase",
+          "target": "n_ot_nattokinase",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_nattokinase",
+          "target": "n_rp_nattokinase",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_nattokinase",
+          "target": "n_adv_nattokinase",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_nattokinase",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如果存在该风险，可能抵消疗效"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_aspirin",
+          "target": "n_rp_aspirin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_aspirin",
+          "target": "n_adv_aspirin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_aspirin",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "如果存在该风险，可能抵消疗效"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "是否存在足够的临床数据支持每种药物的有效性",
+      "靶器官暴露是否充分以获得预期疗效"
+    ],
+    "falsification_tests": [
+      "是否有显示以上药物对于原发性淋巴水肿的有效性临床试验数据？",
+      "是否有证据表明药物的安全性和耐受性足够？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供临床试验数据的明细以备严谨验证",
+      "探索各药物的靶点及其机制的更多信息以确认风险通路"
+    ]
+  }
+}

@@ -1,0 +1,656 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Familial tumour syndromes of the central and peripheral nervous system",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_doxorubicin",
+          "name": "Doxorubicin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_busulfan",
+          "name": "Busulfan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_vincristine",
+          "name": "Vincristine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_fluorouracil",
+          "name": "Fluorouracil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_temozolomide",
+          "name": "Temozolomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_thalidomide",
+          "name": "Thalidomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_chlorambucil",
+          "name": "Chlorambucil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ifosfamide",
+          "name": "Ifosfamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_lomustine",
+          "name": "Lomustine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_nitrosourea",
+          "name": "Nitrosourea"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_doxorubicin",
+          "type": "Target",
+          "label": "OffTargetDoxorubicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclophosphamide",
+          "type": "Target",
+          "label": "OffTargetCyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_busulfan",
+          "type": "Target",
+          "label": "OffTargetBusulfan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_vincristine",
+          "type": "Target",
+          "label": "OffTargetVincristine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "OffTargetMethotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fluorouracil",
+          "type": "Target",
+          "label": "OffTargetFluorouracil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_temozolomide",
+          "type": "Target",
+          "label": "OffTargetTemozolomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thalidomide",
+          "type": "Target",
+          "label": "OffTargetThalidomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_chlorambucil",
+          "type": "Target",
+          "label": "OffTargetChlorambucil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ifosfamide",
+          "type": "Target",
+          "label": "OffTargetIfosfamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lomustine",
+          "type": "Target",
+          "label": "OffTargetLomustine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nitrosourea",
+          "type": "Target",
+          "label": "OffTargetNitrosourea",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_doxorubicin",
+          "type": "Pathway",
+          "label": "RiskPathwayDoxorubicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cyclophosphamide",
+          "type": "Pathway",
+          "label": "RiskPathwayCyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_busulfan",
+          "type": "Pathway",
+          "label": "RiskPathwayBusulfan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_vincristine",
+          "type": "Pathway",
+          "label": "RiskPathwayVincristine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_methotrexate",
+          "type": "Pathway",
+          "label": "RiskPathwayMethotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fluorouracil",
+          "type": "Pathway",
+          "label": "RiskPathwayFluorouracil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_temozolomide",
+          "type": "Pathway",
+          "label": "RiskPathwayTemozolomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_thalidomide",
+          "type": "Pathway",
+          "label": "RiskPathwayThalidomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_chlorambucil",
+          "type": "Pathway",
+          "label": "RiskPathwayChlorambucil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ifosfamide",
+          "type": "Pathway",
+          "label": "RiskPathwayIfosfamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lomustine",
+          "type": "Pathway",
+          "label": "RiskPathwayLomustine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeNervousSyndromes",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_doxorubicin",
+          "target": "n_ot_doxorubicin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与神经系统ADR相关"
+        },
+        {
+          "source": "n_ot_doxorubicin",
+          "target": "n_rp_doxorubicin",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "肿瘤综合征风险通路"
+        },
+        {
+          "source": "n_rp_doxorubicin",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致神经系统不良表型"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_ot_cyclophosphamide",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与神经系统ADR相关"
+        },
+        {
+          "source": "n_ot_cyclophosphamide",
+          "target": "n_rp_cyclophosphamide",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "肿瘤综合征风险通路"
+        },
+        {
+          "source": "n_rp_cyclophosphamide",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致神经系统不良表型"
+        },
+        {
+          "source": "drug_busulfan",
+          "target": "n_ot_busulfan",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与神经系统ADR相关"
+        },
+        {
+          "source": "n_ot_busulfan",
+          "target": "n_rp_busulfan",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "肿瘤综合征风险通路"
+        },
+        {
+          "source": "n_rp_busulfan",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致神经系统不良表型"
+        },
+        {
+          "source": "drug_vincristine",
+          "target": "n_ot_vincristine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与神经系统ADR相关"
+        },
+        {
+          "source": "n_ot_vincristine",
+          "target": "n_rp_vincristine",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "肿瘤综合征风险通路"
+        },
+        {
+          "source": "n_rp_vincristine",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致神经系统不良表型"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与神经系统ADR相关"
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp_methotrexate",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "肿瘤综合征风险通路"
+        },
+        {
+          "source": "n_rp_methotrexate",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致神经系统不良表型"
+        },
+        {
+          "source": "drug_fluorouracil",
+          "target": "n_ot_fluorouracil",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与神经系统ADR相关"
+        },
+        {
+          "source": "n_ot_fluorouracil",
+          "target": "n_rp_fluorouracil",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "肿瘤综合征风险通路"
+        },
+        {
+          "source": "n_rp_fluorouracil",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致神经系统不良表型"
+        },
+        {
+          "source": "drug_temozolomide",
+          "target": "n_ot_temozolomide",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与神经系统ADR相关"
+        },
+        {
+          "source": "n_ot_temozolomide",
+          "target": "n_rp_temozolomide",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "肿瘤综合征风险通路"
+        },
+        {
+          "source": "n_rp_temozolomide",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致神经系统不良表型"
+        },
+        {
+          "source": "drug_thalidomide",
+          "target": "n_ot_thalidomide",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与神经系统ADR相关"
+        },
+        {
+          "source": "n_ot_thalidomide",
+          "target": "n_rp_thalidomide",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "肿瘤综合征风险通路"
+        },
+        {
+          "source": "n_rp_thalidomide",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致神经系统不良表型"
+        },
+        {
+          "source": "drug_chlorambucil",
+          "target": "n_ot_chlorambucil",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与神经系统ADR相关"
+        },
+        {
+          "source": "n_ot_chlorambucil",
+          "target": "n_rp_chlorambucil",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "肿瘤综合征风险通路"
+        },
+        {
+          "source": "n_rp_chlorambucil",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致神经系统不良表型"
+        },
+        {
+          "source": "drug_ifosfamide",
+          "target": "n_ot_ifosfamide",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与神经系统ADR相关"
+        },
+        {
+          "source": "n_ot_ifosfamide",
+          "target": "n_rp_ifosfamide",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "肿瘤综合征风险通路"
+        },
+        {
+          "source": "n_rp_ifosfamide",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致神经系统不良表型"
+        },
+        {
+          "source": "drug_lomustine",
+          "target": "n_ot_lomustine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与神经系统ADR相关"
+        },
+        {
+          "source": "n_ot_lomustine",
+          "target": "n_rp_lomustine",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "肿瘤综合征风险通路"
+        },
+        {
+          "source": "n_rp_lomustine",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致神经系统不良表型"
+        },
+        {
+          "source": "drug_nitrosourea",
+          "target": "n_ot_nitrosourea",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能与神经系统ADR相关"
+        },
+        {
+          "source": "n_ot_nitrosourea",
+          "target": "n_rp_nitrosourea",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "肿瘤综合征风险通路"
+        },
+        {
+          "source": "n_rp_nitrosourea",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致神经系统不良表型"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "药物可能导致神经系统不良事件，难以承受",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "在有遗传肿瘤综合征患者中，药物安全性不足",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "假设药物在遗传肿瘤综合征中的靶向效果有效",
+      "未考虑药物在中枢和周围神经系统的长期影响"
+    ],
+    "falsification_tests": [
+      "是否有数据支持药物对该人群的安全性？",
+      "药物在遗传肿瘤综合征患者中的不良反应记录是否存在明显增加？"
+    ],
+    "next_focus_for_pi": [
+      "提供药物在特定人群中的临床试验数据以支持安全性",
+      "检查是否有替代疗法可有效减轻风险"
+    ]
+  }
+}

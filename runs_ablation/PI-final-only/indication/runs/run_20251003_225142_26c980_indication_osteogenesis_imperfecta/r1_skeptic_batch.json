@@ -1,0 +1,837 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Osteogenesis imperfecta",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_bisphosphonates",
+          "name": "Bisphosphonates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_teriparatide",
+          "name": "Teriparatide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_zoledronic_acid",
+          "name": "Zoledronic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_calcitonin",
+          "name": "Calcitonin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_growth_hormone",
+          "name": "Growth hormone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_pamidronate",
+          "name": "Pamidronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_alendronate",
+          "name": "Alendronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_risedronate",
+          "name": "Risedronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_denosumab",
+          "name": "Denosumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_vitamin_d3",
+          "name": "Vitamin D3"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_calcium_supplements",
+          "name": "Calcium supplements"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_romosozumab",
+          "name": "Romosozumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_bisphosphonates",
+          "type": "Target",
+          "label": "OffTarget_Bisphosphonates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bisphosphonates",
+          "type": "Pathway",
+          "label": "RiskPathway_Bisphosphonates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bisphosphonates",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Bisphosphonates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_teriparatide",
+          "type": "Target",
+          "label": "OffTarget_Teriparatide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_teriparatide",
+          "type": "Pathway",
+          "label": "RiskPathway_Teriparatide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_teriparatide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Teriparatide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_zoledronic_acid",
+          "type": "Target",
+          "label": "OffTarget_ZoledronicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_zoledronic_acid",
+          "type": "Pathway",
+          "label": "RiskPathway_ZoledronicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_zoledronic_acid",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_ZoledronicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_calcitonin",
+          "type": "Target",
+          "label": "OffTarget_Calcitonin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_calcitonin",
+          "type": "Pathway",
+          "label": "RiskPathway_Calcitonin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_calcitonin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Calcitonin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_growth_hormone",
+          "type": "Target",
+          "label": "OffTarget_GrowthHormone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_growth_hormone",
+          "type": "Pathway",
+          "label": "RiskPathway_GrowthHormone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_growth_hormone",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_GrowthHormone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pamidronate",
+          "type": "Target",
+          "label": "OffTarget_Pamidronate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pamidronate",
+          "type": "Pathway",
+          "label": "RiskPathway_Pamidronate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pamidronate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Pamidronate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_alendronate",
+          "type": "Target",
+          "label": "OffTarget_Alendronate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_alendronate",
+          "type": "Pathway",
+          "label": "RiskPathway_Alendronate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_alendronate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Alendronate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_risedronate",
+          "type": "Target",
+          "label": "OffTarget_Risedronate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_risedronate",
+          "type": "Pathway",
+          "label": "RiskPathway_Risedronate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_risedronate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Risedronate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_denosumab",
+          "type": "Target",
+          "label": "OffTarget_Denosumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_denosumab",
+          "type": "Pathway",
+          "label": "RiskPathway_Denosumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_denosumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Denosumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_vitamin_d3",
+          "type": "Target",
+          "label": "OffTarget_VitaminD3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_vitamin_d3",
+          "type": "Pathway",
+          "label": "RiskPathway_VitaminD3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_vitamin_d3",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_VitaminD3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_calcium_supplements",
+          "type": "Target",
+          "label": "OffTarget_CalciumSupplements",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_calcium_supplements",
+          "type": "Pathway",
+          "label": "RiskPathway_CalciumSupplements",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_calcium_supplements",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_CalciumSupplements",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_romosozumab",
+          "type": "Target",
+          "label": "OffTarget_Romosozumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_romosozumab",
+          "type": "Pathway",
+          "label": "RiskPathway_Romosozumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_romosozumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Romosozumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_bisphosphonates",
+          "target": "n_ot_bisphosphonates",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入非特异靶效应"
+        },
+        {
+          "source": "n_ot_bisphosphonates",
+          "target": "n_rp_bisphosphonates",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险途径"
+        },
+        {
+          "source": "n_rp_bisphosphonates",
+          "target": "n_adv_bisphosphonates",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_bisphosphonates",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在时可抵消疗效"
+        },
+        {
+          "source": "drug_teriparatide",
+          "target": "n_ot_teriparatide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入非特异靶效应"
+        },
+        {
+          "source": "n_ot_teriparatide",
+          "target": "n_rp_teriparatide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险途径"
+        },
+        {
+          "source": "n_rp_teriparatide",
+          "target": "n_adv_teriparatide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_teriparatide",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在时可抵消疗效"
+        },
+        {
+          "source": "drug_zoledronic_acid",
+          "target": "n_ot_zoledronic_acid",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入非特异靶效应"
+        },
+        {
+          "source": "n_ot_zoledronic_acid",
+          "target": "n_rp_zoledronic_acid",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险途径"
+        },
+        {
+          "source": "n_rp_zoledronic_acid",
+          "target": "n_adv_zoledronic_acid",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_zoledronic_acid",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在时可抵消疗效"
+        },
+        {
+          "source": "drug_calcitonin",
+          "target": "n_ot_calcitonin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入非特异靶效应"
+        },
+        {
+          "source": "n_ot_calcitonin",
+          "target": "n_rp_calcitonin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险途径"
+        },
+        {
+          "source": "n_rp_calcitonin",
+          "target": "n_adv_calcitonin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_calcitonin",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在时可抵消疗效"
+        },
+        {
+          "source": "drug_growth_hormone",
+          "target": "n_ot_growth_hormone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入非特异靶效应"
+        },
+        {
+          "source": "n_ot_growth_hormone",
+          "target": "n_rp_growth_hormone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险途径"
+        },
+        {
+          "source": "n_rp_growth_hormone",
+          "target": "n_adv_growth_hormone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_growth_hormone",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在时可抵消疗效"
+        },
+        {
+          "source": "drug_pamidronate",
+          "target": "n_ot_pamidronate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入非特异靶效应"
+        },
+        {
+          "source": "n_ot_pamidronate",
+          "target": "n_rp_pamidronate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险途径"
+        },
+        {
+          "source": "n_rp_pamidronate",
+          "target": "n_adv_pamidronate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_pamidronate",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在时可抵消疗效"
+        },
+        {
+          "source": "drug_alendronate",
+          "target": "n_ot_alendronate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入非特异靶效应"
+        },
+        {
+          "source": "n_ot_alendronate",
+          "target": "n_rp_alendronate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险途径"
+        },
+        {
+          "source": "n_rp_alendronate",
+          "target": "n_adv_alendronate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_alendronate",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在时可抵消疗效"
+        },
+        {
+          "source": "drug_risedronate",
+          "target": "n_ot_risedronate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入非特异靶效应"
+        },
+        {
+          "source": "n_ot_risedronate",
+          "target": "n_rp_risedronate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险途径"
+        },
+        {
+          "source": "n_rp_risedronate",
+          "target": "n_adv_risedronate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_risedronate",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在时可抵消疗效"
+        },
+        {
+          "source": "drug_denosumab",
+          "target": "n_ot_denosumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入非特异靶效应"
+        },
+        {
+          "source": "n_ot_denosumab",
+          "target": "n_rp_denosumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险途径"
+        },
+        {
+          "source": "n_rp_denosumab",
+          "target": "n_adv_denosumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_denosumab",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在时可抵消疗效"
+        },
+        {
+          "source": "drug_vitamin_d3",
+          "target": "n_ot_vitamin_d3",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入非特异靶效应"
+        },
+        {
+          "source": "n_ot_vitamin_d3",
+          "target": "n_rp_vitamin_d3",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险途径"
+        },
+        {
+          "source": "n_rp_vitamin_d3",
+          "target": "n_adv_vitamin_d3",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_vitamin_d3",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在时可抵消疗效"
+        },
+        {
+          "source": "drug_calcium_supplements",
+          "target": "n_ot_calcium_supplements",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入非特异靶效应"
+        },
+        {
+          "source": "n_ot_calcium_supplements",
+          "target": "n_rp_calcium_supplements",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险途径"
+        },
+        {
+          "source": "n_rp_calcium_supplements",
+          "target": "n_adv_calcium_supplements",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_calcium_supplements",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在时可抵消疗效"
+        },
+        {
+          "source": "drug_romosozumab",
+          "target": "n_ot_romosozumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入非特异靶效应"
+        },
+        {
+          "source": "n_ot_romosozumab",
+          "target": "n_rp_romosozumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在风险途径"
+        },
+        {
+          "source": "n_rp_romosozumab",
+          "target": "n_adv_romosozumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_romosozumab",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险存在时可抵消疗效"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "是否存在有效的靶向机制与安全性数据",
+      "副作用的潜在严重性与反应是否已充分评估"
+    ],
+    "falsification_tests": [
+      "是否有临床试验显示该药物对特定类型骨生成不良的有效性",
+      "是否存在安全性数据以支持长期使用"
+    ],
+    "next_focus_for_pi": [
+      "深入研究每种药物的具体作用机制和安全性",
+      "提供现有文献以证明疗效和风险点"
+    ]
+  }
+}

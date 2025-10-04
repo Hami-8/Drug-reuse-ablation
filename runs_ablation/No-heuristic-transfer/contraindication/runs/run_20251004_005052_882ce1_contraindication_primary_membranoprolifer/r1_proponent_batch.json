@@ -1,0 +1,368 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_nsaids",
+          "name": "NSAIDs"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ace_inhibitors",
+          "name": "ACE inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_arbs",
+          "name": "ARBs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_diuretics",
+          "name": "Diuretics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_lithium",
+          "name": "Lithium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_chemotherapy_agents",
+          "name": "Chemotherapy agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_antibiotics",
+          "name": "Antibiotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "name": "Nonsteroidal anti-inflammatory drugs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_plasmapheresis",
+          "name": "Plasmapheresis"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_immunosuppressants",
+          "name": "Immunosuppressants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ace_inhibitors",
+          "type": "Drug",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_arbs",
+          "type": "Drug",
+          "label": "ARBs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_diuretics",
+          "type": "Drug",
+          "label": "Diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_chemotherapy_agents",
+          "type": "Drug",
+          "label": "Chemotherapy agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_immunosuppressants",
+          "type": "Drug",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "type": "Disease",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_nsaids",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "NSAIDs常与肾脏疾病不良反应相关"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "ACE抑制剂在某些情况下可能加重病症"
+        },
+        {
+          "source": "drug_arbs",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "ARBs在肾脏疾病时注意风险"
+        },
+        {
+          "source": "drug_diuretics",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "利尿剂可能引起电解质紊乱"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "锂与肾功能有隐患"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "环孢素对肾功能有毒性"
+        },
+        {
+          "source": "drug_chemotherapy_agents",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "化疗药物可能对肾造成损害"
+        },
+        {
+          "source": "drug_antibiotics",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "部分抗生素与肾毒性有关"
+        },
+        {
+          "source": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "NSAID类药物已知影响肾功能"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能导致肾脏副反应"
+        },
+        {
+          "source": "drug_plasmapheresis",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "血浆置换可能有风险"
+        },
+        {
+          "source": "drug_immunosuppressants",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "免疫抑制剂可能加重已有病症"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物对初级增生性肾小管肾炎具有相应的禁忌判断",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "假设药物与疾病间的关系为已知且可继续验证"
+    ],
+    "uncertainties": [
+      "某些药物的具体作用机制仍需进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "验证禁忌药物列表的有效性与适应性"
+    ]
+  }
+}

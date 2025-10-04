@@ -1,0 +1,354 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_phenelzine",
+          "name": "Phenelzine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_selegiline",
+          "name": "Selegiline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_fluoxetine",
+          "name": "Fluoxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_paroxetine",
+          "name": "Paroxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_bupropion",
+          "name": "Bupropion"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_clomipramine",
+          "name": "Clomipramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sertraline",
+          "name": "Sertraline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_venlafaxine",
+          "name": "Venlafaxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_thioridazine",
+          "name": "Thioridazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_risperidone",
+          "name": "Risperidone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tranylcypromine",
+          "name": "Tranylcypromine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_citalopram",
+          "name": "Citalopram"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_neurotransmitter_disorders",
+          "type": "Disease",
+          "label": "Neurotransmitter Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target1",
+          "type": "Target",
+          "label": "Monoamine Oxidase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target2",
+          "type": "Target",
+          "label": "Serotonin Transporter",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway1",
+          "type": "Pathway",
+          "label": "Monoamine Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway2",
+          "type": "Pathway",
+          "label": "Serotonin Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph1",
+          "type": "Phenotype",
+          "label": "Mood Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph2",
+          "type": "Phenotype",
+          "label": "Anxiety Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_phenelzine",
+          "target": "n_target1",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "常用药物对 MAO 的抑制作用"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "n_target1",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "常用药物对 MAO 的抑制作用"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "n_target2",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与选择性5-HT再摄取抑制有关"
+        },
+        {
+          "source": "drug_paroxetine",
+          "target": "n_target2",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与选择性5-HT再摄取抑制有关"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "n_target1",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "对多巴胺及去甲肾上腺素的作用"
+        },
+        {
+          "source": "drug_clomipramine",
+          "target": "n_target2",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与5-HT系统关联"
+        },
+        {
+          "source": "n_target1",
+          "target": "n_pathway1",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通路与神经递质代谢相关"
+        },
+        {
+          "source": "n_target2",
+          "target": "n_pathway2",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通路与情绪调节相关"
+        },
+        {
+          "source": "n_pathway1",
+          "target": "n_ph1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与情绪相关的表现"
+        },
+        {
+          "source": "n_pathway2",
+          "target": "n_ph2",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与焦虑相关的表现"
+        },
+        {
+          "source": "drug_phenelzine",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "对神经递质失调有显著效果"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "对神经递质失调有显著效果"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "对抑郁症表现有积极影响"
+        },
+        {
+          "source": "drug_paroxetine",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "对抑郁症表现有积极影响"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "可用于某些抑郁类型"
+        },
+        {
+          "source": "drug_clomipramine",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "用于焦虑与抑郁的治疗"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过抑制相关靶点影响神经递质，从而影响情绪与焦虑状态",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "药物间存在相似的作用机制，可能对神经递质失调状态有相冲突风险",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物具有合适的血脑屏障通透性及药理活性",
+      "基于药效学和药代动力学对靶年代谢的影响"
+    ],
+    "uncertainties": [
+      "特定药物对特定神经递质失调的具体影响尚需更多研究"
+    ],
+    "next_focus_for_pi": [
+      "应确认靶标是否符合药物作用的实际机制"
+    ]
+  }
+}

@@ -1,0 +1,400 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_clofibrate",
+          "name": "Clofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_estrogens",
+          "name": "Estrogens"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_thiazolidinediones",
+          "name": "Thiazolidinediones"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sodium_glucose_cotransporter_2_inhibitors",
+          "name": "Sodium-glucose cotransporter-2 inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_bosentan",
+          "name": "Bosentan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_glitazones",
+          "name": "Glitazones"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_progestins",
+          "name": "Progestins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_gemfibrozil",
+          "type": "Target",
+          "label": "Off-target effects of Gemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fenofibrate",
+          "type": "Target",
+          "label": "Off-target effects of Fenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clofibrate",
+          "type": "Target",
+          "label": "Off-target effects of Clofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_niacin",
+          "type": "Target",
+          "label": "Off-target effects of Niacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_estrogens",
+          "type": "Target",
+          "label": "Off-target effects of Estrogens",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thiazolidinediones",
+          "type": "Target",
+          "label": "Off-target effects of Thiazolidinediones",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_hypertriglyceridaemia",
+          "type": "Pathway",
+          "label": "Risk pathway for Severe hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_hypertriglyceridaemia",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Drug-Induced Hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_gemfibrozil",
+          "target": "n_ot_gemfibrozil",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知有影响脂质代谢的旁路"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "n_ot_fenofibrate",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良脂质水平升高"
+        },
+        {
+          "source": "drug_clofibrate",
+          "target": "n_ot_clofibrate",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对脂肪代谢的干预可能加重风险"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "n_ot_niacin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知的副作用与脂质变化相关"
+        },
+        {
+          "source": "drug_estrogens",
+          "target": "n_ot_estrogens",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能对血脂产生影响"
+        },
+        {
+          "source": "drug_thiazolidinediones",
+          "target": "n_ot_thiazolidinediones",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与脂质代谢障碍有关"
+        },
+        {
+          "source": "n_ot_gemfibrozil",
+          "target": "n_rp_hypertriglyceridaemia",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发脂类代谢异常"
+        },
+        {
+          "source": "n_ot_fenofibrate",
+          "target": "n_rp_hypertriglyceridaemia",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "与高甘油三酯风险相关"
+        },
+        {
+          "source": "n_ot_clofibrate",
+          "target": "n_rp_hypertriglyceridaemia",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能加剧高甘油三酯问题"
+        },
+        {
+          "source": "n_ot_niacin",
+          "target": "n_rp_hypertriglyceridaemia",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "与脂质问题相互作用"
+        },
+        {
+          "source": "n_ot_estrogens",
+          "target": "n_rp_hypertriglyceridaemia",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能影响甘油三酯水平"
+        },
+        {
+          "source": "n_ot_thiazolidinediones",
+          "target": "n_rp_hypertriglyceridaemia",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "与代谢综合征有关"
+        },
+        {
+          "source": "n_rp_hypertriglyceridaemia",
+          "target": "n_adv_hypertriglyceridaemia",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致甘油三酯水平显著升高"
+        },
+        {
+          "source": "n_adv_hypertriglyceridaemia",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高甘油三酯风险抵消 Gemfibrozil 的获益"
+        },
+        {
+          "source": "n_adv_hypertriglyceridaemia",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高甘油三酯风险抵消 Fenofibrate 的获益"
+        },
+        {
+          "source": "n_adv_hypertriglyceridaemia",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高甘油三酯风险抵消 Clofibrate 的获益"
+        },
+        {
+          "source": "n_adv_hypertriglyceridaemia",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高甘油三酯风险抵消 Niacin 的获益"
+        },
+        {
+          "source": "n_adv_hypertriglyceridaemia",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高甘油三酯风险抵消 Estrogens 的获益"
+        },
+        {
+          "source": "n_adv_hypertriglyceridaemia",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高甘油三酯风险抵消 Thiazolidinediones 的获益"
+        },
+        {
+          "source": "n_adv_hypertriglyceridaemia",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高甘油三酯风险抵消 Sodium-glucose cotransporter-2 inhibitors 的获益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "多种药物在高甘油三酯患者中可能导致副作用增加",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "需要考量药物间相互作用使得高甘油三酯风险加剧",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物在严重高甘油三酯患者中的安全性是否得到验证",
+      "提到的药物对甘油三酯的影响机制是否一致"
+    ],
+    "falsification_tests": [
+      "是否有研究表明这些药物在高甘油三酯患者中安全有效？",
+      "药物是否能有效降低甘油三酯水平而不增加风险？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 解析与高甘油三酯的风险链息息相关的确证证据",
+      "评估每种药物在高甘油三酯患者中的效果与安全性"
+    ]
+  }
+}

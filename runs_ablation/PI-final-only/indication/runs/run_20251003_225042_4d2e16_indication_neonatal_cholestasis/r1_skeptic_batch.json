@@ -1,0 +1,512 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_ursodeoxycholic_acid",
+          "name": "Ursodeoxycholic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_silibinin",
+          "name": "Silibinin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_deferasirox",
+          "name": "Deferasirox"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_bile_acid_sequestrants",
+          "name": "Bile acid sequestrants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_diltiazem",
+          "name": "Diltiazem"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_vitamin_e",
+          "name": "Vitamin E"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_lactulose",
+          "name": "Lactulose"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_metformin",
+          "name": "Metformin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_ursodeoxycholic_acid",
+          "type": "Target",
+          "label": "OffTarget_Ursodeoxycholic_acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ursodeoxycholic_acid",
+          "type": "Pathway",
+          "label": "RiskPathway_Ursodeoxycholic_acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ursodeoxycholic_acid",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Ursodeoxycholic_acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_silibinin",
+          "type": "Target",
+          "label": "OffTarget_Silibinin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_silibinin",
+          "type": "Pathway",
+          "label": "RiskPathway_Silibinin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_silibinin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Silibinin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cholestyramine",
+          "type": "Target",
+          "label": "OffTarget_Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cholestyramine",
+          "type": "Pathway",
+          "label": "RiskPathway_Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cholestyramine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rifampicin",
+          "type": "Target",
+          "label": "OffTarget_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rifampicin",
+          "type": "Pathway",
+          "label": "RiskPathway_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rifampicin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fenofibrate",
+          "type": "Target",
+          "label": "OffTarget_Fenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fenofibrate",
+          "type": "Pathway",
+          "label": "RiskPathway_Fenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fenofibrate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Fenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_deferasirox",
+          "type": "Target",
+          "label": "OffTarget_Deferasirox",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_deferasirox",
+          "type": "Pathway",
+          "label": "RiskPathway_Deferasirox",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_deferasirox",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Deferasirox",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "n_ot_ursodeoxycholic_acid",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响不相关靶点"
+        },
+        {
+          "source": "n_ot_ursodeoxycholic_acid",
+          "target": "n_rp_ursodeoxycholic_acid",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致风险通路激活"
+        },
+        {
+          "source": "n_rp_ursodeoxycholic_acid",
+          "target": "n_adv_ursodeoxycholic_acid",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_ursodeoxycholic_acid",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将降低使用价值"
+        },
+        {
+          "source": "drug_silibinin",
+          "target": "n_ot_silibinin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响其他靶点"
+        },
+        {
+          "source": "n_ot_silibinin",
+          "target": "n_rp_silibinin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联风险通路"
+        },
+        {
+          "source": "n_rp_silibinin",
+          "target": "n_adv_silibinin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_silibinin",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可引发严格风险影响效益"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_ot_cholestyramine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能干扰调节机制"
+        },
+        {
+          "source": "n_ot_cholestyramine",
+          "target": "n_rp_cholestyramine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引入潜在风险"
+        },
+        {
+          "source": "n_rp_cholestyramine",
+          "target": "n_adv_cholestyramine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "造成不良后果"
+        },
+        {
+          "source": "n_adv_cholestyramine",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "反对该药物的假设效益"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "n_ot_rifampicin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响其它靶标"
+        },
+        {
+          "source": "n_ot_rifampicin",
+          "target": "n_rp_rifampicin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能产生副作用"
+        },
+        {
+          "source": "n_rp_rifampicin",
+          "target": "n_adv_rifampicin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引起负面表型"
+        },
+        {
+          "source": "n_adv_rifampicin",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "增加风险导致效果不理想"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "n_ot_fenofibrate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的非特异性作用"
+        },
+        {
+          "source": "n_ot_fenofibrate",
+          "target": "n_rp_fenofibrate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "聚焦风险通路"
+        },
+        {
+          "source": "n_rp_fenofibrate",
+          "target": "n_adv_fenofibrate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_fenofibrate",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险证明有效，则削弱潜在好处"
+        },
+        {
+          "source": "drug_deferasirox",
+          "target": "n_ot_deferasirox",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "功能机制不清晰"
+        },
+        {
+          "source": "n_ot_deferasirox",
+          "target": "n_rp_deferasirox",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引入风险因素"
+        },
+        {
+          "source": "n_rp_deferasirox",
+          "target": "n_adv_deferasirox",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致明显不利结果"
+        },
+        {
+          "source": "n_adv_deferasirox",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "假设的净效益可能无法实现"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "存在潜在的非特异性效应，可能抵消治疗益处",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "与其他药物潜在相互作用引发不良反应",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "假设对靶点的选择合理性",
+      "机体的耐受能力与药代动力学是否足够支撑有效性"
+    ],
+    "falsification_tests": [
+      "是否存在足够的实验数据支撑长期有效性？",
+      "有无观察到重大不利反应的文献？"
+    ],
+    "next_focus_for_pi": [
+      "要求提供对立机制和潜在证据以支持疗效",
+      "关注证据的品种与质量，以进行进一步分析"
+    ]
+  }
+}

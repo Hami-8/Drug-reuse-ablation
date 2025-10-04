@@ -1,0 +1,1293 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Juvenile dermatomyositis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_methotrexate",
+            "via": [
+              "target_inflammation"
+            ],
+            "to": "phenotype_juvenile_dermatomyositis",
+            "success_criteria": "确认连接的因果关系",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_azathioprine",
+            "via": [
+              "target_inflammation"
+            ],
+            "to": "phenotype_juvenile_dermatomyositis",
+            "success_criteria": "确认连接的因果关系",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_prednisone",
+            "via": [
+              "target_inflammation"
+            ],
+            "to": "phenotype_juvenile_dermatomyositis",
+            "success_criteria": "确认连接的因果关系",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_intravenous_immunoglobulin",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_natalizumab",
+          "type": "Drug",
+          "label": "Natalizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydroxychloroquine",
+          "type": "Drug",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dapsone",
+          "type": "Drug",
+          "label": "Dapsone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_inflammation",
+          "type": "Target",
+          "label": "Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_autoimmunity",
+          "type": "Pathway",
+          "label": "Autoimmunity Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_juvenile_dermatomyositis",
+          "type": "Phenotype",
+          "label": "Juvenile dermatomyositis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_mtx",
+          "type": "Target",
+          "label": "Methotrexate Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mtx",
+          "type": "Pathway",
+          "label": "Methotrexate Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mtx",
+          "type": "Phenotype",
+          "label": "Methotrexate Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aza",
+          "type": "Target",
+          "label": "Azathioprine Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aza",
+          "type": "Pathway",
+          "label": "Azathioprine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aza",
+          "type": "Phenotype",
+          "label": "Azathioprine Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pred",
+          "type": "Target",
+          "label": "Prednisone Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pred",
+          "type": "Pathway",
+          "label": "Prednisone Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pred",
+          "type": "Phenotype",
+          "label": "Prednisone Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mmf",
+          "type": "Target",
+          "label": "Mycophenolate mofetil Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mmf",
+          "type": "Pathway",
+          "label": "Mycophenolate mofetil Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mmf",
+          "type": "Phenotype",
+          "label": "Mycophenolate mofetil Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclo",
+          "type": "Target",
+          "label": "Cyclophosphamide Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cyclo",
+          "type": "Pathway",
+          "label": "Cyclophosphamide Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cyclo",
+          "type": "Phenotype",
+          "label": "Cyclophosphamide Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ritux",
+          "type": "Target",
+          "label": "Rituximab Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ritux",
+          "type": "Pathway",
+          "label": "Rituximab Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ritux",
+          "type": "Phenotype",
+          "label": "Rituximab Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ivig",
+          "type": "Target",
+          "label": "Intravenous immunoglobulin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ivig",
+          "type": "Pathway",
+          "label": "Intravenous immunoglobulin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ivig",
+          "type": "Phenotype",
+          "label": "Intravenous immunoglobulin Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_natalizumab",
+          "type": "Target",
+          "label": "Natalizumab Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_natalizumab",
+          "type": "Pathway",
+          "label": "Natalizumab Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_natalizumab",
+          "type": "Phenotype",
+          "label": "Natalizumab Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_hydroxy",
+          "type": "Target",
+          "label": "Hydroxychloroquine Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_hydroxy",
+          "type": "Pathway",
+          "label": "Hydroxychloroquine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_hydroxy",
+          "type": "Phenotype",
+          "label": "Hydroxychloroquine Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dapsone",
+          "type": "Target",
+          "label": "Dapsone Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dapsone",
+          "type": "Pathway",
+          "label": "Dapsone Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dapsone",
+          "type": "Phenotype",
+          "label": "Dapsone Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tacrolimus",
+          "type": "Target",
+          "label": "Tacrolimus Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_tacrolimus",
+          "type": "Pathway",
+          "label": "Tacrolimus Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tacrolimus",
+          "type": "Phenotype",
+          "label": "Tacrolimus Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_etanercept",
+          "type": "Target",
+          "label": "Etanercept Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_etanercept",
+          "type": "Pathway",
+          "label": "Etanercept Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_etanercept",
+          "type": "Phenotype",
+          "label": "Etanercept Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Natalizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Dapsone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_methotrexate",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知针对炎症的作用"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知针对炎症的作用"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知针对炎症的作用"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知针对炎症的作用"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知针对炎症的作用"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知针对炎症的作用"
+        },
+        {
+          "source": "drug_intravenous_immunoglobulin",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知针对炎症的作用"
+        },
+        {
+          "source": "drug_natalizumab",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知针对炎症的作用"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知针对炎症的作用"
+        },
+        {
+          "source": "drug_dapsone",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "已知针对炎症的作用"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "已知针对炎症的作用"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "已知针对炎症的作用"
+        },
+        {
+          "source": "target_inflammation",
+          "target": "pathway_autoimmunity",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "炎症介导自身免疫"
+        },
+        {
+          "source": "pathway_autoimmunity",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "自身免疫引起特定表型"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "直接支持对应表型"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "直接支持对应表型"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "直接支持对应表型"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "直接支持对应表型"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "直接支持对应表型"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "直接支持对应表型"
+        },
+        {
+          "source": "drug_intravenous_immunoglobulin",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "直接支持对应表型"
+        },
+        {
+          "source": "drug_natalizumab",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "直接支持对应表型"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "直接支持对应表型"
+        },
+        {
+          "source": "drug_dapsone",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "直接支持对应表型"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "直接支持对应表型"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "phenotype_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.25,
+          "agent": "Proponent",
+          "rationale": "直接支持对应表型"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_mtx",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_mtx",
+          "target": "n_rp_mtx",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_mtx",
+          "target": "n_adv_mtx",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_mtx",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Methotrexate 可能引发不良反应"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_ot_aza",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_aza",
+          "target": "n_rp_aza",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_aza",
+          "target": "n_adv_aza",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_aza",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Azathioprine 可能引发不良反应"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_pred",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_pred",
+          "target": "n_rp_pred",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_pred",
+          "target": "n_adv_pred",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_pred",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Prednisone 可能引发不良反应"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "n_ot_mmf",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_mmf",
+          "target": "n_rp_mmf",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_mmf",
+          "target": "n_adv_mmf",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_mmf",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Mycophenolate mofetil 可能引发不良反应"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_ot_cyclo",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_cyclo",
+          "target": "n_rp_cyclo",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_cyclo",
+          "target": "n_adv_cyclo",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_cyclo",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Cyclophosphamide 可能引发不良反应"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "n_ot_ritux",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_ritux",
+          "target": "n_rp_ritux",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_ritux",
+          "target": "n_adv_ritux",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ritux",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Rituximab 可能引发不良反应"
+        },
+        {
+          "source": "drug_intravenous_immunoglobulin",
+          "target": "n_ot_ivig",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_ivig",
+          "target": "n_rp_ivig",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_ivig",
+          "target": "n_adv_ivig",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ivig",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Intravenous immunoglobulin 可能引发不良反应"
+        },
+        {
+          "source": "drug_natalizumab",
+          "target": "n_ot_natalizumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_natalizumab",
+          "target": "n_rp_natalizumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_natalizumab",
+          "target": "n_adv_natalizumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_natalizumab",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Natalizumab 可能引发不良反应"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "n_ot_hydroxy",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_hydroxy",
+          "target": "n_rp_hydroxy",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_hydroxy",
+          "target": "n_adv_hydroxy",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_hydroxy",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Hydroxychloroquine 可能引发不良反应"
+        },
+        {
+          "source": "drug_dapsone",
+          "target": "n_ot_dapsone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_dapsone",
+          "target": "n_rp_dapsone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_dapsone",
+          "target": "n_adv_dapsone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_dapsone",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Dapsone 可能引发不良反应"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "n_ot_tacrolimus",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_tacrolimus",
+          "target": "n_rp_tacrolimus",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_tacrolimus",
+          "target": "n_adv_tacrolimus",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_tacrolimus",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Tacrolimus 可能引发不良反应"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "n_ot_etanercept",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_etanercept",
+          "target": "n_rp_etanercept",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_etanercept",
+          "target": "n_adv_etanercept",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_etanercept",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Etanercept 可能引发不良反应"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_methotrexate",
+              "target": "target_inflammation",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "已知针对炎症的作用"
+            },
+            {
+              "source": "target_inflammation",
+              "target": "phenotype_juvenile_dermatomyositis",
+              "relation": "involved_in",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "炎症介导自身免疫"
+            },
+            {
+              "source": "drug_methotrexate",
+              "target": "phenotype_juvenile_dermatomyositis",
+              "relation": "supports",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "直接支持对应表型"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Methotrexate→Inflammation→Juvenile dermatomyositis，形成支持链"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_azathioprine",
+              "target": "target_inflammation",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "已知针对炎症的作用"
+            },
+            {
+              "source": "target_inflammation",
+              "target": "phenotype_juvenile_dermatomyositis",
+              "relation": "involved_in",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "炎症介导自身免疫"
+            },
+            {
+              "source": "drug_azathioprine",
+              "target": "phenotype_juvenile_dermatomyositis",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "直接支持对应表型"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Azathioprine→Inflammation→Juvenile dermatomyositis，形成支持链"
+      },
+      {
+        "action_ref": 2,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_prednisone",
+              "target": "target_inflammation",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "已知针对炎症的作用"
+            },
+            {
+              "source": "target_inflammation",
+              "target": "phenotype_juvenile_dermatomyositis",
+              "relation": "involved_in",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "炎症介导自身免疫"
+            },
+            {
+              "source": "drug_prednisone",
+              "target": "phenotype_juvenile_dermatomyositis",
+              "relation": "supports",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "直接支持对应表型"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Prednisone→Inflammation→Juvenile dermatomyositis，形成支持链"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [
+      "目前已连接到关键靶点，需进一步验证具体临床效果"
+    ]
+  }
+}

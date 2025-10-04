@@ -1,0 +1,837 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Distal myopathies",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_procainamide",
+          "name": "Procainamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_dantrolene",
+          "name": "Dantrolene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_dopamine",
+          "name": "Dopamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_rocuronium",
+          "name": "Rocuronium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_skeletal_muscle_relaxants",
+          "name": "Skeletal muscle relaxants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "Corticosteroids Off-target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_corticosteroids",
+          "type": "Pathway",
+          "label": "Risk Pathway for Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_corticosteroids",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_statins",
+          "type": "Target",
+          "label": "Statins Off-target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_statins",
+          "type": "Pathway",
+          "label": "Risk Pathway for Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_statins",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_quinidine",
+          "type": "Target",
+          "label": "Quinidine Off-target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_quinidine",
+          "type": "Pathway",
+          "label": "Risk Pathway for Quinidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_quinidine",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Quinidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_procainamide",
+          "type": "Target",
+          "label": "Procainamide Off-target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_procainamide",
+          "type": "Pathway",
+          "label": "Risk Pathway for Procainamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_procainamide",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Procainamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dantrolene",
+          "type": "Target",
+          "label": "Dantrolene Off-target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dantrolene",
+          "type": "Pathway",
+          "label": "Risk Pathway for Dantrolene",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dantrolene",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Dantrolene",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cholestyramine",
+          "type": "Target",
+          "label": "Cholestyramine Off-target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cholestyramine",
+          "type": "Pathway",
+          "label": "Risk Pathway for Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cholestyramine",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "Amiodarone Off-target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_amiodarone",
+          "type": "Pathway",
+          "label": "Risk Pathway for Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_amiodarone",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gabapentin",
+          "type": "Target",
+          "label": "Gabapentin Off-target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gabapentin",
+          "type": "Pathway",
+          "label": "Risk Pathway for Gabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gabapentin",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Gabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dopamine",
+          "type": "Target",
+          "label": "Dopamine Off-target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dopamine",
+          "type": "Pathway",
+          "label": "Risk Pathway for Dopamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dopamine",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Dopamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ciprofloxacin",
+          "type": "Target",
+          "label": "Ciprofloxacin Off-target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ciprofloxacin",
+          "type": "Pathway",
+          "label": "Risk Pathway for Ciprofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ciprofloxacin",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Ciprofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rocuronium",
+          "type": "Target",
+          "label": "Rocuronium Off-target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rocuronium",
+          "type": "Pathway",
+          "label": "Risk Pathway for Rocuronium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rocuronium",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Rocuronium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_skeletal_muscle_relaxants",
+          "type": "Target",
+          "label": "Skeletal Muscle Relaxants Off-target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_skeletal_muscle_relaxants",
+          "type": "Pathway",
+          "label": "Risk Pathway for Skeletal Muscle Relaxants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_skeletal_muscle_relaxants",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype from Skeletal Muscle Relaxants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响与肌肉相关的通路"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp_corticosteroids",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "激活潜在的风险通路"
+        },
+        {
+          "source": "n_rp_corticosteroids",
+          "target": "n_adv_corticosteroids",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉功能障碍"
+        },
+        {
+          "source": "n_adv_corticosteroids",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "增加不良反应支持对远端肌病的禁忌"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_ot_statins",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对肌肉代谢影响"
+        },
+        {
+          "source": "n_ot_statins",
+          "target": "n_rp_statins",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能激活肌肉损伤路径"
+        },
+        {
+          "source": "n_rp_statins",
+          "target": "n_adv_statins",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "引起致命的肌肉相关副作用"
+        },
+        {
+          "source": "n_adv_statins",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在致肌肉病的危险"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "n_ot_quinidine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "对电生理有影响"
+        },
+        {
+          "source": "n_ot_quinidine",
+          "target": "n_rp_quinidine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "n_rp_quinidine",
+          "target": "n_adv_quinidine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良心血管或肌肉影响"
+        },
+        {
+          "source": "n_adv_quinidine",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能对肌肉健康有负面影响"
+        },
+        {
+          "source": "drug_procainamide",
+          "target": "n_ot_procainamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "对心脏影响"
+        },
+        {
+          "source": "n_ot_procainamide",
+          "target": "n_rp_procainamide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与心血管功能相关"
+        },
+        {
+          "source": "n_rp_procainamide",
+          "target": "n_adv_procainamide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致运动能力降低"
+        },
+        {
+          "source": "n_adv_procainamide",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对肌肉健康的不利影响"
+        },
+        {
+          "source": "drug_dantrolene",
+          "target": "n_ot_dantrolene",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与肌肉钙通道相关"
+        },
+        {
+          "source": "n_ot_dantrolene",
+          "target": "n_rp_dantrolene",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉收缩"
+        },
+        {
+          "source": "n_rp_dantrolene",
+          "target": "n_adv_dantrolene",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致肌肉功能障碍"
+        },
+        {
+          "source": "n_adv_dantrolene",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能会加重肌肉病风险"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_ot_cholestyramine",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响咀嚼及吞咽"
+        },
+        {
+          "source": "n_ot_cholestyramine",
+          "target": "n_rp_cholestyramine",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉相关问题"
+        },
+        {
+          "source": "n_rp_cholestyramine",
+          "target": "n_adv_cholestyramine",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "导致运动能力降低"
+        },
+        {
+          "source": "n_adv_cholestyramine",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能对肌肉造成不良影响"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响心脏功能"
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp_amiodarone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致心血管问题"
+        },
+        {
+          "source": "n_rp_amiodarone",
+          "target": "n_adv_amiodarone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发肌肉不适"
+        },
+        {
+          "source": "n_adv_amiodarone",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可加重肌肉病症"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "n_ot_gabapentin",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能引起倦怠"
+        },
+        {
+          "source": "n_ot_gabapentin",
+          "target": "n_rp_gabapentin",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响神经症状"
+        },
+        {
+          "source": "n_rp_gabapentin",
+          "target": "n_adv_gabapentin",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "引发运动控制问题"
+        },
+        {
+          "source": "n_adv_gabapentin",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "对肌肉病可能有负面影响"
+        },
+        {
+          "source": "drug_dopamine",
+          "target": "n_ot_dopamine",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响运动控制"
+        },
+        {
+          "source": "n_ot_dopamine",
+          "target": "n_rp_dopamine",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响运动能力"
+        },
+        {
+          "source": "n_rp_dopamine",
+          "target": "n_adv_dopamine",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能出现运动障碍"
+        },
+        {
+          "source": "n_adv_dopamine",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在加重症状风险"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "n_ot_ciprofloxacin",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响胃肠道功能"
+        },
+        {
+          "source": "n_ot_ciprofloxacin",
+          "target": "n_rp_ciprofloxacin",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "引发运动能力降低"
+        },
+        {
+          "source": "n_rp_ciprofloxacin",
+          "target": "n_adv_ciprofloxacin",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能会导致运动缺失"
+        },
+        {
+          "source": "n_adv_ciprofloxacin",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在加重肌肉病风险"
+        },
+        {
+          "source": "drug_rocuronium",
+          "target": "n_ot_rocuronium",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响肌肉放松机制"
+        },
+        {
+          "source": "n_ot_rocuronium",
+          "target": "n_rp_rocuronium",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "n_rp_rocuronium",
+          "target": "n_adv_rocuronium",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "导致肌肉损失"
+        },
+        {
+          "source": "n_adv_rocuronium",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能会加重肌肉病状"
+        },
+        {
+          "source": "drug_skeletal_muscle_relaxants",
+          "target": "n_ot_skeletal_muscle_relaxants",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响肌肉收缩机制"
+        },
+        {
+          "source": "n_ot_skeletal_muscle_relaxants",
+          "target": "n_rp_skeletal_muscle_relaxants",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "n_rp_skeletal_muscle_relaxants",
+          "target": "n_adv_skeletal_muscle_relaxants",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉无力"
+        },
+        {
+          "source": "n_adv_skeletal_muscle_relaxants",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能加重肌肉问题"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "所有提及药物的机理是否全面考虑与肌肉病相关性",
+      "反应药物在肌病背景下的适应症"
+    ],
+    "falsification_tests": [
+      "是否有证据表明上述药物在肌病患者中安全有效",
+      "是否有临床试验验证药物引起严重不良反应的风险"
+    ],
+    "next_focus_for_pi": [
+      "确定各药物在肌病患者的特定适应症与禁忌",
+      "提出可能的替代药物以降低风险"
+    ]
+  }
+}

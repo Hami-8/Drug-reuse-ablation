@@ -1,0 +1,432 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Noonan syndrome",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_megalostim",
+          "name": "Megalostim"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_thrombopoietin",
+          "name": "Thrombopoietin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_epoetin_alfa",
+          "name": "Epoetin alfa"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_interferon_alpha",
+          "name": "Interferon alpha"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_mesna",
+          "name": "Mesna"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_asparaginase",
+          "name": "Asparaginase"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sirolimus",
+          "name": "Sirolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_vemurafenib",
+          "name": "Vemurafenib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_hydroxyurea",
+          "name": "Hydroxyurea"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_bortezomib",
+          "name": "Bortezomib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_nelarabine",
+          "name": "Nelarabine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_simvastatin",
+          "name": "Simvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_megalostim",
+          "type": "Drug",
+          "label": "Megalostim",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thrombopoietin",
+          "type": "Drug",
+          "label": "Thrombopoietin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_epoetin_alfa",
+          "type": "Drug",
+          "label": "Epoetin alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_interferon_alpha",
+          "type": "Drug",
+          "label": "Interferon alpha",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mesna",
+          "type": "Drug",
+          "label": "Mesna",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_asparaginase",
+          "type": "Drug",
+          "label": "Asparaginase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sirolimus",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vemurafenib",
+          "type": "Drug",
+          "label": "Vemurafenib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydroxyurea",
+          "type": "Drug",
+          "label": "Hydroxyurea",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bortezomib",
+          "type": "Drug",
+          "label": "Bortezomib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nelarabine",
+          "type": "Drug",
+          "label": "Nelarabine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_simvastatin",
+          "type": "Drug",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_3",
+          "type": "Target",
+          "label": "Target3",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_a",
+          "type": "Pathway",
+          "label": "PathwayA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_noonan",
+          "type": "Disease",
+          "label": "Noonan syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_p1",
+          "type": "Phenotype",
+          "label": "Phenotype1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_p2",
+          "type": "Phenotype",
+          "label": "Phenotype2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_megalostim",
+          "target": "target_3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物作用靶点一致"
+        },
+        {
+          "source": "drug_thrombopoietin",
+          "target": "target_3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物作用靶点一致"
+        },
+        {
+          "source": "drug_epoetin_alfa",
+          "target": "target_3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物作用靶点一致"
+        },
+        {
+          "source": "drug_interferon_alpha",
+          "target": "target_3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物作用靶点一致"
+        },
+        {
+          "source": "drug_mesna",
+          "target": "target_3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物作用靶点一致"
+        },
+        {
+          "source": "drug_asparaginase",
+          "target": "target_3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物作用靶点一致"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "target_3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物作用靶点一致"
+        },
+        {
+          "source": "drug_vemurafenib",
+          "target": "target_3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物作用靶点一致"
+        },
+        {
+          "source": "drug_hydroxyurea",
+          "target": "target_3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物作用靶点一致"
+        },
+        {
+          "source": "drug_bortezomib",
+          "target": "target_3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物作用靶点一致"
+        },
+        {
+          "source": "drug_nelarabine",
+          "target": "target_3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物作用靶点一致"
+        },
+        {
+          "source": "drug_simvastatin",
+          "target": "target_3",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "药物作用靶点一致"
+        },
+        {
+          "source": "target_3",
+          "target": "pathway_a",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "靶点参与病理通路"
+        },
+        {
+          "source": "pathway_a",
+          "target": "disease_noonan",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知通路关联Noonan综合征"
+        },
+        {
+          "source": "target_3",
+          "target": "phenotype_p1",
+          "relation": "induces",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "靶点相关性"
+        },
+        {
+          "source": "target_3",
+          "target": "phenotype_p2",
+          "relation": "induces",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "靶点相关性"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "药物通过靶点影响Noonan综合征相关通路和表型",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "这些药物能够通过常规给药途径到达靶器官"
+    ],
+    "uncertainties": [
+      "靶点的特异性和疗效尚需临床验证"
+    ],
+    "next_focus_for_pi": [
+      "需要确认是否有其他药物或靶点的支持性像路径"
+    ]
+  }
+}

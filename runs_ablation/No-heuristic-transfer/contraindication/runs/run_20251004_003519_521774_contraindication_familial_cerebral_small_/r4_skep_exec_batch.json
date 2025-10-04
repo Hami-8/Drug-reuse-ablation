@@ -1,0 +1,721 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Familial cerebral small vessel disease",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "抗血小板药物对小血管病的出血风险影响",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "华法林对小血管病的影响",
+            "expectation": "若存在证据，应加强反对边的标注",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_antiplatelet",
+          "type": "Drug",
+          "label": "Antiplatelet agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dabigatran",
+          "type": "Drug",
+          "label": "Dabigatran",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rivaroxaban",
+          "type": "Drug",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nsaid",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tzd",
+          "type": "Drug",
+          "label": "Thiazolidinediones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fibrinolytics",
+          "type": "Drug",
+          "label": "Fibrinolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_anticonvulsants",
+          "type": "Drug",
+          "label": "Anticonvulsants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fcv",
+          "type": "Disease",
+          "label": "Familial cerebral small vessel disease",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_antiplatelet",
+          "type": "Target",
+          "label": "Off-Target Antiplatelet Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_antiplatelet",
+          "type": "Phenotype",
+          "label": "Increased Risk of Hemorrhage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_warfarin",
+          "type": "Target",
+          "label": "Off-Target Warfarin Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_warfarin",
+          "type": "Phenotype",
+          "label": "Increased Risk of Bleeding",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clopidogrel",
+          "type": "Target",
+          "label": "Off-Target Clopidogrel Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clopidogrel",
+          "type": "Phenotype",
+          "label": "Increased Risk of Hemorrhage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dabigatran",
+          "type": "Target",
+          "label": "Off-Target Dabigatran Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dabigatran",
+          "type": "Phenotype",
+          "label": "Increased Risk of Gastrointestinal Bleeding",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rivaroxaban",
+          "type": "Target",
+          "label": "Off-Target Rivaroxaban Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rivaroxaban",
+          "type": "Phenotype",
+          "label": "Increased Risk of Bleeding",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "Off-Target Aspirin Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aspirin",
+          "type": "Phenotype",
+          "label": "Gastrointestinal Bleeding Risk",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nsaid",
+          "type": "Target",
+          "label": "Off-Target NSAID Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nsaid",
+          "type": "Phenotype",
+          "label": "Increased Risk of Cardiovascular Events",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_antiplatelet",
+          "target": "n_fcv",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抗血小板药物增加出血风险"
+        },
+        {
+          "source": "n_warfarin",
+          "target": "n_fcv",
+          "relation": "contraindication",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "华法林导致出血风险增加"
+        },
+        {
+          "source": "n_clopidogrel",
+          "target": "n_fcv",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "克劳噶西药物导致出血风险增加"
+        },
+        {
+          "source": "n_dabigatran",
+          "target": "n_fcv",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "达比加群可能导致出血风险"
+        },
+        {
+          "source": "n_rivaroxaban",
+          "target": "n_fcv",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "利伐沙班增加出血风险"
+        },
+        {
+          "source": "n_aspirin",
+          "target": "n_fcv",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "阿斯匹林增加出血风险"
+        },
+        {
+          "source": "n_nsaid",
+          "target": "n_fcv",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "非甾体药物增加出血风险"
+        },
+        {
+          "source": "n_tzd",
+          "target": "n_fcv",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响循环，但较少文献支撑"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_fcv",
+          "relation": "associated_with",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与局部病理相关，但非直接禁忌"
+        },
+        {
+          "source": "n_beta_blockers",
+          "target": "n_fcv",
+          "relation": "associated_with",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可用于相关症状，但非直接禁忌"
+        },
+        {
+          "source": "n_fibrinolytics",
+          "target": "n_fcv",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "纤溶药增加出血风险"
+        },
+        {
+          "source": "n_anticonvulsants",
+          "target": "n_fcv",
+          "relation": "associated_with",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能影响症状控制"
+        },
+        {
+          "source": "drug_antiplatelet_agents",
+          "target": "n_ot_antiplatelet",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致旁路作用"
+        },
+        {
+          "source": "n_ot_antiplatelet",
+          "target": "n_adv_antiplatelet",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险增加"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "n_ot_warfarin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的非靶作用"
+        },
+        {
+          "source": "n_ot_warfarin",
+          "target": "n_adv_warfarin",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险增加"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_ot_clopidogrel",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的非靶作用"
+        },
+        {
+          "source": "n_ot_clopidogrel",
+          "target": "n_adv_clopidogrel",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险增加"
+        },
+        {
+          "source": "drug_dabigatran",
+          "target": "n_ot_dabigatran",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的非靶作用"
+        },
+        {
+          "source": "n_ot_dabigatran",
+          "target": "n_adv_dabigatran",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在的消化道出血风险"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "n_ot_rivaroxaban",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的非靶作用"
+        },
+        {
+          "source": "n_ot_rivaroxaban",
+          "target": "n_adv_rivaroxaban",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险增加"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的非靶作用"
+        },
+        {
+          "source": "n_ot_aspirin",
+          "target": "n_adv_aspirin",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "增加胃肠道出血风险"
+        },
+        {
+          "source": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "target": "n_ot_nsaid",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起非靶作用"
+        },
+        {
+          "source": "n_ot_nsaid",
+          "target": "n_adv_nsaid",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能引发心血管事件风险"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_ot_antiplatelet",
+              "type": "Target",
+              "label": "Off-Target Antiplatelet Effects",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_antiplatelet",
+              "type": "Phenotype",
+              "label": "Increased Risk of Hemorrhage",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_ot_warfarin",
+              "type": "Target",
+              "label": "Off-Target Warfarin Effects",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_warfarin",
+              "type": "Phenotype",
+              "label": "Increased Risk of Bleeding",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_ot_clopidogrel",
+              "type": "Target",
+              "label": "Off-Target Clopidogrel Effects",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_clopidogrel",
+              "type": "Phenotype",
+              "label": "Increased Risk of Hemorrhage",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_ot_dabigatran",
+              "type": "Target",
+              "label": "Off-Target Dabigatran Effects",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_dabigatran",
+              "type": "Phenotype",
+              "label": "Increased Risk of Gastrointestinal Bleeding",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_ot_rivaroxaban",
+              "type": "Target",
+              "label": "Off-Target Rivaroxaban Effects",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_rivaroxaban",
+              "type": "Phenotype",
+              "label": "Increased Risk of Bleeding",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_ot_aspirin",
+              "type": "Target",
+              "label": "Off-Target Aspirin Effects",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_aspirin",
+              "type": "Phenotype",
+              "label": "Gastrointestinal Bleeding Risk",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_ot_nsaid",
+              "type": "Target",
+              "label": "Off-Target NSAID Effects",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_nsaid",
+              "type": "Phenotype",
+              "label": "Increased Risk of Cardiovascular Events",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "n_antiplatelet",
+              "target": "n_ot_antiplatelet",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "可能导致旁路作用"
+            },
+            {
+              "source": "n_ot_antiplatelet",
+              "target": "n_adv_antiplatelet",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "可能导致出血风险增加"
+            },
+            {
+              "source": "n_warfarin",
+              "target": "n_ot_warfarin",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "可能的非靶作用"
+            },
+            {
+              "source": "n_ot_warfarin",
+              "target": "n_adv_warfarin",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "出血风险增加"
+            },
+            {
+              "source": "n_clopidogrel",
+              "target": "n_ot_clopidogrel",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "可能的非靶作用"
+            },
+            {
+              "source": "n_ot_clopidogrel",
+              "target": "n_adv_clopidogrel",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "出血风险增加"
+            },
+            {
+              "source": "n_dabigatran",
+              "target": "n_ot_dabigatran",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "可能的非靶作用"
+            },
+            {
+              "source": "n_ot_dabigatran",
+              "target": "n_adv_dabigatran",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "潜在的消化道出血风险"
+            },
+            {
+              "source": "n_rivaroxaban",
+              "target": "n_ot_rivaroxaban",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "可能的非靶作用"
+            },
+            {
+              "source": "n_ot_rivaroxaban",
+              "target": "n_adv_rivaroxaban",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "出血风险增加"
+            },
+            {
+              "source": "n_aspirin",
+              "target": "n_ot_aspirin",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "可能的非靶作用"
+            },
+            {
+              "source": "n_ot_aspirin",
+              "target": "n_adv_aspirin",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "增加胃肠道出血风险"
+            },
+            {
+              "source": "n_nsaid",
+              "target": "n_ot_nsaid",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "可能引起非靶作用"
+            },
+            {
+              "source": "n_ot_nsaid",
+              "target": "n_adv_nsaid",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "可能引发心血管事件风险"
+            }
+          ],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成抗血小板药物及华法林对小血管病出血风险影响的安全性压力测试。"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": []
+  }
+}

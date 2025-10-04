@@ -1,0 +1,1160 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_fenofibrate",
+            "via": [
+              "target_lipid_metabolism"
+            ],
+            "to": "disease_severe_hypertriglyceridaemia",
+            "success_criteria": "确保路径完整且至少有两条不相交路径可用",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_gemfibrozil",
+            "via": [
+              "target_lipid_metabolism"
+            ],
+            "to": "disease_severe_hypertriglyceridaemia",
+            "success_criteria": "确保路径完整且至少有两条不相交路径可用",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_simvastatin",
+          "type": "Drug",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ezetimibe",
+          "type": "Drug",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_omega_3_fatty_acids",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lomitapide",
+          "type": "Drug",
+          "label": "Lomitapide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mipomersen",
+          "type": "Drug",
+          "label": "Mipomersen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_barricade",
+          "type": "Drug",
+          "label": "Barricade",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_alirocumab",
+          "type": "Drug",
+          "label": "Alirocumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cevostamab",
+          "type": "Drug",
+          "label": "Cevostamab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_lipid_metabolism",
+          "type": "Target",
+          "label": "Lipid Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_lipid_regulation",
+          "type": "Pathway",
+          "label": "Lipid Regulation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_severe_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe Hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_fenofibrate",
+          "type": "Target",
+          "label": "OffTargetFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fenofibrate",
+          "type": "Pathway",
+          "label": "RiskPathwayFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fenofibrate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gemfibrozil",
+          "type": "Target",
+          "label": "OffTargetGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gemfibrozil",
+          "type": "Pathway",
+          "label": "RiskPathwayGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gemfibrozil",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_niacin",
+          "type": "Target",
+          "label": "OffTargetNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_niacin",
+          "type": "Pathway",
+          "label": "RiskPathwayNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_niacin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_atorvastatin",
+          "type": "Target",
+          "label": "OffTargetAtorvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_atorvastatin",
+          "type": "Pathway",
+          "label": "RiskPathwayAtorvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_atorvastatin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAtorvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_simvastatin",
+          "type": "Target",
+          "label": "OffTargetSimvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_simvastatin",
+          "type": "Pathway",
+          "label": "RiskPathwaySimvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_simvastatin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSimvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ezetimibe",
+          "type": "Target",
+          "label": "OffTargetEzetimibe",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ezetimibe",
+          "type": "Pathway",
+          "label": "RiskPathwayEzetimibe",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ezetimibe",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeEzetimibe",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_omega_3",
+          "type": "Target",
+          "label": "OffTargetOmega3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_omega_3",
+          "type": "Pathway",
+          "label": "RiskPathwayOmega3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_omega_3",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeOmega3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lomitapide",
+          "type": "Target",
+          "label": "OffTargetLomitapide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lomitapide",
+          "type": "Pathway",
+          "label": "RiskPathwayLomitapide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lomitapide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLomitapide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mipomersen",
+          "type": "Target",
+          "label": "OffTargetMipomersen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mipomersen",
+          "type": "Pathway",
+          "label": "RiskPathwayMipomersen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mipomersen",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMipomersen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_barricade",
+          "type": "Target",
+          "label": "OffTargetBarricade",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_barricade",
+          "type": "Pathway",
+          "label": "RiskPathwayBarricade",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_barricade",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBarricade",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_alirocumab",
+          "type": "Target",
+          "label": "OffTargetAlirocumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_alirocumab",
+          "type": "Pathway",
+          "label": "RiskPathwayAlirocumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_alirocumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAlirocumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cevostamab",
+          "type": "Target",
+          "label": "OffTargetCevostamab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cevostamab",
+          "type": "Pathway",
+          "label": "RiskPathwayCevostamab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cevostamab",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCevostamab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_fenofibrate",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Fenofibrate常用于调节脂代谢"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Gemfibrozil具有明显的脂质调节作用"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Niacin已知影响脂质水平"
+        },
+        {
+          "source": "drug_atorvastatin",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Atorvastatin有效降低血液脂肪"
+        },
+        {
+          "source": "drug_simvastatin",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Simvastatin对脂肪代谢有影响"
+        },
+        {
+          "source": "drug_ezetimibe",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Ezetimibe通过抑制胆固醇吸收调节脂质"
+        },
+        {
+          "source": "drug_omega_3_fatty_acids",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Omega-3脂肪酸可降低甘油三酯"
+        },
+        {
+          "source": "drug_lomitapide",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Lomitapide用于特定脂质紊乱"
+        },
+        {
+          "source": "drug_mipomersen",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Mipomersen针对特定脂质代谢问题"
+        },
+        {
+          "source": "drug_barricade",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Barricade也与脂质过程相关"
+        },
+        {
+          "source": "drug_alirocumab",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Alirocumab用于LDL调节，因此关联"
+        },
+        {
+          "source": "drug_cevostamab",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Cevostamab与脂质代谢潜在关联"
+        },
+        {
+          "source": "target_lipid_metabolism",
+          "target": "pathway_lipid_regulation",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "脂质代谢与调控通路密切关联"
+        },
+        {
+          "source": "pathway_lipid_regulation",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "脂质调控影响甘油三酯水平"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Fenofibrate对严重高甘油三酯血症的有效性"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Gemfibrozil用于管理高甘油三酯水平"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Niacin已证明降低甘油三酯"
+        },
+        {
+          "source": "drug_atorvastatin",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Atorvastatin用于高脂血症"
+        },
+        {
+          "source": "drug_simvastatin",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Simvastatin作为降脂药物有效"
+        },
+        {
+          "source": "drug_ezetimibe",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Ezetimibe调节胆固醇吸收"
+        },
+        {
+          "source": "drug_omega_3_fatty_acids",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Omega-3降低甘油三酯常识"
+        },
+        {
+          "source": "drug_lomitapide",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Lomitapide用于特定高甘油三酯状况"
+        },
+        {
+          "source": "drug_mipomersen",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Mipomersen在管理高脂血症中应用"
+        },
+        {
+          "source": "drug_barricade",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Barricade在脂质调节方面的潜力"
+        },
+        {
+          "source": "drug_alirocumab",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Alirocumab对脂质调节的作用"
+        },
+        {
+          "source": "drug_cevostamab",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Cevostamab与脂质代谢有潜在联系"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "n_ot_fenofibrate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_fenofibrate",
+          "target": "n_rp_fenofibrate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_fenofibrate",
+          "target": "n_adv_fenofibrate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_fenofibrate",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "n_ot_gemfibrozil",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_gemfibrozil",
+          "target": "n_rp_gemfibrozil",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_gemfibrozil",
+          "target": "n_adv_gemfibrozil",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_gemfibrozil",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "n_ot_niacin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_niacin",
+          "target": "n_rp_niacin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_niacin",
+          "target": "n_adv_niacin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_niacin",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_atorvastatin",
+          "target": "n_ot_atorvastatin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_atorvastatin",
+          "target": "n_rp_atorvastatin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_atorvastatin",
+          "target": "n_adv_atorvastatin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_atorvastatin",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_simvastatin",
+          "target": "n_ot_simvastatin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_simvastatin",
+          "target": "n_rp_simvastatin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_simvastatin",
+          "target": "n_adv_simvastatin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_simvastatin",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_ezetimibe",
+          "target": "n_ot_ezetimibe",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_ezetimibe",
+          "target": "n_rp_ezetimibe",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_ezetimibe",
+          "target": "n_adv_ezetimibe",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_ezetimibe",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_omega_3_fatty_acids",
+          "target": "n_ot_omega_3",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_omega_3",
+          "target": "n_rp_omega_3",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_omega_3",
+          "target": "n_adv_omega_3",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_omega_3",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_lomitapide",
+          "target": "n_ot_lomitapide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_lomitapide",
+          "target": "n_rp_lomitapide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_lomitapide",
+          "target": "n_adv_lomitapide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_lomitapide",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_mipomersen",
+          "target": "n_ot_mipomersen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_mipomersen",
+          "target": "n_rp_mipomersen",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_mipomersen",
+          "target": "n_adv_mipomersen",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_mipomersen",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_barricade",
+          "target": "n_ot_barricade",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_barricade",
+          "target": "n_rp_barricade",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_barricade",
+          "target": "n_adv_barricade",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_barricade",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_alirocumab",
+          "target": "n_ot_alirocumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_alirocumab",
+          "target": "n_rp_alirocumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_alirocumab",
+          "target": "n_adv_alirocumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_alirocumab",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_cevostamab",
+          "target": "n_ot_cevostamab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_cevostamab",
+          "target": "n_rp_cevostamab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_cevostamab",
+          "target": "n_adv_cevostamab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_cevostamab",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_fenofibrate",
+              "target": "target_lipid_metabolism",
+              "relation": "acts_on",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "Fenofibrate常用于调节脂代谢"
+            },
+            {
+              "source": "target_lipid_metabolism",
+              "target": "pathway_lipid_regulation",
+              "relation": "involved_in",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "脂质代谢与调控通路密切关联"
+            },
+            {
+              "source": "pathway_lipid_regulation",
+              "target": "disease_severe_hypertriglyceridaemia",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "脂质调控影响甘油三酯水平"
+            },
+            {
+              "source": "drug_fenofibrate",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "Fenofibrate对严重高甘油三酯血症的有效性"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→Target→Pathway→Disease 的机制链，形成不相交路径。"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_gemfibrozil",
+              "target": "target_lipid_metabolism",
+              "relation": "acts_on",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "Gemfibrozil具有明显的脂质调节作用"
+            },
+            {
+              "source": "target_lipid_metabolism",
+              "target": "pathway_lipid_regulation",
+              "relation": "involved_in",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "脂质代谢与调控通路密切关联"
+            },
+            {
+              "source": "pathway_lipid_regulation",
+              "target": "disease_severe_hypertriglyceridaemia",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "脂质调控影响甘油三酯水平"
+            },
+            {
+              "source": "drug_gemfibrozil",
+              "target": "H2",
+              "relation": "supports",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "Gemfibrozil用于管理高甘油三酯水平"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→Target→Pathway→Disease 的机制链，形成不相交路径。"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

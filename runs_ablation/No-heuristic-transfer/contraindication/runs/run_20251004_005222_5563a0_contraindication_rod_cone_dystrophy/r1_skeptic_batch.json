@@ -1,0 +1,415 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Rod-cone dystrophy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_tadalafil",
+          "name": "Tadalafil"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_viagra",
+          "name": "Viagra"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_thioridazine",
+          "name": "Thioridazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_quinine",
+          "name": "Quinine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_clomiphene",
+          "name": "Clomiphene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_fluoroquinolones",
+          "name": "Fluoroquinolones"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_isotretinoin",
+          "name": "Isotretinoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_hydrochlorothiazide",
+          "name": "Hydrochlorothiazide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_clozapine",
+          "name": "Clozapine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_tadalafil",
+          "type": "Target",
+          "label": "OffTargetTadalafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_tadalafil",
+          "type": "Pathway",
+          "label": "RiskPathwayTadalafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tadalafil",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTadalafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sildenafil",
+          "type": "Target",
+          "label": "OffTargetSildenafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sildenafil",
+          "type": "Pathway",
+          "label": "RiskPathwaySildenafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sildenafil",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSildenafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "OffTargetAmiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_amiodarone",
+          "type": "Pathway",
+          "label": "RiskPathwayAmiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_amiodarone",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAmiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "OffTargetCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_corticosteroids",
+          "type": "Pathway",
+          "label": "RiskPathwayCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_corticosteroids",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_tadalafil",
+          "target": "n_ot_tadalafil",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响视网膜色素退化机理"
+        },
+        {
+          "source": "n_ot_tadalafil",
+          "target": "n_rp_tadalafil",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜疾病相关的风险途径"
+        },
+        {
+          "source": "n_rp_tadalafil",
+          "target": "n_adv_tadalafil",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_tadalafil",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_sildenafil",
+          "target": "n_ot_sildenafil",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能对视网膜有不良影响"
+        },
+        {
+          "source": "n_ot_sildenafil",
+          "target": "n_rp_sildenafil",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜疾病相关的风险途径"
+        },
+        {
+          "source": "n_rp_sildenafil",
+          "target": "n_adv_sildenafil",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_sildenafil",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响眼部组织"
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp_amiodarone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜疾病相关的风险途径"
+        },
+        {
+          "source": "n_rp_amiodarone",
+          "target": "n_adv_amiodarone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_amiodarone",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "有潜在视网膜影响"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp_corticosteroids",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜疾病相关的风险途径"
+        },
+        {
+          "source": "n_rp_corticosteroids",
+          "target": "n_adv_corticosteroids",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_corticosteroids",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "drug_effects_on_retina",
+          "pro_nodes": [
+            "H1",
+            "H2",
+            "H4",
+            "H5"
+          ],
+          "con_nodes": [
+            "n_adv_tadalafil",
+            "n_adv_sildenafil",
+            "n_adv_amiodarone",
+            "n_adv_corticosteroids"
+          ],
+          "note": "不同药物对视网膜的影响效果存在冲突"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "已知药物对视网膜可产生不利影响",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "可能引发或加重视网膜病变风险",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物对视网膜的具体作用机制是否清晰",
+      "药物的安全性与有效性是否经过充分验证"
+    ],
+    "falsification_tests": [
+      "是否有临床数据支持这些药物对视网膜疾病的影响？",
+      "是否存在关于视网膜疾病患者与这些药物相互作用的具体研究？"
+    ],
+    "next_focus_for_pi": [
+      "需提供不同药物在视网膜状态下的具体安全性数据",
+      "需调查药物对视网膜的长期影响及机制"
+    ]
+  }
+}

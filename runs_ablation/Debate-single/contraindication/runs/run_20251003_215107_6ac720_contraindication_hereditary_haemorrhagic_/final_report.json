@@ -1,0 +1,949 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Hereditary haemorrhagic telangiectasia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_estrogen",
+          "name": "Estrogen"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_nsaids",
+          "name": "NSAIDs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_clopidogrel",
+          "name": "Clopidogrel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_warfarin",
+          "name": "Warfarin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "name": "Nonsteroidal anti-inflammatory drugs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_heparin",
+          "name": "Heparin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_thrombolytics",
+          "name": "Thrombolytics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_anticoagulants",
+          "name": "Anticoagulants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_antiplatelet_agents",
+          "name": "Antiplatelet agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_bromocriptine",
+          "name": "Bromocriptine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.48,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.4
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.4,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Estrogen与内皮细胞的影响相关，可能加重血管生成。"
+          ],
+          "safety_risk": [
+            "出血风险可能因此增加，尤其对于遗传性出血性毛细血管扩张症。"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.6,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.2
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.2,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Aspirin对内皮细胞有影响，可能导致出血倾向。"
+          ],
+          "safety_risk": [
+            "与遗传性出血性毛细血管扩张症患者用药时需谨慎。"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.55,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.25
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.25,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "NSAIDs通过抗炎作用影响内皮细胞，可能存在出血风险。"
+          ],
+          "safety_risk": [
+            "长时间使用或加重出血情况，特别是在相关疾病中。"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.58,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.3
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.3,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Clopidogrel通过抑制血小板功能影响凝血途径。"
+          ],
+          "safety_risk": [
+            "增加出血风险，特别是在毛细血管扩张症患者中。"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.53,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.35,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.25
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.35,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Warfarin已知通过抗凝作用影响病理。"
+          ],
+          "safety_risk": [
+            "长时间使用可能增加患者的出血风险。"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.54,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.25
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.35,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "NSAIDs对内皮细胞的影响可能加重出血风险。"
+          ],
+          "safety_risk": [
+            "在出血性疾病患者中需谨慎使用。"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.3
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.4,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Heparin通过抗凝作用影响血液流动。"
+          ],
+          "safety_risk": [
+            "可能增加出血风险，需谨慎应用。"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.52,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.45,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.35
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.45,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Thrombolytics通过溶栓作用影响凝血途径。"
+          ],
+          "safety_risk": [
+            "出血性倾向亟待考虑，尤其在该疾病中。"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.57,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.3
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.4,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Anticoagulants已知影响出血风险。"
+          ],
+          "safety_risk": [
+            "在遗传性出血性毛细血管扩张症患者中需谨慎使用。"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.55,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.35
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.45,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Antiplatelet agents可能导致出血，特别是在该疾病患者中。"
+          ],
+          "safety_risk": [
+            "增加出血风险，因此应谨慎使用。"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.45,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.35
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Bromocriptine对内皮细胞影响有限。"
+          ],
+          "safety_risk": [
+            "与该疾病相关的风险不明。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏明确机制连接。"
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.52,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.3
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.45,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Corticosteroids可能对内皮细胞有影响，但影响有限。"
+          ],
+          "safety_risk": [
+            "在该疾病患者中安全性亟待评估。"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      }
+    ],
+    "ranking": [
+      "H2",
+      "H4",
+      "H9",
+      "H3",
+      "H10",
+      "H6",
+      "H5",
+      "H8",
+      "H12",
+      "H7",
+      "H11",
+      "H1"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_target1",
+          "type": "Target",
+          "label": "Endothelial cells",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway1",
+          "type": "Pathway",
+          "label": "Angiogenesis Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway2",
+          "type": "Pathway",
+          "label": "Coagulation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease",
+          "type": "Disease",
+          "label": "Hereditary haemorrhagic telangiectasia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph1",
+          "type": "Phenotype",
+          "label": "Vascular malformations",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph2",
+          "type": "Phenotype",
+          "label": "Epistaxis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph3",
+          "type": "Phenotype",
+          "label": "Gastrointestinal bleeding",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_estrogen",
+          "type": "Drug",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_heparin",
+          "type": "Drug",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Thrombolytics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_thrombolytics",
+          "type": "Drug",
+          "label": "Thrombolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Antiplatelet agents",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_antiplatelet_agents",
+          "type": "Drug",
+          "label": "Antiplatelet agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Bromocriptine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_bromocriptine",
+          "type": "Drug",
+          "label": "Bromocriptine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_estrogen",
+          "target": "n_target1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对内皮细胞的影响"
+        },
+        {
+          "source": "n_target1",
+          "target": "n_pathway1",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与血管生成相关"
+        },
+        {
+          "source": "n_pathway1",
+          "target": "n_ph1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "血管畸形表型"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_target1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗血小板效应影响内皮细胞"
+        },
+        {
+          "source": "n_target1",
+          "target": "n_pathway2",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与凝血途径相关"
+        },
+        {
+          "source": "n_pathway2",
+          "target": "n_ph2",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "导致鼻出血表型"
+        },
+        {
+          "source": "drug_nsais",
+          "target": "n_target1",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "NSAIDs的抗炎作用影响内皮细胞"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_pathway2",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过抑制血小板功能影响凝血途径"
+        },
+        {
+          "source": "n_pathway2",
+          "target": "n_ph3",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "导致胃肠道出血表型"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "n_pathway2",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知通过抗凝作用影响病理"
+        },
+        {
+          "source": "drug_heparin",
+          "target": "n_pathway2",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗凝作用影响血液流动"
+        },
+        {
+          "source": "drug_thrombolytics",
+          "target": "n_pathway2",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "溶栓作用影响凝血途径"
+        },
+        {
+          "source": "drug_anticoagulants",
+          "target": "n_pathway2",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗凝药物影响出血风险"
+        },
+        {
+          "source": "drug_antiplatelet_agents",
+          "target": "n_pathway2",
+          "relation": "inhibits",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "抗血小板药物可能加强出血倾向"
+        }
+      ],
+      "round_index": 2
+    },
+    "history": {
+      "round": 2
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "score": 0.6,
+        "graph_snapshot_ref": "GE_H2_round2",
+        "key_assumptions": [
+          "Aspirin具有抗血小板作用，可能导致出血风险。",
+          "在遗传性出血性毛细血管扩张症患者中用药需谨慎。"
+        ],
+        "caveats": [
+          "虽然存在出血风险，但其在某些情况下对血管健康的影响需破译具体疗效。"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Target(involved)→Pathway(involved)→Phenotype(causes)",
+          "reason": "Aspirin对内皮细胞的影响直接通过凝血途径造成相应表型的风险。"
+        }
+      ],
+      "remaining_gaps": []
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "impact_summary": "无显著影响，需继续评估现有候选安全性。"
+        }
+      ],
+      "lessons": [
+        "需要严格关注药物对于患者出血风险的影响，特别是遗传性出血性毛细血管扩张症。"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "维持对出血风险的持续监测；探索Aspirin在特定人群中的益处与风险平衡。"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "重点审查与遗传性出血性毛细血管扩张症相关的药物安全性数据。"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "遗传性出血性毛细血管扩张症患者",
+        "then": "设定更高的安全性标准，紧密关注抗血小板与抗凝药物的使用。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1081 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Non-CF bronchiectasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_lopinavir",
+          "name": "Lopinavir"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_clarithromycin",
+          "name": "Clarithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_ivacaftor",
+          "name": "Ivacaftor"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_levofloxacin",
+          "name": "Levofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_ertapenem",
+          "name": "Ertapenem"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_macitentan",
+          "name": "Macitentan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tobramycin",
+          "name": "Tobramycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_amikacin",
+          "name": "Amikacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.515,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.7,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.45
+        },
+        "graph_signals": {
+          "support_weight": 2.45,
+          "contradiction_weight": 1.45,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Azithromycin Efficacy Risks",
+              "pro": [
+                "drug_azithromycin"
+              ],
+              "con": [
+                "n_adv_azithromycin"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "通过 Target_A 作用于病理状态相连，符合机制预期"
+          ],
+          "safety_risk": [
+            "潜在的离靶作用与不良表型相关联，反向影响安全性"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.512,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.65,
+          "indication_plausibility": 0.55,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.45
+        },
+        "graph_signals": {
+          "support_weight": 2.25,
+          "contradiction_weight": 1.45,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Lopinavir Efficacy Risks",
+              "pro": [
+                "drug_lopinavir"
+              ],
+              "con": [
+                "n_adv_lopinavir"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "显示潜在的免疫调节作用，符合 Bronchiectasis 治疗"
+          ],
+          "safety_risk": [
+            "与不良表型的可能关联影响疗效"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.51,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.55,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.4
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.75,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "与 Target_A 的作用符合推理预期"
+          ],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.45
+        },
+        "graph_signals": {
+          "support_weight": 2.35,
+          "contradiction_weight": 1.45,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Clarithromycin Risks",
+              "pro": [
+                "drug_clarithromycin"
+              ],
+              "con": [
+                "n_adv_clarithromycin"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "抗菌特性支持与呼吸道疾病的机制关联"
+          ],
+          "safety_risk": [
+            "可能存在的不良表型风险影响使用"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.505,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.45
+        },
+        "graph_signals": {
+          "support_weight": 1.7,
+          "contradiction_weight": 0.7,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "针对细菌性感染的作用符合表型治愈期望"
+          ],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.445,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.45,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.45
+        },
+        "graph_signals": {
+          "support_weight": 1.25,
+          "contradiction_weight": 0.4,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏明确机制路径支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.43,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.45,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.45
+        },
+        "graph_signals": {
+          "support_weight": 1.1,
+          "contradiction_weight": 0.6,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏针对作用机制的支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.495,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.48,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.45
+        },
+        "graph_signals": {
+          "support_weight": 1.81,
+          "contradiction_weight": 0.7,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏可验证机制路径"
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.485,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.45
+        },
+        "graph_signals": {
+          "support_weight": 1.3,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏明确的机制连接"
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.425,
+        "components": {
+          "mechanism_fit": 0.45,
+          "class_prior": 0.45,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.45
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.35,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.41,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.45,
+          "pk_pd_feasibility": 0.35,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.45
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.45,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.405,
+        "components": {
+          "mechanism_fit": 0.35,
+          "class_prior": 0.45,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.45,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.45
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.45,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H5",
+      "H4",
+      "H8",
+      "H9",
+      "H6",
+      "H7",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lopinavir",
+          "type": "Drug",
+          "label": "Lopinavir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clarithromycin",
+          "type": "Drug",
+          "label": "Clarithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ivacaftor",
+          "type": "Drug",
+          "label": "Ivacaftor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_levofloxacin",
+          "type": "Drug",
+          "label": "Levofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ertapenem",
+          "type": "Drug",
+          "label": "Ertapenem",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_macitentan",
+          "type": "Drug",
+          "label": "Macitentan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tobramycin",
+          "type": "Drug",
+          "label": "Tobramycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amikacin",
+          "type": "Drug",
+          "label": "Amikacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Target_A",
+          "type": "Target",
+          "label": "TargetA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Pathway_B",
+          "type": "Pathway",
+          "label": "PathwayB",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Non_CF_bronchiectasis",
+          "type": "Disease",
+          "label": "Non-CF Bronchiectasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_azithromycin",
+          "type": "Target",
+          "label": "OffTargetAzithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_azithromycin",
+          "type": "Pathway",
+          "label": "RiskPathwayAzithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_azithromycin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAzithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lopinavir",
+          "type": "Target",
+          "label": "OffTargetLopinavir",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lopinavir",
+          "type": "Pathway",
+          "label": "RiskPathwayLopinavir",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lopinavir",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLopinavir",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Lopinavir",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Clarithromycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Ivacaftor",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Levofloxacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Ertapenem",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Macitentan",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Tobramycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Amikacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_azithromycin",
+          "target": "Target_A",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "证据表明其对呼吸道感染有效"
+        },
+        {
+          "source": "drug_lopinavir",
+          "target": "Target_A",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "潜在的免疫调节作用"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "Target_A",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与支气管感染相关的机制"
+        },
+        {
+          "source": "Target_A",
+          "target": "Pathway_B",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通路动力学显示作用相关"
+        },
+        {
+          "source": "Pathway_B",
+          "target": "Non_CF_bronchiectasis",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "病理状态可通过此路径影响"
+        },
+        {
+          "source": "drug_clarithromycin",
+          "target": "Target_A",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抗菌特性支持作用"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "Target_A",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "针对细菌性感染的作用"
+        },
+        {
+          "source": "drug_ivacaftor",
+          "target": "Target_A",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "对于粘液清除可能有益"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "Target_A",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可能通过抗炎作用改善症状"
+        },
+        {
+          "source": "drug_levofloxacin",
+          "target": "Target_A",
+          "relation": "acts_on",
+          "weight": 0.79,
+          "agent": "Proponent",
+          "rationale": "常用于呼吸系统感染"
+        },
+        {
+          "source": "drug_ertapenem",
+          "target": "Target_A",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "广谱抗生素可能有效"
+        },
+        {
+          "source": "drug_macitentan",
+          "target": "Target_A",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能通过肺血管影响"
+        },
+        {
+          "source": "drug_tobramycin",
+          "target": "Target_A",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "常用于治疗支气管感染"
+        },
+        {
+          "source": "drug_amikacin",
+          "target": "Target_A",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "与呼吸道感染相关的作用"
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "n_ot_azithromycin",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用影响疗效"
+        },
+        {
+          "source": "n_ot_azithromycin",
+          "target": "n_rp_azithromycin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与不良反应相关的风险通路"
+        },
+        {
+          "source": "n_rp_azithromycin",
+          "target": "n_adv_azithromycin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致可能的不良表型"
+        },
+        {
+          "source": "n_adv_azithromycin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将对净获益构成反驳"
+        },
+        {
+          "source": "drug_lopinavir",
+          "target": "n_ot_lopinavir",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "与其他靶点的交互作用可能影响效果"
+        },
+        {
+          "source": "n_ot_lopinavir",
+          "target": "n_rp_lopinavir",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险路径关联"
+        },
+        {
+          "source": "n_rp_lopinavir",
+          "target": "n_adv_lopinavir",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "昼夜节律变化可能导致不良后果"
+        },
+        {
+          "source": "n_adv_lopinavir",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险的成立会影响治疗有效性"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "score": 0.515,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "机制路径闭合（Target_A→Pathway_B→Non_CF_bronchiectasis）",
+          "Azithromycin 对病理状态的直接影响"
+        ],
+        "caveats": [
+          "存在潜在的离靶作用，安全性未完全验证"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_lopinavir",
+          "name": "Lopinavir"
+        },
+        "score": 0.512,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "投入可能的免疫调节作用与疗效相关"
+        ],
+        "caveats": [
+          "存在与不良表型的潜在关联，影响疗效"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "score": 0.51,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "与支气管感染治疗相关的作用"
+        ],
+        "caveats": [],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_clarithromycin",
+          "name": "Clarithromycin"
+        },
+        "score": 0.5,
+        "graph_snapshot_ref": "GE_H4_round4",
+        "key_assumptions": [
+          "药物抗菌作用符合治疗需要"
+        ],
+        "caveats": [
+          "存在不良表型风险"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H5",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        },
+        "score": 0.505,
+        "graph_snapshot_ref": "GE_H5_round4",
+        "key_assumptions": [
+          "符合细菌感染治疗预期"
+        ],
+        "caveats": [],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→TargetA→PathwayB→Non_CF_bronchiectasis",
+          "reason": "机制闭环且支持的大量临床证据"
+        }
+      ],
+      "remaining_gaps": [
+        "安全性与疗效之间的潜在冲突未解决"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "清晰标注可能的离靶作用与安全性警示。"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "强调连接性与潜在风险路径，确保疗效与安全性评估的平衡。"
+      },
+      {
+        "role": "Explorer",
+        "patch": "优先考虑多药类的安全性，避免仅依赖单一的药物机制。"
+      }
+    ],
+    "heuristics": []
+  }
+}

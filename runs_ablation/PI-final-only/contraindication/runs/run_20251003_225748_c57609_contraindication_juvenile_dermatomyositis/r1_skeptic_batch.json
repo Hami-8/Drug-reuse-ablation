@@ -1,0 +1,606 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Juvenile dermatomyositis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_chloroquine",
+          "name": "Chloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_hydroxychloroquine",
+          "name": "Hydroxychloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_penicillamine",
+          "name": "Penicillamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_immunosuppressants",
+          "name": "Immunosuppressants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_tetracycline",
+          "name": "Tetracycline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ace_inhibitors",
+          "name": "ACE inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_biologics",
+          "name": "Biologics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_chloroquine",
+          "type": "Target",
+          "label": "Chloroquine Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_hydroxychloroquine",
+          "type": "Target",
+          "label": "Hydroxychloroquine Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_penicillamine",
+          "type": "Target",
+          "label": "Penicillamine Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "Corticosteroids Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "Methotrexate Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclophosphamide",
+          "type": "Target",
+          "label": "Cyclophosphamide Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_immunosuppressants",
+          "type": "Target",
+          "label": "Immunosuppressants Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_azathioprine",
+          "type": "Target",
+          "label": "Azathioprine Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mycophenolate_mofetil",
+          "type": "Target",
+          "label": "Mycophenolate mofetil Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tetracycline",
+          "type": "Target",
+          "label": "Tetracycline Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ace_inhibitors",
+          "type": "Target",
+          "label": "ACE Inhibitors Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_biologics",
+          "type": "Target",
+          "label": "Biologics Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_jdm",
+          "type": "Pathway",
+          "label": "Risk Pathway in Juvenile Dermatomyositis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_reaction",
+          "type": "Phenotype",
+          "label": "Adverse Reactions in Juvenile Dermatomyositis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_chloroquine",
+          "target": "n_ot_chloroquine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发副作用导致病症加重"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "n_ot_hydroxychloroquine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发副作用导致病症加重"
+        },
+        {
+          "source": "drug_penicillamine",
+          "target": "n_ot_penicillamine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发副作用导致病症加重"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发副作用导致病症加重"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发副作用导致病症加重"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_ot_cyclophosphamide",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发副作用导致病症加重"
+        },
+        {
+          "source": "drug_immunosuppressants",
+          "target": "n_ot_immunosuppressants",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发副作用导致病症加重"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_ot_azathioprine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发副作用导致病症加重"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "n_ot_mycophenolate_mofetil",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发副作用导致病症加重"
+        },
+        {
+          "source": "drug_tetracycline",
+          "target": "n_ot_tetracycline",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发副作用导致病症加重"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "n_ot_ace_inhibitors",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发副作用导致病症加重"
+        },
+        {
+          "source": "drug_biologics",
+          "target": "n_ot_biologics",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发副作用导致病症加重"
+        },
+        {
+          "source": "n_ot_chloroquine",
+          "target": "n_rp_jdm",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与疾病风险通路关联"
+        },
+        {
+          "source": "n_ot_hydroxychloroquine",
+          "target": "n_rp_jdm",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与疾病风险通路关联"
+        },
+        {
+          "source": "n_ot_penicillamine",
+          "target": "n_rp_jdm",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与疾病风险通路关联"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp_jdm",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与疾病风险通路关联"
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp_jdm",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与疾病风险通路关联"
+        },
+        {
+          "source": "n_ot_cyclophosphamide",
+          "target": "n_rp_jdm",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与疾病风险通路关联"
+        },
+        {
+          "source": "n_ot_immunosuppressants",
+          "target": "n_rp_jdm",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与疾病风险通路关联"
+        },
+        {
+          "source": "n_ot_azathioprine",
+          "target": "n_rp_jdm",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与疾病风险通路关联"
+        },
+        {
+          "source": "n_ot_mycophenolate_mofetil",
+          "target": "n_rp_jdm",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与疾病风险通路关联"
+        },
+        {
+          "source": "n_ot_tetracycline",
+          "target": "n_rp_jdm",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与疾病风险通路关联"
+        },
+        {
+          "source": "n_ot_ace_inhibitors",
+          "target": "n_rp_jdm",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与疾病风险通路关联"
+        },
+        {
+          "source": "n_ot_biologics",
+          "target": "n_rp_jdm",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与疾病风险通路关联"
+        },
+        {
+          "source": "n_rp_jdm",
+          "target": "n_adv_reaction",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_reaction",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在益处"
+        },
+        {
+          "source": "n_adv_reaction",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在益处"
+        },
+        {
+          "source": "n_adv_reaction",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在益处"
+        },
+        {
+          "source": "n_adv_reaction",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在益处"
+        },
+        {
+          "source": "n_adv_reaction",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在益处"
+        },
+        {
+          "source": "n_adv_reaction",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在益处"
+        },
+        {
+          "source": "n_adv_reaction",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在益处"
+        },
+        {
+          "source": "n_adv_reaction",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在益处"
+        },
+        {
+          "source": "n_adv_reaction",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在益处"
+        },
+        {
+          "source": "n_adv_reaction",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在益处"
+        },
+        {
+          "source": "n_adv_reaction",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在益处"
+        },
+        {
+          "source": "n_adv_reaction",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "药物副作用与疾病恶化的冲突",
+          "pro_nodes": [
+            "H1",
+            "H2",
+            "H3",
+            "H4",
+            "H5",
+            "H6",
+            "H7",
+            "H8",
+            "H9",
+            "H10",
+            "H11",
+            "H12"
+          ],
+          "con_nodes": [
+            "n_adv_reaction"
+          ],
+          "note": "药物益处与副作用的冲突"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "可能导致未预见的副作用",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "可能加重疾病症状",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "所有药物在患有Juvenile dermatomyositis患者中均安全",
+      "药物作用机制是否适用于该患者群体"
+    ],
+    "falsification_tests": [
+      "是否存在对该疾病致敏的药物使用历史？",
+      "是否有特定的生化标志物显示出药物不良反应的风险？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供更多针对特定药物的安全性数据",
+      "对冲突热点进行进一步研究以降低潜在风险"
+    ]
+  }
+}

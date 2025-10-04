@@ -1,0 +1,604 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Atypical haemolytic uraemic syndrome",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_eculizumab",
+            "via": [
+              "target_cd5"
+            ],
+            "to": "d_a_hus",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_ravulizumab",
+            "via": [
+              "target_cd5"
+            ],
+            "to": "d_a_hus",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ravulizumab",
+          "type": "Drug",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_aflibercept",
+          "type": "Drug",
+          "label": "Aflibercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_copanlisib",
+          "type": "Drug",
+          "label": "Copanlisib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_belimumab",
+          "type": "Drug",
+          "label": "Belimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sunitinib",
+          "type": "Drug",
+          "label": "Sunitinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_a_hus",
+          "type": "Disease",
+          "label": "Atypical haemolytic uraemic syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_cd5",
+          "type": "Target",
+          "label": "CD5",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_inhibition",
+          "type": "Pathway",
+          "label": "Inhibition Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_eculizumab",
+          "type": "Target",
+          "label": "OffTarget_Eculizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_eculizumab",
+          "type": "Pathway",
+          "label": "RiskPathway_Eculizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_eculizumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Eculizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ravulizumab",
+          "type": "Target",
+          "label": "OffTarget_Ravulizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ravulizumab",
+          "type": "Pathway",
+          "label": "RiskPathway_Ravulizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ravulizumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Ravulizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aflibercept",
+          "type": "Target",
+          "label": "OffTarget_Aflibercept",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aflibercept",
+          "type": "Pathway",
+          "label": "RiskPathway_Aflibercept",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aflibercept",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Aflibercept",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Aflibercept",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Copanlisib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Belimumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Sunitinib",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_eculizumab",
+          "target": "target_cd5",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Eculizumab对CD5的已知作用"
+        },
+        {
+          "source": "drug_ravulizumab",
+          "target": "target_cd5",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Ravulizumab对CD5的已知作用"
+        },
+        {
+          "source": "drug_aflibercept",
+          "target": "pathway_inhibition",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有文献支持其通过通路抑制影响疾病"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "pathway_inhibition",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "普遍接受的药理作用"
+        },
+        {
+          "source": "drug_plasmapheresis",
+          "target": "d_a_hus",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过血液净化机制支持疾病改善"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "pathway_inhibition",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "推测作用于相关免疫通路"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "target_cd5",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "有研究表明其对CD5的抑制作用"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "pathway_inhibition",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "推测作用于抑制免疫途径"
+        },
+        {
+          "source": "drug_copanlisib",
+          "target": "pathway_inhibition",
+          "relation": "modulates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "潜在影响相关的细胞通路"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "pathway_inhibition",
+          "relation": "modulates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "文献中表明对相关免疫途径的影响"
+        },
+        {
+          "source": "drug_belimumab",
+          "target": "pathway_inhibition",
+          "relation": "modulates",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能有助于症状改善"
+        },
+        {
+          "source": "drug_sunitinib",
+          "target": "pathway_inhibition",
+          "relation": "modulates",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "推测可影响血管生成相关通路"
+        },
+        {
+          "source": "d_a_hus",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "药物对疾病的已知效用"
+        },
+        {
+          "source": "d_a_hus",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "药物对疾病的已知效用"
+        },
+        {
+          "source": "drug_eculizumab",
+          "target": "n_ot_eculizumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用"
+        },
+        {
+          "source": "n_ot_eculizumab",
+          "target": "n_rp_eculizumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_eculizumab",
+          "target": "n_adv_eculizumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_eculizumab",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险成立将抵消净获益"
+        },
+        {
+          "source": "drug_ravulizumab",
+          "target": "n_ot_ravulizumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用"
+        },
+        {
+          "source": "n_ot_ravulizumab",
+          "target": "n_rp_ravulizumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_ravulizumab",
+          "target": "n_adv_ravulizumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ravulizumab",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险成立将抵消净获益"
+        },
+        {
+          "source": "drug_aflibercept",
+          "target": "n_ot_aflibercept",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用"
+        },
+        {
+          "source": "n_ot_aflibercept",
+          "target": "n_rp_aflibercept",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_aflibercept",
+          "target": "n_adv_aflibercept",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_aflibercept",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险成立将抵消净获益"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_eculizumab",
+              "target": "target_cd5",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "Eculizumab对CD5的已知作用"
+            },
+            {
+              "source": "target_cd5",
+              "target": "d_a_hus",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "CD5与典型血尿综合症相关"
+            },
+            {
+              "source": "drug_eculizumab",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "药物对疾病的已知效用"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→Target→Disease，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

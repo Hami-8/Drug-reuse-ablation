@@ -1,0 +1,805 @@
+{
+  "input": {
+    "mode": "revise",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ace_inhibitors",
+          "type": "Drug",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiazide_diuretics",
+          "type": "Drug",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_primary_ciliary_dyskinesia",
+          "type": "Disease",
+          "label": "Primary ciliary dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_inflammation",
+          "type": "Target",
+          "label": "Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_bronchial_response",
+          "type": "Target",
+          "label": "Bronchial response",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_inflammatory_pathways",
+          "type": "Pathway",
+          "label": "Inflammatory pathways",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_respiratory_system",
+          "type": "Pathway",
+          "label": "Respiratory system pathways",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗炎效果证明"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "同类药物的炎症调节作用"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "target_bronchial_response",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "利尿作用可能影响呼吸功能"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知的强效抗炎药物"
+        },
+        {
+          "source": "drug_statins",
+          "target": "pathway_inflammatory_pathways",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与心血管相关的抗炎作用"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "target_bronchial_response",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "改善气道反应性"
+        },
+        {
+          "source": "pathway_inflammatory_pathways",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与呼吸道相关的炎症通路"
+        },
+        {
+          "source": "pathway_respiratory_system",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "影响此病症的主要生理通路"
+        },
+        {
+          "source": "drug_anticoagulants",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能影响多种炎症反应"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "强效对抗炎症的常用药物"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "pathway_inflammatory_pathways",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "治疗自免疾病中的抗炎作用"
+        },
+        {
+          "source": "drug_thiazide_diuretics",
+          "target": "target_bronchial_response",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能通过液体管理影响气道"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "抗炎效果被广泛接受"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "target_bronchial_response",
+          "relation": "modulates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "ACE 抑制剂可能对呼吸系统有影响"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_statins",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_anticoagulants",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_thiazide_diuretics",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        }
+      ],
+      "round_index": 3
+    },
+    "history": {
+      "round": 3,
+      "last_scores": [
+        {
+          "hypothesis_id": "H1",
+          "score": 0.53,
+          "components": {
+            "mechanism_fit": 0.8,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.6,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.08
+          },
+          "graph_signals": {
+            "support_weight": 0.8,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Aspirin显示出抗炎作用，与炎症相关的通路直接相关。"
+            ],
+            "safety_risk": [
+              "未显示出有确凿的禁忌证据。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H2",
+          "score": 0.55,
+          "components": {
+            "mechanism_fit": 0.8,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.6,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.08
+          },
+          "graph_signals": {
+            "support_weight": 0.75,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Ibuprofen同样显示出强效的抗炎作用"
+            ],
+            "safety_risk": [
+              "也未显示出有确凿的禁忌证据。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H3",
+          "score": 0.48,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.08
+          },
+          "graph_signals": {
+            "support_weight": 0.6,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Furosemide可能通过影响气道反应性而受益，但机制不如前两者明确。"
+            ],
+            "safety_risk": [
+              "未显示出明显的禁忌症。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H4",
+          "score": 0.62,
+          "components": {
+            "mechanism_fit": 0.8,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.7,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.08
+          },
+          "graph_signals": {
+            "support_weight": 0.7,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Prednisone作为强效抗炎药，直接相关。"
+            ],
+            "safety_risk": [
+              "未显示出明显的禁忌症。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H5",
+          "score": 0.5,
+          "components": {
+            "mechanism_fit": 0.7,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.08
+          },
+          "graph_signals": {
+            "support_weight": 0.65,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Statins在炎症的调节中显示相关益处。"
+            ],
+            "safety_risk": [
+              "未显示出明显的禁忌症。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H6",
+          "score": 0.5,
+          "components": {
+            "mechanism_fit": 0.7,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.08
+          },
+          "graph_signals": {
+            "support_weight": 0.55,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Beta-blockers可能改善气道反应性。"
+            ],
+            "safety_risk": [
+              "未显示出明显的禁忌症。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H7",
+          "score": 0.49,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.08
+          },
+          "graph_signals": {
+            "support_weight": 0.5,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "ACE抑制剂可能对呼吸道有影响，但机制不如前者明确。"
+            ],
+            "safety_risk": [
+              "未显示出明显的禁忌症。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H8",
+          "score": 0.45,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.4,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.08
+          },
+          "graph_signals": {
+            "support_weight": 0.45,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "抗凝血药物对炎症有影响，但不如上面几种药物直接相关。"
+            ],
+            "safety_risk": [
+              "未显示出明显的禁忌症。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H9",
+          "score": 0.65,
+          "components": {
+            "mechanism_fit": 0.9,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.7,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.08
+          },
+          "graph_signals": {
+            "support_weight": 0.85,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Corticosteroids已知具备强效抗炎功效。"
+            ],
+            "safety_risk": [
+              "未显示出明显的禁忌症。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H10",
+          "score": 0.32,
+          "components": {
+            "mechanism_fit": 0.4,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.3,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.08
+          },
+          "graph_signals": {
+            "support_weight": 0.4,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 0,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Methotrexate的抗炎作用不如其他药物明确。"
+            ],
+            "safety_risk": [
+              "未显示出明显的禁忌症。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H11",
+          "score": 0.39,
+          "components": {
+            "mechanism_fit": 0.4,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.3,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.08
+          },
+          "graph_signals": {
+            "support_weight": 0.5,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 0,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Thiazide利尿药的相关机制不如其他药物明确。"
+            ],
+            "safety_risk": [
+              "未显示出明显的禁忌症。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H12",
+          "score": 0.5,
+          "components": {
+            "mechanism_fit": 0.7,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.08
+          },
+          "graph_signals": {
+            "support_weight": 0.55,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "NSAIDs的抗炎功效得到广泛认可。"
+            ],
+            "safety_risk": [
+              "未显示出明显的禁忌症。"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        }
+      ]
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "revisions": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_aspirin",
+            "via": [
+              "target_inflammation"
+            ],
+            "to": "disease_primary_ciliary_dyskinesia",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "Primary ciliary dyskinesia",
+            "expectation": "若发现禁忌，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ],
+        "debate_focus": [
+          "探讨Aspirin在此病症中的长期影响及安全性",
+          "影响气道功能的不同药理作用机制"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_ibuprofen",
+            "via": [
+              "target_inflammation"
+            ],
+            "to": "disease_primary_ciliary_dyskinesia",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "Primary ciliary dyskinesia",
+            "expectation": "若发现禁忌，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ],
+        "debate_focus": [
+          "探讨Ibuprofen在此病症中的长期影响及安全性",
+          "气道反应性改善机制的可验证性"
+        ]
+      }
+    ],
+    "pruned_hypotheses": [],
+    "new_subhypotheses": [],
+    "seed_request": {
+      "should_regenerate": false,
+      "reason": "存在足够支持的机制路径，且无确凿禁忌证据，优先修订现有条目。",
+      "n": 4
+    }
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_dornase_alfa",
+            "via": [
+              "n_tgf_beta",
+              "n_inflammation_pathway"
+            ],
+            "to": "n_mucociliary_dysfunction",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_tobramycin",
+            "via": [
+              "n_infection"
+            ],
+            "to": "n_mucociliary_dysfunction",
+            "success_criteria": "确认抗感染对改善粘液功能的间接作用",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_montelukast",
+          "type": "Drug",
+          "label": "Montelukast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lisinopril",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_roflumilast",
+          "type": "Drug",
+          "label": "Roflumilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_salbutamol",
+          "type": "Drug",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bosentan",
+          "type": "Drug",
+          "label": "Bosentan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tobramycin",
+          "type": "Drug",
+          "label": "Tobramycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gentamicin",
+          "type": "Drug",
+          "label": "Gentamicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tgf_beta",
+          "type": "Target",
+          "label": "TGF-beta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_inflammation_pathway",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mucociliary_dysfunction",
+          "type": "Phenotype",
+          "label": "Mucociliary Dysfunction",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_infection",
+          "type": "Disease",
+          "label": "Pulmonary Infection",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_airway_inflammation",
+          "type": "Phenotype",
+          "label": "Airway Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cytokine_release",
+          "type": "Pathway",
+          "label": "Cytokine Release Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_dornase_alfa",
+          "target": "n_tgf_beta",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知作用于TGF-beta通路"
+        },
+        {
+          "source": "n_tgf_beta",
+          "target": "n_inflammation_pathway",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与炎症通路连接"
+        },
+        {
+          "source": "n_inflammation_pathway",
+          "target": "n_mucociliary_dysfunction",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "导致粘膜纤毛功能障碍"
+        },
+        {
+          "source": "n_inflammation_pathway",
+          "target": "n_infection",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通路参与感染过程"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_inflammation_pathway",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "抗炎药物作用"
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "n_infection",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗生素对感染的抑制作用"
+        },
+        {
+          "source": "drug_montelukast",
+          "target": "n_airway_inflammation",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "选择性白三烯受体拮抗剂"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "n_mucociliary_dysfunction",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "改善粘液排出"
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "n_airway_inflammation",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "ACE抑制剂的抗炎性质"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_inflammation_pathway",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "类固醇的抗炎作用"
+        },
+        {
+          "source": "drug_roflumilast",
+          "target": "n_inflammation_pathway",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "PDE4抑制剂的作用"
+        },
+        {
+          "source": "drug_salbutamol",
+          "target": "n_mucociliary_dysfunction",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "支气管扩张作用改善纤毛功能"
+        },
+        {
+          "source": "drug_bosentan",
+          "target": "n_inflammation_pathway",
+          "relation": "modulates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "内皮素拮抗剂的作用"
+        },
+        {
+          "source": "drug_tobramycin",
+          "target": "n_infection",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "针对细菌感染的抑制作用"
+        },
+        {
+          "source": "drug_gentamicin",
+          "target": "n_infection",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "广谱抗生素有效"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_dornase_alfa",
+              "target": "n_mucociliary_dysfunction",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "通过减少炎症反应来改善粘膜纤毛功能"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已形成 Dornase alfa → TGF-beta → Inflammation Pathway → Mucociliary Dysfunction 的路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_tobramycin",
+              "target": "n_mucociliary_dysfunction",
+              "relation": "supports",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "通过抑制感染间接改善粘膜纤毛功能"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已形成 Tobramycin → Infection → Mucociliary Dysfunction 的间接路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

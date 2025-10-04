@@ -1,0 +1,248 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_dornase_alfa",
+          "name": "Dornase alfa"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_budenoside",
+          "name": "Budenoside"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_montelukast",
+          "name": "Montelukast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ivacaftor",
+          "name": "Ivacaftor"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_nintedanib",
+          "name": "Nintedanib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_nebulized_antibiotics",
+          "name": "Nebulized antibiotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_erdafitinib",
+          "name": "Erdafitinib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_roflumilast",
+          "name": "Roflumilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ataluren",
+          "name": "Ataluren"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_cystagon",
+          "name": "Cystagon"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "Increased lung inflammation",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Inflammatory pathways activation",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Exacerbated pulmonary condition",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_dornase_alfa",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致靶点作用",
+          "description": "可能加重肺部炎症"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "炎症反应激活通路",
+          "description": "炎症通路可能促进疾病进展"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型",
+          "description": "加重肺部疾病状态"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益",
+          "description": "危害超过潜在益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "acute_vs_long_term_effect",
+          "pro_nodes": [
+            "n_pro_mech1"
+          ],
+          "con_nodes": [
+            "n_rp",
+            "n_adv"
+          ],
+          "note": "急性缓解可能与长期肺功能恶化相悖"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "缺乏有效证据支持长期受益者的肺部状态改善",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "激活炎症途径可能引发进一步的合并症",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "用药安全性是否足以补偿潜在的炎症风险",
+      "急性缓解是否足够改善长期肺功能"
+    ],
+    "falsification_tests": [
+      "是否有相关研究提供长期疗效数据？",
+      "是否有证据表明治疗与肺部炎症反应的直接关系？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 指出其他无炎症相关机制的潜在益处",
+      "对冲突热点进行更深入的调查"
+    ]
+  }
+}

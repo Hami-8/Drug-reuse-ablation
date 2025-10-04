@@ -1,0 +1,325 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Rod-cone dystrophy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_tadalafil",
+          "name": "Tadalafil"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_viagra",
+          "name": "Viagra"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_thioridazine",
+          "name": "Thioridazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_quinine",
+          "name": "Quinine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_clomiphene",
+          "name": "Clomiphene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_fluoroquinolones",
+          "name": "Fluoroquinolones"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_isotretinoin",
+          "name": "Isotretinoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_hydrochlorothiazide",
+          "name": "Hydrochlorothiazide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_clozapine",
+          "name": "Clozapine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ta1",
+          "type": "Target",
+          "label": "Phosphodiesterase 5",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta2",
+          "type": "Target",
+          "label": "Histamine H1 receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_d1",
+          "type": "Disease",
+          "label": "Rod-cone dystrophy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_path1",
+          "type": "Pathway",
+          "label": "cGMP Signaling Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph1",
+          "type": "Phenotype",
+          "label": "Visual impairment",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph2",
+          "type": "Phenotype",
+          "label": "Retinitis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_tadalafil",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知靶点与作用机制一致"
+        },
+        {
+          "source": "drug_sildenafil",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知靶点与作用机制一致"
+        },
+        {
+          "source": "drug_viagra",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知靶点与作用机制一致"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ta2",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "对抗心脏相关机制"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ph1",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对抗炎症反应相关"
+        },
+        {
+          "source": "drug_thioridazine",
+          "target": "n_ph2",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知影响视网膜功能"
+        },
+        {
+          "source": "n_path1",
+          "target": "n_d1",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与视觉相关的信号通路"
+        },
+        {
+          "source": "n_ph1",
+          "target": "n_d1",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "视觉损伤可造成该病"
+        },
+        {
+          "source": "n_ph2",
+          "target": "n_d1",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "视网膜炎症可导致该病"
+        },
+        {
+          "source": "drug_tadalafil",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与潜在靶点及相关性支持"
+        },
+        {
+          "source": "drug_sildenafil",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与潜在靶点及相关性支持"
+        },
+        {
+          "source": "drug_viagra",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与潜在靶点及相关性支持"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与潜在靶点及相关性支持"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "通过 Phosphodiesterase 5 影响 Rod-cone dystrophy",
+        "confidence": "medium"
+      },
+      {
+        "id": "C2",
+        "text": "通过 Histamine H1 receptor 可能调节相关症状",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "所有药物对靶点的作用在临床上尚需验证"
+    ],
+    "uncertainties": [
+      "药物的具体副作用与该病的相关性需进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需要探讨对抗 Rod-cone dystrophy 的其他治疗策略"
+    ]
+  }
+}

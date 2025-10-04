@@ -1,0 +1,968 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_verapamil",
+          "name": "Verapamil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_theophylline",
+          "name": "Theophylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_lisinopril",
+          "name": "Lisinopril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_enalapril",
+          "name": "Enalapril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.67,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.7,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.0,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Aspirin acts on COX, which is involved in inflammation linked to PCD."
+          ],
+          "indication_plausibility": [
+            "Supports respiratory health, which is relevant to the disease."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.67,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.7,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.0,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Ibuprofen acts on COX, which is involved in inflammation linked to PCD."
+          ],
+          "indication_plausibility": [
+            "Supports respiratory health, which is relevant to the disease."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.67,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.7,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.0,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Naproxen acts on COX, which is involved in inflammation linked to PCD."
+          ],
+          "indication_plausibility": [
+            "Supports respiratory health, which is relevant to the disease."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.0,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.0,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "No direct evidence linked to inflammation in PCD."
+          ],
+          "indication_plausibility": [
+            "Limited effect on respiratory function."
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "Lacks mechanistic evidence for PCD."
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.0,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.0,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "No direct evidence linked to inflammation in PCD."
+          ],
+          "indication_plausibility": [
+            "Limited effect on respiratory function."
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "Lacks mechanistic evidence for PCD."
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.0,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.0,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "No direct evidence linked to inflammation in PCD."
+          ],
+          "indication_plausibility": [
+            "Limited effect on respiratory function."
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "Lacks mechanistic evidence for PCD."
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.0,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.0,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "No direct evidence linked to inflammation in PCD."
+          ],
+          "indication_plausibility": [
+            "Limited effect on respiratory function."
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "Lacks mechanistic evidence for PCD."
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.0,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.0,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "No direct evidence linked to inflammation in PCD."
+          ],
+          "indication_plausibility": [
+            "Limited effect on respiratory function."
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "Lacks mechanistic evidence for PCD."
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.0,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.0,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "No direct evidence linked to inflammation in PCD."
+          ],
+          "indication_plausibility": [
+            "Limited effect on respiratory function."
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "Lacks mechanistic evidence for PCD."
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.0,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.0,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "No direct evidence linked to inflammation in PCD."
+          ],
+          "indication_plausibility": [
+            "Limited effect on respiratory function."
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "Lacks mechanistic evidence for PCD."
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.0,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.0,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "No direct evidence linked to inflammation in PCD."
+          ],
+          "indication_plausibility": [
+            "Limited effect on respiratory function."
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "Lacks mechanistic evidence for PCD."
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.0,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.0,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "No direct evidence linked to inflammation in PCD."
+          ],
+          "indication_plausibility": [
+            "Limited effect on respiratory function."
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "Lacks mechanistic evidence for PCD."
+        ]
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_target1",
+          "type": "Target",
+          "label": "COX",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target2",
+          "type": "Target",
+          "label": "LOX",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway1",
+          "type": "Pathway",
+          "label": "Arachidonic Acid Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease",
+          "type": "Disease",
+          "label": "Primary ciliary dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph1",
+          "type": "Phenotype",
+          "label": "Respiratory Dysfunction",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph2",
+          "type": "Phenotype",
+          "label": "Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_naproxen",
+          "type": "Drug",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Verapamil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_verapamil",
+          "type": "Drug",
+          "label": "Verapamil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Theophylline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_theophylline",
+          "type": "Drug",
+          "label": "Theophylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lisinopril",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Enalapril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_enalapril",
+          "type": "Drug",
+          "label": "Enalapril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "n_target1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Aspirin's known action as COX inhibitor"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_target1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Ibuprofen also acts as COX inhibitor"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_target1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Naproxen is a COX inhibitor, similar binding"
+        },
+        {
+          "source": "n_target1",
+          "target": "n_pathway1",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "COX involvement in arachidonic acid metabolism"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ph1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Aspirin associated with respiratory function improvement"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_ph1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Ibuprofen improves respiratory symptoms"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_ph1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Naproxen effects on respiratory health"
+        },
+        {
+          "source": "n_pathway1",
+          "target": "n_disease",
+          "relation": "associated_with",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Arachidonic acid metabolism linked with inflammation in PCD"
+        },
+        {
+          "source": "n_ph1",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Mechanism chain links respiratory dysfunction"
+        },
+        {
+          "source": "n_ph1",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Mechanism chain links respiratory dysfunction"
+        },
+        {
+          "source": "n_ph1",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Mechanism chain links respiratory dysfunction"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "score": 0.67,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Aspirin's MOA involves COX inhibition reducing inflammation.",
+          "Positive effects on respiratory dysfunction linked to PCD."
+        ],
+        "caveats": [
+          "Need to verify long-term safety in PCD patients."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "score": 0.67,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Ibuprofen acts similarly on COX as Aspirin.",
+          "Proven efficacy in reducing respiratory symptoms."
+        ],
+        "caveats": [
+          "Safety for long-term use in PCD patients unverified."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        },
+        "score": 0.67,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Naproxen processes inflammation similarly as Aspirin/Ibuprofen.",
+          "Potential improvement in respiratory function supports PCD management."
+        ],
+        "caveats": [
+          "Long-term safety yet to be established for PCD patients."
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Aspirin/Ibuprofen/Naproxen → COX → Arachidonic Acid Metabolism → Respiratory Dysfunction",
+          "reason": "Mechanisms are well-defined and support against PCD."
+        }
+      ],
+      "remaining_gaps": [
+        "Verification needed for long-term safety of NSAIDs in the context of PCD."
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 4,
+          "seeds": [],
+          "impact_summary": "No new seeds generated, focus on refining existing hypotheses."
+        }
+      ],
+      "lessons": [
+        "Ensure future hypotheses integrate long-term safety evaluations, particularly for chronic conditions such as PCD."
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "Continue to confirm safety profiles of supported drugs for PCD."
+      },
+      {
+        "role": "Skeptic",
+        "patch": "Challenge the long-term use assumptions and required evidence for safety in PCD."
+      },
+      {
+        "role": "Explorer",
+        "patch": "Investigate alternative compounds that might benefit respiratory health in PCD beyond traditional NSAIDs."
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "PCD therapeutic discussions",
+        "then": "Prioritize evidence for safety in chronic respiratory treatments."
+      }
+    ]
+  }
+}

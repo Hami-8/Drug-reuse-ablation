@@ -1,0 +1,883 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Aspirin impact on cilia",
+            "expectation": "Identify clear negative impacts if they exist and quantify them.",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Ibuprofen's effects",
+            "expectation": "Determine the conflict between anti-inflammatory benefits and potential harm.",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Naproxen's respiratory risk",
+            "expectation": "Clarify any safety risks in the context of Primary Ciliary Dyskinesia.",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "target_cyclooxygenase",
+          "type": "Target",
+          "label": "Cyclooxygenase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_inflammation",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_primary_ciliary_dyskinesia",
+          "type": "Disease",
+          "label": "Primary Ciliary Dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_respiratory_problems",
+          "type": "Phenotype",
+          "label": "Respiratory Problems",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_inflammation",
+          "type": "Phenotype",
+          "label": "Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "Aspirin Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ibuprofen",
+          "type": "Target",
+          "label": "Ibuprofen Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_naproxen",
+          "type": "Target",
+          "label": "Naproxen Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_phenytoin",
+          "type": "Target",
+          "label": "Phenytoin Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "Amiodarone Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dexamethasone",
+          "type": "Target",
+          "label": "Dexamethasone Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_verapamil",
+          "type": "Target",
+          "label": "Verapamil Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_theophylline",
+          "type": "Target",
+          "label": "Theophylline Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lisinopril",
+          "type": "Target",
+          "label": "Lisinopril Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_enalapril",
+          "type": "Target",
+          "label": "Enalapril Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_beta_blockers",
+          "type": "Target",
+          "label": "Beta-blockers Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "Methotrexate Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk Pathways in Primary Ciliary Dyskinesia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Effects in Primary Ciliary Dyskinesia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_naproxen",
+          "type": "Drug",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Verapamil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_verapamil",
+          "type": "Drug",
+          "label": "Verapamil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Theophylline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_theophylline",
+          "type": "Drug",
+          "label": "Theophylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lisinopril",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Enalapril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_enalapril",
+          "type": "Drug",
+          "label": "Enalapril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "target_cyclooxygenase",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Aspirin inhibits cyclooxygenase, which is involved in inflammation."
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "target_cyclooxygenase",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Ibuprofen also acts on cyclooxygenase, mediating anti-inflammatory effects."
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "target_cyclooxygenase",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Naproxen targets cyclooxygenase similarly to other NSAIDs."
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "phenotype_respiratory_problems",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Given its association with respiratory issues."
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "phenotype_respiratory_problems",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Known to potentially cause pulmonary toxicity."
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "pathway_inflammation",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Pharmacologically modulates inflammation pathways."
+        },
+        {
+          "source": "target_cyclooxygenase",
+          "target": "pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Enzymatic activity plays a significant role in inflammation."
+        },
+        {
+          "source": "pathway_inflammation",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Chronic inflammation can exacerbate respiratory conditions."
+        },
+        {
+          "source": "pathway_inflammation",
+          "target": "phenotype_inflammation",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Direct correlation with inflammatory response."
+        },
+        {
+          "source": "disease_primary_ciliary_dyskinesia",
+          "target": "phenotype_respiratory_problems",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Primary ciliary dyskinesia directly leads to respiratory difficulties."
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Supports hypothesis that Aspirin may worsen underlying inflammatory conditions."
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Supports hypothesis that Ibuprofen may exacerbate respiratory problems."
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Supports hypothesis regarding Naproxen's effects on respiratory issues."
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Potential for unwanted effects on cilia function."
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_ot_ibuprofen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "May negatively influence ciliary movement."
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_ot_naproxen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Risks altering ciliary oscillation dynamics."
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "n_ot_phenytoin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Potential impact on respiratory epithelial function."
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Risk of adverse airway effects."
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ot_dexamethasone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Could interfere with inflammation resolution in cilia."
+        },
+        {
+          "source": "drug_verapamil",
+          "target": "n_ot_verapamil",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Possible negative impact on smooth muscle and ciliary action."
+        },
+        {
+          "source": "drug_theophylline",
+          "target": "n_ot_theophylline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Risk of respiratory muscle effects affecting diafragma."
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "n_ot_lisinopril",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Considerations for vascular effects on respiratory function."
+        },
+        {
+          "source": "drug_enalapril",
+          "target": "n_ot_enalapril",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Risks related to respiratory physiology."
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_ot_beta_blockers",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Effects on airway resistance and ciliary responsiveness."
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Potential negative immune modulation affecting respiratory epithelium."
+        },
+        {
+          "source": "n_ot_aspirin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Induces pathways leading to adverse effects."
+        },
+        {
+          "source": "n_ot_ibuprofen",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Contributes to pathways resulting in adverse respiratory outcomes."
+        },
+        {
+          "source": "n_ot_naproxen",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Linked to detrimental effects in respiratory function."
+        },
+        {
+          "source": "n_ot_phenytoin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Mechanism influencing airway ciliary activity."
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Induces pathways impairing ciliary function."
+        },
+        {
+          "source": "n_ot_dexamethasone",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Interferes with ciliary recovery."
+        },
+        {
+          "source": "n_ot_verapamil",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Linked to airway smooth muscle impairment."
+        },
+        {
+          "source": "n_ot_theophylline",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Risk of adverse ciliary dynamics."
+        },
+        {
+          "source": "n_ot_lisinopril",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Potential for increased respiratory complications."
+        },
+        {
+          "source": "n_ot_enalapril",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Impacts on respiratory processes."
+        },
+        {
+          "source": "n_ot_beta_blockers",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Potential to worsen respiratory response."
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Affects immune response related to cilia health."
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Links adverse effects on respiratory function."
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Risks may outweigh benefits for aspirin."
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Ibuprofen may exacerbate respiratory conditions."
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Naproxen poses similar risks to respiratory function."
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Phenytoin has possible respiratory implications."
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Amiodarone could impair ciliary dynamics."
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Dexamethasone may have adverse effects on respiratory function."
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Verapamil risk for respiratory effects."
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Theophylline may have detrimental effects on cilia."
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Lisinopril may influence respiratory conditions adversely."
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Enalapril involves potential respiratory implications."
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Beta-blockers could worsen respiratory function."
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Methotrexate has possible risks related to respiratory health."
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_rp",
+              "type": "Pathway",
+              "label": "Risk Pathways in Primary Ciliary Dyskinesia",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv",
+              "type": "Phenotype",
+              "label": "Adverse Effects in Primary Ciliary Dyskinesia",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "n_ot_aspirin",
+              "target": "n_rp",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "Induces pathways leading to adverse effects."
+            },
+            {
+              "source": "n_rp",
+              "target": "n_adv",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "Links adverse effects on respiratory function."
+            },
+            {
+              "source": "n_adv",
+              "target": "H1",
+              "relation": "refutes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "Risks may outweigh benefits for aspirin."
+            }
+          ],
+          "conflict_hotspots": [
+            {
+              "topic": "Aspirin impact on cilia",
+              "pro_nodes": [],
+              "con_nodes": [
+                "n_rp",
+                "n_adv"
+              ],
+              "note": "Potential negative effects on ciliary function."
+            }
+          ]
+        },
+        "notes": "已完成对阿司匹林安全性的压力测试。"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "关于阿司匹林影响的长短期效应依然存在不确定性"
+    ]
+  }
+}

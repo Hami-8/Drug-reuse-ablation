@@ -1,0 +1,344 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ezetimibe",
+          "name": "Ezetimibe"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_lipid_lowering_agents",
+          "name": "Lipid-lowering agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_statin",
+          "name": "Statin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_lovastatin",
+          "name": "Lovastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_atorvastatin",
+          "name": "Atorvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_rosuvastatin",
+          "name": "Rosuvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_simvastatin",
+          "name": "Simvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ezetimibe",
+          "type": "Drug",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_omega_3_fatty_acids",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lipid_lowering_agents",
+          "type": "Drug",
+          "label": "Lipid-lowering agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_fenofibrate",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "具有降低甘油三酯水平的临床用途"
+        },
+        {
+          "source": "n_gemfibrozil",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "研究显示其能减少甘油三酯"
+        },
+        {
+          "source": "n_niacin",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "对甘油三酯有降低作用"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于治疗高脂血症"
+        },
+        {
+          "source": "n_ezetimibe",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "被用于降低血脂"
+        },
+        {
+          "source": "n_omega_3_fatty_acids",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "具有改善甘油三酯水平的证据"
+        },
+        {
+          "source": "n_lipid_lowering_agents",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "涵盖多个降低脂质的药物"
+        },
+        {
+          "source": "n_fenofibrate",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H1假设"
+        },
+        {
+          "source": "n_gemfibrozil",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H2假设"
+        },
+        {
+          "source": "n_niacin",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H3假设"
+        },
+        {
+          "source": "n_statins",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H4假设"
+        },
+        {
+          "source": "n_ezetimibe",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H5假设"
+        },
+        {
+          "source": "n_omega_3_fatty_acids",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H6假设"
+        },
+        {
+          "source": "n_lipid_lowering_agents",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H7假设"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多个药物减轻严重高甘油三酯血症的潜力",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物具备对相关疾病的有效性，并经过临床验证（常识判断）"
+    ],
+    "uncertainties": [
+      "不同药物的具体相互作用及反应可能因个体差异而异（需后续检验）"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步探索个体药物的具体机制和临床适用性？"
+    ]
+  }
+}

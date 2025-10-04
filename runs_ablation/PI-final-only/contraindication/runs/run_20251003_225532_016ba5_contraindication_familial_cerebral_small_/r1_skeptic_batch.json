@@ -1,0 +1,413 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Familial cerebral small vessel disease",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_warfarin",
+          "name": "Warfarin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_clopidogrel",
+          "name": "Clopidogrel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_cilostazol",
+          "name": "Cilostazol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_dabigatran",
+          "name": "Dabigatran"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_rivaroxaban",
+          "name": "Rivaroxaban"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_apixaban",
+          "name": "Apixaban"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_antidepressants",
+          "name": "Antidepressants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_nsaids",
+          "name": "NSAIDs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_thrombolytics",
+          "name": "Thrombolytics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_antipsychotics",
+          "name": "Antipsychotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_warfarin",
+          "type": "Target",
+          "label": "Warfarin Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clopidogrel",
+          "type": "Target",
+          "label": "Clopidogrel Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "Aspirin Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cilostazol",
+          "type": "Target",
+          "label": "Cilostazol Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dabigatran",
+          "type": "Target",
+          "label": "Dabigatran Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rivaroxaban",
+          "type": "Target",
+          "label": "Rivaroxaban Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_apixaban",
+          "type": "Target",
+          "label": "Apixaban Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_statins",
+          "type": "Target",
+          "label": "Statins Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_antidepressants",
+          "type": "Target",
+          "label": "Antidepressants Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nsaids",
+          "type": "Target",
+          "label": "NSAIDs Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thrombolytics",
+          "type": "Target",
+          "label": "Thrombolytics Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_antipsychotics",
+          "type": "Target",
+          "label": "Antipsychotics Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk Pathway in Cerebral Small Vessel Disease",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Risk of Hemorrhage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_warfarin",
+          "target": "n_ot_warfarin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_ot_clopidogrel",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险"
+        },
+        {
+          "source": "drug_cilostazol",
+          "target": "n_ot_cilostazol",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险"
+        },
+        {
+          "source": "drug_dabigatran",
+          "target": "n_ot_dabigatran",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "n_ot_rivaroxaban",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险"
+        },
+        {
+          "source": "drug_apixaban",
+          "target": "n_ot_apixaban",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_ot_statins",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响血管通透性"
+        },
+        {
+          "source": "drug_antidepressants",
+          "target": "n_ot_antidepressants",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响血小板功能"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "n_ot_nsaids",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险"
+        },
+        {
+          "source": "drug_thrombolytics",
+          "target": "n_ot_thrombolytics",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "与疾病相抵触的机制"
+        },
+        {
+          "source": "drug_antipsychotics",
+          "target": "n_ot_antipsychotics",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "缺乏临床证据支持"
+        }
+      ],
+      "merge": [],
+      "set_weights": [
+        {
+          "edge_id": "e_k1",
+          "weight": 0.85,
+          "rationale": "出血风险严重性高"
+        },
+        {
+          "edge_id": "e_k2",
+          "weight": 0.85,
+          "rationale": "发病机制导致风险显著"
+        },
+        {
+          "edge_id": "e_k3",
+          "weight": 0.75,
+          "rationale": "长期效果未验证"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "anticoagulation safety",
+          "pro_nodes": [
+            "drug_warfarin",
+            "drug_clopidogrel"
+          ],
+          "con_nodes": [
+            "n_rp",
+            "n_adv"
+          ],
+          "note": "抗凝治疗的益处可能与出血风险相权衡"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "抗凝药物可能会加重小血管病患者的出血风险",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "许多研究显示抗凝治疗对小血管病患者的长期后果缺乏改善",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "抗凝机制在小血管疾病中的有效性和安全性",
+      "长期使用安全性是否得到验证"
+    ],
+    "falsification_tests": [
+      "是否有临床数据表明在小血管病患者中抗凝有效果？",
+      "是否有证据显示抗凝药物的安全性可接受？"
+    ],
+    "next_focus_for_pi": [
+      "要求提供针对小血管病患者的抗凝安全性数据",
+      "评估出血风险的具体临床证据"
+    ]
+  }
+}

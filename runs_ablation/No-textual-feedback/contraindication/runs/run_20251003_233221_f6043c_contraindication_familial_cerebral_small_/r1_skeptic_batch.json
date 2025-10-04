@@ -1,0 +1,837 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Familial cerebral small vessel disease",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_warfarin",
+          "name": "Warfarin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_clopidogrel",
+          "name": "Clopidogrel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_cilostazol",
+          "name": "Cilostazol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_dabigatran",
+          "name": "Dabigatran"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_rivaroxaban",
+          "name": "Rivaroxaban"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_apixaban",
+          "name": "Apixaban"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_antidepressants",
+          "name": "Antidepressants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_nsaids",
+          "name": "NSAIDs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_thrombolytics",
+          "name": "Thrombolytics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_antipsychotics",
+          "name": "Antipsychotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_warfarin",
+          "type": "Target",
+          "label": "OffTargetWarfarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_warfarin",
+          "type": "Pathway",
+          "label": "RiskPathwayWarfarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_warfarin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeWarfarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clopidogrel",
+          "type": "Target",
+          "label": "OffTargetClopidogrel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_clopidogrel",
+          "type": "Pathway",
+          "label": "RiskPathwayClopidogrel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clopidogrel",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeClopidogrel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "OffTargetAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aspirin",
+          "type": "Pathway",
+          "label": "RiskPathwayAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aspirin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cilostazol",
+          "type": "Target",
+          "label": "OffTargetCilostazol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cilostazol",
+          "type": "Pathway",
+          "label": "RiskPathwayCilostazol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cilostazol",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCilostazol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dabigatran",
+          "type": "Target",
+          "label": "OffTargetDabigatran",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dabigatran",
+          "type": "Pathway",
+          "label": "RiskPathwayDabigatran",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dabigatran",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeDabigatran",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rivaroxaban",
+          "type": "Target",
+          "label": "OffTargetRivaroxaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rivaroxaban",
+          "type": "Pathway",
+          "label": "RiskPathwayRivaroxaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rivaroxaban",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeRivaroxaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_apixaban",
+          "type": "Target",
+          "label": "OffTargetApixaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_apixaban",
+          "type": "Pathway",
+          "label": "RiskPathwayApixaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_apixaban",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeApixaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_statins",
+          "type": "Target",
+          "label": "OffTargetStatins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_statins",
+          "type": "Pathway",
+          "label": "RiskPathwayStatins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_statins",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeStatins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_antidepressants",
+          "type": "Target",
+          "label": "OffTargetAntidepressants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_antidepressants",
+          "type": "Pathway",
+          "label": "RiskPathwayAntidepressants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_antidepressants",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAntidepressants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nsaids",
+          "type": "Target",
+          "label": "OffTargetNSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nsaids",
+          "type": "Pathway",
+          "label": "RiskPathwayNSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nsaids",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeNSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thrombolytics",
+          "type": "Target",
+          "label": "OffTargetThrombolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_thrombolytics",
+          "type": "Pathway",
+          "label": "RiskPathwayThrombolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_thrombolytics",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeThrombolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_antipsychotics",
+          "type": "Target",
+          "label": "OffTargetAntipsychotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_antipsychotics",
+          "type": "Pathway",
+          "label": "RiskPathwayAntipsychotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_antipsychotics",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAntipsychotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_warfarin",
+          "target": "n_ot_warfarin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用增强出血风险"
+        },
+        {
+          "source": "n_ot_warfarin",
+          "target": "n_rp_warfarin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与小血管疾病相关的风险通路"
+        },
+        {
+          "source": "n_rp_warfarin",
+          "target": "n_adv_warfarin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_warfarin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，此药物相对禁忌"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_ot_clopidogrel",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用导致出血风险"
+        },
+        {
+          "source": "n_ot_clopidogrel",
+          "target": "n_rp_clopidogrel",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与小血管疾病相关的风险通路"
+        },
+        {
+          "source": "n_rp_clopidogrel",
+          "target": "n_adv_clopidogrel",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_clopidogrel",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，此药物相对禁忌"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用导致出血风险"
+        },
+        {
+          "source": "n_ot_aspirin",
+          "target": "n_rp_aspirin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与小血管疾病相关的风险通路"
+        },
+        {
+          "source": "n_rp_aspirin",
+          "target": "n_adv_aspirin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_aspirin",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，此药物相对禁忌"
+        },
+        {
+          "source": "drug_cilostazol",
+          "target": "n_ot_cilostazol",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用导致出血风险"
+        },
+        {
+          "source": "n_ot_cilostazol",
+          "target": "n_rp_cilostazol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与小血管疾病相关的风险通路"
+        },
+        {
+          "source": "n_rp_cilostazol",
+          "target": "n_adv_cilostazol",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_cilostazol",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，此药物相对禁忌"
+        },
+        {
+          "source": "drug_dabigatran",
+          "target": "n_ot_dabigatran",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用导致出血风险"
+        },
+        {
+          "source": "n_ot_dabigatran",
+          "target": "n_rp_dabigatran",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与小血管疾病相关的风险通路"
+        },
+        {
+          "source": "n_rp_dabigatran",
+          "target": "n_adv_dabigatran",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_dabigatran",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，此药物相对禁忌"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "n_ot_rivaroxaban",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用导致出血风险"
+        },
+        {
+          "source": "n_ot_rivaroxaban",
+          "target": "n_rp_rivaroxaban",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与小血管疾病相关的风险通路"
+        },
+        {
+          "source": "n_rp_rivaroxaban",
+          "target": "n_adv_rivaroxaban",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_rivaroxaban",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，此药物相对禁忌"
+        },
+        {
+          "source": "drug_apixaban",
+          "target": "n_ot_apixaban",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用导致出血风险"
+        },
+        {
+          "source": "n_ot_apixaban",
+          "target": "n_rp_apixaban",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与小血管疾病相关的风险通路"
+        },
+        {
+          "source": "n_rp_apixaban",
+          "target": "n_adv_apixaban",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_apixaban",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，此药物相对禁忌"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_ot_statins",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用影响小血管健康"
+        },
+        {
+          "source": "n_ot_statins",
+          "target": "n_rp_statins",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与小血管疾病相关的风险通路"
+        },
+        {
+          "source": "n_rp_statins",
+          "target": "n_adv_statins",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_statins",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，此药物相对禁忌"
+        },
+        {
+          "source": "drug_antidepressants",
+          "target": "n_ot_antidepressants",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能影响血管稳定性"
+        },
+        {
+          "source": "n_ot_antidepressants",
+          "target": "n_rp_antidepressants",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "与小血管疾病相关的风险通路"
+        },
+        {
+          "source": "n_rp_antidepressants",
+          "target": "n_adv_antidepressants",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_antidepressants",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，此药物可能相对禁忌"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "n_ot_nsaids",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能影响血管稳定性"
+        },
+        {
+          "source": "n_ot_nsaids",
+          "target": "n_rp_nsaids",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "与小血管疾病相关的风险通路"
+        },
+        {
+          "source": "n_rp_nsaids",
+          "target": "n_adv_nsaids",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_nsaids",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，此药物可能相对禁忌"
+        },
+        {
+          "source": "drug_thrombolytics",
+          "target": "n_ot_thrombolytics",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险"
+        },
+        {
+          "source": "n_ot_thrombolytics",
+          "target": "n_rp_thrombolytics",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "与小血管疾病相关的风险通路"
+        },
+        {
+          "source": "n_rp_thrombolytics",
+          "target": "n_adv_thrombolytics",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_thrombolytics",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，此药物可能相对禁忌"
+        },
+        {
+          "source": "drug_antipsychotics",
+          "target": "n_ot_antipsychotics",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能影响血管稳定性"
+        },
+        {
+          "source": "n_ot_antipsychotics",
+          "target": "n_rp_antipsychotics",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "与小血管疾病相关的风险通路"
+        },
+        {
+          "source": "n_rp_antipsychotics",
+          "target": "n_adv_antipsychotics",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_antipsychotics",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，此药物可能相对禁忌"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "药物的抗凝作用是否安全用于小血管疾病",
+      "各药物的确切靶点及其副作用机制是否充分了解"
+    ],
+    "falsification_tests": [
+      "是否有证据显示这些药物在小血管疾病患者中使用时效果良好",
+      "是否存在长期观察数据支持其安全性"
+    ],
+    "next_focus_for_pi": [
+      "探讨不同药物在小血管疾病中使用的具体机制与风险",
+      "要求进一步的数据支持以验证这些风险链"
+    ]
+  }
+}

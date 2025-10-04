@@ -1,0 +1,1285 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sotalol",
+          "name": "Sotalol"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_dofetilide",
+          "name": "Dofetilide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_flecainide",
+          "name": "Flecainide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_propranolol",
+          "name": "Propranolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_carvedilol",
+          "name": "Carvedilol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_metoprolol",
+          "name": "Metoprolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_dronedarone",
+          "name": "Dronedarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_disopyramide",
+          "name": "Disopyramide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_mexiletine",
+          "name": "Mexiletine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ibutilide",
+          "name": "Ibutilide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ranolazine",
+          "name": "Ranolazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.54,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.01
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.8,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Sotalol Safety",
+              "pro": [
+                "drug_sotalol"
+              ],
+              "con": [
+                "adverse_phenotype_sotalol"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Sotalol 作用于离子通道，能治疗心律失常"
+          ],
+          "safety_risk": [
+            "潜在的心脏不良表型风险未解决"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "安全性问题需要进一步的探讨"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.52,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.01
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.8,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Dofetilide Safety",
+              "pro": [
+                "drug_dofetilide"
+              ],
+              "con": [
+                "adverse_phenotype_dofetilide"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Dofetilide 明确作用于钾通道"
+          ],
+          "safety_risk": [
+            "影响心脏其他机制，可能导致不良结果"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "安全性和疗效同时存在疑问"
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.58,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.01
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.8,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Amiodarone Safety",
+              "pro": [
+                "drug_amiodarone"
+              ],
+              "con": [
+                "adverse_phenotype_amiodarone"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Amiodarone 通作用於多种离子通道"
+          ],
+          "safety_risk": [
+            "可能导致心脏不良反应"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "临床使用中的安全性需进一步验证"
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.01
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.8,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Flecainide Safety",
+              "pro": [
+                "drug_flecainide"
+              ],
+              "con": [
+                "adverse_phenotype_flecainide"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Flecainide 是心律失常的治疗药物"
+          ],
+          "safety_risk": [
+            "与潜在的心脏风险相关"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需关注安全性问题的性质"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.02
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.6,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Propranolol Efficacy",
+              "pro": [
+                "drug_propranolol"
+              ],
+              "con": [
+                "adverse_phenotype_propranolol"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Propranolol 用于调节心率"
+          ],
+          "safety_risk": [
+            "心脏不良反应的可能性不可忽视"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "使用条件和疗效尚需验证"
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.55,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.01
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Carvedilol Efficacy",
+              "pro": [
+                "drug_carvedilol"
+              ],
+              "con": [
+                "adverse_phenotype_carvedilol"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Carvedilol 影响心律与血压"
+          ],
+          "safety_risk": [
+            "伴随的心脏不良反应需考虑"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "可否在特定人群中有效还有待观察"
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.53,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.01
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Metoprolol ECG Performance",
+              "pro": [
+                "drug_metoprolol"
+              ],
+              "con": [
+                "adverse_phenotype_metoprolol"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Metoprolol 适用于心律失常的情境"
+          ],
+          "safety_risk": [
+            "需考虑不良反应的风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "临床数据的支持尚缺乏"
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.01
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Dronedarone Efficacy",
+              "pro": [
+                "drug_dronedarone"
+              ],
+              "con": [
+                "adverse_phenotype_dronedarone"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Dronedarone 适用于心脏的多靶点作用"
+          ],
+          "safety_risk": [
+            "可能的心脏不良效应不能忽视"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "使用安全性需在临床上验证"
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.48,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.01
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Disopyramide Utilization",
+              "pro": [
+                "drug_disopyramide"
+              ],
+              "con": [
+                "adverse_phenotype_disopyramide"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Disopyramide 明确的药理适用于心律失常"
+          ],
+          "safety_risk": [
+            "心脏不良反应问题需解决"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需检查与耐受性相关的风险问题"
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.47,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.01
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Mexiletine Function",
+              "pro": [
+                "drug_mexiletine"
+              ],
+              "con": [
+                "adverse_phenotype_mexiletine"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Mexiletine 适用于早期心律失常"
+          ],
+          "safety_risk": [
+            "不良效果的风险需评估"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "使用情况下的有效性尚存疑问"
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.49,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.01
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Ibutilide Risk",
+              "pro": [
+                "drug_ibutilide"
+              ],
+              "con": [
+                "adverse_phenotype_ibutilide"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Ibutilide 可直接控制心律"
+          ],
+          "safety_risk": [
+            "潜在的不良反应不能被忽视"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需确认长期影响的安全性"
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.46,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.25,
+          "conflict_penalty": 0.01
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Ranolazine Application",
+              "pro": [
+                "drug_ranolazine"
+              ],
+              "con": [
+                "adverse_phenotype_ranolazine"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Ranolazine 有利于心脏电生理"
+          ],
+          "safety_risk": [
+            "心脏不良表现的风险需留意"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "待进一步验证其临床效应"
+        ]
+      }
+    ],
+    "ranking": [
+      "H3",
+      "H4",
+      "H6",
+      "H1",
+      "H7",
+      "H2",
+      "H5",
+      "H8",
+      "H11",
+      "H9",
+      "H10",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_sotalol",
+          "type": "Drug",
+          "label": "Sotalol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dofetilide",
+          "type": "Drug",
+          "label": "Dofetilide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_flecainide",
+          "type": "Drug",
+          "label": "Flecainide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_propranolol",
+          "type": "Drug",
+          "label": "Propranolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carvedilol",
+          "type": "Drug",
+          "label": "Carvedilol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metoprolol",
+          "type": "Drug",
+          "label": "Metoprolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dronedarone",
+          "type": "Drug",
+          "label": "Dronedarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_disopyramide",
+          "type": "Drug",
+          "label": "Disopyramide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mexiletine",
+          "type": "Drug",
+          "label": "Mexiletine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibutilide",
+          "type": "Drug",
+          "label": "Ibutilide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ranolazine",
+          "type": "Drug",
+          "label": "Ranolazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "arrhythmogenic_right_ventricular_cardiomyopathy",
+          "type": "Disease",
+          "label": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_ion_channels",
+          "type": "Target",
+          "label": "Ion Channels",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_cellular_electrophysiology",
+          "type": "Pathway",
+          "label": "Cellular Electrophysiology",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_arrhythmia",
+          "type": "Phenotype",
+          "label": "Arrhythmia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "off_target_sotalol",
+          "type": "Target",
+          "label": "Off Target - Sotalol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "risk_pathway_sotalol",
+          "type": "Pathway",
+          "label": "Risk Pathway - Sotalol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "adverse_phenotype_sotalol",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype - Sotalol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "off_target_dofetilide",
+          "type": "Target",
+          "label": "Off Target - Dofetilide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "risk_pathway_dofetilide",
+          "type": "Pathway",
+          "label": "Risk Pathway - Dofetilide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "adverse_phenotype_dofetilide",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype - Dofetilide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Sotalol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Dofetilide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Flecainide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Propranolol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Carvedilol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Metoprolol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Dronedarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Disopyramide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Mexiletine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Ibutilide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Ranolazine",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_sotalol",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知作用于离子通道，调节心律"
+        },
+        {
+          "source": "drug_dofetilide",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "作用于钾通道，相关心律失常"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "多靶点作用，适用于各种心律失常"
+        },
+        {
+          "source": "drug_flecainide",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "了解药理，用于心律失常"
+        },
+        {
+          "source": "drug_propranolol",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "调节心率，有助于心室心律失常"
+        },
+        {
+          "source": "drug_carvedilol",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "β-adrenergic 蛋白拮抗剂，影响心律"
+        },
+        {
+          "source": "drug_metoprolol",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于控制心率，常用在心律失常"
+        },
+        {
+          "source": "drug_dronedarone",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "作用于心脏的多靶点"
+        },
+        {
+          "source": "drug_disopyramide",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "药理作用明确，适用于心律失常"
+        },
+        {
+          "source": "drug_mexiletine",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知影响心律，适用于早期心律失常"
+        },
+        {
+          "source": "drug_ibutilide",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对心律有直接调控作用"
+        },
+        {
+          "source": "drug_ranolazine",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "对心脏电生理有利作用"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "pathway_cellular_electrophysiology",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "离子通道在细胞电生理中重要"
+        },
+        {
+          "source": "pathway_cellular_electrophysiology",
+          "target": "phenotype_arrhythmia",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "细胞电生理异常可引起心律失常"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "arrhythmogenic_right_ventricular_cardiomyopathy",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与心律失常直接相关"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Sotalol 作为已知作用机制的支持"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Dofetilide 作为已知作用机制的支持"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Amiodarone 作为已知作用机制的支持"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Flecainide 作为已知作用机制的支持"
+        },
+        {
+          "source": "drug_sotalol",
+          "target": "off_target_sotalol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响心脏其他功能"
+        },
+        {
+          "source": "off_target_sotalol",
+          "target": "risk_pathway_sotalol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发可能的风险通路"
+        },
+        {
+          "source": "risk_pathway_sotalol",
+          "target": "adverse_phenotype_sotalol",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良心脏表型"
+        },
+        {
+          "source": "adverse_phenotype_sotalol",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_dofetilide",
+          "target": "off_target_dofetilide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "干扰其他心脏机制"
+        },
+        {
+          "source": "off_target_dofetilide",
+          "target": "risk_pathway_dofetilide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联潜在风险通路"
+        },
+        {
+          "source": "risk_pathway_dofetilide",
+          "target": "adverse_phenotype_dofetilide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致心脏不良表型"
+        },
+        {
+          "source": "adverse_phenotype_dofetilide",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，可能抵消疗效"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "score": 0.58,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Amiodarone 可以有效控制心律失常，并具备多靶点作用",
+          "药理基础良好，安全性风险可控"
+        ],
+        "caveats": [
+          "潜在的心脏不良反应需要进一步验证"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_flecainide",
+          "name": "Flecainide"
+        },
+        "score": 0.56,
+        "graph_snapshot_ref": "GE_H4_round4",
+        "key_assumptions": [
+          "Flecainide 在治疗心律失常中被广泛应用",
+          "其药理作用与安全性有关联"
+        ],
+        "caveats": [
+          "安全性问题需关注，可能与心脏风险相关"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H6",
+        "candidate": {
+          "id": "drug_carvedilol",
+          "name": "Carvedilol"
+        },
+        "score": 0.55,
+        "graph_snapshot_ref": "GE_H6_round4",
+        "key_assumptions": [
+          "Carvedilol 有助于调节心律且在心脏病管理中有效"
+        ],
+        "caveats": [
+          "必须考虑心脏不良反应的风险"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_sotalol",
+          "name": "Sotalol"
+        },
+        "score": 0.54,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Sotalol 在治疗心律失常中的药理机制得到证实"
+        ],
+        "caveats": [
+          "安全性问题依然存在，需要进一步评估"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug作用于离子通道，影响心脏电生理",
+          "reason": "多个药物通过类似机制参与心律失常的治疗"
+        }
+      ],
+      "remaining_gaps": [
+        "安全性问题的证据链不完善，需引入更多数据"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B"
+          ],
+          "impact_summary": "补充了多条机制路径，增加了综述的深度"
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "C",
+            "D"
+          ],
+          "impact_summary": "验证了安全性和疗效的争论"
+        }
+      ],
+      "lessons": [
+        "在机制与安全性不明确的情况下，优先形成从药物到效果的闭环",
+        "论证安全性风险时，建立多条支持线索是必要的"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "建议重点关注与心律失常关联的有效机制"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "确保在文献支撑下明确安全性风险"
+      },
+      {
+        "role": "Explorer",
+        "patch": "在生成新候选时关注机制多样性，避免重复已有的标准方案"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "心律失常",
+        "then": "务必考虑多靶和心脏特征化的影响"
+      },
+      {
+        "when": "药物筛选",
+        "then": "优先考虑安全性和疗效的已知关系"
+      }
+    ]
+  }
+}

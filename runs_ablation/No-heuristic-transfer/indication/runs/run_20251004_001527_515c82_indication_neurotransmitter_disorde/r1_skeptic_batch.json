@@ -1,0 +1,344 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_l_dopa",
+          "name": "L-DOPA"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ritalin",
+          "name": "Ritalin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_adderall",
+          "name": "Adderall"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_bupropion",
+          "name": "Bupropion"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_sertraline",
+          "name": "Sertraline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_fluoxetine",
+          "name": "Fluoxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_venlafaxine",
+          "name": "Venlafaxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_duloxetine",
+          "name": "Duloxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_clonidine",
+          "name": "Clonidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_trazodone",
+          "name": "Trazodone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_methylphenidate",
+          "name": "Methylphenidate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_l_dopa",
+          "type": "Target",
+          "label": "OffTargetL-DOPA",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_l_dopa",
+          "type": "Pathway",
+          "label": "RiskPathwayL-DOPA",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_l_dopa",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeL-DOPA",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ritalin",
+          "type": "Target",
+          "label": "OffTargetRitalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ritalin",
+          "type": "Pathway",
+          "label": "RiskPathwayRitalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ritalin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeRitalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_adderall",
+          "type": "Target",
+          "label": "OffTargetAdderall",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_adderall",
+          "type": "Pathway",
+          "label": "RiskPathwayAdderall",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_adderall",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAdderall",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_l_dopa",
+          "target": "n_ot_l_dopa",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "考虑潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_l_dopa",
+          "target": "n_rp_l_dopa",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发的风险通路"
+        },
+        {
+          "source": "n_rp_l_dopa",
+          "target": "n_adv_l_dopa",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的潜在机制"
+        },
+        {
+          "source": "n_adv_l_dopa",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消期望的疗效"
+        },
+        {
+          "source": "drug_ritalin",
+          "target": "n_ot_ritalin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "离靶风险可能影响疗效"
+        },
+        {
+          "source": "n_ot_ritalin",
+          "target": "n_rp_ritalin",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能的不良风险通路"
+        },
+        {
+          "source": "n_rp_ritalin",
+          "target": "n_adv_ritalin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "引发不良反应的可能性"
+        },
+        {
+          "source": "n_adv_ritalin",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "证实风险将质疑其有效性"
+        },
+        {
+          "source": "drug_adderall",
+          "target": "n_ot_adderall",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在离靶效应"
+        },
+        {
+          "source": "n_ot_adderall",
+          "target": "n_rp_adderall",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能影响风险通路"
+        },
+        {
+          "source": "n_rp_adderall",
+          "target": "n_adv_adderall",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良后果"
+        },
+        {
+          "source": "n_adv_adderall",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "存在多种离靶效应及其潜在的风险。",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "可能的疗效受损风险，导致不良反应增加。",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "对于药物对目标神经递质的持续有效作用是否确切",
+      "离靶效应对治疗效果的影响程度"
+    ],
+    "falsification_tests": [
+      "是否有证据显示相比其他药物，L-DOPA能够安全有效改善神经递质障碍？",
+      "是否可以证明相应的不良反应在临床上被有效管理？"
+    ],
+    "next_focus_for_pi": [
+      "评估不同药物的安全性数据以支持或反驳假设",
+      "考虑添加新机制路径以探索疗效与风险的平衡"
+    ]
+  }
+}

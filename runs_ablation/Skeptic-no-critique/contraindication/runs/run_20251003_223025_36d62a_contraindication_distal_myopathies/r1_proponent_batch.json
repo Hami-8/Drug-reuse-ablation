@@ -1,0 +1,366 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Distal myopathies",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_procainamide",
+          "name": "Procainamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_dantrolene",
+          "name": "Dantrolene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_dopamine",
+          "name": "Dopamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_rocuronium",
+          "name": "Rocuronium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_skeletal_muscle_relaxants",
+          "name": "Skeletal muscle relaxants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_quinidine",
+          "type": "Drug",
+          "label": "Quinidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_procainamide",
+          "type": "Drug",
+          "label": "Procainamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dantrolene",
+          "type": "Drug",
+          "label": "Dantrolene",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dopamine",
+          "type": "Drug",
+          "label": "Dopamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rocuronium",
+          "type": "Drug",
+          "label": "Rocuronium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_skeletal_muscle_relaxants",
+          "type": "Drug",
+          "label": "Skeletal muscle relaxants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_distal_myopathies",
+          "type": "Disease",
+          "label": "Distal myopathies",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_corticosteroids",
+          "target": "disease_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已有文献指出皮质类固醇对远端肌肉病不利"
+        },
+        {
+          "source": "drug_statins",
+          "target": "disease_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "他汀类药物被发现对特定肌肉病有不利影响"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "disease_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "奎尼丁可能加重肌肉无力"
+        },
+        {
+          "source": "drug_procainamide",
+          "target": "disease_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "普鲁卡因酰胺在一些病例中与肌肉病相关"
+        },
+        {
+          "source": "drug_dantrolene",
+          "target": "disease_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "丹曲林可能影响肌肉功能"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "disease_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "胆固醇吸附剂有可能影响肌肉问题"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "disease_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "胺碘酮与肌肉病间有相关性"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "disease_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "加巴喷丁在少数案例中可加重肌病"
+        },
+        {
+          "source": "drug_dopamine",
+          "target": "disease_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "多巴胺可能与某些肌肉病症相关"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "disease_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "环丙沙星与肌病有关联"
+        },
+        {
+          "source": "drug_rocuronium",
+          "target": "disease_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "罗库溴铵可能导致肌肉无力"
+        },
+        {
+          "source": "drug_skeletal_muscle_relaxants",
+          "target": "disease_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.25,
+          "agent": "Proponent",
+          "rationale": "骨骼肌松弛剂可加剧肌肉病状态"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物被认为会对远端肌肉病产生不利影响，需谨慎使用",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "这些药物在特定情况下已被证明对肌肉疾病有负面影响"
+    ],
+    "uncertainties": [
+      "具体机制及适应症的个体差异尚未完全明确"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步验证不同药物对远端肌肉病的对照效果"
+    ]
+  }
+}

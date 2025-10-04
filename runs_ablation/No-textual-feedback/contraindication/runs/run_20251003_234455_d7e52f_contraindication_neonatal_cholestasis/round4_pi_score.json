@@ -1,0 +1,2031 @@
+{
+  "input": {
+    "mode": "score",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_phenobarbital",
+          "name": "Phenobarbital"
+        }
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        }
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        }
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_rifampin",
+          "name": "Rifampin"
+        }
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_antibiotics",
+          "name": "Antibiotics"
+        }
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_estrogen",
+          "name": "Estrogen"
+        }
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        }
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_halothane",
+          "name": "Halothane"
+        }
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_sodium_valproate",
+          "name": "Sodium valproate"
+        }
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        }
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        }
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_chlorpromazine",
+          "name": "Chlorpromazine"
+        }
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_pb",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cb",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pd",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rf",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ab",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_est",
+          "type": "Drug",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mt",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ht",
+          "type": "Drug",
+          "label": "Halothane",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sv",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cp",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gf",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cpz",
+          "type": "Drug",
+          "label": "Chlorpromazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nc",
+          "type": "Disease",
+          "label": "Neonatal Cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_pb",
+          "type": "Target",
+          "label": "Off-target for Phenobarbital",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pb",
+          "type": "Phenotype",
+          "label": "Adverse effect from Phenobarbital",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_chol",
+          "type": "Target",
+          "label": "Off-target for Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_chol",
+          "type": "Phenotype",
+          "label": "Adverse effect from Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pred",
+          "type": "Target",
+          "label": "Off-target for Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pred",
+          "type": "Phenotype",
+          "label": "Adverse effect from Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rif",
+          "type": "Target",
+          "label": "Off-target for Rifampin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rif",
+          "type": "Phenotype",
+          "label": "Adverse effect from Rifampin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_abx",
+          "type": "Target",
+          "label": "Off-target for Antibiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_abx",
+          "type": "Phenotype",
+          "label": "Adverse effect from Antibiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_est",
+          "type": "Target",
+          "label": "Off-target for Estrogen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_est",
+          "type": "Phenotype",
+          "label": "Adverse effect from Estrogen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mtx",
+          "type": "Target",
+          "label": "Off-target for Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mtx",
+          "type": "Phenotype",
+          "label": "Adverse effect from Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_hal",
+          "type": "Target",
+          "label": "Off-target for Halothane",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_hal",
+          "type": "Phenotype",
+          "label": "Adverse effect from Halothane",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_vpa",
+          "type": "Target",
+          "label": "Off-target for Sodium Valproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_vpa",
+          "type": "Phenotype",
+          "label": "Adverse effect from Sodium Valproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclo",
+          "type": "Target",
+          "label": "Off-target for Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cyclo",
+          "type": "Phenotype",
+          "label": "Adverse effect from Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gem",
+          "type": "Target",
+          "label": "Off-target for Gemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gem",
+          "type": "Phenotype",
+          "label": "Adverse effect from Gemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_chlor",
+          "type": "Target",
+          "label": "Off-target for Chlorpromazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_chlor",
+          "type": "Phenotype",
+          "label": "Adverse effect from Chlorpromazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rifampin",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_estrogen",
+          "type": "Drug",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Halothane",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_halothane",
+          "type": "Drug",
+          "label": "Halothane",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Sodium valproate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Chlorpromazine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_chlorpromazine",
+          "type": "Drug",
+          "label": "Chlorpromazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_pb",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Phenobarbital已知对胆汁淤积影响显著"
+        },
+        {
+          "source": "n_cb",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Cholestyramine影响胆汁酸的代谢"
+        },
+        {
+          "source": "n_pd",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Prednisone可能加重胆汁淤积"
+        },
+        {
+          "source": "n_rf",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Rifampin与胆汁减少相关"
+        },
+        {
+          "source": "n_ab",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "某些抗生素对膽汁分泌有影响"
+        },
+        {
+          "source": "n_est",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Estrogen与胆汁流出受抑制相关"
+        },
+        {
+          "source": "n_mt",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Methotrexate可能影响肝功能"
+        },
+        {
+          "source": "n_ht",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Halothane在特定情况下可能引发胆汁淤积"
+        },
+        {
+          "source": "n_sv",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Sodium Valproate与肝功能相关"
+        },
+        {
+          "source": "n_cp",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Cyclophosphamide可能造成肝损伤"
+        },
+        {
+          "source": "n_gf",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "Gemfibrozil与胆道问题相关"
+        },
+        {
+          "source": "n_cpz",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "Chlorpromazine可能影响胆汁排泄"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "n_ot_pb",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_pb",
+          "target": "n_adv_pb",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_pb",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_ot_chol",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_chol",
+          "target": "n_adv_chol",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_chol",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_pred",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_pred",
+          "target": "n_adv_pred",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_pred",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_rifampin",
+          "target": "n_ot_rif",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_rif",
+          "target": "n_adv_rif",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_rif",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_antibiotics",
+          "target": "n_ot_abx",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_abx",
+          "target": "n_adv_abx",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_abx",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_estrogen",
+          "target": "n_ot_est",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_est",
+          "target": "n_adv_est",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_est",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_mtx",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_mtx",
+          "target": "n_adv_mtx",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_mtx",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_halothane",
+          "target": "n_ot_hal",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_hal",
+          "target": "n_adv_hal",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_hal",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "n_ot_vpa",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_vpa",
+          "target": "n_adv_vpa",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_vpa",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_ot_cyclo",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_cyclo",
+          "target": "n_adv_cyclo",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_cyclo",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "n_ot_gem",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_gem",
+          "target": "n_adv_gem",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_gem",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_chlorpromazine",
+          "target": "n_ot_chlor",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_chlor",
+          "target": "n_adv_chlor",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_chlor",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4,
+      "last_scores": [
+        {
+          "hypothesis_id": "H1",
+          "score": 0.39,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.8,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.7,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.2,
+            "conflict_penalty": 0.31
+          },
+          "graph_signals": {
+            "support_weight": 0.85,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Phenobarbital adverse effects",
+                "pro": [
+                  "n_pb"
+                ],
+                "con": [
+                  "n_adv_pb"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "已知Phenobarbital对胆汁淤积影响显著"
+            ],
+            "safety_risk": [
+              "潜在的不良效应可能抵消净获益"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需更多数据确认Phenobarbital在胆汁淤积中的具体作用"
+          ]
+        },
+        {
+          "hypothesis_id": "H2",
+          "score": 0.34,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.8,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.6,
+            "safety_risk": 0.4,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.31
+          },
+          "graph_signals": {
+            "support_weight": 0.8,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Cholestyramine adverse effects",
+                "pro": [
+                  "n_cb"
+                ],
+                "con": [
+                  "n_adv_chol"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Cholestyramine影响胆汁酸代谢"
+            ],
+            "safety_risk": [
+              "潜在的不良效应可能抵消净获益"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需更多数据确认Cholestyramine在胆汁淤积中的具体影响"
+          ]
+        },
+        {
+          "hypothesis_id": "H3",
+          "score": 0.34,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.8,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.6,
+            "safety_risk": 0.4,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.31
+          },
+          "graph_signals": {
+            "support_weight": 0.75,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Prednisone adverse effects",
+                "pro": [
+                  "n_pd"
+                ],
+                "con": [
+                  "n_adv_pred"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Prednisone可能加重胆汁淤积"
+            ],
+            "safety_risk": [
+              "潜在的不良效应可能抵消净获益"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需确认Prednisone对肝功能的具体影响"
+          ]
+        },
+        {
+          "hypothesis_id": "H4",
+          "score": 0.31,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.7,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.6,
+            "safety_risk": 0.4,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.31
+          },
+          "graph_signals": {
+            "support_weight": 0.7,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Rifampin adverse effects",
+                "pro": [
+                  "n_rf"
+                ],
+                "con": [
+                  "n_adv_rif"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Rifampin与胆汁减少相关"
+            ],
+            "safety_risk": [
+              "潜在的不良效应可能抵消净获益"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需更多数据确认Rifampin对胆汁淤积的影响"
+          ]
+        },
+        {
+          "hypothesis_id": "H5",
+          "score": 0.29,
+          "components": {
+            "mechanism_fit": 0.55,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.5,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.31
+          },
+          "graph_signals": {
+            "support_weight": 0.65,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Antibiotics adverse effects",
+                "pro": [
+                  "n_ab"
+                ],
+                "con": [
+                  "n_adv_abx"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "某些抗生素对胆汁分泌有影响"
+            ],
+            "safety_risk": [
+              "潜在的不良效应可能抵消净获益"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需进一步研究某些抗生素的具体影响"
+          ]
+        },
+        {
+          "hypothesis_id": "H6",
+          "score": 0.26,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.6,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.31
+          },
+          "graph_signals": {
+            "support_weight": 0.6,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Estrogen adverse effects",
+                "pro": [
+                  "n_est"
+                ],
+                "con": [
+                  "n_adv_est"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Estrogen与胆汁流出受抑制相关"
+            ],
+            "safety_risk": [
+              "潜在的不良效应可能抵消净获益"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需确认Estrogen对胆汁分泌的影响"
+          ]
+        },
+        {
+          "hypothesis_id": "H7",
+          "score": 0.24,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.6,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.31
+          },
+          "graph_signals": {
+            "support_weight": 0.55,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Methotrexate adverse effects",
+                "pro": [
+                  "n_mt"
+                ],
+                "con": [
+                  "n_adv_mtx"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Methotrexate可能影响肝功能"
+            ],
+            "safety_risk": [
+              "潜在的不良效应可能抵消净获益"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需要确认Methotrexate影响肝功能的具体情况"
+          ]
+        },
+        {
+          "hypothesis_id": "H8",
+          "score": 0.22,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.6,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.31
+          },
+          "graph_signals": {
+            "support_weight": 0.5,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Halothane adverse effects",
+                "pro": [
+                  "n_ht"
+                ],
+                "con": [
+                  "n_adv_hal"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Halothane可能引发胆汁淤积"
+            ],
+            "safety_risk": [
+              "潜在的不良效应可能抵消净获益"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需要更多数据确认Halothane对胆汁淤积的影响"
+          ]
+        },
+        {
+          "hypothesis_id": "H9",
+          "score": 0.22,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.6,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.31
+          },
+          "graph_signals": {
+            "support_weight": 0.45,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Sodium Valproate adverse effects",
+                "pro": [
+                  "n_sv"
+                ],
+                "con": [
+                  "n_adv_vpa"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Sodium Valproate与肝功能相关"
+            ],
+            "safety_risk": [
+              "潜在的不良效应可能抵消净获益"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需要确认Sodium Valproate对胆汁的实际影响"
+          ]
+        },
+        {
+          "hypothesis_id": "H10",
+          "score": 0.21,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.6,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.31
+          },
+          "graph_signals": {
+            "support_weight": 0.4,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Cyclophosphamide adverse effects",
+                "pro": [
+                  "n_cp"
+                ],
+                "con": [
+                  "n_adv_cyclo"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Cyclophosphamide可能造成肝损伤"
+            ],
+            "safety_risk": [
+              "潜在的不良效应可能抵消净获益"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "确认Cyclophosphamide的肝损伤程度需要更多数据"
+          ]
+        },
+        {
+          "hypothesis_id": "H11",
+          "score": 0.2,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.6,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.31
+          },
+          "graph_signals": {
+            "support_weight": 0.35,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Gemfibrozil adverse effects",
+                "pro": [
+                  "n_gf"
+                ],
+                "con": [
+                  "n_adv_gem"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Gemfibrozil与胆道问题相关"
+            ],
+            "safety_risk": [
+              "潜在的不良效应可能抵消净获益"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需进一步研究Gemfibrozil对胆汁的影响"
+          ]
+        },
+        {
+          "hypothesis_id": "H12",
+          "score": 0.19,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.4,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.6,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.31
+          },
+          "graph_signals": {
+            "support_weight": 0.3,
+            "contradiction_weight": 0.85,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": [
+              {
+                "topic": "Chlorpromazine adverse effects",
+                "pro": [
+                  "n_cpz"
+                ],
+                "con": [
+                  "n_adv_chlor"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "Chlorpromazine可能影响胆汁排泄"
+            ],
+            "safety_risk": [
+              "潜在的不良效应可能抵消净获益"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需要更多数据确认Chlorpromazine对胆汁流出影响"
+          ]
+        }
+      ]
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "scoring_summary": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.39,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.8,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.2,
+          "conflict_penalty": 0.31
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Phenobarbital adverse effects",
+              "pro": [
+                "n_pb"
+              ],
+              "con": [
+                "n_adv_pb"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "已知Phenobarbital对胆汁淤积影响显著"
+          ],
+          "safety_risk": [
+            "潜在的不良效应可能抵消净获益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需更多数据确认Phenobarbital在胆汁淤积中的具体作用"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.34,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.8,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.31
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Cholestyramine adverse effects",
+              "pro": [
+                "n_cb"
+              ],
+              "con": [
+                "n_adv_chol"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Cholestyramine影响胆汁酸代谢"
+          ],
+          "safety_risk": [
+            "潜在的不良效应可能抵消净获益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需更多数据确认Cholestyramine在胆汁淤积中的具体影响"
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.34,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.8,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.31
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Prednisone adverse effects",
+              "pro": [
+                "n_pd"
+              ],
+              "con": [
+                "n_adv_pred"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Prednisone可能加重胆汁淤积"
+          ],
+          "safety_risk": [
+            "潜在的不良效应可能抵消净获益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需确认Prednisone对肝功能的具体影响"
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.31,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.7,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.31
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Rifampin adverse effects",
+              "pro": [
+                "n_rf"
+              ],
+              "con": [
+                "n_adv_rif"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Rifampin与胆汁减少相关"
+          ],
+          "safety_risk": [
+            "潜在的不良效应可能抵消净获益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需更多数据确认Rifampin对胆汁淤积的影响"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.29,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.31
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Antibiotics adverse effects",
+              "pro": [
+                "n_ab"
+              ],
+              "con": [
+                "n_adv_abx"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "某些抗生素对胆汁分泌有影响"
+          ],
+          "safety_risk": [
+            "潜在的不良效应可能抵消净获益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需进一步研究某些抗生素的具体影响"
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.26,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.6,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.31
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Estrogen adverse effects",
+              "pro": [
+                "n_est"
+              ],
+              "con": [
+                "n_adv_est"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Estrogen与胆汁流出受抑制相关"
+          ],
+          "safety_risk": [
+            "潜在的不良效应可能抵消净获益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需确认Estrogen对胆汁分泌的影响"
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.24,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.6,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.31
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Methotrexate adverse effects",
+              "pro": [
+                "n_mt"
+              ],
+              "con": [
+                "n_adv_mtx"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Methotrexate可能影响肝功能"
+          ],
+          "safety_risk": [
+            "潜在的不良效应可能抵消净获益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需要确认Methotrexate影响肝功能的具体情况"
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.22,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.6,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.31
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Halothane adverse effects",
+              "pro": [
+                "n_ht"
+              ],
+              "con": [
+                "n_adv_hal"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Halothane可能引发胆汁淤积"
+          ],
+          "safety_risk": [
+            "潜在的不良效应可能抵消净获益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需要更多数据确认Halothane对胆汁淤积的影响"
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.22,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.6,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.31
+        },
+        "graph_signals": {
+          "support_weight": 0.45,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Sodium Valproate adverse effects",
+              "pro": [
+                "n_sv"
+              ],
+              "con": [
+                "n_adv_vpa"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Sodium Valproate与肝功能相关"
+          ],
+          "safety_risk": [
+            "潜在的不良效应可能抵消净获益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需要确认Sodium Valproate对胆汁的实际影响"
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.21,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.6,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.31
+        },
+        "graph_signals": {
+          "support_weight": 0.4,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Cyclophosphamide adverse effects",
+              "pro": [
+                "n_cp"
+              ],
+              "con": [
+                "n_adv_cyclo"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Cyclophosphamide可能造成肝损伤"
+          ],
+          "safety_risk": [
+            "潜在的不良效应可能抵消净获益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "确认Cyclophosphamide的肝损伤程度需要更多数据"
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.2,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.6,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.31
+        },
+        "graph_signals": {
+          "support_weight": 0.35,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Gemfibrozil adverse effects",
+              "pro": [
+                "n_gf"
+              ],
+              "con": [
+                "n_adv_gem"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Gemfibrozil与胆道问题相关"
+          ],
+          "safety_risk": [
+            "潜在的不良效应可能抵消净获益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需进一步研究Gemfibrozil对胆汁的影响"
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.19,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.6,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.31
+        },
+        "graph_signals": {
+          "support_weight": 0.3,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Chlorpromazine adverse effects",
+              "pro": [
+                "n_cpz"
+              ],
+              "con": [
+                "n_adv_chlor"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Chlorpromazine可能影响胆汁排泄"
+          ],
+          "safety_risk": [
+            "潜在的不良效应可能抵消净获益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需要更多数据确认Chlorpromazine对胆汁流出影响"
+        ]
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "delta_since_last_round": 0.05,
+    "stop_decision": {
+      "should_stop": false,
+      "reasons": [
+        "Δscore≥0.03"
+      ]
+    }
+  }
+}

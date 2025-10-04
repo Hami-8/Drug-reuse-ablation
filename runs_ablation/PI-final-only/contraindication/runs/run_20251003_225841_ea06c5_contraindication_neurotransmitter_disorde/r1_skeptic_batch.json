@@ -1,0 +1,602 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_phenelzine",
+          "name": "Phenelzine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_selegiline",
+          "name": "Selegiline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_fluoxetine",
+          "name": "Fluoxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_paroxetine",
+          "name": "Paroxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_bupropion",
+          "name": "Bupropion"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_clomipramine",
+          "name": "Clomipramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sertraline",
+          "name": "Sertraline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_venlafaxine",
+          "name": "Venlafaxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_thioridazine",
+          "name": "Thioridazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_risperidone",
+          "name": "Risperidone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tranylcypromine",
+          "name": "Tranylcypromine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_citalopram",
+          "name": "Citalopram"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_phenelzine",
+          "type": "Target",
+          "label": "OffTargetPhenelzine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_selegiline",
+          "type": "Target",
+          "label": "OffTargetSelegiline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fluoxetine",
+          "type": "Target",
+          "label": "OffTargetFluoxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_paroxetine",
+          "type": "Target",
+          "label": "OffTargetParoxetine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bupropion",
+          "type": "Target",
+          "label": "OffTargetBupropion",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clomipramine",
+          "type": "Target",
+          "label": "OffTargetClomipramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sertraline",
+          "type": "Target",
+          "label": "OffTargetSertraline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_venlafaxine",
+          "type": "Target",
+          "label": "OffTargetVenlafaxine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thioridazine",
+          "type": "Target",
+          "label": "OffTargetThioridazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_risperidone",
+          "type": "Target",
+          "label": "OffTargetRisperidone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tranylcypromine",
+          "type": "Target",
+          "label": "OffTargetTranylcypromine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_citalopram",
+          "type": "Target",
+          "label": "OffTargetCitalopram",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "NeurotransmitterRiskPathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdverseNeurotransmitterEffect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_phenelzine",
+          "target": "n_ot_phenelzine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响神经递质平衡"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "n_ot_selegiline",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致多巴胺过量"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "n_ot_fluoxetine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响血清素途径可能产生副作用"
+        },
+        {
+          "source": "drug_paroxetine",
+          "target": "n_ot_paroxetine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致抗胆碱能效应"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "n_ot_bupropion",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能存在癫痫风险"
+        },
+        {
+          "source": "drug_clomipramine",
+          "target": "n_ot_clomipramine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致心脏毒性"
+        },
+        {
+          "source": "drug_sertraline",
+          "target": "n_ot_sertraline",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能影响性功能"
+        },
+        {
+          "source": "drug_venlafaxine",
+          "target": "n_ot_venlafaxine",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "存在血压波动风险"
+        },
+        {
+          "source": "drug_thioridazine",
+          "target": "n_ot_thioridazine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发心脏问题"
+        },
+        {
+          "source": "drug_risperidone",
+          "target": "n_ot_risperidone",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引起代谢综合症"
+        },
+        {
+          "source": "drug_tranylcypromine",
+          "target": "n_ot_tranylcypromine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "存在饮食禁忌"
+        },
+        {
+          "source": "drug_citalopram",
+          "target": "n_ot_citalopram",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致QT间期延长"
+        },
+        {
+          "source": "n_ot_phenelzine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_selegiline",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_fluoxetine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_paroxetine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_bupropion",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_clomipramine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_sertraline",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_venlafaxine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_thioridazine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_risperidone",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_tranylcypromine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_citalopram",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "导致不良神经递质效应"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "药物的安全性与有效性",
+          "pro_nodes": [
+            "drug_phenelzine",
+            "drug_selegiline",
+            "drug_fluoxetine"
+          ],
+          "con_nodes": [
+            "n_adv"
+          ],
+          "note": "药物可能改善症状，但伴随潜在的严重副作用"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "存在神经递质失调引发严重的副作用风险",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "某些药物与饮食限制相互作用，可能导致危及生命的并发症",
+        "confidence": "high"
+      },
+      {
+        "id": "K3",
+        "text": "长期应用存在依赖性及耐受性的风险",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物在神经递质调节中的正面作用",
+      "药物对大脑的靶向性是否充分"
+    ],
+    "falsification_tests": [
+      "是否存在随机对照试验显示这些药物长期有效且安全的证据？",
+      "是否有数据支持药物与特定病理状态的直接相关性？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供临床试验结果支持假设",
+      "更详细的药物相互作用与副作用资料"
+    ]
+  }
+}

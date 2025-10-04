@@ -1,0 +1,1067 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Distal myopathies",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_procainamide",
+          "name": "Procainamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_dantrolene",
+          "name": "Dantrolene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_dopamine",
+          "name": "Dopamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_rocuronium",
+          "name": "Rocuronium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_skeletal_muscle_relaxants",
+          "name": "Skeletal muscle relaxants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.76,
+        "components": {
+          "mechanism_fit": 0.85,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.75,
+          "indication_plausibility": 0.8,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.04
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 3,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "与Glucocorticoid Receptor的良好交互，支持临床益处"
+          ],
+          "indication_plausibility": [
+            "已知对肌炎有益"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.69,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.7,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.03
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "与HMG-CoA Reductase的连接表明可能肌肉影响"
+          ],
+          "indication_plausibility": [
+            "理论上对肌肉有影响"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.65,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.65,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "电生理影响与肌肉功能潜在联系"
+          ],
+          "indication_plausibility": [
+            "可能对肌肉有影响"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.63,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "与心脏功能的关联，但不足以确定肌肉关联"
+          ],
+          "indication_plausibility": [
+            "理论支持，但证据不足"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺少肌肉相关机制的直接证据"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.78,
+        "components": {
+          "mechanism_fit": 0.9,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.8,
+          "indication_plausibility": 0.85,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.2,
+          "conflict_penalty": 0.02
+        },
+        "graph_signals": {
+          "support_weight": 0.9,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 3,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "直接影响肌肉收缩的关键机制"
+          ],
+          "indication_plausibility": [
+            "已知用于骨骼肌疾病"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.61,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.03
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "对胆汁酸代谢影响，但与肌肉功能关系不明确"
+          ],
+          "indication_plausibility": [
+            "理论支持较弱"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.62,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.03
+        },
+        "graph_signals": {
+          "support_weight": 0.68,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "可能影响心脏功能，对肌肉功能移除相关性"
+          ],
+          "indication_plausibility": [
+            "理论依据不足"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.59,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.04
+        },
+        "graph_signals": {
+          "support_weight": 0.63,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "对神经性疼痛有影响可能影响肌肉效果"
+          ],
+          "indication_plausibility": [
+            "临床证据支持有限"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.58,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.45,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "调节神经系统可能有间接影响"
+          ],
+          "indication_plausibility": [
+            "缺乏直接证据"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.04
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "作为抗生素，可能对运动能力有影响"
+          ],
+          "indication_plausibility": [
+            "作用机制不明显"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.54,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.04
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "直接影响肌肉功能的隔离效应"
+          ],
+          "indication_plausibility": [
+            "作用机制较不清晰"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.65,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.7,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.02
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "直接作用于肌肉收缩能力"
+          ],
+          "indication_plausibility": [
+            "确实可影响骨骼肌功能"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      }
+    ],
+    "ranking": [
+      "H5",
+      "H1",
+      "H2",
+      "H3",
+      "H12",
+      "H4",
+      "H7",
+      "H6",
+      "H8",
+      "H9",
+      "H10",
+      "H11"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_target1",
+          "type": "Target",
+          "label": "Glucocorticoid Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target2",
+          "type": "Target",
+          "label": "HMG-CoA Reductase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target3",
+          "type": "Target",
+          "label": "Voltage-Gated Sodium Channel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target4",
+          "type": "Target",
+          "label": "Cardiac Sodium Channel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target5",
+          "type": "Target",
+          "label": "Calcium Release Channel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target6",
+          "type": "Target",
+          "label": "Bile Acid Transporter",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target7",
+          "type": "Target",
+          "label": "Potassium Channel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target8",
+          "type": "Target",
+          "label": "GABA Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target9",
+          "type": "Target",
+          "label": "Dopamine Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target10",
+          "type": "Target",
+          "label": "DNA Gyrase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target11",
+          "type": "Target",
+          "label": "Neuromuscular Junction Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target12",
+          "type": "Target",
+          "label": "Skeletal Muscle Relaxant Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease",
+          "type": "Disease",
+          "label": "Distal Myopathies",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Statins",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Quinidine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_quinidine",
+          "type": "Drug",
+          "label": "Quinidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Procainamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_procainamide",
+          "type": "Drug",
+          "label": "Procainamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Dantrolene",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dantrolene",
+          "type": "Drug",
+          "label": "Dantrolene",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Dopamine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dopamine",
+          "type": "Drug",
+          "label": "Dopamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Rocuronium",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rocuronium",
+          "type": "Drug",
+          "label": "Rocuronium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Skeletal muscle relaxants",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_skeletal_muscle_relaxants",
+          "type": "Drug",
+          "label": "Skeletal muscle relaxants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_target1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知影响炎症和肌肉功能"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_target2",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于调节血脂，与肌肉功能相关"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "n_target3",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响电生理，可能对肌肉有作用"
+        },
+        {
+          "source": "drug_procainamide",
+          "target": "n_target4",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于心脏功能，关联肌功能"
+        },
+        {
+          "source": "drug_dantrolene",
+          "target": "n_target5",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "直接影响肌肉收缩"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_target6",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "影响胆汁酸代谢与能量代谢"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_target7",
+          "relation": "acts_on",
+          "weight": 0.68,
+          "agent": "Proponent",
+          "rationale": "影响心脏电生理，可能影响肌肉表现"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "n_target8",
+          "relation": "acts_on",
+          "weight": 0.63,
+          "agent": "Proponent",
+          "rationale": "已知对神经性疼痛有影响，关联肌功能"
+        },
+        {
+          "source": "drug_dopamine",
+          "target": "n_target9",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "调节神经系统，可能影响运动能力"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "n_target10",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "抗生素，有可能影响运动能力"
+        },
+        {
+          "source": "drug_rocuronium",
+          "target": "n_target11",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "肌肉松弛剂，直接影响肌肉功能"
+        },
+        {
+          "source": "drug_skeletal_muscle_relaxants",
+          "target": "n_target12",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "直接影响肌肉收缩能力"
+        },
+        {
+          "source": "n_target1",
+          "target": "n_disease",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "影响与肌肉炎症相关的作用"
+        },
+        {
+          "source": "n_target2",
+          "target": "n_disease",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "脂质代谢影响肌肉功能"
+        },
+        {
+          "source": "n_target5",
+          "target": "n_disease",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "影响肌肉收缩的关键通道"
+        },
+        {
+          "source": "n_target12",
+          "target": "n_disease",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "直接作用于肌肉功能"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对肌炎有益"
+        },
+        {
+          "source": "drug_statins",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "理论上对肌肉有影响"
+        },
+        {
+          "source": "drug_dantrolene",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知用于骨骼肌疾病"
+        }
+      ],
+      "round_index": 1
+    },
+    "history": {
+      "round": 1
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H5",
+        "candidate": {
+          "id": "drug_dantrolene",
+          "name": "Dantrolene"
+        },
+        "score": 0.78,
+        "graph_snapshot_ref": "GE_H5_round1",
+        "key_assumptions": [
+          "直接影响肌肉收缩的关键机制",
+          "已知用于骨骼肌疾病"
+        ],
+        "caveats": [
+          "可能的安全性问题仍需评估"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "score": 0.76,
+        "graph_snapshot_ref": "GE_H1_round1",
+        "key_assumptions": [
+          "与Glucocorticoid Receptor的良好交互",
+          "已知对肌炎有益"
+        ],
+        "caveats": [
+          "长期使用的潜在副作用需关注"
+        ],
+        "confidence": "high"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Dantrolene → Calcium Release Channel → Distal Myopathies",
+          "reason": "机制闭环且已知用于骨骼肌疾病"
+        },
+        {
+          "pattern": "Corticosteroids → Glucocorticoid Receptor → Distal Myopathies",
+          "reason": "与炎症管理相关且具支持性证据"
+        }
+      ],
+      "remaining_gaps": [
+        "安全性问题未得到充分验证"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "Corticosteroids",
+            "Statins",
+            "Dantrolene"
+          ],
+          "impact_summary": "补齐了对肌肉功能的影响渠道，通过多条支持路径确认"
+        }
+      ],
+      "lessons": [
+        "当明确机制支持时，聚焦具体药物的作用与安全性，可以加速验证"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "优先验证已知作用的直接临床影响，避免不确定性干扰"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "关注可能的安全性风险，确保有针对性的后续验证"
+      },
+      {
+        "role": "Explorer",
+        "patch": "继续探索对肌肉相关机制的潜在新药物，避免重复验证已知候选氏"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "肌肉相关药物",
+        "then": "优先考虑直接影响的机制与临床证据"
+      },
+      {
+        "when": "症状不明设备",
+        "then": "确保每个候选药物的安全性与临床认可"
+      }
+    ]
+  }
+}

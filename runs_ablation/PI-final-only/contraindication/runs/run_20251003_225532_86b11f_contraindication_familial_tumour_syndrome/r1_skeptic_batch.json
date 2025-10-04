@@ -1,0 +1,497 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Familial tumour syndromes of the central and peripheral nervous system",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_doxorubicin",
+          "name": "Doxorubicin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_busulfan",
+          "name": "Busulfan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_vincristine",
+          "name": "Vincristine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_fluorouracil",
+          "name": "Fluorouracil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_temozolomide",
+          "name": "Temozolomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_thalidomide",
+          "name": "Thalidomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_chlorambucil",
+          "name": "Chlorambucil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ifosfamide",
+          "name": "Ifosfamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_lomustine",
+          "name": "Lomustine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_nitrosourea",
+          "name": "Nitrosourea"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_dox",
+          "type": "Drug",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cyclo",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_bus",
+          "type": "Drug",
+          "label": "Busulfan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_vin",
+          "type": "Drug",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_meth",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_flu",
+          "type": "Drug",
+          "label": "Fluorouracil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_tem",
+          "type": "Drug",
+          "label": "Temozolomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_thal",
+          "type": "Drug",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_chlo",
+          "type": "Drug",
+          "label": "Chlorambucil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ifo",
+          "type": "Drug",
+          "label": "Ifosfamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lomu",
+          "type": "Drug",
+          "label": "Lomustine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_nitro",
+          "type": "Drug",
+          "label": "Nitrosourea",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk",
+          "type": "Pathway",
+          "label": "Risk Pathway in Familial Tumour Syndromes",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Effects in Tumour Syndromes",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_dox",
+          "target": "n_risk",
+          "relation": "contributes_to",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知的风险链涉及此药物"
+        },
+        {
+          "source": "n_cyclo",
+          "target": "n_risk",
+          "relation": "contributes_to",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与家族性肿瘤综合症的风险关联"
+        },
+        {
+          "source": "n_bus",
+          "target": "n_risk",
+          "relation": "contributes_to",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的鳞状细胞癌风险"
+        },
+        {
+          "source": "n_vin",
+          "target": "n_risk",
+          "relation": "contributes_to",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响中枢神经系统可能性"
+        },
+        {
+          "source": "n_meth",
+          "target": "n_risk",
+          "relation": "contributes_to",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与骨髓抑制相关"
+        },
+        {
+          "source": "n_flu",
+          "target": "n_risk",
+          "relation": "contributes_to",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "有预示可能的毒性"
+        },
+        {
+          "source": "n_tem",
+          "target": "n_risk",
+          "relation": "contributes_to",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的长期神经毒性"
+        },
+        {
+          "source": "n_thal",
+          "target": "n_risk",
+          "relation": "contributes_to",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "已知的风险因素"
+        },
+        {
+          "source": "n_chlo",
+          "target": "n_risk",
+          "relation": "contributes_to",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "与潜在不良反应关联"
+        },
+        {
+          "source": "n_ifo",
+          "target": "n_risk",
+          "relation": "contributes_to",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能影响特别类型的肿瘤"
+        },
+        {
+          "source": "n_lomu",
+          "target": "n_risk",
+          "relation": "contributes_to",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "较低的已知风险"
+        },
+        {
+          "source": "n_nitro",
+          "target": "n_risk",
+          "relation": "contributes_to",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "已知的风险路径"
+        },
+        {
+          "source": "n_risk",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净获益被质疑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能的对风险的潜在证据"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险链直接影响"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "影响中枢神经系统的风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "影响长期结局的问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的细胞毒性风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响肿瘤排除的风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "潜在有害影响"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "与不良结果的连接"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响患者预后"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "存在短期与长期风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.55,
+          "agent": "Skeptic",
+          "rationale": "与不良反应的可能性"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "possible_toxicity_vs_benefit",
+          "pro_nodes": [],
+          "con_nodes": [
+            "n_adv"
+          ],
+          "note": "风险的存在与治疗的潜在获益之间的冲突"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "家族性肿瘤综合症患者对某些化疗药物更敏感",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "相关药物可能美输特定癌症效益",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "特定药物在家族性肿瘤综合症患者中是否安全",
+      "长期效果与短期获益之间的平衡"
+    ],
+    "falsification_tests": [
+      "是否存在家族性肿瘤综合症患者对相关药物的反应研究？",
+      "是否有显示长期获益的临床试验数据？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供更详尽的安全性研究资料",
+      "针对不良表型的具体证据要求补充"
+    ]
+  }
+}

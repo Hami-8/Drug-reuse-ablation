@@ -1,0 +1,698 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_l_dopa",
+            "via": [
+              "n_drug_target",
+              "n_neurotransmitter_pathway"
+            ],
+            "to": "n_neurotransmitter_disorder",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_ritalin",
+            "via": [
+              "n_drug_target",
+              "n_neurotransmitter_pathway"
+            ],
+            "to": "n_neurotransmitter_disorder",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_l_dopa",
+          "type": "Drug",
+          "label": "L-DOPA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ritalin",
+          "type": "Drug",
+          "label": "Ritalin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adderall",
+          "type": "Drug",
+          "label": "Adderall",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bupropion",
+          "type": "Drug",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sertraline",
+          "type": "Drug",
+          "label": "Sertraline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fluoxetine",
+          "type": "Drug",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_venlafaxine",
+          "type": "Drug",
+          "label": "Venlafaxine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_duloxetine",
+          "type": "Drug",
+          "label": "Duloxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clonidine",
+          "type": "Drug",
+          "label": "Clonidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_trazodone",
+          "type": "Drug",
+          "label": "Trazodone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methylphenidate",
+          "type": "Drug",
+          "label": "Methylphenidate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_drug_target",
+          "type": "Target",
+          "label": "Neurotransmitter Target",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_neurotransmitter_pathway",
+          "type": "Pathway",
+          "label": "Neurotransmitter Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_neurotransmitter_disorder",
+          "type": "Disease",
+          "label": "Neurotransmitter Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_l_dopa",
+          "type": "Target",
+          "label": "OffTarget_L-DOPA",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_l_dopa",
+          "type": "Pathway",
+          "label": "RiskPathway_L-DOPA",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_l_dopa",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_L-DOPA",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ritalin",
+          "type": "Target",
+          "label": "OffTarget_Ritalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ritalin",
+          "type": "Pathway",
+          "label": "RiskPathway_Ritalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ritalin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Ritalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "L-DOPA",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Ritalin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Adderall",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Sertraline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Venlafaxine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Duloxetine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Clonidine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Trazodone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Methylphenidate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_l_dopa",
+          "target": "n_drug_target",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "促进多巴胺水平，提高神经递质功能"
+        },
+        {
+          "source": "drug_ritalin",
+          "target": "n_drug_target",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "作为兴奋剂通过多巴胺转运体作用"
+        },
+        {
+          "source": "drug_adderall",
+          "target": "n_drug_target",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "促进神经递质释放，影响注意力"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "n_drug_target",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响多巴胺和去甲肾上腺素水平"
+        },
+        {
+          "source": "drug_sertraline",
+          "target": "n_drug_target",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "选择性5-HT再摄取抑制剂，调整神经递质"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "n_drug_target",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "调节血清素水平，改善情绪"
+        },
+        {
+          "source": "drug_venlafaxine",
+          "target": "n_drug_target",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响血清素和去甲肾上腺素"
+        },
+        {
+          "source": "drug_duloxetine",
+          "target": "n_drug_target",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "双重神经递质再摄取抑制剂"
+        },
+        {
+          "source": "drug_clonidine",
+          "target": "n_drug_target",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "作用于去甲肾上腺素系统，平衡神经递质"
+        },
+        {
+          "source": "drug_trazodone",
+          "target": "n_drug_target",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "平衡血清素，治疗抑郁症"
+        },
+        {
+          "source": "drug_methylphenidate",
+          "target": "n_drug_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过增加多巴胺改善注意力"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "n_drug_target",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "影响GABA，辅助治疗神经异常"
+        },
+        {
+          "source": "n_drug_target",
+          "target": "n_neurotransmitter_pathway",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "靶点与神经递质通路密切相关"
+        },
+        {
+          "source": "n_neurotransmitter_pathway",
+          "target": "n_neurotransmitter_disorder",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "神经递质的变化可导致疾病"
+        },
+        {
+          "source": "drug_l_dopa",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "数据支持用L-DOPA治疗神经递质障碍"
+        },
+        {
+          "source": "drug_ritalin",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "用于改善多动症，神经递质相关性"
+        },
+        {
+          "source": "drug_adderall",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "多动症等障碍频繁使用展现疗效"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于抑郁症且影响多种神经递质"
+        },
+        {
+          "source": "drug_sertraline",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于焦虑抑郁，改善神经递质平衡"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "抑郁症患者常见疗法"
+        },
+        {
+          "source": "drug_venlafaxine",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "双重途径对焦虑抑郁有效"
+        },
+        {
+          "source": "drug_duloxetine",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "相关神经递质表现联动"
+        },
+        {
+          "source": "drug_clonidine",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "用于相关症状的支持"
+        },
+        {
+          "source": "drug_trazodone",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于治疗与神经递质失调相关的抑郁"
+        },
+        {
+          "source": "drug_methylphenidate",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "多动症与神经递质直接关联"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "用于神经病理痛相关治疗"
+        },
+        {
+          "source": "drug_l_dopa",
+          "target": "n_ot_l_dopa",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_l_dopa",
+          "target": "n_rp_l_dopa",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_l_dopa",
+          "target": "n_adv_l_dopa",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_l_dopa",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_ritalin",
+          "target": "n_ot_ritalin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶"
+        },
+        {
+          "source": "n_ot_ritalin",
+          "target": "n_rp_ritalin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_ritalin",
+          "target": "n_adv_ritalin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ritalin",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_l_dopa",
+              "target": "n_drug_target",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "促进多巴胺水平，提高神经递质功能"
+            },
+            {
+              "source": "n_drug_target",
+              "target": "n_neurotransmitter_pathway",
+              "relation": "involved_in",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "靶点与神经递质通路密切相关"
+            },
+            {
+              "source": "n_neurotransmitter_pathway",
+              "target": "n_neurotransmitter_disorder",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "神经递质的变化可导致疾病"
+            },
+            {
+              "source": "drug_l_dopa",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "数据支持用L-DOPA治疗神经递质障碍"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已为L-DOPA补齐 Drug→Target→Pathway→Disease 的机制链，形成2条不相交路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_ritalin",
+              "target": "n_drug_target",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "作为兴奋剂通过多巴胺转运体作用"
+            },
+            {
+              "source": "n_drug_target",
+              "target": "n_neurotransmitter_pathway",
+              "relation": "involved_in",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "靶点与神经递质通路密切相关"
+            },
+            {
+              "source": "n_neurotransmitter_pathway",
+              "target": "n_neurotransmitter_disorder",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "神经递质的变化可导致疾病"
+            },
+            {
+              "source": "drug_ritalin",
+              "target": "H2",
+              "relation": "supports",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "用于改善多动症，神经递质相关性"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已为Ritalin补齐 Drug→Target→Pathway→Disease 的机制链，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

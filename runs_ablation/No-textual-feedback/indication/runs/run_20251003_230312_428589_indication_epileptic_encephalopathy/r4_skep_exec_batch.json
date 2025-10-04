@@ -1,0 +1,448 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Epileptic encephalopathy",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "副作用相关性评估",
+            "expectation": "验证副作用对有效性的影响，并量化证据",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_perampanel",
+          "type": "Drug",
+          "label": "Perampanel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lacosamide",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rufinamide",
+          "type": "Drug",
+          "label": "Rufinamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_levetiracetam",
+          "type": "Drug",
+          "label": "Levetiracetam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_valproate",
+          "type": "Drug",
+          "label": "Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_zonisamide",
+          "type": "Drug",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_oxcarbazepine",
+          "type": "Drug",
+          "label": "Oxcarbazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clobazam",
+          "type": "Drug",
+          "label": "Clobazam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_epileptic_encphalopathy",
+          "type": "Disease",
+          "label": "Epileptic encephalopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "Off-Target Effects of Antiepileptics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Mechanisms Leading to Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Cognitive Impairment",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv2",
+          "type": "Phenotype",
+          "label": "Mood Disorders",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv3",
+          "type": "Phenotype",
+          "label": "Gastrointestinal Issues",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_perampanel",
+          "target": "d_epileptic_encphalopathy",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知用于癫痫相关疾病"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "d_epileptic_encphalopathy",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "具有治疗癫痫的证据"
+        },
+        {
+          "source": "drug_rufinamide",
+          "target": "d_epileptic_encphalopathy",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "主要用于癫痫发作控制"
+        },
+        {
+          "source": "drug_levetiracetam",
+          "target": "d_epileptic_encphalopathy",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于多种癫痫类型"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "d_epileptic_encphalopathy",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "广泛用于癫痫治疗"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "d_epileptic_encphalopathy",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "用于部分癫痫性发作的控制"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "d_epileptic_encphalopathy",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知的抗癫痫药物"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "d_epileptic_encphalopathy",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可用于类癫痫疾病"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "d_epileptic_encphalopathy",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "历史悠久的抗癫痫药物"
+        },
+        {
+          "source": "drug_oxcarbazepine",
+          "target": "d_epileptic_encphalopathy",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "常用于癫痫发作控制"
+        },
+        {
+          "source": "drug_clobazam",
+          "target": "d_epileptic_encphalopathy",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "用于癫痫作为辅助治疗"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "d_epileptic_encphalopathy",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "可以用于控制癫痫发作"
+        },
+        {
+          "source": "drug_perampanel",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发的非特异性反应"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应"
+        },
+        {
+          "source": "drug_rufinamide",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱发的非靶向作用"
+        },
+        {
+          "source": "drug_levetiracetam",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知的副作用"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路的可能性"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "引起的认知能力影响"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv2",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致情绪障碍"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv3",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的消化系统问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若副作用成立，将影响有效性"
+        },
+        {
+          "source": "n_adv2",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "副作用可能导致患者抑郁"
+        },
+        {
+          "source": "n_adv3",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "副作用可能引发胃肠不适"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "n_ot",
+              "target": "n_rp",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "确认副作用与风险通路的相关性"
+            },
+            {
+              "source": "n_rp",
+              "target": "n_adv",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "副作用可能导致认知障碍"
+            },
+            {
+              "source": "n_rp",
+              "target": "n_adv2",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "可能诱发情绪问题"
+            },
+            {
+              "source": "n_rp",
+              "target": "n_adv3",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "引发消化道反应"
+            },
+            {
+              "source": "n_adv",
+              "target": "H1",
+              "relation": "refutes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "副作用显著影响潜在疗效"
+            }
+          ],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "副作用对有效性的影响",
+              "pro_nodes": [],
+              "con_nodes": [
+                "n_adv",
+                "n_adv2",
+                "n_adv3"
+              ],
+              "note": "副作用与有效性之间的潜在矛盾需要更多数据支持解决"
+            }
+          ]
+        },
+        "notes": "已完成副作用相关性评估，确认副作用可能影响有效性"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "副作用与病理机制关系的明确性仍需验证",
+      "对不同药物的特定副作用风险仍需进一步研究"
+    ]
+  }
+}

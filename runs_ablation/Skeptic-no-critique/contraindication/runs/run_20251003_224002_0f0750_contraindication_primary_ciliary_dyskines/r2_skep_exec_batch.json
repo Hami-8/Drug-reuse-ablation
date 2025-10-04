@@ -1,0 +1,344 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "对 Aspirin 使用的可能禁忌",
+            "expectation": "评估 Aspirin 在 Primary ciliary dyskinesia 中的安全性",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_ta",
+          "type": "Target",
+          "label": "COX-1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tb",
+          "type": "Target",
+          "label": "COX-2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_naproxen",
+          "type": "Drug",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Verapamil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_verapamil",
+          "type": "Drug",
+          "label": "Verapamil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Theophylline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_theophylline",
+          "type": "Drug",
+          "label": "Theophylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lisinopril",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Enalapril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_enalapril",
+          "type": "Drug",
+          "label": "Enalapril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "n_ta",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知COX-1抑制剂"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_tb",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "COX-2抑制的相对表现"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_ta",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与阿司匹林相似的作用机制"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_tb",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知对COX-2有显著影响"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_ta",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知的COX抑制剂"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_tb",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "机制支持"
+        },
+        {
+          "source": "n_ta",
+          "target": "Primary ciliary dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与支气管功能相关"
+        },
+        {
+          "source": "n_tb",
+          "target": "Primary ciliary dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "炎症反应相关"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "通过抑制COX-1支持假说"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "相似机制支持假说"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "相似机制支持假说"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates_per_hypothesis": []
+  }
+}

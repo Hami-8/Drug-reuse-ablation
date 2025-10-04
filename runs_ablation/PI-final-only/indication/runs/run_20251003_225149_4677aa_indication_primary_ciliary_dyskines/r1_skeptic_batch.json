@@ -1,0 +1,462 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_dornase_alfa",
+          "name": "Dornase alfa"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_budenoside",
+          "name": "Budenoside"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_montelukast",
+          "name": "Montelukast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ivacaftor",
+          "name": "Ivacaftor"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_nintedanib",
+          "name": "Nintedanib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_nebulized_antibiotics",
+          "name": "Nebulized antibiotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_erdafitinib",
+          "name": "Erdafitinib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_roflumilast",
+          "name": "Roflumilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ataluren",
+          "name": "Ataluren"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_cystagon",
+          "name": "Cystagon"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_dornase",
+          "type": "Target",
+          "label": "OffTargetDornase",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dornase",
+          "type": "Pathway",
+          "label": "RiskPathwayDornase",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dornase",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeDornase",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_azithromycin",
+          "type": "Target",
+          "label": "OffTargetAzithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_azithromycin",
+          "type": "Pathway",
+          "label": "RiskPathwayAzithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_azithromycin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAzithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_budenoside",
+          "type": "Target",
+          "label": "OffTargetBudenoside",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_budenoside",
+          "type": "Pathway",
+          "label": "RiskPathwayBudenoside",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_budenoside",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBudenoside",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_montelukast",
+          "type": "Target",
+          "label": "OffTargetMontelukast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_montelukast",
+          "type": "Pathway",
+          "label": "RiskPathwayMontelukast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_montelukast",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMontelukast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ivacaftor",
+          "type": "Target",
+          "label": "OffTargetIvacaftor",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ivacaftor",
+          "type": "Pathway",
+          "label": "RiskPathwayIvacaftor",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ivacaftor",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeIvacaftor",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_dornase_alfa",
+          "target": "n_ot_dornase",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶目标"
+        },
+        {
+          "source": "n_ot_dornase",
+          "target": "n_rp_dornase",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险途径可能激活"
+        },
+        {
+          "source": "n_rp_dornase",
+          "target": "n_adv_dornase",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_dornase",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "该风险链抵消药物收益"
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "n_ot_azithromycin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶目标"
+        },
+        {
+          "source": "n_ot_azithromycin",
+          "target": "n_rp_azithromycin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险途径可能激活"
+        },
+        {
+          "source": "n_rp_azithromycin",
+          "target": "n_adv_azithromycin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_azithromycin",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "该风险链抵消药物收益"
+        },
+        {
+          "source": "drug_budenoside",
+          "target": "n_ot_budenoside",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶目标"
+        },
+        {
+          "source": "n_ot_budenoside",
+          "target": "n_rp_budenoside",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险途径可能激活"
+        },
+        {
+          "source": "n_rp_budenoside",
+          "target": "n_adv_budenoside",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_budenoside",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "该风险链抵消药物收益"
+        },
+        {
+          "source": "drug_montelukast",
+          "target": "n_ot_montelukast",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶目标"
+        },
+        {
+          "source": "n_ot_montelukast",
+          "target": "n_rp_montelukast",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险途径可能激活"
+        },
+        {
+          "source": "n_rp_montelukast",
+          "target": "n_adv_montelukast",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_montelukast",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "该风险链抵消药物收益"
+        },
+        {
+          "source": "drug_ivacaftor",
+          "target": "n_ot_ivacaftor",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶目标"
+        },
+        {
+          "source": "n_ot_ivacaftor",
+          "target": "n_rp_ivacaftor",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险途径可能激活"
+        },
+        {
+          "source": "n_rp_ivacaftor",
+          "target": "n_adv_ivacaftor",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_ivacaftor",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "该风险链抵消药物收益"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "风险影响评估",
+          "pro_nodes": [
+            "H1",
+            "H2",
+            "H3",
+            "H4",
+            "H5"
+          ],
+          "con_nodes": [
+            "n_adv_dornase",
+            "n_adv_azithromycin",
+            "n_adv_budenoside",
+            "n_adv_montelukast",
+            "n_adv_ivacaftor"
+          ],
+          "note": "药物的收益可能被潜在不良反应抵消"
+        }
+      ]
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "靶向机制是否有效针对疾病核心通路",
+      "长期使用的安全性如何评估"
+    ],
+    "falsification_tests": [
+      "是否有研究显示这些药物在特定群体中有效？",
+      "是否存在对相关不良反应的临床证据？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供支持效用的临床数据",
+      "进一步讨论不同疗法的综合风险"
+    ]
+  }
+}

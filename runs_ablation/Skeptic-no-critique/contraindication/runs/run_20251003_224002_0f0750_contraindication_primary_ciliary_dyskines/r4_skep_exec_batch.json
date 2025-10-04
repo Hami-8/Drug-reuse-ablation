@@ -1,0 +1,404 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Primary ciliary dyskinesia",
+            "expectation": "若发现禁忌，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Primary ciliary dyskinesia",
+            "expectation": "若发现禁忌，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ace_inhibitors",
+          "type": "Drug",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiazide_diuretics",
+          "type": "Drug",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_primary_ciliary_dyskinesia",
+          "type": "Disease",
+          "label": "Primary ciliary dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_inflammation",
+          "type": "Target",
+          "label": "Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_bronchial_response",
+          "type": "Target",
+          "label": "Bronchial response",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_inflammatory_pathways",
+          "type": "Pathway",
+          "label": "Inflammatory pathways",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_respiratory_system",
+          "type": "Pathway",
+          "label": "Respiratory system pathways",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗炎效果证明"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "同类药物的炎症调节作用"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "target_bronchial_response",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "利尿作用可能影响呼吸功能"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知的强效抗炎药物"
+        },
+        {
+          "source": "drug_statins",
+          "target": "pathway_inflammatory_pathways",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与心血管相关的抗炎作用"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "target_bronchial_response",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "改善气道反应性"
+        },
+        {
+          "source": "pathway_inflammatory_pathways",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与呼吸道相关的炎症通路"
+        },
+        {
+          "source": "pathway_respiratory_system",
+          "target": "disease_primary_ciliary_dyskinesia",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "影响此病症的主要生理通路"
+        },
+        {
+          "source": "drug_anticoagulants",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能影响多种炎症反应"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "强效对抗炎症的常用药物"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "pathway_inflammatory_pathways",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "治疗自免疾病中的抗炎作用"
+        },
+        {
+          "source": "drug_thiazide_diuretics",
+          "target": "target_bronchial_response",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能通过液体管理影响气道"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "target_inflammation",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "抗炎效果被广泛接受"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "target_bronchial_response",
+          "relation": "modulates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "ACE 抑制剂可能对呼吸系统有影响"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_statins",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_anticoagulants",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_thiazide_diuretics",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates_per_hypothesis": []
+  }
+}

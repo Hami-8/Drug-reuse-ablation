@@ -1,0 +1,464 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_verapamil",
+          "name": "Verapamil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_theophylline",
+          "name": "Theophylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_lisinopril",
+          "name": "Lisinopril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_enalapril",
+          "name": "Enalapril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_tg_aspirin",
+          "type": "Target",
+          "label": "Cyclooxygenase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg_ibuprofen",
+          "type": "Target",
+          "label": "Cyclooxygenase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg_naproxen",
+          "type": "Target",
+          "label": "Cyclooxygenase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg_phenytoin",
+          "type": "Target",
+          "label": "Sodium Channel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg_amiodarone",
+          "type": "Target",
+          "label": "Potassium Channel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg_dexamethasone",
+          "type": "Target",
+          "label": "Glucocorticoid Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg_verapamil",
+          "type": "Target",
+          "label": "Calcium Channel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg_theophylline",
+          "type": "Target",
+          "label": "Phosphodiesterase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg_lisinopril",
+          "type": "Target",
+          "label": "Angiotensin Converting Enzyme",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg_enalapril",
+          "type": "Target",
+          "label": "Angiotensin Converting Enzyme",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg_beta_blockers",
+          "type": "Target",
+          "label": "Beta-Adrenergic Receptors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg_methotrexate",
+          "type": "Target",
+          "label": "Dihydrofolate Reductase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ds_primary_ciliary_dyskinesia",
+          "type": "Disease",
+          "label": "Primary Ciliary Dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "n_tg_aspirin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "广泛用于炎症相关疾病"
+        },
+        {
+          "source": "n_tg_aspirin",
+          "target": "n_ds_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可能通过促进炎症反应影响病症"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_tg_ibuprofen",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与类似机制药物一致"
+        },
+        {
+          "source": "n_tg_ibuprofen",
+          "target": "n_ds_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗炎作用可能影响病症"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_tg_naproxen",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "类似作用机制药物"
+        },
+        {
+          "source": "n_tg_naproxen",
+          "target": "n_ds_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能通过抗炎效应影响"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "n_tg_phenytoin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于神经性疾病治疗"
+        },
+        {
+          "source": "n_tg_phenytoin",
+          "target": "n_ds_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能影响呼吸功能"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_tg_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知影响心脏疾病"
+        },
+        {
+          "source": "n_tg_amiodarone",
+          "target": "n_ds_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "心脏与呼吸功能关联"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_tg_dexamethasone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "常用于减轻炎症"
+        },
+        {
+          "source": "n_tg_dexamethasone",
+          "target": "n_ds_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响呼吸道情况"
+        },
+        {
+          "source": "drug_verapamil",
+          "target": "n_tg_verapamil",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于心血管疾病治疗"
+        },
+        {
+          "source": "n_tg_verapamil",
+          "target": "n_ds_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "心脏健康对肺功能的重要性"
+        },
+        {
+          "source": "drug_theophylline",
+          "target": "n_tg_theophylline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "常用于治疗呼吸系统疾病"
+        },
+        {
+          "source": "n_tg_theophylline",
+          "target": "n_ds_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能通过扩大气道改善症状"
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "n_tg_lisinopril",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "在心血管病中有重要应用"
+        },
+        {
+          "source": "n_tg_lisinopril",
+          "target": "n_ds_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "影响血液流动与氧气供应"
+        },
+        {
+          "source": "drug_enalapril",
+          "target": "n_tg_enalapril",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "心脏健康的相关药物"
+        },
+        {
+          "source": "n_tg_enalapril",
+          "target": "n_ds_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "对疾病的影响"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_tg_beta_blockers",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于处理心血管问题"
+        },
+        {
+          "source": "n_tg_beta_blockers",
+          "target": "n_ds_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能影响气道机制"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_tg_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于治疗癌症和自身免疫病"
+        },
+        {
+          "source": "n_tg_methotrexate",
+          "target": "n_ds_primary_ciliary_dyskinesia",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能影响呼吸功能"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "存在多种药物可能影响 Primary Ciliary Dyskinesia 的机制通路",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "所有药物通过常规途径到达相关靶点"
+    ],
+    "uncertainties": [
+      "药物的具体影响与机制尚未明确"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步研究药物的长期效果和潜在风险"
+    ]
+  }
+}

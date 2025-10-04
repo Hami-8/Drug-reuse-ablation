@@ -1,0 +1,778 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Epileptic encephalopathy",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_clobazam",
+            "via": [
+              "target_GABA_A_receptor",
+              "pathway_GABAergic_pathway"
+            ],
+            "to": "epileptic_encephalopathy",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_lacosamide",
+            "via": [
+              "target_GABA_A_receptor",
+              "pathway_GABAergic_pathway"
+            ],
+            "to": "epileptic_encephalopathy",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_clobazam",
+          "type": "Drug",
+          "label": "Clobazam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lacosamide",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_levetiracetam",
+          "type": "Drug",
+          "label": "Levetiracetam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lamotrigine",
+          "type": "Drug",
+          "label": "Lamotrigine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_valproate",
+          "type": "Drug",
+          "label": "Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_zonisamide",
+          "type": "Drug",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rufinamide",
+          "type": "Drug",
+          "label": "Rufinamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_perampanel",
+          "type": "Drug",
+          "label": "Perampanel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_eslicarbazepine",
+          "type": "Drug",
+          "label": "Eslicarbazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "epileptic_encephalopathy",
+          "type": "Disease",
+          "label": "Epileptic encephalopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_GABA_A_receptor",
+          "type": "Target",
+          "label": "GABA_A receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_GABAergic_pathway",
+          "type": "Pathway",
+          "label": "GABAergic signaling pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pheno_dosage_response",
+          "type": "Phenotype",
+          "label": "Dosage response curve",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "claim_efficacy",
+          "type": "Claim",
+          "label": "Efficacy in treating Epileptic encephalopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_clobazam",
+          "type": "Target",
+          "label": "OffTargetClobazam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_clobazam",
+          "type": "Pathway",
+          "label": "RiskPathwayClobazam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clobazam",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeClobazam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lacosamide",
+          "type": "Target",
+          "label": "OffTargetLacosamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lacosamide",
+          "type": "Pathway",
+          "label": "RiskPathwayLacosamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lacosamide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLacosamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_levetiracetam",
+          "type": "Target",
+          "label": "OffTargetLevetiracetam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_levetiracetam",
+          "type": "Pathway",
+          "label": "RiskPathwayLevetiracetam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_levetiracetam",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLevetiracetam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Clobazam",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Levetiracetam",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Lamotrigine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Valproate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Rufinamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Perampanel",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Eslicarbazepine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_clobazam",
+          "target": "target_GABA_A_receptor",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知GABA_A受体激动剂"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "target_GABA_A_receptor",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "影响GABA的释放"
+        },
+        {
+          "source": "drug_levetiracetam",
+          "target": "target_GABA_A_receptor",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "有助于GABA的调节"
+        },
+        {
+          "source": "drug_lamotrigine",
+          "target": "target_GABA_A_receptor",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响离子通道与GABA通路"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "target_GABA_A_receptor",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "增强GABA作用的已知机制"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "target_GABA_A_receptor",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "强GABA_A受体增强剂"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "target_GABA_A_receptor",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响GABA合成与释放"
+        },
+        {
+          "source": "drug_rufinamide",
+          "target": "target_GABA_A_receptor",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "调节GABA作用的机理"
+        },
+        {
+          "source": "drug_perampanel",
+          "target": "target_GABA_A_receptor",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "在试验中显示与GABA介导的路径相关"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "target_GABA_A_receptor",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "调节GABA的作用"
+        },
+        {
+          "source": "drug_eslicarbazepine",
+          "target": "target_GABA_A_receptor",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "影响GABA通路的药物"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "target_GABA_A_receptor",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知的GABA_A介导药物"
+        },
+        {
+          "source": "target_GABA_A_receptor",
+          "target": "pathway_GABAergic_pathway",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "参与GABA通路"
+        },
+        {
+          "source": "pathway_GABAergic_pathway",
+          "target": "epileptic_encephalopathy",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "GABA通路相关于癫痫发作"
+        },
+        {
+          "source": "drug_clobazam",
+          "target": "claim_efficacy",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "强支持癫痫性脑病效果"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "claim_efficacy",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "临床数据支持"
+        },
+        {
+          "source": "drug_levetiracetam",
+          "target": "claim_efficacy",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "广泛用于癫痫性脑病"
+        },
+        {
+          "source": "drug_lamotrigine",
+          "target": "claim_efficacy",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "支持临床有效性"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "claim_efficacy",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "临床研究证实"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "claim_efficacy",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "很高的疗效证据"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "claim_efficacy",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "部分临床数据支持"
+        },
+        {
+          "source": "drug_rufinamide",
+          "target": "claim_efficacy",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "用于难治性病例"
+        },
+        {
+          "source": "drug_perampanel",
+          "target": "claim_efficacy",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "初步证据支持"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "claim_efficacy",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "作用机制与癫痫相关"
+        },
+        {
+          "source": "drug_eslicarbazepine",
+          "target": "claim_efficacy",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "与癫痫药物机制一致"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "claim_efficacy",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "应用于癫痫的老药"
+        },
+        {
+          "source": "claim_efficacy",
+          "target": "epileptic_encephalopathy",
+          "relation": "entails",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "明确表明治疗作用"
+        },
+        {
+          "source": "drug_clobazam",
+          "target": "n_ot_clobazam",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在可能的旁路作用"
+        },
+        {
+          "source": "n_ot_clobazam",
+          "target": "n_rp_clobazam",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险链路"
+        },
+        {
+          "source": "n_rp_clobazam",
+          "target": "n_adv_clobazam",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_clobazam",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消药物效益"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "n_ot_lacosamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在可能的旁路作用"
+        },
+        {
+          "source": "n_ot_lacosamide",
+          "target": "n_rp_lacosamide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险链路"
+        },
+        {
+          "source": "n_rp_lacosamide",
+          "target": "n_adv_lacosamide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_lacosamide",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消药物效益"
+        },
+        {
+          "source": "drug_levetiracetam",
+          "target": "n_ot_levetiracetam",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在可能的旁路作用"
+        },
+        {
+          "source": "n_ot_levetiracetam",
+          "target": "n_rp_levetiracetam",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险链路"
+        },
+        {
+          "source": "n_rp_levetiracetam",
+          "target": "n_adv_levetiracetam",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_levetiracetam",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消药物效益"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_clobazam",
+              "target": "target_GABA_A_receptor",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "已知GABA_A受体激动剂"
+            },
+            {
+              "source": "target_GABA_A_receptor",
+              "target": "pathway_GABAergic_pathway",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "参与GABA通路"
+            },
+            {
+              "source": "pathway_GABAergic_pathway",
+              "target": "epileptic_encephalopathy",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "GABA通路相关于癫痫发作"
+            },
+            {
+              "source": "drug_clobazam",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "强支持癫痫性脑病效果"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→Target→Pathway→Disease，形成2条不相交路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_lacosamide",
+              "target": "target_GABA_A_receptor",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "影响GABA的释放"
+            },
+            {
+              "source": "target_GABA_A_receptor",
+              "target": "pathway_GABAergic_pathway",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "参与GABA通路"
+            },
+            {
+              "source": "pathway_GABAergic_pathway",
+              "target": "epileptic_encephalopathy",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "GABA通路相关于癫痫发作"
+            },
+            {
+              "source": "drug_lacosamide",
+              "target": "H2",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "临床数据支持"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→Target→Pathway→Disease，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

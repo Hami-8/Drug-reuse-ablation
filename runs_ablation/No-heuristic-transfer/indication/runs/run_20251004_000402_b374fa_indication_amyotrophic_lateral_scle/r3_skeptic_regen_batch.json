@@ -1,0 +1,461 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Amyotrophic lateral sclerosis or motor neuron disease",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_riluzole",
+          "name": "Riluzole"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_edaravone",
+          "name": "Edaravone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_nerinetide",
+          "name": "Nerinetide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_tirasemtiv",
+          "name": "Tirasemtiv"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_nusinersen",
+          "name": "Nusinersen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lithium",
+          "name": "Lithium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_bicalutamide",
+          "name": "Bicalutamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_dexpramipexole",
+          "name": "Dexpramipexole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_dantrolene",
+          "name": "Dantrolene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_sodium_phenylbutyrate",
+          "name": "Sodium phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_amx0035",
+          "name": "AMX0035"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_cilostazol",
+          "name": "Cilostazol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_riluzole",
+          "type": "Target",
+          "label": "Riluzole Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_edaravone",
+          "type": "Target",
+          "label": "Edaravone Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nerinetide",
+          "type": "Target",
+          "label": "Nerinetide Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tirasemtiv",
+          "type": "Target",
+          "label": "Tirasemtiv Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nusinersen",
+          "type": "Target",
+          "label": "Nusinersen Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lithium",
+          "type": "Target",
+          "label": "Lithium Off-target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Potential Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_riluzole",
+          "target": "n_ot_riluzole",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "考虑可能的旁路效应"
+        },
+        {
+          "source": "drug_edaravone",
+          "target": "n_ot_edaravone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "考虑可能的旁路效应"
+        },
+        {
+          "source": "drug_nerinetide",
+          "target": "n_ot_nerinetide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "考虑可能的旁路效应"
+        },
+        {
+          "source": "drug_tirasemtiv",
+          "target": "n_ot_tirasemtiv",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "考虑可能的旁路效应"
+        },
+        {
+          "source": "drug_nusinersen",
+          "target": "n_ot_nusinersen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "考虑可能的旁路效应"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "n_ot_lithium",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "考虑可能的旁路效应"
+        },
+        {
+          "source": "n_ot_riluzole",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_ot_edaravone",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_ot_nerinetide",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_ot_tirasemtiv",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_ot_nusinersen",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_ot_lithium",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险通路关联"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的导致不良效应的路径"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果这个风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果这个风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果这个风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果这个风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果这个风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果这个风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果这个风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果这个风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果这个风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果这个风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果这个风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果这个风险成立，将抵消净获益"
+        }
+      ],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "疗效与副作用的平衡",
+          "pro_nodes": [
+            "drug_riluzole",
+            "drug_edaravone",
+            "drug_nerinetide",
+            "drug_tirasemtiv",
+            "drug_nusinersen",
+            "drug_lithium",
+            "drug_bicalutamide",
+            "drug_dexpramipexole",
+            "drug_dantrolene",
+            "drug_sodium_phenylbutyrate",
+            "drug_amx0035",
+            "drug_cilostazol"
+          ],
+          "con_nodes": [
+            "n_adv"
+          ],
+          "note": "潜在的治疗效果与副作用的平衡问题"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "存在副作用的风险，可能抵消收益。",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "没有明确的长期疗效证据，风险收益比不明。",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物的靶向作用是否能均匀实现",
+      "对疾病核心机制的影响是否足够显著"
+    ],
+    "falsification_tests": [
+      "是否有证据显示能显著降低 ALS 患者的病程进展？",
+      "是否存在大量临床数据验证疗效与副作用的真实比率？"
+    ],
+    "next_focus_for_pi": [
+      "要求对每种药物的独特副作用进行深入分析",
+      "再次评估风险链以及所有相关假设"
+    ]
+  }
+}

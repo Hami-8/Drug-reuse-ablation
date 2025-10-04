@@ -1,0 +1,416 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_l_dopa",
+          "name": "L-DOPA"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ritalin",
+          "name": "Ritalin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_adderall",
+          "name": "Adderall"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_bupropion",
+          "name": "Bupropion"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_sertraline",
+          "name": "Sertraline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_fluoxetine",
+          "name": "Fluoxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_venlafaxine",
+          "name": "Venlafaxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_duloxetine",
+          "name": "Duloxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_clonidine",
+          "name": "Clonidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_trazodone",
+          "name": "Trazodone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_methylphenidate",
+          "name": "Methylphenidate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_l_dopa",
+          "type": "Drug",
+          "label": "L-DOPA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ritalin",
+          "type": "Drug",
+          "label": "Ritalin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adderall",
+          "type": "Drug",
+          "label": "Adderall",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bupropion",
+          "type": "Drug",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sertraline",
+          "type": "Drug",
+          "label": "Sertraline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fluoxetine",
+          "type": "Drug",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_venlafaxine",
+          "type": "Drug",
+          "label": "Venlafaxine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_duloxetine",
+          "type": "Drug",
+          "label": "Duloxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clonidine",
+          "type": "Drug",
+          "label": "Clonidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_trazodone",
+          "type": "Drug",
+          "label": "Trazodone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methylphenidate",
+          "type": "Drug",
+          "label": "Methylphenidate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_dopamine",
+          "type": "Target",
+          "label": "Dopamine Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_norepinephrine",
+          "type": "Target",
+          "label": "Norepinephrine Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_neurotransmitter",
+          "type": "Pathway",
+          "label": "Neurotransmitter Signaling Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease_neurodisorder",
+          "type": "Disease",
+          "label": "Neurotransmitter Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_l_dopa",
+          "target": "n_target_dopamine",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "L-DOPA对多巴胺受体的已知作用"
+        },
+        {
+          "source": "drug_ritalin",
+          "target": "n_target_norepinephrine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Ritalin影响去甲肾上腺素受体"
+        },
+        {
+          "source": "drug_adderall",
+          "target": "n_target_dopamine",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Adderall作用于多巴胺系统"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "n_target_dopamine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Bupropion作用于多巴胺和去甲肾上腺素"
+        },
+        {
+          "source": "drug_sertraline",
+          "target": "n_target_serotonin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Sertraline影响血清素受体"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "n_target_serotonin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Fluoxetine作用于血清素通路"
+        },
+        {
+          "source": "drug_venlafaxine",
+          "target": "n_target_norepinephrine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Venlafaxine作用于去甲肾上腺素"
+        },
+        {
+          "source": "drug_duloxetine",
+          "target": "n_target_norepinephrine",
+          "relation": "acts_on",
+          "weight": 0.68,
+          "agent": "Proponent",
+          "rationale": "Duloxetine影响去甲肾上腺素水平"
+        },
+        {
+          "source": "drug_clonidine",
+          "target": "n_target_norepinephrine",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Clonidine作用于去甲肾上腺素受体"
+        },
+        {
+          "source": "drug_trazodone",
+          "target": "n_target_serotonin",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Trazodone影响血清素通路"
+        },
+        {
+          "source": "drug_methylphenidate",
+          "target": "n_target_dopamine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Methylphenidate作用主要为多巴胺再摄取抑制"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "n_target_norepinephrine",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Gabapentin间接影响去甲肾上腺素通路"
+        },
+        {
+          "source": "n_target_dopamine",
+          "target": "n_pathway_neurotransmitter",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "多巴胺通路的核心角色"
+        },
+        {
+          "source": "n_target_norepinephrine",
+          "target": "n_pathway_neurotransmitter",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "去甲肾上腺素信号通路参与"
+        },
+        {
+          "source": "n_pathway_neurotransmitter",
+          "target": "n_disease_neurodisorder",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "神经递质通路与相关疾病的关联"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "通过神经递质通路可能干预神经递质障碍的治疗。",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物均具备达到靶器官的有效性，满足基本的药理学特点。"
+    ],
+    "uncertainties": [
+      "某些药物的长期效果和安全性尚未充分验证。"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步确认每个药物的双重作用和交互影响。"
+    ]
+  }
+}

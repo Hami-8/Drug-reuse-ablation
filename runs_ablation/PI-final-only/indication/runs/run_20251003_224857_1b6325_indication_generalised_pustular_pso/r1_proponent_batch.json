@@ -1,0 +1,400 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Generalised pustular psoriasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_acitretin",
+          "name": "Acitretin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_apremilast",
+          "name": "Apremilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_secukinumab",
+          "name": "Secukinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_interleukin_17_inhibitors",
+          "name": "Interleukin-17 inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_topical_corticosteroids",
+          "name": "Topical corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ustekinumab",
+          "name": "Ustekinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_thalidomide",
+          "name": "Thalidomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_acitretin",
+          "type": "Drug",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_apremilast",
+          "type": "Drug",
+          "label": "Apremilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_secukinumab",
+          "type": "Drug",
+          "label": "Secukinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_IL17_inhibitors",
+          "type": "Drug",
+          "label": "Interleukin-17 inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_topical_corticosteroids",
+          "type": "Drug",
+          "label": "Topical corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ustekinumab",
+          "type": "Drug",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thalidomide",
+          "type": "Drug",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_Generalised_pustular_psoriasis",
+          "type": "Disease",
+          "label": "Generalised pustular psoriasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cutaneous_inflammation",
+          "type": "Pathway",
+          "label": "Cutaneous Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_immun_modulation",
+          "type": "Pathway",
+          "label": "Immune Modulation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_acitretin",
+          "target": "n_cutaneous_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对皮肤炎症有影响"
+        },
+        {
+          "source": "n_apremilast",
+          "target": "n_immun_modulation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于免疫调节"
+        },
+        {
+          "source": "n_etanercept",
+          "target": "n_immun_modulation",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "可有效抑制免疫反应"
+        },
+        {
+          "source": "n_infliximab",
+          "target": "n_immun_modulation",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "用于抑制炎症反应"
+        },
+        {
+          "source": "n_secukinumab",
+          "target": "n_cutaneous_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "靶向治疗皮肤炎症"
+        },
+        {
+          "source": "n_cyclosporine",
+          "target": "n_immun_modulation",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知为免疫抑制剂"
+        },
+        {
+          "source": "n_methotrexate",
+          "target": "n_immun_modulation",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "使用于自身免疫疾病"
+        },
+        {
+          "source": "n_adalimumab",
+          "target": "n_immun_modulation",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "常用于免疫调节"
+        },
+        {
+          "source": "n_IL17_inhibitors",
+          "target": "n_cutaneous_inflammation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "针对皮肤炎症机制"
+        },
+        {
+          "source": "n_topical_corticosteroids",
+          "target": "n_cutaneous_inflammation",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "广泛用于皮肤炎症"
+        },
+        {
+          "source": "n_ustekinumab",
+          "target": "n_immun_modulation",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "靶向免疫通路"
+        },
+        {
+          "source": "n_thalidomide",
+          "target": "n_immun_modulation",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "有潜在的免疫调节作用"
+        },
+        {
+          "source": "n_cutaneous_inflammation",
+          "target": "n_Generalised_pustular_psoriasis",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与皮肤炎症密切相关"
+        },
+        {
+          "source": "n_immun_modulation",
+          "target": "n_Generalised_pustular_psoriasis",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "涉及免疫调节过程"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过影响皮肤炎症及免疫调节通路可能对广泛性脓疱性银屑病有效",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "假设药物能有效到达靶部位并发挥作用"
+    ],
+    "uncertainties": [
+      "药物安全性及长期效果需进一步评估"
+    ],
+    "next_focus_for_pi": [
+      "是否需优先考虑某些药物的临床试验结果？"
+    ]
+  }
+}

@@ -1,0 +1,405 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Bardet-Biedl Syndrome",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_acetazolamide",
+          "name": "Acetazolamide"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_furosemide",
+          "name": "Furosemide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_sodium_valproate",
+          "name": "Sodium Valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_thiazide_diuretics",
+          "name": "Thiazide diuretics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_atenolol",
+          "name": "Atenolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_metoprolol",
+          "name": "Metoprolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_digoxin",
+          "name": "Digoxin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_lithium",
+          "name": "Lithium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_acetazolamide",
+          "type": "Drug",
+          "label": "Acetazolamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thiazide_diuretics",
+          "type": "Drug",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_atenolol",
+          "type": "Drug",
+          "label": "Atenolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_metoprolol",
+          "type": "Drug",
+          "label": "Metoprolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_digoxin",
+          "type": "Drug",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bardet_biedl_syndrome",
+          "type": "Disease",
+          "label": "Bardet-Biedl Syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_renal_pathway",
+          "type": "Pathway",
+          "label": "Renal Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cardiovascular_pathway",
+          "type": "Pathway",
+          "label": "Cardiovascular Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phenotype_related",
+          "type": "Phenotype",
+          "label": "Phenotype related to Bardet-Biedl Syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_acetazolamide",
+          "target": "n_renal_pathway",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于利尿作用，影响肾脏功能"
+        },
+        {
+          "source": "n_furosemide",
+          "target": "n_renal_pathway",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "强效利尿药，影响肾脏"
+        },
+        {
+          "source": "n_thiazide_diuretics",
+          "target": "n_renal_pathway",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "同类利尿药物作用于肾脏"
+        },
+        {
+          "source": "n_atenolol",
+          "target": "n_cardiovascular_pathway",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "调节心血管系统，相关流体平衡"
+        },
+        {
+          "source": "n_metoprolol",
+          "target": "n_cardiovascular_pathway",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "同类药物，影响心血管功能"
+        },
+        {
+          "source": "n_beta_blockers",
+          "target": "n_cardiovascular_pathway",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响心血管系统功能"
+        },
+        {
+          "source": "n_ibuprofen",
+          "target": "n_phenotype_related",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响炎症过程"
+        },
+        {
+          "source": "n_sodium_valproate",
+          "target": "n_phenotype_related",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于多种精神及神经疾病"
+        },
+        {
+          "source": "n_topiramate",
+          "target": "n_phenotype_related",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响神经功能"
+        },
+        {
+          "source": "n_",
+          "target": "n_bardet_biedl_syndrome",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "各类药物与症状相关"
+        },
+        {
+          "source": "n_digoxin",
+          "target": "n_cardiovascular_pathway",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响心脏功能"
+        },
+        {
+          "source": "n_phenytoin",
+          "target": "n_phenotype_related",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响神经病理过程"
+        },
+        {
+          "source": "n_lithium",
+          "target": "n_phenotype_related",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可影响多种表型"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物可能对 Bardet-Biedl Syndrome 相关病理表型产生影响",
+        "confidence": "medium"
+      },
+      {
+        "id": "C2",
+        "text": "药物通过各自的靶点和通路，形成2条不相交路径",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物能有效到达目标靶器官"
+    ],
+    "uncertainties": [
+      "各药物具体不良反应及相互作用风险需进一步确认"
+    ],
+    "next_focus_for_pi": [
+      "探讨H1与H4的作用机制是否存在交集？"
+    ]
+  }
+}

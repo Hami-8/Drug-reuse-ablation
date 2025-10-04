@@ -1,0 +1,1192 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Bardet-Biedl Syndrome",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_acetazolamide",
+            "via": [
+              "target_diuretic_effect"
+            ],
+            "to": "phenotype_renal_dysfunction",
+            "success_criteria": "形成至少1条支持且不相交的路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_aspirin",
+            "via": [
+              "target_diuretic_effect"
+            ],
+            "to": "phenotype_renal_dysfunction",
+            "success_criteria": "补全与BBS相关的反应通道",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_acetazolamide",
+          "type": "Drug",
+          "label": "Acetazolamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bromocriptine",
+          "type": "Drug",
+          "label": "Bromocriptine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_digoxin",
+          "type": "Drug",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ethacrynic_acid",
+          "type": "Drug",
+          "label": "Ethacrynic Acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lisinopril",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_probenecid",
+          "type": "Drug",
+          "label": "Probenecid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_bardet_biedl_syndrome",
+          "type": "Disease",
+          "label": "Bardet-Biedl Syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_diuretic_effect",
+          "type": "Target",
+          "label": "Diuretic Effect",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_renal_pathway",
+          "type": "Pathway",
+          "label": "Renal Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_renal_dysfunction",
+          "type": "Phenotype",
+          "label": "Renal Dysfunction",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_obesity",
+          "type": "Phenotype",
+          "label": "Obesity",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_acetazolamide",
+          "type": "Target",
+          "label": "OffTarget_Acetazolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_acetazolamide",
+          "type": "Pathway",
+          "label": "RiskPathway_Acetazolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_acetazolamide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Acetazolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "OffTarget_Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aspirin",
+          "type": "Pathway",
+          "label": "RiskPathway_Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aspirin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_atorvastatin",
+          "type": "Target",
+          "label": "OffTarget_Atorvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_atorvastatin",
+          "type": "Pathway",
+          "label": "RiskPathway_Atorvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_atorvastatin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Atorvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bromocriptine",
+          "type": "Target",
+          "label": "OffTarget_Bromocriptine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bromocriptine",
+          "type": "Pathway",
+          "label": "RiskPathway_Bromocriptine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bromocriptine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Bromocriptine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dexamethasone",
+          "type": "Target",
+          "label": "OffTarget_Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dexamethasone",
+          "type": "Pathway",
+          "label": "RiskPathway_Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dexamethasone",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_digoxin",
+          "type": "Target",
+          "label": "OffTarget_Digoxin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_digoxin",
+          "type": "Pathway",
+          "label": "RiskPathway_Digoxin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_digoxin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Digoxin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ethacrynic_acid",
+          "type": "Target",
+          "label": "OffTarget_Ethacrynic_Acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ethacrynic_acid",
+          "type": "Pathway",
+          "label": "RiskPathway_Ethacrynic_Acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ethacrynic_acid",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Ethacrynic_Acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_furosemide",
+          "type": "Target",
+          "label": "OffTarget_Furosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_furosemide",
+          "type": "Pathway",
+          "label": "RiskPathway_Furosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_furosemide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Furosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ibuprofen",
+          "type": "Target",
+          "label": "OffTarget_Ibuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ibuprofen",
+          "type": "Pathway",
+          "label": "RiskPathway_Ibuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ibuprofen",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Ibuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lisinopril",
+          "type": "Target",
+          "label": "OffTarget_Lisinopril",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lisinopril",
+          "type": "Pathway",
+          "label": "RiskPathway_Lisinopril",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lisinopril",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Lisinopril",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_probenecid",
+          "type": "Target",
+          "label": "OffTarget_Probenecid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_probenecid",
+          "type": "Pathway",
+          "label": "RiskPathway_Probenecid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_probenecid",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Probenecid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rifampicin",
+          "type": "Target",
+          "label": "OffTarget_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rifampicin",
+          "type": "Pathway",
+          "label": "RiskPathway_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rifampicin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_acetazolamide",
+          "target": "target_diuretic_effect",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "强力利尿药，治疗水肿相关情况"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "target_diuretic_effect",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "有助于减轻炎症，可能对肾功能产生双重影响"
+        },
+        {
+          "source": "drug_atorvastatin",
+          "target": "target_diuretic_effect",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "他汀类药物有潜在心肾保护作用"
+        },
+        {
+          "source": "drug_bromocriptine",
+          "target": "target_diuretic_effect",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可能影响代谢状态，间接影响肾功能"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "target_diuretic_effect",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "皮质类固醇可能干扰水电解质平衡"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "target_diuretic_effect",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "用于心脏病患者，有助于管理水肿"
+        },
+        {
+          "source": "drug_ethacrynic_acid",
+          "target": "target_diuretic_effect",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "强利尿效果，适合相关病症"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "target_diuretic_effect",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "常用于治疗心衰引起的水肿"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "target_diuretic_effect",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "非甾体抗炎药可能影响肾功能"
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "target_diuretic_effect",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "ACE抑制剂对肾脏有保护作用"
+        },
+        {
+          "source": "drug_probenecid",
+          "target": "target_diuretic_effect",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能影响药物排泄，间接影响功能"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "target_diuretic_effect",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "抗生素影响肾脏代谢"
+        },
+        {
+          "source": "target_diuretic_effect",
+          "target": "phenotype_renal_dysfunction",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "利尿作用可导致肾功能异常"
+        },
+        {
+          "source": "target_diuretic_effect",
+          "target": "phenotype_obesity",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与代谢综合症相关联"
+        },
+        {
+          "source": "phenotype_renal_dysfunction",
+          "target": "disease_bardet_biedl_syndrome",
+          "relation": "associated_with",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与BBS临床表现相关"
+        },
+        {
+          "source": "phenotype_obesity",
+          "target": "disease_bardet_biedl_syndrome",
+          "relation": "associated_with",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "肥胖是BBS的主要表型之一"
+        },
+        {
+          "source": "drug_acetazolamide",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "通过利尿作用为BBS的评估提供支持"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "减轻相关症状对BBS可能有帮助"
+        },
+        {
+          "source": "drug_atorvastatin",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "心肾联合作用理论支持"
+        },
+        {
+          "source": "drug_bromocriptine",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "代谢相关的支持性作用"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "有益于相关并发症的处理"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可改善相关的循环问题"
+        },
+        {
+          "source": "drug_ethacrynic_acid",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "强效利尿药的支持作用"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "临床应用外科中广泛应用"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能减轻炎症带来的综合症状"
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "心肾保护作用的相关性"
+        },
+        {
+          "source": "drug_probenecid",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能具备影响功能的潜力"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "提供相关的抗感染作用"
+        },
+        {
+          "source": "drug_acetazolamide",
+          "target": "n_ot_acetazolamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能会影响肾脏功能"
+        },
+        {
+          "source": "n_ot_acetazolamide",
+          "target": "n_rp_acetazolamide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_acetazolamide",
+          "target": "n_adv_acetazolamide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_acetazolamide",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，则可能抵消治疗益处"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响血小板功能"
+        },
+        {
+          "source": "n_ot_aspirin",
+          "target": "n_rp_aspirin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_aspirin",
+          "target": "n_adv_aspirin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_aspirin",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起出血风险"
+        },
+        {
+          "source": "drug_atorvastatin",
+          "target": "n_ot_atorvastatin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响肝脏代谢"
+        },
+        {
+          "source": "n_ot_atorvastatin",
+          "target": "n_rp_atorvastatin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_atorvastatin",
+          "target": "n_adv_atorvastatin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_atorvastatin",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起肌肉损伤"
+        },
+        {
+          "source": "drug_bromocriptine",
+          "target": "n_ot_bromocriptine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响内分泌功能"
+        },
+        {
+          "source": "n_ot_bromocriptine",
+          "target": "n_rp_bromocriptine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_bromocriptine",
+          "target": "n_adv_bromocriptine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_bromocriptine",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起胃肠道副作用"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ot_dexamethasone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "免疫抑制潜在风险"
+        },
+        {
+          "source": "n_ot_dexamethasone",
+          "target": "n_rp_dexamethasone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_dexamethasone",
+          "target": "n_adv_dexamethasone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_dexamethasone",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起感染风险"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "n_ot_digoxin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响心脏功能"
+        },
+        {
+          "source": "n_ot_digoxin",
+          "target": "n_rp_digoxin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_digoxin",
+          "target": "n_adv_digoxin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_digoxin",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发心律失常"
+        },
+        {
+          "source": "drug_ethacrynic_acid",
+          "target": "n_ot_ethacrynic_acid",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响电解质"
+        },
+        {
+          "source": "n_ot_ethacrynic_acid",
+          "target": "n_rp_ethacrynic_acid",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_ethacrynic_acid",
+          "target": "n_adv_ethacrynic_acid",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ethacrynic_acid",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起肾功能异常"
+        },
+        {
+          "source": "drug_furosemide",
+          "target": "n_ot_furosemide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能逆转电解质平衡"
+        },
+        {
+          "source": "n_ot_furosemide",
+          "target": "n_rp_furosemide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_furosemide",
+          "target": "n_adv_furosemide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_furosemide",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起电解质紊乱"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_ot_ibuprofen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏功能"
+        },
+        {
+          "source": "n_ot_ibuprofen",
+          "target": "n_rp_ibuprofen",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_ibuprofen",
+          "target": "n_adv_ibuprofen",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ibuprofen",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发胃肠道不适"
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "n_ot_lisinopril",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾功能"
+        },
+        {
+          "source": "n_ot_lisinopril",
+          "target": "n_rp_lisinopril",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_lisinopril",
+          "target": "n_adv_lisinopril",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_lisinopril",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发低血压"
+        },
+        {
+          "source": "drug_probenecid",
+          "target": "n_ot_probenecid",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏功能"
+        },
+        {
+          "source": "n_ot_probenecid",
+          "target": "n_rp_probenecid",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_probenecid",
+          "target": "n_adv_probenecid",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_probenecid",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发肾功能损伤"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "n_ot_rifampicin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响肝脏代谢"
+        },
+        {
+          "source": "n_ot_rifampicin",
+          "target": "n_rp_rifampicin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_rifampicin",
+          "target": "n_adv_rifampicin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_rifampicin",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发肝损伤"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_acetazolamide",
+              "target": "target_diuretic_effect",
+              "relation": "acts_on",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "强力利尿药，治疗水肿相关情况"
+            },
+            {
+              "source": "target_diuretic_effect",
+              "target": "phenotype_renal_dysfunction",
+              "relation": "involved_in",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "利尿作用可导致肾功能异常"
+            },
+            {
+              "source": "phenotype_renal_dysfunction",
+              "target": "disease_bardet_biedl_syndrome",
+              "relation": "associated_with",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "与BBS临床表现相关"
+            },
+            {
+              "source": "drug_acetazolamide",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "通过利尿作用为BBS的评估提供支持"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→Target→Phenotype→Disease，形成1条支持且不相交的路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_aspirin",
+              "target": "target_diuretic_effect",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "有助于减轻炎症，可能对肾功能产生双重影响"
+            },
+            {
+              "source": "target_diuretic_effect",
+              "target": "phenotype_renal_dysfunction",
+              "relation": "involved_in",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "利尿作用可导致肾功能异常"
+            },
+            {
+              "source": "phenotype_renal_dysfunction",
+              "target": "disease_bardet_biedl_syndrome",
+              "relation": "associated_with",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "与BBS临床表现相关"
+            },
+            {
+              "source": "drug_aspirin",
+              "target": "H2",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "减轻相关症状对BBS可能有帮助"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→Target→Phenotype→Disease，形成1条支持且不相交的路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

@@ -1,0 +1,645 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_clofibrate",
+          "name": "Clofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_estrogens",
+          "name": "Estrogens"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_thiazolidinediones",
+          "name": "Thiazolidinediones"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sodium_glucose_cotransporter_2_inhibitors",
+          "name": "Sodium-glucose cotransporter-2 inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_bosentan",
+          "name": "Bosentan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_glitazones",
+          "name": "Glitazones"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_progestins",
+          "name": "Progestins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_rp_gemfibrozil",
+          "type": "Pathway",
+          "label": "RiskPathwayGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gemfibrozil",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fenofibrate",
+          "type": "Pathway",
+          "label": "RiskPathwayFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fenofibrate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_clofibrate",
+          "type": "Pathway",
+          "label": "RiskPathwayClofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clofibrate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeClofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_niacin",
+          "type": "Pathway",
+          "label": "RiskPathwayNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_niacin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_estrogens",
+          "type": "Pathway",
+          "label": "RiskPathwayEstrogens",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_estrogens",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeEstrogens",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_thiazolidinediones",
+          "type": "Pathway",
+          "label": "RiskPathwayThiazolidinediones",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_thiazolidinediones",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeThiazolidinediones",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_glucose_cotransporter_2_inhibitors",
+          "type": "Pathway",
+          "label": "RiskPathwaySGLT2Inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sodium_glucose_cotransporter_2_inhibitors",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSGLT2Inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_corticosteroids",
+          "type": "Pathway",
+          "label": "RiskPathwayCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_corticosteroids",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bosentan",
+          "type": "Pathway",
+          "label": "RiskPathwayBosentan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bosentan",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBosentan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_glitazones",
+          "type": "Pathway",
+          "label": "RiskPathwayGlitazones",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_glitazones",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeGlitazones",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_beta_blockers",
+          "type": "Pathway",
+          "label": "RiskPathwayBetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_beta_blockers",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_progestins",
+          "type": "Pathway",
+          "label": "RiskPathwayProgestins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_progestins",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeProgestins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_gemfibrozil",
+          "target": "n_rp_gemfibrozil",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知导致高甘油三酯风险"
+        },
+        {
+          "source": "n_rp_gemfibrozil",
+          "target": "n_adv_gemfibrozil",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重的不良表型"
+        },
+        {
+          "source": "n_adv_gemfibrozil",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持风险链，抵消预计益处"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "n_rp_fenofibrate",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知导致高甘油三酯风险"
+        },
+        {
+          "source": "n_rp_fenofibrate",
+          "target": "n_adv_fenofibrate",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重的不良表型"
+        },
+        {
+          "source": "n_adv_fenofibrate",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持风险链，抵消预计益处"
+        },
+        {
+          "source": "drug_clofibrate",
+          "target": "n_rp_clofibrate",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知导致高甘油三酯风险"
+        },
+        {
+          "source": "n_rp_clofibrate",
+          "target": "n_adv_clofibrate",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重的不良表型"
+        },
+        {
+          "source": "n_adv_clofibrate",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持风险链，抵消预计益处"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "n_rp_niacin",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知导致高甘油三酯风险"
+        },
+        {
+          "source": "n_rp_niacin",
+          "target": "n_adv_niacin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重的不良表型"
+        },
+        {
+          "source": "n_adv_niacin",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持风险链，抵消预计益处"
+        },
+        {
+          "source": "drug_estrogens",
+          "target": "n_rp_estrogens",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知导致高甘油三酯风险"
+        },
+        {
+          "source": "n_rp_estrogens",
+          "target": "n_adv_estrogens",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重的不良表型"
+        },
+        {
+          "source": "n_adv_estrogens",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持风险链，抵消预计益处"
+        },
+        {
+          "source": "drug_thiazolidinediones",
+          "target": "n_rp_thiazolidinediones",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知导致高甘油三酯风险"
+        },
+        {
+          "source": "n_rp_thiazolidinediones",
+          "target": "n_adv_thiazolidinediones",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重的不良表型"
+        },
+        {
+          "source": "n_adv_thiazolidinediones",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持风险链，抵消预计益处"
+        },
+        {
+          "source": "drug_sodium_glucose_cotransporter_2_inhibitors",
+          "target": "n_rp_sodium_glucose_cotransporter_2_inhibitors",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知导致高甘油三酯风险"
+        },
+        {
+          "source": "n_rp_sodium_glucose_cotransporter_2_inhibitors",
+          "target": "n_adv_sodium_glucose_cotransporter_2_inhibitors",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重的不良表型"
+        },
+        {
+          "source": "n_adv_sodium_glucose_cotransporter_2_inhibitors",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持风险链，抵消预计益处"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_rp_corticosteroids",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知导致高甘油三酯风险"
+        },
+        {
+          "source": "n_rp_corticosteroids",
+          "target": "n_adv_corticosteroids",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重的不良表型"
+        },
+        {
+          "source": "n_adv_corticosteroids",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持风险链，抵消预计益处"
+        },
+        {
+          "source": "drug_bosentan",
+          "target": "n_rp_bosentan",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知导致高甘油三酯风险"
+        },
+        {
+          "source": "n_rp_bosentan",
+          "target": "n_adv_bosentan",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重的不良表型"
+        },
+        {
+          "source": "n_adv_bosentan",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持风险链，抵消预计益处"
+        },
+        {
+          "source": "drug_glitazones",
+          "target": "n_rp_glitazones",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知导致高甘油三酯风险"
+        },
+        {
+          "source": "n_rp_glitazones",
+          "target": "n_adv_glitazones",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重的不良表型"
+        },
+        {
+          "source": "n_adv_glitazones",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持风险链，抵消预计益处"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_rp_beta_blockers",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知导致高甘油三酯风险"
+        },
+        {
+          "source": "n_rp_beta_blockers",
+          "target": "n_adv_beta_blockers",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重的不良表型"
+        },
+        {
+          "source": "n_adv_beta_blockers",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持风险链，抵消预计益处"
+        },
+        {
+          "source": "drug_progestins",
+          "target": "n_rp_progestins",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知导致高甘油三酯风险"
+        },
+        {
+          "source": "n_rp_progestins",
+          "target": "n_adv_progestins",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重的不良表型"
+        },
+        {
+          "source": "n_adv_progestins",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持风险链，抵消预计益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "是否存在足够证据证明这些药物对高甘油三酯血症的疗效",
+      "药物对整体管理策略的适宜性"
+    ],
+    "falsification_tests": [
+      "是否有研究表明这些药物在高甘油三脂症患者中使用的详细不良反应",
+      "是否有更有效的替代疗法"
+    ],
+    "next_focus_for_pi": [
+      "要求提供对每种药物的详细安全性数据与危险性对比",
+      "评估与现有治疗方案的相互作用与禁忌"
+    ]
+  }
+}

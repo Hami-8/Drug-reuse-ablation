@@ -1,0 +1,376 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Rod-cone dystrophy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_tadalafil",
+          "name": "Tadalafil"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_viagra",
+          "name": "Viagra"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_thioridazine",
+          "name": "Thioridazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_quinine",
+          "name": "Quinine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_clomiphene",
+          "name": "Clomiphene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_fluoroquinolones",
+          "name": "Fluoroquinolones"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_isotretinoin",
+          "name": "Isotretinoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_hydrochlorothiazide",
+          "name": "Hydrochlorothiazide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_clozapine",
+          "name": "Clozapine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_tadalafil",
+          "type": "Drug",
+          "label": "Tadalafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_sildenafil",
+          "type": "Drug",
+          "label": "Sildenafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_viagra",
+          "type": "Drug",
+          "label": "Viagra",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_thioridazine",
+          "type": "Drug",
+          "label": "Thioridazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_quinine",
+          "type": "Drug",
+          "label": "Quinine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_clomiphene",
+          "type": "Drug",
+          "label": "Clomiphene",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_fluoroquinolones",
+          "type": "Drug",
+          "label": "Fluoroquinolones",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_isotretinoin",
+          "type": "Drug",
+          "label": "Isotretinoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_hydrochlorothiazide",
+          "type": "Drug",
+          "label": "Hydrochlorothiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_clozapine",
+          "type": "Drug",
+          "label": "Clozapine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Effects in Rod-Cone Dystrophy",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_tadalafil",
+          "target": "n_adv",
+          "relation": "can_cause",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响视网膜细胞功能"
+        },
+        {
+          "source": "n_sildenafil",
+          "target": "n_adv",
+          "relation": "can_cause",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能对视网膜健康有负面影响"
+        },
+        {
+          "source": "n_viagra",
+          "target": "n_adv",
+          "relation": "can_cause",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与视网膜疾病存在潜在关联"
+        },
+        {
+          "source": "n_amiodarone",
+          "target": "n_adv",
+          "relation": "can_cause",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知有视网膜毒性"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_adv",
+          "relation": "can_cause",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致眼部并发症"
+        },
+        {
+          "source": "n_thioridazine",
+          "target": "n_adv",
+          "relation": "can_cause",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视网膜损伤有关"
+        },
+        {
+          "source": "n_quinine",
+          "target": "n_adv",
+          "relation": "can_cause",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与视觉障碍相关"
+        },
+        {
+          "source": "n_clomiphene",
+          "target": "n_adv",
+          "relation": "can_cause",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响视力"
+        },
+        {
+          "source": "n_fluoroquinolones",
+          "target": "n_adv",
+          "relation": "can_cause",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "有可能影响视觉系统"
+        },
+        {
+          "source": "n_isotretinoin",
+          "target": "n_adv",
+          "relation": "can_cause",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "有潜在视网膜毒性"
+        },
+        {
+          "source": "n_hydrochlorothiazide",
+          "target": "n_adv",
+          "relation": "can_cause",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "可能引起视力变化"
+        },
+        {
+          "source": "n_clozapine",
+          "target": "n_adv",
+          "relation": "can_cause",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "已知会引起视网膜问题"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "所有这些药物潜在对视网膜健康有影响",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "Rod-cone dystrophy可能对这些药物的反应更为敏感",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物对视网膜细胞的直接影响",
+      "药物的安全性是否经过充分验证"
+    ],
+    "falsification_tests": [
+      "是否有研究表明上述药物不会加剧视网膜疾病的进展？",
+      "是否有临床数据支持这些药物在Rod-cone dystrophy患者的安全性？"
+    ],
+    "next_focus_for_pi": [
+      "要求提供临床研究以支持上述药物在Rod-cone dystrophy的使用安全性",
+      "进行对比研究以明确药物效果与安全性"
+    ]
+  }
+}

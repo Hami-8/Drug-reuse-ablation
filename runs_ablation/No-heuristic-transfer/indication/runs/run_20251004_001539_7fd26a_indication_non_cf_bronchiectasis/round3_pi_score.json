@@ -1,0 +1,1567 @@
+{
+  "input": {
+    "mode": "score",
+    "query": {
+      "entity": "Non-CF bronchiectasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        }
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_antibiotics",
+          "name": "Antibiotics"
+        }
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_mucolytics",
+          "name": "Mucolytics"
+        }
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_bronchodilators",
+          "name": "Bronchodilators"
+        }
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        }
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_roflumilast",
+          "name": "Roflumilast"
+        }
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_nebulized_hypertonic_saline",
+          "name": "Nebulized Hypertonic Saline"
+        }
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        }
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_inhaled_corticosteroids",
+          "name": "Inhaled Corticosteroids"
+        }
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_macrolides",
+          "name": "Macrolides"
+        }
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_chest_physiotherapy",
+          "name": "Chest Physiotherapy"
+        }
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_surgical_resection",
+          "name": "Surgical Resection"
+        }
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mucolytics",
+          "type": "Drug",
+          "label": "Mucolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bronchodilators",
+          "type": "Drug",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_roflumilast",
+          "type": "Drug",
+          "label": "Roflumilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hypertonic_saline",
+          "type": "Drug",
+          "label": "Nebulized Hypertonic Saline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_inhaled_corticosteroids",
+          "type": "Drug",
+          "label": "Inhaled Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_macrolides",
+          "type": "Drug",
+          "label": "Macrolides",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_chest_physiotherapy",
+          "type": "Drug",
+          "label": "Chest Physiotherapy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_surgical_resection",
+          "type": "Drug",
+          "label": "Surgical Resection",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_non_cf_bronchiectasis",
+          "type": "Disease",
+          "label": "Non-CF Bronchiectasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_azithromycin",
+          "type": "Target",
+          "label": "OffTargetAzithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_inflammation",
+          "type": "Pathway",
+          "label": "InflammationRiskPathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_resistance",
+          "type": "Phenotype",
+          "label": "AntibioticResistance",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_antibiotics",
+          "type": "Target",
+          "label": "OffTargetAntibiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_infection",
+          "type": "Phenotype",
+          "label": "InfectionComplication",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mucolytics",
+          "type": "Target",
+          "label": "OffTargetMucolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_risk",
+          "type": "Phenotype",
+          "label": "RiskOfAdverseOutcome",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bronchodilators",
+          "type": "Target",
+          "label": "OffTargetBronchodilators",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_prednisone",
+          "type": "Target",
+          "label": "OffTargetPrednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_roflumilast",
+          "type": "Target",
+          "label": "OffTargetRoflumilast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_hypertonicsaline",
+          "type": "Target",
+          "label": "OffTargetHypertonicSaline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nacetylcysteine",
+          "type": "Target",
+          "label": "OffTargetNAC",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_inhaledcorticosteroids",
+          "type": "Target",
+          "label": "OffTargetInhaledCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_macrolides",
+          "type": "Target",
+          "label": "OffTargetMacrolides",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_chestphysiotherapy",
+          "type": "Target",
+          "label": "OffTargetChestPhysiotherapy",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_surgicalresection",
+          "type": "Target",
+          "label": "OffTargetSurgicalResection",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Mucolytics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_mucolytics",
+          "type": "Drug",
+          "label": "Mucolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_bronchodilators",
+          "type": "Drug",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Roflumilast",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_roflumilast",
+          "type": "Drug",
+          "label": "Roflumilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Nebulized Hypertonic Saline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nebulized_hypertonic_saline",
+          "type": "Drug",
+          "label": "Nebulized Hypertonic Saline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Inhaled Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_inhaled_corticosteroids",
+          "type": "Drug",
+          "label": "Inhaled Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Macrolides",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_macrolides",
+          "type": "Drug",
+          "label": "Macrolides",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Chest Physiotherapy",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_chest_physiotherapy",
+          "type": "Drug",
+          "label": "Chest Physiotherapy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Surgical Resection",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_surgical_resection",
+          "type": "Drug",
+          "label": "Surgical Resection",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_azithromycin",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗生素类药物常用于呼吸系统感染"
+        },
+        {
+          "source": "n_antibiotics",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "广泛用于感染的治疗"
+        },
+        {
+          "source": "n_mucolytics",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有助稀化粘液，改善症状"
+        },
+        {
+          "source": "n_bronchodilators",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "扩张气道有利于改善呼吸"
+        },
+        {
+          "source": "n_prednisone",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "类固醇有助于降低炎症"
+        },
+        {
+          "source": "n_roflumilast",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "特定情况下改善肺功能"
+        },
+        {
+          "source": "n_hypertonic_saline",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "用于雾化有助于稀化粘液"
+        },
+        {
+          "source": "n_n_acetylcysteine",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "有效粘液溶解剂"
+        },
+        {
+          "source": "n_inhaled_corticosteroids",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于减少气道炎症"
+        },
+        {
+          "source": "n_macrolides",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有助于肺部感染的治疗"
+        },
+        {
+          "source": "n_chest_physiotherapy",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "改善肺部排痰功能"
+        },
+        {
+          "source": "n_surgical_resection",
+          "target": "n_non_cf_bronchiectasis",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "在特定情况下可行的治疗方法"
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "n_ot_azithromycin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非目标靶点"
+        },
+        {
+          "source": "n_ot_azithromycin",
+          "target": "n_rp_inflammation",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联至炎症风险通路"
+        },
+        {
+          "source": "n_rp_inflammation",
+          "target": "n_adv_resistance",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致耐药性增加"
+        },
+        {
+          "source": "drug_antibiotics",
+          "target": "n_ot_antibiotics",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在非靶效应"
+        },
+        {
+          "source": "n_ot_antibiotics",
+          "target": "n_adv_infection",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致感染并发症"
+        },
+        {
+          "source": "drug_mucolytics",
+          "target": "n_ot_mucolytics",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "机制疑虑"
+        },
+        {
+          "source": "n_ot_mucolytics",
+          "target": "n_adv_risk",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能意味着不良结果风险"
+        },
+        {
+          "source": "drug_bronchodilators",
+          "target": "n_ot_bronchodilators",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "作用机制存在争议"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_prednisone",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "长期使用副作用疑虑"
+        },
+        {
+          "source": "drug_roflumilast",
+          "target": "n_ot_roflumilast",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "功效未明确"
+        },
+        {
+          "source": "drug_nebulized_hypertonic_saline",
+          "target": "n_ot_hypertonicsaline",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "效果未确立"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "n_ot_nacetylcysteine",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "潜在交互作用尚需验证"
+        },
+        {
+          "source": "drug_inhaled_corticosteroids",
+          "target": "n_ot_inhaledcorticosteroids",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "疗效与安全性存疑"
+        },
+        {
+          "source": "drug_macrolides",
+          "target": "n_ot_macrolides",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "对整体利益的影响不明"
+        },
+        {
+          "source": "drug_chest_physiotherapy",
+          "target": "n_ot_chestphysiotherapy",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "效果尚需进一步研究"
+        },
+        {
+          "source": "drug_surgical_resection",
+          "target": "n_ot_surgicalresection",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "潜在并发症需要考虑"
+        }
+      ],
+      "round_index": 3
+    },
+    "history": {
+      "round": 3,
+      "last_scores": [
+        {
+          "hypothesis_id": "H1",
+          "score": 0.76,
+          "components": {
+            "mechanism_fit": 0.8,
+            "class_prior": 0.7,
+            "pk_pd_feasibility": 0.75,
+            "indication_plausibility": 0.8,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.8,
+            "contradiction_weight": 0.5,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "存在有效的支持连接至 Non-CF Bronchiectasis"
+            ],
+            "safety_risk": [
+              "可能引发炎症风险，增加耐药性"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "网络中对长期使用的安全性问题需要更多证据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H2",
+          "score": 0.74,
+          "components": {
+            "mechanism_fit": 0.75,
+            "class_prior": 0.75,
+            "pk_pd_feasibility": 0.7,
+            "indication_plausibility": 0.8,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.85,
+            "contradiction_weight": 0.55,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "有效用于治疗呼吸道感染"
+            ],
+            "safety_risk": [
+              "耐药性增加的风险"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需评估潜在的感染并发症"
+          ]
+        },
+        {
+          "hypothesis_id": "H3",
+          "score": 0.7,
+          "components": {
+            "mechanism_fit": 0.7,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.65,
+            "indication_plausibility": 0.7,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.75,
+            "contradiction_weight": 0.55,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "用以改善粘液排出"
+            ],
+            "safety_risk": [
+              "不良结果风险需谨慎评估"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "机制不够明确"
+          ]
+        },
+        {
+          "hypothesis_id": "H4",
+          "score": 0.68,
+          "components": {
+            "mechanism_fit": 0.7,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.65,
+            "safety_risk": 0.3,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.7,
+            "contradiction_weight": 0.5,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "有助于改善呼吸功能"
+            ],
+            "safety_risk": [
+              "可能的机制争议"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "疗效不明确"
+          ]
+        },
+        {
+          "hypothesis_id": "H5",
+          "score": 0.65,
+          "components": {
+            "mechanism_fit": 0.65,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.6,
+            "safety_risk": 0.4,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.65,
+            "contradiction_weight": 0.55,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "类固醇可降低炎症"
+            ],
+            "safety_risk": [
+              "长期使用带来副作用"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "具体适应症需进一步确认"
+          ]
+        },
+        {
+          "hypothesis_id": "H6",
+          "score": 0.63,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.5,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.6,
+            "contradiction_weight": 0.5,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "可能改善肺功能"
+            ],
+            "safety_risk": [
+              "功效尚待验证"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "对该疾病的具体适应性需更多支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H7",
+          "score": 0.61,
+          "components": {
+            "mechanism_fit": 0.65,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.55,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.4,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.55,
+            "contradiction_weight": 0.5,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "能稀化粘液"
+            ],
+            "safety_risk": [
+              "效果未证实"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "特定情况下的疗效需进一步研究"
+          ]
+        },
+        {
+          "hypothesis_id": "H8",
+          "score": 0.6,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.55,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.4,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.65,
+            "contradiction_weight": 0.5,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "有效粘液溶解剂"
+            ],
+            "safety_risk": [
+              "潜在的交互作用尚需确认"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "机制阐明不足"
+          ]
+        },
+        {
+          "hypothesis_id": "H9",
+          "score": 0.58,
+          "components": {
+            "mechanism_fit": 0.55,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.5,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.6,
+            "contradiction_weight": 0.5,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "可用于减少炎症"
+            ],
+            "safety_risk": [
+              "疗效与安全性存疑"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "长效性需进一步确证"
+          ]
+        },
+        {
+          "hypothesis_id": "H10",
+          "score": 0.56,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.5,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.5,
+            "contradiction_weight": 0.5,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "有助于提高感染治疗效果"
+            ],
+            "safety_risk": [
+              "整体利益影响尚不明确"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "机制不清晰，需要进一步分析"
+          ]
+        },
+        {
+          "hypothesis_id": "H11",
+          "score": 0.55,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.5,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.5,
+            "contradiction_weight": 0.5,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "可能改善肺部排痰"
+            ],
+            "safety_risk": [
+              "效果尚需进一步研究"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "应用范围不明确"
+          ]
+        },
+        {
+          "hypothesis_id": "H12",
+          "score": 0.5,
+          "components": {
+            "mechanism_fit": 0.45,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.5,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.4,
+            "contradiction_weight": 0.5,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "在特定情况下有效"
+            ],
+            "safety_risk": [
+              "潜在并发症需要考虑"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "对治疗有效性需更多数据"
+          ]
+        }
+      ]
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "scoring_summary": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.76,
+        "components": {
+          "mechanism_fit": 0.8,
+          "class_prior": 0.7,
+          "pk_pd_feasibility": 0.75,
+          "indication_plausibility": 0.8,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "存在有效的支持连接至 Non-CF Bronchiectasis"
+          ],
+          "safety_risk": [
+            "可能引发炎症风险，增加耐药性"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "网络中对长期使用的安全性问题需要更多证据支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.74,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.75,
+          "pk_pd_feasibility": 0.7,
+          "indication_plausibility": 0.8,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.55,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "有效用于治疗呼吸道感染"
+          ],
+          "safety_risk": [
+            "耐药性增加的风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需评估潜在的感染并发症"
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.7,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.65,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.55,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "用以改善粘液排出"
+          ],
+          "safety_risk": [
+            "不良结果风险需谨慎评估"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "机制不够明确"
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.68,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.65,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "有助于改善呼吸功能"
+          ],
+          "safety_risk": [
+            "可能的机制争议"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "疗效不明确"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.65,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.55,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "类固醇可降低炎症"
+          ],
+          "safety_risk": [
+            "长期使用带来副作用"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "具体适应症需进一步确认"
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.63,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "可能改善肺功能"
+          ],
+          "safety_risk": [
+            "功效尚待验证"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "对该疾病的具体适应性需更多支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.61,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "能稀化粘液"
+          ],
+          "safety_risk": [
+            "效果未证实"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "特定情况下的疗效需进一步研究"
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.6,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "有效粘液溶解剂"
+          ],
+          "safety_risk": [
+            "潜在的交互作用尚需确认"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "机制阐明不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.58,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "可用于减少炎症"
+          ],
+          "safety_risk": [
+            "疗效与安全性存疑"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "长效性需进一步确证"
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "有助于提高感染治疗效果"
+          ],
+          "safety_risk": [
+            "整体利益影响尚不明确"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "机制不清晰，需要进一步分析"
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.55,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "可能改善肺部排痰"
+          ],
+          "safety_risk": [
+            "效果尚需进一步研究"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "应用范围不明确"
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.45,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.1
+        },
+        "graph_signals": {
+          "support_weight": 0.4,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "在特定情况下有效"
+          ],
+          "safety_risk": [
+            "潜在并发症需要考虑"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "对治疗有效性需更多数据"
+        ]
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "delta_since_last_round": 0.02,
+    "stop_decision": {
+      "should_stop": false,
+      "reasons": [
+        "Δscore < 0.03"
+      ]
+    }
+  }
+}

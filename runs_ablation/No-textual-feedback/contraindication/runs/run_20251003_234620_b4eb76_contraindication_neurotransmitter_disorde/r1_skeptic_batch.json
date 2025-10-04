@@ -1,0 +1,301 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_phenelzine",
+          "name": "Phenelzine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_selegiline",
+          "name": "Selegiline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_fluoxetine",
+          "name": "Fluoxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_paroxetine",
+          "name": "Paroxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_bupropion",
+          "name": "Bupropion"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_clomipramine",
+          "name": "Clomipramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sertraline",
+          "name": "Sertraline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_venlafaxine",
+          "name": "Venlafaxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_thioridazine",
+          "name": "Thioridazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_risperidone",
+          "name": "Risperidone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tranylcypromine",
+          "name": "Tranylcypromine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_citalopram",
+          "name": "Citalopram"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_ph",
+          "type": "Target",
+          "label": "Off-target effects of Phenelzine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ph",
+          "type": "Pathway",
+          "label": "Risk pathway for Phenelzine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ph",
+          "type": "Phenotype",
+          "label": "Adverse effects of Phenelzine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_se",
+          "type": "Target",
+          "label": "Off-target effects of Selegiline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_se",
+          "type": "Pathway",
+          "label": "Risk pathway for Selegiline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_se",
+          "type": "Phenotype",
+          "label": "Adverse effects of Selegiline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_phenelzine",
+          "target": "n_ot_ph",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药物相互作用"
+        },
+        {
+          "source": "n_ot_ph",
+          "target": "n_rp_ph",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路相关"
+        },
+        {
+          "source": "n_rp_ph",
+          "target": "n_adv_ph",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ph",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若确实存在副作用，将抵消药物益处"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "n_ot_se",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药物相互作用"
+        },
+        {
+          "source": "n_ot_se",
+          "target": "n_rp_se",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路相关"
+        },
+        {
+          "source": "n_rp_se",
+          "target": "n_adv_se",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_se",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若确实存在副作用，将抵消药物益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "off_target_efficacy",
+          "pro_nodes": [
+            "drug_phenelzine",
+            "drug_selegiline"
+          ],
+          "con_nodes": [
+            "n_adv_ph",
+            "n_adv_se"
+          ],
+          "note": "副作用可能抵消药物的疗效"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "Phenelzine/Selegiline可能导致高血压或心率失常",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "某些神经递质失调病患者对传统抗抑郁药耐受性差",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物对相关神经递质失调的疗效是否一致",
+      "对此类患者的安全性评估是否充分"
+    ],
+    "falsification_tests": [
+      "是否存在针对 Phenelzine 或 Selegiline 的临床副作用证据？",
+      "是否有支持其对特定病症有效的长期数据？"
+    ],
+    "next_focus_for_pi": [
+      "进一步明确其他药物的反驳链条",
+      "探讨药物的临床应用与禁忌的具体证据"
+    ]
+  }
+}

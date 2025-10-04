@@ -1,0 +1,464 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Non-CF bronchiectasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_antibiotics",
+          "name": "Antibiotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_mucolytics",
+          "name": "Mucolytics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_bronchodilators",
+          "name": "Bronchodilators"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_roflumilast",
+          "name": "Roflumilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_nebulized_hypertonic_saline",
+          "name": "Nebulized Hypertonic Saline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_inhaled_corticosteroids",
+          "name": "Inhaled Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_macrolides",
+          "name": "Macrolides"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_chest_physiotherapy",
+          "name": "Chest Physiotherapy"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_surgical_resection",
+          "name": "Surgical Resection"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "mucolytics",
+          "type": "Drug",
+          "label": "Mucolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "bronchodilators",
+          "type": "Drug",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "roflumilast",
+          "type": "Drug",
+          "label": "Roflumilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "hypertonic_saline",
+          "type": "Drug",
+          "label": "Nebulized Hypertonic Saline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "inhaled_corticosteroids",
+          "type": "Drug",
+          "label": "Inhaled Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "macrolides",
+          "type": "Drug",
+          "label": "Macrolides",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "chest_physiotherapy",
+          "type": "Drug",
+          "label": "Chest Physiotherapy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "surgical_resection",
+          "type": "Drug",
+          "label": "Surgical Resection",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "non_cf_bronchiectasis",
+          "type": "Disease",
+          "label": "Non-CF Bronchiectasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "azithromycin",
+          "target": "non_cf_bronchiectasis",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已有研究显示其对相关细菌感染有效"
+        },
+        {
+          "source": "antibiotics",
+          "target": "non_cf_bronchiectasis",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抗生素用于感染合并症"
+        },
+        {
+          "source": "mucolytics",
+          "target": "non_cf_bronchiectasis",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "有助于排痰和改善通气"
+        },
+        {
+          "source": "bronchodilators",
+          "target": "non_cf_bronchiectasis",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "可扩张气道，改善呼吸"
+        },
+        {
+          "source": "prednisone",
+          "target": "non_cf_bronchiectasis",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于减轻炎症和改善症状"
+        },
+        {
+          "source": "roflumilast",
+          "target": "non_cf_bronchiectasis",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可减轻慢性炎症，对肺功能有益"
+        },
+        {
+          "source": "hypertonic_saline",
+          "target": "non_cf_bronchiectasis",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "有助于改善气道清除"
+        },
+        {
+          "source": "n_acetylcysteine",
+          "target": "non_cf_bronchiectasis",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "用于稀释粘液，帮助排痰"
+        },
+        {
+          "source": "inhaled_corticosteroids",
+          "target": "non_cf_bronchiectasis",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "减少慢性气道炎症"
+        },
+        {
+          "source": "macrolides",
+          "target": "non_cf_bronchiectasis",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有潜在的抗炎作用"
+        },
+        {
+          "source": "chest_physiotherapy",
+          "target": "non_cf_bronchiectasis",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "促进痰液排出"
+        },
+        {
+          "source": "surgical_resection",
+          "target": "non_cf_bronchiectasis",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "对局部严重病变实施"
+        },
+        {
+          "source": "azithromycin",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "有效对抗致病菌，适用于治疗"
+        },
+        {
+          "source": "antibiotics",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗生素适用于与感染相关的支气管扩张"
+        },
+        {
+          "source": "mucolytics",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "常用于改善呼吸道粘液排出"
+        },
+        {
+          "source": "bronchodilators",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "能有效改善呼吸道阻塞"
+        },
+        {
+          "source": "prednisone",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "用于控制炎症和症状"
+        },
+        {
+          "source": "roflumilast",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能改善慢性COPD患者的肺功能"
+        },
+        {
+          "source": "hypertonic_saline",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "改善黏液清除，减轻症状"
+        },
+        {
+          "source": "n_acetylcysteine",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "常用于缓解慢性呼吸道症状"
+        },
+        {
+          "source": "inhaled_corticosteroids",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "通过减少炎症改善症状"
+        },
+        {
+          "source": "macrolides",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能提供支持性疗法"
+        },
+        {
+          "source": "chest_physiotherapy",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "对支气管清理有明显帮助"
+        },
+        {
+          "source": "surgical_resection",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "在特定情况下的治疗选项"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物可能对非囊性纤维性支气管扩张症有益，涵盖抗生素、粘液溶解剂及类固醇等",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物均具备到达靶组织的能力"
+    ],
+    "uncertainties": [
+      "长效疗效和个体反应需进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需要补充更多治疗路径？"
+    ]
+  }
+}

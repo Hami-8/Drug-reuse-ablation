@@ -1,0 +1,490 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Juvenile dermatomyositis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_intravenous_immunoglobulin",
+          "name": "Intravenous immunoglobulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_tocilizumab",
+          "name": "Tocilizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_vismodegib",
+          "name": "Vismodegib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_sirolimus",
+          "name": "Sirolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_belimumab",
+          "name": "Belimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_mtx",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_aza",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pred",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ritux",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cyc",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mmf",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ivig",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_etn",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_toci",
+          "type": "Drug",
+          "label": "Tocilizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_vism",
+          "type": "Drug",
+          "label": "Vismodegib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_siro",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_beli",
+          "type": "Drug",
+          "label": "Belimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_jdm",
+          "type": "Disease",
+          "label": "Juvenile dermatomyositis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_1",
+          "type": "Pathway",
+          "label": "Pathway 1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_2",
+          "type": "Pathway",
+          "label": "Pathway 2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_mtx",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于自身免疫疾病的药理"
+        },
+        {
+          "source": "n_aza",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "自免疫疾病治疗常规药物"
+        },
+        {
+          "source": "n_pred",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "广泛用于炎症性疾病"
+        },
+        {
+          "source": "n_ritux",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "靶向治疗常见"
+        },
+        {
+          "source": "n_cyc",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对于重症患者有效"
+        },
+        {
+          "source": "n_mmf",
+          "target": "n_pathway_1",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于慢性病的有效选择"
+        },
+        {
+          "source": "n_ivig",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "补充免疫且具安全性"
+        },
+        {
+          "source": "n_etn",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "生物制剂应用可能性"
+        },
+        {
+          "source": "n_toci",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "靶向治疗潜能"
+        },
+        {
+          "source": "n_vism",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "新兴治疗方案"
+        },
+        {
+          "source": "n_siro",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "抑制免疫相关"
+        },
+        {
+          "source": "n_beli",
+          "target": "n_pathway_2",
+          "relation": "involved_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "自免疫调节"
+        },
+        {
+          "source": "n_pathway_1",
+          "target": "n_jdm",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知影响该疾病的通路"
+        },
+        {
+          "source": "n_pathway_2",
+          "target": "n_jdm",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "新兴的路径研究数据"
+        },
+        {
+          "source": "n_mtx",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "机制完整性支持假设"
+        },
+        {
+          "source": "n_aza",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.83,
+          "agent": "Proponent",
+          "rationale": "良好临床效果支撑"
+        },
+        {
+          "source": "n_pred",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "广泛应用与效果显著"
+        },
+        {
+          "source": "n_ritux",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "靶向疗法知名"
+        },
+        {
+          "source": "n_cyc",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对严重病人有效"
+        },
+        {
+          "source": "n_mmf",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.68,
+          "agent": "Proponent",
+          "rationale": "相关研究支持"
+        },
+        {
+          "source": "n_ivig",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "临床应用获得认可"
+        },
+        {
+          "source": "n_etn",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.64,
+          "agent": "Proponent",
+          "rationale": "新的治疗方向"
+        },
+        {
+          "source": "n_toci",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已有前期证据"
+        },
+        {
+          "source": "n_vism",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "新药objectivity"
+        },
+        {
+          "source": "n_siro",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "潜在的适应症研究"
+        },
+        {
+          "source": "n_beli",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "临床观察支持"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [],
+    "assumptions": [
+      "所有药物能够有效到达目标组织，且在对应条件下使用"
+    ],
+    "uncertainties": [
+      "各药物在不同患者中反应可能存在差异"
+    ],
+    "next_focus_for_pi": [
+      "进一步探讨药物与免疫介导途径的具体联系"
+    ]
+  }
+}

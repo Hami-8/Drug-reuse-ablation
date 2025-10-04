@@ -1,0 +1,232 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Osteogenesis imperfecta",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_bisphosphonates",
+          "name": "Bisphosphonates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_teriparatide",
+          "name": "Teriparatide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_denosumab",
+          "name": "Denosumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_calcitonin",
+          "name": "Calcitonin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_growth_hormone",
+          "name": "Growth Hormone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_risedronate",
+          "name": "Risedronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_alendronate",
+          "name": "Alendronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_zoledronic_acid",
+          "name": "Zoledronic Acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_strontium_ranelate",
+          "name": "Strontium Ranelate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_pamidronate",
+          "name": "Pamidronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_nandrolone_decanoate",
+          "name": "Nandrolone Decanoate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_cacitonin_salmon",
+          "name": "Cacitonin-Salmon"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_bisphosphonates",
+          "type": "Target",
+          "label": "OffTarget_Bisphosphonates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bisphosphonates",
+          "type": "Pathway",
+          "label": "RiskPathway_Bisphosphonates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bisphosphonates",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Bisphosphonates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_bisphosphonates",
+          "target": "n_ot_bisphosphonates",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致的离靶作用"
+        },
+        {
+          "source": "n_ot_bisphosphonates",
+          "target": "n_rp_bisphosphonates",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能被激活"
+        },
+        {
+          "source": "n_rp_bisphosphonates",
+          "target": "n_adv_bisphosphonates",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致骨折愈合不良"
+        },
+        {
+          "source": "n_adv_bisphosphonates",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消药物的直观益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "可能导致的长期骨健康问题尚未明确",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "存在激活副作用通路的潜在机制链",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "假设药物靶向机制足以改善骨质疏松问题",
+      "是否存在长短期效果的一致性"
+    ],
+    "falsification_tests": [
+      "是否有数据支持长期使用 Bisphosphonates 后的骨密度改善",
+      "是否有针对Bisphosphonates副作用的临床试验结果"
+    ],
+    "next_focus_for_pi": [
+      "对 Bisphosphonates 进行额外的安全性评估",
+      "寻找并确认其他潜在风险机制"
+    ]
+  }
+}

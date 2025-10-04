@@ -1,0 +1,848 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_atorvastatin",
+          "name": "Atorvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_simvastatin",
+          "name": "Simvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_ezetimibe",
+          "name": "Ezetimibe"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_lomitapide",
+          "name": "Lomitapide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_mipomersen",
+          "name": "Mipomersen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_barricade",
+          "name": "Barricade"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_alirocumab",
+          "name": "Alirocumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_cevostamab",
+          "name": "Cevostamab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_fenofibrate",
+          "type": "Target",
+          "label": "OffTargetFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fenofibrate",
+          "type": "Pathway",
+          "label": "RiskPathwayFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fenofibrate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gemfibrozil",
+          "type": "Target",
+          "label": "OffTargetGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gemfibrozil",
+          "type": "Pathway",
+          "label": "RiskPathwayGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gemfibrozil",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_niacin",
+          "type": "Target",
+          "label": "OffTargetNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_niacin",
+          "type": "Pathway",
+          "label": "RiskPathwayNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_niacin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_atorvastatin",
+          "type": "Target",
+          "label": "OffTargetAtorvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_atorvastatin",
+          "type": "Pathway",
+          "label": "RiskPathwayAtorvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_atorvastatin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAtorvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_simvastatin",
+          "type": "Target",
+          "label": "OffTargetSimvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_simvastatin",
+          "type": "Pathway",
+          "label": "RiskPathwaySimvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_simvastatin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSimvastatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ezetimibe",
+          "type": "Target",
+          "label": "OffTargetEzetimibe",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ezetimibe",
+          "type": "Pathway",
+          "label": "RiskPathwayEzetimibe",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ezetimibe",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeEzetimibe",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_omega_3",
+          "type": "Target",
+          "label": "OffTargetOmega3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_omega_3",
+          "type": "Pathway",
+          "label": "RiskPathwayOmega3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_omega_3",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeOmega3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lomitapide",
+          "type": "Target",
+          "label": "OffTargetLomitapide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lomitapide",
+          "type": "Pathway",
+          "label": "RiskPathwayLomitapide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lomitapide",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLomitapide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mipomersen",
+          "type": "Target",
+          "label": "OffTargetMipomersen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mipomersen",
+          "type": "Pathway",
+          "label": "RiskPathwayMipomersen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mipomersen",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMipomersen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_barricade",
+          "type": "Target",
+          "label": "OffTargetBarricade",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_barricade",
+          "type": "Pathway",
+          "label": "RiskPathwayBarricade",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_barricade",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBarricade",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_alirocumab",
+          "type": "Target",
+          "label": "OffTargetAlirocumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_alirocumab",
+          "type": "Pathway",
+          "label": "RiskPathwayAlirocumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_alirocumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAlirocumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cevostamab",
+          "type": "Target",
+          "label": "OffTargetCevostamab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cevostamab",
+          "type": "Pathway",
+          "label": "RiskPathwayCevostamab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cevostamab",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCevostamab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_fenofibrate",
+          "target": "n_ot_fenofibrate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_fenofibrate",
+          "target": "n_rp_fenofibrate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_fenofibrate",
+          "target": "n_adv_fenofibrate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_fenofibrate",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "n_ot_gemfibrozil",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_gemfibrozil",
+          "target": "n_rp_gemfibrozil",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_gemfibrozil",
+          "target": "n_adv_gemfibrozil",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_gemfibrozil",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "n_ot_niacin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_niacin",
+          "target": "n_rp_niacin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_niacin",
+          "target": "n_adv_niacin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_niacin",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_atorvastatin",
+          "target": "n_ot_atorvastatin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_atorvastatin",
+          "target": "n_rp_atorvastatin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_atorvastatin",
+          "target": "n_adv_atorvastatin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_atorvastatin",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_simvastatin",
+          "target": "n_ot_simvastatin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_simvastatin",
+          "target": "n_rp_simvastatin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_simvastatin",
+          "target": "n_adv_simvastatin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_simvastatin",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_ezetimibe",
+          "target": "n_ot_ezetimibe",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_ezetimibe",
+          "target": "n_rp_ezetimibe",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_ezetimibe",
+          "target": "n_adv_ezetimibe",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_ezetimibe",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_omega_3_fatty_acids",
+          "target": "n_ot_omega_3",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_omega_3",
+          "target": "n_rp_omega_3",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_omega_3",
+          "target": "n_adv_omega_3",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_omega_3",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_lomitapide",
+          "target": "n_ot_lomitapide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_lomitapide",
+          "target": "n_rp_lomitapide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_lomitapide",
+          "target": "n_adv_lomitapide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_lomitapide",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_mipomersen",
+          "target": "n_ot_mipomersen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_mipomersen",
+          "target": "n_rp_mipomersen",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_mipomersen",
+          "target": "n_adv_mipomersen",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_mipomersen",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_barricade",
+          "target": "n_ot_barricade",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_barricade",
+          "target": "n_rp_barricade",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_barricade",
+          "target": "n_adv_barricade",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_barricade",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_alirocumab",
+          "target": "n_ot_alirocumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_alirocumab",
+          "target": "n_rp_alirocumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_alirocumab",
+          "target": "n_adv_alirocumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_alirocumab",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        },
+        {
+          "source": "drug_cevostamab",
+          "target": "n_ot_cevostamab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点"
+        },
+        {
+          "source": "n_ot_cevostamab",
+          "target": "n_rp_cevostamab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知风险通路可能参与"
+        },
+        {
+          "source": "n_rp_cevostamab",
+          "target": "n_adv_cevostamab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在造成不良表型"
+        },
+        {
+          "source": "n_adv_cevostamab",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险链可能抵消疗效"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "这些药物存在已知的非靶点影响，可能导致严重不良反应",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "未充分证明降低甘油三酯与减少心血管风险等同",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物作用是否足以减少严重高甘油三酯血症",
+      "非靶点作用可能导致的风险是否得到解决"
+    ],
+    "falsification_tests": [
+      "是否有排除重大不良反应的临床试验数据？",
+      "是否所有药物的长期疗效已被证实？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供关于适应症安全性和有效性的更多数据",
+      "考虑对潜在风险进行更深入的机制分析以平衡收益"
+    ]
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Amyotrophic lateral sclerosis or motor neuron disease",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_riluzole",
+          "name": "Riluzole"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_edaravone",
+          "name": "Edaravone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_nerinetide",
+          "name": "Nerinetide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_tirasemtiv",
+          "name": "Tirasemtiv"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_masitinib",
+          "name": "Masitinib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_tofersen",
+          "name": "Tofersen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_brensocatib",
+          "name": "Brensocatib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_girasole",
+          "name": "Girasole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_lacosamide",
+          "name": "Lacosamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_dexpramipexole",
+          "name": "Dexpramipexole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_selegiline",
+          "name": "Selegiline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_sodium_phenylbutyrate",
+          "name": "Sodium Phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_riluzole",
+          "type": "Drug",
+          "label": "Riluzole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_edaravone",
+          "type": "Drug",
+          "label": "Edaravone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nerinetide",
+          "type": "Drug",
+          "label": "Nerinetide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tirasemtiv",
+          "type": "Drug",
+          "label": "Tirasemtiv",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_masitinib",
+          "type": "Drug",
+          "label": "Masitinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tofersen",
+          "type": "Drug",
+          "label": "Tofersen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_brensocatib",
+          "type": "Drug",
+          "label": "Brensocatib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_girasole",
+          "type": "Drug",
+          "label": "Girasole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lacosamide",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexpramipexole",
+          "type": "Drug",
+          "label": "Dexpramipexole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_selegiline",
+          "type": "Drug",
+          "label": "Selegiline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium Phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Disease1",
+          "type": "Disease",
+          "label": "Amyotrophic Lateral Sclerosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Target1",
+          "type": "Target",
+          "label": "TargetA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Pathway1",
+          "type": "Pathway",
+          "label": "PathwayA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Phenotype1",
+          "type": "Phenotype",
+          "label": "PhenotypeX",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Hypothesis1",
+          "type": "Hypothesis",
+          "label": "Hypothesis1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Hypothesis2",
+          "type": "Hypothesis",
+          "label": "Hypothesis2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Hypothesis3",
+          "type": "Hypothesis",
+          "label": "Hypothesis3",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_riluzole",
+          "target": "Target1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "临床观察支持其对ALS的疗效"
+        },
+        {
+          "source": "drug_edaravone",
+          "target": "Target1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "临床试验显示对ALS有益"
+        },
+        {
+          "source": "drug_nerinetide",
+          "target": "Target1",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "临床研究显示可能有效"
+        },
+        {
+          "source": "drug_tirasemtiv",
+          "target": "Target1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "阶段试验结果显示潜在效果"
+        },
+        {
+          "source": "drug_masitinib",
+          "target": "Target1",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "预临床试验显示可能性"
+        },
+        {
+          "source": "drug_tofersen",
+          "target": "Target1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "基因疗法路径已展现相关性"
+        },
+        {
+          "source": "drug_brensocatib",
+          "target": "Target1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与ALS表型存在关联性"
+        },
+        {
+          "source": "drug_girasole",
+          "target": "Target1",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "早期研究指出其潜力"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "Target1",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有理论依据能改善相关症状"
+        },
+        {
+          "source": "drug_dexpramipexole",
+          "target": "Target1",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "相关机制假说存在支持"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "Target1",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "部分文献报道可能相关性"
+        },
+        {
+          "source": "drug_sodium_phenylbutyrate",
+          "target": "Target1",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "尚需进一步验证其机制"
+        },
+        {
+          "source": "Target1",
+          "target": "Pathway1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知途径关联性"
+        },
+        {
+          "source": "Pathway1",
+          "target": "Disease1",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通路已知影响 ALS 机制"
+        },
+        {
+          "source": "drug_riluzole",
+          "target": "Hypothesis1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "机制支持 ALS 改善"
+        },
+        {
+          "source": "drug_edaravone",
+          "target": "Hypothesis2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "相关文献支持其疗效"
+        },
+        {
+          "source": "drug_nerinetide",
+          "target": "Hypothesis3",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "早期临床数据支持其有效性"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "Riluzole 和 Edaravone 显示出对 ALS 的潜在治疗效果",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "多种新药也显示出一定的治疗潜力",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "所有药物均具有可及靶组织的能力"
+    ],
+    "uncertainties": [
+      "药物安全性及生物分布尚需进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需要对机制进行更详细的验证？"
+    ]
+  }
+}

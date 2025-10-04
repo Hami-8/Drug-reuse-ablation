@@ -1,0 +1,448 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sotalol",
+          "name": "Sotalol"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_dofetilide",
+          "name": "Dofetilide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_flecainide",
+          "name": "Flecainide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_propranolol",
+          "name": "Propranolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_carvedilol",
+          "name": "Carvedilol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_metoprolol",
+          "name": "Metoprolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_dronedarone",
+          "name": "Dronedarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_disopyramide",
+          "name": "Disopyramide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_mexiletine",
+          "name": "Mexiletine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ibutilide",
+          "name": "Ibutilide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ranolazine",
+          "name": "Ranolazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_sotalol",
+          "type": "Drug",
+          "label": "Sotalol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dofetilide",
+          "type": "Drug",
+          "label": "Dofetilide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_flecainide",
+          "type": "Drug",
+          "label": "Flecainide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_propranolol",
+          "type": "Drug",
+          "label": "Propranolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carvedilol",
+          "type": "Drug",
+          "label": "Carvedilol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metoprolol",
+          "type": "Drug",
+          "label": "Metoprolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dronedarone",
+          "type": "Drug",
+          "label": "Dronedarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_disopyramide",
+          "type": "Drug",
+          "label": "Disopyramide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mexiletine",
+          "type": "Drug",
+          "label": "Mexiletine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibutilide",
+          "type": "Drug",
+          "label": "Ibutilide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ranolazine",
+          "type": "Drug",
+          "label": "Ranolazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "arrhythmogenic_right_ventricular_cardiomyopathy",
+          "type": "Disease",
+          "label": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_ion_channels",
+          "type": "Target",
+          "label": "Ion Channels",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_cellular_electrophysiology",
+          "type": "Pathway",
+          "label": "Cellular Electrophysiology",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_arrhythmia",
+          "type": "Phenotype",
+          "label": "Arrhythmia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_sotalol",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知作用于离子通道，调节心律"
+        },
+        {
+          "source": "drug_dofetilide",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "作用于钾通道，相关心律失常"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "多靶点作用，适用于各种心律失常"
+        },
+        {
+          "source": "drug_flecainide",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "了解药理，用于心律失常"
+        },
+        {
+          "source": "drug_propranolol",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "调节心率，有助于心室心律失常"
+        },
+        {
+          "source": "drug_carvedilol",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "β-adrenergic 蛋白拮抗剂，影响心律"
+        },
+        {
+          "source": "drug_metoprolol",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于控制心率，常用在心律失常"
+        },
+        {
+          "source": "drug_dronedarone",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "作用于心脏的多靶点"
+        },
+        {
+          "source": "drug_disopyramide",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "药理作用明确，适用于心律失常"
+        },
+        {
+          "source": "drug_mexiletine",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知影响心律，适用于早期心律失常"
+        },
+        {
+          "source": "drug_ibutilide",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对心律有直接调控作用"
+        },
+        {
+          "source": "drug_ranolazine",
+          "target": "target_ion_channels",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "对心脏电生理有利作用"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "pathway_cellular_electrophysiology",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "离子通道在细胞电生理中重要"
+        },
+        {
+          "source": "pathway_cellular_electrophysiology",
+          "target": "phenotype_arrhythmia",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "细胞电生理异常可引起心律失常"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "arrhythmogenic_right_ventricular_cardiomyopathy",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与心律失常直接相关"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Sotalol 作为已知作用机制的支持"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Dofetilide 作为已知作用机制的支持"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Amiodarone 作为已知作用机制的支持"
+        },
+        {
+          "source": "target_ion_channels",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Flecainide 作为已知作用机制的支持"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多个药物通过作用于离子通道影响 Arrhythmogenic Right Ventricular Cardiomyopathy 的表型",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物能够有效到达心脏并发挥作用"
+    ],
+    "uncertainties": [
+      "不同药物的长期安全性和效果需进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "考虑验证每种药物与具体临床表现之间的因果关系"
+    ]
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Epileptic encephalopathy",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_perampanel",
+          "name": "Perampanel"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_lacosamide",
+          "name": "Lacosamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_rufinamide",
+          "name": "Rufinamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_levetiracetam",
+          "name": "Levetiracetam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_valproate",
+          "name": "Valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_zonisamide",
+          "name": "Zonisamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_phenobarbital",
+          "name": "Phenobarbital"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_oxcarbazepine",
+          "name": "Oxcarbazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_clobazam",
+          "name": "Clobazam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "Off-Target Effects of Antiepileptics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Mechanisms Leading to Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Cognitive Impairment",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv2",
+          "type": "Phenotype",
+          "label": "Mood Disorders",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv3",
+          "type": "Phenotype",
+          "label": "Gastrointestinal Issues",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_perampanel",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发的非特异性反应"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶效应"
+        },
+        {
+          "source": "drug_rufinamide",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱发的非靶向作用"
+        },
+        {
+          "source": "drug_levetiracetam",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知的副作用"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路的可能性"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "引起的认知能力影响"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv2",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致情绪障碍"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv3",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的消化系统问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若副作用成立，将影响有效性"
+        },
+        {
+          "source": "n_adv2",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "副作用可能导致患者抑郁"
+        },
+        {
+          "source": "n_adv3",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "副作用可能引发胃肠不适"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "Efficacy vs Adverse Effects of Antiepileptics",
+          "pro_nodes": [
+            "drug_perampanel",
+            "drug_lacosamide",
+            "drug_rufinamide"
+          ],
+          "con_nodes": [
+            "n_adv",
+            "n_adv2",
+            "n_adv3"
+          ],
+          "note": "疗效与副作用之间的平衡挑战"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "多种抗癫痫药物可能。有相互作用的清晰机制导致不良反应。",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "部分患者对药物的耐受性差，容易暴露于非预期副作用。",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "多种药物的综合副作用是否得到充分考量",
+      "长期使用是否影响认知与心理健康"
+    ],
+    "falsification_tests": [
+      "是否存在明确证据表明某药物对认知功能的长期影响?",
+      "长期研究是否显示不同抗癫痫药物的安全性结果?"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供对安全性与有效性的详细数据",
+      "评估管理副作用的潜在策略"
+    ]
+  }
+}

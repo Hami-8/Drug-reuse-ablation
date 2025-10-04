@@ -1,0 +1,366 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Familial pulmonary fibrosis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_nitrofurantoin",
+          "name": "Nitrofurantoin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_bleomycin",
+          "name": "Bleomycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_doxorubicin",
+          "name": "Doxorubicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_busulfan",
+          "name": "Busulfan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_gemcitabine",
+          "name": "Gemcitabine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_ribavirin",
+          "name": "Ribavirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_etoposide",
+          "name": "Etoposide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tablets_containing_salts_of_gold",
+          "name": "Tablets containing Salts of Gold"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_clofazimine",
+          "name": "Clofazimine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 4
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_nitrofurantoin",
+          "type": "Drug",
+          "label": "Nitrofurantoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bleomycin",
+          "type": "Drug",
+          "label": "Bleomycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_doxorubicin",
+          "type": "Drug",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_busulfan",
+          "type": "Drug",
+          "label": "Busulfan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gemcitabine",
+          "type": "Drug",
+          "label": "Gemcitabine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ribavirin",
+          "type": "Drug",
+          "label": "Ribavirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etoposide",
+          "type": "Drug",
+          "label": "Etoposide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tablets_containing_salts_of_gold",
+          "type": "Drug",
+          "label": "Tablets containing Salts of Gold",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clofazimine",
+          "type": "Drug",
+          "label": "Clofazimine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_familial_pulmonary_fibrosis",
+          "type": "Disease",
+          "label": "Familial Pulmonary Fibrosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_nitrofurantoin",
+          "target": "n_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常见的药物副作用会导致肺纤维化"
+        },
+        {
+          "source": "drug_bleomycin",
+          "target": "n_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知引起肺部纤维化"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与肺部纤维化相关的副作用"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知的肺毒性"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与肺纤维化相关的副作用"
+        },
+        {
+          "source": "drug_doxorubicin",
+          "target": "n_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "有潜在的肺部副作用"
+        },
+        {
+          "source": "drug_busulfan",
+          "target": "n_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "有导致肺纤维化的风险"
+        },
+        {
+          "source": "drug_gemcitabine",
+          "target": "n_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "偶尔与肺部并发症有关"
+        },
+        {
+          "source": "drug_ribavirin",
+          "target": "n_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "存在造成肺部问题的潜力"
+        },
+        {
+          "source": "drug_etoposide",
+          "target": "n_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能对肺有潜在影响"
+        },
+        {
+          "source": "drug_tablets_containing_salts_of_gold",
+          "target": "n_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "已知对肺功能有影响"
+        },
+        {
+          "source": "drug_clofazimine",
+          "target": "n_familial_pulmonary_fibrosis",
+          "relation": "contraindication",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "可能会引起肺部问题"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多个药物被认为与家族性肺纤维化存在相互禁忌关系",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有列举的药物在使用时可能导致肺部相关副作用"
+    ],
+    "uncertainties": [
+      "每种药物的具体机制或作用方式可能有所不同"
+    ],
+    "next_focus_for_pi": [
+      "评估是否需要针对其他药物的禁忌症分析"
+    ]
+  }
+}

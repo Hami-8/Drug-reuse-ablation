@@ -1,0 +1,1150 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Generalised pustular psoriasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_acitretin",
+          "name": "Acitretin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_apremilast",
+          "name": "Apremilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_biologics",
+          "name": "Biologics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_dimethyl_fumarate",
+          "name": "Dimethyl fumarate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_fumaric_acid_esters",
+          "name": "Fumaric acid esters"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_ixekizumab",
+          "name": "Ixekizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_secukinumab",
+          "name": "Secukinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ustekinumab",
+          "name": "Ustekinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.66,
+        "components": {
+          "mechanism_fit": 0.8,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.7,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Acitretin用于治疗银屑病，符合指征"
+          ],
+          "safety_risk": [
+            "潜在导致不良反应，与其他药物风险相似"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "对于安全性评估尚需更多数据"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.62,
+        "components": {
+          "mechanism_fit": 0.8,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.7,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Apremilast用于改善慢性皮肤病，符合指征"
+          ],
+          "safety_risk": [
+            "潜在导致不良反应风险须考虑"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏具体安全性研究支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.67,
+        "components": {
+          "mechanism_fit": 0.85,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.7,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "生物制剂适应于各种银屑病，符合适应症"
+          ],
+          "safety_risk": [
+            "可能存在共同的安全风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏特定的安全性数据"
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.65,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.65,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "环孢素常用于严重皮肤病的治疗，符合适应症"
+          ],
+          "safety_risk": [
+            "与其他药物的潜在安全风险对比需谨慎考虑"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需进一步评估其副作用"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.57,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "二甲基富马酸用于系统性皮肤病，符合指征"
+          ],
+          "safety_risk": [
+            "潜在导致不良反应的风险需考虑"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "对皮肤病的疗效证据尚需加强"
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.58,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Etanercept已知能够改善银屑病病状"
+          ],
+          "safety_risk": [
+            "需考虑潜在的不良反应风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏足够的安全性研究"
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "对皮肤病的有效性已有研究支持"
+          ],
+          "safety_risk": [
+            "潜在的不良反应风险需评估"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "相关安全性数据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.61,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Infliximab用于多种棘手的皮肤病"
+          ],
+          "safety_risk": [
+            "需考虑其产生的不良反应风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏相关的安全性研究"
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.55,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Ixekizumab对特定皮肤病的有效性已得到认可"
+          ],
+          "safety_risk": [
+            "需考量潜在不良反应风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏系统性验证数据"
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.59,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Methotrexate用于治疗多种皮肤病，符合指征"
+          ],
+          "safety_risk": [
+            "潜在的不良反应需考量"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需要更多长期安全性数据"
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.69,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Secukinumab对严重银屑病的有效性已得到认可"
+          ],
+          "safety_risk": [
+            "需注意潜在不良反应风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏大规模的安全性数据"
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.59,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.0
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.65,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Ustekinumab对多种皮肤病显示出有效性"
+          ],
+          "safety_risk": [
+            "需审慎评估潜在的不良反应"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需要进一步的安全性研究"
+        ]
+      }
+    ],
+    "ranking": [
+      "H11",
+      "H3",
+      "H1",
+      "H4",
+      "H2",
+      "H8",
+      "H10",
+      "H12",
+      "H6",
+      "H5",
+      "H7",
+      "H9"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_acitretin",
+          "type": "Drug",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_apremilast",
+          "type": "Drug",
+          "label": "Apremilast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_biologics",
+          "type": "Drug",
+          "label": "Biologics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dimethyl_fumarate",
+          "type": "Drug",
+          "label": "Dimethyl fumarate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_fumaric_acid_esters",
+          "type": "Drug",
+          "label": "Fumaric acid esters",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ixekizumab",
+          "type": "Drug",
+          "label": "Ixekizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_secukinumab",
+          "type": "Drug",
+          "label": "Secukinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ustekinumab",
+          "type": "Drug",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_generalised_pustular_psoriasis",
+          "type": "Disease",
+          "label": "Generalised pustular psoriasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "RiskPathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdverseEffect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_acitretin",
+          "type": "Drug",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Apremilast",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_apremilast",
+          "type": "Drug",
+          "label": "Apremilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Biologics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_biologics",
+          "type": "Drug",
+          "label": "Biologics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Dimethyl fumarate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dimethyl_fumarate",
+          "type": "Drug",
+          "label": "Dimethyl fumarate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Fumaric acid esters",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fumaric_acid_esters",
+          "type": "Drug",
+          "label": "Fumaric acid esters",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Ixekizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ixekizumab",
+          "type": "Drug",
+          "label": "Ixekizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Secukinumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_secukinumab",
+          "type": "Drug",
+          "label": "Secukinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ustekinumab",
+          "type": "Drug",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_acitretin",
+          "target": "n_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Acitretin已知治疗银屑病和相关皮肤状况"
+        },
+        {
+          "source": "n_apremilast",
+          "target": "n_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Apremilast用于改善慢性皮肤病"
+        },
+        {
+          "source": "n_biologics",
+          "target": "n_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "生物制剂适应于各种类型皮肤病包括银屑病"
+        },
+        {
+          "source": "n_cyclosporine",
+          "target": "n_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "环孢素常用于严重皮肤病的治疗"
+        },
+        {
+          "source": "n_dimethyl_fumarate",
+          "target": "n_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "二甲基富马酸用于系统性皮肤病"
+        },
+        {
+          "source": "n_etanercept",
+          "target": "n_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Etanercept可改善银屑病病状"
+        },
+        {
+          "source": "n_fumaric_acid_esters",
+          "target": "n_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "研究显示其对皮肤病有效"
+        },
+        {
+          "source": "n_infliximab",
+          "target": "n_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Infliximab用于多种棘手皮肤病"
+        },
+        {
+          "source": "n_ixekizumab",
+          "target": "n_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Ixekizumab对特定皮肤病的有效性已获认可"
+        },
+        {
+          "source": "n_methotrexate",
+          "target": "n_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Methotrexate是治疗多种肿瘤和自体免疫疾病的关键药物"
+        },
+        {
+          "source": "n_secukinumab",
+          "target": "n_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Secukinumab有治疗严重银屑病的效果"
+        },
+        {
+          "source": "n_ustekinumab",
+          "target": "n_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Ustekinumab对多种皮肤病显示出效果"
+        },
+        {
+          "source": "n_acitretin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在诱发不良反应的机制"
+        },
+        {
+          "source": "n_apremilast",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在诱发不良反应的机制"
+        },
+        {
+          "source": "n_biologics",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在诱发不良反应的机制"
+        },
+        {
+          "source": "n_cyclosporine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在诱发不良反应的机制"
+        },
+        {
+          "source": "n_dimethyl_fumarate",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在诱发不良反应的机制"
+        },
+        {
+          "source": "n_etanercept",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在诱发不良反应的机制"
+        },
+        {
+          "source": "n_fumaric_acid_esters",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在诱发不良反应的机制"
+        },
+        {
+          "source": "n_infliximab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在诱发不良反应的机制"
+        },
+        {
+          "source": "n_ixekizumab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在诱发不良反应的机制"
+        },
+        {
+          "source": "n_methotrexate",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在诱发不良反应的机制"
+        },
+        {
+          "source": "n_secukinumab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在诱发不良反应的机制"
+        },
+        {
+          "source": "n_ustekinumab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能存在诱发不良反应的机制"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H11",
+        "candidate": {
+          "id": "drug_secukinumab",
+          "name": "Secukinumab"
+        },
+        "score": 0.69,
+        "graph_snapshot_ref": "GE_H11_round4",
+        "key_assumptions": [
+          "Secukinumab对严重银屑病的有效性已得到认可",
+          "安全性因素需留意"
+        ],
+        "caveats": [
+          "缺乏大规模的安全性数据"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_biologics",
+          "name": "Biologics"
+        },
+        "score": 0.67,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "生物制剂适应于各种类型银屑病",
+          "安全风险共同存在"
+        ],
+        "caveats": [
+          "缺乏特定的安全性数据"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_acitretin",
+          "name": "Acitretin"
+        },
+        "score": 0.66,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Acitretin用于治疗银屑病，符合指征",
+          "潜在的不良反应需考虑"
+        ],
+        "caveats": [
+          "对于安全性评估尚需更多数据"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Disease",
+          "reason": "支持药物对广泛性脓疱型银屑病的有效性"
+        }
+      ],
+      "remaining_gaps": [
+        "安全性评估和特定疗效数据缺乏"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "优先提出具有实证研究支持的药物候选，并强调疗效与安全性的平衡"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "对每种候选药物详细阐述可能导致的负面反应，并强调系统性治疗方案的必要性"
+      },
+      {
+        "role": "Explorer",
+        "patch": "确保新生成的药物候选不与已有候选重复，并包含新的作用机制/适应症"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "治疗银屑病",
+        "then": "优先考虑那些经过大规模验证的药物，并重视长期疗效与安全性"
+      }
+    ]
+  }
+}

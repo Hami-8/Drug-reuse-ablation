@@ -1,0 +1,1196 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_phenobarbital",
+          "name": "Phenobarbital"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_lactulose",
+          "name": "Lactulose"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_acetaminophen",
+          "name": "Acetaminophen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_erythromycin",
+          "name": "Erythromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_atorvastatin",
+          "name": "Atorvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_rifampin",
+          "name": "Rifampin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_amoxicillin",
+          "name": "Amoxicillin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_dexlansoprazole",
+          "name": "Dexlansoprazole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_ciprofloxacin",
+          "name": "Ciprofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_metronidazole",
+          "name": "Metronidazole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.76,
+        "components": {
+          "mechanism_fit": 0.85,
+          "class_prior": 0.8,
+          "pk_pd_feasibility": 0.75,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.09
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "直接影响胆汁酸转运，相关性强"
+          ],
+          "safety_risk": [
+            "未标注安全隐患"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.68,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.7,
+          "pk_pd_feasibility": 0.65,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.07
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "GABA受体调节对胆汁流动有影响"
+          ],
+          "safety_risk": [
+            "安全性考量需进一步确认"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.66,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.65,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.07
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "改善肠道排泄可能缓解症状"
+          ],
+          "safety_risk": [
+            "需评估长期使用的安全性"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.62,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.06
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "通过抑制COX可能有助于改善炎症"
+          ],
+          "safety_risk": [
+            "长期使用的安全性存在疑虑"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.63,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.55,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.55,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.06
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "激活肠道蠕动可能改善胆汁流动"
+          ],
+          "safety_risk": [
+            "需确认长期安全性问题"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.58,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "改善脂质代谢可能对症状有影响"
+          ],
+          "safety_risk": [
+            "长期安全性需进一步评估"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.57,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.06
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "可能通过扩张血管改善胆汁流动"
+          ],
+          "safety_risk": [
+            "需确认潜在风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.55,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.06
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "可能影响止痛机制，但相关性不强"
+          ],
+          "safety_risk": [
+            "安全性仍需进一步评估"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.54,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.45,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.06
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "可能通过特定机制影响症状，但证据不足"
+          ],
+          "safety_risk": [
+            "需关注潜在的安全性问题"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.52,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.45,
+          "indication_plausibility": 0.45,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.06
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "通过抑制胃酸可能影响胆汁代谢"
+          ],
+          "safety_risk": [
+            "需进一步的安全性验证"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.45,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.45,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.45,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "抗生素可能对胆汁流动有影响，但证据较弱"
+          ],
+          "safety_risk": [
+            "安全性需进一步确认"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.45,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.4,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "可能通过抗菌作用产生一定影响"
+          ],
+          "safety_risk": [
+            "需关注潜在的安全性问题"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H5",
+      "H4",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_tg1",
+          "type": "Target",
+          "label": "Bile Acid Transporter",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg2",
+          "type": "Target",
+          "label": "GABA Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg3",
+          "type": "Target",
+          "label": "Osmotic Laxative Target",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg4",
+          "type": "Target",
+          "label": "COX Enzyme",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg5",
+          "type": "Target",
+          "label": "Motilin Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg6",
+          "type": "Target",
+          "label": "HMG-CoA Reductase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg7",
+          "type": "Target",
+          "label": "Phosphodiesterase Type 5",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg8",
+          "type": "Target",
+          "label": "RNA Polymerase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg9",
+          "type": "Target",
+          "label": "Penicillin Binding Protein",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg10",
+          "type": "Target",
+          "label": "Proton Pump",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg11",
+          "type": "Target",
+          "label": "DNA Gyrase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg12",
+          "type": "Target",
+          "label": "Nitroimidazole Target",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ds",
+          "type": "Disease",
+          "label": "Neonatal Cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h1",
+          "type": "Hypothesis",
+          "label": "Cholestyramine supports prevention of neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h2",
+          "type": "Hypothesis",
+          "label": "Phenobarbital supports reduction of symptoms in neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h3",
+          "type": "Hypothesis",
+          "label": "Lactulose supports treatment of neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h4",
+          "type": "Hypothesis",
+          "label": "Acetaminophen supports alleviating symptoms in neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h5",
+          "type": "Hypothesis",
+          "label": "Erythromycin supports treatment of neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h6",
+          "type": "Hypothesis",
+          "label": "Atorvastatin supports managing neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h7",
+          "type": "Hypothesis",
+          "label": "Sildenafil supports management of neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h8",
+          "type": "Hypothesis",
+          "label": "Rifampin supports managing neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h9",
+          "type": "Hypothesis",
+          "label": "Amoxicillin supports treatment in neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h10",
+          "type": "Hypothesis",
+          "label": "Dexlansoprazole supports treatment in neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h11",
+          "type": "Hypothesis",
+          "label": "Ciprofloxacin supports treatment in neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h12",
+          "type": "Hypothesis",
+          "label": "Metronidazole supports treatment in neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lactulose",
+          "type": "Drug",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Acetaminophen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_acetaminophen",
+          "type": "Drug",
+          "label": "Acetaminophen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Erythromycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_erythromycin",
+          "type": "Drug",
+          "label": "Erythromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Sildenafil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sildenafil",
+          "type": "Drug",
+          "label": "Sildenafil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rifampin",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Amoxicillin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_amoxicillin",
+          "type": "Drug",
+          "label": "Amoxicillin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Dexlansoprazole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dexlansoprazole",
+          "type": "Drug",
+          "label": "Dexlansoprazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Metronidazole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_metronidazole",
+          "type": "Drug",
+          "label": "Metronidazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_tg1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "药理机制直接影响胆汁酸转运"
+        },
+        {
+          "source": "n_tg1",
+          "target": "n_ds",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与胆汁酸代谢相关的病理条件"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "n_tg2",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "可通过GABA受体调节影响病变"
+        },
+        {
+          "source": "n_tg2",
+          "target": "n_ds",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与神经调节及胆汁流动有关"
+        },
+        {
+          "source": "drug_lactulose",
+          "target": "n_tg3",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "改善肠道排泄，缓解症状"
+        },
+        {
+          "source": "n_tg3",
+          "target": "n_ds",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过促进排便改善胆汁流动"
+        },
+        {
+          "source": "drug_acetaminophen",
+          "target": "n_tg4",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过抑制COX改善炎症反应"
+        },
+        {
+          "source": "n_tg4",
+          "target": "n_ds",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与炎症介导机制相关"
+        },
+        {
+          "source": "drug_erythromycin",
+          "target": "n_tg5",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过激活肠道蠕动改善症状"
+        },
+        {
+          "source": "n_tg5",
+          "target": "n_ds",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "直接促进胆汁流动的条件"
+        },
+        {
+          "source": "drug_atorvastatin",
+          "target": "n_tg6",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "改善脂质代谢相关症状"
+        },
+        {
+          "source": "n_tg6",
+          "target": "n_ds",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "与胆汁酸代谢相关"
+        },
+        {
+          "source": "drug_sildenafil",
+          "target": "n_tg7",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "通过扩张血管影响胆汁流动"
+        },
+        {
+          "source": "n_tg7",
+          "target": "n_ds",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有助于改善胆汁酸代谢"
+        },
+        {
+          "source": "drug_rifampin",
+          "target": "n_tg8",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响止痛机制"
+        },
+        {
+          "source": "n_tg8",
+          "target": "n_ds",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与肝功能恢复相关"
+        },
+        {
+          "source": "drug_amoxicillin",
+          "target": "n_tg9",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能通过其他机制影响症状"
+        },
+        {
+          "source": "n_tg9",
+          "target": "n_ds",
+          "relation": "involved_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能涉及的抗生素机制"
+        },
+        {
+          "source": "drug_dexlansoprazole",
+          "target": "n_tg10",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "通过抑制胃酸影响胆汁酸的情况"
+        },
+        {
+          "source": "n_tg10",
+          "target": "n_ds",
+          "relation": "involved_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能影响胆汁酸排泄"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "n_tg11",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "抗生素可能通过免疫调节作用"
+        },
+        {
+          "source": "n_tg11",
+          "target": "n_ds",
+          "relation": "involved_in",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "与感染控制有关"
+        },
+        {
+          "source": "drug_metronidazole",
+          "target": "n_tg12",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "抗菌作用可能影响症状"
+        },
+        {
+          "source": "n_tg12",
+          "target": "n_ds",
+          "relation": "involved_in",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能改善胆汁代谢"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "score": 0.76,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Cholestyramine has a direct influence on bile acid transport.",
+          "No significant safety issues have been identified."
+        ],
+        "caveats": [
+          "Long-term safety evaluation is needed."
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_phenobarbital",
+          "name": "Phenobarbital"
+        },
+        "score": 0.68,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Phenobarbital modulates GABA receptors that may influence bile flow."
+        ],
+        "caveats": [
+          "Further validation of safety concerns is required."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_lactulose",
+          "name": "Lactulose"
+        },
+        "score": 0.66,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Lactulose administration may improve cholestasis symptoms via enhanced intestinal secretion."
+        ],
+        "caveats": [
+          "Long-term safety data is insufficient."
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Target (e.g., Cholestyramine → Bile Acid Transporter)",
+          "reason": "Clear mechanistic pathways connecting drugs to disease mechanism."
+        }
+      ],
+      "remaining_gaps": [
+        "Need for more evidence regarding the long-term safety of multiple candidates."
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "Ensure comprehensive safety assessments for treatment candidates."
+      },
+      {
+        "role": "Skeptic",
+        "patch": "Prioritize long-term safety evaluations alongside efficacy."
+      },
+      {
+        "role": "Explorer",
+        "patch": "Focus on maintaining diverse mechanisms; avoid redundant candidates."
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "Neonatal cholestasis",
+        "then": "Prioritize drugs with well-established safety profiles and clear mechanisms."
+      }
+    ]
+  }
+}

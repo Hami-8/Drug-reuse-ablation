@@ -1,0 +1,368 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Familial tumour syndromes of the central and peripheral nervous system",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_doxorubicin",
+          "name": "Doxorubicin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_busulfan",
+          "name": "Busulfan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_vincristine",
+          "name": "Vincristine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_fluorouracil",
+          "name": "Fluorouracil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_temozolomide",
+          "name": "Temozolomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_thalidomide",
+          "name": "Thalidomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_chlorambucil",
+          "name": "Chlorambucil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ifosfamide",
+          "name": "Ifosfamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_lomustine",
+          "name": "Lomustine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_nitrosourea",
+          "name": "Nitrosourea"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_doxo",
+          "type": "Drug",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cyclo",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_busul",
+          "type": "Drug",
+          "label": "Busulfan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_vinc",
+          "type": "Drug",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_meth",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fluor",
+          "type": "Drug",
+          "label": "Fluorouracil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_temo",
+          "type": "Drug",
+          "label": "Temozolomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thali",
+          "type": "Drug",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_chlora",
+          "type": "Drug",
+          "label": "Chlorambucil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ifo",
+          "type": "Drug",
+          "label": "Ifosfamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lomu",
+          "type": "Drug",
+          "label": "Lomustine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nitro",
+          "type": "Drug",
+          "label": "Nitrosourea",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_familial_tumour",
+          "type": "Disease",
+          "label": "Familial tumour syndromes of the central and peripheral nervous system",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_doxo",
+          "target": "n_familial_tumour",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "相关文献支持对家族性肿瘤综合征的风险"
+        },
+        {
+          "source": "n_cyclo",
+          "target": "n_familial_tumour",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "多项研究显示对特定患者群体存在风险"
+        },
+        {
+          "source": "n_busul",
+          "target": "n_familial_tumour",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "显示出对影响患者生存的潜在风险"
+        },
+        {
+          "source": "n_vinc",
+          "target": "n_familial_tumour",
+          "relation": "contraindication",
+          "weight": 0.77,
+          "agent": "Proponent",
+          "rationale": "关于神经系统的副作用风险提示"
+        },
+        {
+          "source": "n_meth",
+          "target": "n_familial_tumour",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "特定肿瘤类型与毒性相关"
+        },
+        {
+          "source": "n_fluor",
+          "target": "n_familial_tumour",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知影响与神经系统有关的病理"
+        },
+        {
+          "source": "n_temo",
+          "target": "n_familial_tumour",
+          "relation": "contraindication",
+          "weight": 0.68,
+          "agent": "Proponent",
+          "rationale": "化疗可能加重风险"
+        },
+        {
+          "source": "n_thali",
+          "target": "n_familial_tumour",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响因素已被记录"
+        },
+        {
+          "source": "n_chlora",
+          "target": "n_familial_tumour",
+          "relation": "contraindication",
+          "weight": 0.58,
+          "agent": "Proponent",
+          "rationale": "与治疗反应的风险相关"
+        },
+        {
+          "source": "n_ifo",
+          "target": "n_familial_tumour",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "化疗方案中对患者的潜在风险"
+        },
+        {
+          "source": "n_lomu",
+          "target": "n_familial_tumour",
+          "relation": "contraindication",
+          "weight": 0.52,
+          "agent": "Proponent",
+          "rationale": "与淋巴系统相关风险"
+        },
+        {
+          "source": "n_nitro",
+          "target": "n_familial_tumour",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "毒性和家族性肿瘤的关联"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物与家族性肿瘤综合征存在潜在风险",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "每种药物在个体中的影响可能不同，应考虑病史与基因背景"
+    ],
+    "uncertainties": [
+      "需进一步验证每种药物与家族性肿瘤的具体机制联结"
+    ],
+    "next_focus_for_pi": [
+      "是否需要详细探讨每种药物特定的机制路径？"
+    ]
+  }
+}

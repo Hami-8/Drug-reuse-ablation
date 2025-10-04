@@ -1,0 +1,364 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Amyotrophic lateral sclerosis or motor neuron disease",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Riluzole的长期安全性",
+            "expectation": "确认无长期副作用或禁忌机制",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Edaravone的潜在副作用",
+            "expectation": "确认Edaravone在长时间使用后的安全性",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_riluzole",
+          "type": "Drug",
+          "label": "Riluzole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_edavarone",
+          "type": "Drug",
+          "label": "Edaravone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nerinetide",
+          "type": "Drug",
+          "label": "Nerinetide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tirasemtiv",
+          "type": "Drug",
+          "label": "Tirasemtiv",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_masitinib",
+          "type": "Drug",
+          "label": "Masitinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tofersen",
+          "type": "Drug",
+          "label": "Tofersen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_brensocatib",
+          "type": "Drug",
+          "label": "Brensocatib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_girasole",
+          "type": "Drug",
+          "label": "Girasole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lacosamide",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexpramipexole",
+          "type": "Drug",
+          "label": "Dexpramipexole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_selegiline",
+          "type": "Drug",
+          "label": "Selegiline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium Phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_als",
+          "type": "Disease",
+          "label": "Amyotrophic Lateral Sclerosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Riluzole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Edaravone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_edaravone",
+          "type": "Drug",
+          "label": "Edaravone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Nerinetide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Tirasemtiv",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Masitinib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Tofersen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Brensocatib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Girasole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Dexpramipexole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Selegiline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Sodium Phenylbutyrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_riluzole",
+          "target": "disease_als",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Riluzole 在 ALS 患者中显示出延缓疾病进程的积极效应"
+        },
+        {
+          "source": "drug_edavarone",
+          "target": "disease_als",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Edaravone 已被验证为 ALS 的有效治疗"
+        },
+        {
+          "source": "drug_nerinetide",
+          "target": "disease_als",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Nerinetide 在试验中表现出潜在的疗效"
+        },
+        {
+          "source": "drug_tirasemtiv",
+          "target": "disease_als",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Tirasemtiv 有助于改善 ALS 患者的运动功能"
+        },
+        {
+          "source": "drug_masitinib",
+          "target": "disease_als",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Masitinib 作为免疫调节剂，对 ALS 有潜在益处"
+        },
+        {
+          "source": "drug_tofersen",
+          "target": "disease_als",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Tofersen 针对特定遗传型 ALS 显示良好效果"
+        },
+        {
+          "source": "drug_brensocatib",
+          "target": "disease_als",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Brensocatib 的抑制作用可能对 ALS 有益"
+        },
+        {
+          "source": "drug_girasole",
+          "target": "disease_als",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Girasole 初步显示对 ALS 患者的安全性和有效性"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "disease_als",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Lacosamide 可能改善 ALS 的痛症状"
+        },
+        {
+          "source": "drug_dexpramipexole",
+          "target": "disease_als",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Dexpramipexole 在试验中显示出改善生活质量的潜力"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "disease_als",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Selegiline 作为神经保护剂，可能对 ALS 患者有益"
+        },
+        {
+          "source": "drug_sodium_phenylbutyrate",
+          "target": "disease_als",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Sodium Phenylbutyrate 有助于改善神经肌肉功能"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates_per_hypothesis": []
+  }
+}

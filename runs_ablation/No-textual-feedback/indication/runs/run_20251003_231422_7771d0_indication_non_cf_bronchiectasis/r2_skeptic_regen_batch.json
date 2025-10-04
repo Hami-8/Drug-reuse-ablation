@@ -1,0 +1,359 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Non-CF bronchiectasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_tobramycin",
+          "name": "Tobramycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_dornase_alfa",
+          "name": "Dornase alfa"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_ipratropium_bromide",
+          "name": "Ipratropium bromide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_montelukast",
+          "name": "Montelukast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_fluticasone",
+          "name": "Fluticasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_salmeterol",
+          "name": "Salmeterol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_hydrocodone",
+          "name": "Hydrocodone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_mupirocin",
+          "name": "Mupirocin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_roflumilast",
+          "name": "Roflumilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_amoxicillin",
+          "name": "Amoxicillin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_azithromycin",
+          "type": "Target",
+          "label": "OffTarget_Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_azithromycin",
+          "type": "Pathway",
+          "label": "RiskPathway_Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_azithromycin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tobramycin",
+          "type": "Target",
+          "label": "OffTarget_Tobramycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_tobramycin",
+          "type": "Pathway",
+          "label": "RiskPathway_Tobramycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tobramycin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Tobramycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dornase",
+          "type": "Target",
+          "label": "OffTarget_Dornase",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dornase",
+          "type": "Pathway",
+          "label": "RiskPathway_Dornase",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dornase",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Dornase",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_azithromycin",
+          "target": "n_ot_azithromycin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的对靶器官的副作用"
+        },
+        {
+          "source": "n_ot_azithromycin",
+          "target": "n_rp_azithromycin",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "相关的风险路径"
+        },
+        {
+          "source": "n_rp_azithromycin",
+          "target": "n_adv_azithromycin",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_azithromycin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在副作用，假设可能不成立"
+        },
+        {
+          "source": "drug_tobramycin",
+          "target": "n_ot_tobramycin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的对靶器官的副作用"
+        },
+        {
+          "source": "n_ot_tobramycin",
+          "target": "n_rp_tobramycin",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "相关的风险路径"
+        },
+        {
+          "source": "n_rp_tobramycin",
+          "target": "n_adv_tobramycin",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_tobramycin",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在副作用，假设可能不成立"
+        },
+        {
+          "source": "drug_dornase_alfa",
+          "target": "n_ot_dornase",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的对靶器官的副作用"
+        },
+        {
+          "source": "n_ot_dornase",
+          "target": "n_rp_dornase",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "相关的风险路径"
+        },
+        {
+          "source": "n_rp_dornase",
+          "target": "n_adv_dornase",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_dornase",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在副作用，假设可能不成立"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "Drug Efficacy vs Side Effects",
+          "pro_nodes": [
+            "H1",
+            "H2",
+            "H3"
+          ],
+          "con_nodes": [
+            "n_adv_azithromycin",
+            "n_adv_tobramycin",
+            "n_adv_dornase"
+          ],
+          "note": "短期益处与长期不良反应之间的可能冲突"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "长期使用可能导致耐药性风险增加",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "可能对心肺功能产生负面影响",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "假设靶向药物有效且安全",
+      "假设风险路径未被充分验证"
+    ],
+    "falsification_tests": [
+      "是否存在关于长期使用的负面效果的实证数据？",
+      "是否有临床试验能够验证长期疗效?"
+    ],
+    "next_focus_for_pi": [
+      "要求进一步数据验证疗效与安全性",
+      "评估风险与获益的平衡"
+    ]
+  }
+}

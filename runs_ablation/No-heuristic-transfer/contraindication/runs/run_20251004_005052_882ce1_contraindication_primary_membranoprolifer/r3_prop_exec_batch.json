@@ -1,0 +1,1102 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_nsaids",
+            "via": [
+              "n_ot_nsaids",
+              "n_rp_nsaids"
+            ],
+            "to": "n_adv_nsaids",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_ace_inhibitors",
+            "via": [
+              "n_ot_ace_inhibitors",
+              "n_rp_ace_inhibitors"
+            ],
+            "to": "n_adv_ace_inhibitors",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ace_inhibitors",
+          "type": "Drug",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_arbs",
+          "type": "Drug",
+          "label": "ARBs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_diuretics",
+          "type": "Drug",
+          "label": "Diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_chemotherapy_agents",
+          "type": "Drug",
+          "label": "Chemotherapy agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_immunosuppressants",
+          "type": "Drug",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "type": "Disease",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_nsaids",
+          "type": "Target",
+          "label": "NSAIDs Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nsaids",
+          "type": "Pathway",
+          "label": "NSAIDs Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nsaids",
+          "type": "Phenotype",
+          "label": "Adverse Renal Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ace_inhibitors",
+          "type": "Target",
+          "label": "ACE Inhibitors Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ace_inhibitors",
+          "type": "Pathway",
+          "label": "ACE Inhibitors Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ace_inhibitors",
+          "type": "Phenotype",
+          "label": "Adverse Renal Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_arbs",
+          "type": "Target",
+          "label": "ARBs Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_arbs",
+          "type": "Pathway",
+          "label": "ARBs Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_arbs",
+          "type": "Phenotype",
+          "label": "Adverse Renal Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_diuretics",
+          "type": "Target",
+          "label": "Diuretics Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_diuretics",
+          "type": "Pathway",
+          "label": "Diuretics Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_diuretics",
+          "type": "Phenotype",
+          "label": "Adverse Renal Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lithium",
+          "type": "Target",
+          "label": "Lithium Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lithium",
+          "type": "Pathway",
+          "label": "Lithium Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lithium",
+          "type": "Phenotype",
+          "label": "Adverse Renal Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclosporine",
+          "type": "Target",
+          "label": "Cyclosporine Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cyclosporine",
+          "type": "Pathway",
+          "label": "Cyclosporine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cyclosporine",
+          "type": "Phenotype",
+          "label": "Adverse Renal Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_chemotherapy_agents",
+          "type": "Target",
+          "label": "Chemotherapy Agents Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_chemotherapy_agents",
+          "type": "Pathway",
+          "label": "Chemotherapy Agents Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_chemotherapy_agents",
+          "type": "Phenotype",
+          "label": "Adverse Renal Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_antibiotics",
+          "type": "Target",
+          "label": "Antibiotics Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_antibiotics",
+          "type": "Pathway",
+          "label": "Antibiotics Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_antibiotics",
+          "type": "Phenotype",
+          "label": "Adverse Renal Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nonsteroidal_anti_inflammatory_drugs",
+          "type": "Target",
+          "label": "Nonsteroidal Anti-inflammatory Drugs Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nonsteroidal_anti_inflammatory_drugs",
+          "type": "Pathway",
+          "label": "Nonsteroidal Anti-inflammatory Drugs Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nonsteroidal_anti_inflammatory_drugs",
+          "type": "Phenotype",
+          "label": "Adverse Renal Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "Corticosteroids Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_corticosteroids",
+          "type": "Pathway",
+          "label": "Corticosteroids Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_corticosteroids",
+          "type": "Phenotype",
+          "label": "Adverse Renal Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_plasmapheresis",
+          "type": "Target",
+          "label": "Plasmapheresis Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_plasmapheresis",
+          "type": "Pathway",
+          "label": "Plasmapheresis Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_plasmapheresis",
+          "type": "Phenotype",
+          "label": "Adverse Renal Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_immunosuppressants",
+          "type": "Target",
+          "label": "Immunosuppressants Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_immunosuppressants",
+          "type": "Pathway",
+          "label": "Immunosuppressants Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_immunosuppressants",
+          "type": "Phenotype",
+          "label": "Adverse Renal Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "ARBs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Diuretics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Chemotherapy agents",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_nsaids",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "NSAIDs常与肾脏疾病不良反应相关"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "ACE抑制剂在某些情况下可能加重病症"
+        },
+        {
+          "source": "drug_arbs",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "ARBs在肾脏疾病时注意风险"
+        },
+        {
+          "source": "drug_diuretics",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "利尿剂可能引起电解质紊乱"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "锂与肾功能有隐患"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "环孢素对肾功能有毒性"
+        },
+        {
+          "source": "drug_chemotherapy_agents",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "化疗药物可能对肾造成损害"
+        },
+        {
+          "source": "drug_antibiotics",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "部分抗生素与肾毒性有关"
+        },
+        {
+          "source": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "NSAID类药物已知影响肾功能"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能导致肾脏副反应"
+        },
+        {
+          "source": "drug_plasmapheresis",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "血浆置换可能有风险"
+        },
+        {
+          "source": "drug_immunosuppressants",
+          "target": "DiseasePrimary_membranoproliferative_glomerulonephritis",
+          "relation": "contraindicated_in",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "免疫抑制剂可能加重已有病症"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "n_ot_nsaids",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "NSAIDs可能导致肾脏损伤增加"
+        },
+        {
+          "source": "n_ot_nsaids",
+          "target": "n_rp_nsaids",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及肾脏损伤的风险通路"
+        },
+        {
+          "source": "n_rp_nsaids",
+          "target": "n_adv_nsaids",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良肾脏表型"
+        },
+        {
+          "source": "n_adv_nsaids",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消NSAIDs的潜在益处"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "n_ot_ace_inhibitors",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "ACE抑制剂可能引发肾脏损伤"
+        },
+        {
+          "source": "n_ot_ace_inhibitors",
+          "target": "n_rp_ace_inhibitors",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及肾脏损伤的风险通路"
+        },
+        {
+          "source": "n_rp_ace_inhibitors",
+          "target": "n_adv_ace_inhibitors",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良肾脏表型"
+        },
+        {
+          "source": "n_adv_ace_inhibitors",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消ACE抑制剂的潜在益处"
+        },
+        {
+          "source": "drug_arbs",
+          "target": "n_ot_arbs",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "ARBs可能引发肾脏损伤"
+        },
+        {
+          "source": "n_ot_arbs",
+          "target": "n_rp_arbs",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及肾脏损伤的风险通路"
+        },
+        {
+          "source": "n_rp_arbs",
+          "target": "n_adv_arbs",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良肾脏表型"
+        },
+        {
+          "source": "n_adv_arbs",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消ARBs的潜在益处"
+        },
+        {
+          "source": "drug_diuretics",
+          "target": "n_ot_diuretics",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "利尿剂可能引发肾脏损伤"
+        },
+        {
+          "source": "n_ot_diuretics",
+          "target": "n_rp_diuretics",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及肾脏损伤的风险通路"
+        },
+        {
+          "source": "n_rp_diuretics",
+          "target": "n_adv_diuretics",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良肾脏表型"
+        },
+        {
+          "source": "n_adv_diuretics",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消利尿剂的潜在益处"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "n_ot_lithium",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "锂可能引发肾脏损伤"
+        },
+        {
+          "source": "n_ot_lithium",
+          "target": "n_rp_lithium",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及肾脏损伤的风险通路"
+        },
+        {
+          "source": "n_rp_lithium",
+          "target": "n_adv_lithium",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良肾脏表型"
+        },
+        {
+          "source": "n_adv_lithium",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消锂的潜在益处"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_ot_cyclosporine",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "环孢素可能引发肾脏损伤"
+        },
+        {
+          "source": "n_ot_cyclosporine",
+          "target": "n_rp_cyclosporine",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及肾脏损伤的风险通路"
+        },
+        {
+          "source": "n_rp_cyclosporine",
+          "target": "n_adv_cyclosporine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良肾脏表型"
+        },
+        {
+          "source": "n_adv_cyclosporine",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消环孢素的潜在益处"
+        },
+        {
+          "source": "drug_chemotherapy_agents",
+          "target": "n_ot_chemotherapy_agents",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "化疗药物可能引发肾脏损伤"
+        },
+        {
+          "source": "n_ot_chemotherapy_agents",
+          "target": "n_rp_chemotherapy_agents",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及肾脏损伤的风险通路"
+        },
+        {
+          "source": "n_rp_chemotherapy_agents",
+          "target": "n_adv_chemotherapy_agents",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良肾脏表型"
+        },
+        {
+          "source": "n_adv_chemotherapy_agents",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消化疗药物的潜在益处"
+        },
+        {
+          "source": "drug_antibiotics",
+          "target": "n_ot_antibiotics",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "抗生素可能引发肾脏损伤"
+        },
+        {
+          "source": "n_ot_antibiotics",
+          "target": "n_rp_antibiotics",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及肾脏损伤的风险通路"
+        },
+        {
+          "source": "n_rp_antibiotics",
+          "target": "n_adv_antibiotics",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良肾脏表型"
+        },
+        {
+          "source": "n_adv_antibiotics",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消抗生素的潜在益处"
+        },
+        {
+          "source": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "target": "n_ot_nonsteroidal_anti_inflammatory_drugs",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "非甾体抗炎药可能引发肾脏损伤"
+        },
+        {
+          "source": "n_ot_nonsteroidal_anti_inflammatory_drugs",
+          "target": "n_rp_nonsteroidal_anti_inflammatory_drugs",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及肾脏损伤的风险通路"
+        },
+        {
+          "source": "n_rp_nonsteroidal_anti_inflammatory_drugs",
+          "target": "n_adv_nonsteroidal_anti_inflammatory_drugs",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良肾脏表型"
+        },
+        {
+          "source": "n_adv_nonsteroidal_anti_inflammatory_drugs",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消非甾体抗炎药的潜在益处"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "皮质类固醇可能引发肾脏损伤"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp_corticosteroids",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及肾脏损伤的风险通路"
+        },
+        {
+          "source": "n_rp_corticosteroids",
+          "target": "n_adv_corticosteroids",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良肾脏表型"
+        },
+        {
+          "source": "n_adv_corticosteroids",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消皮质类固醇的潜在益处"
+        },
+        {
+          "source": "drug_plasmapheresis",
+          "target": "n_ot_plasmapheresis",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "血浆置换可能引发肾脏损伤"
+        },
+        {
+          "source": "n_ot_plasmapheresis",
+          "target": "n_rp_plasmapheresis",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及肾脏损伤的风险通路"
+        },
+        {
+          "source": "n_rp_plasmapheresis",
+          "target": "n_adv_plasmapheresis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良肾脏表型"
+        },
+        {
+          "source": "n_adv_plasmapheresis",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消血浆置换的潜在益处"
+        },
+        {
+          "source": "drug_immunosuppressants",
+          "target": "n_ot_immunosuppressants",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "免疫抑制剂可能引发肾脏损伤"
+        },
+        {
+          "source": "n_ot_immunosuppressants",
+          "target": "n_rp_immunosuppressants",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "涉及肾脏损伤的风险通路"
+        },
+        {
+          "source": "n_rp_immunosuppressants",
+          "target": "n_adv_immunosuppressants",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良肾脏表型"
+        },
+        {
+          "source": "n_adv_immunosuppressants",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消免疫抑制剂的潜在益处"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_nsaids",
+              "target": "n_ot_nsaids",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "NSAIDs与肾脏风险路径相关"
+            },
+            {
+              "source": "n_ot_nsaids",
+              "target": "n_rp_nsaids",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "涉及NSAIDs造成的肾脏损伤通路"
+            },
+            {
+              "source": "n_rp_nsaids",
+              "target": "n_adv_nsaids",
+              "relation": "causes",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "引发不良肾脏表型的潜在机制"
+            },
+            {
+              "source": "drug_ace_inhibitors",
+              "target": "n_ot_ace_inhibitors",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "ACE抑制剂同样涉及肾脏风险"
+            },
+            {
+              "source": "n_ot_ace_inhibitors",
+              "target": "n_rp_ace_inhibitors",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "ACE抑制剂影响肾脏的风险通路"
+            },
+            {
+              "source": "n_rp_ace_inhibitors",
+              "target": "n_adv_ace_inhibitors",
+              "relation": "causes",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "引发ACE抑制剂相关不良肾脏表型"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "NSAIDs与ACE抑制剂形成了2条不相交的肾脏风险机制路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

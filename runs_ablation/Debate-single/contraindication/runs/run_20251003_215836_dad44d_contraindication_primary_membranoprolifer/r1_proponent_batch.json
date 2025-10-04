@@ -1,0 +1,360 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_nsaids",
+          "name": "NSAIDs"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ace_inhibitors",
+          "name": "ACE inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_arbs",
+          "name": "ARBs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_diuretics",
+          "name": "Diuretics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_lithium",
+          "name": "Lithium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_chemotherapy_agents",
+          "name": "Chemotherapy agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_antibiotics",
+          "name": "Antibiotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "name": "Nonsteroidal anti-inflammatory drugs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_plasmapheresis",
+          "name": "Plasmapheresis"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_immunosuppressants",
+          "name": "Immunosuppressants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ta1",
+          "type": "Target",
+          "label": "COX Enzymes",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta2",
+          "type": "Target",
+          "label": "Angiotensin II Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta3",
+          "type": "Target",
+          "label": "Aldosterone Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta4",
+          "type": "Target",
+          "label": "Diuretic Target",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta5",
+          "type": "Target",
+          "label": "Lithium Targets",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta6",
+          "type": "Target",
+          "label": "Calcineurin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta7",
+          "type": "Target",
+          "label": "DNA Replication Targets",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta8",
+          "type": "Target",
+          "label": "Bacterial Targets",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta9",
+          "type": "Target",
+          "label": "Glucocorticoid Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta10",
+          "type": "Target",
+          "label": "Plasma Proteins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta11",
+          "type": "Target",
+          "label": "Immunological Targets",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_disease",
+          "type": "Disease",
+          "label": "Primary Membranoproliferative Glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_nsaids",
+          "target": "n_ta1",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "NSAIDs主要通过抑制COX酶发挥作用"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "n_ta2",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "ACE抑制剂靶向血管紧张素II受体"
+        },
+        {
+          "source": "drug_arbs",
+          "target": "n_ta2",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "ARBs也是靶向血管紧张素II受体"
+        },
+        {
+          "source": "drug_diuretics",
+          "target": "n_ta4",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "利尿剂能对抗水钠潴留"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "n_ta5",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "锂对多种靶标有作用，影响细胞信号传导"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_ta6",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "环孢素可以抑制T细胞激活"
+        },
+        {
+          "source": "drug_chemotherapy_agents",
+          "target": "n_ta7",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "化疗药物干扰细胞增殖"
+        },
+        {
+          "source": "drug_antibiotics",
+          "target": "n_ta8",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗生素靶向细菌功能"
+        },
+        {
+          "source": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "target": "n_ta1",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "NSAIDs影响炎症反应"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ta9",
+          "relation": "activates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "类固醇通过激活糖皮质激素受体调节免疫"
+        },
+        {
+          "source": "drug_plasmapheresis",
+          "target": "n_ta10",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "血浆分离影响免疫组分"
+        },
+        {
+          "source": "drug_immunosuppressants",
+          "target": "n_ta11",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "免疫抑制剂减弱免疫反应"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物可能对肾小管增生性肾小球肾炎产生未明确的影响",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "所有药物的靶向与影响需进一步研究确认"
+    ],
+    "uncertainties": [
+      "个体差异可能导致药物影响的不同"
+    ],
+    "next_focus_for_pi": [
+      "考虑进一步研究药物对该疾病的具体作用机制"
+    ]
+  }
+}

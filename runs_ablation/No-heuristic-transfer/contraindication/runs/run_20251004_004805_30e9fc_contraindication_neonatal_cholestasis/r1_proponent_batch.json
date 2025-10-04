@@ -1,0 +1,368 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_phenobarbital",
+          "name": "Phenobarbital"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_rifampin",
+          "name": "Rifampin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_antibiotics",
+          "name": "Antibiotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_estrogen",
+          "name": "Estrogen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_halothane",
+          "name": "Halothane"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_sodium_valproate",
+          "name": "Sodium valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_chlorpromazine",
+          "name": "Chlorpromazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampin",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_estrogen",
+          "type": "Drug",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_halothane",
+          "type": "Drug",
+          "label": "Halothane",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_chlorpromazine",
+          "type": "Drug",
+          "label": "Chlorpromazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_neonatal_cholestasis",
+          "type": "Disease",
+          "label": "Neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_phenobarbital",
+          "target": "d_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知的药物副作用与此疾病相关"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "d_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "在某些情况下可能加重情况"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "d_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "其机制可能影响胆汁流动"
+        },
+        {
+          "source": "drug_rifampin",
+          "target": "d_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "有潜在影响的机制"
+        },
+        {
+          "source": "drug_antibiotics",
+          "target": "d_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "某些抗生素可影响肝功能"
+        },
+        {
+          "source": "drug_estrogen",
+          "target": "d_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "与胆汁淤积相关"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "d_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能引起肝毒性反应"
+        },
+        {
+          "source": "drug_halothane",
+          "target": "d_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "麻醉相关药物可能引起肝损伤"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "d_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "影响肝功能的机制"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "d_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "与肝功能不全相关"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "d_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "可能影响胆汁流动"
+        },
+        {
+          "source": "drug_chlorpromazine",
+          "target": "d_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.25,
+          "agent": "Proponent",
+          "rationale": "抗精神病药物与肝毒性关联"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "不同药物可能对新生儿胆汁淤积症产生影响，可以进一步研究其机制",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "所有药物可能在新生儿体内发挥作用，但具体效果尚需研究确认"
+    ],
+    "uncertainties": [
+      "部分药物的具体影响机制仍不明确"
+    ],
+    "next_focus_for_pi": [
+      "建议分析各药物的剂量与实际影响"
+    ]
+  }
+}

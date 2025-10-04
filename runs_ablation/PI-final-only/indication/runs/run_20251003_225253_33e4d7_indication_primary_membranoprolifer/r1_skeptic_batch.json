@@ -1,0 +1,436 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_plasmapheresis",
+          "name": "Plasmapheresis"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_eculizumab",
+          "name": "Eculizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_angiotensin_converting_enzyme_inhibitors",
+          "name": "Angiotensin converting enzyme inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_angiotensin_receptor_blockers",
+          "name": "Angiotensin receptor blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_intravenous_immunoglobulin",
+          "name": "Intravenous immunoglobulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_furosemide",
+          "name": "Furosemide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ace_inhibitors",
+          "type": "Drug",
+          "label": "Angiotensin converting enzyme inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ar_blockers",
+          "type": "Drug",
+          "label": "Angiotensin receptor blockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_iv_immunoglobulin",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "OffTargetRisk",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "RiskPathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_corticosteroids",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响其他未靶定器官"
+        },
+        {
+          "source": "n_rituximab",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响免疫系统导致风险"
+        },
+        {
+          "source": "n_mycophenolate_mofetil",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "免疫抑制可能引发感染风险"
+        },
+        {
+          "source": "n_cyclophosphamide",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "毒性可能影响长期健康"
+        },
+        {
+          "source": "n_azathioprine",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在强烈副作用风险"
+        },
+        {
+          "source": "n_plasmapheresis",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发出血或感染"
+        },
+        {
+          "source": "n_eculizumab",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "长期使用可能增加感染风险"
+        },
+        {
+          "source": "n_ace_inhibitors",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肾功能诱发风险"
+        },
+        {
+          "source": "n_ar_blockers",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致低血压及相关问题"
+        },
+        {
+          "source": "n_iv_immunoglobulin",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致过敏反应"
+        },
+        {
+          "source": "n_furosemide",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "电解质失衡风险"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发肝功能损害"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "暴露于风险通路"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能会导致严重不良结果"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良表型将抵消疗效"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "long_term_risk_vs_short_term_benefit",
+          "pro_nodes": [
+            "n_corticosteroids",
+            "n_rituximab",
+            "n_mycophenolate_mofetil",
+            "n_cyclophosphamide"
+          ],
+          "con_nodes": [
+            "n_ot",
+            "n_adv"
+          ],
+          "note": "短期效益与长期风险之间存在矛盾"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "多种药物可能带来不良事件，影响临床治疗效果",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "潜在的长期风险未被充分评估或监测",
+        "confidence": "medium"
+      },
+      {
+        "id": "K3",
+        "text": "替代疗法可降低不良事件率",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物的长期安全性是否确立",
+      "对比疗法的有效性与安全性是否评估"
+    ],
+    "falsification_tests": [
+      "是否存在显示长期不良事件发生率的研究",
+      "是否有证据显示不同药物间的风险差异"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供长期安全性研究数据",
+      "提供各类药物的对照研究结果"
+    ]
+  }
+}

@@ -1,0 +1,704 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Gastrointestinal epithelial barrier disorders",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_mesalamine",
+            "via": [
+              "target_IL10"
+            ],
+            "to": "disease_GI_disorder",
+            "success_criteria": "确保机制路径在 Pro 与 Skeptic 中得以可被验证",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_infliximab",
+            "via": [
+              "target_TNF-alpha"
+            ],
+            "to": "disease_GI_disorder",
+            "success_criteria": "形成至少一条有效机制路径，并检验 Pro/Skeptic 的立场",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_mesalamine",
+          "type": "Drug",
+          "label": "Mesalamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_budesonide",
+          "type": "Drug",
+          "label": "Budesonide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ustekinumab",
+          "type": "Drug",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tocilizumab",
+          "type": "Drug",
+          "label": "Tocilizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_loperamide",
+          "type": "Drug",
+          "label": "Loperamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_probiotics",
+          "type": "Drug",
+          "label": "Probiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_IL10",
+          "type": "Target",
+          "label": "Interleukin 10",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_TNF-alpha",
+          "type": "Target",
+          "label": "Tumor Necrosis Factor-alpha",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_IFN-gamma",
+          "type": "Target",
+          "label": "Interferon gamma",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_anti-inflammatory",
+          "type": "Pathway",
+          "label": "Anti-inflammatory Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_immunomodulation",
+          "type": "Pathway",
+          "label": "Immunomodulation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_GI_disorder",
+          "type": "Disease",
+          "label": "Gastrointestinal Epithelial Barrier Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_mesalamine",
+          "type": "Target",
+          "label": "OffTarget_Mesalamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mesalamine",
+          "type": "Pathway",
+          "label": "RiskPathway_Mesalamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mesalamine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Mesalamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_infliximab",
+          "type": "Target",
+          "label": "OffTarget_Infliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_infliximab",
+          "type": "Pathway",
+          "label": "RiskPathway_Infliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_infliximab",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Infliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_adalimumab",
+          "type": "Target",
+          "label": "OffTarget_Adalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_adalimumab",
+          "type": "Pathway",
+          "label": "RiskPathway_Adalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_adalimumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Adalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Mesalamine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Budesonide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Tocilizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Loperamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Probiotics",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_mesalamine",
+          "target": "target_IL10",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知作用于抗炎介质"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "target_TNF-alpha",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "机制已广泛研究用于相关疾病"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "target_TNF-alpha",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "与类似机制药物一致"
+        },
+        {
+          "source": "drug_budesonide",
+          "target": "target_IL10",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过调节抗炎反应的常识"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "target_IFN-gamma",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "具有广泛的免疫抑制作用"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "target_IL10",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "影响特定细胞因子通路"
+        },
+        {
+          "source": "drug_tocilizumab",
+          "target": "target_IL10",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "主要用于炎症相关性疾病"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "target_IFN-gamma",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "作为抗炎药物的常见应用"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "target_IFN-gamma",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于免疫调节的药物"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "target_IFN-gamma",
+          "relation": "acts_on",
+          "weight": 0.58,
+          "agent": "Proponent",
+          "rationale": "用于抑制免疫反应"
+        },
+        {
+          "source": "drug_loperamide",
+          "target": "disease_GI_disorder",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "用于对抗腹泻相关的GI病理"
+        },
+        {
+          "source": "drug_probiotics",
+          "target": "disease_GI_disorder",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "通过改善肠道微生物群"
+        },
+        {
+          "source": "target_IL10",
+          "target": "pathway_anti-inflammatory",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗炎通路的核心成分"
+        },
+        {
+          "source": "target_TNF-alpha",
+          "target": "pathway_anti-inflammatory",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "关键的炎症介质"
+        },
+        {
+          "source": "target_IFN-gamma",
+          "target": "pathway_immunomodulation",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "免疫调节的必要成分"
+        },
+        {
+          "source": "pathway_anti-inflammatory",
+          "target": "disease_GI_disorder",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "通过抑制炎症来改善症状"
+        },
+        {
+          "source": "pathway_immunomodulation",
+          "target": "disease_GI_disorder",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "影响免疫反应的通路"
+        },
+        {
+          "source": "drug_mesalamine",
+          "target": "n_ot_mesalamine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在未知的旁路作用"
+        },
+        {
+          "source": "n_ot_mesalamine",
+          "target": "n_rp_mesalamine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与潜在风险通路有关"
+        },
+        {
+          "source": "n_rp_mesalamine",
+          "target": "n_adv_mesalamine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_mesalamine",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将对假设形成反驳"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "n_ot_infliximab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "副作用未完全了解"
+        },
+        {
+          "source": "n_ot_infliximab",
+          "target": "n_rp_infliximab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险机制关联"
+        },
+        {
+          "source": "n_rp_infliximab",
+          "target": "n_adv_infliximab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能产生不良反应"
+        },
+        {
+          "source": "n_adv_infliximab",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险对假设产生反驳"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "n_ot_adalimumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "靶向机制可能有缺陷"
+        },
+        {
+          "source": "n_ot_adalimumab",
+          "target": "n_rp_adalimumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路潜在的旁路"
+        },
+        {
+          "source": "n_rp_adalimumab",
+          "target": "n_adv_adalimumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致负面后果"
+        },
+        {
+          "source": "n_adv_adalimumab",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险的出现可能抵消效益"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_mesalamine",
+              "target": "target_IL10",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "已知作用于抗炎介质"
+            },
+            {
+              "source": "target_IL10",
+              "target": "pathway_anti-inflammatory",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "抗炎通路的核心成分"
+            },
+            {
+              "source": "pathway_anti-inflammatory",
+              "target": "disease_GI_disorder",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "通过抑制炎症来改善症状"
+            },
+            {
+              "source": "drug_mesalamine",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "形成支持性机制链条"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已形成 Drug→Target→Pathway→Disease 的机制路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_infliximab",
+              "target": "target_TNF-alpha",
+              "relation": "acts_on",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "机制已广泛研究用于相关疾病"
+            },
+            {
+              "source": "target_TNF-alpha",
+              "target": "pathway_anti-inflammatory",
+              "relation": "involved_in",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "关键的炎症介质"
+            },
+            {
+              "source": "pathway_anti-inflammatory",
+              "target": "disease_GI_disorder",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "通过抑制炎症来改善症状"
+            },
+            {
+              "source": "drug_infliximab",
+              "target": "H2",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "形成支持性机制链条"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已形成 Drug→Target→Pathway→Disease 的机制路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

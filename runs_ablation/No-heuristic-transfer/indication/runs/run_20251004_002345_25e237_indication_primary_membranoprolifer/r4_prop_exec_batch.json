@@ -1,0 +1,708 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "n_corticosteroids",
+            "via": [],
+            "to": "n_pmg",
+            "success_criteria": "形成至少1条不相交路径，提供安全性评估数据",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "n_rituximab",
+            "via": [],
+            "to": "n_pmg",
+            "success_criteria": "形成至少1条不相交路径，提供安全性评估数据",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "n_mycophenolate_mofetil",
+            "via": [],
+            "to": "n_pmg",
+            "success_criteria": "形成至少1条不相交路径，提供安全性评估数据",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ace_inhibitors",
+          "type": "Drug",
+          "label": "Angiotensin converting enzyme inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ar_blockers",
+          "type": "Drug",
+          "label": "Angiotensin receptor blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_iv_immunoglobulin",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_pmg",
+          "type": "Phenotype",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mpgn",
+          "type": "Disease",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cortico",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_mycophenolate",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_arbs",
+          "type": "Drug",
+          "label": "Angiotensin receptor blockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ivig",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot1",
+          "type": "Target",
+          "label": "Off-target mechanism",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp1",
+          "type": "Pathway",
+          "label": "Risk pathway linked to immunosuppression",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv1",
+          "type": "Phenotype",
+          "label": "Increased infection risk",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv2",
+          "type": "Phenotype",
+          "label": "Nephrotoxicity",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Angiotensin converting enzyme inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_angiotensin_converting_enzyme_inhibitors",
+          "type": "Drug",
+          "label": "Angiotensin converting enzyme inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Angiotensin receptor blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_angiotensin_receptor_blockers",
+          "type": "Drug",
+          "label": "Angiotensin receptor blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_intravenous_immunoglobulin",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_furosemide",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Statins",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_corticosteroids",
+          "target": "n_pmg",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "常用于治疗类疾病"
+        },
+        {
+          "source": "n_rituximab",
+          "target": "n_pmg",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "对免疫相关疾病有效"
+        },
+        {
+          "source": "n_mycophenolate_mofetil",
+          "target": "n_pmg",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "免疫抑制机制与疾病相关"
+        },
+        {
+          "source": "n_cyclophosphamide",
+          "target": "n_pmg",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "作为化疗药物用于免疫疾病"
+        },
+        {
+          "source": "n_azathioprine",
+          "target": "n_pmg",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "免疫调节药，适用相近疾病"
+        },
+        {
+          "source": "n_plasmapheresis",
+          "target": "n_pmg",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "作为辅助治疗手段"
+        },
+        {
+          "source": "n_eculizumab",
+          "target": "n_pmg",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "在特定病例中有效"
+        },
+        {
+          "source": "n_ace_inhibitors",
+          "target": "n_pmg",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "间接减轻症状"
+        },
+        {
+          "source": "n_ar_blockers",
+          "target": "n_pmg",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能减轻高血压并发症"
+        },
+        {
+          "source": "n_iv_immunoglobulin",
+          "target": "n_pmg",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "用于免疫耐受的治疗"
+        },
+        {
+          "source": "n_furosemide",
+          "target": "n_pmg",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "用于控制水肿相关症状"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_pmg",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "用于合并症治疗的辅助"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_mycophenolate_mofetil",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "常用于联合治疗"
+        },
+        {
+          "source": "n_rituximab",
+          "target": "n_cyclophosphamide",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "常见的联合化疗模式"
+        },
+        {
+          "source": "n_cortico",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能作用于非靶点，影响免疫恢复"
+        },
+        {
+          "source": "n_rituximab",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在免疫抑制过度，增加感染风险"
+        },
+        {
+          "source": "n_mycophenolate",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "长期使用可能引起肾损伤"
+        },
+        {
+          "source": "n_cyclophosphamide",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发多种并发症"
+        },
+        {
+          "source": "n_azathioprine",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可引起骨髓抑制，感染风险增加"
+        },
+        {
+          "source": "n_plasmapheresis",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "不确定长期效果，较少数据支持"
+        },
+        {
+          "source": "n_eculizumab",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "成本高，罕见适应症"
+        },
+        {
+          "source": "n_ace_inhibitors",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能与其他药物反应"
+        },
+        {
+          "source": "n_arbs",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的肾功能影响"
+        },
+        {
+          "source": "n_ivig",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良免疫反应"
+        },
+        {
+          "source": "n_furosemide",
+          "target": "n_adv2",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "会对肾功能造成影响"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_adv2",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "肾脏代谢潜在影响"
+        },
+        {
+          "source": "n_ot1",
+          "target": "n_rp1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "免疫抑制剂的非靶向作用与风险通路相关"
+        },
+        {
+          "source": "n_rp1",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "提高感染风险"
+        },
+        {
+          "source": "n_rp1",
+          "target": "n_adv2",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致肾脏相关并发症"
+        },
+        {
+          "source": "n_adv1",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "感染风险增加将抵消利用 corticosteroids 的净收益"
+        },
+        {
+          "source": "n_adv2",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "肾损伤风险抵消了潜在益处"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已确认 Corticosteroids 对 PMG 的支持性路径。"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

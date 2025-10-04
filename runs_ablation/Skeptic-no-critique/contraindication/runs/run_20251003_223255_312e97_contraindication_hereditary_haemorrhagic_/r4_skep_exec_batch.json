@@ -1,0 +1,315 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Hereditary haemorrhagic telangiectasia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估Aspirin对HHT患者的具体影响，明确禁忌原因",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估Ibuprofen对HHT患者的影响，明确禁忌原因",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估Warfarin对HHT患者的影响，重申禁忌指示",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估Clopidogrel对HHT患者的影响",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估Rivaroxaban对HHT患者的潜在影响",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估Heparin对HHT患者的影响",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估Dipyridamole对HHT患者的影响",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估Thrombin inhibitors对HHT患者的影响",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估NSAIDs对HHT患者的影响",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估Beta-blockers对HHT患者的潜在影响",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估Anticoagulants对HHT患者的影响",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "评估Antithrombotic agents对HHT患者的影响",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rivaroxaban",
+          "type": "Drug",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_heparin",
+          "type": "Drug",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dipyridamole",
+          "type": "Drug",
+          "label": "Dipyridamole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thrombin_inhibitors",
+          "type": "Drug",
+          "label": "Thrombin inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_antithrombotic_agents",
+          "type": "Drug",
+          "label": "Antithrombotic agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_hereditary_haemorrhagic_telangiectasia",
+          "type": "Disease",
+          "label": "Hereditary haemorrhagic telangiectasia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Aspirin已知影响出血倾向"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Ibuprofen可能加重出血"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.95,
+          "agent": "Proponent",
+          "rationale": "Warfarin严重影响凝血"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Clopidogrel增加出血风险"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Rivaroxaban影响血液凝固"
+        },
+        {
+          "source": "drug_heparin",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Heparin增加出血可能性"
+        },
+        {
+          "source": "drug_dipyridamole",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Dipyridamole可能影响凝血"
+        },
+        {
+          "source": "drug_thrombin_inhibitors",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Thrombin inhibitors对出血有影响"
+        },
+        {
+          "source": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "NSAIDs已知影响出血风险"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Beta-blockers在某些情况下可能影响出血"
+        },
+        {
+          "source": "drug_anticoagulants",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Anticoagulants对出血有直接影响"
+        },
+        {
+          "source": "drug_antithrombotic_agents",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Antithrombotic agents增加出血风险"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates_per_hypothesis": []
+  }
+}

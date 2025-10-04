@@ -1,0 +1,570 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Hyperammonaemia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Valproic Acid",
+            "via": [
+              "Hyperammonaemia"
+            ],
+            "to": "AdversePhenotypeHyperammonaemia",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Topiramate",
+            "via": [
+              "Hyperammonaemia"
+            ],
+            "to": "AdversePhenotypeHyperammonaemia",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Carnitine",
+            "via": [
+              "Hyperammonaemia"
+            ],
+            "to": "AdversePhenotypeHyperammonaemia",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Lactulose",
+            "via": [
+              "Hyperammonaemia"
+            ],
+            "to": "AdversePhenotypeHyperammonaemia",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_valproic_acid",
+          "type": "Drug",
+          "label": "Valproic Acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_carnitine",
+          "type": "Drug",
+          "label": "Carnitine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lactulose",
+          "type": "Drug",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_sodium_benzoate",
+          "type": "Drug",
+          "label": "Sodium Benzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_nitroprusside",
+          "type": "Drug",
+          "label": "Nitroprusside",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_benzodiazepines",
+          "type": "Drug",
+          "label": "Benzodiazepines",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_asparaginase",
+          "type": "Drug",
+          "label": "Asparaginase",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_amino_acids",
+          "type": "Drug",
+          "label": "Amino Acids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_hyperammonaemia",
+          "type": "Disease",
+          "label": "Hyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "OffTargetHyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "RiskPathwayHyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeHyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_valproic_acid",
+          "target": "n_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知对氨基酸代谢影响"
+        },
+        {
+          "source": "n_topiramate",
+          "target": "n_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与尿素循环干扰相关"
+        },
+        {
+          "source": "n_carnitine",
+          "target": "n_hyperammonaemia",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "支持脂肪酸代谢，可能降低氨基酸积累"
+        },
+        {
+          "source": "n_lactulose",
+          "target": "n_hyperammonaemia",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有助于降低血氨"
+        },
+        {
+          "source": "n_sodium_benzoate",
+          "target": "n_hyperammonaemia",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过结合氨降低氨水平"
+        },
+        {
+          "source": "n_nitroprusside",
+          "target": "n_hyperammonaemia",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可用于激活硝酸盐通路"
+        },
+        {
+          "source": "n_phenobarbital",
+          "target": "n_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能加重肝脏代谢负担"
+        },
+        {
+          "source": "n_benzodiazepines",
+          "target": "n_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能导致神经毒性风险"
+        },
+        {
+          "source": "n_methotrexate",
+          "target": "n_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响氨基酸代谢"
+        },
+        {
+          "source": "n_asparaginase",
+          "target": "n_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "抑制氨基酸合成，可能增加氨"
+        },
+        {
+          "source": "n_amino_acids",
+          "target": "n_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "直接增加氨的来源"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能影响氨代谢"
+        },
+        {
+          "source": "n_valproic_acid",
+          "target": "n_hyperammonaemia",
+          "relation": "contraindicates",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知导致氨水平上升"
+        },
+        {
+          "source": "n_topiramate",
+          "target": "n_hyperammonaemia",
+          "relation": "contraindicates",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "与高氨血症相关"
+        },
+        {
+          "source": "n_carnitine",
+          "target": "n_hyperammonaemia",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响氨代谢"
+        },
+        {
+          "source": "n_lactulose",
+          "target": "n_hyperammonaemia",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "干预氨的吸收"
+        },
+        {
+          "source": "n_sodium_benzoate",
+          "target": "n_hyperammonaemia",
+          "relation": "contraindicates",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能增加氨产生"
+        },
+        {
+          "source": "n_nitroprusside",
+          "target": "n_hyperammonaemia",
+          "relation": "contraindicates",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "风险机制未明确"
+        },
+        {
+          "source": "n_phenobarbital",
+          "target": "n_hyperammonaemia",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响肝功能"
+        },
+        {
+          "source": "n_benzodiazepines",
+          "target": "n_hyperammonaemia",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "有潜在抑制作用"
+        },
+        {
+          "source": "n_methotrexate",
+          "target": "n_hyperammonaemia",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与氨代谢冲突"
+        },
+        {
+          "source": "n_asparaginase",
+          "target": "n_hyperammonaemia",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "作用机制可能加剧风险"
+        },
+        {
+          "source": "n_amino_acids",
+          "target": "n_hyperammonaemia",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "氨的潜在来源"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_hyperammonaemia",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "平衡代谢可能失调"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot",
+          "relation": "associated_with",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "与高氨血症间关系明显"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路机制"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "低效能效应可造成不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高氨血症的风险抵消潜在收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高氨血症的风险抵消潜在收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高氨血症的风险抵消潜在收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高氨血症的风险抵消潜在收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高氨血症的风险抵消潜在收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高氨血症的风险抵消潜在收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高氨血症的风险抵消潜在收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高氨血症的风险抵消潜在收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高氨血症的风险抵消潜在收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高氨血症的风险抵消潜在收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高氨血症的风险抵消潜在收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高氨血症的风险抵消潜在收益"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "n_valproic_acid",
+              "target": "n_adv",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "已知对氨基酸代谢影响"
+            },
+            {
+              "source": "n_topiramate",
+              "target": "n_adv",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "与尿素循环干扰相关"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Valproic Acid → Hyperammonaemia → AdversePhenotypeHyperammonaemia，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

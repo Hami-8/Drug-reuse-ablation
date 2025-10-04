@@ -1,0 +1,824 @@
+{
+  "input": {
+    "mode": "revise",
+    "query": {
+      "entity": "Hyperammonaemia",
+      "relation": "contraindication"
+    },
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_sodium_benzoate",
+          "type": "Drug",
+          "label": "Sodium benzoate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenylbutyrate",
+          "type": "Drug",
+          "label": "Phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lactulose",
+          "type": "Drug",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_arginine",
+          "type": "Drug",
+          "label": "Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_glutamine",
+          "type": "Drug",
+          "label": "Glutamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_valproic_acid",
+          "type": "Drug",
+          "label": "Valproic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampin",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_acetazolamide",
+          "type": "Drug",
+          "label": "Acetazolamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ammonium_chloride",
+          "type": "Drug",
+          "label": "Ammonium chloride",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Hyperammonaemia",
+          "type": "Disease",
+          "label": "Hyperammonaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Pathway1",
+          "type": "Pathway",
+          "label": "Urea cycle",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Pathway2",
+          "type": "Pathway",
+          "label": "Neurotransmitter metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Sodium benzoate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Phenylbutyrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Arginine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Glutamine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Valproic acid",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Acetazolamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Ammonium chloride",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_sodium_benzoate",
+          "target": "Pathway1",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "被用于减少氨的毒性"
+        },
+        {
+          "source": "Pathway1",
+          "target": "Hyperammonaemia",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": [
+            "与尿素循环的直接关系",
+            "与氨代谢相关",
+            "通过影响代谢导致",
+            "通过尿素循环影响",
+            "干扰相关代谢通路",
+            "干扰尿素循环功能",
+            "通过直接引入氨的影响",
+            "影响尿素循环"
+          ],
+          "agent_sources": [
+            "Proponent"
+          ]
+        },
+        {
+          "source": "drug_phenylbutyrate",
+          "target": "Pathway1",
+          "relation": "acts_on",
+          "weight": 0.95,
+          "agent": "Proponent",
+          "rationale": "有效降低血氨水平"
+        },
+        {
+          "source": "drug_lactulose",
+          "target": "Pathway2",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "用于降低氨的吸收"
+        },
+        {
+          "source": "Pathway2",
+          "target": "Hyperammonaemia",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": [
+            "干扰氨基酸代谢",
+            "影响氨基酸代谢",
+            "可能影响血液氨浓度",
+            "干预代谢通路"
+          ],
+          "agent_sources": [
+            "Proponent"
+          ]
+        },
+        {
+          "source": "drug_arginine",
+          "target": "Pathway1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "促进尿素生成"
+        },
+        {
+          "source": "drug_glutamine",
+          "target": "Pathway2",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可以引导氨的代谢"
+        },
+        {
+          "source": "drug_valproic_acid",
+          "target": "Pathway1",
+          "relation": "inhibits",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能导致氨的积累"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "Pathway2",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有潜在影响血氨"
+        },
+        {
+          "source": "drug_rifampin",
+          "target": "Pathway1",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "影响子宫内氨释放"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "Pathway1",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能增加与氨的比例"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "Pathway2",
+          "relation": "modulates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "影响氨的产生与处理"
+        },
+        {
+          "source": "drug_acetazolamide",
+          "target": "Pathway1",
+          "relation": "inhibits",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "影响氨的排泄"
+        },
+        {
+          "source": "drug_ammonium_chloride",
+          "target": "Pathway1",
+          "relation": "causes",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可增加血氨浓度"
+        },
+        {
+          "source": "drug_lactulose",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "形成双重路径，支持与Hyperammonaemia的关系"
+        },
+        {
+          "source": "drug_phenylbutyrate",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "形成双重路径，支持与Hyperammonaemia的关系"
+        }
+      ],
+      "round_index": 1
+    },
+    "history": {
+      "round": 1,
+      "last_scores": [
+        {
+          "hypothesis_id": "H1",
+          "score": 0.73,
+          "components": {
+            "mechanism_fit": 0.8,
+            "class_prior": 0.7,
+            "pk_pd_feasibility": 0.75,
+            "indication_plausibility": 0.65,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.2,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 1.7,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "与尿素循环相关，且通过影响代谢形成支持路径"
+            ],
+            "indication_plausibility": [
+              "用于降低氨的毒性，符合治疗逻辑"
+            ]
+          },
+          "confidence": "high",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H2",
+          "score": 0.76,
+          "components": {
+            "mechanism_fit": 0.85,
+            "class_prior": 0.7,
+            "pk_pd_feasibility": 0.8,
+            "indication_plausibility": 0.7,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.22,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 1.7,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "通过与尿素循环的支持关系直接作用于血氨"
+            ],
+            "indication_plausibility": [
+              "已知用于降低血氨水平，因此适合Hyperammonaemia"
+            ]
+          },
+          "confidence": "high",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H3",
+          "score": 0.7,
+          "components": {
+            "mechanism_fit": 0.75,
+            "class_prior": 0.65,
+            "pk_pd_feasibility": 0.72,
+            "indication_plausibility": 0.64,
+            "safety_risk": 0.15,
+            "graph_bonus": 0.18,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.8,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": true,
+            "path_disjointness": 2,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "通过干预氨基酸代谢间接影响血氨"
+            ],
+            "indication_plausibility": [
+              "已用于降低氨的吸收，有效性存在"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H4",
+          "score": 0.65,
+          "components": {
+            "mechanism_fit": 0.7,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.68,
+            "indication_plausibility": 0.6,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.7,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "促进尿素生成，但缺乏直接的路径连接"
+            ],
+            "indication_plausibility": [
+              "作用在氨代谢上，但证据不如其他候选强"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "缺乏更深入的支持数据"
+          ]
+        },
+        {
+          "hypothesis_id": "H5",
+          "score": 0.67,
+          "components": {
+            "mechanism_fit": 0.65,
+            "class_prior": 0.6,
+            "pk_pd_feasibility": 0.65,
+            "indication_plausibility": 0.63,
+            "safety_risk": 0.1,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.6,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "引导氨的代谢，但直接作用路径不明确"
+            ],
+            "indication_plausibility": [
+              "有限证据：有助于氨的代谢"
+            ]
+          },
+          "confidence": "medium",
+          "uncertainties": [
+            "需要更多临床数据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H6",
+          "score": 0.64,
+          "components": {
+            "mechanism_fit": 0.6,
+            "class_prior": 0.55,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.62,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.15,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.4,
+            "contradiction_weight": 0.2,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "可能导致氨的积累，存在安全隐患"
+            ],
+            "indication_plausibility": [
+              "虽知是抗癫痫药物，作用机制与Hyperammonaemia关系不大"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "安全性与疗效之间的平衡未完全明确"
+          ]
+        },
+        {
+          "hypothesis_id": "H7",
+          "score": 0.6,
+          "components": {
+            "mechanism_fit": 0.58,
+            "class_prior": 0.54,
+            "pk_pd_feasibility": 0.58,
+            "indication_plausibility": 0.61,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.5,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "可能对血氨有影响，但路径不明"
+            ],
+            "indication_plausibility": [
+              "可用于神经系统疾病，临床效果无明确支持"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "需要更多机制研究"
+          ]
+        },
+        {
+          "hypothesis_id": "H8",
+          "score": 0.58,
+          "components": {
+            "mechanism_fit": 0.55,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.55,
+            "indication_plausibility": 0.6,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.5,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "影响代谢途径，但与Hyperammonaemia的关系不明确"
+            ],
+            "indication_plausibility": [
+              "已知是抗生素，但在此指证缺乏支持"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H9",
+          "score": 0.57,
+          "components": {
+            "mechanism_fit": 0.55,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.55,
+            "indication_plausibility": 0.58,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.5,
+            "contradiction_weight": 0.2,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "可能增加氨，但机制未明确"
+            ],
+            "indication_plausibility": [
+              "缺乏显著疗效相关数据"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H10",
+          "score": 0.55,
+          "components": {
+            "mechanism_fit": 0.53,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.54,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.5,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "效应可能通过未明机制影响氨代谢"
+            ],
+            "indication_plausibility": [
+              "作为抗癫痫药物应用，但相关性不强"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H11",
+          "score": 0.5,
+          "components": {
+            "mechanism_fit": 0.45,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.5,
+            "indication_plausibility": 0.48,
+            "safety_risk": 0.2,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.4,
+            "contradiction_weight": 0.0,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "影响氨的排泄，但影响路径不明"
+            ],
+            "indication_plausibility": [
+              "在临床应用方面的证据不足"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": []
+        },
+        {
+          "hypothesis_id": "H12",
+          "score": 0.48,
+          "components": {
+            "mechanism_fit": 0.45,
+            "class_prior": 0.5,
+            "pk_pd_feasibility": 0.45,
+            "indication_plausibility": 0.45,
+            "safety_risk": 0.25,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.1
+          },
+          "graph_signals": {
+            "support_weight": 0.4,
+            "contradiction_weight": 0.3,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 1,
+            "conflict_hotspots": []
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "可增加血氨浓度，潜在风险"
+            ],
+            "indication_plausibility": [
+              "缺乏对Hyperammonaemia的疗效支持"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "缺乏适用的临床数据"
+          ]
+        }
+      ]
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "revisions": [
+      {
+        "hypothesis_id": "H4",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "尿素生成的直连路径",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_arginine",
+            "via": [],
+            "to": "Pathway1",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ],
+        "debate_focus": [
+          "阐明氨的代谢是否因促进尿素生成而受到影响",
+          "技术上是否能够找到影响氨代谢的直接机制"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_glutamine",
+            "via": [],
+            "to": "Pathway2",
+            "success_criteria": "评估直接影响氨代谢的证据",
+            "assignee": "Proponent"
+          }
+        ],
+        "debate_focus": [
+          "现有证据是否足以支持Glutamine在降低血氨方面的有效性或安全性"
+        ]
+      }
+    ],
+    "pruned_hypotheses": [],
+    "new_subhypotheses": [],
+    "seed_request": {
+      "should_regenerate": false,
+      "reason": "当前候选的支持数据不足以形成清晰的pathway和机制连通性，特别是在Arginine和Glutamine上，需通过安全性和有效性评估来强化推理。",
+      "n": 4
+    }
+  }
+}

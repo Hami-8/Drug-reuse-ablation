@@ -1,0 +1,567 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Fenofibrate的潜在不良表型",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Gemfibrozil的潜在不良表型",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Niacin的潜在不良表型",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Statins的潜在不良表型",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ezetimibe",
+          "type": "Drug",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_omega_3_fatty_acids",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lipid_lowering_agents",
+          "type": "Drug",
+          "label": "Lipid-lowering agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_fenofibrate",
+          "type": "Target",
+          "label": "OffTargetFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fenofibrate",
+          "type": "Pathway",
+          "label": "RiskPathwayFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fenofibrate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gemfibrozil",
+          "type": "Target",
+          "label": "OffTargetGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gemfibrozil",
+          "type": "Pathway",
+          "label": "RiskPathwayGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gemfibrozil",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_niacin",
+          "type": "Target",
+          "label": "OffTargetNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_niacin",
+          "type": "Pathway",
+          "label": "RiskPathwayNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_niacin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_statins",
+          "type": "Target",
+          "label": "OffTargetStatins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_statins",
+          "type": "Pathway",
+          "label": "RiskPathwayStatins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_statins",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeStatins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_fenofibrate",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "具有降低甘油三酯水平的临床用途"
+        },
+        {
+          "source": "n_gemfibrozil",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "研究显示其能减少甘油三酯"
+        },
+        {
+          "source": "n_niacin",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "对甘油三酯有降低作用"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于治疗高脂血症"
+        },
+        {
+          "source": "n_ezetimibe",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "被用于降低血脂"
+        },
+        {
+          "source": "n_omega_3_fatty_acids",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "具有改善甘油三酯水平的证据"
+        },
+        {
+          "source": "n_lipid_lowering_agents",
+          "target": "n_hypertriglyceridaemia",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "涵盖多个降低脂质的药物"
+        },
+        {
+          "source": "n_fenofibrate",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H1假设"
+        },
+        {
+          "source": "n_gemfibrozil",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H2假设"
+        },
+        {
+          "source": "n_niacin",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H3假设"
+        },
+        {
+          "source": "n_statins",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H4假设"
+        },
+        {
+          "source": "n_ezetimibe",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H5假设"
+        },
+        {
+          "source": "n_omega_3_fatty_acids",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H6假设"
+        },
+        {
+          "source": "n_lipid_lowering_agents",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通过抑制机制支持H7假设"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "n_ot_fenofibrate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在的离靶机制"
+        },
+        {
+          "source": "n_ot_fenofibrate",
+          "target": "n_rp_fenofibrate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_fenofibrate",
+          "target": "n_adv_fenofibrate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_fenofibrate",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "该风险链可能抵消预期的治疗益处"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "n_ot_gemfibrozil",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在的离靶机制"
+        },
+        {
+          "source": "n_ot_gemfibrozil",
+          "target": "n_rp_gemfibrozil",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_gemfibrozil",
+          "target": "n_adv_gemfibrozil",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_gemfibrozil",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "该风险链可能抵消预期的治疗益处"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "n_ot_niacin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在的离靶机制"
+        },
+        {
+          "source": "n_ot_niacin",
+          "target": "n_rp_niacin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_niacin",
+          "target": "n_adv_niacin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_niacin",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "该风险链可能抵消预期的治疗益处"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_ot_statins",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在的离靶机制"
+        },
+        {
+          "source": "n_ot_statins",
+          "target": "n_rp_statins",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_statins",
+          "target": "n_adv_statins",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_statins",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "该风险链可能抵消预期的治疗益处"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_ot_fenofibrate",
+              "type": "Target",
+              "label": "OffTargetFenofibrate",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_rp_fenofibrate",
+              "type": "Pathway",
+              "label": "RiskPathwayFenofibrate",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "n_adv_fenofibrate",
+              "type": "Phenotype",
+              "label": "AdversePhenotypeFenofibrate",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "n_fenofibrate",
+              "target": "n_ot_fenofibrate",
+              "relation": "acts_on",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "存在潜在的离靶机制"
+            },
+            {
+              "source": "n_ot_fenofibrate",
+              "target": "n_rp_fenofibrate",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "风险通路关联"
+            },
+            {
+              "source": "n_rp_fenofibrate",
+              "target": "n_adv_fenofibrate",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "导致不良表型"
+            },
+            {
+              "source": "n_adv_fenofibrate",
+              "target": "H1",
+              "relation": "refutes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "该风险链可能抵消预期的治疗益处"
+            }
+          ],
+          "conflict_hotspots": [
+            {
+              "topic": "Fenofibrate的潜在不良表型",
+              "pro_nodes": [
+                "n_fenofibrate"
+              ],
+              "con_nodes": [
+                "n_adv_fenofibrate"
+              ],
+              "note": "潜在不良反应可能抵消治疗效果"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：以高权重 refutes 边连到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [],
+    "falsification_tests": [],
+    "next_focus_for_pi": []
+  }
+}

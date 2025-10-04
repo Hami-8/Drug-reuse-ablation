@@ -1,0 +1,366 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_phenelzine",
+          "name": "Phenelzine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_selegiline",
+          "name": "Selegiline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_fluoxetine",
+          "name": "Fluoxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_paroxetine",
+          "name": "Paroxetine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_bupropion",
+          "name": "Bupropion"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_clomipramine",
+          "name": "Clomipramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sertraline",
+          "name": "Sertraline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_venlafaxine",
+          "name": "Venlafaxine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_thioridazine",
+          "name": "Thioridazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_risperidone",
+          "name": "Risperidone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tranylcypromine",
+          "name": "Tranylcypromine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_citalopram",
+          "name": "Citalopram"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_phenelzine",
+          "type": "Drug",
+          "label": "Phenelzine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_selegiline",
+          "type": "Drug",
+          "label": "Selegiline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fluoxetine",
+          "type": "Drug",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_paroxetine",
+          "type": "Drug",
+          "label": "Paroxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bupropion",
+          "type": "Drug",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_clomipramine",
+          "type": "Drug",
+          "label": "Clomipramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sertraline",
+          "type": "Drug",
+          "label": "Sertraline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_venlafaxine",
+          "type": "Drug",
+          "label": "Venlafaxine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thioridazine",
+          "type": "Drug",
+          "label": "Thioridazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_risperidone",
+          "type": "Drug",
+          "label": "Risperidone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tranylcypromine",
+          "type": "Drug",
+          "label": "Tranylcypromine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_citalopram",
+          "type": "Drug",
+          "label": "Citalopram",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_neurotransmitter_disorders",
+          "type": "Disease",
+          "label": "Neurotransmitter disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_phenelzine",
+          "target": "n_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抗抑郁药物影响神经递质机制"
+        },
+        {
+          "source": "n_selegiline",
+          "target": "n_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "单胺氧化酶抑制剂与神经递质相关"
+        },
+        {
+          "source": "n_fluoxetine",
+          "target": "n_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "选择性5-HT再摄取抑制剂影响神经递质平衡"
+        },
+        {
+          "source": "n_paroxetine",
+          "target": "n_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "第二类选择性5-HT再摄取抑制剂作用于神经递质"
+        },
+        {
+          "source": "n_bupropion",
+          "target": "n_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响多巴胺与去甲肾上腺素系统"
+        },
+        {
+          "source": "n_clomipramine",
+          "target": "n_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "三环抗抑郁药作用于多种神经递质"
+        },
+        {
+          "source": "n_sertraline",
+          "target": "n_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "SSRI药物影响神经递质"
+        },
+        {
+          "source": "n_venlafaxine",
+          "target": "n_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响5-HT和去甲肾上腺素"
+        },
+        {
+          "source": "n_thioridazine",
+          "target": "n_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抗精神病药物与神经递质失衡相关"
+        },
+        {
+          "source": "n_risperidone",
+          "target": "n_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "多重神经递质干预"
+        },
+        {
+          "source": "n_tranylcypromine",
+          "target": "n_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "单胺氧化酶抑制剂的作用"
+        },
+        {
+          "source": "n_citalopram",
+          "target": "n_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响神经递质平衡的SSRI"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过不同机制影响神经递质失调",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "假设这些药物均有潜在的神经递质相关性"
+    ],
+    "uncertainties": [
+      "药物影响神经递质的具体机制尚需进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否添加更具体的靶标和途径以增强机制理解"
+    ]
+  }
+}

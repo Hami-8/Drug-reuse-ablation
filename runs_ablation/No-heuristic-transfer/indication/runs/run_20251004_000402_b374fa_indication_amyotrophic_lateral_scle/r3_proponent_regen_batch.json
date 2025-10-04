@@ -1,0 +1,429 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Amyotrophic lateral sclerosis or motor neuron disease",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_riluzole",
+          "name": "Riluzole"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_edaravone",
+          "name": "Edaravone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_nerinetide",
+          "name": "Nerinetide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_tirasemtiv",
+          "name": "Tirasemtiv"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_nusinersen",
+          "name": "Nusinersen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lithium",
+          "name": "Lithium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_bicalutamide",
+          "name": "Bicalutamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_dexpramipexole",
+          "name": "Dexpramipexole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_dantrolene",
+          "name": "Dantrolene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_sodium_phenylbutyrate",
+          "name": "Sodium phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_amx0035",
+          "name": "AMX0035"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_cilostazol",
+          "name": "Cilostazol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_riluzole",
+          "type": "Drug",
+          "label": "Riluzole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_edaravone",
+          "type": "Drug",
+          "label": "Edaravone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nerinetide",
+          "type": "Drug",
+          "label": "Nerinetide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tirasemtiv",
+          "type": "Drug",
+          "label": "Tirasemtiv",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nusinersen",
+          "type": "Drug",
+          "label": "Nusinersen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bicalutamide",
+          "type": "Drug",
+          "label": "Bicalutamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexpramipexole",
+          "type": "Drug",
+          "label": "Dexpramipexole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dantrolene",
+          "type": "Drug",
+          "label": "Dantrolene",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amx0035",
+          "type": "Drug",
+          "label": "AMX0035",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cilostazol",
+          "type": "Drug",
+          "label": "Cilostazol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mnd",
+          "type": "Disease",
+          "label": "Amyotrophic Lateral Sclerosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_inflammation",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_glutamate_elevation",
+          "type": "Pathway",
+          "label": "Glutamate Elevation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mitochondrial_dysfunction",
+          "type": "Pathway",
+          "label": "Mitochondrial Dysfunction Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_riluzole",
+          "target": "n_mnd",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知用于延缓 ALS 进程"
+        },
+        {
+          "source": "drug_edaravone",
+          "target": "n_mnd",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知用于减缓 ALS 进展"
+        },
+        {
+          "source": "drug_nusinersen",
+          "target": "n_mnd",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "对脊髓性肌萎缩症有效，相关机制可推测对 ALS 有潜在影响"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "n_mnd",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有研究表明对 ALS 可能有益"
+        },
+        {
+          "source": "drug_dexpramipexole",
+          "target": "n_mnd",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "有潜力干预 ALS 相关过程"
+        },
+        {
+          "source": "drug_amx0035",
+          "target": "n_mnd",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "新颖联合治疗显示有效性"
+        },
+        {
+          "source": "drug_tirasemtiv",
+          "target": "n_mnd",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "改善运动能力的观察性研究"
+        },
+        {
+          "source": "drug_bicalutamide",
+          "target": "n_mnd",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "理论上的影响机制存在关联"
+        },
+        {
+          "source": "drug_sodium_phenylbutyrate",
+          "target": "n_mnd",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有可能改善 ALS 症状"
+        },
+        {
+          "source": "drug_cilostazol",
+          "target": "n_mnd",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "相关研究支持其可能性"
+        },
+        {
+          "source": "drug_dantrolene",
+          "target": "n_inflammation",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对炎症反应的抑制作用"
+        },
+        {
+          "source": "n_inflammation",
+          "target": "n_mnd",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "炎症与 ALS 之间的已知关联"
+        },
+        {
+          "source": "drug_nusinersen",
+          "target": "n_glutamate_elevation",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对谷氨酸水平的潜在影响"
+        },
+        {
+          "source": "n_glutamate_elevation",
+          "target": "n_mnd",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "谷氨酸极性升高被认为与 ALS 有关"
+        },
+        {
+          "source": "drug_edaravone",
+          "target": "n_mitochondrial_dysfunction",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "针对线粒体功能的已知作用"
+        },
+        {
+          "source": "n_mitochondrial_dysfunction",
+          "target": "n_mnd",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "线粒体疾病与 ALS 相关"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过不同机制作用于 ALS，具有潜在的治疗效果",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "炎症、谷氨酸水平及线粒体功能等机制与 ALS 发病机制关联明显",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物具备到达神经组织的最小暴露（常识判断）"
+    ],
+    "uncertainties": [
+      "每种药物对 ALS 与相关机制的具体作用尚需进一步确认"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步探索其他潜在药物的机制链？"
+    ]
+  }
+}

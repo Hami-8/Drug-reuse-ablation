@@ -1,0 +1,720 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Hereditary haemorrhagic telangiectasia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Estrogen-induced hemorrhage risk",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Aspirin-induced hemorrhage risk",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_estrogen",
+          "type": "Drug",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_heparin",
+          "type": "Drug",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thrombolytics",
+          "type": "Drug",
+          "label": "Thrombolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_antiplatelet_agents",
+          "type": "Drug",
+          "label": "Antiplatelet agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bromocriptine",
+          "type": "Drug",
+          "label": "Bromocriptine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hereditary_hemorrhagic_telangiectasia",
+          "type": "Disease",
+          "label": "Hereditary haemorrhagic telangiectasia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_estrogen",
+          "type": "Target",
+          "label": "Off-target effects of Estrogen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "Off-target effects of Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nsaids",
+          "type": "Target",
+          "label": "Off-target effects of NSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clopidogrel",
+          "type": "Target",
+          "label": "Off-target effects of Clopidogrel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_warfarin",
+          "type": "Target",
+          "label": "Off-target effects of Warfarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nonsteroidal_anti_inflammatory_drugs",
+          "type": "Target",
+          "label": "Off-target effects of Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_heparin",
+          "type": "Target",
+          "label": "Off-target effects of Heparin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thrombolytics",
+          "type": "Target",
+          "label": "Off-target effects of Thrombolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_anticoagulants",
+          "type": "Target",
+          "label": "Off-target effects of Anticoagulants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_antiplatelet_agents",
+          "type": "Target",
+          "label": "Off-target effects of Antiplatelet agents",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_hemorrhage",
+          "type": "Phenotype",
+          "label": "Increased risk of hemorrhage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_estrogen",
+          "type": "Drug",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_heparin",
+          "type": "Drug",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Thrombolytics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_thrombolytics",
+          "type": "Drug",
+          "label": "Thrombolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Antiplatelet agents",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_antiplatelet_agents",
+          "type": "Drug",
+          "label": "Antiplatelet agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Bromocriptine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_bromocriptine",
+          "type": "Drug",
+          "label": "Bromocriptine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_estrogen",
+          "target": "n_hereditary_hemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常见药物及其对相关病理的影响"
+        },
+        {
+          "source": "n_aspirin",
+          "target": "n_hereditary_hemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "药理学证据表明可能关联"
+        },
+        {
+          "source": "n_nsaids",
+          "target": "n_hereditary_hemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "NSAIDs 使用可能加重症状"
+        },
+        {
+          "source": "n_clopidogrel",
+          "target": "n_hereditary_hemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抗血小板药物可能与出血相关"
+        },
+        {
+          "source": "n_warfarin",
+          "target": "n_hereditary_hemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "常用抗凝方法显著风险"
+        },
+        {
+          "source": "n_heparin",
+          "target": "n_hereditary_hemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗凝药物潜在影响"
+        },
+        {
+          "source": "n_thrombolytics",
+          "target": "n_hereditary_hemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "溶栓药物使用有风险"
+        },
+        {
+          "source": "n_anticoagulants",
+          "target": "n_hereditary_hemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "抗凝剂与出血关系"
+        },
+        {
+          "source": "n_antiplatelet_agents",
+          "target": "n_hereditary_hemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "存在出血风险的药物"
+        },
+        {
+          "source": "n_bromocriptine",
+          "target": "n_hereditary_hemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "关联性较弱，需要更多研究"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_hereditary_hemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "炎症反应管理药物效果不均"
+        },
+        {
+          "source": "drug_estrogen",
+          "target": "n_ot_estrogen",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险增加"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "有增加出血的潜在风险"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "n_ot_nsaids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血并发症"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_ot_clopidogrel",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "增强出血风险"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "n_ot_warfarin",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "血液稀释导致出血风险增加"
+        },
+        {
+          "source": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "target": "n_ot_nonsteroidal_anti_inflammatory_drugs",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "有潜在的出血风险"
+        },
+        {
+          "source": "drug_heparin",
+          "target": "n_ot_heparin",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险"
+        },
+        {
+          "source": "drug_thrombolytics",
+          "target": "n_ot_thrombolytics",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "高度出血风险"
+        },
+        {
+          "source": "drug_anticoagulants",
+          "target": "n_ot_anticoagulants",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "显著增加出血风险"
+        },
+        {
+          "source": "drug_antiplatelet_agents",
+          "target": "n_ot_antiplatelet_agents",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "增加出血风险"
+        },
+        {
+          "source": "n_ot_estrogen",
+          "target": "n_adv_hemorrhage",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能产生出血现象"
+        },
+        {
+          "source": "n_ot_aspirin",
+          "target": "n_adv_hemorrhage",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致出血风险增加"
+        },
+        {
+          "source": "n_ot_nsaids",
+          "target": "n_adv_hemorrhage",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "有出血风险"
+        },
+        {
+          "source": "n_ot_clopidogrel",
+          "target": "n_adv_hemorrhage",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "提高出血风险"
+        },
+        {
+          "source": "n_ot_warfarin",
+          "target": "n_adv_hemorrhage",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "可能增加出血风险"
+        },
+        {
+          "source": "n_ot_nonsteroidal_anti_inflammatory_drugs",
+          "target": "n_adv_hemorrhage",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "有潜在的出血风险"
+        },
+        {
+          "source": "n_ot_heparin",
+          "target": "n_adv_hemorrhage",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重出血"
+        },
+        {
+          "source": "n_ot_thrombolytics",
+          "target": "n_adv_hemorrhage",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "显著增加出血风险"
+        },
+        {
+          "source": "n_ot_anticoagulants",
+          "target": "n_adv_hemorrhage",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "可能大幅增加出血风险"
+        },
+        {
+          "source": "n_ot_antiplatelet_agents",
+          "target": "n_adv_hemorrhage",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "具有潜在的出血风险"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "n_ot_estrogen",
+              "target": "n_adv_hemorrhage",
+              "relation": "refutes",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "Estrogen引发的出血风险显著"
+            }
+          ],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Estrogen-induced hemorrhage risk",
+              "pro_nodes": [
+                "n_estrogen"
+              ],
+              "con_nodes": [
+                "n_adv_hemorrhage"
+              ],
+              "note": "Estrogen的使用可能造成出血风险"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：以高权重 refutes 边连到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": []
+  }
+}

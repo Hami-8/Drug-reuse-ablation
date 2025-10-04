@@ -1,0 +1,721 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Distal myopathies",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Prednisone",
+            "via": [
+              "OffTarget_Prednisone",
+              "RiskPathway_Prednisone"
+            ],
+            "to": "AdversePhenotype_Prednisone",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Dexamethasone",
+            "via": [
+              "OffTarget_Dexamethasone",
+              "RiskPathway_Dexamethasone"
+            ],
+            "to": "AdversePhenotype_Dexamethasone",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Corticosteroids",
+            "via": [
+              "OffTarget_Corticosteroids",
+              "RiskPathway_Corticosteroids"
+            ],
+            "to": "AdversePhenotype_Corticosteroids",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fluoroquinolones",
+          "type": "Drug",
+          "label": "Fluoroquinolones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rifampin",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_colchicine",
+          "type": "Drug",
+          "label": "Colchicine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_chloroquine",
+          "type": "Drug",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hydroxychloroquine",
+          "type": "Drug",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_simvastatin",
+          "type": "Drug",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_distal_myopathies",
+          "type": "Disease",
+          "label": "Distal myopathies",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_prednisone",
+          "type": "Target",
+          "label": "OffTarget_Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_prednisone",
+          "type": "Pathway",
+          "label": "RiskPathway_Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_prednisone",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dexamethasone",
+          "type": "Target",
+          "label": "OffTarget_Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dexamethasone",
+          "type": "Pathway",
+          "label": "RiskPathway_Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dexamethasone",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "OffTarget_Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_corticosteroids",
+          "type": "Pathway",
+          "label": "RiskPathway_Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_corticosteroids",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ciprofloxacin",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Fluoroquinolones",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fluoroquinolones",
+          "type": "Drug",
+          "label": "Fluoroquinolones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rifampin",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Colchicine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_colchicine",
+          "type": "Drug",
+          "label": "Colchicine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_chloroquine",
+          "type": "Drug",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_hydroxychloroquine",
+          "type": "Drug",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_simvastatin",
+          "type": "Drug",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Statins",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_prednisone",
+          "target": "n_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知的药物医疗用法和风险"
+        },
+        {
+          "source": "n_dexamethasone",
+          "target": "n_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.82,
+          "agent": "Proponent",
+          "rationale": "预测性药理作用与表型相符"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "相关机制闭环假设"
+        },
+        {
+          "source": "n_ciprofloxacin",
+          "target": "n_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "相关文献支持的潜在风险"
+        },
+        {
+          "source": "n_fluoroquinolones",
+          "target": "n_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "类别药物的先验效应"
+        },
+        {
+          "source": "n_rifampin",
+          "target": "n_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "机制关联性的推测"
+        },
+        {
+          "source": "n_colchicine",
+          "target": "n_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "药物机制与风险的推测"
+        },
+        {
+          "source": "n_chloroquine",
+          "target": "n_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.58,
+          "agent": "Proponent",
+          "rationale": "相似类别药物的风险"
+        },
+        {
+          "source": "n_hydroxychloroquine",
+          "target": "n_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "与相似疾病表型的关联"
+        },
+        {
+          "source": "n_simvastatin",
+          "target": "n_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.52,
+          "agent": "Proponent",
+          "rationale": "依据药物作用机制的推测"
+        },
+        {
+          "source": "n_atorvastatin",
+          "target": "n_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "作用机制推测考虑"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_distal_myopathies",
+          "relation": "contraindication",
+          "weight": 0.48,
+          "agent": "Proponent",
+          "rationale": "药物类别的广泛识别风险"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_prednisone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在旁路作用影响"
+        },
+        {
+          "source": "n_ot_prednisone",
+          "target": "n_rp_prednisone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与不良表型相关的风险通路"
+        },
+        {
+          "source": "n_rp_prednisone",
+          "target": "n_adv_prednisone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_prednisone",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "该风险成立将抵消潜在好处"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ot_dexamethasone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在旁路作用影响"
+        },
+        {
+          "source": "n_ot_dexamethasone",
+          "target": "n_rp_dexamethasone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与不良表型相关的风险通路"
+        },
+        {
+          "source": "n_rp_dexamethasone",
+          "target": "n_adv_dexamethasone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_dexamethasone",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "该风险成立将抵消潜在好处"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在旁路作用影响"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp_corticosteroids",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与不良表型相关的风险通路"
+        },
+        {
+          "source": "n_rp_corticosteroids",
+          "target": "n_adv_corticosteroids",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致不良表型"
+        },
+        {
+          "source": "n_adv_corticosteroids",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "该风险成立将抵消潜在好处"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_ot_prednisone",
+              "type": "Target",
+              "label": "OffTarget_Prednisone",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            },
+            {
+              "id": "n_rp_prednisone",
+              "type": "Pathway",
+              "label": "RiskPathway_Prednisone",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            },
+            {
+              "id": "n_adv_prednisone",
+              "type": "Phenotype",
+              "label": "AdversePhenotype_Prednisone",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "n_prednisone",
+              "target": "n_ot_prednisone",
+              "relation": "acts_on",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "可能存在旁路作用影响"
+            },
+            {
+              "source": "n_ot_prednisone",
+              "target": "n_rp_prednisone",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "与不良表型相关的风险通路"
+            },
+            {
+              "source": "n_rp_prednisone",
+              "target": "n_adv_prednisone",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "可导致不良表型"
+            },
+            {
+              "source": "n_adv_prednisone",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "形成机制闭环"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Prednisone→OffTarget→RiskPathway→AdversePhenotype，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [
+      "需要对 Dexamethasone 和 Corticosteroids 进行类似的路径补充"
+    ]
+  }
+}

@@ -1,0 +1,668 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_l_dopa",
+            "via": [
+              "target_dopamine_receptor",
+              "pathway_dopaminergic"
+            ],
+            "to": "disease_neurotransmitter_disorders",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_adderall",
+            "via": [
+              "target_dopamine_receptor",
+              "pathway_dopaminergic"
+            ],
+            "to": "disease_neurotransmitter_disorders",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_l_dopa",
+          "type": "Drug",
+          "label": "L-DOPA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ritalin",
+          "type": "Drug",
+          "label": "Ritalin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adderall",
+          "type": "Drug",
+          "label": "Adderall",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bupropion",
+          "type": "Drug",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sertraline",
+          "type": "Drug",
+          "label": "Sertraline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fluoxetine",
+          "type": "Drug",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_venlafaxine",
+          "type": "Drug",
+          "label": "Venlafaxine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_duloxetine",
+          "type": "Drug",
+          "label": "Duloxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clonidine",
+          "type": "Drug",
+          "label": "Clonidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_trazodone",
+          "type": "Drug",
+          "label": "Trazodone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methylphenidate",
+          "type": "Drug",
+          "label": "Methylphenidate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_dopamine_receptor",
+          "type": "Target",
+          "label": "Dopamine Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_norepinephrine_receptor",
+          "type": "Target",
+          "label": "Norepinephrine Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_dopaminergic",
+          "type": "Pathway",
+          "label": "Dopaminergic Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_noradrenergic",
+          "type": "Pathway",
+          "label": "Noradrenergic Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_neurotransmitter_disorders",
+          "type": "Disease",
+          "label": "Neurotransmitter Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_cognitive_impairment",
+          "type": "Phenotype",
+          "label": "Cognitive Impairment",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_mood_disorder",
+          "type": "Phenotype",
+          "label": "Mood Disorder",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "L-DOPA",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Ritalin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Adderall",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Sertraline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Venlafaxine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Duloxetine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Clonidine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Trazodone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Methylphenidate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_l_dopa",
+          "target": "target_dopamine_receptor",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "L-DOPA用于多种与多巴胺相关的疾病"
+        },
+        {
+          "source": "drug_ritalin",
+          "target": "target_norepinephrine_receptor",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Ritalin对去甲肾上腺素通路有效"
+        },
+        {
+          "source": "drug_adderall",
+          "target": "target_dopamine_receptor",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Adderall作用于多巴胺系统"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "target_dopamine_receptor",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Bupropion影响多巴胺和去甲肾上腺素"
+        },
+        {
+          "source": "drug_sertraline",
+          "target": "target_norepinephrine_receptor",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Sertraline影响去甲肾上腺素"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "target_dopamine_receptor",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Fluoxetine在抑郁症中影响多巴胺"
+        },
+        {
+          "source": "drug_venlafaxine",
+          "target": "target_norepinephrine_receptor",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Venlafaxine同样影响去甲肾上腺素"
+        },
+        {
+          "source": "drug_duloxetine",
+          "target": "target_norepinephrine_receptor",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Duloxetine影响去甲肾上腺素系统"
+        },
+        {
+          "source": "drug_clonidine",
+          "target": "target_norepinephrine_receptor",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Clonidine作用于去甲肾上腺素通路"
+        },
+        {
+          "source": "drug_trazodone",
+          "target": "target_dopamine_receptor",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Trazodone影响多巴胺通路"
+        },
+        {
+          "source": "drug_methylphenidate",
+          "target": "target_norepinephrine_receptor",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Methylphenidate影响去甲肾上腺素通路"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "target_norepinephrine_receptor",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Gabapentin与去甲肾上腺素通路关联"
+        },
+        {
+          "source": "target_dopamine_receptor",
+          "target": "pathway_dopaminergic",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "多巴胺受体与多巴胺通路相关"
+        },
+        {
+          "source": "target_norepinephrine_receptor",
+          "target": "pathway_noradrenergic",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "去甲肾上腺素受体与去甲肾上腺素通路相关"
+        },
+        {
+          "source": "pathway_dopaminergic",
+          "target": "disease_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "多巴胺通路与神经递质障碍相关"
+        },
+        {
+          "source": "pathway_noradrenergic",
+          "target": "disease_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "去甲肾上腺素通路与神经递质障碍相关"
+        },
+        {
+          "source": "disease_neurotransmitter_disorders",
+          "target": "phenotype_cognitive_impairment",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "神经递质障碍引发认知功能障碍"
+        },
+        {
+          "source": "disease_neurotransmitter_disorders",
+          "target": "phenotype_mood_disorder",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "神经递质障碍与情绪障碍相关"
+        },
+        {
+          "source": "drug_l_dopa",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "形成L-DOPA与神经递质障碍的支持链"
+        },
+        {
+          "source": "drug_ritalin",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Ritalin与神经递质障碍相关"
+        },
+        {
+          "source": "drug_adderall",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Adderall在治疗神经递质障碍的效用"
+        },
+        {
+          "source": "drug_bupropion",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Bupropion支持的机制与神经递质障碍相关"
+        },
+        {
+          "source": "drug_sertraline",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Sertraline的机制支持神经递质障碍"
+        },
+        {
+          "source": "drug_fluoxetine",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Fluoxetine在神经递质障碍中的应用"
+        },
+        {
+          "source": "drug_venlafaxine",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Venlafaxine的机制适应神经递质障碍"
+        },
+        {
+          "source": "drug_duloxetine",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Duloxetine支持神经递质障碍治疗"
+        },
+        {
+          "source": "drug_clonidine",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Clonidine可用于神经递质相关障碍"
+        },
+        {
+          "source": "drug_trazodone",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Trazodone适用于情绪及睡眠问题"
+        },
+        {
+          "source": "drug_methylphenidate",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "甲基苯idate适用于ADHD相关症状"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Gabapentin也与神经递质障碍相关"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_l_dopa",
+              "target": "target_dopamine_receptor",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "L-DOPA用于多种与多巴胺相关的疾病"
+            },
+            {
+              "source": "target_dopamine_receptor",
+              "target": "pathway_dopaminergic",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "多巴胺受体与多巴胺通路相关"
+            },
+            {
+              "source": "pathway_dopaminergic",
+              "target": "disease_neurotransmitter_disorders",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "多巴胺通路与神经递质障碍相关"
+            },
+            {
+              "source": "disease_neurotransmitter_disorders",
+              "target": "phenotype_cognitive_impairment",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "神经递质障碍引发认知功能障碍"
+            },
+            {
+              "source": "drug_l_dopa",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "形成L-DOPA与神经递质障碍的支持链"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 L-DOPA → Dopamine Receptor → Dopaminergic Pathway → Neurotransmitter Disorders，形成1条路径。"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_adderall",
+              "target": "target_dopamine_receptor",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "Adderall作用于多巴胺系统"
+            },
+            {
+              "source": "target_dopamine_receptor",
+              "target": "pathway_dopaminergic",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "多巴胺受体与多巴胺通路相关"
+            },
+            {
+              "source": "pathway_dopaminergic",
+              "target": "disease_neurotransmitter_disorders",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "多巴胺通路与神经递质障碍相关"
+            },
+            {
+              "source": "disease_neurotransmitter_disorders",
+              "target": "phenotype_cognitive_impairment",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "神经递质障碍引发认知功能障碍"
+            },
+            {
+              "source": "drug_adderall",
+              "target": "H3",
+              "relation": "supports",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "Adderall在治疗神经递质障碍的效用"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Adderall → Dopamine Receptor → Dopaminergic Pathway → Neurotransmitter Disorders，形成1条路径。"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [
+      "整体链条只形成1条路径，需进一步支持以形成2条不相交路径"
+    ]
+  }
+}

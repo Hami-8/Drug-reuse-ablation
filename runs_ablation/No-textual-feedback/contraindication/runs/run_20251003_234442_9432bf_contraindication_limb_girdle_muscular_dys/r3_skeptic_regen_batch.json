@@ -1,0 +1,421 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Limb girdle muscular dystrophy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_creatine",
+          "name": "Creatine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_ataluren",
+          "name": "Ataluren"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_emflaza",
+          "name": "Emflaza"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_tadalafil",
+          "name": "Tadalafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_lisinopril",
+          "name": "Lisinopril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_quinapril",
+          "name": "Quinapril"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_nandrolone",
+          "name": "Nandrolone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_albuterol",
+          "name": "Albuterol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_dex",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_pred",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cre",
+          "type": "Drug",
+          "label": "Creatine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ata",
+          "type": "Drug",
+          "label": "Ataluren",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_emf",
+          "type": "Drug",
+          "label": "Emflaza",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_tad",
+          "type": "Drug",
+          "label": "Tadalafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lis",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_qin",
+          "type": "Drug",
+          "label": "Quinapril",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_nan",
+          "type": "Drug",
+          "label": "Nandrolone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_alb",
+          "type": "Drug",
+          "label": "Albuterol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_car",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_sil",
+          "type": "Drug",
+          "label": "Sildenafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp1",
+          "type": "Pathway",
+          "label": "Risk Pathway for Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp2",
+          "type": "Pathway",
+          "label": "Risk Pathway for Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_dex",
+          "target": "n_rp1",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致的负面作用"
+        },
+        {
+          "source": "n_rp1",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能出现不良反应"
+        },
+        {
+          "source": "n_pred",
+          "target": "n_rp2",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良影响途径"
+        },
+        {
+          "source": "n_rp2",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_cre",
+          "target": "n_adv",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能增加风险与劣势"
+        },
+        {
+          "source": "n_ata",
+          "target": "n_adv",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能引发负面影响"
+        },
+        {
+          "source": "n_emf",
+          "target": "n_adv",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的副作用风险"
+        },
+        {
+          "source": "n_tad",
+          "target": "n_adv",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_lis",
+          "target": "n_adv",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的风险因素"
+        },
+        {
+          "source": "n_qin",
+          "target": "n_adv",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能的副作用"
+        },
+        {
+          "source": "n_nan",
+          "target": "n_adv",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良后果"
+        },
+        {
+          "source": "n_alb",
+          "target": "n_adv",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响健康"
+        },
+        {
+          "source": "n_car",
+          "target": "n_adv",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能引发风险"
+        },
+        {
+          "source": "n_sil",
+          "target": "n_adv",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能带来副作用"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "药物与疾病的相互作用",
+          "pro_nodes": [
+            "n_dex",
+            "n_pred",
+            "n_cre"
+          ],
+          "con_nodes": [
+            "n_rp1",
+            "n_rp2",
+            "n_adv"
+          ],
+          "note": "潜在的风险与保护效果相互矛盾"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "存在诸多文献表明低剂量类固醇可改善肌肉症状",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "尚未证明其他药物具有优越性",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "假设类固醇对肌肉萎缩和无力的作用机制",
+      "假设其他药物不会引起同样的负面效应"
+    ],
+    "falsification_tests": [
+      "是否有证据支持长时间使用类固醇的安全性?",
+      "是否有临床研究表明其他药物比类固醇效果更好?"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供数据支持其他药物的安全性与有效性",
+      "重新评估类固醇的风险与获益比"
+    ]
+  }
+}

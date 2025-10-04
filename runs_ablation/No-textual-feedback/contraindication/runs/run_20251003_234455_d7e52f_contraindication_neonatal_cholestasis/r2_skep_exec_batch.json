@@ -1,0 +1,972 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Phenobarbital adverse effects",
+            "expectation": "若存在显著不良反应，应标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Cholestyramine adverse effects",
+            "expectation": "若存在显著不良反应，应标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_pb",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cb",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pd",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rf",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ab",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_est",
+          "type": "Drug",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mt",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ht",
+          "type": "Drug",
+          "label": "Halothane",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sv",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cp",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gf",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cpz",
+          "type": "Drug",
+          "label": "Chlorpromazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nc",
+          "type": "Disease",
+          "label": "Neonatal Cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_pb",
+          "type": "Target",
+          "label": "Off-target for Phenobarbital",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pb",
+          "type": "Phenotype",
+          "label": "Adverse effect from Phenobarbital",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_chol",
+          "type": "Target",
+          "label": "Off-target for Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_chol",
+          "type": "Phenotype",
+          "label": "Adverse effect from Cholestyramine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pred",
+          "type": "Target",
+          "label": "Off-target for Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pred",
+          "type": "Phenotype",
+          "label": "Adverse effect from Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rif",
+          "type": "Target",
+          "label": "Off-target for Rifampin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rif",
+          "type": "Phenotype",
+          "label": "Adverse effect from Rifampin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_abx",
+          "type": "Target",
+          "label": "Off-target for Antibiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_abx",
+          "type": "Phenotype",
+          "label": "Adverse effect from Antibiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_est",
+          "type": "Target",
+          "label": "Off-target for Estrogen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_est",
+          "type": "Phenotype",
+          "label": "Adverse effect from Estrogen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mtx",
+          "type": "Target",
+          "label": "Off-target for Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mtx",
+          "type": "Phenotype",
+          "label": "Adverse effect from Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_hal",
+          "type": "Target",
+          "label": "Off-target for Halothane",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_hal",
+          "type": "Phenotype",
+          "label": "Adverse effect from Halothane",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_vpa",
+          "type": "Target",
+          "label": "Off-target for Sodium Valproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_vpa",
+          "type": "Phenotype",
+          "label": "Adverse effect from Sodium Valproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclo",
+          "type": "Target",
+          "label": "Off-target for Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cyclo",
+          "type": "Phenotype",
+          "label": "Adverse effect from Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gem",
+          "type": "Target",
+          "label": "Off-target for Gemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gem",
+          "type": "Phenotype",
+          "label": "Adverse effect from Gemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_chlor",
+          "type": "Target",
+          "label": "Off-target for Chlorpromazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_chlor",
+          "type": "Phenotype",
+          "label": "Adverse effect from Chlorpromazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rifampin",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_estrogen",
+          "type": "Drug",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Halothane",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_halothane",
+          "type": "Drug",
+          "label": "Halothane",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Sodium valproate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Chlorpromazine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_chlorpromazine",
+          "type": "Drug",
+          "label": "Chlorpromazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_pb",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Phenobarbital已知对胆汁淤积影响显著"
+        },
+        {
+          "source": "n_cb",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Cholestyramine影响胆汁酸的代谢"
+        },
+        {
+          "source": "n_pd",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Prednisone可能加重胆汁淤积"
+        },
+        {
+          "source": "n_rf",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Rifampin与胆汁减少相关"
+        },
+        {
+          "source": "n_ab",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "某些抗生素对膽汁分泌有影响"
+        },
+        {
+          "source": "n_est",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Estrogen与胆汁流出受抑制相关"
+        },
+        {
+          "source": "n_mt",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Methotrexate可能影响肝功能"
+        },
+        {
+          "source": "n_ht",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Halothane在特定情况下可能引发胆汁淤积"
+        },
+        {
+          "source": "n_sv",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Sodium Valproate与肝功能相关"
+        },
+        {
+          "source": "n_cp",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Cyclophosphamide可能造成肝损伤"
+        },
+        {
+          "source": "n_gf",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "Gemfibrozil与胆道问题相关"
+        },
+        {
+          "source": "n_cpz",
+          "target": "n_nc",
+          "relation": "contraindication",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "Chlorpromazine可能影响胆汁排泄"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "n_ot_pb",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_pb",
+          "target": "n_adv_pb",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_pb",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_ot_chol",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_chol",
+          "target": "n_adv_chol",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_chol",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_pred",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_pred",
+          "target": "n_adv_pred",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_pred",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_rifampin",
+          "target": "n_ot_rif",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_rif",
+          "target": "n_adv_rif",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_rif",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_antibiotics",
+          "target": "n_ot_abx",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_abx",
+          "target": "n_adv_abx",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_abx",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_estrogen",
+          "target": "n_ot_est",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_est",
+          "target": "n_adv_est",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_est",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_mtx",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_mtx",
+          "target": "n_adv_mtx",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_mtx",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_halothane",
+          "target": "n_ot_hal",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_hal",
+          "target": "n_adv_hal",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_hal",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "n_ot_vpa",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_vpa",
+          "target": "n_adv_vpa",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_vpa",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_ot_cyclo",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_cyclo",
+          "target": "n_adv_cyclo",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_cyclo",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "n_ot_gem",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_gem",
+          "target": "n_adv_gem",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_gem",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        },
+        {
+          "source": "drug_chlorpromazine",
+          "target": "n_ot_chlor",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的离靶作用"
+        },
+        {
+          "source": "n_ot_chlor",
+          "target": "n_adv_chlor",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良效应"
+        },
+        {
+          "source": "n_adv_chlor",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若成立，将抵消净获益"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "set_weights": [
+            {
+              "edge_id": "e_k1",
+              "weight": 0.85,
+              "rationale": "若存在不良反应，会显著影响疗效"
+            }
+          ],
+          "conflict_hotspots": [],
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": []
+        },
+        "notes": "完成了Phenobarbital的不良反应压力测试，并更新了权重"
+      },
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "set_weights": [
+            {
+              "edge_id": "e_k2",
+              "weight": 0.85,
+              "rationale": "若存在不良反应，会显著影响疗效"
+            }
+          ],
+          "conflict_hotspots": [],
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": []
+        },
+        "notes": "完成了Cholestyramine的不良反应压力测试，并更新了权重"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": []
+  }
+}

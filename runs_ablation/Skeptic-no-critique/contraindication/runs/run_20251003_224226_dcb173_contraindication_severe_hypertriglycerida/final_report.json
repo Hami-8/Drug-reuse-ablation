@@ -1,0 +1,1112 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_estrogen",
+          "name": "Estrogen"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_orlistat",
+          "name": "Orlistat"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_nicotinic_acid",
+          "name": "Nicotinic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_thiazide_diuretics",
+          "name": "Thiazide diuretics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_glucocorticoids",
+          "name": "Glucocorticoids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs_nsaids",
+          "name": "Nonsteroidal anti-inflammatory drugs (NSAIDs)"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_atypical_antipsychotics",
+          "name": "Atypical antipsychotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_protease_inhibitors",
+          "name": "Protease inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tamoxifen",
+          "name": "Tamoxifen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_anabolic_steroids",
+          "name": "Anabolic steroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.87,
+        "components": {
+          "mechanism_fit": 0.9,
+          "class_prior": 0.8,
+          "pk_pd_feasibility": 0.75,
+          "indication_plausibility": 0.85,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.9,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "已知对脂质代谢影响，且支持性证据强"
+          ],
+          "safety_risk": [
+            "与脂质升高风险高度相关，需注意应用禁忌"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.87,
+        "components": {
+          "mechanism_fit": 0.9,
+          "class_prior": 0.8,
+          "pk_pd_feasibility": 0.75,
+          "indication_plausibility": 0.9,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.9,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "临床研究显示影响脂质水平，支持对严重高甘油三酯血症的禁忌"
+          ],
+          "safety_risk": [
+            "安全性风险明显，使用需慎重"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.82,
+        "components": {
+          "mechanism_fit": 0.85,
+          "class_prior": 0.7,
+          "pk_pd_feasibility": 0.7,
+          "indication_plausibility": 0.8,
+          "safety_risk": 0.1,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "常见副作用与高甘油三酯相关，影响脂质代谢"
+          ],
+          "safety_risk": [
+            "需谨慎管理与监测"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.76,
+        "components": {
+          "mechanism_fit": 0.8,
+          "class_prior": 0.7,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "已知同类药物已知风险，对糖脂代谢有显著影响"
+          ],
+          "safety_risk": [
+            "临床使用时需注意监测"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.68,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "已有理论推论及临床观察支持对脂质代谢的影响"
+          ],
+          "safety_risk": [
+            "安全性尚无明确证据，需保持警惕"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.56,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "已知影响脂肪代谢，但适应症尚需明确"
+          ],
+          "safety_risk": [
+            "需警惕可能的脂质升高"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.48,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "类固醇与脂质升高相关，但需更多研究确认"
+          ],
+          "safety_risk": [
+            "影响尚待进一步评估"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.45,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "与脂代谢相关性有限，但部分研究显示相关性"
+          ],
+          "safety_risk": [
+            "相对安全性较高，使用需谨慎"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.4,
+        "components": {
+          "mechanism_fit": 0.45,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.3,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.45,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "已知副作用与脂质异常，但多不明确"
+          ],
+          "safety_risk": [
+            "风险需审视"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.35,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.3,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.4,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "临床观察期望效应未明确，风险较低"
+          ],
+          "safety_risk": [
+            "脂质水平影响需要更多实证研究"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.3,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.3,
+          "indication_plausibility": 0.3,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.35,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "潜在影响需注意，但总体数据不足"
+          ],
+          "safety_risk": [
+            "影响相对未知的风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.25,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.3,
+          "indication_plausibility": 0.3,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.3,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "与脂质升高相关性不大，缺乏实证支持"
+          ],
+          "safety_risk": [
+            "相对安全性较高，但数据不足"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_estrogen",
+          "type": "Drug",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_orlistat",
+          "type": "Drug",
+          "label": "Orlistat",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nicotinic_acid",
+          "type": "Drug",
+          "label": "Nicotinic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thiazide_diuretics",
+          "type": "Drug",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_glucocorticoids",
+          "type": "Drug",
+          "label": "Glucocorticoids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nsaids",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_atypical_antipsychotics",
+          "type": "Drug",
+          "label": "Atypical antipsychotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_protease_inhibitors",
+          "type": "Drug",
+          "label": "Protease inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tamoxifen",
+          "type": "Drug",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_anabolic_steroids",
+          "type": "Drug",
+          "label": "Anabolic steroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_severe_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_estrogen",
+          "type": "Drug",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Orlistat",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_orlistat",
+          "type": "Drug",
+          "label": "Orlistat",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Nicotinic acid",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nicotinic_acid",
+          "type": "Drug",
+          "label": "Nicotinic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_thiazide_diuretics",
+          "type": "Drug",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Glucocorticoids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_glucocorticoids",
+          "type": "Drug",
+          "label": "Glucocorticoids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs_nsaids",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Atypical antipsychotics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_atypical_antipsychotics",
+          "type": "Drug",
+          "label": "Atypical antipsychotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Protease inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_protease_inhibitors",
+          "type": "Drug",
+          "label": "Protease inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_tamoxifen",
+          "type": "Drug",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Anabolic steroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_anabolic_steroids",
+          "type": "Drug",
+          "label": "Anabolic steroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_estrogen",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知对脂质代谢影响"
+        },
+        {
+          "source": "n_orlistat",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "临床研究显示影响脂质水平"
+        },
+        {
+          "source": "n_nicotinic_acid",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常见副作用与高甘油三酯相关"
+        },
+        {
+          "source": "n_fibrates",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "同类药物已知风险"
+        },
+        {
+          "source": "n_thiazide_diuretics",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "理论推论与临床观察相符"
+        },
+        {
+          "source": "n_beta_blockers",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知影响脂肪代谢"
+        },
+        {
+          "source": "n_glucocorticoids",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "类固醇与脂质升高关联"
+        },
+        {
+          "source": "n_nsaids",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "部分研究显示相关性"
+        },
+        {
+          "source": "n_atypical_antipsychotics",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "已知副作用与脂质异常"
+        },
+        {
+          "source": "n_protease_inhibitors",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "临床观察期望效应"
+        },
+        {
+          "source": "n_tamoxifen",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "contraindication",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "潜在影响需注意"
+        },
+        {
+          "source": "n_anabolic_steroids",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "contraindication",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "与脂质升高相关性"
+        },
+        {
+          "source": "n_estrogen",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "心血管影响已知主因"
+        },
+        {
+          "source": "n_orlistat",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "对脂质代谢显著影响"
+        },
+        {
+          "source": "n_nicotinic_acid",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "对高脂血症管理有效"
+        },
+        {
+          "source": "n_fibrates",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于控制甘油三酯的药物"
+        },
+        {
+          "source": "n_thiazide_diuretics",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知有代谢方面影响"
+        },
+        {
+          "source": "n_beta_blockers",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "现有文献指出代谢变化"
+        },
+        {
+          "source": "n_glucocorticoids",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "影響脂質與代謝"
+        },
+        {
+          "source": "n_nsaids",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与脂代谢相关性有限"
+        },
+        {
+          "source": "n_atypical_antipsychotics",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "虽使用广泛，风险需审视"
+        },
+        {
+          "source": "n_protease_inhibitors",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "对脂质水平有一定影响"
+        },
+        {
+          "source": "n_tamoxifen",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "治疗相关性不确定"
+        },
+        {
+          "source": "n_anabolic_steroids",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "需更多证据确认"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_estrogen",
+          "name": "Estrogen"
+        },
+        "score": 0.87,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "已知对脂质代谢影响",
+          "心血管影响已知主因"
+        ],
+        "caveats": [
+          "与脂质升高风险高度相关，需注意应用禁忌"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_orlistat",
+          "name": "Orlistat"
+        },
+        "score": 0.87,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "临床研究显示影响脂质水平"
+        ],
+        "caveats": [
+          "安全性风险明显，使用需慎重"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_nicotinic_acid",
+          "name": "Nicotinic acid"
+        },
+        "score": 0.82,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "常见副作用与高甘油三酯相关"
+        ],
+        "caveats": [
+          "需谨慎管理与监测"
+        ],
+        "confidence": "high"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Severe hypertriglyceridaemia→Contraindication",
+          "reason": "多种药物与高甘油三酯血症存在明确禁忌关系"
+        }
+      ],
+      "remaining_gaps": [
+        "对其他候选药物的禁忌和机制连贯性仍有待明确"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B"
+          ],
+          "impact_summary": "补齐了关于处方禁忌的重要信息，导致部分高影响候选的识别"
+        }
+      ],
+      "lessons": [
+        "在临床应用决策中，明确治疗禁忌能直接影响候选筛选",
+        "需要持续跟踪新生药物的副作用与禁忌情况"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "关注可能导致高甘油三酯风险的药物，确保相应禁忌明确"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "要求完成剩余药物的安全性和效果验证"
+      },
+      {
+        "role": "Explorer",
+        "patch": "确保对所有药物带有明确的禁忌和应用注意点"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "严重高甘油三酯血症情境",
+        "then": "优先过滤影响脂质代谢的药物，注意心血管风险"
+      }
+    ]
+  }
+}

@@ -1,0 +1,605 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_phenobarbital",
+          "name": "Phenobarbital"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_rifampin",
+          "name": "Rifampin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_antibiotics",
+          "name": "Antibiotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_estrogen",
+          "name": "Estrogen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_halothane",
+          "name": "Halothane"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_sodium_valproate",
+          "name": "Sodium valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_chlorpromazine",
+          "name": "Chlorpromazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_pheno",
+          "type": "Target",
+          "label": "Phenobarbital Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_chol",
+          "type": "Target",
+          "label": "Cholestyramine Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pred",
+          "type": "Target",
+          "label": "Prednisone Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rif",
+          "type": "Target",
+          "label": "Rifampin Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_antibiotics",
+          "type": "Target",
+          "label": "Antibiotics Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_estrogen",
+          "type": "Target",
+          "label": "Estrogen Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "Methotrexate Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_halothane",
+          "type": "Target",
+          "label": "Halothane Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_valproate",
+          "type": "Target",
+          "label": "Sodium Valproate Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclo",
+          "type": "Target",
+          "label": "Cyclophosphamide Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gemfibrozil",
+          "type": "Target",
+          "label": "Gemfibrozil Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_chlorp",
+          "type": "Target",
+          "label": "Chlorpromazine Off-Target Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk Pathways Associated with Neonatal Cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Neonatal Outcomes",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_phenobarbital",
+          "target": "n_ot_pheno",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用导致风险"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "n_ot_chol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用导致风险"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_pred",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用导致风险"
+        },
+        {
+          "source": "drug_rifampin",
+          "target": "n_ot_rif",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用导致风险"
+        },
+        {
+          "source": "drug_antibiotics",
+          "target": "n_ot_antibiotics",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用导致风险"
+        },
+        {
+          "source": "drug_estrogen",
+          "target": "n_ot_estrogen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用导致风险"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用导致风险"
+        },
+        {
+          "source": "drug_halothane",
+          "target": "n_ot_halothane",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用导致风险"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "n_ot_valproate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用导致风险"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_ot_cyclo",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用导致风险"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "n_ot_gemfibrozil",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用导致风险"
+        },
+        {
+          "source": "drug_chlorpromazine",
+          "target": "n_ot_chlorp",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用导致风险"
+        },
+        {
+          "source": "n_ot_pheno",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与新生儿胆汁淤积相关的风险通路"
+        },
+        {
+          "source": "n_ot_chol",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与新生儿胆汁淤积相关的风险通路"
+        },
+        {
+          "source": "n_ot_pred",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与新生儿胆汁淤积相关的风险通路"
+        },
+        {
+          "source": "n_ot_rif",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与新生儿胆汁淤积相关的风险通路"
+        },
+        {
+          "source": "n_ot_antibiotics",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与新生儿胆汁淤积相关的风险通路"
+        },
+        {
+          "source": "n_ot_estrogen",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与新生儿胆汁淤积相关的风险通路"
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与新生儿胆汁淤积相关的风险通路"
+        },
+        {
+          "source": "n_ot_halothane",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与新生儿胆汁淤积相关的风险通路"
+        },
+        {
+          "source": "n_ot_valproate",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与新生儿胆汁淤积相关的风险通路"
+        },
+        {
+          "source": "n_ot_cyclo",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与新生儿胆汁淤积相关的风险通路"
+        },
+        {
+          "source": "n_ot_gemfibrozil",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与新生儿胆汁淤积相关的风险通路"
+        },
+        {
+          "source": "n_ot_chlorp",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与新生儿胆汁淤积相关的风险通路"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良新生儿表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在该风险，将抵消净获益"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "off-target_effects_drugs_neonatal_cholestasis",
+          "pro_nodes": [
+            "n_ot_pheno",
+            "n_ot_chol",
+            "n_ot_pred",
+            "n_ot_rif",
+            "n_ot_antibiotics",
+            "n_ot_estrogen",
+            "n_ot_methotrexate",
+            "n_ot_halothane",
+            "n_ot_valproate",
+            "n_ot_cyclo",
+            "n_ot_gemfibrozil",
+            "n_ot_chlorp"
+          ],
+          "con_nodes": [
+            "n_rp",
+            "n_adv"
+          ],
+          "note": "潜在的药物离靶效应与新生儿胆汁淤积和不良结局关联"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "每种药物的机制可能与新生儿胆汁淤积的病理无关",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "存在逆向作用机制可能导致更严重结果",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物作用机制与新生儿胆汁淤积的相容性",
+      "不同药物对新生儿的肝脏代谢能力影响"
+    ],
+    "falsification_tests": [
+      "是否存在临床展示新生儿胆汁淤积患者中不良结果的任何数据？",
+      "是否有针对药物影响新生儿胆汁淤积的数据支持？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供每种药物的详细机制说明及支持性数据",
+      "明确风险链和离靶效应的缓解措施"
+    ]
+  }
+}

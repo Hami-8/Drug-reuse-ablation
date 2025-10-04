@@ -1,0 +1,309 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Hyperammonaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sodium_benzoate",
+          "name": "Sodium benzoate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_phenylbutyrate",
+          "name": "Phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_lactulose",
+          "name": "Lactulose"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_arginine",
+          "name": "Arginine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_glutamine",
+          "name": "Glutamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_valproic_acid",
+          "name": "Valproic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_rifampin",
+          "name": "Rifampin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_acetazolamide",
+          "name": "Acetazolamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ammonium_chloride",
+          "name": "Ammonium chloride"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_hyperammonaemia",
+          "type": "Condition",
+          "label": "Hyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sodium_benzoate",
+          "type": "Target",
+          "label": "Off-target Sodium Benzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_benzoate",
+          "type": "Pathway",
+          "label": "Risk Pathway Sodium Benzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adverse_sodium_benzoate",
+          "type": "Phenotype",
+          "label": "Adverse Effect Sodium Benzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_phenylbutyrate",
+          "type": "Target",
+          "label": "Off-target Phenylbutyrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_phenylbutyrate",
+          "type": "Pathway",
+          "label": "Risk Pathway Phenylbutyrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adverse_phenylbutyrate",
+          "type": "Phenotype",
+          "label": "Adverse Effect Phenylbutyrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_sodium_benzoate",
+          "target": "n_ot_sodium_benzoate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用"
+        },
+        {
+          "source": "n_ot_sodium_benzoate",
+          "target": "n_rp_sodium_benzoate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联的风险通路"
+        },
+        {
+          "source": "n_rp_sodium_benzoate",
+          "target": "n_adverse_sodium_benzoate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adverse_sodium_benzoate",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，则损益不成比例"
+        },
+        {
+          "source": "drug_phenylbutyrate",
+          "target": "n_ot_phenylbutyrate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路/离靶作用"
+        },
+        {
+          "source": "n_ot_phenylbutyrate",
+          "target": "n_rp_phenylbutyrate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联的风险通路"
+        },
+        {
+          "source": "n_rp_phenylbutyrate",
+          "target": "n_adverse_phenylbutyrate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adverse_phenylbutyrate",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，则损益不成比例"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "drug safety and hyperammonaemia",
+          "pro_nodes": [
+            "drug_sodium_benzoate",
+            "drug_phenylbutyrate"
+          ],
+          "con_nodes": [
+            "n_adverse_sodium_benzoate",
+            "n_adverse_phenylbutyrate"
+          ],
+          "note": "存在潜在不良作用与超氨血症的矛盾"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "缺乏对合理药物安全性的研究，可能导致不良事件",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "对超氨血症的影响未明确，可能存在禁忌",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "假设药物在超氨血症中的安全性是否成立",
+      "是否有充足数据支持药物使用于该病症"
+    ],
+    "falsification_tests": [
+      "是否存在显示药物安全性和有效的临床数据？",
+      "是否有证据证明药物加重超氨血症？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供药物安全性和对超氨血症影响的相关数据",
+      "评估可能的禁忌和不良反应风险"
+    ]
+  }
+}

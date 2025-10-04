@@ -1,0 +1,641 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Liver toxicity",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Liver toxicity",
+            "expectation": "提出临床长期安全性能的数据",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_omega_3",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lomitapide",
+          "type": "Drug",
+          "label": "Lomitapide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_mipomersen",
+          "type": "Drug",
+          "label": "Mipomersen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_evolocumab",
+          "type": "Drug",
+          "label": "Evolocumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_alirocumab",
+          "type": "Drug",
+          "label": "Alirocumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_clofibrate",
+          "type": "Drug",
+          "label": "Clofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_bezafibrate",
+          "type": "Drug",
+          "label": "Bezafibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_severe_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_asprin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk1",
+          "type": "Pathway",
+          "label": "Liver toxicity pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv1",
+          "type": "Phenotype",
+          "label": "Liver dysfunction",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk2",
+          "type": "Pathway",
+          "label": "Myopathy risk pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv2",
+          "type": "Phenotype",
+          "label": "Myopathy",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_omega_3_fatty_acids",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Statins",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Lomitapide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lomitapide",
+          "type": "Drug",
+          "label": "Lomitapide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Mipomersen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_mipomersen",
+          "type": "Drug",
+          "label": "Mipomersen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Evolocumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_evolocumab",
+          "type": "Drug",
+          "label": "Evolocumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Alirocumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_alirocumab",
+          "type": "Drug",
+          "label": "Alirocumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Clofibrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_clofibrate",
+          "type": "Drug",
+          "label": "Clofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Bezafibrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_bezafibrate",
+          "type": "Drug",
+          "label": "Bezafibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_fibrates",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Fibrates已被证实用于降低甘油三酯"
+        },
+        {
+          "source": "n_niacin",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Niacin在临床上用于治疗高甘油三酯"
+        },
+        {
+          "source": "n_omega_3",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Omega-3脂肪酸在降低甘油三酯方面具有支持性证据"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Statins对脂质调节有重要作用"
+        },
+        {
+          "source": "n_lomitapide",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Lomitapide用于恶性高甘油三酯血症的治疗"
+        },
+        {
+          "source": "n_mipomersen",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Mipomersen针对特定类型高甘油三酯血症"
+        },
+        {
+          "source": "n_evolocumab",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Evolocumab为高甘油三酯背景下的治疗方案"
+        },
+        {
+          "source": "n_alirocumab",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Alirocumab有助于LDL和甘油三酯控制"
+        },
+        {
+          "source": "n_aspirin",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Aspirin可能与甘油三酯变化有关，需进一步研究"
+        },
+        {
+          "source": "n_clofibrate",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Clofibrate曾用于甘油三酯管理"
+        },
+        {
+          "source": "n_bezafibrate",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Bezafibrate用于减少甘油三酯的大量研究支持"
+        },
+        {
+          "source": "n_fenofibrate",
+          "target": "n_severe_hypertriglyceridaemia",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Fenofibrate用于治疗高甘油三酯血症"
+        },
+        {
+          "source": "n_fibrates",
+          "target": "n_risk1",
+          "relation": "potentially_causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知对肝脏函数有影响"
+        },
+        {
+          "source": "n_niacin",
+          "target": "n_risk1",
+          "relation": "potentially_causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肝毒性"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_risk2",
+          "relation": "potentially_causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "与肌病风险相关"
+        },
+        {
+          "source": "n_lomitapide",
+          "target": "n_risk1",
+          "relation": "potentially_causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "引起肝脏副作用的报告"
+        },
+        {
+          "source": "n_mipomersen",
+          "target": "n_risk1",
+          "relation": "potentially_causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知引起肝毒性"
+        },
+        {
+          "source": "n_evolocumab",
+          "target": "n_adv2",
+          "relation": "potentially_causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "对肌肉效应的潜在影响"
+        },
+        {
+          "source": "n_alirocumab",
+          "target": "n_adv2",
+          "relation": "potentially_causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与肌病风险存在联系"
+        },
+        {
+          "source": "n_fibrates",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "已知剂量相关性"
+        },
+        {
+          "source": "n_niacin",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与肝功能影响相关"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_adv2",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "明确的肌病风险"
+        },
+        {
+          "source": "n_lomitapide",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "严重的肝损伤风险"
+        },
+        {
+          "source": "n_mipomersen",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "长期使用的肝毒性风险"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_edges": [
+            {
+              "source": "n_fibrates",
+              "target": "n_risk1",
+              "relation": "potentially_causes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "已知引起肝脏副作用的报告"
+            },
+            {
+              "source": "n_risk1",
+              "target": "n_adv1",
+              "relation": "causes",
+              "weight": 0.9,
+              "agent": "Skeptic",
+              "rationale": "肝毒性通路关联"
+            },
+            {
+              "source": "n_adv1",
+              "target": "H1",
+              "relation": "refutes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "高风险形成对净获益的威胁"
+            }
+          ],
+          "conflict_hotspots": [
+            {
+              "topic": "Liver toxicity",
+              "pro_nodes": [
+                "n_fibrates"
+              ],
+              "con_nodes": [
+                "n_risk1",
+                "n_adv1"
+              ],
+              "note": "长期用药可能引起严重的肝脏副作用"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：已针对肝毒性标注高权重 refutes 边"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "急性/慢性肝损伤的方向性未消解",
+      "与其他药物潜在组合使用的禁忌未覆盖"
+    ]
+  }
+}

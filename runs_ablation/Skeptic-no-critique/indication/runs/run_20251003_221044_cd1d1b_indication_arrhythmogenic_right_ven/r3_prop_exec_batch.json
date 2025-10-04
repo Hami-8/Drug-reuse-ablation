@@ -1,0 +1,412 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_sotalol",
+            "via": [
+              "n_target_abnormal_heart_rhythm"
+            ],
+            "to": "n_ph1",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_dronedarone",
+            "via": [
+              "n_target_abnormal_heart_rhythm"
+            ],
+            "to": "n_ph1",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_sotalol",
+          "type": "Drug",
+          "label": "Sotalol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dronedarone",
+          "type": "Drug",
+          "label": "Dronedarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_propranolol",
+          "type": "Drug",
+          "label": "Propranolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carvedilol",
+          "type": "Drug",
+          "label": "Carvedilol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lisinopril",
+          "type": "Drug",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_spironolactone",
+          "type": "Drug",
+          "label": "Spironolactone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_digoxin",
+          "type": "Drug",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_flecainide",
+          "type": "Drug",
+          "label": "Flecainide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_disopyramide",
+          "type": "Drug",
+          "label": "Disopyramide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ivabradine",
+          "type": "Drug",
+          "label": "Ivabradine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_quinidine",
+          "type": "Drug",
+          "label": "Quinidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_abnormal_heart_rhythm",
+          "type": "Target",
+          "label": "Abnormal Heart Rhythm",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph1",
+          "type": "Phenotype",
+          "label": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Sotalol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Dronedarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Propranolol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Carvedilol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Lisinopril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Spironolactone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Flecainide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Disopyramide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Ivabradine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Quinidine",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_sotalol",
+          "target": "n_target_abnormal_heart_rhythm",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "同类药物用于心律失常"
+        },
+        {
+          "source": "drug_dronedarone",
+          "target": "n_target_abnormal_heart_rhythm",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "用于控制心律，常见于相近病症"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_target_abnormal_heart_rhythm",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "经典抗心律失常药物"
+        },
+        {
+          "source": "drug_propranolol",
+          "target": "n_target_abnormal_heart_rhythm",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "广泛用于心律失常的β受体拮抗剂"
+        },
+        {
+          "source": "drug_carvedilol",
+          "target": "n_target_abnormal_heart_rhythm",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "适用于心脏病，影响心律"
+        },
+        {
+          "source": "drug_lisinopril",
+          "target": "n_target_abnormal_heart_rhythm",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "在心血管疾病中有心律方面的影响"
+        },
+        {
+          "source": "drug_spironolactone",
+          "target": "n_target_abnormal_heart_rhythm",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通过心血管保护作用影响心律"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "n_target_abnormal_heart_rhythm",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于心力衰竭，能调节心律"
+        },
+        {
+          "source": "drug_flecainide",
+          "target": "n_target_abnormal_heart_rhythm",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有效的抗心律失常药物"
+        },
+        {
+          "source": "drug_disopyramide",
+          "target": "n_target_abnormal_heart_rhythm",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于心律失常治疗"
+        },
+        {
+          "source": "drug_ivabradine",
+          "target": "n_target_abnormal_heart_rhythm",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "用于心脏病，影响心率"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "n_target_abnormal_heart_rhythm",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "历史上有抗心律失常的应用"
+        },
+        {
+          "source": "n_target_abnormal_heart_rhythm",
+          "target": "n_ph1",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "心律失常直接导致心脏病症状"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_sotalol",
+              "target": "n_ph1",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "通过影响心律异常来改善相应的表型"
+            },
+            {
+              "source": "drug_dronedarone",
+              "target": "n_ph1",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "通过影响心律异常来改善相应的表型"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Sotalol 和 Dronedarone 通过 Abnormal Heart Rhythm 影响 Arrhythmogenic Right Ventricular Cardiomyopathy，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

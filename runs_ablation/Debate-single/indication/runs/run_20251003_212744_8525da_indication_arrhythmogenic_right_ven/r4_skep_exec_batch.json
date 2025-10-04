@@ -1,0 +1,292 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "使用β-阻滞剂对ARVC患者的长期影响",
+            "expectation": "评估安全性与疗效之间的平衡",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Sotalol在ARVC患者中的安全性",
+            "expectation": "评估潜在的心脏节律障碍风险",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sotalol",
+          "type": "Drug",
+          "label": "Sotalol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dronedarone",
+          "type": "Drug",
+          "label": "Dronedarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mexiletine",
+          "type": "Drug",
+          "label": "Mexiletine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_quinidine",
+          "type": "Drug",
+          "label": "Quinidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_digoxin",
+          "type": "Drug",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_procainamide",
+          "type": "Drug",
+          "label": "Procainamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lidocaine",
+          "type": "Drug",
+          "label": "Lidocaine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_atenolol",
+          "type": "Drug",
+          "label": "Atenolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carvedilol",
+          "type": "Drug",
+          "label": "Carvedilol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_arvc",
+          "type": "Disease",
+          "label": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_target_cc",
+          "type": "Target",
+          "label": "Calcium Channels",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_ar",
+          "type": "Pathway",
+          "label": "Arrhythmia Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_target_cc",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常见的抗心律失常药物作用靶点"
+        },
+        {
+          "source": "drug_sotalol",
+          "target": "n_target_cc",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "针对心律失常的酮类药物作用机制"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_target_cc",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "经典药物对心脏膜去极化影响"
+        },
+        {
+          "source": "n_target_cc",
+          "target": "n_pathway_ar",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响心律的生化路径"
+        },
+        {
+          "source": "n_pathway_ar",
+          "target": "n_arvc",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知心律失常与 ARVC 的关系"
+        },
+        {
+          "source": "n_target_cc",
+          "target": "n_arvc",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "靶向机制联系等"
+        },
+        {
+          "source": "drug_dronedarone",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "新型抗心律失常药物作用于相同通路"
+        },
+        {
+          "source": "drug_mexiletine",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "对内源性机制的影响"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "传统抗心律失常药物作用"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "影响心脏功能和节律"
+        },
+        {
+          "source": "drug_procainamide",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与心律失常相关"
+        },
+        {
+          "source": "drug_atenolol",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "β-阻滞剂类别下的作用"
+        },
+        {
+          "source": "drug_carvedilol",
+          "target": "n_pathway_ar",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "兼具抗心律失常效果"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_arvc",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "潜在辅助用药，需更多研究"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates_per_hypothesis": []
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Hyperammonaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sodium_benzoate",
+          "name": "Sodium benzoate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_phenylbutyrate",
+          "name": "Phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_lactulose",
+          "name": "Lactulose"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_arginine",
+          "name": "Arginine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_glutamine",
+          "name": "Glutamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_valproic_acid",
+          "name": "Valproic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_rifampin",
+          "name": "Rifampin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_acetazolamide",
+          "name": "Acetazolamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ammonium_chloride",
+          "name": "Ammonium chloride"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_hyperammonaemia",
+          "type": "Disease",
+          "label": "Hyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sodium_benzoate",
+          "type": "Target",
+          "label": "OffTarget_Sodium_Benzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_phenylbutyrate",
+          "type": "Target",
+          "label": "OffTarget_Phenylbutyrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lactulose",
+          "type": "Target",
+          "label": "OffTarget_Lactulose",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_arginine",
+          "type": "Target",
+          "label": "OffTarget_Arginine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_glutamine",
+          "type": "Target",
+          "label": "OffTarget_Glutamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_valproic_acid",
+          "type": "Target",
+          "label": "OffTarget_Valproic_Acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_carbamazepine",
+          "type": "Target",
+          "label": "OffTarget_Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rifampin",
+          "type": "Target",
+          "label": "OffTarget_Rifampin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rifampicin",
+          "type": "Target",
+          "label": "OffTarget_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_topiramate",
+          "type": "Target",
+          "label": "OffTarget_Topiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_acetazolamide",
+          "type": "Target",
+          "label": "OffTarget_Acetazolamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ammonium_chloride",
+          "type": "Target",
+          "label": "OffTarget_Ammonium_Chloride",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot_sodium_benzoate",
+          "relation": "contraindicates",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "影响氨基酸代谢，可能加重高氨血症"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot_phenylbutyrate",
+          "relation": "contraindicates",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在加重氨升高风险"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot_lactulose",
+          "relation": "contraindicates",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能对已有病理生理产生负面影响"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot_arginine",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致进一步的代谢负担"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot_glutamine",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "促使氨基酸转化增加"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot_valproic_acid",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响氨的清除与代谢"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot_carbamazepine",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响氨代谢"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot_rifampin",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能加重肝脏负担"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot_rifampicin",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在加重氨的影响"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot_topiramate",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响代谢，可能增加氨水平"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot_acetazolamide",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响酸碱平衡，增加氨毒性"
+        },
+        {
+          "source": "n_hyperammonaemia",
+          "target": "n_ot_ammonium_chloride",
+          "relation": "contraindicates",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "直接增加体内氨的负担"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "Drug interactions with Hyperammonaemia",
+          "pro_nodes": [
+            "n_ot_sodium_benzoate",
+            "n_ot_valproic_acid"
+          ],
+          "con_nodes": [
+            "n_hyperammonaemia"
+          ],
+          "note": "多种药物可能加重高氨血症"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "某些药物可能有益于高氨血症患者，但如何平衡仍需仔细评估",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "病例报道显示部分药物在个体中安全使用",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "假设所有列举药物都适合于高氨血症患者",
+      "高氨血症对代谢的影响",
+      "药物的代谢途径是否对高氨血症患者安全"
+    ],
+    "falsification_tests": [
+      "是否存在与高氨血症人群中相关的临床试验结果？",
+      "药物的药代动力学在高氨血症中是否有所不同？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供药物安全性的临床证据",
+      "评估可能的药物相互作用与影响"
+    ]
+  }
+}

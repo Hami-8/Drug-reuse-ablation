@@ -1,0 +1,453 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Noonan syndrome",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_megalostim",
+          "name": "Megalostim"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_thrombopoietin",
+          "name": "Thrombopoietin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_epoetin_alfa",
+          "name": "Epoetin alfa"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_interferon_alpha",
+          "name": "Interferon alpha"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_mesna",
+          "name": "Mesna"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_asparaginase",
+          "name": "Asparaginase"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sirolimus",
+          "name": "Sirolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_vemurafenib",
+          "name": "Vemurafenib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_hydroxyurea",
+          "name": "Hydroxyurea"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_bortezomib",
+          "name": "Bortezomib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_nelarabine",
+          "name": "Nelarabine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_simvastatin",
+          "name": "Simvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_megalostim",
+          "type": "Drug",
+          "label": "Megalostim",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thrombopoietin",
+          "type": "Drug",
+          "label": "Thrombopoietin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_epoetin_alfa",
+          "type": "Drug",
+          "label": "Epoetin alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_interferon_alpha",
+          "type": "Drug",
+          "label": "Interferon alpha",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mesna",
+          "type": "Drug",
+          "label": "Mesna",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_asparaginase",
+          "type": "Drug",
+          "label": "Asparaginase",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sirolimus",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vemurafenib",
+          "type": "Drug",
+          "label": "Vemurafenib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydroxyurea",
+          "type": "Drug",
+          "label": "Hydroxyurea",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bortezomib",
+          "type": "Drug",
+          "label": "Bortezomib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nelarabine",
+          "type": "Drug",
+          "label": "Nelarabine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_simvastatin",
+          "type": "Drug",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_pdgfra",
+          "type": "Target",
+          "label": "PDGF Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_jak2",
+          "type": "Target",
+          "label": "JAK2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_cell_growth",
+          "type": "Pathway",
+          "label": "Cell Growth Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_erythropoiesis",
+          "type": "Pathway",
+          "label": "Erythropoiesis Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_immune_response",
+          "type": "Pathway",
+          "label": "Immune Response Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_noonan_syndrome",
+          "type": "Disease",
+          "label": "Noonan Syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_megalostim",
+          "target": "target_pdgfra",
+          "relation": "activates",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与血小板生成相关，可能影响 Noonan 综合症"
+        },
+        {
+          "source": "drug_thrombopoietin",
+          "target": "target_pdgfra",
+          "relation": "activates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于血小板生成，关联 Noonan"
+        },
+        {
+          "source": "drug_epoetin_alfa",
+          "target": "target_jak2",
+          "relation": "activates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "促进红细胞生成，相关 Noonan 综合症"
+        },
+        {
+          "source": "drug_interferon_alpha",
+          "target": "pathway_immune_response",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "调节免疫反应，可能与 Noonan 相关"
+        },
+        {
+          "source": "drug_mesna",
+          "target": "pathway_cell_growth",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响细胞生长，间接与 Noonan 相关"
+        },
+        {
+          "source": "drug_asparaginase",
+          "target": "pathway_cell_growth",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "对细胞周期有影响，可能间接相关"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "pathway_cell_growth",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抑制细胞生长，可能影响 Noonan"
+        },
+        {
+          "source": "drug_vemurafenib",
+          "target": "target_jak2",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与细胞信号传导相关"
+        },
+        {
+          "source": "drug_hydroxyurea",
+          "target": "pathway_erythropoiesis",
+          "relation": "activates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "增长红细胞数目，关联 Noonan"
+        },
+        {
+          "source": "drug_bortezomib",
+          "target": "pathway_cell_growth",
+          "relation": "inhibits",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "有潜在抑制作用"
+        },
+        {
+          "source": "drug_nelarabine",
+          "target": "pathway_cell_growth",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "影响细胞周期，可能关联"
+        },
+        {
+          "source": "drug_simvastatin",
+          "target": "pathway_cell_growth",
+          "relation": "inhibits",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "调节生长信号，可能与 Noonan 相关"
+        },
+        {
+          "source": "target_pdgfra",
+          "target": "pathway_cell_growth",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "参与细胞增殖与生长"
+        },
+        {
+          "source": "target_jak2",
+          "target": "pathway_erythropoiesis",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与红细胞生成相关"
+        },
+        {
+          "source": "pathway_cell_growth",
+          "target": "disease_noonan_syndrome",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "细胞生长失调可能导致 Noonan"
+        },
+        {
+          "source": "pathway_erythropoiesis",
+          "target": "disease_noonan_syndrome",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有关红细胞生成异常"
+        },
+        {
+          "source": "pathway_immune_response",
+          "target": "disease_noonan_syndrome",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "免疫反应失调可能与 Noonan 相关"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物可能通过影响特定靶标和通路来治疗 Noonan 综合症",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "药物间的机制不仅多样化，还包括细胞生长及红细胞生成的调节",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物有足够的生物利用度以影响靶器官"
+    ],
+    "uncertainties": [
+      "药物在 Noonan 综合症中真正的疗效尚需更进一步的研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步确认靶点/通路关联的实验数据？"
+    ]
+  }
+}

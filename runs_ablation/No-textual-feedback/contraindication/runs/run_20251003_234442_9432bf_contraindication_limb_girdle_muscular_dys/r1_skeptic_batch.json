@@ -1,0 +1,555 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Limb girdle muscular dystrophy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_dantrolene",
+          "name": "Dantrolene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_procaine",
+          "name": "Procaine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_quinine",
+          "name": "Quinine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_aminoglycosides",
+          "name": "Aminoglycosides"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_cholesterol_lowering_agents",
+          "name": "Cholesterol-lowering agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_muscle_relaxants",
+          "name": "Muscle relaxants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_anticholinesterase_agents",
+          "name": "Anticholinesterase agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_anesthetics",
+          "name": "Anesthetics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_certain_antibiotics",
+          "name": "Certain antibiotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dantrolene",
+          "type": "Drug",
+          "label": "Dantrolene",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_procaine",
+          "type": "Drug",
+          "label": "Procaine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_quinine",
+          "type": "Drug",
+          "label": "Quinine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_aminoglycosides",
+          "type": "Drug",
+          "label": "Aminoglycosides",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cholesterol_lowering_agents",
+          "type": "Drug",
+          "label": "Cholesterol-lowering agents",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_muscle_relaxants",
+          "type": "Drug",
+          "label": "Muscle relaxants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_anticholinesterase_agents",
+          "type": "Drug",
+          "label": "Anticholinesterase agents",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_anesthetics",
+          "type": "Drug",
+          "label": "Anesthetics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_certain_antibiotics",
+          "type": "Drug",
+          "label": "Certain antibiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "OffTargetCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dantrolene",
+          "type": "Target",
+          "label": "OffTargetDantrolene",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_procaine",
+          "type": "Target",
+          "label": "OffTargetProcaine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_quinine",
+          "type": "Target",
+          "label": "OffTargetQuinine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aminoglycosides",
+          "type": "Target",
+          "label": "OffTargetAminoglycosides",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_statins",
+          "type": "Target",
+          "label": "OffTargetStatins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_beta_blockers",
+          "type": "Target",
+          "label": "OffTargetBetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cholesterol_lowering_agents",
+          "type": "Target",
+          "label": "OffTargetCholesterolLowering",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_muscle_relaxants",
+          "type": "Target",
+          "label": "OffTargetMuscleRelaxants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_anticholinesterase_agents",
+          "type": "Target",
+          "label": "OffTargetAnticholinesterase",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_anesthetics",
+          "type": "Target",
+          "label": "OffTargetAnesthetics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_certain_antibiotics",
+          "type": "Target",
+          "label": "OffTargetCertainAntibiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "n_dantrolene",
+          "target": "n_ot_dantrolene",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉松弛过度"
+        },
+        {
+          "source": "n_procaine",
+          "target": "n_ot_procaine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与肌肉无力可能联动"
+        },
+        {
+          "source": "n_quinine",
+          "target": "n_ot_quinine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响神经肌肉传导"
+        },
+        {
+          "source": "n_aminoglycosides",
+          "target": "n_ot_aminoglycosides",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引起肌肉无力"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_ot_statins",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发肌肉损伤"
+        },
+        {
+          "source": "n_beta_blockers",
+          "target": "n_ot_beta_blockers",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能增加心血管风险"
+        },
+        {
+          "source": "n_cholesterol_lowering_agents",
+          "target": "n_ot_cholesterol_lowering_agents",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与肌肉功能相互作用"
+        },
+        {
+          "source": "n_muscle_relaxants",
+          "target": "n_ot_muscle_relaxants",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能抑制正常肌肉功能"
+        },
+        {
+          "source": "n_anticholinesterase_agents",
+          "target": "n_ot_anticholinesterase_agents",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉无力"
+        },
+        {
+          "source": "n_anesthetics",
+          "target": "n_ot_anesthetics",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与神经传导受损相关"
+        },
+        {
+          "source": "n_certain_antibiotics",
+          "target": "n_ot_certain_antibiotics",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能诱发肌肉无力"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "对肌肉功能的潜在负面影响"
+        },
+        {
+          "source": "n_ot_dantrolene",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能增加无力风险"
+        },
+        {
+          "source": "n_ot_procaine",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能加重无力症状"
+        },
+        {
+          "source": "n_ot_quinine",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致神经副作用"
+        },
+        {
+          "source": "n_ot_aminoglycosides",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "与肌无力相关"
+        },
+        {
+          "source": "n_ot_statins",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能引起肌肉损伤"
+        },
+        {
+          "source": "n_ot_beta_blockers",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "增加心血管风险"
+        },
+        {
+          "source": "n_ot_cholesterol_lowering_agents",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能加重肌肉问题"
+        },
+        {
+          "source": "n_ot_muscle_relaxants",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抑制正常肌肉功能"
+        },
+        {
+          "source": "n_ot_anticholinesterase_agents",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致更严重无力"
+        },
+        {
+          "source": "n_ot_anesthetics",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能加重神经问题"
+        },
+        {
+          "source": "n_ot_certain_antibiotics",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在肌肉无力机制"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "多种药物可能引起或加重肌肉无力，与该疾病相关风险增加",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "使用这些药物是否适合有肌肉功能障碍的患者",
+      "是否有证据表明这些药物在改善症状方面有效"
+    ],
+    "falsification_tests": [
+      "是否存在显示这些药物对肌肉功能影响的证据",
+      "是否有研究反映长期使用的潜在风险"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供使用这些药物的安全性数据",
+      "评估每个药物对肌肉功能和长期疗效的影响"
+    ]
+  }
+}

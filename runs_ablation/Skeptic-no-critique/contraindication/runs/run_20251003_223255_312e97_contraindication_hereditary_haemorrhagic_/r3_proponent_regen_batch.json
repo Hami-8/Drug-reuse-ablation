@@ -1,0 +1,368 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Hereditary haemorrhagic telangiectasia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_warfarin",
+          "name": "Warfarin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_clopidogrel",
+          "name": "Clopidogrel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_rivaroxaban",
+          "name": "Rivaroxaban"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_heparin",
+          "name": "Heparin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_dipyridamole",
+          "name": "Dipyridamole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_thrombin_inhibitors",
+          "name": "Thrombin inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "name": "Nonsteroidal anti-inflammatory drugs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_anticoagulants",
+          "name": "Anticoagulants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_antithrombotic_agents",
+          "name": "Antithrombotic agents"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rivaroxaban",
+          "type": "Drug",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_heparin",
+          "type": "Drug",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dipyridamole",
+          "type": "Drug",
+          "label": "Dipyridamole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thrombin_inhibitors",
+          "type": "Drug",
+          "label": "Thrombin inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_antithrombotic_agents",
+          "type": "Drug",
+          "label": "Antithrombotic agents",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_hereditary_haemorrhagic_telangiectasia",
+          "type": "Disease",
+          "label": "Hereditary haemorrhagic telangiectasia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Aspirin已知影响出血倾向"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Ibuprofen可能加重出血"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.95,
+          "agent": "Proponent",
+          "rationale": "Warfarin严重影响凝血"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Clopidogrel增加出血风险"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Rivaroxaban影响血液凝固"
+        },
+        {
+          "source": "drug_heparin",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Heparin增加出血可能性"
+        },
+        {
+          "source": "drug_dipyridamole",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Dipyridamole可能影响凝血"
+        },
+        {
+          "source": "drug_thrombin_inhibitors",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Thrombin inhibitors对出血有影响"
+        },
+        {
+          "source": "drug_nonsteroidal_anti_inflammatory_drugs",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "NSAIDs已知影响出血风险"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Beta-blockers在某些情况下可能影响出血"
+        },
+        {
+          "source": "drug_anticoagulants",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Anticoagulants对出血有直接影响"
+        },
+        {
+          "source": "drug_antithrombotic_agents",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Antithrombotic agents增加出血风险"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "一系列药物可能对遗传性出血性毛细血管扩张症有禁忌",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "这些药物对出血倾向有普遍影响的常识判断"
+    ],
+    "uncertainties": [
+      "特定患者对这些药物的反应可能有所不同"
+    ],
+    "next_focus_for_pi": [
+      "需要确认这些药物的具体禁忌症信息"
+    ]
+  }
+}

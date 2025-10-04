@@ -1,0 +1,407 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_rituximab",
+            "via": [
+              "t_b_cell_target",
+              "p_immunomodulation_pathway"
+            ],
+            "to": "d_primary_membranoproliferative_glomerulonephritis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_eculizumab",
+            "via": [
+              "t_b_cell_target",
+              "p_immunomodulation_pathway"
+            ],
+            "to": "d_primary_membranoproliferative_glomerulonephritis",
+            "success_criteria": "确认其作用机制与MPGN相关性",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "merge_claims",
+            "nodes": [
+              "drug_mycophenolate_mofetil",
+              "drug_cyclophosphamide",
+              "drug_prednisone"
+            ],
+            "rationale": "同类作用机制，合并以减少冲突",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sirolimus",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gemcitabine",
+          "type": "Drug",
+          "label": "Gemcitabine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_intravenous_immunoglobulin",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_primary_membranoproliferative_glomerulonephritis",
+          "type": "Disease",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "t_b_cell_target",
+          "type": "Target",
+          "label": "B Cell Target",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "p_immunomodulation_pathway",
+          "type": "Pathway",
+          "label": "Immunomodulation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_rituximab",
+          "target": "t_b_cell_target",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "针对B细胞的作用符合已知机制"
+        },
+        {
+          "source": "t_b_cell_target",
+          "target": "p_immunomodulation_pathway",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "B细胞通过免疫调节通路发挥作用"
+        },
+        {
+          "source": "p_immunomodulation_pathway",
+          "target": "d_primary_membranoproliferative_glomerulonephritis",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "免疫调节影响肾小管增生症"
+        },
+        {
+          "source": "drug_eculizumab",
+          "target": "t_b_cell_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Eculizumab针对补体系统，符合其作用机制"
+        },
+        {
+          "source": "drug_plasmapheresis",
+          "target": "t_b_cell_target",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "清除血浆中的有害因子，影响免疫功能"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "t_b_cell_target",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有免疫抑制作用的细胞毒药物"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "t_b_cell_target",
+          "relation": "acts_on",
+          "weight": 0.73,
+          "agent": "Proponent",
+          "rationale": "抑制B细胞增殖的免疫抑制剂"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "t_b_cell_target",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "靶向抑制T细胞，影响免疫反应"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "p_immunomodulation_pathway",
+          "relation": "modulates",
+          "weight": 0.72,
+          "agent": "Proponent",
+          "rationale": "糖皮质激素通过减轻炎症作用"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "t_b_cell_target",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "影响细胞的增殖与免疫功能"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "t_b_cell_target",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通过减少T/B细胞活性，调节免疫反应"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "t_b_cell_target",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "抑制T细胞活化并减轻免疫反应"
+        },
+        {
+          "source": "drug_gemcitabine",
+          "target": "t_b_cell_target",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有潜在的免疫抑制效果，可减少细胞活性"
+        },
+        {
+          "source": "drug_intravenous_immunoglobulin",
+          "target": "p_immunomodulation_pathway",
+          "relation": "modulates",
+          "weight": 0.48,
+          "agent": "Proponent",
+          "rationale": "通过调节免疫反应支持治疗"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_rituximab",
+              "target": "t_b_cell_target",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "针对B细胞的作用符合已知机制"
+            },
+            {
+              "source": "t_b_cell_target",
+              "target": "p_immunomodulation_pathway",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "B细胞通过免疫调节通路发挥作用"
+            },
+            {
+              "source": "p_immunomodulation_pathway",
+              "target": "d_primary_membranoproliferative_glomerulonephritis",
+              "relation": "causes",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "免疫调节影响肾小管增生症"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Rituximab→B细胞靶点→免疫调节通路→原发性膜增生性肾小管炎，形成1条完整路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_eculizumab",
+              "target": "t_b_cell_target",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "Eculizumab针对补体系统，符合其作用机制"
+            },
+            {
+              "source": "t_b_cell_target",
+              "target": "p_immunomodulation_pathway",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "B细胞通过免疫调节通路发挥作用"
+            },
+            {
+              "source": "p_immunomodulation_pathway",
+              "target": "d_primary_membranoproliferative_glomerulonephritis",
+              "relation": "causes",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "免疫调节影响肾小管增生症"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Eculizumab→B细胞靶点→免疫调节通路→原发性膜增生性肾小管炎，形成2条不相交路径"
+      },
+      {
+        "action_ref": 2,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [
+            {
+              "keep": "drug_mycophenolate_mofetil",
+              "remove": "drug_cyclophosphamide",
+              "rationale": "同类作用机制，合并以减少冲突"
+            },
+            {
+              "keep": "drug_mycophenolate_mofetil",
+              "remove": "drug_prednisone",
+              "rationale": "同类作用机制，合并以减少冲突"
+            }
+          ],
+          "set_weights": []
+        },
+        "notes": "合并同类药物以减少冲突"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [
+      "需要进一步验证 Eculizumab 的具体效果与机制"
+    ]
+  }
+}
