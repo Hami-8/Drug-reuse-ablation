@@ -1,12 +1,21 @@
 # eval_auc_from_seeds_custom.py
 # 仅用 seeds 顺序生成分数；AUPRC/ AUROC 使用自定义 average_precision / auroc。
-# 用法：
+# 用法一（单文件模式，保持兼容）：
 # python eval_auc_from_seeds_custom.py \
 #   --subset indication \
 #   --records runs_eval/indication/_records.jsonl \
 #   --pos_csv filtered_indication.csv \
 #   --all_csv filtered_indication_all.csv \
 #   --out_dir eval_out_ind_auc
+#
+# 用法二（自动模式：遍历 runs_ablation 下所有消融配置）：
+# python eval_auc_from_seeds_custom.py \
+#   --root runs_ablation \
+#   --out_root eval_auc_runs_ablation \
+#   --pos_ind filtered_indication.csv \
+#   --all_ind filtered_indication_all.csv \
+#   --pos_contra filtered_contraindication.csv \
+#   --all_contra filtered_contraindication_all.csv
 
 import os
 import re
@@ -97,6 +106,8 @@ ALIAS_GROUPS = [
     {"omega 3 fatty acids","omega 3 acid ethyl esters","epa dha","fish oil","lovaza","ethyl icosapentate"},
     {"somatropin","growth hormone"},
     {"risedronate","risedronate sodium"},
+    {"nuedexta","dextromethorphan + quinidine","dextromethorphan quinidine"},
+    {"ciprofloxacin dpi","ciprofloxacin inhalation powder","ciprofloxacin dry powder inhaler"},
 ]
 
 def _alias_map() -> Dict[str,str]:
@@ -294,14 +305,125 @@ def evaluate_auc(subset: str, records_path: str, pos_csv: str, all_csv: str, out
     print(json.dumps(macro, ensure_ascii=False, indent=2))
     print(f"[saved] {out_dir}/macro.json , per_disease.json , skipped.json")
 
+# ================== 自动遍历 runs_ablation ==================
+
+def find_records(root: str) -> List[Tuple[str, str, str]]:
+    """
+    返回 (config_tag, subset, records_path) 列表
+    期望目录结构：runs_ablation/<ConfigTag>/<subset>/_records.jsonl
+    """
+    out = []
+    if not os.path.isdir(root):
+        return out
+    for cfg in sorted(os.listdir(root)):
+        cfg_dir = os.path.join(root, cfg)
+        if not os.path.isdir(cfg_dir):
+            continue
+        for subset in ("indication", "contraindication"):
+            rec_path = os.path.join(cfg_dir, subset, "_records.jsonl")
+            if os.path.exists(rec_path):
+                out.append((cfg, subset, rec_path))
+    return out
+
+def auto_eval(root: str,
+              out_root: str,
+              pos_ind: str,
+              all_ind: str,
+              pos_contra: str,
+              all_contra: str):
+    os.makedirs(out_root, exist_ok=True)
+    triples = find_records(root)
+    if not triples:
+        print(f"[WARN] 未在 {root} 下找到任何 _records.jsonl")
+        return
+
+    summary_rows = []
+    for cfg, subset, rec_path in triples:
+        print(f"[EVAL] {cfg} / {subset}  <-  {rec_path}")
+        try:
+            if subset == "indication":
+                pos_csv, all_csv = pos_ind, all_ind
+            else:
+                pos_csv, all_csv = pos_contra, all_contra
+
+            out_dir = os.path.join(out_root, cfg, subset)
+            evaluate_auc(
+                subset=subset,
+                records_path=rec_path,
+                pos_csv=pos_csv,
+                all_csv=all_csv,
+                out_dir=out_dir
+            )
+
+            # 读取 macro 以汇总
+            with open(os.path.join(out_dir, "macro.json"), "r", encoding="utf-8") as f:
+                macro = json.load(f)
+            summary_rows.append({
+                "ConfigTag": cfg,
+                "Subset": subset,
+                "macro_AUPRC": macro.get("macro_AUPRC"),
+                "macro_AUROC": macro.get("macro_AUROC"),
+                "num_valid_diseases": macro.get("num_valid_diseases"),
+                "num_skipped": macro.get("num_skipped"),
+            })
+        except Exception as e:
+            print(f"[ERR] 评测失败：{cfg}/{subset} -> {e}")
+
+    # 写 summary CSV/JSON
+    if summary_rows:
+        summ_csv = os.path.join(out_root, "_summary_auc.csv")
+        summ_json = os.path.join(out_root, "_summary_auc.json")
+        keys = ["ConfigTag","Subset","macro_AUPRC","macro_AUROC","num_valid_diseases","num_skipped"]
+        with open(summ_csv, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=keys)
+            w.writeheader()
+            for r in summary_rows:
+                w.writerow(r)
+        with open(summ_json, "w", encoding="utf-8") as f:
+            json.dump(summary_rows, f, ensure_ascii=False, indent=2)
+        print(f"[DONE] AUC Summary saved to: {summ_csv}  /  {summ_json}")
+    else:
+        print("[WARN] 无可写入的汇总结果。")
+
+# ================== CLI ==================
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--subset", choices=["indication","contraindication"], required=True)
-    ap.add_argument("--records", default=r"runs_ablation\Debate-single\indication\_records.jsonl", help="path to *_records.jsonl")
-    ap.add_argument("--pos_csv", default="filtered_indication.csv", help="path to filtered_indication.csv or filtered_contraindication.csv")
-    ap.add_argument("--all_csv", default="filtered_indication_all.csv", help="path to filtered_indication_all.csv or filtered_contraindication_all.csv")
-    ap.add_argument("--out_dir", default="eval_out_auc_Debate-single_indication")
+    # 单文件模式（兼容）
+    ap.add_argument("--subset", choices=["indication","contraindication"])
+    ap.add_argument("--records", help="path to *_records.jsonl")
+    ap.add_argument("--pos_csv", help="filtered_indication.csv 或 filtered_contraindication.csv")
+    ap.add_argument("--all_csv", help="filtered_indication_all.csv 或 filtered_contraindication_all.csv")
+    ap.add_argument("--out_dir", help="单文件模式输出目录")
+
+    # 自动模式
+    ap.add_argument("--root", type=str, default="runs_ablation",
+                    help="runs_ablation 根目录（包含多个 ConfigTag 子目录）")
+    ap.add_argument("--out_root", type=str, default="eval_auc_runs_ablation",
+                    help="自动模式评测输出根目录")
+    ap.add_argument("--pos_ind", type=str, default="filtered_indication.csv")
+    ap.add_argument("--all_ind", type=str, default="filtered_indication_all.csv")
+    ap.add_argument("--pos_contra", type=str, default="filtered_contraindication.csv")
+    ap.add_argument("--all_contra", type=str, default="filtered_contraindication_all.csv")
+
     args = ap.parse_args()
+
+    # 自动模式优先（只要提供了 --root 就会走自动模式）
+    if args.root:
+        auto_eval(
+            root=args.root,
+            out_root=args.out_root,
+            pos_ind=args.pos_ind,
+            all_ind=args.all_ind,
+            pos_contra=args.pos_contra,
+            all_contra=args.all_contra
+        )
+        return
+
+    # 否则走单文件模式（兼容旧用法）
+    if not (args.subset and args.records and args.pos_csv and args.all_csv and args.out_dir):
+        print("[ERROR] 单文件模式缺少必要参数。请提供 --subset --records --pos_csv --all_csv --out_dir，或使用 --root 自动模式。")
+        return
 
     evaluate_auc(
         subset=args.subset,
