@@ -1,0 +1,445 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Distal myopathies",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_chloroquine",
+          "name": "Chloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_sodium_valproate",
+          "name": "Sodium valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_tamoxifen",
+          "name": "Tamoxifen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_interferon",
+          "name": "Interferon"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_chloroquine",
+          "type": "Drug",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tamoxifen",
+          "type": "Drug",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_interferon",
+          "type": "Drug",
+          "label": "Interferon",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_distal_myopathies",
+          "type": "Disease",
+          "label": "Distal Myopathies",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_muscle_pathway",
+          "type": "Pathway",
+          "label": "Muscle Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_inflammation_pathway",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_muscle_weakness",
+          "type": "Phenotype",
+          "label": "Muscle Weakness",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_inflammation",
+          "type": "Phenotype",
+          "label": "Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_muscle_regeneration",
+          "type": "Phenotype",
+          "label": "Muscle Regeneration",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_dexamethasone",
+          "target": "n_inflammation",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知其导致炎症反应"
+        },
+        {
+          "source": "n_prednisone",
+          "target": "n_inflammation",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "同类药物在动物模型中引起炎症"
+        },
+        {
+          "source": "n_azathioprine",
+          "target": "n_muscle_pathway",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "与肌肉通路的功能相关"
+        },
+        {
+          "source": "n_methotrexate",
+          "target": "n_inflammation",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知其对于炎症的影响"
+        },
+        {
+          "source": "n_cyclophosphamide",
+          "target": "n_muscle_regeneration",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能影响肌肉再生的机制"
+        },
+        {
+          "source": "n_chloroquine",
+          "target": "n_muscle_pathway",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "在相关流行病学研究中有联系"
+        },
+        {
+          "source": "n_sodium_valproate",
+          "target": "n_muscle_weakness",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "与肌肉无力有报道的关系"
+        },
+        {
+          "source": "n_gemfibrozil",
+          "target": "n_inflammation_pathway",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能激活炎症通路"
+        },
+        {
+          "source": "n_tamoxifen",
+          "target": "n_muscle_pathway",
+          "relation": "involved_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "与相关肌肉通路有一定联系"
+        },
+        {
+          "source": "n_interferon",
+          "target": "n_inflammation",
+          "relation": "activates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知其促进炎症反应"
+        },
+        {
+          "source": "n_etanercept",
+          "target": "n_inflammation",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抑制炎症作用，关联强"
+        },
+        {
+          "source": "n_rituximab",
+          "target": "n_muscle_weakness",
+          "relation": "inhibits",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响肌肉功能的抑制"
+        },
+        {
+          "source": "n_muscle_pathway",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知通路与病情相关"
+        },
+        {
+          "source": "n_inflammation_pathway",
+          "target": "n_distal_myopathies",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "相应的炎症反应可能导致病变"
+        },
+        {
+          "source": "n_dexamethasone",
+          "target": "n_muscle_weakness",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知其导致肌肉无力"
+        },
+        {
+          "source": "n_prednisone",
+          "target": "n_muscle_weakness",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "同理，导致相似症状"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "Dexamethasone/Prednisone 可能通过不同通路影响 Distal Myopathies 的发病机制",
+        "confidence": "medium"
+      },
+      {
+        "id": "C2",
+        "text": "其他药物如 Azathioprine/Chloroquine 通过影响肌肉或炎症路径也可能有风险",
+        "confidence": "low"
+      }
+    ],
+    "assumptions": [
+      "药物的作用机制需要在病理研究中进一步确认"
+    ],
+    "uncertainties": [
+      "不同药物对病症的长期影响尚不明确"
+    ],
+    "next_focus_for_pi": [
+      "考虑如何进一步研究药物对 Distal Myopathies 的潜在影响"
+    ]
+  }
+}

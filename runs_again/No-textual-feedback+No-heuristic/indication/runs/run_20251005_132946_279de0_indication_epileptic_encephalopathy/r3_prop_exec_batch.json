@@ -1,0 +1,898 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Epileptic encephalopathy",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_levetiracetam",
+            "via": [
+              "seizure_target",
+              "epileptic_pathway"
+            ],
+            "to": "epileptic_encephalopathy",
+            "success_criteria": "确认影响癫痫发作的路径有效",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_lacosamide",
+            "via": [
+              "seizure_target",
+              "epileptic_pathway"
+            ],
+            "to": "epileptic_encephalopathy",
+            "success_criteria": "确认影响癫痫发作的路径有效",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_levetiracetam",
+          "type": "Drug",
+          "label": "Levetiracetam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lacosamide",
+          "type": "Drug",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_perampanel",
+          "type": "Drug",
+          "label": "Perampanel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_valproate",
+          "type": "Drug",
+          "label": "Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenytoin",
+          "type": "Drug",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clobazam",
+          "type": "Drug",
+          "label": "Clobazam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_benzodiazepines",
+          "type": "Drug",
+          "label": "Benzodiazepines",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_potassium_bromide",
+          "type": "Drug",
+          "label": "Potassium bromide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_zonisamide",
+          "type": "Drug",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_felbamate",
+          "type": "Drug",
+          "label": "Felbamate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "seizure_target",
+          "type": "Target",
+          "label": "Seizure Modulation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "epileptic_pathway",
+          "type": "Pathway",
+          "label": "Epileptic Pathways",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "epileptic_encephalopathy",
+          "type": "Disease",
+          "label": "Epileptic Encephalopathy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_levetiracetam",
+          "type": "Target",
+          "label": "Levetiracetam Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lacosamide",
+          "type": "Target",
+          "label": "Lacosamide Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_perampanel",
+          "type": "Target",
+          "label": "Perampanel Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_topiramate",
+          "type": "Target",
+          "label": "Topiramate Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_valproate",
+          "type": "Target",
+          "label": "Valproate Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_phenytoin",
+          "type": "Target",
+          "label": "Phenytoin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_carbamazepine",
+          "type": "Target",
+          "label": "Carbamazepine Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clobazam",
+          "type": "Target",
+          "label": "Clobazam Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_benzodiazepines",
+          "type": "Target",
+          "label": "Benzodiazepines Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_potassium_bromide",
+          "type": "Target",
+          "label": "Potassium Bromide Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_zonisamide",
+          "type": "Target",
+          "label": "Zonisamide Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_felbamate",
+          "type": "Target",
+          "label": "Felbamate Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk Pathways for Antiepileptic Drugs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Levetiracetam",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Lacosamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Perampanel",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Valproate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Phenytoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Clobazam",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Benzodiazepines",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Potassium bromide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Felbamate",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_levetiracetam",
+          "target": "seizure_target",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已被确认用于癫痫治疗的药物"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "seizure_target",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "对癫痫继续发作有效"
+        },
+        {
+          "source": "drug_perampanel",
+          "target": "seizure_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "被用于控制癫痫发作"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "seizure_target",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "用于多种癫痫表型的治疗"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "seizure_target",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "广谱抗癫痫药物常见"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "seizure_target",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "历史悠久的抗癫痫药物"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "seizure_target",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有效用于部分癫痫发作"
+        },
+        {
+          "source": "drug_clobazam",
+          "target": "seizure_target",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "常用于药物难治性癫痫"
+        },
+        {
+          "source": "drug_benzodiazepines",
+          "target": "seizure_target",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于急性癫痫治疗"
+        },
+        {
+          "source": "drug_potassium_bromide",
+          "target": "seizure_target",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "主要用于犬类，但也用于控制癫痫"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "seizure_target",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "疫临床应用的抗癫痫药物"
+        },
+        {
+          "source": "drug_felbamate",
+          "target": "seizure_target",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "对难治性癫痫的作为"
+        },
+        {
+          "source": "seizure_target",
+          "target": "epileptic_pathway",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "对癫痫发作影响深远"
+        },
+        {
+          "source": "epileptic_pathway",
+          "target": "epileptic_encephalopathy",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知的病理机制连接"
+        },
+        {
+          "source": "drug_levetiracetam",
+          "target": "n_ot_levetiracetam",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "n_ot_lacosamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_perampanel",
+          "target": "n_ot_perampanel",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "n_ot_topiramate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "n_ot_valproate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_phenytoin",
+          "target": "n_ot_phenytoin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_ot_carbamazepine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_clobazam",
+          "target": "n_ot_clobazam",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_benzodiazepines",
+          "target": "n_ot_benzodiazepines",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_potassium_bromide",
+          "target": "n_ot_potassium_bromide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "n_ot_zonisamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_felbamate",
+          "target": "n_ot_felbamate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot_levetiracetam",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_lacosamide",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_perampanel",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_topiramate",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_valproate",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_phenytoin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_carbamazepine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_clobazam",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_benzodiazepines",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_potassium_bromide",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_zonisamide",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_felbamate",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高权重表明不良反应可能抵消潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高权重表明不良反应可能抵消潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高权重表明不良反应可能抵消潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高权重表明不良反应可能抵消潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高权重表明不良反应可能抵消潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高权重表明不良反应可能抵消潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高权重表明不良反应可能抵消潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高权重表明不良反应可能抵消潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高权重表明不良反应可能抵消潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高权重表明不良反应可能抵消潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高权重表明不良反应可能抵消潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "高权重表明不良反应可能抵消潜在益处"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_levetiracetam",
+              "target": "seizure_target",
+              "relation": "acts_on",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "已被确认用于癫痫治疗的药物"
+            },
+            {
+              "source": "seizure_target",
+              "target": "epileptic_pathway",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "对癫痫发作影响深远"
+            },
+            {
+              "source": "epileptic_pathway",
+              "target": "epileptic_encephalopathy",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "已知的病理机制连接"
+            },
+            {
+              "source": "drug_levetiracetam",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "通过机制链条支持假设"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→Target→Pathway→Disease，形成支持链条"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_lacosamide",
+              "target": "seizure_target",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "对癫痫继续发作有效"
+            },
+            {
+              "source": "seizure_target",
+              "target": "epileptic_pathway",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "对癫痫发作影响深远"
+            },
+            {
+              "source": "epileptic_pathway",
+              "target": "epileptic_encephalopathy",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "已知的病理机制连接"
+            },
+            {
+              "source": "drug_lacosamide",
+              "target": "H2",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "通过机制链条支持假设"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Drug→Target→Pathway→Disease，形成支持链条"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

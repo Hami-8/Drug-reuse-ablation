@@ -1,0 +1,317 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Familial tumour syndromes of the central and peripheral nervous system",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_temozolomide",
+          "name": "Temozolomide"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_carboplatin",
+          "name": "Carboplatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_cisplatin",
+          "name": "Cisplatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_vincristine",
+          "name": "Vincristine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_etoposide",
+          "name": "Etoposide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lomustine",
+          "name": "Lomustine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_doxorubicin",
+          "name": "Doxorubicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_thiotepa",
+          "name": "Thiotepa"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_bevacizumab",
+          "name": "Bevacizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_radium_223",
+          "name": "Radium-223"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_nitrosoureas",
+          "name": "Nitrosoureas"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_sirolimus",
+          "name": "Sirolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_tg1",
+          "type": "Target",
+          "label": "MGMT",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg2",
+          "type": "Target",
+          "label": "TOP1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg3",
+          "type": "Target",
+          "label": "DNA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb1",
+          "type": "Pathway",
+          "label": "DNA Repair Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb2",
+          "type": "Pathway",
+          "label": "Apoptosis Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_d1",
+          "type": "Disease",
+          "label": "Brain Tumors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_d2",
+          "type": "Disease",
+          "label": "Neurofibromatosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_temozolomide",
+          "target": "n_tg1",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知针对 methylation 机制有效"
+        },
+        {
+          "source": "drug_carboplatin",
+          "target": "n_tg2",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "靶向 DNA 拓扑异构酶相关路径"
+        },
+        {
+          "source": "drug_cisplatin",
+          "target": "n_tg3",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "直接作用于 DNA 以造成链断裂"
+        },
+        {
+          "source": "drug_vincristine",
+          "target": "n_pb2",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "调节细胞分裂涉及凋亡通路"
+        },
+        {
+          "source": "drug_etoposide",
+          "target": "n_tg2",
+          "relation": "acts_on",
+          "weight": 0.78,
+          "agent": "Proponent",
+          "rationale": "靶向 DNA 复制过程中的关键酶"
+        },
+        {
+          "source": "drug_lomustine",
+          "target": "n_pb1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "参与 DNA 修复过程"
+        },
+        {
+          "source": "drug_doxorubicin",
+          "target": "n_pb2",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "通过影响凋亡影响肿瘤细胞"
+        },
+        {
+          "source": "drug_thiotepa",
+          "target": "n_tg3",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "直接与 DNA 结合，干扰其功能"
+        },
+        {
+          "source": "drug_bevacizumab",
+          "target": "n_d1",
+          "relation": "supports",
+          "weight": 0.68,
+          "agent": "Proponent",
+          "rationale": "抗血管生成，帮助抑制肿瘤生长"
+        },
+        {
+          "source": "drug_radium_223",
+          "target": "n_d2",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "靶向骨转移，改善患者生存率"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "n_pb2",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过抑制mTOR途径促进凋亡"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "Temozolomide/Cisplatin 等药物通过靶向 MGMT/DNA 通路有效对抗脑肿瘤",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "Carboplatin/Vincristine 等药物通过靶向细胞分裂调控与凋亡相关性质，可能影响神经纤维瘤",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物具备到达相关组织的最小暴露（常识判断）"
+    ],
+    "uncertainties": [
+      "每种药物的具体适应症与疗效需进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "确认各药物对不同肿瘤类型的具体适应性"
+    ]
+  }
+}

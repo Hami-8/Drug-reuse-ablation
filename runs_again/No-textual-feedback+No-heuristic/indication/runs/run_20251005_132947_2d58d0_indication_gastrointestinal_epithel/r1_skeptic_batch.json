@@ -1,0 +1,560 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Gastrointestinal epithelial barrier disorders",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_mesalamine",
+          "name": "Mesalamine"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_budesonide",
+          "name": "Budesonide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_ustekinumab",
+          "name": "Ustekinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_vedolizumab",
+          "name": "Vedolizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_tofacitinib",
+          "name": "Tofacitinib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_sulfasalazine",
+          "name": "Sulfasalazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_natalizumab",
+          "name": "Natalizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_mesalamine",
+          "type": "Target",
+          "label": "OffTarget_Mesalamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_budesonide",
+          "type": "Target",
+          "label": "OffTarget_Budesonide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_prednisone",
+          "type": "Target",
+          "label": "OffTarget_Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_azathioprine",
+          "type": "Target",
+          "label": "OffTarget_Azathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_infliximab",
+          "type": "Target",
+          "label": "OffTarget_Infliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_adalimumab",
+          "type": "Target",
+          "label": "OffTarget_Adalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ustekinumab",
+          "type": "Target",
+          "label": "OffTarget_Ustekinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_vedolizumab",
+          "type": "Target",
+          "label": "OffTarget_Vedolizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tofacitinib",
+          "type": "Target",
+          "label": "OffTarget_Tofacitinib",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "OffTarget_Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sulfasalazine",
+          "type": "Target",
+          "label": "OffTarget_Sulfasalazine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "RiskPathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_mesalamine",
+          "target": "n_ot_mesalamine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的别靶作用"
+        },
+        {
+          "source": "drug_budesonide",
+          "target": "n_ot_budesonide",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的别靶作用"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_prednisone",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的别靶作用"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_ot_azathioprine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的别靶作用"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "n_ot_infliximab",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的别靶作用"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "n_ot_adalimumab",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的别靶作用"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "n_ot_ustekinumab",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的别靶作用"
+        },
+        {
+          "source": "drug_vedolizumab",
+          "target": "n_ot_vedolizumab",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的别靶作用"
+        },
+        {
+          "source": "drug_tofacitinib",
+          "target": "n_ot_tofacitinib",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的别靶作用"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的别靶作用"
+        },
+        {
+          "source": "drug_sulfasalazine",
+          "target": "n_ot_sulfasalazine",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的别靶作用"
+        },
+        {
+          "source": "n_ot_mesalamine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_budesonide",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_prednisone",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_azathioprine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_infliximab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_adalimumab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_ustekinumab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_vedolizumab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_tofacitinib",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot_sulfasalazine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消疗效净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消疗效净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消疗效净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消疗效净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消疗效净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消疗效净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消疗效净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消疗效净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消疗效净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消疗效净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消疗效净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消疗效净获益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "药物可能导致的别靶效应与不良反应适用于所有候选药物",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "对特定肠道上皮屏障的影响可能过于乐观，需考量长期疗效与安全性",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "靶向治疗的效果对不同个体的一致性",
+      "各药物在实际临床中的真实表现与基础安全性"
+    ],
+    "falsification_tests": [
+      "是否存在针对特定人群显示临床疗效的数据支持？",
+      "药物在对照组中的安全性是否明确评估过？"
+    ],
+    "next_focus_for_pi": [
+      "检视各候选药物短期与长期效果的比较数据",
+      "确保各药物的副作用与共病情况已明确记录"
+    ]
+  }
+}

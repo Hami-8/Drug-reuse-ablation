@@ -1,0 +1,367 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary lymphoedema",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_compression_therapy",
+          "name": "Compression therapy"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_sodium_hyaluronate",
+          "name": "Sodium hyaluronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_pentoxifylline",
+          "name": "Pentoxifylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_lymphaticovenous_anastomosis",
+          "name": "Lymphaticovenous anastomosis"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_ambulatory_pneumatic_compression",
+          "name": "Ambulatory pneumatic compression"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_minoxidil",
+          "name": "Minoxidil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_fludrocortisone",
+          "name": "Fludrocortisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_lymfactin",
+          "name": "Lymfactin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_sirolimus",
+          "name": "Sirolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_furosemide",
+          "name": "Furosemide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_rivaroxaban",
+          "name": "Rivaroxaban"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ct",
+          "type": "Drug",
+          "label": "Compression therapy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sh",
+          "type": "Drug",
+          "label": "Sodium hyaluronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pt",
+          "type": "Drug",
+          "label": "Pentoxifylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dm",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_la",
+          "type": "Drug",
+          "label": "Lymphaticovenous anastomosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_apc",
+          "type": "Drug",
+          "label": "Ambulatory pneumatic compression",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mn",
+          "type": "Drug",
+          "label": "Minoxidil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fc",
+          "type": "Drug",
+          "label": "Fludrocortisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lf",
+          "type": "Drug",
+          "label": "Lymfactin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sr",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fr",
+          "type": "Drug",
+          "label": "Furosemide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rx",
+          "type": "Drug",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ple",
+          "type": "Disease",
+          "label": "Primary lymphoedema",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_ct",
+          "target": "n_ple",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "广泛用于淋巴水肿的治疗"
+        },
+        {
+          "source": "n_sh",
+          "target": "n_ple",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "帮助改善淋巴引流功能"
+        },
+        {
+          "source": "n_pt",
+          "target": "n_ple",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "可能改善循环与淋巴引流"
+        },
+        {
+          "source": "n_dm",
+          "target": "n_ple",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有抗炎以及减轻水肿的作用"
+        },
+        {
+          "source": "n_la",
+          "target": "n_ple",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "手术选择用于淋巴水肿问题"
+        },
+        {
+          "source": "n_apc",
+          "target": "n_ple",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "促进淋巴回流的常用方法"
+        },
+        {
+          "source": "n_mn",
+          "target": "n_ple",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "在某些情况下有助于改善淋巴系统"
+        },
+        {
+          "source": "n_fc",
+          "target": "n_ple",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能通过保留钠水分来影响水肿"
+        },
+        {
+          "source": "n_lf",
+          "target": "n_ple",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "部分研究表明可改善淋巴引流"
+        },
+        {
+          "source": "n_sr",
+          "target": "n_ple",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能通过影响淋巴管重塑来起作用"
+        },
+        {
+          "source": "n_fr",
+          "target": "n_ple",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "用于控制液体负荷，间接帮助"
+        },
+        {
+          "source": "n_rx",
+          "target": "n_ple",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "在淋巴水肿的某些复合症中可能有作用"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物和疗法可支持初级淋巴水肿的治疗",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物都具有足够的生物利用度且能达病灶",
+      "医生选择应考虑具体病情与治疗反应"
+    ],
+    "uncertainties": [
+      "长期疗效及安全性仍需更多临床数据验证"
+    ],
+    "next_focus_for_pi": [
+      "是否需要提高特定药物的权重以反映近期研究数据？"
+    ]
+  }
+}

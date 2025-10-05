@@ -1,0 +1,405 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Osteogenesis imperfecta",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_bisphosphonates",
+          "name": "Bisphosphonates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_pamidronate",
+          "name": "Pamidronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_alendronate",
+          "name": "Alendronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_risedronate",
+          "name": "Risedronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_calcitonin",
+          "name": "Calcitonin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_zoledronic_acid",
+          "name": "Zoledronic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_teriparatide",
+          "name": "Teriparatide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_growth_hormone",
+          "name": "Growth hormone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_vitamin_d",
+          "name": "Vitamin D"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_calcium_supplements",
+          "name": "Calcium supplements"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_neridronate",
+          "name": "Neridronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_bisphosphonates",
+          "type": "Drug",
+          "label": "Bisphosphonates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_pamidronate",
+          "type": "Drug",
+          "label": "Pamidronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_alendronate",
+          "type": "Drug",
+          "label": "Alendronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_risedronate",
+          "type": "Drug",
+          "label": "Risedronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_calcitonin",
+          "type": "Drug",
+          "label": "Calcitonin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_zoledronic_acid",
+          "type": "Drug",
+          "label": "Zoledronic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_teriparatide",
+          "type": "Drug",
+          "label": "Teriparatide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_growth_hormone",
+          "type": "Drug",
+          "label": "Growth hormone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_vitamin_d",
+          "type": "Drug",
+          "label": "Vitamin D",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_calcium_supplements",
+          "type": "Drug",
+          "label": "Calcium supplements",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_neridronate",
+          "type": "Drug",
+          "label": "Neridronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Osteogenesis_imperfecta",
+          "type": "Disease",
+          "label": "Osteogenesis imperfecta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Target_bone_density",
+          "type": "Target",
+          "label": "Bone Density",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Pathway_bone_remodeling",
+          "type": "Pathway",
+          "label": "Bone Remodeling",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_bisphosphonates",
+          "target": "Target_bone_density",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对骨密度的影响"
+        },
+        {
+          "source": "drug_pamidronate",
+          "target": "Target_bone_density",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "有效用于骨强度改善"
+        },
+        {
+          "source": "drug_alendronate",
+          "target": "Target_bone_density",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于骨质疏松"
+        },
+        {
+          "source": "drug_risedronate",
+          "target": "Target_bone_density",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "有效改善骨质"
+        },
+        {
+          "source": "drug_calcitonin",
+          "target": "Target_bone_density",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可促使骨质改善"
+        },
+        {
+          "source": "drug_zoledronic_acid",
+          "target": "Target_bone_density",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于治疗骨相关疾病"
+        },
+        {
+          "source": "drug_teriparatide",
+          "target": "Target_bone_density",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "促进骨形成"
+        },
+        {
+          "source": "drug_growth_hormone",
+          "target": "Target_bone_density",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "关于生长激素的研究"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "Target_bone_density",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "注意可能抑制骨密度"
+        },
+        {
+          "source": "drug_vitamin_d",
+          "target": "Target_bone_density",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "支持骨健康"
+        },
+        {
+          "source": "drug_calcium_supplements",
+          "target": "Target_bone_density",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "钙对骨的基础作用"
+        },
+        {
+          "source": "drug_neridronate",
+          "target": "Target_bone_density",
+          "relation": "modulates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "有效应用于骨代谢"
+        },
+        {
+          "source": "Target_bone_density",
+          "target": "Pathway_bone_remodeling",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "骨密度调节涉及骨重塑通路"
+        },
+        {
+          "source": "Pathway_bone_remodeling",
+          "target": "Osteogenesis_imperfecta",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "骨重塑与该疾病相关"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多个药物通过调节骨密度影响成骨不全症",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "骨生物学通路涉及药物影响",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "所有药物均具备到达作用靶点的相应暴露"
+    ],
+    "uncertainties": [
+      "某些药物的不良反应需进一步评估"
+    ],
+    "next_focus_for_pi": [
+      "确认对长期治疗效果的支持性机制和证据"
+    ]
+  }
+}

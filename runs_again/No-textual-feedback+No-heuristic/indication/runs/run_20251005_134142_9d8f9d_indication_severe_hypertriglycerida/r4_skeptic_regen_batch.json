@@ -1,0 +1,493 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_lipid_lowering_medications",
+          "name": "Lipid-lowering medications"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_ezetimibe",
+          "name": "Ezetimibe"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_pcsk9_inhibitors",
+          "name": "PCSK9 inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_angiopoietin_like_3_inhibitors",
+          "name": "Angiopoietin-like 3 inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_fish_oil_supplements",
+          "name": "Fish oil supplements"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_red_yeast_rice",
+          "name": "Red yeast rice"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_omega_3",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lipid_lowering",
+          "type": "Drug",
+          "label": "Lipid-lowering medications",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ezetimibe",
+          "type": "Drug",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_pcsk9_inhibitors",
+          "type": "Drug",
+          "label": "PCSK9 inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_angiopoietin_like_3_inhibitors",
+          "type": "Drug",
+          "label": "Angiopoietin-like 3 inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_fish_oil",
+          "type": "Drug",
+          "label": "Fish oil supplements",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_red_yeast_rice",
+          "type": "Drug",
+          "label": "Red yeast rice",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk Pathway for Hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Lipid-Lowering Therapies",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_fibrates",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_omega_3",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_niacin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_lipid_lowering",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_ezetimibe",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_pcsk9_inhibitors",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_angiopoietin_like_3_inhibitors",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_gemfibrozil",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_fenofibrate",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_fish_oil",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_red_yeast_rice",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消治疗收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消治疗收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消治疗收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消治疗收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消治疗收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消治疗收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消治疗收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消治疗收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消治疗收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消治疗收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消治疗收益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "不良反应可能抵消治疗收益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "某些药物可能未能显著改善长时间的甘油三酯水平",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "药物之间相互作用可能导致严重的副作用",
+        "confidence": "medium"
+      },
+      {
+        "id": "K3",
+        "text": "对特定患者群体的疗效及安全性数据不足",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "所有药物对严重高甘油三酯血症的疗效及安全性是否足够验证",
+      "潜在的药物间相互作用是否被充分考虑"
+    ],
+    "falsification_tests": [
+      "是否有足够的数据支持某个药物在改善甘油三酯水平方面的长期效果？",
+      "是否存在显示药物不良作用的临床研究？"
+    ],
+    "next_focus_for_pi": [
+      "要求提供针对药物的副作用具体数据",
+      "对软件评估的结果进行独立审查与验证"
+    ]
+  }
+}

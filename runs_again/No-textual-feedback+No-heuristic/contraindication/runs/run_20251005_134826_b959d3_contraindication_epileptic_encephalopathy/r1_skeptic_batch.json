@@ -1,0 +1,837 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Epileptic encephalopathy",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_valproate",
+          "name": "Valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_phenobarbital",
+          "name": "Phenobarbital"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_oxcarbazepine",
+          "name": "Oxcarbazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lacosamide",
+          "name": "Lacosamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_zonisamide",
+          "name": "Zonisamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_pregabalin",
+          "name": "Pregabalin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_eslicarbazepine",
+          "name": "Eslicarbazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_clobazam",
+          "name": "Clobazam"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_phenytoin",
+          "type": "Target",
+          "label": "OffTarget-Phenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_phenytoin",
+          "type": "Pathway",
+          "label": "RiskPathway-Phenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_phenytoin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype-Phenytoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_carbamazepine",
+          "type": "Target",
+          "label": "OffTarget-Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_carbamazepine",
+          "type": "Pathway",
+          "label": "RiskPathway-Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_carbamazepine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype-Carbamazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_valproate",
+          "type": "Target",
+          "label": "OffTarget-Valproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_valproate",
+          "type": "Pathway",
+          "label": "RiskPathway-Valproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_valproate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype-Valproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_phenobarbital",
+          "type": "Target",
+          "label": "OffTarget-Phenobarbital",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_phenobarbital",
+          "type": "Pathway",
+          "label": "RiskPathway-Phenobarbital",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_phenobarbital",
+          "type": "Phenotype",
+          "label": "AdversePhenotype-Phenobarbital",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_oxcarbazepine",
+          "type": "Target",
+          "label": "OffTarget-Oxcarbazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_oxcarbazepine",
+          "type": "Pathway",
+          "label": "RiskPathway-Oxcarbazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_oxcarbazepine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype-Oxcarbazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lacosamide",
+          "type": "Target",
+          "label": "OffTarget-Lacosamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lacosamide",
+          "type": "Pathway",
+          "label": "RiskPathway-Lacosamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lacosamide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype-Lacosamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_zonisamide",
+          "type": "Target",
+          "label": "OffTarget-Zonisamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_zonisamide",
+          "type": "Pathway",
+          "label": "RiskPathway-Zonisamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_zonisamide",
+          "type": "Phenotype",
+          "label": "AdversePhenotype-Zonisamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_topiramate",
+          "type": "Target",
+          "label": "OffTarget-Topiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_topiramate",
+          "type": "Pathway",
+          "label": "RiskPathway-Topiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_topiramate",
+          "type": "Phenotype",
+          "label": "AdversePhenotype-Topiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pregabalin",
+          "type": "Target",
+          "label": "OffTarget-Pregabalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pregabalin",
+          "type": "Pathway",
+          "label": "RiskPathway-Pregabalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pregabalin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype-Pregabalin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gabapentin",
+          "type": "Target",
+          "label": "OffTarget-Gabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gabapentin",
+          "type": "Pathway",
+          "label": "RiskPathway-Gabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gabapentin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype-Gabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_eslicarbazepine",
+          "type": "Target",
+          "label": "OffTarget-Eslicarbazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_eslicarbazepine",
+          "type": "Pathway",
+          "label": "RiskPathway-Eslicarbazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_eslicarbazepine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype-Eslicarbazepine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clobazam",
+          "type": "Target",
+          "label": "OffTarget-Clobazam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_clobazam",
+          "type": "Pathway",
+          "label": "RiskPathway-Clobazam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_clobazam",
+          "type": "Phenotype",
+          "label": "AdversePhenotype-Clobazam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_phenytoin",
+          "target": "n_ot_phenytoin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_phenytoin",
+          "target": "n_rp_phenytoin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp_phenytoin",
+          "target": "n_adv_phenytoin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_phenytoin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_carbamazepine",
+          "target": "n_ot_carbamazepine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_carbamazepine",
+          "target": "n_rp_carbamazepine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp_carbamazepine",
+          "target": "n_adv_carbamazepine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_carbamazepine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "n_ot_valproate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_valproate",
+          "target": "n_rp_valproate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp_valproate",
+          "target": "n_adv_valproate",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_valproate",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "n_ot_phenobarbital",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_phenobarbital",
+          "target": "n_rp_phenobarbital",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp_phenobarbital",
+          "target": "n_adv_phenobarbital",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_phenobarbital",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_oxcarbazepine",
+          "target": "n_ot_oxcarbazepine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_oxcarbazepine",
+          "target": "n_rp_oxcarbazepine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp_oxcarbazepine",
+          "target": "n_adv_oxcarbazepine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_oxcarbazepine",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_lacosamide",
+          "target": "n_ot_lacosamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_lacosamide",
+          "target": "n_rp_lacosamide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp_lacosamide",
+          "target": "n_adv_lacosamide",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_lacosamide",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "n_ot_zonisamide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_zonisamide",
+          "target": "n_rp_zonisamide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp_zonisamide",
+          "target": "n_adv_zonisamide",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_zonisamide",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "n_ot_topiramate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_topiramate",
+          "target": "n_rp_topiramate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp_topiramate",
+          "target": "n_adv_topiramate",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_topiramate",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_pregabalin",
+          "target": "n_ot_pregabalin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_pregabalin",
+          "target": "n_rp_pregabalin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp_pregabalin",
+          "target": "n_adv_pregabalin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_pregabalin",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "n_ot_gabapentin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_gabapentin",
+          "target": "n_rp_gabapentin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp_gabapentin",
+          "target": "n_adv_gabapentin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_gabapentin",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_eslicarbazepine",
+          "target": "n_ot_eslicarbazepine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_eslicarbazepine",
+          "target": "n_rp_eslicarbazepine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp_eslicarbazepine",
+          "target": "n_adv_eslicarbazepine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_eslicarbazepine",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_clobazam",
+          "target": "n_ot_clobazam",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用"
+        },
+        {
+          "source": "n_ot_clobazam",
+          "target": "n_rp_clobazam",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp_clobazam",
+          "target": "n_adv_clobazam",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_clobazam",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如该风险成立，将抵消净获益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "这些药物对癫痫性脑病的治疗作用是否普遍有效",
+      "是否有足够的证据支持安全性使用这些药物"
+    ],
+    "falsification_tests": [
+      "是否有证据表明这些药物能够安全治疗癫痫性脑病？",
+      "是否存在有效的替代疗法或机制解释?"
+    ],
+    "next_focus_for_pi": [
+      "提供有关药物对癫痫性脑病影响的更多临床研究数据",
+      "探讨是否存在可能的机制来缓解潜在的风险"
+    ]
+  }
+}

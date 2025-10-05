@@ -1,0 +1,366 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Generalised pustular psoriasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_acitretin",
+          "name": "Acitretin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_alefacept",
+          "name": "Alefacept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_apremilast",
+          "name": "Apremilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_brodalumab",
+          "name": "Brodalumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_fumaric_acid_esters",
+          "name": "Fumaric acid esters"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_secukinumab",
+          "name": "Secukinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tazarotene",
+          "name": "Tazarotene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ustekinumab",
+          "name": "Ustekinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 2
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_acitretin",
+          "type": "Drug",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_alefacept",
+          "type": "Drug",
+          "label": "Alefacept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_apremilast",
+          "type": "Drug",
+          "label": "Apremilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_brodalumab",
+          "type": "Drug",
+          "label": "Brodalumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fumaric_acid_esters",
+          "type": "Drug",
+          "label": "Fumaric acid esters",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_secukinumab",
+          "type": "Drug",
+          "label": "Secukinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tazarotene",
+          "type": "Drug",
+          "label": "Tazarotene",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ustekinumab",
+          "type": "Drug",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_generalised_pustular_psoriasis",
+          "type": "Disease",
+          "label": "Generalised pustular psoriasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_acitretin",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Acitretin为治疗相关类型干扰因子，先前用于掌跖脓疱病"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Adalimumab在临床上用于多种皮肤病，显示疗效"
+        },
+        {
+          "source": "drug_alefacept",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Alefacept能够调节免疫反应，适用于皮肤病"
+        },
+        {
+          "source": "drug_apremilast",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Apremilast调节炎症并有相关临床效果"
+        },
+        {
+          "source": "drug_brodalumab",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Brodalumab通过IL-17抑制机制相关"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Etanercept用于多种自身免疫性疾病，显示有效性"
+        },
+        {
+          "source": "drug_fumaric_acid_esters",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Fumaric acid esters已用于相关表型治疗"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Infliximab在系统性免疫治疗中应用"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Methotrexate已用于严重皮肤疾病"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Secukinumab有针对性IL-17机制的效果"
+        },
+        {
+          "source": "drug_tazarotene",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "Tazarotene为类视黄醇药物用于皮肤状态"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "Ustekinumab有效针对免疫相关表型"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物在机制上对 Generalised pustular psoriasis 具有支持性证据",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物对相关表型均有基础疗效（常识判断）"
+    ],
+    "uncertainties": [
+      "不同患者对疗效的反应可能存在差异（需后续检验）"
+    ],
+    "next_focus_for_pi": [
+      "是否需进一步调查药物间相互作用和联合疗法"
+    ]
+  }
+}
