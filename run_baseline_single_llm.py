@@ -1,32 +1,17 @@
-# run_baseline_single_llm.py
-# 目的：不使用 RareAgent，仅用单次 LLM 调用按 Query(disease+relation) 直接生成答案列表，
-#       并把结果统一写成 <out_dir>/<ModelTag>/<subset>/_records.jsonl 供你现有评测脚本使用。
-#
-# 用法示例：
-#   python run_baseline_single_llm.py \
-#       --subset indication \
-#       --all_csv filtered_indication_all.csv \
-#       --out_dir runs_baseline \
-#       --model all \
-#       --n 12 \
-#       --workers 6 --resume
-#
-#   python run_baseline_single_llm.py \
-#       --subset contraindication \
-#       --all_csv filtered_contraindication_all.csv \
-#       --model gpt-4o-mini --n 12
+# run_baseline_single_llm.py  (fixed)
+# 单次 LLM 基线：输入 Query(disease + relation)，输出药物名列表（作为 seeds）
+# 结果写入 <out_dir>/<ModelTag>/<subset>/_records.jsonl
 
 import os
 import re
 import json
 import argparse
 import threading
-from typing import List, Dict, Any, Tuple, Optional
+from typing import List, Dict, Any
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import pandas as pd
-
-import run_pipeline2 as rp2  # 复用其 get_client / 环境 / 代理设置
+import run_pipeline2 as rp2  # 复用其 OpenAI client / 代理设置
 
 # ----------------- 通用 I/O & 并发安全 -----------------
 _FILE_LOCKS: Dict[str, threading.Lock] = {}
@@ -64,14 +49,13 @@ def read_done_indices(jsonl_path: str) -> set:
     return done
 
 # ----------------- 载入 *_all.csv 并抽取 gold -----------------
-POS_CONCLUSIONS = {"适应症线索","可能适应症且需注意安全"}  # 用于兜底打标
+POS_CONCLUSIONS = {"适应症线索","可能适应症且需注意安全"}
 
 def load_all_csv_with_labels(path: str, subset: str) -> pd.DataFrame:
     """
     返回列：disease, normalized_drug, label(0/1)
     subset: "indication" 或 "contraindication"
-    优先用 is_gold_indication / is_gold_contraindication；若缺失回退到 conclusion 文本。
-    并对 (disease, normalized_drug) 去重：label 取 max。
+    优先 is_gold_*；若缺失回退到 conclusion 文本；(disease, normalized_drug) 去重后 label 取 max。
     """
     df = pd.read_csv(path)
     disease_col = "disease" if "disease" in df.columns else df.columns[0]
@@ -103,22 +87,31 @@ def load_all_csv_with_labels(path: str, subset: str) -> pd.DataFrame:
     out = out.groupby(["disease", "normalized_drug"], as_index=False)["label"].max()
     return out
 
-# ----------------- LLM 调用（单次生成答案列表） -----------------
+# ----------------- 解析与提取 -----------------
 CODE_BLOCK = re.compile(r"```(?:json)?\s*(\[.*?\])\s*```", flags=re.S)
 BRACKET = re.compile(r"(\[.*\])", flags=re.S)
 
 def _safe_parse_list(text: str, n: int) -> List[str]:
     """
     尝试把模型输出解析为字符串数组（最多 n 个）。
-    优先 JSON 数组；若失败，则逐行/分号/逗号切分。
+    优先 JSON 数组；否则逐行/分号/逗号切分。
     """
     if not text:
         return []
-    # 1) 直接尝试 JSON
+    # 1) 直接 JSON 数组
     try:
         obj = json.loads(text)
         if isinstance(obj, list):
             out = [str(x).strip() for x in obj if isinstance(x, (str, int, float))]
+            uniq, seen = [], set()
+            for s in out:
+                ss = s.strip()
+                if ss and ss.lower() not in seen:
+                    uniq.append(ss); seen.add(ss.lower())
+                if len(uniq) >= n: break
+            return uniq
+        if isinstance(obj, dict) and "answers" in obj and isinstance(obj["answers"], list):
+            out = [str(x).strip() for x in obj["answers"] if isinstance(x, (str, int, float))]
             uniq, seen = [], set()
             for s in out:
                 ss = s.strip()
@@ -167,61 +160,109 @@ def _safe_parse_list(text: str, n: int) -> List[str]:
     for s in raw:
         ss = s.strip().strip("-*•").strip()
         if not ss: continue
-        # 过滤明显编号前缀
-        ss = re.sub(r"^\d+[\).\s-]+", "", ss).strip()
+        ss = re.sub(r"^\d+[\).\s-]+", "", ss).strip()  # 去掉开头编号
         if not ss: continue
         if ss.lower() in seen: continue
         out.append(ss); seen.add(ss.lower())
         if len(out) >= n: break
     return out
 
+def _extract_responses_text(r) -> str:
+    """
+    稳健提取 responses.create 返回值中的纯文本。
+    避免对 None 进行迭代。
+    """
+    # 1) 直接用 output_text
+    raw = getattr(r, "output_text", None)
+    if isinstance(raw, str) and raw.strip():
+        return raw
+
+    texts: List[str] = []
+
+    # 2) 遍历 r.output（可能是 None / list / 其他）
+    out_attr = getattr(r, "output", None)
+    if isinstance(out_attr, list):
+        for item in out_attr:
+            # 可能是对象也可能是 dict
+            content = None
+            if hasattr(item, "content"):
+                content = getattr(item, "content", None)
+            elif isinstance(item, dict):
+                content = item.get("content")
+            if isinstance(content, list):
+                for cc in content:
+                    t = None
+                    if hasattr(cc, "text"):
+                        t = getattr(cc, "text", None)
+                    elif isinstance(cc, dict):
+                        t = cc.get("text") or cc.get("input_text")
+                    if isinstance(t, str) and t.strip():
+                        texts.append(t)
+
+    if texts:
+        return "\n".join(texts)
+
+    # 3) 最后兜底：把对象转字符串
+    try:
+        return str(r)
+    except Exception:
+        return ""
+
+# ----------------- 单次 LLM 调用 -----------------
+MODEL_TAGS = {
+    "gpt-4o": "GPT-4o-single",
+    "o3-mini": "O3-mini-single",
+    "gpt-4o-mini": "GPT-4o-mini-single",
+}
+
 def call_single_llm(model: str, disease: str, relation: str, n: int, retries: int = 3) -> List[str]:
     """
     只调用一次 LLM，让其返回最多 n 个药名。
-    尽量要求输出 JSON 数组；解析失败则做稳健提取。
+    - gpt-4o / gpt-4o-mini: 走 chat.completions 优先
+    - o3-mini: 专走 responses.create（更稳）
     """
     client = rp2.get_client()
     sys = (
         "You are a biomedical assistant. "
         "Given a Query with a disease entity and a relation ('indication' or 'contraindication'), "
         f"list up to {n} unique drug names (generic preferred). "
-        "CRITICAL: Return ONLY a JSON array of strings. No explanations. No markdown."
+        "Return ONLY a JSON array or an object {\"answers\": [...]}. No explanations."
     )
-    user = {
-        "query": {"entity": disease, "relation": relation},
-        "n": n
-    }
+    user = {"query": {"entity": disease, "relation": relation}, "n": n}
+
+    is_o3 = model.lower().startswith("o3")
 
     last_err = None
-    for attempt in range(retries + 1):
+    for _ in range(retries + 1):
         try:
-            # 优先 chat.completions
-            try:
-                resp = client.chat.completions.create(
-                    model=model,
-                    messages=[
-                        {"role": "system", "content": sys},
-                        {"role": "user", "content": json.dumps(user, ensure_ascii=False)}
-                    ],
-                    response_format={"type": "json_object"},  # 有些模型必须要求对象，这里让它输出 {"answers":[...]}
-                    max_tokens=1200
-                )
-                txt = resp.choices[0].message.content
-                # 支持对象或数组
+            if not is_o3:
+                # ---- chat.completions 路径（gpt-*）----
                 try:
-                    obj = json.loads(txt)
-                    if isinstance(obj, dict) and "answers" in obj and isinstance(obj["answers"], list):
-                        return _safe_parse_list(json.dumps(obj["answers"], ensure_ascii=False), n)
-                except Exception:
-                    pass
-                # 直接当数组解析
-                out = _safe_parse_list(txt, n)
-                if out:
-                    return out
-            except Exception as e1:
-                last_err = e1  # 再试 responses 接口
+                    resp = client.chat.completions.create(
+                        model=model,
+                        messages=[
+                            {"role": "system", "content": sys},
+                            {"role": "user", "content": json.dumps(user, ensure_ascii=False)}
+                        ],
+                        # 某些模型需要对象格式，这里允许两种返回
+                        response_format={"type": "json_object"},
+                        max_tokens=1200
+                    )
+                    txt = resp.choices[0].message.content
+                    # 解析对象的 answers 或直接数组
+                    try:
+                        obj = json.loads(txt)
+                        if isinstance(obj, dict) and "answers" in obj and isinstance(obj["answers"], list):
+                            return _safe_parse_list(json.dumps(obj["answers"], ensure_ascii=False), n)
+                    except Exception:
+                        pass
+                    out = _safe_parse_list(txt, n)
+                    if out:
+                        return out
+                except Exception as e1:
+                    last_err = e1  # fallthrough to responses
 
-            # fallback: responses（部分模型更兼容）
+            # ---- responses 路径（o3 或 gpt-* 兜底）----
             try:
                 r = client.responses.create(
                     model=model,
@@ -231,33 +272,27 @@ def call_single_llm(model: str, disease: str, relation: str, n: int, retries: in
                     ],
                     max_output_tokens=1200,
                 )
-                raw = getattr(r, "output_text", None)
-                if not raw:
-                    chunks = []
-                    for out in getattr(r, "output", []):
-                        for c in getattr(out, "content", []):
-                            if getattr(c, "type", "") == "output_text":
-                                chunks.append(getattr(c, "text", ""))
-                    raw = "\n".join([x for x in chunks if x])
+                raw = _extract_responses_text(r)
+                # 尝试对象 answers 或数组
+                try:
+                    obj = json.loads(raw)
+                    if isinstance(obj, dict) and "answers" in obj and isinstance(obj["answers"], list):
+                        return _safe_parse_list(json.dumps(obj["answers"], ensure_ascii=False), n)
+                except Exception:
+                    pass
                 out = _safe_parse_list(raw, n)
                 if out:
                     return out
+                last_err = RuntimeError("empty output from responses")
             except Exception as e2:
                 last_err = e2
 
         except Exception as e:
             last_err = e
 
-    # 全部失败
     raise RuntimeError(f"single LLM call failed: {last_err}")
 
 # ----------------- 主执行（每模型/每疾病各一次调用） -----------------
-MODEL_TAGS = {
-    "gpt-4o": "GPT-4o-single",
-    "o3-mini": "O3-mini-single",
-    "gpt-4o-mini": "GPT-4o-mini-single",
-}
-
 def run_subset_with_model(
     subset: str,
     df_all: pd.DataFrame,
@@ -304,10 +339,10 @@ def run_subset_with_model(
                 "subset": subset,
                 "disease": disease,
                 "relation": relation,
-                "gold_drugs": gold_drugs,     # 方便你的评测脚本
-                "seeds": seeds,               # ⭐ 评测就看这个
-                "predictions": [],            # 留空（单次调用无内部打分）
-                "ranking": seeds,             # 排序就等于生成顺序
+                "gold_drugs": gold_drugs,
+                "seeds": seeds,                # 评测读取这个
+                "predictions": [],
+                "ranking": seeds,              # 顺序即排名
                 "top_recommendations": seeds[:min(3, len(seeds))],
                 "run_dir": None,
                 "config": {"config_tag": tag, "flags": {"single_call": True, "n": n, "model": model}},
@@ -351,7 +386,7 @@ def run_subset_with_model(
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--subset", choices=["indication","contraindication"], required=True)
-    ap.add_argument("--all_csv", type=str, default="filtered_indication_all.csv", help="filtered_*_all.csv")
+    ap.add_argument("--all_csv", type=str, default="filtered_contraindication_all.csv", help="filtered_*_all.csv")
     ap.add_argument("--out_dir", type=str, default="runs_baseline")
     ap.add_argument("--model", choices=["gpt-4o","o3-mini","gpt-4o-mini","all"], default="all")
     ap.add_argument("--n", type=int, default=12, help="每个 Query 生成的答案数量")
@@ -360,13 +395,11 @@ def main():
     args = ap.parse_args()
 
     ensure_dir(args.out_dir)
-
     df = load_all_csv_with_labels(args.all_csv, subset=args.subset)
 
     models = ["gpt-4o","o3-mini","gpt-4o-mini"] if args.model == "all" else [args.model]
     for m in models:
         print(f"\n==== Running baseline model: {m} ====")
-        # 每个模型各自的 _records.jsonl，互不影响
         run_subset_with_model(
             subset=args.subset,
             df_all=df,
