@@ -1,0 +1,628 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Dornase alfa potential adverse effects",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "N-acetylcysteine risk evaluation",
+            "expectation": "若风险存在，更新对应节点的权重",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ambroxol",
+          "type": "Drug",
+          "label": "Ambroxol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ipratropium_bromide",
+          "type": "Drug",
+          "label": "Ipratropium bromide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bromhexine",
+          "type": "Drug",
+          "label": "Bromhexine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_albuterol",
+          "type": "Drug",
+          "label": "Albuterol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_salbutamol",
+          "type": "Drug",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_l_teaninine",
+          "type": "Drug",
+          "label": "L-teaninine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fluticasone",
+          "type": "Drug",
+          "label": "Fluticasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_montelukast",
+          "type": "Drug",
+          "label": "Montelukast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "node_primary_ciliary_dyskinesia",
+          "type": "Disease",
+          "label": "Primary ciliary dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ambroxol",
+          "type": "Drug",
+          "label": "Ambroxol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ipratropium_bromide",
+          "type": "Drug",
+          "label": "Ipratropium bromide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_bromhexine",
+          "type": "Drug",
+          "label": "Bromhexine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_albuterol",
+          "type": "Drug",
+          "label": "Albuterol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_salbutamol",
+          "type": "Drug",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_l_teaninine",
+          "type": "Drug",
+          "label": "L-teaninine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_fluticasone",
+          "type": "Drug",
+          "label": "Fluticasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_montelukast",
+          "type": "Drug",
+          "label": "Montelukast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot1",
+          "type": "Target",
+          "label": "OffTarget1",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp1",
+          "type": "Pathway",
+          "label": "RiskPathway1",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv1",
+          "type": "Phenotype",
+          "label": "AdversePhenotype1",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Ambroxol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Ipratropium bromide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Bromhexine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Albuterol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "L-teaninine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Fluticasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Montelukast",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_dornase_alfa",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于清除气道粘液的药物"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "有助于减轻气道黏液和炎症"
+        },
+        {
+          "source": "drug_ambroxol",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于改善气道清除和减轻咳嗽"
+        },
+        {
+          "source": "drug_ipratropium_bromide",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "具有支气管扩张作用，改善呼吸"
+        },
+        {
+          "source": "drug_bromhexine",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "助于气道分泌物排出"
+        },
+        {
+          "source": "drug_albuterol",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "支气管扩张药，可改善呼吸功能"
+        },
+        {
+          "source": "drug_salbutamol",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "支气管扩张，有助于改善气流"
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "抗炎作用可能有助于气道炎症治疗"
+        },
+        {
+          "source": "drug_l_teaninine",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能改善气道反应性"
+        },
+        {
+          "source": "drug_fluticasone",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "具有抗炎特性，可能改善气道健康"
+        },
+        {
+          "source": "drug_montelukast",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "抗炎药，可能改善气道敏感性与反应"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "可能用于控制严重炎症"
+        },
+        {
+          "source": "n_dornase_alfa",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点组织"
+        },
+        {
+          "source": "n_ot1",
+          "target": "n_rp1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关的风险通路"
+        },
+        {
+          "source": "n_rp1",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv1",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消药物益处"
+        },
+        {
+          "source": "n_n_acetylcysteine",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "作用于非靶点"
+        },
+        {
+          "source": "n_ambroxol",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响可能的非靶点"
+        },
+        {
+          "source": "n_ipratropium_bromide",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁路作用"
+        },
+        {
+          "source": "n_bromhexine",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能干扰靶向效果"
+        },
+        {
+          "source": "n_albuterol",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "偏离靶向机制"
+        },
+        {
+          "source": "n_salbutamol",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "作用不当的风险"
+        },
+        {
+          "source": "n_azithromycin",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "抗生素作用于非靶点"
+        },
+        {
+          "source": "n_l_teaninine",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "潜在作用机制不明确"
+        },
+        {
+          "source": "n_fluticasone",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "潜在抑制反应"
+        },
+        {
+          "source": "n_montelukast",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能作用于非靶点"
+        },
+        {
+          "source": "n_prednisone",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能影响免疫应答"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "set_weights": [
+            {
+              "edge_id": "e_refute_dornase_alfa",
+              "weight": 0.85,
+              "rationale": "若Dornase alfa确实影响非靶点，将显著降低其益处"
+            }
+          ],
+          "conflict_hotspots": [
+            {
+              "topic": "Dornase alfa potential adverse effects",
+              "pro_nodes": [
+                "n_dornase_alfa"
+              ],
+              "con_nodes": [
+                "n_adv1"
+              ],
+              "note": "药物可能导致严重不良反应"
+            }
+          ]
+        },
+        "notes": "已完成Dornase alfa的安全性压力测试：更新了边的权重以反映潜在风险"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "仍需评估Dornase alfa在长期使用中的潜在影响和风险"
+    ]
+  }
+}

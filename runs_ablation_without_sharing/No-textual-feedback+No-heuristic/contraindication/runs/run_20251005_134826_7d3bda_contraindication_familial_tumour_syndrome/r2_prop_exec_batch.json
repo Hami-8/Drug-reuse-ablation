@@ -1,0 +1,836 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Familial tumour syndromes of the central and peripheral nervous system",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_temozolomide",
+            "via": [
+              "n_tg1"
+            ],
+            "to": "n_pb1",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_carboplatin",
+            "via": [
+              "n_tg2"
+            ],
+            "to": "n_pb1",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_tg1",
+          "type": "Target",
+          "label": "MGMT",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg2",
+          "type": "Target",
+          "label": "TOP1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tg3",
+          "type": "Target",
+          "label": "DNA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb1",
+          "type": "Pathway",
+          "label": "DNA Repair Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb2",
+          "type": "Pathway",
+          "label": "Apoptosis Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_d1",
+          "type": "Disease",
+          "label": "Brain Tumors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_d2",
+          "type": "Disease",
+          "label": "Neurofibromatosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_temozolomide",
+          "type": "Target",
+          "label": "OffTargetTemozolomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_carboplatin",
+          "type": "Target",
+          "label": "OffTargetCarboplatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cisplatin",
+          "type": "Target",
+          "label": "OffTargetCisplatin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_vincristine",
+          "type": "Target",
+          "label": "OffTargetVincristine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_etoposide",
+          "type": "Target",
+          "label": "OffTargetEtoposide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lomustine",
+          "type": "Target",
+          "label": "OffTargetLomustine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_doxorubicin",
+          "type": "Target",
+          "label": "OffTargetDoxorubicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thiotepa",
+          "type": "Target",
+          "label": "OffTargetThiotepa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bevacizumab",
+          "type": "Target",
+          "label": "OffTargetBevacizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_radium_223",
+          "type": "Target",
+          "label": "OffTargetRadium223",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nitrosoureas",
+          "type": "Target",
+          "label": "OffTargetNitrosoureas",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sirolimus",
+          "type": "Target",
+          "label": "OffTargetSirolimus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "RiskPathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Temozolomide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_temozolomide",
+          "type": "Drug",
+          "label": "Temozolomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Carboplatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_carboplatin",
+          "type": "Drug",
+          "label": "Carboplatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Cisplatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cisplatin",
+          "type": "Drug",
+          "label": "Cisplatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_vincristine",
+          "type": "Drug",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Etoposide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_etoposide",
+          "type": "Drug",
+          "label": "Etoposide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Lomustine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lomustine",
+          "type": "Drug",
+          "label": "Lomustine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_doxorubicin",
+          "type": "Drug",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Thiotepa",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_thiotepa",
+          "type": "Drug",
+          "label": "Thiotepa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Bevacizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_bevacizumab",
+          "type": "Drug",
+          "label": "Bevacizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Radium-223",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_radium_223",
+          "type": "Drug",
+          "label": "Radium-223",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Nitrosoureas",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nitrosoureas",
+          "type": "Drug",
+          "label": "Nitrosoureas",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sirolimus",
+          "type": "Drug",
+          "label": "Sirolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_temozolomide",
+          "target": "n_tg1",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知针对 methylation 机制有效"
+        },
+        {
+          "source": "drug_carboplatin",
+          "target": "n_tg2",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "靶向 DNA 拓扑异构酶相关路径"
+        },
+        {
+          "source": "drug_cisplatin",
+          "target": "n_tg3",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "直接作用于 DNA 以造成链断裂"
+        },
+        {
+          "source": "drug_vincristine",
+          "target": "n_pb2",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "调节细胞分裂涉及凋亡通路"
+        },
+        {
+          "source": "drug_etoposide",
+          "target": "n_tg2",
+          "relation": "acts_on",
+          "weight": 0.78,
+          "agent": "Proponent",
+          "rationale": "靶向 DNA 复制过程中的关键酶"
+        },
+        {
+          "source": "drug_lomustine",
+          "target": "n_pb1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "参与 DNA 修复过程"
+        },
+        {
+          "source": "drug_doxorubicin",
+          "target": "n_pb2",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "通过影响凋亡影响肿瘤细胞"
+        },
+        {
+          "source": "drug_thiotepa",
+          "target": "n_tg3",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "直接与 DNA 结合，干扰其功能"
+        },
+        {
+          "source": "drug_bevacizumab",
+          "target": "n_d1",
+          "relation": "supports",
+          "weight": 0.68,
+          "agent": "Proponent",
+          "rationale": "抗血管生成，帮助抑制肿瘤生长"
+        },
+        {
+          "source": "drug_radium_223",
+          "target": "n_d2",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "靶向骨转移，改善患者生存率"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "n_pb2",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过抑制mTOR途径促进凋亡"
+        },
+        {
+          "source": "drug_temozolomide",
+          "target": "n_ot_temozolomide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重靶点风险"
+        },
+        {
+          "source": "drug_carboplatin",
+          "target": "n_ot_carboplatin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重靶点风险"
+        },
+        {
+          "source": "drug_cisplatin",
+          "target": "n_ot_cisplatin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重靶点风险"
+        },
+        {
+          "source": "drug_vincristine",
+          "target": "n_ot_vincristine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重靶点风险"
+        },
+        {
+          "source": "drug_etoposide",
+          "target": "n_ot_etoposide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重靶点风险"
+        },
+        {
+          "source": "drug_lomustine",
+          "target": "n_ot_lomustine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重靶点风险"
+        },
+        {
+          "source": "drug_doxorubicin",
+          "target": "n_ot_doxorubicin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重靶点风险"
+        },
+        {
+          "source": "drug_thiotepa",
+          "target": "n_ot_thiotepa",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重靶点风险"
+        },
+        {
+          "source": "drug_bevacizumab",
+          "target": "n_ot_bevacizumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重靶点风险"
+        },
+        {
+          "source": "drug_radium_223",
+          "target": "n_ot_radium_223",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重靶点风险"
+        },
+        {
+          "source": "drug_nitrosoureas",
+          "target": "n_ot_nitrosoureas",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重靶点风险"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "n_ot_sirolimus",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在多重靶点风险"
+        },
+        {
+          "source": "n_ot_temozolomide",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险通路"
+        },
+        {
+          "source": "n_ot_carboplatin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险通路"
+        },
+        {
+          "source": "n_ot_cisplatin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险通路"
+        },
+        {
+          "source": "n_ot_vincristine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险通路"
+        },
+        {
+          "source": "n_ot_etoposide",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险通路"
+        },
+        {
+          "source": "n_ot_lomustine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险通路"
+        },
+        {
+          "source": "n_ot_doxorubicin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险通路"
+        },
+        {
+          "source": "n_ot_thiotepa",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险通路"
+        },
+        {
+          "source": "n_ot_bevacizumab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险通路"
+        },
+        {
+          "source": "n_ot_radium_223",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险通路"
+        },
+        {
+          "source": "n_ot_nitrosoureas",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险通路"
+        },
+        {
+          "source": "n_ot_sirolimus",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "涉及风险通路"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消潜在获益"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_temozolomide",
+              "target": "n_pb1",
+              "relation": "involved_in",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "通过靶向MGMT影响DNA修复路径"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Temozolomide → MGMT → DNA Repair Pathway，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

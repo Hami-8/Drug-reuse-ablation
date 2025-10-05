@@ -1,0 +1,368 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Inherited white matter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_methylprednisolone",
+          "name": "Methylprednisolone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_methylcobalamin",
+          "name": "Methylcobalamin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_fingolimod",
+          "name": "Fingolimod"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_thalidomide",
+          "name": "Thalidomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_interferon_beta",
+          "name": "Interferon beta"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_dimethyl_fumarate",
+          "name": "Dimethyl fumarate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_natalizumab",
+          "name": "Natalizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ganciclovir",
+          "name": "Ganciclovir"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_mp",
+          "type": "Drug",
+          "label": "Methylprednisolone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cs",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mc",
+          "type": "Drug",
+          "label": "Methylcobalamin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fg",
+          "type": "Drug",
+          "label": "Fingolimod",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_th",
+          "type": "Drug",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_if",
+          "type": "Drug",
+          "label": "Interferon beta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_df",
+          "type": "Drug",
+          "label": "Dimethyl fumarate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nt",
+          "type": "Drug",
+          "label": "Natalizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rt",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gv",
+          "type": "Drug",
+          "label": "Ganciclovir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_az",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pd",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_wmd",
+          "type": "Disease",
+          "label": "Inherited white matter disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_mp",
+          "target": "n_wmd",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响白质疾病"
+        },
+        {
+          "source": "n_cs",
+          "target": "n_wmd",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "治疗效用于相关疾病"
+        },
+        {
+          "source": "n_mc",
+          "target": "n_wmd",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与神经功能相关"
+        },
+        {
+          "source": "n_fg",
+          "target": "n_wmd",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能作用于免疫系统"
+        },
+        {
+          "source": "n_th",
+          "target": "n_wmd",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "历史用药信息支持"
+        },
+        {
+          "source": "n_if",
+          "target": "n_wmd",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "相关临床影响"
+        },
+        {
+          "source": "n_df",
+          "target": "n_wmd",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有效于某些白质病变"
+        },
+        {
+          "source": "n_nt",
+          "target": "n_wmd",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与多发性硬化相关性"
+        },
+        {
+          "source": "n_rt",
+          "target": "n_wmd",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "适应症与免疫系统关联"
+        },
+        {
+          "source": "n_gv",
+          "target": "n_wmd",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "对病毒性病因相关"
+        },
+        {
+          "source": "n_az",
+          "target": "n_wmd",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能影响白质健康"
+        },
+        {
+          "source": "n_pd",
+          "target": "n_wmd",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "具备一定的药理作用"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物可能通过不同机制影响遗传性白质疾病的表型",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "假设药物在适用剂量下具有到达相关靶点的能力"
+    ],
+    "uncertainties": [
+      "特定药物在遗传性白质疾病中的安全性和长期效应仍需进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需要更深入探讨药物对特定表型影响的机制"
+    ]
+  }
+}

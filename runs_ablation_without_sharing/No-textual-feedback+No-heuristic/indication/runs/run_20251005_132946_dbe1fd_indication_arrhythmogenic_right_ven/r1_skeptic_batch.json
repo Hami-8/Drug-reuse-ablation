@@ -1,0 +1,574 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_sotalol",
+          "name": "Sotalol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_dronedarone",
+          "name": "Dronedarone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_flecainide",
+          "name": "Flecainide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_propafenone",
+          "name": "Propafenone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_lidocaine",
+          "name": "Lidocaine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_digoxin",
+          "name": "Digoxin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_disopyramide",
+          "name": "Disopyramide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_mexiletine",
+          "name": "Mexiletine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_verapamil",
+          "name": "Verapamil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "OffTarget: Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sotalol",
+          "type": "Target",
+          "label": "OffTarget: Sotalol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dronedarone",
+          "type": "Target",
+          "label": "OffTarget: Dronedarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_flecainide",
+          "type": "Target",
+          "label": "OffTarget: Flecainide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_propafenone",
+          "type": "Target",
+          "label": "OffTarget: Propafenone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lidocaine",
+          "type": "Target",
+          "label": "OffTarget: Lidocaine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_betablockers",
+          "type": "Target",
+          "label": "OffTarget: Beta-blockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_digoxin",
+          "type": "Target",
+          "label": "OffTarget: Digoxin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_disopyramide",
+          "type": "Target",
+          "label": "OffTarget: Disopyramide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mexiletine",
+          "type": "Target",
+          "label": "OffTarget: Mexiletine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_quinidine",
+          "type": "Target",
+          "label": "OffTarget: Quinidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_verapamil",
+          "type": "Target",
+          "label": "OffTarget: Verapamil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype: Arrhythmogenic Events",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点机制"
+        },
+        {
+          "source": "drug_sotalol",
+          "target": "n_ot_sotalol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点机制"
+        },
+        {
+          "source": "drug_dronedarone",
+          "target": "n_ot_dronedarone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点机制"
+        },
+        {
+          "source": "drug_flecainide",
+          "target": "n_ot_flecainide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点机制"
+        },
+        {
+          "source": "drug_propafenone",
+          "target": "n_ot_propafenone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点机制"
+        },
+        {
+          "source": "drug_lidocaine",
+          "target": "n_ot_lidocaine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点机制"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_ot_betablockers",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点机制"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "n_ot_digoxin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点机制"
+        },
+        {
+          "source": "drug_disopyramide",
+          "target": "n_ot_disopyramide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点机制"
+        },
+        {
+          "source": "drug_mexiletine",
+          "target": "n_ot_mexiletine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点机制"
+        },
+        {
+          "source": "drug_quinidine",
+          "target": "n_ot_quinidine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点机制"
+        },
+        {
+          "source": "drug_verapamil",
+          "target": "n_ot_verapamil",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶点机制"
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_ot_sotalol",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_ot_dronedarone",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_ot_flecainide",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_ot_propafenone",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_ot_lidocaine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_ot_betablockers",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_ot_digoxin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_ot_disopyramide",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_ot_mexiletine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_ot_quinidine",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_ot_verapamil",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "相关风险路径"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致心律失常事件"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险存在，将抵消阿莫达酮的潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险存在，将抵消索他洛尔的潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险存在，将抵消多奈哌的潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险存在，将抵消氟卡尼的潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险存在，将抵消普鲁卡因的潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险存在，将抵消利多卡因的潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险存在，将抵消β-受体拮抗剂的潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险存在，将抵消地高辛的潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险存在，将抵消二异丙肾上腺素的潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险存在，将抵消美克利宁的潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险存在，将抵消奎尼丁的潜在益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险存在，将抵消维拉帕米的潜在益处"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "这些药物是否会引发心律失常事件？",
+      "药物对关键靶点的影响是否被充分评估？",
+      "各治疗的长期效果是否一样？"
+    ],
+    "falsification_tests": [
+      "是否有证据显示这些药物在该病症中提高了心律失常风险？",
+      "现有研究是否关注药物与心律失常的相关性？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供抗击心律失常机制的有效证据",
+      "评估药物的临床安全性和长远效果"
+    ]
+  }
+}

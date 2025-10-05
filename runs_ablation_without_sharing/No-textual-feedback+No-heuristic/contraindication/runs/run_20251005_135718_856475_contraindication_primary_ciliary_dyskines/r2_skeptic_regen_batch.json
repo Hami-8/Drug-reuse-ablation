@@ -1,0 +1,267 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_aminophylline",
+          "name": "Aminophylline"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_clarithromycin",
+          "name": "Clarithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_epinephrine",
+          "name": "Epinephrine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_montelukast",
+          "name": "Montelukast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_roflumilast",
+          "name": "Roflumilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_theophylline",
+          "name": "Theophylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_tobramycin",
+          "name": "Tobramycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "off_target_effects",
+          "type": "Target",
+          "label": "Off-target effects related to bronchial response",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "increased_inflammation",
+          "type": "Pathway",
+          "label": "Increased inflammatory response",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "worsened_symptoms",
+          "type": "Phenotype",
+          "label": "Worsened respiratory symptoms",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "impaired_ciliary_function",
+          "type": "Phenotype",
+          "label": "Impaired ciliary function",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_aminophylline",
+          "target": "off_target_effects",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响气道过敏反应"
+        },
+        {
+          "source": "off_target_effects",
+          "target": "increased_inflammation",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致炎症反应增加"
+        },
+        {
+          "source": "increased_inflammation",
+          "target": "worsened_symptoms",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "加重呼吸道症状"
+        },
+        {
+          "source": "drug_aminophylline",
+          "target": "impaired_ciliary_function",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能抑制纤毛功能"
+        },
+        {
+          "source": "impaired_ciliary_function",
+          "target": "worsened_symptoms",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "导致症状加重"
+        },
+        {
+          "source": "worsened_symptoms",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在禁忌，会抵消预期收益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "off_target_safety_concerns",
+          "pro_nodes": [
+            "off_target_effects"
+          ],
+          "con_nodes": [
+            "drug_aminophylline"
+          ],
+          "note": "可能的副作用与使用在困难疾病中的效果不一致"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "存在可能影响呼吸道功能的副作用风险",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "可能导致气道炎症及症状加重的机制存在",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物对靶器官的影响是否被充分评估",
+      "是否存在显著的耐受或反跳现象"
+    ],
+    "falsification_tests": [
+      "是否有证据显示该药物对呼吸道疾病的长期改善效果？",
+      "是否存在不良反应数据支持该药物的禁忌?"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 就安全性和疗效提供更多证据",
+      "明确潜在的负面作用及机制"
+    ]
+  }
+}

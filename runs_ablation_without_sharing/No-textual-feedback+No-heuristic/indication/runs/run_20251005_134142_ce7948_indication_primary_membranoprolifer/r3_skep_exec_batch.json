@@ -1,0 +1,778 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Corticosteroids Adverse Phenotype",
+            "expectation": "分析可能产生的副作用与通路影响",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Cyclosporine Adverse Phenotype",
+            "expectation": "分析可能产生的副作用与通路影响",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Rituximab Adverse Phenotype",
+            "expectation": "分析可能产生的副作用与通路影响",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Mycophenolate Adverse Phenotype",
+            "expectation": "分析可能产生的副作用与通路影响",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_plasma_exchange",
+          "type": "Drug",
+          "label": "Plasma exchange",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_intravenous_immunoglobulin",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_albumin_infusion",
+          "type": "Drug",
+          "label": "Albumin infusion",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fish_oil_supplements",
+          "type": "Drug",
+          "label": "Fish oil supplements",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_primary_membranoproliferative_glomerulonephritis",
+          "type": "Disease",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "Corticosteroids Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_corticosteroids",
+          "type": "Pathway",
+          "label": "Corticosteroids Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_corticosteroids",
+          "type": "Phenotype",
+          "label": "Corticosteroids Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclosporine",
+          "type": "Target",
+          "label": "Cyclosporine Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cyclosporine",
+          "type": "Pathway",
+          "label": "Cyclosporine Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cyclosporine",
+          "type": "Phenotype",
+          "label": "Cyclosporine Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rituximab",
+          "type": "Target",
+          "label": "Rituximab Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rituximab",
+          "type": "Pathway",
+          "label": "Rituximab Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rituximab",
+          "type": "Phenotype",
+          "label": "Rituximab Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mycophenolate",
+          "type": "Target",
+          "label": "Mycophenolate mofetil Off-target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mycophenolate",
+          "type": "Pathway",
+          "label": "Mycophenolate Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mycophenolate",
+          "type": "Phenotype",
+          "label": "Mycophenolate Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Plasma exchange",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_plasma_exchange",
+          "type": "Drug",
+          "label": "Plasma exchange",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_intravenous_immunoglobulin",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Albumin infusion",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_albumin_infusion",
+          "type": "Drug",
+          "label": "Albumin infusion",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Fish oil supplements",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fish_oil_supplements",
+          "type": "Drug",
+          "label": "Fish oil supplements",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Sodium phenylbutyrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_corticosteroids",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "常用药物用于该病的治疗"
+        },
+        {
+          "source": "n_cyclosporine",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "显示出对该病有疗效"
+        },
+        {
+          "source": "n_rituximab",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "在特定情况下被使用"
+        },
+        {
+          "source": "n_mycophenolate_mofetil",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "免疫抑制药物的常识应用"
+        },
+        {
+          "source": "n_azathioprine",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与免疫相关的治疗应用"
+        },
+        {
+          "source": "n_tacrolimus",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "作为免疫抑制疗法的重要药物"
+        },
+        {
+          "source": "n_plasma_exchange",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "在严重病例中的应用"
+        },
+        {
+          "source": "n_intravenous_immunoglobulin",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "作为免疫疗法的一种选择"
+        },
+        {
+          "source": "n_eculizumab",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "显示出潜在疗效"
+        },
+        {
+          "source": "n_albumin_infusion",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "用于支持性治疗"
+        },
+        {
+          "source": "n_fish_oil_supplements",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "有辅助潜力的常识"
+        },
+        {
+          "source": "n_sodium_phenylbutyrate",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "潜在的药物再利用可能性"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用可能低效"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp_corticosteroids",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发的风险通路关联"
+        },
+        {
+          "source": "n_rp_corticosteroids",
+          "target": "n_adv_corticosteroids",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发的不良表型"
+        },
+        {
+          "source": "n_adv_corticosteroids",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险通路的存在可能抵消净获益"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_ot_cyclosporine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用可能低效"
+        },
+        {
+          "source": "n_ot_cyclosporine",
+          "target": "n_rp_cyclosporine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发的风险通路关联"
+        },
+        {
+          "source": "n_rp_cyclosporine",
+          "target": "n_adv_cyclosporine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发的不良表型"
+        },
+        {
+          "source": "n_adv_cyclosporine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险通路的存在可能抵消净获益"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "n_ot_rituximab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用可能低效"
+        },
+        {
+          "source": "n_ot_rituximab",
+          "target": "n_rp_rituximab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发的风险通路关联"
+        },
+        {
+          "source": "n_rp_rituximab",
+          "target": "n_adv_rituximab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发的不良表型"
+        },
+        {
+          "source": "n_adv_rituximab",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险通路的存在可能抵消净获益"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "n_ot_mycophenolate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用可能低效"
+        },
+        {
+          "source": "n_ot_mycophenolate",
+          "target": "n_rp_mycophenolate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发的风险通路关联"
+        },
+        {
+          "source": "n_rp_mycophenolate",
+          "target": "n_adv_mycophenolate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发的不良表型"
+        },
+        {
+          "source": "n_adv_mycophenolate",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险通路的存在可能抵消净获益"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "conflict_hotspots": [
+            {
+              "topic": "Corticosteroids Adverse Phenotype",
+              "pro_nodes": [
+                "n_rp_corticosteroids"
+              ],
+              "con_nodes": [
+                "n_adv_corticosteroids"
+              ],
+              "note": "风险可能抵消药物的整体效益"
+            }
+          ]
+        },
+        "notes": "已完成对皮质类固醇的安全性压力测试，分析了可能的副作用与通路影响"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "conflict_hotspots": [
+            {
+              "topic": "Cyclosporine Adverse Phenotype",
+              "pro_nodes": [
+                "n_rp_cyclosporine"
+              ],
+              "con_nodes": [
+                "n_adv_cyclosporine"
+              ],
+              "note": "风险可能抵消药物的整体效益"
+            }
+          ]
+        },
+        "notes": "已完成对环孢素的安全性压力测试，分析了可能的副作用与通路影响"
+      },
+      {
+        "action_ref": 2,
+        "status": "done",
+        "graph_updates": {
+          "conflict_hotspots": [
+            {
+              "topic": "Rituximab Adverse Phenotype",
+              "pro_nodes": [
+                "n_rp_rituximab"
+              ],
+              "con_nodes": [
+                "n_adv_rituximab"
+              ],
+              "note": "风险可能抵消药物的整体效益"
+            }
+          ]
+        },
+        "notes": "已完成对利妥昔单抗的安全性压力测试，分析了可能的副作用与通路影响"
+      },
+      {
+        "action_ref": 3,
+        "status": "done",
+        "graph_updates": {
+          "conflict_hotspots": [
+            {
+              "topic": "Mycophenolate Adverse Phenotype",
+              "pro_nodes": [
+                "n_rp_mycophenolate"
+              ],
+              "con_nodes": [
+                "n_adv_mycophenolate"
+              ],
+              "note": "风险可能抵消药物的整体效益"
+            }
+          ]
+        },
+        "notes": "已完成对吗啉酸酯的安全性压力测试，分析了可能的副作用与通路影响"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": []
+  }
+}

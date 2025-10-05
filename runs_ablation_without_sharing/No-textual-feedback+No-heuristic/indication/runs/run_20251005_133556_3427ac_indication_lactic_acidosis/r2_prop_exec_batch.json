@@ -1,0 +1,504 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Lactic acidosis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_bicarbonate",
+            "via": [],
+            "to": "n_la",
+            "success_criteria": "至少增加一条支持性路径，减少冲突影响",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_sodium_bicarbonate",
+            "via": [],
+            "to": "n_la",
+            "success_criteria": "至少增加一条支持性路径，减少冲突影响",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_bicarbonate",
+          "type": "Drug",
+          "label": "Bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_bicarbonate",
+          "type": "Drug",
+          "label": "Sodium Bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiamine",
+          "type": "Drug",
+          "label": "Thiamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dopamine",
+          "type": "Drug",
+          "label": "Dopamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_norepinephrine",
+          "type": "Drug",
+          "label": "Norepinephrine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_levophed",
+          "type": "Drug",
+          "label": "Levophed",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_lactate",
+          "type": "Drug",
+          "label": "Sodium Lactate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_digoxin",
+          "type": "Drug",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lactated_ringer_s",
+          "type": "Drug",
+          "label": "Lactated Ringer's",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_aminophylline",
+          "type": "Drug",
+          "label": "Aminophylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_la",
+          "type": "Disease",
+          "label": "Lactic acidosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_acidosis",
+          "type": "Phenotype",
+          "label": "Lactic acidosis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot1",
+          "type": "Target",
+          "label": "Sodium Bicarbonate Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp1",
+          "type": "Pathway",
+          "label": "Sodium Bicarbonate Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv1",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Sodium Bicarbonate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot2",
+          "type": "Target",
+          "label": "Metformin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp2",
+          "type": "Pathway",
+          "label": "Metformin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv2",
+          "type": "Phenotype",
+          "label": "Adverse Effects from Metformin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Bicarbonate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Sodium Bicarbonate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Thiamine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Dopamine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Norepinephrine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Levophed",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Sodium Lactate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Lactated Ringer's",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Aminophylline",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_bicarbonate",
+          "target": "n_la",
+          "relation": "treats",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知治疗手段"
+        },
+        {
+          "source": "drug_sodium_bicarbonate",
+          "target": "n_la",
+          "relation": "treats",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "临床应用广泛"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "n_la",
+          "relation": "associated_with",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与乳酸中毒相关"
+        },
+        {
+          "source": "drug_thiamine",
+          "target": "n_la",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "代谢支持性"
+        },
+        {
+          "source": "drug_insulin",
+          "target": "n_la",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "在糖尿病并发症中应用"
+        },
+        {
+          "source": "drug_dopamine",
+          "target": "n_la",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "改善循环血流"
+        },
+        {
+          "source": "drug_norepinephrine",
+          "target": "n_la",
+          "relation": "supports",
+          "weight": 0.58,
+          "agent": "Proponent",
+          "rationale": "在休克中的应用"
+        },
+        {
+          "source": "drug_levophed",
+          "target": "n_la",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "提高血压改善组织灌注"
+        },
+        {
+          "source": "drug_sodium_lactate",
+          "target": "n_la",
+          "relation": "treats",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "替代治疗选项"
+        },
+        {
+          "source": "drug_digoxin",
+          "target": "n_la",
+          "relation": "associated_with",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "心脏支持潜在作用"
+        },
+        {
+          "source": "drug_lactated_ringer_s",
+          "target": "n_la",
+          "relation": "treats",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "液体补充"
+        },
+        {
+          "source": "drug_aminophylline",
+          "target": "n_la",
+          "relation": "supports",
+          "weight": 0.48,
+          "agent": "Proponent",
+          "rationale": "改善呼吸功能"
+        },
+        {
+          "source": "drug_bicarbonate",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用导致风险"
+        },
+        {
+          "source": "n_ot1",
+          "target": "n_rp1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp1",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv1",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消净获益"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "n_ot2",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用导致风险"
+        },
+        {
+          "source": "n_ot2",
+          "target": "n_rp2",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp2",
+          "target": "n_adv2",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv2",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，抵消净获益"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_bicarbonate",
+              "target": "n_la",
+              "relation": "modulates",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "通过调节酸碱平衡来治疗乳酸中毒"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "增加了Bicarbonate对Lactic acidosis的支持关系，形成了新的支持路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

@@ -1,0 +1,485 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_ezetimibe",
+          "name": "Ezetimibe"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_atorvastatin",
+          "name": "Atorvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_simvastatin",
+          "name": "Simvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_rosuvastatin",
+          "name": "Rosuvastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_lovastatin",
+          "name": "Lovastatin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ciprofibrate",
+          "name": "Ciprofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_mipomersen",
+          "name": "Mipomersen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_lomitapide",
+          "name": "Lomitapide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ezetimibe",
+          "type": "Drug",
+          "label": "Ezetimibe",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_omega_3_fatty_acids",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_simvastatin",
+          "type": "Drug",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rosuvastatin",
+          "type": "Drug",
+          "label": "Rosuvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lovastatin",
+          "type": "Drug",
+          "label": "Lovastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ciprofibrate",
+          "type": "Drug",
+          "label": "Ciprofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mipomersen",
+          "type": "Drug",
+          "label": "Mipomersen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lomitapide",
+          "type": "Drug",
+          "label": "Lomitapide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_ppar_alpha",
+          "type": "Target",
+          "label": "PPARα",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_fatty_acid_metabolism",
+          "type": "Pathway",
+          "label": "Fatty Acid Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_severe_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe Hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_fenofibrate",
+          "target": "target_ppar_alpha",
+          "relation": "activates",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "激活 PPARα 可降脂"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "target_ppar_alpha",
+          "relation": "activates",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "激活 PPARα 影响脂类代谢"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "target_ppar_alpha",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "调节 PPARα 相关功能"
+        },
+        {
+          "source": "drug_ezetimibe",
+          "target": "pathway_fatty_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过脂肪酸代谢通路影响"
+        },
+        {
+          "source": "drug_omega_3_fatty_acids",
+          "target": "pathway_fatty_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过改善代谢途径"
+        },
+        {
+          "source": "drug_atorvastatin",
+          "target": "pathway_fatty_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响脂质代谢"
+        },
+        {
+          "source": "drug_simvastatin",
+          "target": "pathway_fatty_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "参与脂类代谢"
+        },
+        {
+          "source": "drug_rosuvastatin",
+          "target": "pathway_fatty_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "影响胆固醇代谢"
+        },
+        {
+          "source": "drug_lovastatin",
+          "target": "pathway_fatty_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "降脂作用"
+        },
+        {
+          "source": "drug_ciprofibrate",
+          "target": "target_ppar_alpha",
+          "relation": "activates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "激活 PPARα 相关"
+        },
+        {
+          "source": "drug_mipomersen",
+          "target": "pathway_fatty_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "影响脂质代谢途径"
+        },
+        {
+          "source": "drug_lomitapide",
+          "target": "pathway_fatty_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "通过改善代谢"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "treats",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知用于治疗高甘油三酯血症"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "treats",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "可用于治疗"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有助于降低甘油三酯"
+        },
+        {
+          "source": "drug_ezetimibe",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "treats",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "辅助治疗效果"
+        },
+        {
+          "source": "drug_omega_3_fatty_acids",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "treats",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "有助于减轻病症"
+        },
+        {
+          "source": "drug_atorvastatin",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "treats",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "使用广泛的降脂药"
+        },
+        {
+          "source": "drug_simvastatin",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "treats",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "临床使用情况"
+        },
+        {
+          "source": "drug_rosuvastatin",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "treats",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "相关作用"
+        },
+        {
+          "source": "drug_lovastatin",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "treats",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "疗效已被验证"
+        },
+        {
+          "source": "drug_ciprofibrate",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "treats",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "替代药物"
+        },
+        {
+          "source": "drug_mipomersen",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "treats",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "降甘油三酯的药物"
+        },
+        {
+          "source": "drug_lomitapide",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "treats",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能有助于症状改善"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过不同机制改善严重高甘油三酯血症的状态",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "药物通过 PPARα 激活或脂质代谢通路支持治疗",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "所有药物均具备良好的生物利用度且能有效到达相关靶点"
+    ],
+    "uncertainties": [
+      "each drug's precise mechanism in humans remains to be fully elucidated"
+    ],
+    "next_focus_for_pi": [
+      "需要进一步确认药物的长期疗效与安全性"
+    ]
+  }
+}

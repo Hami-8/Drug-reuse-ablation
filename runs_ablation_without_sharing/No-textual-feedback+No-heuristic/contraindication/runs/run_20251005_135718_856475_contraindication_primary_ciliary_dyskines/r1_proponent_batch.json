@@ -1,0 +1,320 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_ketoprofen",
+          "name": "Ketoprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_diclofenac",
+          "name": "Diclofenac"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_morphine",
+          "name": "Morphine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_codeine",
+          "name": "Codeine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_fentanyl",
+          "name": "Fentanyl"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_tramadol",
+          "name": "Tramadol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_hydrocodone",
+          "name": "Hydrocodone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_oxycodone",
+          "name": "Oxycodone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_acetaminophen",
+          "name": "Acetaminophen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_t1",
+          "type": "Target",
+          "label": "COX Enzyme",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_t2",
+          "type": "Target",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_d1",
+          "type": "Disease",
+          "label": "Primary Ciliary Dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph1",
+          "type": "Phenotype",
+          "label": "Respiratory Symptoms",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph2",
+          "type": "Phenotype",
+          "label": "Chronic Sinusitis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_t1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "同类药物作用模式一致"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_t1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "同类药物作用模式一致"
+        },
+        {
+          "source": "drug_ketoprofen",
+          "target": "n_t1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "同类药物作用模式一致"
+        },
+        {
+          "source": "drug_diclofenac",
+          "target": "n_t1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "同类药物作用模式一致"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "n_t1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "同类药物作用模式一致"
+        },
+        {
+          "source": "n_t1",
+          "target": "n_t2",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "炎症通路相关"
+        },
+        {
+          "source": "n_t2",
+          "target": "n_d1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "疾病相关路径"
+        },
+        {
+          "source": "n_t2",
+          "target": "n_ph1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "症状体现炎症"
+        },
+        {
+          "source": "n_t2",
+          "target": "n_ph2",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "症状体现炎症"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_ketoprofen",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_diclofenac",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "机制闭环支持"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "Ibuprofen及其同类药物通过抑制COX酶影响炎症路径，可能与Primary ciliary dyskinesia相关",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物具备到达相关组织的最小暴露（常识判断）"
+    ],
+    "uncertainties": [
+      "特定药物对气道的具体影响尚需进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "是否需要探讨其他靶点或机制以验证这些药物的潜在影响？"
+    ]
+  }
+}

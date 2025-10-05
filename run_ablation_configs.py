@@ -5,7 +5,7 @@
 #     * indication: 使用列 is_gold_indication==1 作为正例；若列缺失，则 conclusion ∈ {"适应症线索","可能适应症且需注意安全"} 视为正例
 #     * contraindication: 使用列 is_gold_contraindication==1 作为正例；若列缺失，则 conclusion == "禁忌信号" 视为正例
 # - 为每个配置分别产出 <out_dir>/<ConfigTag>/<subset>/_records.jsonl
-# - 不同消融配置互不共享 seeds（去除 --share_seeds）
+# - 消融配置互相独立（不共享 seeds）
 
 import os, re, json, argparse, threading
 from typing import Dict, Any, List, Tuple, Optional
@@ -121,7 +121,7 @@ def make_bio_prompt(subset: str, disease: str, n: int) -> str:
         )
 
 
-# -------------------- 种子生成（单配置内最小缓存；不同配置互不共享） --------------------
+# -------------------- 种子生成（不共享，配置独立） --------------------
 def gen_or_get_seeds(disease: str, subset: str, n_seeds: int,
                      cache: Dict[str, List[str]],
                      textual_feedback: bool,
@@ -129,7 +129,7 @@ def gen_or_get_seeds(disease: str, subset: str, n_seeds: int,
     """
     - textual_feedback=True：给 Explorer 完整 bio_prompt；否则传空（去文本反馈消融）。
     - 失败时兜底：从该病的 CSV 候选中抽取，优先正例，再补其它，去重到 n_seeds。
-    - cache 为当前配置/子任务的本地缓存，不在不同配置之间共享。
+    - 本脚本不同消融不共享 cache，互相独立。
     """
     key = f"{subset}::{disease}"
     if key in cache:
@@ -215,8 +215,14 @@ class AgentPatches:
                 p.pop("heuristic_priors", None)
                 return self.orig_run_pi(mode, p)
             return self.orig_run_pi(mode, payload)
+
+        # 单独去 heuristic
         if tag == "No-heuristic-transfer":
             rp2.run_pi = _pi_no_heuristics
+
+        # 同时去掉 textual feedback & heuristic（组合消融）
+        if tag == "No-textual-feedback+No-heuristic":
+            rp2.run_pi = _pi_no_heuristics  # Explorer 文本在主流程通过 textual_feedback=False 实现
 
         return self
 
@@ -240,9 +246,6 @@ def run_subset(subset: str,
     jsonl_path = os.path.join(out_dir, "_records.jsonl")
     done = read_done_indices(jsonl_path) if resume else set()
 
-    # 每个配置/子任务的本地 seed cache（不同配置之间不共享）
-    local_seed_cache: Dict[str, List[str]] = {}
-
     # 唯一病种
     diseases = sorted(df_all["disease"].astype(str).unique().tolist())
     jobs = []
@@ -254,11 +257,14 @@ def run_subset(subset: str,
 
     print(f"[{config_tag}/{subset}] planned={len(jobs)} (resume={resume}, done={len(done)})")
 
+    # 每个配置独立的种子缓存
+    local_seed_cache: Dict[str, List[str]] = {}
+
     def _work(job):
         idx, disease, gold_drugs = job
         relation = "indication" if subset == "indication" else "contraindication"
         try:
-            # 生成 seeds（仅在当前配置内缓存；不同配置不共享）
+            # 生成 seeds（配置内独立缓存，不跨配置共享）
             seeds = gen_or_get_seeds(
                 disease=disease, subset=subset, n_seeds=n_seeds,
                 cache=local_seed_cache, textual_feedback=textual_feedback,
@@ -358,11 +364,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ind_all", type=str, default="filtered_indication_all.csv", help="filtered_indication_all.csv")
     ap.add_argument("--contra_all", type=str, default="filtered_contraindication_all.csv", help="filtered_contraindication_all.csv")
-    ap.add_argument("--out_dir", type=str, default="runs_ablation_without_sharing", help="output root dir for all configs")
+    ap.add_argument("--out_dir", type=str, default="runs_ablation_without_sharing")
     ap.add_argument("--n_seeds", type=int, default=12)
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--resume", action="store_true")
-    # 移除 --share_seeds
     args = ap.parse_args()
 
     ensure_dir(args.out_dir)
@@ -372,12 +377,9 @@ def main():
     df_contra = load_all_csv_with_labels(args.contra_all, subset="contraindication")
 
     # 定义消融配置
+    # 第二个布尔位 textual_feedback: True=带文本反馈；False=去文本反馈
     configs = [
-        ("Debate-single", True),          # 单代理（禁用 Skeptic）
-        ("Skeptic-no-critique", True),    # Skeptic 不输出反证
-        ("PI-final-only", True),          # PI 只在最终阶段介入
-        ("No-textual-feedback", False),   # Explorer 去文本提示
-        ("No-heuristic-transfer", True),  # 移除 heuristic_priors
+        ("No-textual-feedback+No-heuristic", False),  # ★ 同时去掉反馈与 heuristic
     ]
 
     for tag, textual_feedback in configs:
@@ -395,7 +397,7 @@ def main():
                 textual_feedback=textual_feedback,
                 n_seeds=args.n_seeds,
                 workers=args.workers,
-                resume=args.resume
+                resume=args.resume,
             )
             # contraindication
             run_subset(
@@ -406,7 +408,7 @@ def main():
                 textual_feedback=textual_feedback,
                 n_seeds=args.n_seeds,
                 workers=args.workers,
-                resume=args.resume
+                resume=args.resume,
             )
 
     print("\nAll configurations finished. Each _records.jsonl is under <out_dir>/<ConfigTag>/<subset>/")

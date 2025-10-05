@@ -1,0 +1,366 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_dornase_alfa",
+          "name": "Dornase alfa"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_ambroxol",
+          "name": "Ambroxol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_ipratropium_bromide",
+          "name": "Ipratropium bromide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_bromhexine",
+          "name": "Bromhexine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_albuterol",
+          "name": "Albuterol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_salbutamol",
+          "name": "Salbutamol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_l_teaninine",
+          "name": "L-teaninine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_fluticasone",
+          "name": "Fluticasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_montelukast",
+          "name": "Montelukast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ambroxol",
+          "type": "Drug",
+          "label": "Ambroxol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ipratropium_bromide",
+          "type": "Drug",
+          "label": "Ipratropium bromide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bromhexine",
+          "type": "Drug",
+          "label": "Bromhexine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_albuterol",
+          "type": "Drug",
+          "label": "Albuterol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_salbutamol",
+          "type": "Drug",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_l_teaninine",
+          "type": "Drug",
+          "label": "L-teaninine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fluticasone",
+          "type": "Drug",
+          "label": "Fluticasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_montelukast",
+          "type": "Drug",
+          "label": "Montelukast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "node_primary_ciliary_dyskinesia",
+          "type": "Disease",
+          "label": "Primary ciliary dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_dornase_alfa",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用于清除气道粘液的药物"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "有助于减轻气道黏液和炎症"
+        },
+        {
+          "source": "drug_ambroxol",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于改善气道清除和减轻咳嗽"
+        },
+        {
+          "source": "drug_ipratropium_bromide",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "具有支气管扩张作用，改善呼吸"
+        },
+        {
+          "source": "drug_bromhexine",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "助于气道分泌物排出"
+        },
+        {
+          "source": "drug_albuterol",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "支气管扩张药，可改善呼吸功能"
+        },
+        {
+          "source": "drug_salbutamol",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "支气管扩张，有助于改善气流"
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "抗炎作用可能有助于气道炎症治疗"
+        },
+        {
+          "source": "drug_l_teaninine",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "可能改善气道反应性"
+        },
+        {
+          "source": "drug_fluticasone",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "具有抗炎特性，可能改善气道健康"
+        },
+        {
+          "source": "drug_montelukast",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "抗炎药，可能改善气道敏感性与反应"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "node_primary_ciliary_dyskinesia",
+          "relation": "supports",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "可能用于控制严重炎症"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物有望通过不同机制缓解原发性纤毛功能障碍的病症",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物具有在气道中达到有效浓度的能力"
+    ],
+    "uncertainties": [
+      "每种药物的具体作用机制在此疾病中的充分证据需要进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "是否需要优先探索某些候选药物的详细机制或临床数据"
+    ]
+  }
+}

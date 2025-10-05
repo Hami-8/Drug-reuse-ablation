@@ -1,0 +1,651 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Hereditary haemorrhagic telangiectasia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险相关性",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险相关性",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_antiarrhythmic",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_antibiotic",
+          "type": "Drug",
+          "label": "Ciprofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_anticoagulant",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_antiplatelet",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_anticoagulant_r",
+          "type": "Drug",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_antiplatelet_c",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_anticoagulant_e",
+          "type": "Drug",
+          "label": "Enoxaparin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_antiinflammatory_i",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_antiinflammatory_d",
+          "type": "Drug",
+          "label": "Diclofenac",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_anticoagulant_h",
+          "type": "Drug",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_antidiabetic",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_antidepressant",
+          "type": "Drug",
+          "label": "Sertraline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_HHT",
+          "type": "Disease",
+          "label": "Hereditary haemorrhagic telangiectasia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "Off-target Amiodarone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ciprofloxacin",
+          "type": "Target",
+          "label": "Off-target Ciprofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_warfarin",
+          "type": "Target",
+          "label": "Off-target Warfarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "Off-target Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rivaroxaban",
+          "type": "Target",
+          "label": "Off-target Rivaroxaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clopidogrel",
+          "type": "Target",
+          "label": "Off-target Clopidogrel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_enoxaparin",
+          "type": "Target",
+          "label": "Off-target Enoxaparin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ibuprofen",
+          "type": "Target",
+          "label": "Off-target Ibuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_diclofenac",
+          "type": "Target",
+          "label": "Off-target Diclofenac",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_heparin",
+          "type": "Target",
+          "label": "Off-target Heparin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_antiarrhythmic",
+          "target": "n_HHT",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对抗凝血作用可能加重出血风险"
+        },
+        {
+          "source": "n_antibiotic",
+          "target": "n_HHT",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "使用可能导致出血不良反应"
+        },
+        {
+          "source": "n_anticoagulant",
+          "target": "n_HHT",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "抗凝特性直接关联出血风险"
+        },
+        {
+          "source": "n_antiplatelet",
+          "target": "n_HHT",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抑制血小板可能加重出血"
+        },
+        {
+          "source": "n_anticoagulant_r",
+          "target": "n_HHT",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "可能导致较高出血风险"
+        },
+        {
+          "source": "n_antiplatelet_c",
+          "target": "n_HHT",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "增加出血风险相关"
+        },
+        {
+          "source": "n_anticoagulant_e",
+          "target": "n_HHT",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抗凝影响与出血风险相关"
+        },
+        {
+          "source": "n_antiinflammatory_i",
+          "target": "n_HHT",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能影响血液凝固特性"
+        },
+        {
+          "source": "n_antiinflammatory_d",
+          "target": "n_HHT",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与出血风险潜在关联"
+        },
+        {
+          "source": "n_anticoagulant_h",
+          "target": "n_HHT",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "类似抗凝性质，提高出血风险"
+        },
+        {
+          "source": "n_antidiabetic",
+          "target": "n_HHT",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "对出血可能有间接影响"
+        },
+        {
+          "source": "n_antidepressant",
+          "target": "n_HHT",
+          "relation": "involved_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "抗抑郁治疗的风险需谨慎考虑"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响血管脆弱性"
+        },
+        {
+          "source": "drug_ciprofloxacin",
+          "target": "n_ot_ciprofloxacin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱发出血"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "n_ot_warfarin",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "强化出血风险"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血增加"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "n_ot_rivaroxaban",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "增加出血危险"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_ot_clopidogrel",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能加重出血风险"
+        },
+        {
+          "source": "drug_enoxaparin",
+          "target": "n_ot_enoxaparin",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "与出血风险相关"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "n_ot_ibuprofen",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "影响血管稳定性"
+        },
+        {
+          "source": "drug_diclofenac",
+          "target": "n_ot_diclofenac",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能加重出血"
+        },
+        {
+          "source": "drug_heparin",
+          "target": "n_ot_heparin",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "显著提高出血风险"
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响风险途径"
+        },
+        {
+          "source": "n_ot_ciprofloxacin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响风险途径"
+        },
+        {
+          "source": "n_ot_warfarin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "明显提高出血风险"
+        },
+        {
+          "source": "n_ot_aspirin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "将显著增加出血情况"
+        },
+        {
+          "source": "n_ot_rivaroxaban",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "强化出血风险"
+        },
+        {
+          "source": "n_ot_clopidogrel",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "与出血风险相关"
+        },
+        {
+          "source": "n_ot_enoxaparin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致严重出血"
+        },
+        {
+          "source": "n_ot_ibuprofen",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "影响血管稳定性"
+        },
+        {
+          "source": "n_ot_diclofenac",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "与出血风险相关"
+        },
+        {
+          "source": "n_ot_heparin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "显著提高出血风险"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则疗效存在懷疑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则疗效存在懷疑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则疗效存在懷疑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则疗效存在懷疑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则疗效存在懷疑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则疗效存在懷疑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则疗效存在懷疑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则疗效存在懷疑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则疗效存在懷疑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则疗效存在懷疑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则疗效存在懷疑"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则疗效存在懷疑"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "出血风险相关性",
+              "pro_nodes": [
+                "n_anticoagulant",
+                "n_antiplatelet"
+              ],
+              "con_nodes": [
+                "n_rp",
+                "n_adv"
+              ],
+              "note": "药物对出血风险的影响与预期疗效存在矛盾"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：以高权重 refutes 边连到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "与使用中的抗凝剂之间的出血风险考虑仍未消解"
+    ]
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Generalised pustular psoriasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_acitretin",
+          "name": "Acitretin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_apremilast",
+          "name": "Apremilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_bimekizumab",
+          "name": "Bimekizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_brodalumab",
+          "name": "Brodalumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_ixekizumab",
+          "name": "Ixekizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_secukinumab",
+          "name": "Secukinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tazarotene",
+          "name": "Tazarotene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ustekinumab",
+          "name": "Ustekinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_acitretin",
+          "type": "Target",
+          "label": "Acitretin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_acitretin",
+          "type": "Pathway",
+          "label": "Acitretin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_acitretin",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Acitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_acitretin",
+          "target": "n_ot_acitretin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用导致不良反应"
+        },
+        {
+          "source": "n_ot_acitretin",
+          "target": "n_rp_acitretin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶向途径导致风险"
+        },
+        {
+          "source": "n_rp_acitretin",
+          "target": "n_adv_acitretin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_acitretin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则抵消潜在疗效"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "短期疗效与长期副作用",
+          "pro_nodes": [
+            "n_ot_acitretin"
+          ],
+          "con_nodes": [
+            "n_rp_acitretin",
+            "n_adv_acitretin"
+          ],
+          "note": "短期内可以改善表型，但长期风险亟待关注"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "Acitretin 的副作用可能导致严重的组织损伤",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "可能通过非靶点机制增强毒性反应",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "Acitretin 的作用机制是否足以覆盖所有症状",
+      "是否存在足够的临床证据证明长期有效性"
+    ],
+    "falsification_tests": [
+      "是否有数据表明 Acitretin 能改善长期病程？",
+      "是否存在对 Acitretin 副作用的详细风险评估？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供相关安全性数据以验证风险链",
+      "调查 Acitretin 对长期答案的有效性"
+    ]
+  }
+}

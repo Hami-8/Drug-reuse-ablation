@@ -1,0 +1,533 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_dopamine_agonists",
+          "name": "Dopamine Agonists"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_selective_serotonin_reuptake_inhibitors",
+          "name": "Selective Serotonin Reuptake Inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_norepinephrine_reuptake_inhibitors",
+          "name": "Norepinephrine Reuptake Inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_anxiolytics",
+          "name": "Anxiolytics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_antidepressants",
+          "name": "Antidepressants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_mood_stabilizers",
+          "name": "Mood Stabilizers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_atypical_antipsychotics",
+          "name": "Atypical Antipsychotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_mao_inhibitors",
+          "name": "MAO Inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_cognitive_enhancers",
+          "name": "Cognitive Enhancers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_cholinesterase_inhibitors",
+          "name": "Cholinesterase Inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_glutamate_modulators",
+          "name": "Glutamate Modulators"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_serotonin_norepinephrine_reuptake_inhibitors",
+          "name": "Serotonin-Norepinephrine Reuptake Inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 4
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_dopamine_agonists",
+          "type": "Drug",
+          "label": "Dopamine Agonists",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_selective_serotonin_reuptake_inhibitors",
+          "type": "Drug",
+          "label": "Selective Serotonin Reuptake Inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_norepinephrine_reuptake_inhibitors",
+          "type": "Drug",
+          "label": "Norepinephrine Reuptake Inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_anxiolytics",
+          "type": "Drug",
+          "label": "Anxiolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_antidepressants",
+          "type": "Drug",
+          "label": "Antidepressants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mood_stabilizers",
+          "type": "Drug",
+          "label": "Mood Stabilizers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_atypical_antipsychotics",
+          "type": "Drug",
+          "label": "Atypical Antipsychotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mao_inhibitors",
+          "type": "Drug",
+          "label": "MAO Inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cognitive_enhancers",
+          "type": "Drug",
+          "label": "Cognitive Enhancers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cholinesterase_inhibitors",
+          "type": "Drug",
+          "label": "Cholinesterase Inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_glutamate_modulators",
+          "type": "Drug",
+          "label": "Glutamate Modulators",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_serotonin_norepinephrine_reuptake_inhibitors",
+          "type": "Drug",
+          "label": "Serotonin-Norepinephrine Reuptake Inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_dopamine_receptors",
+          "type": "Target",
+          "label": "Dopamine Receptors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_serotonin_receptors",
+          "type": "Target",
+          "label": "Serotonin Receptors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_norepinephrine_receptors",
+          "type": "Target",
+          "label": "Norepinephrine Receptors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_neurotransmitter_signaling",
+          "type": "Pathway",
+          "label": "Neurotransmitter Signaling Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_neurotransmitter_disorders",
+          "type": "Disease",
+          "label": "Neurotransmitter Disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_dopamine_agonists",
+          "target": "target_dopamine_receptors",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "广泛用于多种神经传递失调的常识"
+        },
+        {
+          "source": "drug_selective_serotonin_reuptake_inhibitors",
+          "target": "target_serotonin_receptors",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "被广泛用于抑郁症的治疗，相关性强"
+        },
+        {
+          "source": "drug_norepinephrine_reuptake_inhibitors",
+          "target": "target_norepinephrine_receptors",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于抑郁症及焦虑的治疗，展现其有效性"
+        },
+        {
+          "source": "target_dopamine_receptors",
+          "target": "pathway_neurotransmitter_signaling",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "神经传递信号通路中的关键部分"
+        },
+        {
+          "source": "target_serotonin_receptors",
+          "target": "pathway_neurotransmitter_signaling",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "参与神经传递过程"
+        },
+        {
+          "source": "target_norepinephrine_receptors",
+          "target": "pathway_neurotransmitter_signaling",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "在神经传递中起重要作用"
+        },
+        {
+          "source": "pathway_neurotransmitter_signaling",
+          "target": "disease_neurotransmitter_disorders",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "损伤或失调影响神经传递产生相关疾病"
+        },
+        {
+          "source": "drug_anxiolytics",
+          "target": "pathway_neurotransmitter_signaling",
+          "relation": "modulates",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过影响神经递质起作用"
+        },
+        {
+          "source": "drug_antidepressants",
+          "target": "pathway_neurotransmitter_signaling",
+          "relation": "modulates",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有效调节神经传递失调"
+        },
+        {
+          "source": "drug_mood_stabilizers",
+          "target": "pathway_neurotransmitter_signaling",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响多种神经递质，常用于情绪稳定"
+        },
+        {
+          "source": "drug_atypical_antipsychotics",
+          "target": "pathway_neurotransmitter_signaling",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "针对神经传递紊乱的治疗选项"
+        },
+        {
+          "source": "drug_mao_inhibitors",
+          "target": "pathway_neurotransmitter_signaling",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "通过抑制单胺氧化酶改善症状"
+        },
+        {
+          "source": "drug_cognitive_enhancers",
+          "target": "pathway_neurotransmitter_signaling",
+          "relation": "modulates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "改善认知功能，相关于神经传递"
+        },
+        {
+          "source": "drug_cholinesterase_inhibitors",
+          "target": "pathway_neurotransmitter_signaling",
+          "relation": "modulates",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "影响神经传递，通常用于阿尔茨海默病"
+        },
+        {
+          "source": "drug_glutamate_modulators",
+          "target": "pathway_neurotransmitter_signaling",
+          "relation": "modulates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "在学习和记忆中的作用"
+        },
+        {
+          "source": "drug_serotonin_norepinephrine_reuptake_inhibitors",
+          "target": "pathway_neurotransmitter_signaling",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "同时影响5-羟色胺和去甲肾上腺素"
+        },
+        {
+          "source": "drug_dopamine_agonists",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过激动多巴胺受体改善症状"
+        },
+        {
+          "source": "drug_selective_serotonin_reuptake_inhibitors",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "选择性抑制5-羟色胺再摄取对于诸多疾病有效"
+        },
+        {
+          "source": "drug_norepinephrine_reuptake_inhibitors",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有效调节去甲肾上腺素水平"
+        },
+        {
+          "source": "drug_anxiolytics",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "常用于焦虑症的治疗"
+        },
+        {
+          "source": "drug_antidepressants",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "针对于抑郁症的治疗选项"
+        },
+        {
+          "source": "drug_mood_stabilizers",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "通过稳定情绪达到治疗效果"
+        },
+        {
+          "source": "drug_atypical_antipsychotics",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "针对精神病患者的治疗"
+        },
+        {
+          "source": "drug_mao_inhibitors",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响单胺水平，改善症状"
+        },
+        {
+          "source": "drug_cognitive_enhancers",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "通过增强认知功能补救"
+        },
+        {
+          "source": "drug_cholinesterase_inhibitors",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "用于神经退行性疾病"
+        },
+        {
+          "source": "drug_glutamate_modulators",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "参与学习记忆的改善"
+        },
+        {
+          "source": "drug_serotonin_norepinephrine_reuptake_inhibitors",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "同时调节血清素和去甲肾上腺素"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过不同机制对神经递质失调产生影响",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "药物影响多种神经递质相关的信号通路",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "药物具有到达相关靶组织的最小暴露（常识判断）"
+    ],
+    "uncertainties": [
+      "药物的长期影响尚需进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需探索其他药物类别以支持不同类型的神经递质失调"
+    ]
+  }
+}

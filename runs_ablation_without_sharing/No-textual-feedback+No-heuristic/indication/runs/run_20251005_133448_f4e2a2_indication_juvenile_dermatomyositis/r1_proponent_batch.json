@@ -1,0 +1,492 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Juvenile dermatomyositis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_ivig",
+          "name": "IVIG"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_hydroxychloroquine",
+          "name": "Hydroxychloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ivig",
+          "type": "Drug",
+          "label": "IVIG",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydroxychloroquine",
+          "type": "Drug",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_juvenile_dermatomyositis",
+          "type": "Disease",
+          "label": "Juvenile dermatomyositis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_inflammatory_pathway",
+          "type": "Target",
+          "label": "Inflammatory Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_immune_modulation",
+          "type": "Pathway",
+          "label": "Immune Modulation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_symptom_relief",
+          "type": "Phenotype",
+          "label": "Symptom Relief",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_anitcytokine",
+          "type": "Target",
+          "label": "Anti-cytokine Target",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_methotrexate",
+          "target": "target_inflammatory_pathway",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知抑制炎症反应"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "target_inflammatory_pathway",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抑制免疫细胞活性相关"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "target_inflammatory_pathway",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "常用于减少炎症"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "target_inflammatory_pathway",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "靶向细胞增殖"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "target_anitcytokine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抗体靶向B细胞调节"
+        },
+        {
+          "source": "drug_ivig",
+          "target": "target_anitcytokine",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过调节免疫反应"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "target_inflammatory_pathway",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抑制淋巴细胞增殖"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "target_anitcytokine",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抑制肿瘤坏死因子"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "target_anitcytokine",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "靶向肿瘤坏死因子α"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "target_inflammatory_pathway",
+          "relation": "inhibits",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "通过抑制自身免疫反应"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "target_inflammatory_pathway",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "用于快速控制炎症"
+        },
+        {
+          "source": "target_inflammatory_pathway",
+          "target": "pathway_immune_modulation",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "炎症过程相关通路"
+        },
+        {
+          "source": "target_anitcytokine",
+          "target": "pathway_immune_modulation",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "调节免疫通路"
+        },
+        {
+          "source": "pathway_immune_modulation",
+          "target": "phenotype_symptom_relief",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "通过免疫调节带来症状缓解"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与治疗儿童皮肌炎相关"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "常用于儿童皮肌炎治疗"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "广泛应用于自身免疫疾病"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "在重症情况下使用"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "针对顽固性病例"
+        },
+        {
+          "source": "drug_ivig",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "对抗严重症状"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "减少病理过程"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.52,
+          "agent": "Proponent",
+          "rationale": "最新疗法应用"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "针对逐步实现的治疗"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.48,
+          "agent": "Proponent",
+          "rationale": "少有应用"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "disease_juvenile_dermatomyositis",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "急性症状控制"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多个药物通过调节炎症与免疫机制对儿童皮肌炎提供治疗支持",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "通过靶向不同的通路和路径，形成三条机制连接以支持治疗假说",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物具备到达相关组织的最小暴露（常识判断）"
+    ],
+    "uncertainties": [
+      "药物副作用与长期安全性需进一步调查（需后续检验）"
+    ],
+    "next_focus_for_pi": [
+      "是否需进一步探讨其他可用于治疗的药物与治疗方案？"
+    ]
+  }
+}

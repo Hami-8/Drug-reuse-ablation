@@ -1,0 +1,373 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_tacrolimus",
+          "name": "Tacrolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_plasma_exchange",
+          "name": "Plasma exchange"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_intravenous_immunoglobulin",
+          "name": "Intravenous immunoglobulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_eculizumab",
+          "name": "Eculizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_albumin_infusion",
+          "name": "Albumin infusion"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_fish_oil_supplements",
+          "name": "Fish oil supplements"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_sodium_phenylbutyrate",
+          "name": "Sodium phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_plasma_exchange",
+          "type": "Drug",
+          "label": "Plasma exchange",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_intravenous_immunoglobulin",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_albumin_infusion",
+          "type": "Drug",
+          "label": "Albumin infusion",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fish_oil_supplements",
+          "type": "Drug",
+          "label": "Fish oil supplements",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_primary_membranoproliferative_glomerulonephritis",
+          "type": "Disease",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_corticosteroids",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "常用药物用于该病的治疗"
+        },
+        {
+          "source": "n_cyclosporine",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "显示出对该病有疗效"
+        },
+        {
+          "source": "n_rituximab",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "在特定情况下被使用"
+        },
+        {
+          "source": "n_mycophenolate_mofetil",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "免疫抑制药物的常识应用"
+        },
+        {
+          "source": "n_azathioprine",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与免疫相关的治疗应用"
+        },
+        {
+          "source": "n_tacrolimus",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "作为免疫抑制疗法的重要药物"
+        },
+        {
+          "source": "n_plasma_exchange",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "在严重病例中的应用"
+        },
+        {
+          "source": "n_intravenous_immunoglobulin",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "作为免疫疗法的一种选择"
+        },
+        {
+          "source": "n_eculizumab",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "显示出潜在疗效"
+        },
+        {
+          "source": "n_albumin_infusion",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "用于支持性治疗"
+        },
+        {
+          "source": "n_fish_oil_supplements",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "有辅助潜力的常识"
+        },
+        {
+          "source": "n_sodium_phenylbutyrate",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "潜在的药物再利用可能性"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物可能对原发性增生性肾小管肾炎有效",
+        "confidence": "medium"
+      },
+      {
+        "id": "C2",
+        "text": "药物作用于免疫系统可能有助于治疗该病",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "药物可达到靶组织并发挥作用"
+    ],
+    "uncertainties": [
+      "不同药物的具体疗效和安全性需进一步研究"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步验证各药物的独特机制和有效性"
+    ]
+  }
+}

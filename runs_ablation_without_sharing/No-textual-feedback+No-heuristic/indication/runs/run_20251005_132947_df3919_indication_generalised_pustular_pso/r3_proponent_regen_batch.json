@@ -1,0 +1,517 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Generalised pustular psoriasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_acitretin",
+          "name": "Acitretin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_apremilast",
+          "name": "Apremilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_bimekizumab",
+          "name": "Bimekizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_brodalumab",
+          "name": "Brodalumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_ixekizumab",
+          "name": "Ixekizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_secukinumab",
+          "name": "Secukinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tazarotene",
+          "name": "Tazarotene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ustekinumab",
+          "name": "Ustekinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_acitretin",
+          "type": "Drug",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_apremilast",
+          "type": "Drug",
+          "label": "Apremilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bimekizumab",
+          "type": "Drug",
+          "label": "Bimekizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_brodalumab",
+          "type": "Drug",
+          "label": "Brodalumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ixekizumab",
+          "type": "Drug",
+          "label": "Ixekizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_secukinumab",
+          "type": "Drug",
+          "label": "Secukinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tazarotene",
+          "type": "Drug",
+          "label": "Tazarotene",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ustekinumab",
+          "type": "Drug",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_generalised_pustular_psoriasis",
+          "type": "Disease",
+          "label": "Generalised pustular psoriasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_immune_response",
+          "type": "Target",
+          "label": "Immune Response",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_inflammatory_response",
+          "type": "Pathway",
+          "label": "Inflammatory Response Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_symptomatic_relief",
+          "type": "Phenotype",
+          "label": "Symptomatic Relief",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_skin_remission",
+          "type": "Phenotype",
+          "label": "Skin Remission",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_acitretin",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用治疗在免疫调节上有效"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "靶向 TNF-α 的治疗策略"
+        },
+        {
+          "source": "drug_apremilast",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抑制炎症通路的机制"
+        },
+        {
+          "source": "drug_bimekizumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "IL-17靶向作用"
+        },
+        {
+          "source": "drug_brodalumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "IL-17A拮抗剂"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "免疫抑制机制支持"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抑制炎症反应"
+        },
+        {
+          "source": "drug_ixekizumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "IL-17E 的抵抗并促进重建"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "作为传统治疗药物的有效性"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "针对 IL-17A 的特异性干预"
+        },
+        {
+          "source": "drug_tazarotene",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "调控分化的机制"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "靶向 IL-12/23 的选择性"
+        },
+        {
+          "source": "target_immune_response",
+          "target": "pathway_inflammatory_response",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "支持的通路连接"
+        },
+        {
+          "source": "pathway_inflammatory_response",
+          "target": "d_generalised_pustular_psoriasis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与通路在病理过程中的一致性"
+        },
+        {
+          "source": "drug_acitretin",
+          "target": "phenotype_symptomatic_relief",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知的临床表现改善"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "phenotype_skin_remission",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "有效性证据强"
+        },
+        {
+          "source": "drug_apremilast",
+          "target": "phenotype_symptomatic_relief",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "机制的有效性总结"
+        },
+        {
+          "source": "drug_bimekizumab",
+          "target": "phenotype_skin_remission",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "靶向的有效性"
+        },
+        {
+          "source": "drug_brodalumab",
+          "target": "phenotype_symptomatic_relief",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "支持的临床证据"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "phenotype_symptomatic_relief",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "提高患者群体的好转率"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "phenotype_skin_remission",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "发挥快速生效"
+        },
+        {
+          "source": "drug_ixekizumab",
+          "target": "phenotype_skin_remission",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "针对于根据临床效果获得改善"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "phenotype_symptomatic_relief",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知的改善作用"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "phenotype_skin_remission",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可期待的病理改善"
+        },
+        {
+          "source": "drug_tazarotene",
+          "target": "phenotype_symptomatic_relief",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "局部疗法已知效果"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "phenotype_skin_remission",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "支持慢性病例治疗的有效性"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物通过不同的机制作用于免疫反应通路，改善皮肤症状与缓解相关病理特征",
+        "confidence": "high"
+      },
+      {
+        "id": "C2",
+        "text": "策略的选择可能基于患者的特定病情以及可能的反应不同",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "所有药物在临床上显示出一定的有效性并可合理用来治疗该病"
+    ],
+    "uncertainties": [
+      "药物对皮肤症状的具体影响程度需要进一步研究验证"
+    ],
+    "next_focus_for_pi": [
+      "需要确认每种药物机制的细节以及最佳治疗方案的临床实践"
+    ]
+  }
+}
