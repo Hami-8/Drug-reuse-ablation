@@ -309,11 +309,11 @@ def find_records(root: str) -> List[Tuple[str, str, str]]:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--root", type=str, default="runs_ablation_without_sharing",
+    ap.add_argument("--root", type=str, default="runs_con_top50",
                     help="runs_ablation 根目录（包含多个 ConfigTag 子目录）")
-    ap.add_argument("--out_root", type=str, default="eval_runs_ablation_without_sharing2",
+    ap.add_argument("--out_root", type=str, default="eval_runs_con_top50",
                     help="评测输出根目录")
-    ap.add_argument("--k", type=int, default=10, help="用于 P@K / R@K 的 K")
+    ap.add_argument("--k", type=int, default=50, help="用于 P@K / R@K 的 K")
     args = ap.parse_args()
 
     os.makedirs(args.out_root, exist_ok=True)

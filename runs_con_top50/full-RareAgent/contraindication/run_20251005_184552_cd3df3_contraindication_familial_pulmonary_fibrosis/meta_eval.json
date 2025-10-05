@@ -1,0 +1,240 @@
+{
+  "subset": "contraindication",
+  "disease": "Familial pulmonary fibrosis",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "bardoxolone methyl"
+  ],
+  "seeds_initial": [
+    "Amiodarone",
+    "Bleomycin",
+    "Methotrexate",
+    "Nitrofurantoin",
+    "Cyclophosphamide",
+    "Busulfan",
+    "Chlorambucil",
+    "Doxorubicin",
+    "Carboplatin",
+    "Gemcitabine",
+    "Etoposide",
+    "Interferon alfa",
+    "Radiation therapy",
+    "Sulfasalazine",
+    "Valproic acid",
+    "Ticlopidine",
+    "Procarbazine",
+    "Clofarabine",
+    "Thalidomide",
+    "Azathioprine",
+    "Sodium salicylate",
+    "Cisplatin",
+    "Docetaxel",
+    "Paclitaxel",
+    "Tamoxifen",
+    "Raloxifene",
+    "Mifepristone",
+    "Lopinavir",
+    "Ritonavir",
+    "Indinavir",
+    "Nelfinavir",
+    "Bromocriptine",
+    "Ganciclovir",
+    "Acyclovir",
+    "Pentamadine",
+    "Terbinafine",
+    "Clofazimine",
+    "Fingolimod",
+    "Interferon beta",
+    "Imatinib",
+    "Dasatinib",
+    "Nintedanib",
+    "Afatinib",
+    "Osimertinib",
+    "Lemtrada",
+    "Rituximab",
+    "Benzodiazepines",
+    "Methylprednisolone",
+    "Prednisone",
+    "Hydrocortisone",
+    "Dexamethasone",
+    "Narcotic analgesics",
+    "Methadone",
+    "Antitubercular drugs",
+    "Sunitinib",
+    "Tocilizumab",
+    "Palbociclib"
+  ],
+  "seed_history": [
+    [
+      "Amiodarone",
+      "Bleomycin",
+      "Methotrexate",
+      "Nitrofurantoin",
+      "Cyclophosphamide",
+      "Busulfan",
+      "Chlorambucil",
+      "Doxorubicin",
+      "Carboplatin",
+      "Gemcitabine",
+      "Etoposide",
+      "Interferon alfa",
+      "Radiation therapy",
+      "Sulfasalazine",
+      "Valproic acid",
+      "Ticlopidine",
+      "Procarbazine",
+      "Clofarabine",
+      "Thalidomide",
+      "Azathioprine",
+      "Sodium salicylate",
+      "Cisplatin",
+      "Docetaxel",
+      "Paclitaxel",
+      "Tamoxifen",
+      "Raloxifene",
+      "Mifepristone",
+      "Lopinavir",
+      "Ritonavir",
+      "Indinavir",
+      "Nelfinavir",
+      "Bromocriptine",
+      "Ganciclovir",
+      "Acyclovir",
+      "Pentamadine",
+      "Terbinafine",
+      "Clofazimine",
+      "Fingolimod",
+      "Interferon beta",
+      "Imatinib",
+      "Dasatinib",
+      "Nintedanib",
+      "Afatinib",
+      "Osimertinib",
+      "Lemtrada",
+      "Rituximab",
+      "Benzodiazepines",
+      "Methylprednisolone",
+      "Prednisone",
+      "Hydrocortisone",
+      "Dexamethasone",
+      "Narcotic analgesics",
+      "Methadone",
+      "Antitubercular drugs",
+      "Sunitinib",
+      "Tocilizumab",
+      "Palbociclib"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "score": 0.85,
+        "graph_snapshot_ref": "GE_H1_round5",
+        "key_assumptions": [
+          "潜在肺部损伤链条的生成",
+          "既往证据支持其对肺纤维化的危害"
+        ],
+        "caveats": [
+          "可能存在增强肺部毒性的相互作用"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_bleomycin",
+          "name": "Bleomycin"
+        },
+        "score": 0.85,
+        "graph_snapshot_ref": "GE_H2_round5",
+        "key_assumptions": [
+          "Bleomycin已知与肺纤维化关系明确",
+          "引导肺部损伤机制的充分证据"
+        ],
+        "caveats": [
+          "已有临床依赖性导致的风险评估不足"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H5",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "score": 0.8,
+        "graph_snapshot_ref": "GE_H5_round5",
+        "key_assumptions": [
+          "与副作用发生链条的关联性",
+          "特定患者群体可能敏感"
+        ],
+        "caveats": [
+          "与其他肺部有潜在负面影响的药物联合使用可能"
+        ],
+        "confidence": "high"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug → Familial pulmonary fibrosis",
+          "reason": "高权重的Contraindication连接，支持候选药物的危害"
+        }
+      ],
+      "remaining_gaps": [
+        "尚需明确肺部毒性机制的具体路径图"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "impact_summary": "补齐了策略路径，临床证据强化"
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "E",
+            "F"
+          ],
+          "impact_summary": "明确了对肺纤维化关系的多样性"
+        }
+      ],
+      "lessons": [
+        "优先关注对肺功能有已知影响的药物",
+        "通过补充不同作用机制的候选确定风险"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "围绕肺毒性加强现有证据链的连贯性"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "提供对比研究的数据支持，确认潜在风险"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "已知对肺有害药物",
+        "then": "优先过筛可能影响肺功能的剂量与疗程"
+      },
+      {
+        "when": "使用肺毒性药物",
+        "then": "在制定方案时考虑现有患者特征"
+      }
+    ]
+  }
+}

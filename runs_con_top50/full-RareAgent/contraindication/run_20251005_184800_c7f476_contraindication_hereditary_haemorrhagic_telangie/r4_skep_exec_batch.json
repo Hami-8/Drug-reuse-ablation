@@ -1,0 +1,933 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Hereditary haemorrhagic telangiectasia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "与出血风险相关的药物影响",
+            "expectation": "标注高权重 refutes 边以反映该风险",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "药物对HHT患者出血风险的影响",
+            "expectation": "提供有效证据以评估潜在风险",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_bevacizumab",
+          "type": "Drug",
+          "label": "Bevacizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thalidomide",
+          "type": "Drug",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dabigatran",
+          "type": "Drug",
+          "label": "Dabigatran",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_apixaban",
+          "type": "Drug",
+          "label": "Apixaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rivaroxaban",
+          "type": "Drug",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_labetalol",
+          "type": "Drug",
+          "label": "Labetalol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydrochlorothiazide",
+          "type": "Drug",
+          "label": "Hydrochlorothiazide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_hereditary_haemorrhagic_telangiectasia",
+          "type": "Disease",
+          "label": "Hereditary haemorrhagic telangiectasia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "claim_contraindication",
+          "type": "Claim",
+          "label": "Contraindication to treatment with specific drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_bevacizumab",
+          "type": "Target",
+          "label": "OffTargetBevacizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thalidomide",
+          "type": "Target",
+          "label": "OffTargetThalidomide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aspirin",
+          "type": "Target",
+          "label": "OffTargetAspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_warfarin",
+          "type": "Target",
+          "label": "OffTargetWarfarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clopidogrel",
+          "type": "Target",
+          "label": "OffTargetClopidogrel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dabigatran",
+          "type": "Target",
+          "label": "OffTargetDabigatran",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_apixaban",
+          "type": "Target",
+          "label": "OffTargetApixaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rivaroxaban",
+          "type": "Target",
+          "label": "OffTargetRivaroxaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "RiskPathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_bevacizumab",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知来自药物作用的风险"
+        },
+        {
+          "source": "drug_thalidomide",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "药效及风险关联"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抗炎作用可能加重出血倾向"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "影响血液凝固，风险较高"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "同类药物可能引发出血"
+        },
+        {
+          "source": "drug_dabigatran",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "DOAC 可能引起出血风险提升"
+        },
+        {
+          "source": "drug_apixaban",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗凝作用可能对患者不利"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "disease_hereditary_haemorrhagic_telangiectasia",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "出血风险增加的可能性"
+        },
+        {
+          "source": "drug_labetalol",
+          "target": "claim_contraindication",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "考虑到对血压影响的潜在问题"
+        },
+        {
+          "source": "drug_hydrochlorothiazide",
+          "target": "claim_contraindication",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响体内液体平衡"
+        },
+        {
+          "source": "drug_bevacizumab",
+          "target": "n_ot_bevacizumab",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "异常血管生成增加出血风险"
+        },
+        {
+          "source": "drug_thalidomide",
+          "target": "n_ot_thalidomide",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能诱导血管异常"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot_aspirin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "抗血小板效应可引发出血"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "n_ot_warfarin",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "抗凝机制加剧出血风险"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_ot_clopidogrel",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "同类抗血小板药物增加血肿风险"
+        },
+        {
+          "source": "drug_dabigatran",
+          "target": "n_ot_dabigatran",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "凝血机制干预可能加大出血风险"
+        },
+        {
+          "source": "drug_apixaban",
+          "target": "n_ot_apixaban",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "出血风险与血管病变相互作用"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "n_ot_rivaroxaban",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "同样可能加重出血现象"
+        },
+        {
+          "source": "n_ot_bevacizumab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响血管修复途径"
+        },
+        {
+          "source": "n_ot_thalidomide",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "影响血管重塑与稳定性"
+        },
+        {
+          "source": "n_ot_aspirin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "解剖出血风险机制"
+        },
+        {
+          "source": "n_ot_warfarin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "抗凝机制对出血的影响"
+        },
+        {
+          "source": "n_ot_clopidogrel",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与出血事件的相关性"
+        },
+        {
+          "source": "n_ot_dabigatran",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "出血风险的机制探讨"
+        },
+        {
+          "source": "n_ot_apixaban",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对出血事件的潜在影响"
+        },
+        {
+          "source": "n_ot_rivaroxaban",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "出血风险的影响度"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "增加长期出血风险可能导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在出血风险可能降低疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "抗血小板药物强化出血问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血倾向可能加重与禁忌相关的风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "同样影响出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "影响出血的抗凝药物"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "增加出血风险的抗凝剂"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险加重"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "治疗的安全性可受限于出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能增加出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "引发出血倾向"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H13",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "增加出血倾向"
+        },
+        {
+          "source": "n_adv",
+          "target": "H14",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能影响出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H15",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在出血风险影响"
+        },
+        {
+          "source": "n_adv",
+          "target": "H16",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "影响出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H17",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能会有出血倾向"
+        },
+        {
+          "source": "n_adv",
+          "target": "H18",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险影响措施"
+        },
+        {
+          "source": "n_adv",
+          "target": "H19",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能增加出血倾向"
+        },
+        {
+          "source": "n_adv",
+          "target": "H20",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "加重出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H21",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "影响出血风险的潜在可能性"
+        },
+        {
+          "source": "n_adv",
+          "target": "H22",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险的潜在加重"
+        },
+        {
+          "source": "n_adv",
+          "target": "H23",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能增加出血倾向"
+        },
+        {
+          "source": "n_adv",
+          "target": "H24",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险相关问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H25",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险的潜在问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H26",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血倾向可能加剧"
+        },
+        {
+          "source": "n_adv",
+          "target": "H27",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H28",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "影响出血风险的可能性"
+        },
+        {
+          "source": "n_adv",
+          "target": "H29",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能增加出血倾向"
+        },
+        {
+          "source": "n_adv",
+          "target": "H30",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险的潜在加重"
+        },
+        {
+          "source": "n_adv",
+          "target": "H31",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险的加重"
+        },
+        {
+          "source": "n_adv",
+          "target": "H32",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H33",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在出血倾向"
+        },
+        {
+          "source": "n_adv",
+          "target": "H34",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险潜在问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H35",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H36",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能会加重出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H37",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H38",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能会导致出血问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H39",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "加重出血风险的可能性"
+        },
+        {
+          "source": "n_adv",
+          "target": "H40",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血倾向的可能性"
+        },
+        {
+          "source": "n_adv",
+          "target": "H41",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H42",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "影响出血倾向的潜在问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H43",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能加重出血问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H44",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "持续出血的潜在风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H45",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H46",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险加重"
+        },
+        {
+          "source": "n_adv",
+          "target": "H47",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在出血问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H48",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能加重出血倾向"
+        },
+        {
+          "source": "n_adv",
+          "target": "H49",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H50",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血倾向的潜在风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H51",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能加重出血问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H52",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险的影响"
+        },
+        {
+          "source": "n_adv",
+          "target": "H53",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血倾向的可能性"
+        },
+        {
+          "source": "n_adv",
+          "target": "H54",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H55",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在的出血问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H56",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能增加出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H57",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险问题"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "与出血风险相关的药物影响",
+              "pro_nodes": [
+                "n_ot_bevacizumab",
+                "n_ot_thalidomide",
+                "n_ot_aspirin",
+                "n_ot_warfarin",
+                "n_ot_clopidogrel",
+                "n_ot_dabigatran",
+                "n_ot_apixaban",
+                "n_ot_rivaroxaban"
+              ],
+              "con_nodes": [
+                "n_adv"
+              ],
+              "note": "增加出血风险的药物可能与HHT患者的安全性产生冲突"
+            }
+          ]
+        },
+        "notes": "已完成与出血风险相关的药物影响的安全性压力测试：标注高权重 refutes 边连接至假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "不同药物间的出血风险影响未充分评估",
+      "药物对HHT患者的长期风险可能不同于通常人群"
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "subset": "contraindication",
+  "disease": "Rod-cone dystrophy",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "ml eye drops solution + rhngf 180 µg",
+    "ml eye drops solution + rhngf 60 µg"
+  ],
+  "seeds_initial": [
+    "Acetazolamide",
+    "Amiodarone",
+    "Aminoglycosides",
+    "Chloroquine",
+    "Chlorpromazine",
+    "Ciprofloxacin",
+    "Digoxin",
+    "Didanosine",
+    "Ethambutol",
+    "Fluoroquinolones",
+    "Gold salts",
+    "Hydroxychloroquine",
+    "Ibuprofen",
+    "Indomethacin",
+    "Isotretinoin",
+    "Lithium",
+    "Methotrexate",
+    "Naprosyn",
+    "Nifedipine",
+    "Phenothiazines",
+    "Quinine",
+    "Rifampin",
+    "Salicylates",
+    "Sildenafil",
+    "Sulfadiazine",
+    "Sulfasalazine",
+    "Tamoxifen",
+    "Tetracyclines",
+    "Thioridazine",
+    "Thyroid hormones",
+    "Tricyclic antidepressants",
+    "Valproate",
+    "Vincristine",
+    "Amphotericin B",
+    "Bromocriptine",
+    "Cyclophosphamide",
+    "Daptomycin",
+    "Ethosuximide",
+    "Ganciclovir",
+    "Ketoconazole",
+    "Lomustine",
+    "Octreotide",
+    "Pimozide",
+    "Propranolol",
+    "Ranolazine",
+    "Sunitinib",
+    "Tobramycin",
+    "Voriconazole",
+    "Zidovudine"
+  ],
+  "seed_history": [
+    [
+      "Acetazolamide",
+      "Amiodarone",
+      "Aminoglycosides",
+      "Chloroquine",
+      "Chlorpromazine",
+      "Ciprofloxacin",
+      "Digoxin",
+      "Didanosine",
+      "Ethambutol",
+      "Fluoroquinolones",
+      "Gold salts",
+      "Hydroxychloroquine",
+      "Ibuprofen",
+      "Indomethacin",
+      "Isotretinoin",
+      "Lithium",
+      "Methotrexate",
+      "Naprosyn",
+      "Nifedipine",
+      "Phenothiazines",
+      "Quinine",
+      "Rifampin",
+      "Salicylates",
+      "Sildenafil",
+      "Sulfadiazine",
+      "Sulfasalazine",
+      "Tamoxifen",
+      "Tetracyclines",
+      "Thioridazine",
+      "Thyroid hormones",
+      "Tricyclic antidepressants",
+      "Valproate",
+      "Vincristine",
+      "Amphotericin B",
+      "Bromocriptine",
+      "Cyclophosphamide",
+      "Daptomycin",
+      "Ethosuximide",
+      "Ganciclovir",
+      "Ketoconazole",
+      "Lomustine",
+      "Octreotide",
+      "Pimozide",
+      "Propranolol",
+      "Ranolazine",
+      "Sunitinib",
+      "Tobramycin",
+      "Voriconazole",
+      "Zidovudine"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_acetazolamide",
+          "name": "Acetazolamide"
+        },
+        "score": 0.56,
+        "graph_snapshot_ref": "GE_H1_round2",
+        "key_assumptions": [
+          "药物作用机制可能影响视网膜健康",
+          "潜在的视网膜损伤风险需进一步考察"
+        ],
+        "caveats": [
+          "安全性与有效性需要更多临床数据支持"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_chloroquine",
+          "name": "Chloroquine"
+        },
+        "score": 0.55,
+        "graph_snapshot_ref": "GE_H4_round2",
+        "key_assumptions": [
+          "已知有造成视网膜损伤的风险",
+          "可能导致视力障碍的证据存在"
+        ],
+        "caveats": [
+          "与视网膜病理之间的联系需进一步阐明"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "drug_acetazolamide→disease_rod_cone_dystrophy",
+          "reason": "药物可能通过影响视网膜代谢造成损害"
+        },
+        {
+          "pattern": "drug_chloroquine→disease_rod_cone_dystrophy",
+          "reason": "已知的视网膜毒性和风险"
+        }
+      ],
+      "remaining_gaps": [
+        "冲突热点：多种药物对视网膜的影响需定量评估以消解日后冲突"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "验证药物对视网膜影响的机制及其潜在反效应"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "针对已知视网膜损害做出明确的标准化评估，并标注相关风险"
+      },
+      {
+        "role": "Explorer",
+        "patch": "优先获取针对视网膜健康的清晰证据，去除可能存在的冗余"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "涉及视网膜健康",
+        "then": "应尽量区分药物的短期与长期影响以及风险评估"
+      }
+    ]
+  }
+}

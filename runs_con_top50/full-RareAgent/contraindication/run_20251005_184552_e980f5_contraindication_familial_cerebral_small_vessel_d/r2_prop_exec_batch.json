@@ -1,0 +1,1257 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Familial cerebral small vessel disease",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_aspirin",
+            "via": [
+              "target_inhibition"
+            ],
+            "to": "phenotype_bleeding",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_naproxen",
+          "type": "Drug",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_familial_cerebral_small_vessel_disease",
+          "type": "Disease",
+          "label": "Familial Cerebral Small Vessel Disease",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_inhibition",
+          "type": "Target",
+          "label": "Inhibition",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_clotting",
+          "type": "Pathway",
+          "label": "Clotting Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_stroke",
+          "type": "Phenotype",
+          "label": "Stroke Risk",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_bleeding",
+          "type": "Phenotype",
+          "label": "Bleeding Risk",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "claim_contraindication",
+          "type": "Claim",
+          "label": "Contraindication for Familial Cerebral Small Vessel Disease",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "Increased Bleeding Risk",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Hemorrhagic Events Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Cerebral Hemorrhage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Methylphenidate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methylphenidate",
+          "type": "Drug",
+          "label": "Methylphenidate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Amphetamines",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_amphetamines",
+          "type": "Drug",
+          "label": "Amphetamines",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_bupropion",
+          "type": "Drug",
+          "label": "Bupropion",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Thrombolytics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_thrombolytics",
+          "type": "Drug",
+          "label": "Thrombolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Fibrinolytics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fibrinolytics",
+          "type": "Drug",
+          "label": "Fibrinolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H13",
+          "type": "Hypothesis",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H14",
+          "type": "Hypothesis",
+          "label": "Verapamil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_verapamil",
+          "type": "Drug",
+          "label": "Verapamil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H15",
+          "type": "Hypothesis",
+          "label": "Diltiazem",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_diltiazem",
+          "type": "Drug",
+          "label": "Diltiazem",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H16",
+          "type": "Hypothesis",
+          "label": "Citalopram",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_citalopram",
+          "type": "Drug",
+          "label": "Citalopram",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H17",
+          "type": "Hypothesis",
+          "label": "Paroxetine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_paroxetine",
+          "type": "Drug",
+          "label": "Paroxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H18",
+          "type": "Hypothesis",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fluoxetine",
+          "type": "Drug",
+          "label": "Fluoxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H19",
+          "type": "Hypothesis",
+          "label": "Cedazuridine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cedazuridine",
+          "type": "Drug",
+          "label": "Cedazuridine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H20",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H21",
+          "type": "Hypothesis",
+          "label": "Abilify",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_abilify",
+          "type": "Drug",
+          "label": "Abilify",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H22",
+          "type": "Hypothesis",
+          "label": "Olanzapine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_olanzapine",
+          "type": "Drug",
+          "label": "Olanzapine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H23",
+          "type": "Hypothesis",
+          "label": "Quetiapine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_quetiapine",
+          "type": "Drug",
+          "label": "Quetiapine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H24",
+          "type": "Hypothesis",
+          "label": "Haloperidol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_haloperidol",
+          "type": "Drug",
+          "label": "Haloperidol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H25",
+          "type": "Hypothesis",
+          "label": "Mocarbitant",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_mocarbitant",
+          "type": "Drug",
+          "label": "Mocarbitant",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H26",
+          "type": "Hypothesis",
+          "label": "Etoricoxib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_etoricoxib",
+          "type": "Drug",
+          "label": "Etoricoxib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H27",
+          "type": "Hypothesis",
+          "label": "Sibutramine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sibutramine",
+          "type": "Drug",
+          "label": "Sibutramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H28",
+          "type": "Hypothesis",
+          "label": "Propranolol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_propranolol",
+          "type": "Drug",
+          "label": "Propranolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H29",
+          "type": "Hypothesis",
+          "label": "Clonidine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_clonidine",
+          "type": "Drug",
+          "label": "Clonidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H30",
+          "type": "Hypothesis",
+          "label": "Tramadol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_tramadol",
+          "type": "Drug",
+          "label": "Tramadol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H31",
+          "type": "Hypothesis",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H32",
+          "type": "Hypothesis",
+          "label": "Pregabalin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_pregabalin",
+          "type": "Drug",
+          "label": "Pregabalin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H33",
+          "type": "Hypothesis",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H34",
+          "type": "Hypothesis",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H35",
+          "type": "Hypothesis",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H36",
+          "type": "Hypothesis",
+          "label": "Lamotrigine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lamotrigine",
+          "type": "Drug",
+          "label": "Lamotrigine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H37",
+          "type": "Hypothesis",
+          "label": "Lapatinib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lapatinib",
+          "type": "Drug",
+          "label": "Lapatinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H38",
+          "type": "Hypothesis",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H39",
+          "type": "Hypothesis",
+          "label": "Isoniazid",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_isoniazid",
+          "type": "Drug",
+          "label": "Isoniazid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H40",
+          "type": "Hypothesis",
+          "label": "Statins",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H41",
+          "type": "Hypothesis",
+          "label": "Thiazolidinediones",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_thiazolidinediones",
+          "type": "Drug",
+          "label": "Thiazolidinediones",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H42",
+          "type": "Hypothesis",
+          "label": "Acarbose",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_acarbose",
+          "type": "Drug",
+          "label": "Acarbose",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H43",
+          "type": "Hypothesis",
+          "label": "Glimepiride",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_glimepiride",
+          "type": "Drug",
+          "label": "Glimepiride",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H44",
+          "type": "Hypothesis",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H45",
+          "type": "Hypothesis",
+          "label": "Sulfonylureas",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sulfonylureas",
+          "type": "Drug",
+          "label": "Sulfonylureas",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H46",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H47",
+          "type": "Hypothesis",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H48",
+          "type": "Hypothesis",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H49",
+          "type": "Hypothesis",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H50",
+          "type": "Hypothesis",
+          "label": "Methyldopa",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methyldopa",
+          "type": "Drug",
+          "label": "Methyldopa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H51",
+          "type": "Hypothesis",
+          "label": "Hydrochlorothiazide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_hydrochlorothiazide",
+          "type": "Drug",
+          "label": "Hydrochlorothiazide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H52",
+          "type": "Hypothesis",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_digoxin",
+          "type": "Drug",
+          "label": "Digoxin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H53",
+          "type": "Hypothesis",
+          "label": "Losartan",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_losartan",
+          "type": "Drug",
+          "label": "Losartan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H54",
+          "type": "Hypothesis",
+          "label": "Enalapril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_enalapril",
+          "type": "Drug",
+          "label": "Enalapril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H55",
+          "type": "Hypothesis",
+          "label": "Atenolol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_atenolol",
+          "type": "Drug",
+          "label": "Atenolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H56",
+          "type": "Hypothesis",
+          "label": "Captopril",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_captopril",
+          "type": "Drug",
+          "label": "Captopril",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H57",
+          "type": "Hypothesis",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H58",
+          "type": "Hypothesis",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_simvastatin",
+          "type": "Drug",
+          "label": "Simvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H59",
+          "type": "Hypothesis",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_atorvastatin",
+          "type": "Drug",
+          "label": "Atorvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H60",
+          "type": "Hypothesis",
+          "label": "Rosuvastatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rosuvastatin",
+          "type": "Drug",
+          "label": "Rosuvastatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "target_inhibition",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Aspirin is known to inhibit platelet aggregation."
+        },
+        {
+          "source": "target_inhibition",
+          "target": "pathway_clotting",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Inhibition affects the clotting pathway."
+        },
+        {
+          "source": "pathway_clotting",
+          "target": "phenotype_stroke",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Altered clotting can increase stroke risk."
+        },
+        {
+          "source": "pathway_clotting",
+          "target": "phenotype_bleeding",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Inhibition likely increases bleeding risk."
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "target_inhibition",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "Similar action as aspirin."
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "target_inhibition",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Anticoagulant properties lead to increased bleeding."
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "target_inhibition",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "NSAIDs known to increase bleeding risk."
+        },
+        {
+          "source": "drug_naproxen",
+          "target": "target_inhibition",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Similar mechanism to ibuprofen."
+        },
+        {
+          "source": "phenotype_stroke",
+          "target": "claim_contraindication",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Link established to contraindication."
+        },
+        {
+          "source": "phenotype_bleeding",
+          "target": "claim_contraindication",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Link established to contraindication."
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "Aspirin increases bleeding risk."
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Bleeding risk is a pathway to hemorrhagic events."
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Hemorrhagic events can lead to cerebral hemorrhage."
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "Cerebral hemorrhage risk counters potential benefits of Aspirin."
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "drug_aspirin",
+              "target": "phenotype_bleeding",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "Aspirin is known to increase bleeding risk."
+            },
+            {
+              "source": "drug_aspirin",
+              "target": "target_inhibition",
+              "relation": "acts_on",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "Inhibition mechanism established."
+            },
+            {
+              "source": "target_inhibition",
+              "target": "pathway_clotting",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "Inhibition affects clotting processes."
+            },
+            {
+              "source": "pathway_clotting",
+              "target": "phenotype_stroke",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "Clotting alterations can lead to stroke."
+            },
+            {
+              "source": "pathway_clotting",
+              "target": "phenotype_bleeding",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "Pathway relation to bleeding risk."
+            },
+            {
+              "source": "phenotype_bleeding",
+              "target": "claim_contraindication",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "Bleeding risk supports contraindication claim."
+            },
+            {
+              "source": "phenotype_stroke",
+              "target": "claim_contraindication",
+              "relation": "supports",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "Stroke risk also aligns with contraindication."
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "新增边形成了至少2条不相交路径：Aspirin → Inhibition → Clotting Pathway → Bleeding Risk和Aspirin → Inhibition → Clotting Pathway → Stroke Risk"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

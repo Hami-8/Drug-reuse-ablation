@@ -1,0 +1,205 @@
+{
+  "subset": "contraindication",
+  "disease": "Neonatal cholestasis",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "lum001"
+  ],
+  "seeds_initial": [
+    "Phenobarbital",
+    "Cholestyramine",
+    "Sodium valproate",
+    "Ibuprofen",
+    "Acetaminophen",
+    "Ciprofloxacin",
+    "Amitriptyline",
+    "Estrogens",
+    "Azathioprine",
+    "Methotrexate",
+    "Rifampicin",
+    "Furosemide",
+    "Naltrexone",
+    "Digoxin",
+    "Isoniazid",
+    "ACE inhibitors",
+    "Bromocriptine",
+    "Carbamazepine",
+    "Dapsone",
+    "HMG-CoA reductase inhibitors",
+    "Glibenclamide",
+    "NSAIDs",
+    "Sildenafil",
+    "Sodium nitroprusside",
+    "Theophylline",
+    "Tetracycline",
+    "Valproate",
+    "Warfarin",
+    "Amiodarone",
+    "Chlorpromazine",
+    "Dexamethasone",
+    "Fluconazole",
+    "Ketoconazole",
+    "Nifedipine",
+    "Nitrofurantoin",
+    "Rifampin",
+    "Simvastatin",
+    "Tricyclic antidepressants",
+    "Amphotericin B",
+    "Clofazimine",
+    "Metranidazole",
+    "Vancomycin",
+    "Tobramycin",
+    "Cimetidine",
+    "Labetalol",
+    "Probenecid",
+    "Temazepam",
+    "Diltiazem",
+    "Quinidine",
+    "Paroxetine",
+    "Risperidone",
+    "Rosuvastatin",
+    "Gemfibrozil",
+    "Clindamycin",
+    "Benzodiazepines",
+    "Methyldopa",
+    "Thalidomide",
+    "Thyroid hormones",
+    "Oxcarbazepine"
+  ],
+  "seed_history": [
+    [
+      "Phenobarbital",
+      "Cholestyramine",
+      "Sodium valproate",
+      "Ibuprofen",
+      "Acetaminophen",
+      "Ciprofloxacin",
+      "Amitriptyline",
+      "Estrogens",
+      "Azathioprine",
+      "Methotrexate",
+      "Rifampicin",
+      "Furosemide",
+      "Naltrexone",
+      "Digoxin",
+      "Isoniazid",
+      "ACE inhibitors",
+      "Bromocriptine",
+      "Carbamazepine",
+      "Dapsone",
+      "HMG-CoA reductase inhibitors",
+      "Glibenclamide",
+      "NSAIDs",
+      "Sildenafil",
+      "Sodium nitroprusside",
+      "Theophylline",
+      "Tetracycline",
+      "Valproate",
+      "Warfarin",
+      "Amiodarone",
+      "Chlorpromazine",
+      "Dexamethasone",
+      "Fluconazole",
+      "Ketoconazole",
+      "Nifedipine",
+      "Nitrofurantoin",
+      "Rifampin",
+      "Simvastatin",
+      "Tricyclic antidepressants",
+      "Amphotericin B",
+      "Clofazimine",
+      "Metranidazole",
+      "Vancomycin",
+      "Tobramycin",
+      "Cimetidine",
+      "Labetalol",
+      "Probenecid",
+      "Temazepam",
+      "Diltiazem",
+      "Quinidine",
+      "Paroxetine",
+      "Risperidone",
+      "Rosuvastatin",
+      "Gemfibrozil",
+      "Clindamycin",
+      "Benzodiazepines",
+      "Methyldopa",
+      "Thalidomide",
+      "Thyroid hormones",
+      "Oxcarbazepine"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_phenobarbital",
+          "name": "Phenobarbital"
+        },
+        "score": 0.63,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Phenobarbital 对胆道病症存在已知影响",
+          "不良反应可能抵消其治疗获益"
+        ],
+        "caveats": [
+          "在与其他疗法的比较中缺乏证据"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "score": 0.58,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Cholestyramine 有效治疗肝胆相关病症的机制",
+          "不良反应可能抵消其治疗获益"
+        ],
+        "caveats": [
+          "在与其他疗法的比较中缺乏证据"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_sodium_valproate",
+          "name": "Sodium Valproate"
+        },
+        "score": 0.55,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Sodium Valproate 能辅助治疗胆道问题",
+          "不良反应可能抵消其治疗获益"
+        ],
+        "caveats": [
+          "在与其他疗法的比较中缺乏证据"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Disease (胆道病症)",
+          "reason": "已有有效数据支持指定药物的适用性"
+        }
+      ],
+      "remaining_gaps": [
+        "缺乏有效的疗效对比数据，限制了推荐的信心",
+        "潜在的安全风险需要进一步评估"
+      ]
+    },
+    "heuristics": [
+      {
+        "when": "对胆道问题的药物治疗",
+        "then": "优先考虑已知疗效与不良反应的平衡"
+      }
+    ]
+  }
+}

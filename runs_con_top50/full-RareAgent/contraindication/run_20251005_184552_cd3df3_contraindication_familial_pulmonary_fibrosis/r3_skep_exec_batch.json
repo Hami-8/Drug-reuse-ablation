@@ -1,0 +1,2086 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Familial pulmonary fibrosis",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Amiodarone 与肺部毒性",
+            "expectation": "若风险成立，需标注高权重的 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Bleomycin 与肺纤维化风险",
+            "expectation": "若风险成立，需标注高权重的 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bleomycin",
+          "type": "Drug",
+          "label": "Bleomycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nitrofurantoin",
+          "type": "Drug",
+          "label": "Nitrofurantoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_busulfan",
+          "type": "Drug",
+          "label": "Busulfan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_chlorambucil",
+          "type": "Drug",
+          "label": "Chlorambucil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_doxorubicin",
+          "type": "Drug",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_carboplatin",
+          "type": "Drug",
+          "label": "Carboplatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gemcitabine",
+          "type": "Drug",
+          "label": "Gemcitabine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_etoposide",
+          "type": "Drug",
+          "label": "Etoposide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_interferon_alfa",
+          "type": "Drug",
+          "label": "Interferon alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_radiation_therapy",
+          "type": "Drug",
+          "label": "Radiation therapy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sulfasalazine",
+          "type": "Drug",
+          "label": "Sulfasalazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_valproic_acid",
+          "type": "Drug",
+          "label": "Valproic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ticlopidine",
+          "type": "Drug",
+          "label": "Ticlopidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_procarbazine",
+          "type": "Drug",
+          "label": "Procarbazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_clofarabine",
+          "type": "Drug",
+          "label": "Clofarabine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_thalidomide",
+          "type": "Drug",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sodium_salicylate",
+          "type": "Drug",
+          "label": "Sodium salicylate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cisplatin",
+          "type": "Drug",
+          "label": "Cisplatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_docetaxel",
+          "type": "Drug",
+          "label": "Docetaxel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_paclitaxel",
+          "type": "Drug",
+          "label": "Paclitaxel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tamoxifen",
+          "type": "Drug",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_raloxifene",
+          "type": "Drug",
+          "label": "Raloxifene",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_mifepristone",
+          "type": "Drug",
+          "label": "Mifepristone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lopinavir",
+          "type": "Drug",
+          "label": "Lopinavir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ritonavir",
+          "type": "Drug",
+          "label": "Ritonavir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_indinavir",
+          "type": "Drug",
+          "label": "Indinavir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nelfinavir",
+          "type": "Drug",
+          "label": "Nelfinavir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bromocriptine",
+          "type": "Drug",
+          "label": "Bromocriptine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ganciclovir",
+          "type": "Drug",
+          "label": "Ganciclovir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_acyclovir",
+          "type": "Drug",
+          "label": "Acyclovir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pentamadine",
+          "type": "Drug",
+          "label": "Pentamadine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_terbinafine",
+          "type": "Drug",
+          "label": "Terbinafine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_clofazimine",
+          "type": "Drug",
+          "label": "Clofazimine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fingolimod",
+          "type": "Drug",
+          "label": "Fingolimod",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_interferon_beta",
+          "type": "Drug",
+          "label": "Interferon beta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_imatinib",
+          "type": "Drug",
+          "label": "Imatinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dasatinib",
+          "type": "Drug",
+          "label": "Dasatinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nintedanib",
+          "type": "Drug",
+          "label": "Nintedanib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_afatinib",
+          "type": "Drug",
+          "label": "Afatinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_osimertinib",
+          "type": "Drug",
+          "label": "Osimertinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_lemtrada",
+          "type": "Drug",
+          "label": "Lemtrada",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_benzodiazepines",
+          "type": "Drug",
+          "label": "Benzodiazepines",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_methylprednisolone",
+          "type": "Drug",
+          "label": "Methylprednisolone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hydrocortisone",
+          "type": "Drug",
+          "label": "Hydrocortisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_narcotic_analgesics",
+          "type": "Drug",
+          "label": "Narcotic analgesics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_methadone",
+          "type": "Drug",
+          "label": "Methadone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_antitubercular_drugs",
+          "type": "Drug",
+          "label": "Antitubercular drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sunitinib",
+          "type": "Drug",
+          "label": "Sunitinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tocilizumab",
+          "type": "Drug",
+          "label": "Tocilizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_palbociclib",
+          "type": "Drug",
+          "label": "Palbociclib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_amiodarone",
+          "type": "Target",
+          "label": "Amiodarone Off-Target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bleomycin",
+          "type": "Target",
+          "label": "Bleomycin Off-Target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "Methotrexate Off-Target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nitrofurantoin",
+          "type": "Target",
+          "label": "Nitrofurantoin Off-Target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclophosphamide",
+          "type": "Target",
+          "label": "Cyclophosphamide Off-Target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_busulfan",
+          "type": "Target",
+          "label": "Busulfan Off-Target Effect",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk Pathway in Pulmonary Fibrosis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype in Pulmonary Fibrosis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_amiodarone",
+          "type": "Drug",
+          "label": "Amiodarone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Bleomycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_bleomycin",
+          "type": "Drug",
+          "label": "Bleomycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Nitrofurantoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nitrofurantoin",
+          "type": "Drug",
+          "label": "Nitrofurantoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Busulfan",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_busulfan",
+          "type": "Drug",
+          "label": "Busulfan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Chlorambucil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_chlorambucil",
+          "type": "Drug",
+          "label": "Chlorambucil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_doxorubicin",
+          "type": "Drug",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Carboplatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_carboplatin",
+          "type": "Drug",
+          "label": "Carboplatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Gemcitabine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_gemcitabine",
+          "type": "Drug",
+          "label": "Gemcitabine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Etoposide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_etoposide",
+          "type": "Drug",
+          "label": "Etoposide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Interferon alfa",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_interferon_alfa",
+          "type": "Drug",
+          "label": "Interferon alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H13",
+          "type": "Hypothesis",
+          "label": "Radiation therapy",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_radiation_therapy",
+          "type": "Drug",
+          "label": "Radiation therapy",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H14",
+          "type": "Hypothesis",
+          "label": "Sulfasalazine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sulfasalazine",
+          "type": "Drug",
+          "label": "Sulfasalazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H15",
+          "type": "Hypothesis",
+          "label": "Valproic acid",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_valproic_acid",
+          "type": "Drug",
+          "label": "Valproic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H16",
+          "type": "Hypothesis",
+          "label": "Ticlopidine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ticlopidine",
+          "type": "Drug",
+          "label": "Ticlopidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H17",
+          "type": "Hypothesis",
+          "label": "Procarbazine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_procarbazine",
+          "type": "Drug",
+          "label": "Procarbazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H18",
+          "type": "Hypothesis",
+          "label": "Clofarabine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_clofarabine",
+          "type": "Drug",
+          "label": "Clofarabine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H19",
+          "type": "Hypothesis",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_thalidomide",
+          "type": "Drug",
+          "label": "Thalidomide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H20",
+          "type": "Hypothesis",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H21",
+          "type": "Hypothesis",
+          "label": "Sodium salicylate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sodium_salicylate",
+          "type": "Drug",
+          "label": "Sodium salicylate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H22",
+          "type": "Hypothesis",
+          "label": "Cisplatin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cisplatin",
+          "type": "Drug",
+          "label": "Cisplatin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H23",
+          "type": "Hypothesis",
+          "label": "Docetaxel",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_docetaxel",
+          "type": "Drug",
+          "label": "Docetaxel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H24",
+          "type": "Hypothesis",
+          "label": "Paclitaxel",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_paclitaxel",
+          "type": "Drug",
+          "label": "Paclitaxel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H25",
+          "type": "Hypothesis",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_tamoxifen",
+          "type": "Drug",
+          "label": "Tamoxifen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H26",
+          "type": "Hypothesis",
+          "label": "Raloxifene",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_raloxifene",
+          "type": "Drug",
+          "label": "Raloxifene",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H27",
+          "type": "Hypothesis",
+          "label": "Mifepristone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_mifepristone",
+          "type": "Drug",
+          "label": "Mifepristone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H28",
+          "type": "Hypothesis",
+          "label": "Lopinavir",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lopinavir",
+          "type": "Drug",
+          "label": "Lopinavir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H29",
+          "type": "Hypothesis",
+          "label": "Ritonavir",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ritonavir",
+          "type": "Drug",
+          "label": "Ritonavir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H30",
+          "type": "Hypothesis",
+          "label": "Indinavir",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_indinavir",
+          "type": "Drug",
+          "label": "Indinavir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H31",
+          "type": "Hypothesis",
+          "label": "Nelfinavir",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nelfinavir",
+          "type": "Drug",
+          "label": "Nelfinavir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H32",
+          "type": "Hypothesis",
+          "label": "Bromocriptine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_bromocriptine",
+          "type": "Drug",
+          "label": "Bromocriptine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H33",
+          "type": "Hypothesis",
+          "label": "Ganciclovir",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ganciclovir",
+          "type": "Drug",
+          "label": "Ganciclovir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H34",
+          "type": "Hypothesis",
+          "label": "Acyclovir",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_acyclovir",
+          "type": "Drug",
+          "label": "Acyclovir",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H35",
+          "type": "Hypothesis",
+          "label": "Pentamadine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_pentamadine",
+          "type": "Drug",
+          "label": "Pentamadine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H36",
+          "type": "Hypothesis",
+          "label": "Terbinafine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_terbinafine",
+          "type": "Drug",
+          "label": "Terbinafine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H37",
+          "type": "Hypothesis",
+          "label": "Clofazimine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_clofazimine",
+          "type": "Drug",
+          "label": "Clofazimine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H38",
+          "type": "Hypothesis",
+          "label": "Fingolimod",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_fingolimod",
+          "type": "Drug",
+          "label": "Fingolimod",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H39",
+          "type": "Hypothesis",
+          "label": "Interferon beta",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_interferon_beta",
+          "type": "Drug",
+          "label": "Interferon beta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H40",
+          "type": "Hypothesis",
+          "label": "Imatinib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_imatinib",
+          "type": "Drug",
+          "label": "Imatinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H41",
+          "type": "Hypothesis",
+          "label": "Dasatinib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dasatinib",
+          "type": "Drug",
+          "label": "Dasatinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H42",
+          "type": "Hypothesis",
+          "label": "Nintedanib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_nintedanib",
+          "type": "Drug",
+          "label": "Nintedanib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H43",
+          "type": "Hypothesis",
+          "label": "Afatinib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_afatinib",
+          "type": "Drug",
+          "label": "Afatinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H44",
+          "type": "Hypothesis",
+          "label": "Osimertinib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_osimertinib",
+          "type": "Drug",
+          "label": "Osimertinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H45",
+          "type": "Hypothesis",
+          "label": "Lemtrada",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_lemtrada",
+          "type": "Drug",
+          "label": "Lemtrada",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H46",
+          "type": "Hypothesis",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H47",
+          "type": "Hypothesis",
+          "label": "Benzodiazepines",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_benzodiazepines",
+          "type": "Drug",
+          "label": "Benzodiazepines",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H48",
+          "type": "Hypothesis",
+          "label": "Methylprednisolone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methylprednisolone",
+          "type": "Drug",
+          "label": "Methylprednisolone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H49",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H50",
+          "type": "Hypothesis",
+          "label": "Hydrocortisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_hydrocortisone",
+          "type": "Drug",
+          "label": "Hydrocortisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H51",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H52",
+          "type": "Hypothesis",
+          "label": "Narcotic analgesics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_narcotic_analgesics",
+          "type": "Drug",
+          "label": "Narcotic analgesics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H53",
+          "type": "Hypothesis",
+          "label": "Methadone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_methadone",
+          "type": "Drug",
+          "label": "Methadone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H54",
+          "type": "Hypothesis",
+          "label": "Antitubercular drugs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_antitubercular_drugs",
+          "type": "Drug",
+          "label": "Antitubercular drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H55",
+          "type": "Hypothesis",
+          "label": "Sunitinib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_sunitinib",
+          "type": "Drug",
+          "label": "Sunitinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H56",
+          "type": "Hypothesis",
+          "label": "Tocilizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_tocilizumab",
+          "type": "Drug",
+          "label": "Tocilizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H57",
+          "type": "Hypothesis",
+          "label": "Palbociclib",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_palbociclib",
+          "type": "Drug",
+          "label": "Palbociclib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_amiodarone",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知对肺部有毒性"
+        },
+        {
+          "source": "n_bleomycin",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与纤维化相关的已知副作用"
+        },
+        {
+          "source": "n_methotrexate",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有潜在的肺毒性"
+        },
+        {
+          "source": "n_nitrofurantoin",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "与呼吸系统问题相关的已知风险"
+        },
+        {
+          "source": "n_cyclophosphamide",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "有肺部副作用的风险"
+        },
+        {
+          "source": "n_busulfan",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "与肺部损伤相关的现象"
+        },
+        {
+          "source": "n_chlorambucil",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "可能导致肺部并发症"
+        },
+        {
+          "source": "n_doxorubicin",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "与心肺毒性相关的风险"
+        },
+        {
+          "source": "n_carboplatin",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "可能影响肺功能的副作用"
+        },
+        {
+          "source": "n_gemcitabine",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "有潜在肺部毒性"
+        },
+        {
+          "source": "n_etoposide",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "副作用可能包括肺部影响"
+        },
+        {
+          "source": "n_interferon_alfa",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "已知的副作用包括肺部问题"
+        },
+        {
+          "source": "n_radiation_therapy",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "与肺纤维化的相关性"
+        },
+        {
+          "source": "n_sulfasalazine",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "有影响肺部功能的可能"
+        },
+        {
+          "source": "n_valproic_acid",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "可能影响肺部健康"
+        },
+        {
+          "source": "n_ticlopidine",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "有肺部副作用的潜在风险"
+        },
+        {
+          "source": "n_procarbazine",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能导致肺部问题的药物"
+        },
+        {
+          "source": "n_clofarabine",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "关联肺部毒性的情况"
+        },
+        {
+          "source": "n_thalidomide",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "与肺部影响有潜在关联"
+        },
+        {
+          "source": "n_azathioprine",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能加剧肺功能问题"
+        },
+        {
+          "source": "n_sodium_salicylate",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "与肺部风险相关的特征"
+        },
+        {
+          "source": "n_cisplatin",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "具有潜在的肺部影响"
+        },
+        {
+          "source": "n_docetaxel",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "副作用中可能包括肺部损害"
+        },
+        {
+          "source": "n_paclitaxel",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "有肺部损伤的潜在风险"
+        },
+        {
+          "source": "n_tamoxifen",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "与肺部影响的关联"
+        },
+        {
+          "source": "n_raloxifene",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能影响肺功能的副作用"
+        },
+        {
+          "source": "n_mifepristone",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "与肺部并发症有关"
+        },
+        {
+          "source": "n_lopinavir",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能加剧肺部问题"
+        },
+        {
+          "source": "n_ritonavir",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "有可能影响肺功能"
+        },
+        {
+          "source": "n_indinavir",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能加重肺部副作用"
+        },
+        {
+          "source": "n_nelfinavir",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "与肺部风险的相关性"
+        },
+        {
+          "source": "n_bromocriptine",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "与肺部影响的潜在关系"
+        },
+        {
+          "source": "n_ganciclovir",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能加剧肺部健康问题"
+        },
+        {
+          "source": "n_acyclovir",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "与肺部损害的潜在风险"
+        },
+        {
+          "source": "n_pentamadine",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能影响肺部健康"
+        },
+        {
+          "source": "n_terbinafine",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能加剧肺部问题"
+        },
+        {
+          "source": "n_clofazimine",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "有影响肺部的潜在风险"
+        },
+        {
+          "source": "n_fingolimod",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能影响肺功能的副作用"
+        },
+        {
+          "source": "n_interferon_beta",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "有潜在风险的药物"
+        },
+        {
+          "source": "n_imatinib",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "与肺部健康相关的风险"
+        },
+        {
+          "source": "n_dasatinib",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "与肺部问题可能相关"
+        },
+        {
+          "source": "n_nintedanib",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能导致肺部毒性"
+        },
+        {
+          "source": "n_afatinib",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "有可能的肺部影响"
+        },
+        {
+          "source": "n_osimertinib",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "与肺部损害相关的可能性"
+        },
+        {
+          "source": "n_lemtrada",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能影响肺部健康"
+        },
+        {
+          "source": "n_rituximab",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能具有肺部毒性"
+        },
+        {
+          "source": "n_benzodiazepines",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "副作用中可能影响肺部"
+        },
+        {
+          "source": "n_methylprednisolone",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "对肺部健康的风险"
+        },
+        {
+          "source": "n_prednisone",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "与肺部问题的相关性"
+        },
+        {
+          "source": "n_hydrocortisone",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "潜在肺部影响"
+        },
+        {
+          "source": "n_dexamethasone",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能对肺部造成伤害"
+        },
+        {
+          "source": "n_narcotic_analgesics",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能导致肺部副作用"
+        },
+        {
+          "source": "n_methadone",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "对肺部健康的潜在影响"
+        },
+        {
+          "source": "n_antitubercular_drugs",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能危害肺部健康"
+        },
+        {
+          "source": "n_sunitinib",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能影响肺部功能"
+        },
+        {
+          "source": "n_tocilizumab",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "可能加重肺部问题"
+        },
+        {
+          "source": "n_palbociclib",
+          "target": "Familial pulmonary fibrosis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "与肺部风险的潜在关联"
+        },
+        {
+          "source": "drug_amiodarone",
+          "target": "n_ot_amiodarone",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知对肺的毒性作用"
+        },
+        {
+          "source": "drug_bleomycin",
+          "target": "n_ot_bleomycin",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知引发肺纤维化"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的肺损伤风险"
+        },
+        {
+          "source": "drug_nitrofurantoin",
+          "target": "n_ot_nitrofurantoin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "已知损害肺部功能"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_ot_cyclophosphamide",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能导致肺部并发症"
+        },
+        {
+          "source": "drug_busulfan",
+          "target": "n_ot_busulfan",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与肺相关的不良反应"
+        },
+        {
+          "source": "n_ot_amiodarone",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "肺部风险路径"
+        },
+        {
+          "source": "n_ot_bleomycin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "引导肺纤维化的机制链"
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与肺损伤相关的路径"
+        },
+        {
+          "source": "n_ot_nitrofurantoin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "肺部毒性通路"
+        },
+        {
+          "source": "n_ot_cyclophosphamide",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致肺纤维化的机制"
+        },
+        {
+          "source": "n_ot_busulfan",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.55,
+          "agent": "Skeptic",
+          "rationale": "与肺部损伤的可能关联"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "导致不良的肺部表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该反应成立则抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该反应成立则抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该反应成立则抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该反应成立则抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该反应成立则抵消疗效"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该反应成立则抵消疗效"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Amiodarone 与肺部毒性",
+              "pro_nodes": [
+                "n_ot_amiodarone"
+              ],
+              "con_nodes": [
+                "n_adv"
+              ],
+              "note": "Amiodarone 的肺部毒性与纤维化风险冲突"
+            }
+          ]
+        },
+        "notes": "已完成 Amiodarone 的安全性压力测试，并标注高权重的 refute 边"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Bleomycin 与肺纤维化风险",
+              "pro_nodes": [
+                "n_ot_bleomycin"
+              ],
+              "con_nodes": [
+                "n_adv"
+              ],
+              "note": "Bleomycin 的肺纤维化风险与健康结局冲突"
+            }
+          ]
+        },
+        "notes": "已完成 Bleomycin 的安全性压力测试，并标注高权重的 refute 边"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "肺部损伤机制与治疗效益之间的冲突"
+    ]
+  }
+}

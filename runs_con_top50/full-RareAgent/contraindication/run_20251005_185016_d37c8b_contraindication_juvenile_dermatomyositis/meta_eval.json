@@ -1,0 +1,200 @@
+{
+  "subset": "contraindication",
+  "disease": "Juvenile dermatomyositis",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "continue is",
+    "withhold is"
+  ],
+  "seeds_initial": [
+    "Chloroquine",
+    "Penicillamine",
+    "Atorvastatin",
+    "Simvastatin",
+    "D-penicillamine",
+    "Methotrexate",
+    "Corticosteroids",
+    "Azathioprine",
+    "Cyclophosphamide",
+    "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+    "Antimalarials",
+    "Sulfasalazine",
+    "Carbamazepine",
+    "Tetracycline",
+    "Minocycline",
+    "Sodium valproate",
+    "Propranolol",
+    "Rituximab",
+    "Infliximab",
+    "Etanercept",
+    "Adalimumab",
+    "Mycophenolate mofetil",
+    "Gemcitabine",
+    "Dapsone",
+    "Interferons",
+    "Thalidomide",
+    "Celecoxib",
+    "Tamoxifen",
+    "Levamisole",
+    "Nab-paclitaxel",
+    "Vincristine",
+    "Nitrofurantoin",
+    "Sodium sulfacetamide",
+    "Bacitracin",
+    "Chloramphenicol",
+    "Tizanidine",
+    "Methyldopa",
+    "Oxymetazoline",
+    "Hydroxyurea",
+    "Leflunomide",
+    "Analgesics",
+    "Salicylates",
+    "Sildenafil",
+    "Priapism",
+    "Dextromethorphan",
+    "Stimulants",
+    "Rifampicin",
+    "Barbiturates",
+    "Poison ivy extract",
+    "Recombinant human erythropoietin",
+    "Alprostadil",
+    "Epoetin alfa",
+    "Antibiotics",
+    "Ecofusin",
+    "Spironolactone",
+    "Triamterene",
+    "Clofazimine",
+    "Cimetidine"
+  ],
+  "seed_history": [
+    [
+      "Chloroquine",
+      "Penicillamine",
+      "Atorvastatin",
+      "Simvastatin",
+      "D-penicillamine",
+      "Methotrexate",
+      "Corticosteroids",
+      "Azathioprine",
+      "Cyclophosphamide",
+      "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+      "Antimalarials",
+      "Sulfasalazine",
+      "Carbamazepine",
+      "Tetracycline",
+      "Minocycline",
+      "Sodium valproate",
+      "Propranolol",
+      "Rituximab",
+      "Infliximab",
+      "Etanercept",
+      "Adalimumab",
+      "Mycophenolate mofetil",
+      "Gemcitabine",
+      "Dapsone",
+      "Interferons",
+      "Thalidomide",
+      "Celecoxib",
+      "Tamoxifen",
+      "Levamisole",
+      "Nab-paclitaxel",
+      "Vincristine",
+      "Nitrofurantoin",
+      "Sodium sulfacetamide",
+      "Bacitracin",
+      "Chloramphenicol",
+      "Tizanidine",
+      "Methyldopa",
+      "Oxymetazoline",
+      "Hydroxyurea",
+      "Leflunomide",
+      "Analgesics",
+      "Salicylates",
+      "Sildenafil",
+      "Priapism",
+      "Dextromethorphan",
+      "Stimulants",
+      "Rifampicin",
+      "Barbiturates",
+      "Poison ivy extract",
+      "Recombinant human erythropoietin",
+      "Alprostadil",
+      "Epoetin alfa",
+      "Antibiotics",
+      "Ecofusin",
+      "Spironolactone",
+      "Triamterene",
+      "Clofazimine",
+      "Cimetidine"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_chloroquine",
+          "name": "Chloroquine"
+        },
+        "score": 0.76,
+        "graph_snapshot_ref": "GE_H1_round5",
+        "key_assumptions": [
+          "Chloroquine的毒副作用确实对肌肉及皮肤产生负面影响",
+          "相关的对照机制链得以验证"
+        ],
+        "caveats": [
+          "安全性与诸多并发反应仍需持续关注"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_penicillamine",
+          "name": "Penicillamine"
+        },
+        "score": 0.71,
+        "graph_snapshot_ref": "GE_H2_round5",
+        "key_assumptions": [
+          "Penicillamine有可能影响皮肤健康和免疫系统",
+          "相关副作用确认存在"
+        ],
+        "caveats": [
+          "需监测可能的严重反应与疗效损失"
+        ],
+        "confidence": "high"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "（药物→尸体→疾病）",
+          "reason": "每种药物均通过反向证据有明确的风险路径"
+        }
+      ],
+      "remaining_gaps": [
+        "需要进一步检验可能存在的独立机制路径，并降低潜在的冲突"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "确保药物副作用与潜在机制的全面验证及清晰描述"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "对每个药物明显潜在风险进行强调，并提供具体证据"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "与Juvenile dermatomyositis 相关的药物",
+        "then": "重点监测副作用及病情发展，优先考虑高风险药物"
+      }
+    ]
+  }
+}

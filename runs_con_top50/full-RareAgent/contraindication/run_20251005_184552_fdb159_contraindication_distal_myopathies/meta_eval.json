@@ -1,0 +1,241 @@
+{
+  "subset": "contraindication",
+  "disease": "Distal myopathies",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "cyproheptadine"
+  ],
+  "seeds_initial": [
+    "Corticosteroids",
+    "Dantrolene",
+    "Statins",
+    "Quinine",
+    "Doxorubicin",
+    "Chloroquine",
+    "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+    "Muscle relaxants",
+    "Anabolic steroids",
+    "Gemfibrozil",
+    "Beta-blockers",
+    "Rapamycin",
+    "Interferon",
+    "Ciprofloxacin",
+    "Colchicine",
+    "Tetracycline",
+    "Erythromycin",
+    "Vancomycin",
+    "Carbamazepine",
+    "Phenytoin",
+    "Valproic acid",
+    "Aminoglycosides",
+    "Sotalol",
+    "Furosemide",
+    "Digoxin",
+    "L-dopa",
+    "Propranolol",
+    "Amiodarone",
+    "Clindamycin",
+    "Moxifloxacin",
+    "Atorvastatin",
+    "Zafirlukast",
+    "Tramadol",
+    "Cyclophosphamide",
+    "Hydroxychloroquine",
+    "Trazodone",
+    "Oseltamivir",
+    "Nitrofurantoin",
+    "Ibuprofen",
+    "Acetaminophen",
+    "Ketorolac",
+    "Methylprednisolone",
+    "Antipsychotics",
+    "Azathioprine",
+    "Mycophenolate mofetil",
+    "Fluoroquinolones",
+    "Lithium",
+    "Venlafaxine",
+    "Duloxetine",
+    "Clozapine",
+    "Thioridazine",
+    "Olanzapine",
+    "Risperidone",
+    "Citalopram",
+    "Sertraline",
+    "Escitalopram",
+    "Bupropion",
+    "Mirtazapine",
+    "Pamidronate",
+    "Zoledronic acid"
+  ],
+  "seed_history": [
+    [
+      "Corticosteroids",
+      "Dantrolene",
+      "Statins",
+      "Quinine",
+      "Doxorubicin",
+      "Chloroquine",
+      "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+      "Muscle relaxants",
+      "Anabolic steroids",
+      "Gemfibrozil",
+      "Beta-blockers",
+      "Rapamycin",
+      "Interferon",
+      "Ciprofloxacin",
+      "Colchicine",
+      "Tetracycline",
+      "Erythromycin",
+      "Vancomycin",
+      "Carbamazepine",
+      "Phenytoin",
+      "Valproic acid",
+      "Aminoglycosides",
+      "Sotalol",
+      "Furosemide",
+      "Digoxin",
+      "L-dopa",
+      "Propranolol",
+      "Amiodarone",
+      "Clindamycin",
+      "Moxifloxacin",
+      "Atorvastatin",
+      "Zafirlukast",
+      "Tramadol",
+      "Cyclophosphamide",
+      "Hydroxychloroquine",
+      "Trazodone",
+      "Oseltamivir",
+      "Nitrofurantoin",
+      "Ibuprofen",
+      "Acetaminophen",
+      "Ketorolac",
+      "Methylprednisolone",
+      "Antipsychotics",
+      "Azathioprine",
+      "Mycophenolate mofetil",
+      "Fluoroquinolones",
+      "Lithium",
+      "Venlafaxine",
+      "Duloxetine",
+      "Clozapine",
+      "Thioridazine",
+      "Olanzapine",
+      "Risperidone",
+      "Citalopram",
+      "Sertraline",
+      "Escitalopram",
+      "Bupropion",
+      "Mirtazapine",
+      "Pamidronate",
+      "Zoledronic acid"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "score": 0.76,
+        "graph_snapshot_ref": "GE_H1_round3",
+        "key_assumptions": [
+          "Corticosteroids 通过影响肌肉功能加重 Distal Myopathies",
+          "存在较高的安全性风险，如感染"
+        ],
+        "caveats": [
+          "对 Distal Myopathies 的影响需考量其他潜在风险"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_dantrolene",
+          "name": "Dantrolene"
+        },
+        "score": 0.72,
+        "graph_snapshot_ref": "GE_H2_round3",
+        "key_assumptions": [
+          "Dantrolene 作用于肌肉功能并可能导致肌肉损伤",
+          "安全性问题未得到充分验证"
+        ],
+        "caveats": [
+          "需监测使用后的肌肉无力症状"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "score": 0.68,
+        "graph_snapshot_ref": "GE_H3_round3",
+        "key_assumptions": [
+          "Statins 有潜力减缓 Distal Myopathies 的病程",
+          "潜在的肌肉损伤风险需考虑"
+        ],
+        "caveats": [
+          "具体效果及风险仍需进一步研究"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Skeletal Muscle→Distal Myopathies",
+          "reason": "找到明确的机制连通性，能够支持对每个假设的推导"
+        }
+      ],
+      "remaining_gaps": [
+        "对 Dantrolene 和 Statins 的安全性评估尚不充分"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "seed_a",
+            "seed_b",
+            "seed_c"
+          ],
+          "impact_summary": "提供了关于药物对 Distal Myopathies 影响的初步数据"
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "seed_d",
+            "seed_e"
+          ],
+          "impact_summary": "增强了机制链的探索，通过比较药物效果与风险揭示出新的方向"
+        }
+      ],
+      "lessons": [
+        "针对 Distal Myopathies 的药物投放需要考虑每种药物的潜在风险与好处",
+        "保持对药物机制研究的持续关注，以应对复杂的安全性问题"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "强调药物对 Distal Myopathies 的潜在风险与利益平衡"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "呼吁对安全性问题进行严格审查，特别是在使用 Dantrolene 和 Statins 时"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "评估 Distal Myopathies 治療选项时",
+        "then": "需要对每种药物进行细致的效益与风险分析"
+      }
+    ]
+  }
+}

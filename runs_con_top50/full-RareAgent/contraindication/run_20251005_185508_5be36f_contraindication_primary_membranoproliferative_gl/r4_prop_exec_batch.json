@@ -1,0 +1,358 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "n_aminoglycosides",
+            "via": [],
+            "to": "n_primary_membranoproliferative_glomerulonephritis",
+            "success_criteria": "强力证明其与病理之间的直接联系",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_aminoglycosides",
+          "type": "Drug",
+          "label": "Aminoglycosides",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ace_inhibitors",
+          "type": "Drug",
+          "label": "Angiotensin-converting enzyme inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_nsaid",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_loop_diuretics",
+          "type": "Drug",
+          "label": "Loop diuretics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_primary_membranoproliferative_glomerulonephritis",
+          "type": "Disease",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_phenotype_risk",
+          "type": "Phenotype",
+          "label": "Risk of kidney damage",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_inflammation",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pathway_kidney_damage",
+          "type": "Pathway",
+          "label": "Kidney Damage Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nsaids",
+          "type": "Drug",
+          "label": "Nonsteroidal anti-inflammatory drugs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_immunosuppressants",
+          "type": "Drug",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adverse_effects",
+          "type": "Phenotype",
+          "label": "Adverse effects in primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk_pathway",
+          "type": "Pathway",
+          "label": "Risk pathway for kidney damage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_aminoglycosides",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知对肾脏有潜在毒性"
+        },
+        {
+          "source": "n_ace_inhibitors",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响肾功能，可能引发并加重症状"
+        },
+        {
+          "source": "n_nsaid",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知NSAID在慢性肾病患者中增加风险"
+        },
+        {
+          "source": "n_loop_diuretics",
+          "target": "n_primary_membranoproliferative_glomerulonephritis",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响水肿控制，增加肾负担"
+        },
+        {
+          "source": "n_nsaid",
+          "target": "n_pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "对炎症有显著作用"
+        },
+        {
+          "source": "n_loop_diuretics",
+          "target": "n_pathway_kidney_damage",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "干预肾脏通路"
+        },
+        {
+          "source": "n_aminoglycosides",
+          "target": "n_pathway_kidney_damage",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "影响肾脏通路，增加损伤风险"
+        },
+        {
+          "source": "n_pathway_inflammation",
+          "target": "n_phenotype_risk",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "炎症反应引发的潜在风险"
+        },
+        {
+          "source": "n_pathway_kidney_damage",
+          "target": "n_phenotype_risk",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "肾损伤对疾病发展具有影响"
+        },
+        {
+          "source": "n_aminoglycosides",
+          "target": "n_risk_pathway",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "已知会引起肾损伤"
+        },
+        {
+          "source": "n_ace_inhibitors",
+          "target": "n_risk_pathway",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致肾功能下降"
+        },
+        {
+          "source": "n_nsaids",
+          "target": "n_risk_pathway",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "长期使用关联肾功能不全"
+        },
+        {
+          "source": "n_loop_diuretics",
+          "target": "n_risk_pathway",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致电解质失衡"
+        },
+        {
+          "source": "n_immunosuppressants",
+          "target": "n_risk_pathway",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "增加感染风险，影响肾功能"
+        },
+        {
+          "source": "n_risk_pathway",
+          "target": "n_adverse_effects",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "相关风险可能导致患者不良后果"
+        },
+        {
+          "source": "n_adverse_effects",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险连接显示此药物不适用"
+        },
+        {
+          "source": "n_adverse_effects",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险连接显示此药物不适用"
+        },
+        {
+          "source": "n_adverse_effects",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险连接显示此药物不适用"
+        },
+        {
+          "source": "n_adverse_effects",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险连接显示此药物不适用"
+        },
+        {
+          "source": "n_adverse_effects",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险连接显示此药物不适用"
+        },
+        {
+          "source": "n_adverse_effects",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "风险连接显示此药物不适用"
+        },
+        {
+          "source": "n_adverse_effects",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险连接显示此药物不适用"
+        },
+        {
+          "source": "n_adverse_effects",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "风险连接显示此药物不适用"
+        },
+        {
+          "source": "n_adverse_effects",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "风险连接显示此药物不适用"
+        },
+        {
+          "source": "n_adverse_effects",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.55,
+          "agent": "Skeptic",
+          "rationale": "风险连接显示此药物不适用"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "操作未执行，假设需要更强的连接证明"
+      }
+    ],
+    "unexecuted_actions": [
+      {
+        "action_ref": 0,
+        "status": "skipped",
+        "reason": "缺乏有力的直接联系证明"
+      }
+    ],
+    "residual_gaps": [
+      "尚需寻找并添加更强有力的证据以连接 Aminoglycosides 和主要病理"
+    ]
+  }
+}
