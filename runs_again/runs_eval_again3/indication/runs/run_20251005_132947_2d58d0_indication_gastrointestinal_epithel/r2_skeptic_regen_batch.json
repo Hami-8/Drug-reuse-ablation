@@ -1,0 +1,301 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Gastrointestinal epithelial barrier disorders",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_budesonide",
+          "name": "Budesonide"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_mesalamine",
+          "name": "Mesalamine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_pentasa",
+          "name": "Pentasa"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_sulfasalazine",
+          "name": "Sulfasalazine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_ustekinumab",
+          "name": "Ustekinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_tofacitinib",
+          "name": "Tofacitinib"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_mercaptopurine",
+          "name": "Mercaptopurine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_vedolizumab",
+          "name": "Vedolizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_budesonide",
+          "type": "Target",
+          "label": "OffTargetBudesonide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_budesonide",
+          "type": "Pathway",
+          "label": "RiskPathBudesonide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_budesonide",
+          "type": "Phenotype",
+          "label": "AdverseEffectBudesonide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mesalamine",
+          "type": "Target",
+          "label": "OffTargetMesalamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mesalamine",
+          "type": "Pathway",
+          "label": "RiskPathMesalamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mesalamine",
+          "type": "Phenotype",
+          "label": "AdverseEffectMesalamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_budesonide",
+          "target": "n_ot_budesonide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在旁路效应"
+        },
+        {
+          "source": "n_ot_budesonide",
+          "target": "n_rp_budesonide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的风险通路"
+        },
+        {
+          "source": "n_rp_budesonide",
+          "target": "n_adv_budesonide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应"
+        },
+        {
+          "source": "n_adv_budesonide",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将削弱假设的有效性"
+        },
+        {
+          "source": "drug_mesalamine",
+          "target": "n_ot_mesalamine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "同样可能存在旁路"
+        },
+        {
+          "source": "n_ot_mesalamine",
+          "target": "n_rp_mesalamine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险路径相关"
+        },
+        {
+          "source": "n_rp_mesalamine",
+          "target": "n_adv_mesalamine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "产生不良表型"
+        },
+        {
+          "source": "n_adv_mesalamine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在风险对假设产生反驳"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "疗效与安全性权衡",
+          "pro_nodes": [
+            "n_ot_budesonide",
+            "n_ot_mesalamine"
+          ],
+          "con_nodes": [
+            "n_rp_budesonide",
+            "n_rp_mesalamine"
+          ],
+          "note": "疗效可能与安全性存在冲突"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "存在对肠道屏障损害的诱导机制，可能抵消预期益处",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "缺乏足够的长期安全性数据支持其广泛应用",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物是否可有效靶向相关通路",
+      "慢性病程中药物疗效的持续性"
+    ],
+    "falsification_tests": [
+      "是否有足够证据支持长期治疗带来实际效果？",
+      "是否存在公开数据指向不良事件的发生率？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供更多数据以支持疗效和安全性",
+      "对冲突热点更新数据或分析结果"
+    ]
+  }
+}

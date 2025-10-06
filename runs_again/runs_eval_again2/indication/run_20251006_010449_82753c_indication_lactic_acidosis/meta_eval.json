@@ -1,0 +1,111 @@
+{
+  "subset": "indication",
+  "disease": "Lactic acidosis",
+  "relation": "indication",
+  "gold_drugs": [
+    "dichloroacetate",
+    "nitroglycerin infusion"
+  ],
+  "seeds_initial": [
+    "Sodium bicarbonate",
+    "Dapagliflozin",
+    "Lactate",
+    "Metformin",
+    "Thiamine",
+    "N-acetylcysteine",
+    "Sodium lactate",
+    "Hydrogen cyanide",
+    "Chloride",
+    "Insulin",
+    "Glycogen",
+    "Ferrous sulfate"
+  ],
+  "seed_history": [
+    [
+      "Sodium bicarbonate",
+      "Dapagliflozin",
+      "Lactate",
+      "Metformin",
+      "Thiamine",
+      "N-acetylcysteine",
+      "Sodium lactate",
+      "Hydrogen cyanide",
+      "Chloride",
+      "Insulin",
+      "Glycogen",
+      "Ferrous sulfate"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_lactate",
+          "name": "Lactate"
+        },
+        "score": 0.82,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "乳酸积累是乳酸性酸中毒的直接原因",
+          "途径链是闭合的"
+        ],
+        "caveats": [
+          "需关注乳酸水平对身体其他代谢功能的影响"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_sodium_bicarbonate",
+          "name": "Sodium bicarbonate"
+        },
+        "score": 0.76,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "常用于纠正酸碱失衡，支持乳酸的代谢平衡"
+        ],
+        "caveats": [
+          "潜在不良反应需持续监测"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_dapagliflozin",
+          "name": "Dapagliflozin"
+        },
+        "score": 0.65,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "可能通过影响体内电解质来影响酸碱度"
+        ],
+        "caveats": [
+          "可能与其他代谢性路径产生互动"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Pathway→Phenotype",
+          "reason": "多条支持证据表明 Drug 对于 Lactic Acidosis 的直接影响"
+        }
+      ],
+      "remaining_gaps": [
+        "部分机制细节需进一步验证，尤其是药物与代谢路径的具体相互作用"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Lactic acidosis'. Return only names.\n\n# Heuristics:\n- When considering treatment for lactic acidosis: then assess the balance between therapeutic benefits and potential risks."
+}

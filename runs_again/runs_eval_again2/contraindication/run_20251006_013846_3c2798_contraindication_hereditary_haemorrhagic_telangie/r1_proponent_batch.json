@@ -1,0 +1,459 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Hereditary haemorrhagic telangiectasia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_anticoagulants",
+          "name": "Anticoagulants"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_warfarin",
+          "name": "Warfarin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_non_steroidal_anti_inflammatory_drugs_nsaids",
+          "name": "Non-steroidal anti-inflammatory drugs (NSAIDs)"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_clopidogrel",
+          "name": "Clopidogrel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_heparin",
+          "name": "Heparin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_dabigatran",
+          "name": "Dabigatran"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_morphine",
+          "name": "Morphine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_rivaroxaban",
+          "name": "Rivaroxaban"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_indomethacin",
+          "name": "Indomethacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ticagrelor",
+          "name": "Ticagrelor"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nsaids",
+          "type": "Drug",
+          "label": "Non-steroidal anti-inflammatory drugs (NSAIDs)",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_heparin",
+          "type": "Drug",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dabigatran",
+          "type": "Drug",
+          "label": "Dabigatran",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_morphine",
+          "type": "Drug",
+          "label": "Morphine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rivaroxaban",
+          "type": "Drug",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_indomethacin",
+          "type": "Drug",
+          "label": "Indomethacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ticagrelor",
+          "type": "Drug",
+          "label": "Ticagrelor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hht",
+          "type": "Disease",
+          "label": "Hereditary haemorrhagic telangiectasia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_anticoagulants",
+          "target": "n_hht",
+          "relation": "contraindication",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知对出血倾向患者有风险"
+        },
+        {
+          "source": "n_aspirin",
+          "target": "n_hht",
+          "relation": "contraindication",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "影响血小板功能，可能加重出血风险"
+        },
+        {
+          "source": "n_warfarin",
+          "target": "n_hht",
+          "relation": "contraindication",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗凝血药物，增加出血风险"
+        },
+        {
+          "source": "n_nsaids",
+          "target": "n_hht",
+          "relation": "contraindication",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "可能导致血小板聚集抑制"
+        },
+        {
+          "source": "n_clopidogrel",
+          "target": "n_hht",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "同样影响血小板功能"
+        },
+        {
+          "source": "n_ibuprofen",
+          "target": "n_hht",
+          "relation": "contraindication",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "NSAID，可能导致出血风险增加"
+        },
+        {
+          "source": "n_heparin",
+          "target": "n_hht",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗凝作用明显，抑制凝血"
+        },
+        {
+          "source": "n_dabigatran",
+          "target": "n_hht",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "新型抗凝药，可能增加出血风险"
+        },
+        {
+          "source": "n_morphine",
+          "target": "n_hht",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "镇痛药对凝血功能影响较小"
+        },
+        {
+          "source": "n_rivaroxaban",
+          "target": "n_hht",
+          "relation": "contraindication",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "抗凝药物，相关风险需注意"
+        },
+        {
+          "source": "n_indomethacin",
+          "target": "n_hht",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "NSAID，增加出血可能性"
+        },
+        {
+          "source": "n_ticagrelor",
+          "target": "n_hht",
+          "relation": "contraindication",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "抗血小板药，可能致出血"
+        },
+        {
+          "source": "n_hht",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "与抗凝剂相关性明确"
+        },
+        {
+          "source": "n_hht",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "对出血风险有强烈联系"
+        },
+        {
+          "source": "n_hht",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "抗凝机制导致潜在风险"
+        },
+        {
+          "source": "n_hht",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与出血的关系在文献中得以证实"
+        },
+        {
+          "source": "n_hht",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "血液流变特性改变"
+        },
+        {
+          "source": "n_hht",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗炎与凝血的复杂关系"
+        },
+        {
+          "source": "n_hht",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "致出血潜在风险"
+        },
+        {
+          "source": "n_hht",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "新型抗凝药物相关性"
+        },
+        {
+          "source": "n_hht",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "较低风险，但不可忽视"
+        },
+        {
+          "source": "n_hht",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "抗凝和出血的关系"
+        },
+        {
+          "source": "n_hht",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "同类药物潜在风险"
+        },
+        {
+          "source": "n_hht",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": [
+            "对出血风险影响"
+          ],
+          "agent_sources": [
+            "Proponent"
+          ]
+        },
+        {
+          "source": "n_hht",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "对出血风险影响"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [],
+    "assumptions": [
+      "所有药物作用需通过体内生物途径达成"
+    ],
+    "uncertainties": [
+      "药物具体交互副作用和风险可能因个体差异而异"
+    ],
+    "next_focus_for_pi": [
+      "可考虑进一步确定药物间的确切交互作用"
+    ]
+  }
+}

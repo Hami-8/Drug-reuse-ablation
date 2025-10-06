@@ -1,0 +1,980 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Non-CF bronchiectasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_bronchodilators",
+          "name": "Bronchodilators"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_antibiotics",
+          "name": "Antibiotics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_mucolytics",
+          "name": "Mucolytics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_hypertonic_saline",
+          "name": "Hypertonic saline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_dornase_alfa",
+          "name": "Dornase alfa"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_ipratropium",
+          "name": "Ipratropium"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_salbutamol",
+          "name": "Salbutamol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_tobramycin",
+          "name": "Tobramycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_levofloxacin",
+          "name": "Levofloxacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ambroxol",
+          "name": "Ambroxol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.76,
+        "components": {
+          "mechanism_fit": 0.9,
+          "class_prior": 0.7,
+          "pk_pd_feasibility": 0.75,
+          "indication_plausibility": 0.8,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.04
+        },
+        "graph_signals": {
+          "support_weight": 2.6,
+          "contradiction_weight": 0.6,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 3,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "存在完整的影响链，Bronchodilators → Airway Relaxation → Respiratory Function Improvement → Symptom Relief"
+          ],
+          "safety_risk": [
+            "未发现严重的副作用或禁忌症"
+          ]
+        },
+        "confidence": "high",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.52,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.08
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "缺少直接支持 Non-CF Bronchiectasis 的证据"
+          ],
+          "safety_risk": [
+            "对长期使用的耐受性有待评估"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "适应症的支撑证据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.55,
+        "components": {
+          "mechanism_fit": 0.45,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.08
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "未能完整形成支持 Non-CF Bronchiectasis 的路径"
+          ],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.08
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "支撑解决非CF支气管扩张的证据有限"
+          ],
+          "safety_risk": [
+            "潜在的副作用需要注意"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.48,
+        "components": {
+          "mechanism_fit": 0.35,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.08
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "对该疾病的适应症支持不足"
+          ],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.53,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.08
+        },
+        "graph_signals": {
+          "support_weight": 0.4,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "支持Non-CF支气管扩张的机制尚不明确"
+          ],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.08
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "缺乏强有力的支持系统"
+          ],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.52,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.08
+        },
+        "graph_signals": {
+          "support_weight": 0.4,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "缺乏强有力的支持系统"
+          ],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.54,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.08
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "缺乏强有力的支持系统"
+          ],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.51,
+        "components": {
+          "mechanism_fit": 0.35,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.08
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "缺乏强有力的支持系统"
+          ],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.49,
+        "components": {
+          "mechanism_fit": 0.35,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.08
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "缺乏强有力的支持系统"
+          ],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.35,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.08
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.0,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "缺乏强有力的支持系统"
+          ],
+          "safety_risk": []
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H3",
+      "H9",
+      "H6",
+      "H2",
+      "H8",
+      "H10",
+      "H4",
+      "H7",
+      "H12",
+      "H11",
+      "H5"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_bronchodilators",
+          "type": "Drug",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_non_cf_bronchiectasis",
+          "type": "Disease",
+          "label": "Non-CF Bronchiectasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_airway_relaxation",
+          "type": "Target",
+          "label": "Airway Relaxation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_airway_inflammation",
+          "type": "Target",
+          "label": "Airway Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_respiratory_function",
+          "type": "Pathway",
+          "label": "Respiratory Function Improvement",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_symptom_relief",
+          "type": "Phenotype",
+          "label": "Symptom Relief",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_mucolytics",
+          "type": "Drug",
+          "label": "Mucolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_hypertonic_saline",
+          "type": "Drug",
+          "label": "Hypertonic saline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ipratropium",
+          "type": "Drug",
+          "label": "Ipratropium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_salbutamol",
+          "type": "Drug",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_tobramycin",
+          "type": "Drug",
+          "label": "Tobramycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_levofloxacin",
+          "type": "Drug",
+          "label": "Levofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ambroxol",
+          "type": "Drug",
+          "label": "Ambroxol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_bronchodilators",
+          "type": "Drug",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Mucolytics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_mucolytics",
+          "type": "Drug",
+          "label": "Mucolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Hypertonic saline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_hypertonic_saline",
+          "type": "Drug",
+          "label": "Hypertonic saline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Ipratropium",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ipratropium",
+          "type": "Drug",
+          "label": "Ipratropium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_salbutamol",
+          "type": "Drug",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Tobramycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_tobramycin",
+          "type": "Drug",
+          "label": "Tobramycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Levofloxacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_levofloxacin",
+          "type": "Drug",
+          "label": "Levofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Ambroxol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ambroxol",
+          "type": "Drug",
+          "label": "Ambroxol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_bronchodilators",
+          "target": "n_airway_relaxation",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "支撑气道放松的药理作用"
+        },
+        {
+          "source": "n_airway_relaxation",
+          "target": "n_respiratory_function",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "气道放松有助于改善呼吸功能"
+        },
+        {
+          "source": "n_respiratory_function",
+          "target": "n_symptom_relief",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "改善呼吸功能可减轻症状"
+        },
+        {
+          "source": "n_bronchodilators",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "气道放松可支持治疗 Non-CF Bronchiectasis"
+        },
+        {
+          "source": "n_bronchodilators",
+          "target": "n_antibiotics",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能的次要适应症"
+        },
+        {
+          "source": "n_bronchodilators",
+          "target": "n_mucolytics",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能的辅助疗法"
+        },
+        {
+          "source": "n_mucolytics",
+          "target": "n_corticosteroids",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "联合使用可能存在"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_hypertonic_saline",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "临床使用间可能产生交互"
+        },
+        {
+          "source": "n_hypertonic_saline",
+          "target": "n_azithromycin",
+          "relation": "indicated_for",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "可能的误用情况"
+        },
+        {
+          "source": "n_azithromycin",
+          "target": "n_dornase_alfa",
+          "relation": "indicated_for",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "临床上或有重叠"
+        },
+        {
+          "source": "n_dornase_alfa",
+          "target": "n_ipratropium",
+          "relation": "indicated_for",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "潜在联合使用"
+        },
+        {
+          "source": "n_ipratropium",
+          "target": "n_salbutamol",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "常见联合治疗"
+        },
+        {
+          "source": "n_salbutamol",
+          "target": "n_tobramycin",
+          "relation": "indicated_for",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "联合用药可能"
+        },
+        {
+          "source": "n_tobramycin",
+          "target": "n_levofloxacin",
+          "relation": "indicated_for",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "交替使用可能"
+        },
+        {
+          "source": "n_levofloxacin",
+          "target": "n_ambroxol",
+          "relation": "indicated_for",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "可能的替代治疗"
+        }
+      ],
+      "round_index": 2
+    },
+    "history": {
+      "round": 2
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65
+    },
+    "heuristic_priors": []
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_bronchodilators",
+          "name": "Bronchodilators"
+        },
+        "score": 0.76,
+        "graph_snapshot_ref": "GE_H1_round2",
+        "key_assumptions": [
+          "Bronchodilators 通过气道放松改善呼吸功能",
+          "支持 Non-CF Bronchiectasis 的治疗适应症"
+        ],
+        "caveats": [
+          "尽管机制已建立，但对部分耐受性和长期效果的验证仍需关注"
+        ],
+        "confidence": "high"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Bronchodilators → Airway Relaxation → Respiratory Function Improvement → Symptom Relief",
+          "reason": "形成了完整的药理作用链，指向可治疗 Non-CF Bronchiectasis"
+        }
+      ],
+      "remaining_gaps": [
+        "部分药物（如抗生素和粘液溶解剂）的适应症证据不足"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  }
+}

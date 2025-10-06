@@ -1,0 +1,80 @@
+{
+  "subset": "indication",
+  "disease": "Neonatal cholestasis",
+  "relation": "indication",
+  "gold_drugs": [
+    "lum001",
+    "odevixibat"
+  ],
+  "seeds_initial": [
+    "Ursodiol",
+    "Actigall",
+    "TUDCA",
+    "S-adenosylmethionine",
+    "Cholic acid",
+    "Hazar",
+    "Ocaliva",
+    "Xymed",
+    "Entrytrade",
+    "Zanolimid",
+    "Emproof",
+    "Dexamethasone"
+  ],
+  "seed_history": [
+    [
+      "Ursodiol",
+      "Actigall",
+      "TUDCA",
+      "S-adenosylmethionine",
+      "Cholic acid",
+      "Hazar",
+      "Ocaliva",
+      "Xymed",
+      "Entrytrade",
+      "Zanolimid",
+      "Emproof",
+      "Dexamethasone"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_ursodiol",
+          "name": "Ursodiol"
+        },
+        "score": 0.72,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "存在 Drug→Target→Pathway→Disease 的有效机制链",
+          "尽管存在风险，仍有治疗潜力"
+        ],
+        "caveats": [
+          "存在显著的安全性风险",
+          "风险可能抵消药物的净效益"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Target→Pathway→Disease",
+          "reason": "机制链有效且支持风险认知"
+        }
+      ],
+      "remaining_gaps": [
+        "冲突热点：需对风险的充分检验及量化验证"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Neonatal cholestasis'. Return only names.\n\n# Prior guidance for Explorer:\n- 确保查询一致性，并涵盖药物作用机制与胆汁流动补充的不同路径。\n\n# Heuristics:\n- When 胆汁淤积证据较弱: then 优先考虑药物作用机制的连贯性与旁路风险的验证。\n- When 不良反应未明确: then 进一步收集临床数据以评估疗效安全比例。"
+}

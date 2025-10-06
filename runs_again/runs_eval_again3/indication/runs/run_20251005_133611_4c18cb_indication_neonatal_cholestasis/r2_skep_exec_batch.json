@@ -1,0 +1,536 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Adverse Effects of Ursodeoxycholic Acid",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Adverse Effects of Sodium Bile Acid Transporters",
+            "expectation": "需要更明确的结果定义",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_ursodeoxycholic_acid",
+          "type": "Drug",
+          "label": "Ursodeoxycholic Acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_bile_acid_transporter_inhibitors",
+          "type": "Drug",
+          "label": "Sodium Bile Acid Transporter Inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_colesevelam",
+          "type": "Drug",
+          "label": "Colesevelam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fluvoxamine",
+          "type": "Drug",
+          "label": "Fluvoxamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_obeticholic_acid",
+          "type": "Drug",
+          "label": "Obeticholic Acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_probiotics",
+          "type": "Drug",
+          "label": "Probiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_silymarin",
+          "type": "Drug",
+          "label": "Silymarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_bile_acid_transporter",
+          "type": "Target",
+          "label": "Bile Acid Transporter",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_bile_acid_metabolism",
+          "type": "Pathway",
+          "label": "Bile Acid Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_neonatal_cholestasis",
+          "type": "Disease",
+          "label": "Neonatal Cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_ursodeoxycholic_acid",
+          "type": "Target",
+          "label": "OffTarget Ursodeoxycholic Acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ursodeoxycholic_acid",
+          "type": "Pathway",
+          "label": "Risk Pathway Ursodeoxycholic Acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ursodeoxycholic_acid",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Ursodeoxycholic Acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sodium_bile_acid_transporters",
+          "type": "Target",
+          "label": "OffTarget Sodium Bile Acid Transporters",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_bile_acid_transporters",
+          "type": "Pathway",
+          "label": "Risk Pathway Sodium Bile Acid Transporters",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sodium_bile_acid_transporters",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Sodium Bile Acid Transporters",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Ursodeoxycholic Acid",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Sodium Bile Acid Transporter Inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Colesevelam",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Fluvoxamine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Obeticholic Acid",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Probiotics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Silymarin",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "target_bile_acid_transporter",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知通过胆酸转运靶点发挥作用"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "target_bile_acid_transporter",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "通过调节胆酸水平，对付胆汁淤积"
+        },
+        {
+          "source": "drug_fluvoxamine",
+          "target": "target_bile_acid_transporter",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "潜在的胆酸运输调节作用"
+        },
+        {
+          "source": "drug_open_into_neonatal_cholestasis",
+          "target": "pathway_bile_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "对胆盐代谢通路的影响"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "pathway_bile_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知药物在胆汁代谢中有重要作用"
+        },
+        {
+          "source": "pathway_bile_acid_metabolism",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "胆盐代谢异常会导致新生儿胆汁淤积"
+        },
+        {
+          "source": "drug_colesevelam",
+          "target": "pathway_bile_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响胆酸重吸收以改善肝功能"
+        },
+        {
+          "source": "drug_obeticholic_acid",
+          "target": "target_bile_acid_transporter",
+          "relation": "activates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "新药，有促进胆盐排泄的机制"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "pathway_bile_acid_metabolism",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "有助于胆盐代谢的调节"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能对胆汁淤积有一定的改善作用"
+        },
+        {
+          "source": "drug_probiotics",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能改善新生儿的菌群失调，从而影响胆汁分泌"
+        },
+        {
+          "source": "drug_silymarin",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "对肝脏有保护作用，可以辅助胆汁代谢"
+        },
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "n_ot_ursodeoxycholic_acid",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能存在旁路或离靶作用"
+        },
+        {
+          "source": "n_ot_ursodeoxycholic_acid",
+          "target": "n_rp_ursodeoxycholic_acid",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_ursodeoxycholic_acid",
+          "target": "n_adv_ursodeoxycholic_acid",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ursodeoxycholic_acid",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在不良反应，将抵消疑似益处"
+        },
+        {
+          "source": "drug_sodium_bile_acid_transporters",
+          "target": "n_ot_sodium_bile_acid_transporters",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致旁路效果"
+        },
+        {
+          "source": "n_ot_sodium_bile_acid_transporters",
+          "target": "n_rp_sodium_bile_acid_transporters",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联潜在风险路径"
+        },
+        {
+          "source": "n_rp_sodium_bile_acid_transporters",
+          "target": "n_adv_sodium_bile_acid_transporters",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_sodium_bile_acid_transporters",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在不良反应可能抵消治疗益处"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Effects of Ursodeoxycholic Acid",
+              "pro_nodes": [
+                "drug_ursodeoxycholic_acid"
+              ],
+              "con_nodes": [
+                "n_adv_ursodeoxycholic_acid"
+              ],
+              "note": "潜在不良反应与治疗效果的冲突"
+            }
+          ]
+        },
+        "notes": "已完成对 Ursodeoxycholic Acid 的安全性压力测试，标注反驳边"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Effects of Sodium Bile Acid Transporters",
+              "pro_nodes": [
+                "drug_sodium_bile_acid_transporters"
+              ],
+              "con_nodes": [
+                "n_adv_sodium_bile_acid_transporters"
+              ],
+              "note": "潜在不良反应与治疗效果的冲突"
+            }
+          ]
+        },
+        "notes": "已完成对 Sodium Bile Acid Transporters 的安全性压力测试，标注反驳边"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "不良反应方向性与治疗效益未完全消解"
+    ]
+  }
+}

@@ -1,0 +1,745 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Amyotrophic lateral sclerosis or motor neuron disease",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Riluzole与ALS的副作用",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Edaravone与ALS的副作用",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_riluzole",
+          "type": "Drug",
+          "label": "Riluzole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_edaravone",
+          "type": "Drug",
+          "label": "Edaravone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nuedexta",
+          "type": "Drug",
+          "label": "Nuedexta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexpramipexole",
+          "type": "Drug",
+          "label": "Dexpramipexole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tizanidine",
+          "type": "Drug",
+          "label": "Tizanidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_trihexyphenidyl",
+          "type": "Drug",
+          "label": "Trihexyphenidyl",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methylcobalamin",
+          "type": "Drug",
+          "label": "Methylcobalamin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_piracetam",
+          "type": "Drug",
+          "label": "Piracetam",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_morphine",
+          "type": "Drug",
+          "label": "Morphine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_l_carnitine",
+          "type": "Drug",
+          "label": "L-Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Target_Neurons",
+          "type": "Target",
+          "label": "Neurons",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Pathway_Glial_Cell_Injury",
+          "type": "Pathway",
+          "label": "Glial Cell Injury Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "Phenotype_Amyotrophic_Lateral_Sclerosis",
+          "type": "Phenotype",
+          "label": "Amyotrophic Lateral Sclerosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_riluzole",
+          "type": "Drug",
+          "label": "Riluzole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_edravone",
+          "type": "Drug",
+          "label": "Edaravone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_nuedexta",
+          "type": "Drug",
+          "label": "Nuedexta",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dexpramipexole",
+          "type": "Drug",
+          "label": "Dexpramipexole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lithium",
+          "type": "Drug",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_tizanidine",
+          "type": "Drug",
+          "label": "Tizanidine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_trihexyphenidyl",
+          "type": "Drug",
+          "label": "Trihexyphenidyl",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_methylcobalamin",
+          "type": "Drug",
+          "label": "Methylcobalamin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_piracetam",
+          "type": "Drug",
+          "label": "Piracetam",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_morphine",
+          "type": "Drug",
+          "label": "Morphine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_l_carnitine",
+          "type": "Drug",
+          "label": "L-Carnitine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_risk",
+          "type": "Target",
+          "label": "Off-target effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_risk",
+          "type": "Pathway",
+          "label": "Risk Pathway for ALS progression",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_effect",
+          "type": "Phenotype",
+          "label": "Adverse effects of drug",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Riluzole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Edaravone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Nuedexta",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Dexpramipexole",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Lithium",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Tizanidine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Trihexyphenidyl",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Methylcobalamin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Piracetam",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Morphine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "L-Carnitine",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_riluzole",
+          "target": "Target_Neurons",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知作用于神经元"
+        },
+        {
+          "source": "drug_edaravone",
+          "target": "Target_Neurons",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知作用于神经元"
+        },
+        {
+          "source": "drug_nuedexta",
+          "target": "Target_Neurons",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知作用于神经元"
+        },
+        {
+          "source": "drug_dexpramipexole",
+          "target": "Target_Neurons",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知作用于神经元"
+        },
+        {
+          "source": "drug_lithium",
+          "target": "Target_Neurons",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知作用于神经元"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "Target_Neurons",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知作用于神经元"
+        },
+        {
+          "source": "drug_tizanidine",
+          "target": "Target_Neurons",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知作用于神经元"
+        },
+        {
+          "source": "drug_trihexyphenidyl",
+          "target": "Target_Neurons",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知作用于神经元"
+        },
+        {
+          "source": "drug_methylcobalamin",
+          "target": "Target_Neurons",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "已知作用于神经元"
+        },
+        {
+          "source": "drug_piracetam",
+          "target": "Target_Neurons",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "已知作用于神经元"
+        },
+        {
+          "source": "drug_morphine",
+          "target": "Target_Neurons",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "已知作用于神经元"
+        },
+        {
+          "source": "drug_l_carnitine",
+          "target": "Target_Neurons",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "已知作用于神经元"
+        },
+        {
+          "source": "Target_Neurons",
+          "target": "Pathway_Glial_Cell_Injury",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "神经元损伤相关通路"
+        },
+        {
+          "source": "Pathway_Glial_Cell_Injury",
+          "target": "Phenotype_Amyotrophic_Lateral_Sclerosis",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与ALS相关的病理通路"
+        },
+        {
+          "source": "n_riluzole",
+          "target": "n_ot_risk",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发旁靶效应"
+        },
+        {
+          "source": "n_edravone",
+          "target": "n_ot_risk",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在非特异性毒性"
+        },
+        {
+          "source": "n_nuedexta",
+          "target": "n_ot_risk",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响正常生理功能"
+        },
+        {
+          "source": "n_dexpramipexole",
+          "target": "n_ot_risk",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能的反向作用"
+        },
+        {
+          "source": "n_lithium",
+          "target": "n_ot_risk",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "已知有多种副作用"
+        },
+        {
+          "source": "n_gabapentin",
+          "target": "n_ot_risk",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "影响神经传递"
+        },
+        {
+          "source": "n_tizanidine",
+          "target": "n_ot_risk",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响肌肉松弛"
+        },
+        {
+          "source": "n_trihexyphenidyl",
+          "target": "n_ot_risk",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "副作用风险"
+        },
+        {
+          "source": "n_methylcobalamin",
+          "target": "n_ot_risk",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "疗效存疑"
+        },
+        {
+          "source": "n_piracetam",
+          "target": "n_ot_risk",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "效果慢而局限"
+        },
+        {
+          "source": "n_morphine",
+          "target": "n_ot_risk",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "已知成瘾性问题"
+        },
+        {
+          "source": "n_l_carnitine",
+          "target": "n_ot_risk",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "有争议的益处"
+        },
+        {
+          "source": "n_ot_risk",
+          "target": "n_rp_risk",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "已知影响ALS病程"
+        },
+        {
+          "source": "n_rp_risk",
+          "target": "n_adv_effect",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良反应"
+        },
+        {
+          "source": "n_adv_effect",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，其效用存疑"
+        },
+        {
+          "source": "n_adv_effect",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，其效用存疑"
+        },
+        {
+          "source": "n_adv_effect",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，其效用存疑"
+        },
+        {
+          "source": "n_adv_effect",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，其效用存疑"
+        },
+        {
+          "source": "n_adv_effect",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，其效用存疑"
+        },
+        {
+          "source": "n_adv_effect",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，其效用存疑"
+        },
+        {
+          "source": "n_adv_effect",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，其效用存疑"
+        },
+        {
+          "source": "n_adv_effect",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，其效用存疑"
+        },
+        {
+          "source": "n_adv_effect",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，其效用存疑"
+        },
+        {
+          "source": "n_adv_effect",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，其效用存疑"
+        },
+        {
+          "source": "n_adv_effect",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，其效用存疑"
+        },
+        {
+          "source": "n_adv_effect",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，其效用存疑"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "conflict_hotspots": [
+            {
+              "topic": "Riluzole与ALS的副作用",
+              "pro_nodes": [],
+              "con_nodes": [
+                "n_adv_effect"
+              ],
+              "note": "副作用可能抵消应用于ALS的效益"
+            }
+          ]
+        },
+        "notes": "完成Riluzole与ALS副作用的安全性压力测试：强权重反驳连接到假设"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "conflict_hotspots": [
+            {
+              "topic": "Edaravone与ALS的副作用",
+              "pro_nodes": [],
+              "con_nodes": [
+                "n_adv_effect"
+              ],
+              "note": "副作用可能抵消应用于ALS的效益"
+            }
+          ]
+        },
+        "notes": "完成Edaravone与ALS副作用的安全性压力测试：强权重反驳连接到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "Riluzole与Edaravone的副作用方向未消解",
+      "需深入探讨两药的效用对ALS长期预后的影响"
+    ]
+  }
+}

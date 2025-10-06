@@ -1,0 +1,196 @@
+{
+  "subset": "indication",
+  "disease": "Juvenile dermatomyositis",
+  "relation": "indication",
+  "gold_drugs": [
+    "h.p. acthar gel"
+  ],
+  "seeds_initial": [
+    "Methotrexate",
+    "Azathioprine",
+    "Prednisone",
+    "Mycophenolate mofetil",
+    "IVIG",
+    "Cyclophosphamide",
+    "Rituximab",
+    "Tacrolimus",
+    "Dexamethasone",
+    "Hydroxychloroquine",
+    "Natalizumab",
+    "Etanercept"
+  ],
+  "seed_history": [
+    [
+      "Methotrexate",
+      "Azathioprine",
+      "Prednisone",
+      "Mycophenolate mofetil",
+      "IVIG",
+      "Cyclophosphamide",
+      "Rituximab",
+      "Tacrolimus",
+      "Dexamethasone",
+      "Hydroxychloroquine",
+      "Natalizumab",
+      "Etanercept"
+    ],
+    [
+      "Methotrexate",
+      "Prednisone",
+      "Azathioprine",
+      "Mycophenolate mofetil",
+      "Intravenous immunoglobulin",
+      "Rituximab",
+      "Cyclophosphamide",
+      "Etanercept",
+      "Adalimumab",
+      "Hydroxychloroquine",
+      "Tacrolimus",
+      "Belimumab"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "score": 0.33,
+        "graph_snapshot_ref": "GE_H1_round5",
+        "key_assumptions": [
+          "Methotrexate has an established role in immune modulation.",
+          "Potential side effects require careful management."
+        ],
+        "caveats": [
+          "Long-term safety and efficacy still need validation."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "score": 0.32,
+        "graph_snapshot_ref": "GE_H2_round5",
+        "key_assumptions": [
+          "Prednisone is effective for symptom relief in autoimmune conditions.",
+          "Long-term impacts on health need to be assessed."
+        ],
+        "caveats": [
+          "Consideration of potential adverse metabolic effects."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "score": 0.28,
+        "graph_snapshot_ref": "GE_H3_round5",
+        "key_assumptions": [
+          "Azathioprine functions as an immunosuppressant.",
+          "Risk of infections needs to be closely monitored."
+        ],
+        "caveats": [
+          "Further analysis of its safety profile in JDM is required."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "score": 0.26,
+        "graph_snapshot_ref": "GE_H4_round5",
+        "key_assumptions": [
+          "Mycophenolate mofetil is recognized for its immune-modulating effects.",
+          "Potential risks of infections exist."
+        ],
+        "caveats": [
+          "Need for comprehensive long-term studies."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H5",
+        "candidate": {
+          "id": "drug_intravenous_immunoglobulin",
+          "name": "Intravenous immunoglobulin"
+        },
+        "score": 0.25,
+        "graph_snapshot_ref": "GE_H5_round5",
+        "key_assumptions": [
+          "IVIG is effective in various autoimmune situations.",
+          "Individual responses may vary significantly."
+        ],
+        "caveats": [
+          "Potential adverse reactions should be monitored."
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Target→Pathway→Disease",
+          "reason": "Mechanistic pathways are well-defined, supporting therapeutic use."
+        }
+      ],
+      "remaining_gaps": [
+        "Need to address safety concerns and demonstrate long-term efficacy."
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "impact_summary": "Initial hypotheses on immune modulation established."
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "E",
+            "F"
+          ],
+          "impact_summary": "Included additional therapeutic options but safety concerns remain."
+        }
+      ],
+      "lessons": [
+        "Monitor long-term safety across all drug candidates consistently.",
+        "Diversify drug candidates to mitigate risks associated with immunosuppressive therapies."
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "Clarify long-term outcomes for all recommended therapies."
+      },
+      {
+        "role": "Skeptic",
+        "patch": "Provide detailed risk assessments for each drug, focusing on adverse effects."
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "immunosuppressive therapies are proposed",
+        "then": "include risk monitoring mechanisms for infection and adverse reactions."
+      }
+    ]
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Juvenile dermatomyositis'. Return only names.\n\n# Heuristics:\n- When 皮肌炎治疗: then 更重视长效与安全性平衡，建立风险评估模型以引导用药决策"
+}

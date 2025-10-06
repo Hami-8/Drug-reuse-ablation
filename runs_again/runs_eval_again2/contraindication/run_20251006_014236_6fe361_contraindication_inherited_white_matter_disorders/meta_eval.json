@@ -1,0 +1,107 @@
+{
+  "subset": "contraindication",
+  "disease": "Inherited white matter disorders",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "acetazolamide",
+    "anakinra",
+    "cilostazol",
+    "control",
+    "erythropoietin",
+    "fosigotifator",
+    "hydroxyurea",
+    "levetiracetam",
+    "magnesium",
+    "n-acetylcysteine",
+    "normal saline",
+    "prednisone",
+    "raav-olig001-aspa"
+  ],
+  "seeds_initial": [
+    "Phenytoin",
+    "Valproate",
+    "Carbamazepine",
+    "Gabapentin",
+    "Baclofen",
+    "Topiramate",
+    "Sodium oxybate",
+    "Lacosamide",
+    "Pregabalin",
+    "Clonazepam",
+    "Duloxetine",
+    "Tramadol"
+  ],
+  "seed_history": [
+    [
+      "Phenytoin",
+      "Valproate",
+      "Carbamazepine",
+      "Gabapentin",
+      "Baclofen",
+      "Topiramate",
+      "Sodium oxybate",
+      "Lacosamide",
+      "Pregabalin",
+      "Clonazepam",
+      "Duloxetine",
+      "Tramadol"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        },
+        "score": 0.18,
+        "graph_snapshot_ref": "GE_H1_round2",
+        "key_assumptions": [
+          "Phenytoin 与遗传性白质疾病之间的禁忌关系是基于已有的文献和临床观察",
+          "潜在不良影响需要定期监测"
+        ],
+        "caveats": [
+          "临床使用中的长期安全性仍需进一步的实证支持"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_valproate",
+          "name": "Valproate"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H2_round2",
+        "key_assumptions": [
+          "Valproate 也已被文献确认会对遗传性白质疾病产生负面影响",
+          "安全性与有效性的平衡仍需关注"
+        ],
+        "caveats": [
+          "需否定潜在的交互作用风险"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Disease (Phenytoin, Valproate→Inherited white matter disorders)",
+          "reason": "已有资料支持的明显禁忌路径"
+        }
+      ],
+      "remaining_gaps": [
+        "需要更广泛的机制研究来验证其他候选药物对该疾病的影响"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that are contraindicated or could worsen the rare disease 'Inherited white matter disorders'. Return only names.\n\n# Prior guidance for Explorer:\n- 审视潜在替代方案以避免药物禁忌\n\n# Heuristics:\n- When 处理遗传性白质疾病: then 优先考虑副作用与风险评估"
+}

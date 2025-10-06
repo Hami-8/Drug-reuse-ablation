@@ -1,0 +1,147 @@
+{
+  "subset": "indication",
+  "disease": "Primary membranoproliferative glomerulonephritis",
+  "relation": "indication",
+  "gold_drugs": [
+    "pegcetacoplan"
+  ],
+  "seeds_initial": [
+    "Rituximab",
+    "Corticosteroids",
+    "Cyclosporine",
+    "Mycophenolate mofetil",
+    "Eculizumab",
+    "Cyclophosphamide",
+    "Tacrolimus",
+    "Azathioprine",
+    "Sirolimus",
+    "Plasma exchange",
+    "Bortezomib",
+    "Belimumab"
+  ],
+  "seed_history": [
+    [
+      "Rituximab",
+      "Corticosteroids",
+      "Cyclosporine",
+      "Mycophenolate mofetil",
+      "Eculizumab",
+      "Cyclophosphamide",
+      "Tacrolimus",
+      "Azathioprine",
+      "Sirolimus",
+      "Plasma exchange",
+      "Bortezomib",
+      "Belimumab"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "score": 0.51,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Rituximab能够影响病理过程",
+          "感染风险的可能性需要进一步验证"
+        ],
+        "caveats": [
+          "安全性尚存疑虑",
+          "缺乏足够的替代机制支持"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "类固醇在肾脏病中的广泛应用",
+          "潜在感染风险需注意"
+        ],
+        "caveats": [
+          "长期疗效尚不确定"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "score": 0.45,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "环孢素可用于相关患者",
+          "感染风险存在"
+        ],
+        "caveats": [
+          "缺乏大规模验证"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "score": 0.43,
+        "graph_snapshot_ref": "GE_H4_round4",
+        "key_assumptions": [
+          "作为免疫抑制剂能影响免疫反应",
+          "可能存在安全风险"
+        ],
+        "caveats": [
+          "缺乏临床数据支持"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H5",
+        "candidate": {
+          "id": "drug_eculizumab",
+          "name": "Eculizumab"
+        },
+        "score": 0.41,
+        "graph_snapshot_ref": "GE_H5_round4",
+        "key_assumptions": [
+          "针对补体系统可能有效",
+          "感染风险需考虑"
+        ],
+        "caveats": [
+          "疗效数据有限"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "药物与疾病之间有直接支持关系",
+          "reason": "现有药物与疾病的支持关系清晰"
+        }
+      ],
+      "remaining_gaps": [
+        "机制连通性不足，尚缺乏可替代机制的实证支持"
+      ]
+    },
+    "heuristics": [],
+    "prompt_patches": [],
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    }
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Primary membranoproliferative glomerulonephritis'. Return only names.\n\n# Prior guidance for Explorer:\n- 确保涵盖所有可能的作用机制，减少重复，提高覆盖范围\n\n# Heuristics:\n- When 肾脏疾病: then 优先考虑安全性与疗效的长期评估\n- When 免疫应答相关表型: then 对药物的免疫抑制效果进行详细分析"
+}

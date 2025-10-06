@@ -1,0 +1,1412 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Juvenile dermatomyositis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_intravenous_immunoglobulin",
+          "name": "Intravenous immunoglobulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_hydroxychloroquine",
+          "name": "Hydroxychloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tacrolimus",
+          "name": "Tacrolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_belimumab",
+          "name": "Belimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.33,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.55,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.35,
+          "safety_risk": 0.45,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.55
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Side effects of Methotrexate",
+              "pro": [
+                "n_dm"
+              ],
+              "con": [
+                "n_adv_mtx"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Methotrexate exhibits immunomodulatory effects and is linked to inflammation pathways."
+          ],
+          "safety_risk": [
+            "Clinical evidence indicates potential adverse effects, possibly impacting efficacy."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Need further validation of long-term safety."
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.32,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.45,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.6
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Side effects of Prednisone",
+              "pro": [
+                "n_dm"
+              ],
+              "con": [
+                "n_adv_pred"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Prednisone is commonly used to relieve symptoms in autoimmune diseases."
+          ],
+          "safety_risk": [
+            "Known to cause metabolic derangements affecting its therapeutic effects."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Long-term impact on patient outcomes remains unclear."
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.28,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.35,
+          "safety_risk": 0.35,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.6
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Infection risks associated with Azathioprine",
+              "pro": [
+                "n_dm"
+              ],
+              "con": [
+                "n_adv_aza"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Azathioprine is an immunosuppressive drug known to reduce immune responses."
+          ],
+          "safety_risk": [
+            "Potential for increased infection may hinder its therapeutic efficacy."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "More research required to understand its safety profile in JDM."
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.26,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.45,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.3,
+          "safety_risk": 0.45,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.6
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Infection risks associated with Mycophenolate mofetil",
+              "pro": [
+                "n_dm"
+              ],
+              "con": [
+                "n_adv_mmf"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Mycophenolate mofetil is recognized as an immunomodulatory agent."
+          ],
+          "safety_risk": [
+            "Increased risk of severe infections is a notable concern."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Long-term implications need adequate exploration."
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.25,
+        "components": {
+          "mechanism_fit": 0.5,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.25,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.55
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "IVIG has demonstrated efficacy in various immunological conditions."
+          ],
+          "safety_risk": [
+            "Concerns over potential adverse reactions still exist."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Variability in individual responses needs examination."
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.22,
+        "components": {
+          "mechanism_fit": 0.45,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.35,
+          "indication_plausibility": 0.2,
+          "safety_risk": 0.35,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.55
+        },
+        "graph_signals": {
+          "support_weight": 0.55,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Rituximab has shown potential in autoimmune disorders."
+          ],
+          "safety_risk": [
+            "Reactions associated with infusion need consideration."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Efficacy specifically in JDM still needs clarity."
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.2,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.3,
+          "indication_plausibility": 0.15,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Cyclophosphamide is a known immunosuppressive agent."
+          ],
+          "safety_risk": [
+            "Potential adverse effects warrant caution."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Specific benefits for JDM remain unclear."
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.19,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.15,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.45,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Etanercept targets TNF, implicated in inflammation."
+          ],
+          "safety_risk": [
+            "Safety profile in children might differ."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Evidence of efficacy in JDM lacking."
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.18,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.4,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Adalimumab is used in autoimmune contexts."
+          ],
+          "safety_risk": [
+            "Long-term effects are not fully established."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Need studies for specific indications."
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.17,
+        "components": {
+          "mechanism_fit": 0.25,
+          "class_prior": 0.25,
+          "pk_pd_feasibility": 0.15,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.25,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.4
+        },
+        "graph_signals": {
+          "support_weight": 0.35,
+          "contradiction_weight": 0.75,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Hydroxychloroquine has immunomodulatory properties."
+          ],
+          "safety_risk": [
+            "Potential adverse effects limit its use."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Efficacy in JDM not clearly supported."
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.16,
+        "components": {
+          "mechanism_fit": 0.25,
+          "class_prior": 0.25,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.4
+        },
+        "graph_signals": {
+          "support_weight": 0.3,
+          "contradiction_weight": 0.75,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Tacrolimus modulates T cell activity."
+          ],
+          "safety_risk": [
+            "Safety concerns must be managed."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Specific application in JDM is unclear."
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.2,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.15,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.3
+        },
+        "graph_signals": {
+          "support_weight": 0.2,
+          "contradiction_weight": 0.8,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Belimumab targets B cells and is used in autoimmune diseases."
+          ],
+          "safety_risk": [
+            "Needs more evidence regarding its application."
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Insufficient data on specific effects in JDM."
+        ]
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nec_intervening",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tp1",
+          "type": "Target",
+          "label": "Immune System Modulation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_inflammation",
+          "type": "Pathway",
+          "label": "Inflammation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dm",
+          "type": "Disease",
+          "label": "Juvenile Dermatomyositis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tp2",
+          "type": "Target",
+          "label": "T Cell Inhibition",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph1",
+          "type": "Phenotype",
+          "label": "Improved Muscle Strength",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph2",
+          "type": "Phenotype",
+          "label": "Decreased Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_mtx",
+          "type": "Target",
+          "label": "OffTargetMtx",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mtx",
+          "type": "Pathway",
+          "label": "RiskPathwayMtx",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mtx",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMtx",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pred",
+          "type": "Target",
+          "label": "OffTargetPred",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pred",
+          "type": "Pathway",
+          "label": "RiskPathwayPred",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pred",
+          "type": "Phenotype",
+          "label": "AdversePhenotypePred",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aza",
+          "type": "Target",
+          "label": "OffTargetAza",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aza",
+          "type": "Pathway",
+          "label": "RiskPathwayAza",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aza",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAza",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mmf",
+          "type": "Target",
+          "label": "OffTargetMmf",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mmf",
+          "type": "Pathway",
+          "label": "RiskPathwayMmf",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mmf",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMmf",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_intravenous_immunoglobulin",
+          "type": "Drug",
+          "label": "Intravenous immunoglobulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_hydroxychloroquine",
+          "type": "Drug",
+          "label": "Hydroxychloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Belimumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_belimumab",
+          "type": "Drug",
+          "label": "Belimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_methotrexate",
+          "target": "n_tp1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知免疫调节作用"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_tp1",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "常见于自身免疫疾病治疗支持"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_tp2",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "免疫抑制药物作用"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "n_tp2",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "免疫系统调节药物常识"
+        },
+        {
+          "source": "drug_nec_intervening",
+          "target": "n_tp2",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "免疫相关疾病常用"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "n_tp1",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "针对B细胞的靶向药物"
+        },
+        {
+          "source": "n_tp1",
+          "target": "pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "疾病与炎症通路关联"
+        },
+        {
+          "source": "pathway_inflammation",
+          "target": "n_dm",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "免疫介导的病理通路"
+        },
+        {
+          "source": "n_ph1",
+          "target": "n_dm",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "肌肉力量改善的关键表型"
+        },
+        {
+          "source": "n_ph2",
+          "target": "n_dm",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "炎症减轻的重要指标"
+        },
+        {
+          "source": "n_tp2",
+          "target": "pathway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "免疫反应和炎症通路的整合"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "n_tp1",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "针对TNF的免疫调节药物"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "n_tp1",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "抗体机制应用于自身免疫"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "n_tp2",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "免疫功能调节"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "n_tp2",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "调节T细胞活性基础常识"
+        },
+        {
+          "source": "drug_belimumab",
+          "target": "n_tp1",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "靶向B细胞机制"
+        },
+        {
+          "source": "n_dm",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Methotrexate在该病的应用支持"
+        },
+        {
+          "source": "n_dm",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Prednisone通常用于缓解症状"
+        },
+        {
+          "source": "n_dm",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Azathioprine被应用于相同领域"
+        },
+        {
+          "source": "n_dm",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Mycophenolate mofetil有效性默认为积极"
+        },
+        {
+          "source": "n_dm",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "IVIG用于支持疗效"
+        },
+        {
+          "source": "n_dm",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Rituximab显示出疗效"
+        },
+        {
+          "source": "n_dm",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Cyclophosphamide作为抑制剂的支持"
+        },
+        {
+          "source": "n_dm",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "Etanercept用于该病治疗有前例"
+        },
+        {
+          "source": "n_dm",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Adalimumab在自身免疫中使用"
+        },
+        {
+          "source": "n_dm",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Hydroxychloroquine的应用常识"
+        },
+        {
+          "source": "n_dm",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "Tacrolimus使用范围广"
+        },
+        {
+          "source": "n_dm",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "Belimumab在这一领域的潜力"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_mtx",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对正常细胞可能产生副作用"
+        },
+        {
+          "source": "n_ot_mtx",
+          "target": "n_rp_mtx",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能激活"
+        },
+        {
+          "source": "n_rp_mtx",
+          "target": "n_adv_mtx",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_mtx",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，将抵消药物用途"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_pred",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起代谢紊乱"
+        },
+        {
+          "source": "n_ot_pred",
+          "target": "n_rp_pred",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_pred",
+          "target": "n_adv_pred",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致体重增加等不良表型"
+        },
+        {
+          "source": "n_adv_pred",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此类副作用抵消使用效果"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_ot_aza",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "免疫抑制可能引发感染"
+        },
+        {
+          "source": "n_ot_aza",
+          "target": "n_rp_aza",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "感染风险相关通路激活"
+        },
+        {
+          "source": "n_rp_aza",
+          "target": "n_adv_aza",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发严重感染"
+        },
+        {
+          "source": "n_adv_aza",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能防碍治疗效果"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "n_ot_mmf",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能减弱免疫监视功能"
+        },
+        {
+          "source": "n_ot_mmf",
+          "target": "n_rp_mmf",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "免疫抑制引发感染机制"
+        },
+        {
+          "source": "n_rp_mmf",
+          "target": "n_adv_mmf",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致严重感染等不良表型"
+        },
+        {
+          "source": "n_adv_mmf",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险影响药物疗效"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65
+    },
+    "heuristic_priors": []
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "score": 0.33,
+        "graph_snapshot_ref": "GE_H1_round5",
+        "key_assumptions": [
+          "Methotrexate has an established role in immune modulation.",
+          "Potential side effects require careful management."
+        ],
+        "caveats": [
+          "Long-term safety and efficacy still need validation."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "score": 0.32,
+        "graph_snapshot_ref": "GE_H2_round5",
+        "key_assumptions": [
+          "Prednisone is effective for symptom relief in autoimmune conditions.",
+          "Long-term impacts on health need to be assessed."
+        ],
+        "caveats": [
+          "Consideration of potential adverse metabolic effects."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "score": 0.28,
+        "graph_snapshot_ref": "GE_H3_round5",
+        "key_assumptions": [
+          "Azathioprine functions as an immunosuppressant.",
+          "Risk of infections needs to be closely monitored."
+        ],
+        "caveats": [
+          "Further analysis of its safety profile in JDM is required."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "score": 0.26,
+        "graph_snapshot_ref": "GE_H4_round5",
+        "key_assumptions": [
+          "Mycophenolate mofetil is recognized for its immune-modulating effects.",
+          "Potential risks of infections exist."
+        ],
+        "caveats": [
+          "Need for comprehensive long-term studies."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H5",
+        "candidate": {
+          "id": "drug_intravenous_immunoglobulin",
+          "name": "Intravenous immunoglobulin"
+        },
+        "score": 0.25,
+        "graph_snapshot_ref": "GE_H5_round5",
+        "key_assumptions": [
+          "IVIG is effective in various autoimmune situations.",
+          "Individual responses may vary significantly."
+        ],
+        "caveats": [
+          "Potential adverse reactions should be monitored."
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Target→Pathway→Disease",
+          "reason": "Mechanistic pathways are well-defined, supporting therapeutic use."
+        }
+      ],
+      "remaining_gaps": [
+        "Need to address safety concerns and demonstrate long-term efficacy."
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "impact_summary": "Initial hypotheses on immune modulation established."
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "E",
+            "F"
+          ],
+          "impact_summary": "Included additional therapeutic options but safety concerns remain."
+        }
+      ],
+      "lessons": [
+        "Monitor long-term safety across all drug candidates consistently.",
+        "Diversify drug candidates to mitigate risks associated with immunosuppressive therapies."
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "Clarify long-term outcomes for all recommended therapies."
+      },
+      {
+        "role": "Skeptic",
+        "patch": "Provide detailed risk assessments for each drug, focusing on adverse effects."
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "immunosuppressive therapies are proposed",
+        "then": "include risk monitoring mechanisms for infection and adverse reactions."
+      }
+    ]
+  }
+}

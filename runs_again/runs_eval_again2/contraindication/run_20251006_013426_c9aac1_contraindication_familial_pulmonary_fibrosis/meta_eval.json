@@ -1,0 +1,135 @@
+{
+  "subset": "contraindication",
+  "disease": "Familial pulmonary fibrosis",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "bardoxolone methyl",
+    "deoxycytidine",
+    "deoxythymidine",
+    "peg ifn-α-2b",
+    "saracatinab"
+  ],
+  "seeds_initial": [
+    "Saracatinib",
+    "Ambrisentan",
+    "Nintedanib",
+    "Pirfenidone",
+    "Amiodarone",
+    "Bleomycin",
+    "Methotrexate",
+    "Cyclophosphamide",
+    "Nitrofurantoin",
+    "Procarbazine",
+    "Hydrochlorothiazide",
+    "Busulfan"
+  ],
+  "seed_history": [
+    [
+      "Saracatinib",
+      "Ambrisentan",
+      "Nintedanib",
+      "Pirfenidone",
+      "Amiodarone",
+      "Bleomycin",
+      "Methotrexate",
+      "Cyclophosphamide",
+      "Nitrofurantoin",
+      "Procarbazine",
+      "Hydrochlorothiazide",
+      "Busulfan"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_saracatinib",
+          "name": "Saracatinib"
+        },
+        "score": 0.57,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Saracatinib contraindicated due to adverse reaction risks specific to pulmonary fibrosis."
+        ],
+        "caveats": [
+          "Need further validation on specific impacts on familial pulmonary fibrosis."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_ambrisentan",
+          "name": "Ambrisentan"
+        },
+        "score": 0.57,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Ambrisentan contraindicated due to association with lung diseases."
+        ],
+        "caveats": [
+          "Need further validation on specific impacts on familial pulmonary fibrosis."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_nintedanib",
+          "name": "Nintedanib"
+        },
+        "score": 0.57,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Nintedanib contraindicated as it is used to treat specific fibrosis."
+        ],
+        "caveats": [
+          "Need further validation on specific impacts on familial pulmonary fibrosis."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_pirfenidone",
+          "name": "Pirfenidone"
+        },
+        "score": 0.57,
+        "graph_snapshot_ref": "GE_H4_round4",
+        "key_assumptions": [
+          "Pirfenidone contraindicated due to clinical observations of side effects."
+        ],
+        "caveats": [
+          "Need further validation on specific impacts on familial pulmonary fibrosis."
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Familial pulmonary fibrosis (contraindication)",
+          "reason": "Established contraindications and significant adverse reaction risks."
+        }
+      ],
+      "remaining_gaps": [
+        "Validation of specific drug impacts on familial pulmonary fibrosis."
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [],
+          "impact_summary": "No prior seeds have been generated."
+        }
+      ],
+      "lessons": []
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that are contraindicated or could worsen the rare disease 'Familial pulmonary fibrosis'. Return only names.\n\n# Heuristics:\n- When 针对纤维化相关表型: then 关注临床安全性与疗效；需严谨数据支持新疗法预期效益。"
+}

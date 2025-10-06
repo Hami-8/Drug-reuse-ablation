@@ -1,0 +1,424 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "可能的禁忌机制以及加重炎症风险",
+            "expectation": "评估此机制如何影响证据支持的强度",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_ta1",
+          "type": "Target",
+          "label": "Adenosine A1 receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta2",
+          "type": "Target",
+          "label": "CYP1A2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta3",
+          "type": "Target",
+          "label": "CYP3A4",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta4",
+          "type": "Target",
+          "label": "Leukotriene receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta5",
+          "type": "Target",
+          "label": "Bacterial ribosome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta6",
+          "type": "Target",
+          "label": "Glucocorticoid receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb1",
+          "type": "Pathway",
+          "label": "cAMP signaling pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb2",
+          "type": "Pathway",
+          "label": "Leukotriene signaling pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb3",
+          "type": "Pathway",
+          "label": "Antimicrobial response",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb4",
+          "type": "Pathway",
+          "label": "Inflammatory response",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_d1",
+          "type": "Disease",
+          "label": "Primary ciliary dyskinesia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "off_target_effects",
+          "type": "Target",
+          "label": "Off-target effects related to bronchial response",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "increased_inflammation",
+          "type": "Pathway",
+          "label": "Increased inflammatory response",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "worsened_symptoms",
+          "type": "Phenotype",
+          "label": "Worsened respiratory symptoms",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "impaired_ciliary_function",
+          "type": "Phenotype",
+          "label": "Impaired ciliary function",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_aminophylline",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Aminophylline acts as a bronchodilator and is known to influence adenosine receptors."
+        },
+        {
+          "source": "n_ta1",
+          "target": "n_pb1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Adenosine A1 receptor is critical in cAMP signaling."
+        },
+        {
+          "source": "n_pb1",
+          "target": "n_d1",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Altered cAMP signaling can affect ciliary movement."
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "n_ta5",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Azithromycin targets bacterial ribosomal RNA, impacting pulmonary infections commonly associated with PCD."
+        },
+        {
+          "source": "n_ta5",
+          "target": "n_pb3",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Bacterial responses can affect airway management in PCD."
+        },
+        {
+          "source": "n_pb3",
+          "target": "n_d1",
+          "relation": "causes",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Control of infections is critical in PCD management."
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ta6",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Dexamethasone modulates immune response via glucocorticoid receptor."
+        },
+        {
+          "source": "n_ta6",
+          "target": "n_pb4",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Inflammatory pathways are significant in PCD pathology."
+        },
+        {
+          "source": "n_pb4",
+          "target": "n_d1",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Inflammation is a central feature of PCD."
+        },
+        {
+          "source": "drug_montelukast",
+          "target": "n_ta4",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Montelukast is a leukotriene receptor antagonist, useful in respiratory conditions."
+        },
+        {
+          "source": "n_ta4",
+          "target": "n_pb2",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Leukotriene pathway involvement is noted in airway inflammation."
+        },
+        {
+          "source": "n_pb2",
+          "target": "n_d1",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Leukotriene signaling can contribute to PCD pathology."
+        },
+        {
+          "source": "drug_aminophylline",
+          "target": "off_target_effects",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响气道过敏反应"
+        },
+        {
+          "source": "off_target_effects",
+          "target": "increased_inflammation",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能导致炎症反应增加"
+        },
+        {
+          "source": "increased_inflammation",
+          "target": "worsened_symptoms",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "加重呼吸道症状"
+        },
+        {
+          "source": "drug_aminophylline",
+          "target": "impaired_ciliary_function",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能抑制纤毛功能"
+        },
+        {
+          "source": "impaired_ciliary_function",
+          "target": "worsened_symptoms",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "导致症状加重"
+        },
+        {
+          "source": "worsened_symptoms",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在禁忌，会抵消预期收益"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "off_target_effects",
+              "type": "Target",
+              "label": "Off-target effects related to bronchial response",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "increased_inflammation",
+              "type": "Pathway",
+              "label": "Increased inflammatory response",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "worsened_symptoms",
+              "type": "Phenotype",
+              "label": "Worsened respiratory symptoms",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            },
+            {
+              "id": "impaired_ciliary_function",
+              "type": "Phenotype",
+              "label": "Impaired ciliary function",
+              "attrs": {
+                "agent": "Skeptic"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "drug_aminophylline",
+              "target": "off_target_effects",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Skeptic",
+              "rationale": "可能影响气道过敏反应"
+            },
+            {
+              "source": "off_target_effects",
+              "target": "increased_inflammation",
+              "relation": "involved_in",
+              "weight": 0.75,
+              "agent": "Skeptic",
+              "rationale": "可能导致炎症反应增加"
+            },
+            {
+              "source": "increased_inflammation",
+              "target": "worsened_symptoms",
+              "relation": "causes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "加重呼吸道症状"
+            },
+            {
+              "source": "drug_aminophylline",
+              "target": "impaired_ciliary_function",
+              "relation": "acts_on",
+              "weight": 0.7,
+              "agent": "Skeptic",
+              "rationale": "可能抑制纤毛功能"
+            },
+            {
+              "source": "impaired_ciliary_function",
+              "target": "worsened_symptoms",
+              "relation": "causes",
+              "weight": 0.9,
+              "agent": "Skeptic",
+              "rationale": "导致症状加重"
+            },
+            {
+              "source": "worsened_symptoms",
+              "target": "H1",
+              "relation": "refutes",
+              "weight": 0.85,
+              "agent": "Skeptic",
+              "rationale": "若存在禁忌，会抵消预期收益"
+            }
+          ],
+          "conflict_hotspots": [
+            {
+              "topic": "可能的禁忌机制以及加重炎症风险",
+              "pro_nodes": [],
+              "con_nodes": [
+                "off_target_effects",
+                "increased_inflammation",
+                "worsened_symptoms",
+                "impaired_ciliary_function"
+              ],
+              "note": "禁忌机制和炎症加重的潜在影响"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：以高权重 refutes 边连到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "急性/慢性效应的方向性仍未消解",
+      "与共病（心血管/肾功能）潜在冲突未覆盖"
+    ]
+  }
+}

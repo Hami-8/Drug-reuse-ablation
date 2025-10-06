@@ -1,0 +1,356 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_ursodiol",
+          "name": "Ursodiol"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_cholestyramine",
+          "name": "Cholestyramine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_phenobarbital",
+          "name": "Phenobarbital"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_chloramphenicol",
+          "name": "Chloramphenicol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_ampicillin",
+          "name": "Ampicillin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_nafcillin",
+          "name": "Nafcillin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_tetracycline",
+          "name": "Tetracycline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_ceftriaxone",
+          "name": "Ceftriaxone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_erythromycin",
+          "name": "Erythromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_sulfonamides",
+          "name": "Sulfonamides"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_ursodiol",
+          "type": "Drug",
+          "label": "Ursodiol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampicin",
+          "type": "Drug",
+          "label": "Rifampicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cholestyramine",
+          "type": "Drug",
+          "label": "Cholestyramine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_chloramphenicol",
+          "type": "Drug",
+          "label": "Chloramphenicol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ampicillin",
+          "type": "Drug",
+          "label": "Ampicillin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nafcillin",
+          "type": "Drug",
+          "label": "Nafcillin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tetracycline",
+          "type": "Drug",
+          "label": "Tetracycline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ceftriaxone",
+          "type": "Drug",
+          "label": "Ceftriaxone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_erythromycin",
+          "type": "Drug",
+          "label": "Erythromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sulfonamides",
+          "type": "Drug",
+          "label": "Sulfonamides",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_neonatal_cholestasis",
+          "type": "Disease",
+          "label": "Neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_ursodiol",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "普遍认知药物可能与胆汁淤积有风险"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知影响肝脏代谢"
+        },
+        {
+          "source": "drug_cholestyramine",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响胆盐循环"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "影响肝脏药物代谢"
+        },
+        {
+          "source": "drug_chloramphenicol",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "有极少数相关报告"
+        },
+        {
+          "source": "drug_ampicillin",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能影响肝功能药物"
+        },
+        {
+          "source": "drug_nafcillin",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "与肝脏代谢相关的常识"
+        },
+        {
+          "source": "drug_tetracycline",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "对肝脏影响存在不确定性"
+        },
+        {
+          "source": "drug_ceftriaxone",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "能导致胆囊沉积"
+        },
+        {
+          "source": "drug_erythromycin",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.2,
+          "agent": "Proponent",
+          "rationale": "对肝脏的潜在影响"
+        },
+        {
+          "source": "drug_sulfonamides",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.2,
+          "agent": "Proponent",
+          "rationale": "与胆汁淤积的关联"
+        },
+        {
+          "source": "drug_ibuprofen",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "contraindication",
+          "weight": 0.1,
+          "agent": "Proponent",
+          "rationale": "对新生儿影响尚不明确"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多个药物对新生儿胆汁淤积存在潜在风险",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "所有药物在特定情况下可能对新生儿产生影响，具体机制尚需研究"
+    ],
+    "uncertainties": [
+      "部分药物影响机制不明确，需要进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "是否进一步探讨各药物的具体作用机制与影响"
+    ]
+  }
+}

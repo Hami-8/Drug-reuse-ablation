@@ -1,0 +1,1097 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Generalised pustular psoriasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_acitretin",
+          "name": "Acitretin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_secukinumab",
+          "name": "Secukinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_ixekizumab",
+          "name": "Ixekizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_austedo",
+          "name": "Austedo"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_tildrakizumab",
+          "name": "Tildrakizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_brodalumab",
+          "name": "Brodalumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ustekinumab",
+          "name": "Ustekinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.48,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.8,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Acitretin Risks",
+              "pro": [
+                "n_adv_acitretin"
+              ],
+              "con": [
+                "H1"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Acitretin作用于IL-17A，并与病理状态关联"
+          ],
+          "safety_risk": [
+            "存在较强的副作用风险，Skeptic指出可能导致不良表型"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Acitretin的长期安全性需进一步评估"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.48,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.8,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adalimumab Risks",
+              "pro": [
+                "n_adv_adalimumab"
+              ],
+              "con": [
+                "H2"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Adalimumab靶向TNF-alpha，减少炎症"
+          ],
+          "safety_risk": [
+            "副作用风险较高，存在可能导致不良表型的担忧"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Adalimumab的长期效果与安全性需进一步验证"
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.48,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.8,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Etanercept Risks",
+              "pro": [
+                "n_adv_infliximab"
+              ],
+              "con": [
+                "H3"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Etanercept靶向TNF-alpha，缓解炎症"
+          ],
+          "safety_risk": [
+            "存在较强副作用风险，可能影响应用价值"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Etanercept的真实疗效尚待更多数据支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.48,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.8,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Infliximab Risks",
+              "pro": [
+                "n_adv_infliximab"
+              ],
+              "con": [
+                "H4"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Infliximab抑制TNF-alpha发挥作用"
+          ],
+          "safety_risk": [
+            "存在较强副作用，Skeptic表明可能导致不良反应"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Infliximab的使用安全性尚需验证"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.48,
+        "components": {
+          "mechanism_fit": 0.7,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.8,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Secukinumab Risks",
+              "pro": [
+                "n_adv_secukinumab"
+              ],
+              "con": [
+                "H5"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Secukinumab特异性抑制IL-17A"
+          ],
+          "safety_risk": [
+            "与潜在风险相结合，可能导致不良表型"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "Secukinumab的疗效与安全性待进一步解析"
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.35,
+        "confidence": "medium",
+        "uncertainties": [
+          "Ixekizumab的有效性与安全性仍待进一步调查"
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.1,
+        "confidence": "low",
+        "uncertainties": [
+          "Austedo与此疾病的相关性未证明，疗效不确定"
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.25,
+        "confidence": "low",
+        "uncertainties": [
+          "Methotrexate对皮肤病的疗效在此情况下不明确"
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.25,
+        "confidence": "low",
+        "uncertainties": [
+          "Cyclosporine在此情境下的作用尚需证实"
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.35,
+        "confidence": "medium",
+        "uncertainties": [
+          "Tildrakizumab的疗效与安全性仍需进一步探讨"
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.3,
+        "confidence": "low",
+        "uncertainties": [
+          "Brodalumab的效果较少数据支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.3,
+        "confidence": "low",
+        "uncertainties": [
+          "Ustekinumab在此病症下的应用效果尚待证实"
+        ]
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H10",
+      "H11",
+      "H12",
+      "H8",
+      "H9",
+      "H7"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_acitretin",
+          "type": "Drug",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_infliximab",
+          "type": "Drug",
+          "label": "Infliximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_secukinumab",
+          "type": "Drug",
+          "label": "Secukinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ixekizumab",
+          "type": "Drug",
+          "label": "Ixekizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_austedo",
+          "type": "Drug",
+          "label": "Austedo",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tildrakizumab",
+          "type": "Drug",
+          "label": "Tildrakizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_brodalumab",
+          "type": "Drug",
+          "label": "Brodalumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ustekinumab",
+          "type": "Drug",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_generalised_pustular_psoriasis",
+          "type": "Disease",
+          "label": "Generalised pustular psoriasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_IL17A",
+          "type": "Target",
+          "label": "IL-17A",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_TNF_alpha",
+          "type": "Target",
+          "label": "TNF-alpha",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_inflammatory_response",
+          "type": "Pathway",
+          "label": "Inflammatory Response Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_skin_inflammation",
+          "type": "Phenotype",
+          "label": "Skin Inflammation Phenotype",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_acitretin",
+          "type": "Target",
+          "label": "OffTarget of Acitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_acitretin",
+          "type": "Pathway",
+          "label": "Risk Pathway for Acitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_acitretin",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Acitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_adalimumab",
+          "type": "Target",
+          "label": "OffTarget of Adalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_adalimumab",
+          "type": "Pathway",
+          "label": "Risk Pathway for Adalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_adalimumab",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Adalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_infliximab",
+          "type": "Target",
+          "label": "OffTarget of Infliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_infliximab",
+          "type": "Pathway",
+          "label": "Risk Pathway for Infliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_infliximab",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Infliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_secukinumab",
+          "type": "Target",
+          "label": "OffTarget of Secukinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_secukinumab",
+          "type": "Pathway",
+          "label": "Risk Pathway for Secukinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_secukinumab",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Secukinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_acitretin",
+          "target": "target_IL17A",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Acitretin通过IL-17A调节免疫反应"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "target_TNF_alpha",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Adalimumab抑制TNF-alpha，减少炎症"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "target_TNF_alpha",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Etanercept靶向TNF-alpha，缓解炎症"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "target_TNF_alpha",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Infliximab通过抑制TNF-alpha发挥作用"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "target_IL17A",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Secukinumab特异性抑制IL-17A"
+        },
+        {
+          "source": "drug_ixekizumab",
+          "target": "target_IL17A",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Ixekizumab靶向IL-17A以改善症状"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "pathway_inflammatory_response",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Methotrexate在炎症通路中有作用"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "pathway_inflammatory_response",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Cyclosporine通过抑制免疫系统缓解炎症"
+        },
+        {
+          "source": "drug_tildrakizumab",
+          "target": "target_IL17A",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Tildrakizumab靶向IL-17A有效"
+        },
+        {
+          "source": "drug_brodalumab",
+          "target": "target_IL17A",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Brodalumab靶向IL-17A以改善临床症状"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "target_IL17A",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Ustekinumab抑制IL-17及IL-23"
+        },
+        {
+          "source": "target_IL17A",
+          "target": "pathway_inflammatory_response",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "IL-17A在炎症反应通路中重要"
+        },
+        {
+          "source": "target_TNF_alpha",
+          "target": "pathway_inflammatory_response",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "TNF-alpha在炎症反应通路中关键"
+        },
+        {
+          "source": "pathway_inflammatory_response",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "炎症反应通路与病理状态关联"
+        },
+        {
+          "source": "drug_acitretin",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Acitretin已用于治疗该状态"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Adalimumab显示出疗效"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Etanercept用作治疗选项"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Infliximab用于该病的治疗"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "Secukinumab治疗显示帮助"
+        },
+        {
+          "source": "drug_ixekizumab",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "Ixekizumab在这一状态下得到了认可"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Methotrexate用于治疗皮肤疾病"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "Cyclosporine有时用于此类疾病"
+        },
+        {
+          "source": "drug_tildrakizumab",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "Tildrakizumab已显示效果"
+        },
+        {
+          "source": "drug_brodalumab",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Brodalumab被探索用于此病症"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "disease_generalised_pustular_psoriasis",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Ustekinumab对相关症状有帮助"
+        },
+        {
+          "source": "drug_acitretin",
+          "target": "n_ot_acitretin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路影响"
+        },
+        {
+          "source": "n_ot_acitretin",
+          "target": "n_rp_acitretin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路风险关联"
+        },
+        {
+          "source": "n_rp_acitretin",
+          "target": "n_adv_acitretin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_acitretin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险成立将抵消益处"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "n_ot_adalimumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路影响"
+        },
+        {
+          "source": "n_ot_adalimumab",
+          "target": "n_rp_adalimumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路风险关联"
+        },
+        {
+          "source": "n_rp_adalimumab",
+          "target": "n_adv_adalimumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_adalimumab",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险成立将抵消益处"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "n_ot_infliximab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路影响"
+        },
+        {
+          "source": "n_ot_infliximab",
+          "target": "n_rp_infliximab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路风险关联"
+        },
+        {
+          "source": "n_rp_infliximab",
+          "target": "n_adv_infliximab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_infliximab",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险成立将抵消益处"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "n_ot_secukinumab",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路影响"
+        },
+        {
+          "source": "n_ot_secukinumab",
+          "target": "n_rp_secukinumab",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路风险关联"
+        },
+        {
+          "source": "n_rp_secukinumab",
+          "target": "n_adv_secukinumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_secukinumab",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险成立将抵消益处"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65
+    },
+    "heuristic_priors": []
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_acitretin",
+          "name": "Acitretin"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Acitretin作用于IL-17A并已被用于治疗",
+          "潜在副作用风险需进一步验证"
+        ],
+        "caveats": [
+          "副作用风险较高，长期效果不明确"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Adalimumab靶向TNF-alpha以减少炎症",
+          "主要副作用风险需评估"
+        ],
+        "caveats": [
+          "长期疗效与安全性需进一步验证"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Etanercept靶向TNF-alpha并用于治疗此病",
+          "副作用风险是否可接受需确认"
+        ],
+        "caveats": [
+          "疗效尚需更多数据支持"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H4_round4",
+        "key_assumptions": [
+          "Infliximab通过抑制TNF-alpha发挥作用",
+          "与潜在副作用相关的风险需评估"
+        ],
+        "caveats": [
+          "需进一步验证使用安全性"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H5",
+        "candidate": {
+          "id": "drug_secukinumab",
+          "name": "Secukinumab"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H5_round4",
+        "key_assumptions": [
+          "Secukinumab靶向IL-17A并显示帮助",
+          "副作用风险需明确"
+        ],
+        "caveats": [
+          "疗效与安全性待进一步解析"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Target→Pathway→Disease",
+          "reason": "主要候选药物靶向关键病理途径"
+        }
+      ],
+      "remaining_gaps": [
+        "副作用风险的具体评估",
+        "长期疗效数据不足"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "impact_summary": "帮助识别出有效的靶点"
+        }
+      ],
+      "lessons": [
+        "需优先关注副作用风险的研究",
+        "靶向IL-17A的药物需具备明确的有效性和安全性数据"
+      ]
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  }
+}

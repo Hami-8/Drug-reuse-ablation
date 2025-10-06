@@ -1,0 +1,344 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Inherited white matter disorders",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_methylprednisolone",
+          "name": "Methylprednisolone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_methylcobalamin",
+          "name": "Methylcobalamin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_fingolimod",
+          "name": "Fingolimod"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_thalidomide",
+          "name": "Thalidomide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_interferon_beta",
+          "name": "Interferon beta"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_dimethyl_fumarate",
+          "name": "Dimethyl fumarate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_natalizumab",
+          "name": "Natalizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_ganciclovir",
+          "name": "Ganciclovir"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_methylprednisolone",
+          "type": "Target",
+          "label": "OffTarget_Methylprednisolone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_methylprednisolone",
+          "type": "Pathway",
+          "label": "RiskPathway_Methylprednisolone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_methylprednisolone",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Methylprednisolone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclosporine",
+          "type": "Target",
+          "label": "OffTarget_Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cyclosporine",
+          "type": "Pathway",
+          "label": "RiskPathway_Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cyclosporine",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methylcobalamin",
+          "type": "Target",
+          "label": "OffTarget_Methylcobalamin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_methylcobalamin",
+          "type": "Pathway",
+          "label": "RiskPathway_Methylcobalamin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_methylcobalamin",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Methylcobalamin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_methylprednisolone",
+          "target": "n_ot_methylprednisolone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用与靶组织无关"
+        },
+        {
+          "source": "n_ot_methylprednisolone",
+          "target": "n_rp_methylprednisolone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路潜在存在"
+        },
+        {
+          "source": "n_rp_methylprednisolone",
+          "target": "n_adv_methylprednisolone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_adv_methylprednisolone",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "影响治疗效益"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_ot_cyclosporine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能诱导免疫抑制"
+        },
+        {
+          "source": "n_ot_cyclosporine",
+          "target": "n_rp_cyclosporine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "关联潜在副作用机制"
+        },
+        {
+          "source": "n_rp_cyclosporine",
+          "target": "n_adv_cyclosporine",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_cyclosporine",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "抵消潜在利益"
+        },
+        {
+          "source": "drug_methylcobalamin",
+          "target": "n_ot_methylcobalamin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响神经功能"
+        },
+        {
+          "source": "n_ot_methylcobalamin",
+          "target": "n_rp_methylcobalamin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_methylcobalamin",
+          "target": "n_adv_methylcobalamin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_methylcobalamin",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能未能改善状态"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "潜在的免疫抑制作用对患者存在风险",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "缺乏长期有效性的明确证据",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物对靶组织的影响是否符合预期",
+      "长期暴露的安全性尚未验证"
+    ],
+    "falsification_tests": [
+      "是否存在与药物相关的免疫损伤证据？",
+      "是否有临床证据支持长期疗效？"
+    ],
+    "next_focus_for_pi": [
+      "评估药物安全性和效果的长期研究数据",
+      "补充对潜在风险路径的调查"
+    ]
+  }
+}

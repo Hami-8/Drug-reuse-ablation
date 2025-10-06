@@ -1,0 +1,721 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Lactic acidosis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Sodium bicarbonate",
+            "via": [
+              "ElectrolyteBalance"
+            ],
+            "to": "LacticAcidosis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Metformin",
+            "via": [
+              "LacticAcidosis"
+            ],
+            "to": "ElectrolyteBalance",
+            "success_criteria": "构建有效的代谢干预路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_sodium_bicarbonate",
+          "type": "Drug",
+          "label": "Sodium bicarbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dapagliflozin",
+          "type": "Drug",
+          "label": "Dapagliflozin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lactate",
+          "type": "Drug",
+          "label": "Lactate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiamine",
+          "type": "Drug",
+          "label": "Thiamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_lactate",
+          "type": "Drug",
+          "label": "Sodium lactate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hydrogen_cyanide",
+          "type": "Drug",
+          "label": "Hydrogen cyanide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_chloride",
+          "type": "Drug",
+          "label": "Chloride",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_glycogen",
+          "type": "Drug",
+          "label": "Glycogen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ferrous_sulfate",
+          "type": "Drug",
+          "label": "Ferrous sulfate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "ElectrolyteBalance",
+          "type": "Pathway",
+          "label": "Electrolyte Balance",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pHRegulation",
+          "type": "Pathway",
+          "label": "pH Regulation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "LacticAcidosis",
+          "type": "Phenotype",
+          "label": "Lactic Acidosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sodium_bicarbonate",
+          "type": "Drug",
+          "label": "Sodium bicarbonate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dapagliflozin",
+          "type": "Drug",
+          "label": "Dapagliflozin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lactate",
+          "type": "Drug",
+          "label": "Lactate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_metformin",
+          "type": "Drug",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_thiamine",
+          "type": "Drug",
+          "label": "Thiamine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_sodium_lactate",
+          "type": "Drug",
+          "label": "Sodium lactate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_hydrogen_cyanide",
+          "type": "Drug",
+          "label": "Hydrogen cyanide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_chloride",
+          "type": "Drug",
+          "label": "Chloride",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_insulin",
+          "type": "Drug",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_glycogen",
+          "type": "Drug",
+          "label": "Glycogen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ferrous_sulfate",
+          "type": "Drug",
+          "label": "Ferrous sulfate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "OffTarget",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Sodium bicarbonate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Dapagliflozin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Lactate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Metformin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Thiamine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Sodium lactate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Hydrogen cyanide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Chloride",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Insulin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Glycogen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Ferrous sulfate",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_sodium_bicarbonate",
+          "target": "ElectrolyteBalance",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "常用于纠正酸碱失衡"
+        },
+        {
+          "source": "ElectrolyteBalance",
+          "target": "LacticAcidosis",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与乳酸代谢平衡有关"
+        },
+        {
+          "source": "drug_dapagliflozin",
+          "target": "pHRegulation",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "可能通过影响体内电解质来影响酸碱度"
+        },
+        {
+          "source": "pHRegulation",
+          "target": "LacticAcidosis",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响酸碱平衡的病理过程"
+        },
+        {
+          "source": "drug_lactate",
+          "target": "LacticAcidosis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "乳酸积累是乳酸性酸中毒的直接原因"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "LacticAcidosis",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "与高乳酸水平相关"
+        },
+        {
+          "source": "drug_thiamine",
+          "target": "LacticAcidosis",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "对乳酸代谢有积极影响"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "LacticAcidosis",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能通过抗氧化作用改善酸中毒"
+        },
+        {
+          "source": "drug_sodium_lactate",
+          "target": "LacticAcidosis",
+          "relation": "causes",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "乳酸盐输入可能影响乳酸水平"
+        },
+        {
+          "source": "drug_hydrogen_cyanide",
+          "target": "LacticAcidosis",
+          "relation": "causes",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可导致代谢性酸中毒"
+        },
+        {
+          "source": "drug_chloride",
+          "target": "LacticAcidosis",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "电解质调整可能影响乳酸性酸中毒"
+        },
+        {
+          "source": "drug_insulin",
+          "target": "LacticAcidosis",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能影响乳酸的代谢"
+        },
+        {
+          "source": "drug_glycogen",
+          "target": "LacticAcidosis",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "与能量代谢有关"
+        },
+        {
+          "source": "drug_ferrous_sulfate",
+          "target": "LacticAcidosis",
+          "relation": "supports",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "潜在影响酸碱平衡"
+        },
+        {
+          "source": "n_sodium_bicarbonate",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "存在潜在的旁路机制"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": [
+            "可能导致不良的风险路径",
+            "与多种机制相关"
+          ],
+          "agent_sources": [
+            "Skeptic"
+          ]
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引起不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_dapagliflozin",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能与代谢相关的旁路"
+        },
+        {
+          "source": "n_lactate",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "代谢作用导致潜在不良反应"
+        },
+        {
+          "source": "n_metformin",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "有可能影响肝脏功能"
+        },
+        {
+          "source": "n_n_acetylcysteine",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能干扰正常代谢"
+        },
+        {
+          "source": "n_thiamine",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "未知的干预机制"
+        },
+        {
+          "source": "n_insulin",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引起低血糖"
+        },
+        {
+          "source": "n_glycogen",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响糖代谢"
+        },
+        {
+          "source": "n_ferrous_sulfate",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能引起消化道不适"
+        },
+        {
+          "source": "n_hydrogen_cyanide",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的严重危险"
+        },
+        {
+          "source": "n_chloride",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致电解质失衡"
+        },
+        {
+          "source": "n_sodium_lactate",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致乳酸堆积"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_electrolyte_balance",
+              "type": "Pathway",
+              "label": "Electrolyte Balance",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            },
+            {
+              "id": "n_lactic_acidosis",
+              "type": "Phenotype",
+              "label": "Lactic Acidosis",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "drug_sodium_bicarbonate",
+              "target": "n_electrolyte_balance",
+              "relation": "acts_on",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "常用于纠正酸碱失衡"
+            },
+            {
+              "source": "n_electrolyte_balance",
+              "target": "n_lactic_acidosis",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "与乳酸代谢平衡有关"
+            },
+            {
+              "source": "drug_metformin",
+              "target": "n_lactic_acidosis",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "与高乳酸水平相关"
+            },
+            {
+              "source": "drug_lactate",
+              "target": "n_lactic_acidosis",
+              "relation": "causes",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "乳酸积累是乳酸性酸中毒的直接原因"
+            },
+            {
+              "source": "drug_dapagliflozin",
+              "target": "n_electrolyte_balance",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "可能通过影响体内电解质来影响酸碱度"
+            },
+            {
+              "source": "drug_thiamine",
+              "target": "n_lactic_acidosis",
+              "relation": "supports",
+              "weight": 0.6,
+              "agent": "Proponent",
+              "rationale": "对乳酸代谢有积极影响"
+            },
+            {
+              "source": "drug_n_acetylcysteine",
+              "target": "n_lactic_acidosis",
+              "relation": "supports",
+              "weight": 0.65,
+              "agent": "Proponent",
+              "rationale": "可能通过抗氧化作用改善酸中毒"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Sodium bicarbonate→Electrolyte Balance→Lactic Acidosis，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [
+      "需要进一步探索其他药物对酸碱失衡的潜在影响"
+    ]
+  }
+}

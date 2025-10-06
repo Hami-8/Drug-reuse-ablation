@@ -1,0 +1,1433 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_ursodiol",
+          "name": "Ursodiol"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_actigall",
+          "name": "Actigall"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_tudca",
+          "name": "TUDCA"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_s_adenosylmethionine",
+          "name": "S-adenosylmethionine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_cholic_acid",
+          "name": "Cholic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_hazar",
+          "name": "Hazar"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_ocaliva",
+          "name": "Ocaliva"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_xymed",
+          "name": "Xymed"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_entrytrade",
+          "name": "Entrytrade"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_zanolimid",
+          "name": "Zanolimid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_emproof",
+          "name": "Emproof"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.72,
+        "components": {
+          "mechanism_fit": 0.8,
+          "class_prior": 0.7,
+          "pk_pd_feasibility": 0.75,
+          "indication_plausibility": 0.7,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.18,
+          "conflict_penalty": 0.12
+        },
+        "graph_signals": {
+          "support_weight": 0.9,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "风险影响",
+              "pro": [],
+              "con": [
+                "n_adv",
+                "H1"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "存在 Drug→Target→Pathway→Disease 的有效机制链"
+          ],
+          "safety_risk": [
+            "风险可能抵消药物的净效益"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "冲突热点中缺乏对风险的充分检验"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.71,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.68,
+          "pk_pd_feasibility": 0.74,
+          "indication_plausibility": 0.65,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.15,
+          "conflict_penalty": 0.12
+        },
+        "graph_signals": {
+          "support_weight": 0.9,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "风险影响",
+              "pro": [],
+              "con": [
+                "n_adv",
+                "H2"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "机制与ursodiol相似"
+          ],
+          "safety_risk": [
+            "潜在风险可能影响疗效"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "仍需明确潜在不良反应"
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.7,
+        "components": {
+          "mechanism_fit": 0.78,
+          "class_prior": 0.67,
+          "pk_pd_feasibility": 0.72,
+          "indication_plausibility": 0.68,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.12,
+          "conflict_penalty": 0.12
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "风险影响",
+              "pro": [],
+              "con": [
+                "n_adv",
+                "H3"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "基于临床使用经验，有效作用"
+          ],
+          "safety_risk": [
+            "风险可能提高不良后果"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "需要额外研究以评估安全性"
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.6,
+        "components": {
+          "mechanism_fit": 0.68,
+          "class_prior": 0.65,
+          "pk_pd_feasibility": 0.65,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.3,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.12
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "风险影响",
+              "pro": [],
+              "con": [
+                "n_adv",
+                "H4"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "具备一定作用机制"
+          ],
+          "safety_risk": [
+            "潜在不良反应风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏对其有效性的强有力证据"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.64,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.55,
+          "safety_risk": 0.35,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.12
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": [
+            {
+              "topic": "风险影响",
+              "pro": [],
+              "con": [
+                "n_adv",
+                "H5"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "机制与胆盐代谢相关联"
+          ],
+          "safety_risk": [
+            "潜在的不良影响不容小觑"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "未能证明有效性至关重要"
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.45,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.55,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.4,
+          "graph_bonus": 0.07,
+          "conflict_penalty": 0.12
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": [
+            {
+              "topic": "风险影响",
+              "pro": [],
+              "con": [
+                "n_adv",
+                "H6"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "对于胆盐代谢的影响尚可探讨"
+          ],
+          "safety_risk": [
+            "存在潜在的不良反应"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏关于效果的实质性证据"
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.4,
+        "components": {
+          "mechanism_fit": 0.58,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.4,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.06,
+          "conflict_penalty": 0.12
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": [
+            {
+              "topic": "风险影响",
+              "pro": [],
+              "con": [
+                "n_adv",
+                "H7"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "对胆道代谢机制的影响有待进一步验证"
+          ],
+          "safety_risk": [
+            "可能对肝功能产生负面影响"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "必要的临床数据不足以支持其应用"
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.35,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.45,
+          "indication_plausibility": 0.3,
+          "safety_risk": 0.6,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.12
+        },
+        "graph_signals": {
+          "support_weight": 0.45,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": [
+            {
+              "topic": "风险影响",
+              "pro": [],
+              "con": [
+                "n_adv",
+                "H8"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "已知影响胆盐的药物"
+          ],
+          "safety_risk": [
+            "可能导致临床不佳结局"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏对此药物效果的临床证据"
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.3,
+        "components": {
+          "mechanism_fit": 0.52,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.25,
+          "safety_risk": 0.7,
+          "graph_bonus": 0.03,
+          "conflict_penalty": 0.12
+        },
+        "graph_signals": {
+          "support_weight": 0.35,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": [
+            {
+              "topic": "风险影响",
+              "pro": [],
+              "con": [
+                "n_adv",
+                "H9"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "对胆盐代谢影响不明确"
+          ],
+          "safety_risk": [
+            "不良反应风险高"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏有效性的相关数据"
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.25,
+        "components": {
+          "mechanism_fit": 0.48,
+          "class_prior": 0.38,
+          "pk_pd_feasibility": 0.35,
+          "indication_plausibility": 0.3,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.02,
+          "conflict_penalty": 0.12
+        },
+        "graph_signals": {
+          "support_weight": 0.25,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": [
+            {
+              "topic": "风险影响",
+              "pro": [],
+              "con": [
+                "n_adv",
+                "H10"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "作用机制尚未确定"
+          ],
+          "safety_risk": [
+            "具备较高的不良反应风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏支持其有效性的证据"
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.2,
+        "components": {
+          "mechanism_fit": 0.45,
+          "class_prior": 0.35,
+          "pk_pd_feasibility": 0.3,
+          "indication_plausibility": 0.2,
+          "safety_risk": 0.85,
+          "graph_bonus": 0.01,
+          "conflict_penalty": 0.12
+        },
+        "graph_signals": {
+          "support_weight": 0.1,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": [
+            {
+              "topic": "风险影响",
+              "pro": [],
+              "con": [
+                "n_adv",
+                "H11"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "作用机制较为不明晰"
+          ],
+          "safety_risk": [
+            "面临显著不良反应风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "数据支持效用的证据匮乏"
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.25,
+          "indication_plausibility": 0.2,
+          "safety_risk": 0.9,
+          "graph_bonus": 0.01,
+          "conflict_penalty": 0.12
+        },
+        "graph_signals": {
+          "support_weight": 0.05,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": [
+            {
+              "topic": "风险影响",
+              "pro": [],
+              "con": [
+                "n_adv",
+                "H12"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "与胆道代谢关系不大"
+          ],
+          "safety_risk": [
+            "已知有不良反应"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "未明确其治疗的新生儿胆汁淤积的有效性"
+        ]
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_ursodiol",
+          "type": "Drug",
+          "label": "Ursodiol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_actigall",
+          "type": "Drug",
+          "label": "Actigall",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tudca",
+          "type": "Drug",
+          "label": "TUDCA",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_s_adenosylmethionine",
+          "type": "Drug",
+          "label": "S-adenosylmethionine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cholic_acid",
+          "type": "Drug",
+          "label": "Cholic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_hazar",
+          "type": "Drug",
+          "label": "Hazar",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ocaliva",
+          "type": "Drug",
+          "label": "Ocaliva",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_xymed",
+          "type": "Drug",
+          "label": "Xymed",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_entrytrade",
+          "type": "Drug",
+          "label": "Entrytrade",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_zanolimid",
+          "type": "Drug",
+          "label": "Zanolimid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_emproof",
+          "type": "Drug",
+          "label": "Emproof",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_neonatal_cholestasis",
+          "type": "Disease",
+          "label": "Neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_bile_acid_receptors",
+          "type": "Target",
+          "label": "Bile Acid Receptors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_bile_acid_metabolism",
+          "type": "Pathway",
+          "label": "Bile Acid Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_hepatic_function",
+          "type": "Phenotype",
+          "label": "Hepatic Function",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot1",
+          "type": "Target",
+          "label": "OffTargetUrsodiol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot2",
+          "type": "Target",
+          "label": "OffTargetActigall",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot3",
+          "type": "Target",
+          "label": "OffTargetTUDCA",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot4",
+          "type": "Target",
+          "label": "OffTargetS-adenosylmethionine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot5",
+          "type": "Target",
+          "label": "OffTargetCholicAcid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot6",
+          "type": "Target",
+          "label": "OffTargetHazar",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot7",
+          "type": "Target",
+          "label": "OffTargetOcaliva",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot8",
+          "type": "Target",
+          "label": "OffTargetXymed",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot9",
+          "type": "Target",
+          "label": "OffTargetEntrytrade",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot10",
+          "type": "Target",
+          "label": "OffTargetZanolimid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot11",
+          "type": "Target",
+          "label": "OffTargetEmproof",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot12",
+          "type": "Target",
+          "label": "OffTargetDexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "RiskPathwayCholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeLiver",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Ursodiol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Actigall",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "TUDCA",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "S-adenosylmethionine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Cholic acid",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Hazar",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Ocaliva",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Xymed",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Entrytrade",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Zanolimid",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Emproof",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_ursodiol",
+          "target": "target_bile_acid_receptors",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "强效作用于胆盐受体"
+        },
+        {
+          "source": "drug_actigall",
+          "target": "target_bile_acid_receptors",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "作用机制相似"
+        },
+        {
+          "source": "drug_tudca",
+          "target": "target_bile_acid_receptors",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "Chenodeoxycholic acid常用于胆汁淤积"
+        },
+        {
+          "source": "drug_s_adenosylmethionine",
+          "target": "target_bile_acid_receptors",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已证明提高肝功能"
+        },
+        {
+          "source": "drug_cholic_acid",
+          "target": "target_bile_acid_receptors",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "自然胆酸，常用于胆道疾病"
+        },
+        {
+          "source": "drug_hazar",
+          "target": "target_bile_acid_receptors",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "潜在机制"
+        },
+        {
+          "source": "drug_ocaliva",
+          "target": "target_bile_acid_receptors",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "与肝脏疾病相关作用"
+        },
+        {
+          "source": "drug_xymed",
+          "target": "target_bile_acid_receptors",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "胆盐代谢调节"
+        },
+        {
+          "source": "drug_entrytrade",
+          "target": "target_bile_acid_receptors",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "具潜在作用"
+        },
+        {
+          "source": "drug_zanolimid",
+          "target": "target_bile_acid_receptors",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "灵活的作用"
+        },
+        {
+          "source": "drug_emproof",
+          "target": "target_bile_acid_receptors",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "功能潜在影响"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "target_bile_acid_receptors",
+          "relation": "acts_on",
+          "weight": 0.38,
+          "agent": "Proponent",
+          "rationale": "可能的抗炎作用"
+        },
+        {
+          "source": "target_bile_acid_receptors",
+          "target": "pathway_bile_acid_metabolism",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "相关通路"
+        },
+        {
+          "source": "pathway_bile_acid_metabolism",
+          "target": "disease_neonatal_cholestasis",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "与新生儿胆汁淤积病相关"
+        },
+        {
+          "source": "target_bile_acid_receptors",
+          "target": "phenotype_hepatic_function",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响肝功能表型"
+        },
+        {
+          "source": "drug_ursodiol",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药源旁路作用"
+        },
+        {
+          "source": "drug_actigall",
+          "target": "n_ot2",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药源旁路作用"
+        },
+        {
+          "source": "drug_tudca",
+          "target": "n_ot3",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药源旁路作用"
+        },
+        {
+          "source": "drug_s_adenosylmethionine",
+          "target": "n_ot4",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药源旁路作用"
+        },
+        {
+          "source": "drug_cholic_acid",
+          "target": "n_ot5",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药源旁路作用"
+        },
+        {
+          "source": "drug_hazar",
+          "target": "n_ot6",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药源旁路作用"
+        },
+        {
+          "source": "drug_ocaliva",
+          "target": "n_ot7",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药源旁路作用"
+        },
+        {
+          "source": "drug_xymed",
+          "target": "n_ot8",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药源旁路作用"
+        },
+        {
+          "source": "drug_entrytrade",
+          "target": "n_ot9",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药源旁路作用"
+        },
+        {
+          "source": "drug_zanolimid",
+          "target": "n_ot10",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药源旁路作用"
+        },
+        {
+          "source": "drug_emproof",
+          "target": "n_ot11",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药源旁路作用"
+        },
+        {
+          "source": "drug_dexamethasone",
+          "target": "n_ot12",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的药源旁路作用"
+        },
+        {
+          "source": "n_ot1",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干预潜在风险路径"
+        },
+        {
+          "source": "n_ot2",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干预潜在风险路径"
+        },
+        {
+          "source": "n_ot3",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干预潜在风险路径"
+        },
+        {
+          "source": "n_ot4",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干预潜在风险路径"
+        },
+        {
+          "source": "n_ot5",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干预潜在风险路径"
+        },
+        {
+          "source": "n_ot6",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干预潜在风险路径"
+        },
+        {
+          "source": "n_ot7",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干预潜在风险路径"
+        },
+        {
+          "source": "n_ot8",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干预潜在风险路径"
+        },
+        {
+          "source": "n_ot9",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干预潜在风险路径"
+        },
+        {
+          "source": "n_ot10",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干预潜在风险路径"
+        },
+        {
+          "source": "n_ot11",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干预潜在风险路径"
+        },
+        {
+          "source": "n_ot12",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干预潜在风险路径"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致肝脏不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净效益可能被抵消"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净效益可能被抵消"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净效益可能被抵消"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净效益可能被抵消"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净效益可能被抵消"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净效益可能被抵消"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净效益可能被抵消"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净效益可能被抵消"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净效益可能被抵消"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净效益可能被抵消"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净效益可能被抵消"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在则净效益可能被抵消"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65
+    },
+    "heuristic_priors": []
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_ursodiol",
+          "name": "Ursodiol"
+        },
+        "score": 0.72,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "存在 Drug→Target→Pathway→Disease 的有效机制链",
+          "尽管存在风险，仍有治疗潜力"
+        ],
+        "caveats": [
+          "存在显著的安全性风险",
+          "风险可能抵消药物的净效益"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Target→Pathway→Disease",
+          "reason": "机制链有效且支持风险认知"
+        }
+      ],
+      "remaining_gaps": [
+        "冲突热点：需对风险的充分检验及量化验证"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  }
+}

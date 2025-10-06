@@ -1,0 +1,356 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Atypical haemolytic uraemic syndrome",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_eculizumab",
+          "name": "Eculizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ravulizumab",
+          "name": "Ravulizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_avacopan",
+          "name": "Avacopan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_c5_inhibitor",
+          "name": "C5 Inhibitor"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_plasmapheresis",
+          "name": "Plasmapheresis"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_tacrolimus",
+          "name": "Tacrolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_complement_inhibitors",
+          "name": "Complement inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_eltrombopag",
+          "name": "Eltrombopag"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ravulizumab",
+          "type": "Drug",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_avacopan",
+          "type": "Drug",
+          "label": "Avacopan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_c5_inhibitor",
+          "type": "Drug",
+          "label": "C5 Inhibitor",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_complement_inhibitors",
+          "type": "Drug",
+          "label": "Complement inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_eltrombopag",
+          "type": "Drug",
+          "label": "Eltrombopag",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_eculizumab",
+          "target": "H1",
+          "relation": "indicates",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持性证据不足以确认疗效"
+        },
+        {
+          "source": "n_ravulizumab",
+          "target": "H2",
+          "relation": "indicates",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在相同风险路线对治疗效果不确定"
+        },
+        {
+          "source": "n_avacopan",
+          "target": "H3",
+          "relation": "indicates",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "缺乏长时间跟踪效果的研究"
+        },
+        {
+          "source": "n_c5_inhibitor",
+          "target": "H4",
+          "relation": "indicates",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能存在耐药或反跳现象"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "H5",
+          "relation": "indicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "短期效益可能伴随长期风险"
+        },
+        {
+          "source": "n_plasmapheresis",
+          "target": "H6",
+          "relation": "indicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "疗效依赖于具体疾病表型"
+        },
+        {
+          "source": "n_cyclosporine",
+          "target": "H7",
+          "relation": "indicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与常见共病存在潜在冲突"
+        },
+        {
+          "source": "n_rituximab",
+          "target": "H8",
+          "relation": "indicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "缺乏针对该病症的全面临床数据"
+        },
+        {
+          "source": "n_mycophenolate_mofetil",
+          "target": "H9",
+          "relation": "indicates",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能导致免疫抑制效应相关风险"
+        },
+        {
+          "source": "n_tacrolimus",
+          "target": "H10",
+          "relation": "indicates",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "疗效依赖于剂量和个体反应"
+        },
+        {
+          "source": "n_complement_inhibitors",
+          "target": "H11",
+          "relation": "indicates",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "机制不明确，治疗链不清晰"
+        },
+        {
+          "source": "n_eltrombopag",
+          "target": "H12",
+          "relation": "indicates",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "缺乏临床试验数据，疗效待证实"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "相关机制可能未完全涵盖该病特征",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "多种药物间的潜在相互作用可能影响效果",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "临床试验样本量足以证明疗效",
+      "使用药物的组间差异是否可忽略"
+    ],
+    "falsification_tests": [
+      "是否存在长时间随访的疗效数据支持？",
+      "是否有对照试验显示显著的临床改善？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供长时间随访的疗效与安全性数据",
+      "分析潜在药物间相互作用及其对疗效的影响"
+    ]
+  }
+}

@@ -1,0 +1,917 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_icosapent_ethyl",
+          "name": "Icosapent ethyl"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_ezetimibe",
+          "name": "Ezetimibe"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_acipimox",
+          "name": "Acipimox"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_lomitapide",
+          "name": "Lomitapide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_bempedoic_acid",
+          "name": "Bempedoic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_orlistat",
+          "name": "Orlistat"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "Off-Target Effects of Omega-3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk Pathway for Pancreatitis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Omega-3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ic",
+          "type": "Target",
+          "label": "Off-Target Effects of Icosapent Ethyl",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ic",
+          "type": "Pathway",
+          "label": "Risk Pathway for Hemorrhage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ic",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Icosapent Ethyl",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fib",
+          "type": "Target",
+          "label": "Off-Target Effects of Fibrates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fib",
+          "type": "Pathway",
+          "label": "Risk Pathway for Liver Injury",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fib",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Fibrates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fen",
+          "type": "Target",
+          "label": "Off-Target Effects of Fenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fen",
+          "type": "Pathway",
+          "label": "Risk Pathway for Renal Failure",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fen",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Fenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sta",
+          "type": "Target",
+          "label": "Off-Target Effects of Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sta",
+          "type": "Pathway",
+          "label": "Risk Pathway for Myopathy",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sta",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Statins",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nic",
+          "type": "Target",
+          "label": "Off-Target Effects of Niacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_nic",
+          "type": "Pathway",
+          "label": "Risk Pathway for Flushing",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_nic",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Niacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_eze",
+          "type": "Target",
+          "label": "Off-Target Effects of Ezetimibe",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_eze",
+          "type": "Pathway",
+          "label": "Risk Pathway for Cholesterol Absorption Issues",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_eze",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Ezetimibe",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gem",
+          "type": "Target",
+          "label": "Off-Target Effects of Gemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gem",
+          "type": "Pathway",
+          "label": "Risk Pathway for Drug Interactions",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gem",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Gemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aci",
+          "type": "Target",
+          "label": "Off-Target Effects of Acipimox",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aci",
+          "type": "Pathway",
+          "label": "Risk Pathway for Abdominal Pain",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aci",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Acipimox",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lom",
+          "type": "Target",
+          "label": "Off-Target Effects of Lomitapide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lom",
+          "type": "Pathway",
+          "label": "Risk Pathway for Fat Soluble Vitamin Deficiencies",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lom",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Lomitapide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_bem",
+          "type": "Target",
+          "label": "Off-Target Effects of Bempedoic Acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_bem",
+          "type": "Pathway",
+          "label": "Risk Pathway for Musculoskeletal Pain",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_bem",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Bempedoic Acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_orl",
+          "type": "Target",
+          "label": "Off-Target Effects of Orlistat",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_orl",
+          "type": "Pathway",
+          "label": "Risk Pathway for Gastrointestinal Issues",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_orl",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Orlistat",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_omega_3_fatty_acids",
+          "target": "n_ot",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致胰腺炎等副作用"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发相关风险通路"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_icosapent_ethyl",
+          "target": "n_ot_ic",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致出血等副作用"
+        },
+        {
+          "source": "n_ot_ic",
+          "target": "n_rp_ic",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发相关风险通路"
+        },
+        {
+          "source": "n_rp_ic",
+          "target": "n_adv_ic",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ic",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_fibrates",
+          "target": "n_ot_fib",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肝损伤等副作用"
+        },
+        {
+          "source": "n_ot_fib",
+          "target": "n_rp_fib",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发相关风险通路"
+        },
+        {
+          "source": "n_rp_fib",
+          "target": "n_adv_fib",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_fib",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "n_ot_fen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肾功能受损等副作用"
+        },
+        {
+          "source": "n_ot_fen",
+          "target": "n_rp_fen",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发相关风险通路"
+        },
+        {
+          "source": "n_rp_fen",
+          "target": "n_adv_fen",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_fen",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_ot_sta",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌病等副作用"
+        },
+        {
+          "source": "n_ot_sta",
+          "target": "n_rp_sta",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发相关风险通路"
+        },
+        {
+          "source": "n_rp_sta",
+          "target": "n_adv_sta",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_sta",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "n_ot_nic",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致潮红等副作用"
+        },
+        {
+          "source": "n_ot_nic",
+          "target": "n_rp_nic",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发相关风险通路"
+        },
+        {
+          "source": "n_rp_nic",
+          "target": "n_adv_nic",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_nic",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_ezetimibe",
+          "target": "n_ot_eze",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致胆固醇吸收问题等副作用"
+        },
+        {
+          "source": "n_ot_eze",
+          "target": "n_rp_eze",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发相关风险通路"
+        },
+        {
+          "source": "n_rp_eze",
+          "target": "n_adv_eze",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_eze",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "n_ot_gem",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致药物相互作用等副作用"
+        },
+        {
+          "source": "n_ot_gem",
+          "target": "n_rp_gem",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发相关风险通路"
+        },
+        {
+          "source": "n_rp_gem",
+          "target": "n_adv_gem",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_gem",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_acipimox",
+          "target": "n_ot_aci",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致腹痛等副作用"
+        },
+        {
+          "source": "n_ot_aci",
+          "target": "n_rp_aci",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发相关风险通路"
+        },
+        {
+          "source": "n_rp_aci",
+          "target": "n_adv_aci",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_aci",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_lomitapide",
+          "target": "n_ot_lom",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致脂溶性维生素缺乏等副作用"
+        },
+        {
+          "source": "n_ot_lom",
+          "target": "n_rp_lom",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发相关风险通路"
+        },
+        {
+          "source": "n_rp_lom",
+          "target": "n_adv_lom",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_lom",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_bempedoic_acid",
+          "target": "n_ot_bem",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肌肉疼痛等副作用"
+        },
+        {
+          "source": "n_ot_bem",
+          "target": "n_rp_bem",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发相关风险通路"
+        },
+        {
+          "source": "n_rp_bem",
+          "target": "n_adv_bem",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_bem",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_orlistat",
+          "target": "n_ot_orl",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致胃肠问题等副作用"
+        },
+        {
+          "source": "n_ot_orl",
+          "target": "n_rp_orl",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发相关风险通路"
+        },
+        {
+          "source": "n_rp_orl",
+          "target": "n_adv_orl",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_orl",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        }
+      ],
+      "conflict_hotspots": [
+        {
+          "topic": "风险与获益的冲突",
+          "pro_nodes": [
+            "H1",
+            "H2",
+            "H3",
+            "H4",
+            "H5",
+            "H6",
+            "H7",
+            "H8",
+            "H9",
+            "H10",
+            "H11",
+            "H12"
+          ],
+          "con_nodes": [
+            "n_rp",
+            "n_rp_ic",
+            "n_rp_fib",
+            "n_rp_fen",
+            "n_rp_sta",
+            "n_rp_nic",
+            "n_rp_eze",
+            "n_rp_gem",
+            "n_rp_aci",
+            "n_rp_lom",
+            "n_rp_bem",
+            "n_rp_orl"
+          ],
+          "note": "潜在获益可能被不良反应抵消"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "Omega-3脂肪酸可能诱发胰腺炎，降低其作为治疗的安全性",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "Icosapent ethyl的出血风险可能影响其临床应用，需进一步验证",
+        "confidence": "medium"
+      },
+      {
+        "id": "K3",
+        "text": "关于脂类药物的肝损害风险存在争议，需进一步证据支持",
+        "confidence": "medium"
+      },
+      {
+        "id": "K4",
+        "text": "Fibrates和Fenofibrate可能引发的肾损伤可能抵消降脂作用的利益",
+        "confidence": "medium"
+      },
+      {
+        "id": "K5",
+        "text": "Statins的肌病风险可能影响其临床应用",
+        "confidence": "high"
+      },
+      {
+        "id": "K6",
+        "text": "Niacin的潮红问题影响使用的耐受性",
+        "confidence": "medium"
+      },
+      {
+        "id": "K7",
+        "text": "Ezetimibe的胆固醇吸收副作用需要注意",
+        "confidence": "medium"
+      },
+      {
+        "id": "K8",
+        "text": "Gemfibrozil的相互作用风险需关注",
+        "confidence": "medium"
+      },
+      {
+        "id": "K9",
+        "text": "Acipimox的胃肠副作用可能影响病人依从性",
+        "confidence": "medium"
+      },
+      {
+        "id": "K10",
+        "text": "Lomitapide的维生素缺乏问题需特别关注",
+        "confidence": "medium"
+      },
+      {
+        "id": "K11",
+        "text": "Bempedoic acid的肌肉疼痛问题可能影响病人耐受性",
+        "confidence": "medium"
+      },
+      {
+        "id": "K12",
+        "text": "Orlistat的胃肠道副作用可能严重影响病人使用",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "缺乏针对不同药物的长期安全性数据",
+      "短期获益是否足以抵消潜在的长期风险"
+    ],
+    "falsification_tests": [
+      "是否存在已发表的资料显示上述任何药物具有长期的安全性或有效性数据？",
+      "是否有随机对照试验表明Omega-3脂肪酸能有效降低心血管事件？"
+    ],
+    "next_focus_for_pi": [
+      "要求Proponent提供更明确的长期安全性和有效性证据",
+      "对冲突热点进行进一步分析以明确风险与益处的平衡"
+    ]
+  }
+}

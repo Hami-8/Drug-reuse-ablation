@@ -1,0 +1,1567 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Primary membranoproliferative glomerulonephritis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_tacrolimus",
+          "name": "Tacrolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_nsaids",
+          "name": "NSAIDs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_ace_inhibitors",
+          "name": "ACE inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_arbs",
+          "name": "ARBs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_diuretics",
+          "name": "Diuretics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_immunosuppressants",
+          "name": "Immunosuppressants"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Outcomes",
+              "pro": [
+                "H1"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Prednisone通过作用于炎症通路可能对病理产生影响"
+          ],
+          "safety_risk": [
+            "若发生不良结果将完全抵消预期获益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效的支持性证据",
+          "安全性数据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Outcomes",
+              "pro": [
+                "H2"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Rituximab对B细胞的靶向作用可能改善病理"
+          ],
+          "safety_risk": [
+            "若发生不良结果将完全抵消预期获益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效的支持性证据",
+          "安全性数据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Outcomes",
+              "pro": [
+                "H3"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Cyclophosphamide作为化疗药物对免疫介导疾病可能有效"
+          ],
+          "safety_risk": [
+            "若发生不良结果将完全抵消预期获益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效的支持性证据",
+          "安全性数据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Outcomes",
+              "pro": [
+                "H4"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Tacrolimus对免疫反应的抑制未经过证明"
+          ],
+          "safety_risk": [
+            "若发生不良结果将完全抵消预期获益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效的支持性证据",
+          "安全性数据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Outcomes",
+              "pro": [
+                "H5"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "NSAIDs通过减轻炎症可能有益"
+          ],
+          "safety_risk": [
+            "若发生不良结果将完全抵消预期获益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效的支持性证据",
+          "安全性数据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Outcomes",
+              "pro": [
+                "H6"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "ACE抑制剂通过调节机制可能影响免疫"
+          ],
+          "safety_risk": [
+            "若发生不良结果将完全抵消预期获益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效的支持性证据",
+          "安全性数据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Outcomes",
+              "pro": [
+                "H7"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "ARBs的抗炎特性可能有益"
+          ],
+          "safety_risk": [
+            "若发生不良结果将完全抵消预期获益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效的支持性证据",
+          "安全性数据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Outcomes",
+              "pro": [
+                "H8"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "利尿剂通过影响液体平衡可能间接影响免疫"
+          ],
+          "safety_risk": [
+            "若发生不良结果将完全抵消预期获益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效的支持性证据",
+          "安全性数据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Outcomes",
+              "pro": [
+                "H9"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "免疫抑制剂的作用可能对炎症有所帮助"
+          ],
+          "safety_risk": [
+            "若发生不良结果将完全抵消预期获益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效的支持性证据",
+          "安全性数据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Outcomes",
+              "pro": [
+                "H10"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "皮质类固醇的强效作用可能有帮助"
+          ],
+          "safety_risk": [
+            "若发生不良结果将完全抵消预期获益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效的支持性证据",
+          "安全性数据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Outcomes",
+              "pro": [
+                "H11"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "环孢素的免疫调节可能有帮助"
+          ],
+          "safety_risk": [
+            "若发生不良结果将完全抵消预期获益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效的支持性证据",
+          "安全性数据不足"
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.2,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.85,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse Outcomes",
+              "pro": [
+                "H12"
+              ],
+              "con": [
+                "n_adverse_phenotype"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "大精氨酸酶抑制剂的免疫调节作用可能有效"
+          ],
+          "safety_risk": [
+            "若发生不良结果将完全抵消预期获益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效的支持性证据",
+          "安全性数据不足"
+        ]
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ace_inhibitors",
+          "type": "Drug",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_arbs",
+          "type": "Drug",
+          "label": "ARBs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_diuretics",
+          "type": "Drug",
+          "label": "Diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_immunosuppressants",
+          "type": "Drug",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_primary_membranoproliferative_glomerulonephritis",
+          "type": "Disease",
+          "label": "Primary membranoproliferative glomerulonephritis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_inflammatory_pathways",
+          "type": "Target",
+          "label": "Inflammatory Pathways",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_immune_response",
+          "type": "Pathway",
+          "label": "Immune Response",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_prednisone",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_nsaids",
+          "type": "Drug",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ace_inhibitors",
+          "type": "Drug",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_arbs",
+          "type": "Drug",
+          "label": "ARBs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_diuretics",
+          "type": "Drug",
+          "label": "Diuretics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_immunosuppressants",
+          "type": "Drug",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_off_target",
+          "type": "Target",
+          "label": "OffTargetGlomeruli",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk_pathway",
+          "type": "Pathway",
+          "label": "RiskPathwayRenal",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adverse_phenotype",
+          "type": "Phenotype",
+          "label": "AdverseOutcomes",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "ARBs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Diuretics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_prednisone",
+          "target": "target_inflammatory_pathways",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "广泛用作抗炎药，直接作用于炎症通路"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "target_inflammatory_pathways",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "靶向 B 细胞的免疫抑制作用"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "target_inflammatory_pathways",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于治疗免疫介导疾病的化学药物"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "target_inflammatory_pathways",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "主要用于防止移植物排斥，抑制免疫反应"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "target_inflammatory_pathways",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "减轻炎症，通过抑制前列腺素合成"
+        },
+        {
+          "source": "drug_ace_inhibitors",
+          "target": "pathway_immune_response",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过调节肾上腺素来影响免疫相关路径"
+        },
+        {
+          "source": "drug_arbs",
+          "target": "pathway_immune_response",
+          "relation": "modulates",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "具有抗炎特性，调节免疫反应"
+        },
+        {
+          "source": "drug_diuretics",
+          "target": "pathway_immune_response",
+          "relation": "modulates",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响液体平衡可能间接影响免疫反应"
+        },
+        {
+          "source": "drug_immunosuppressants",
+          "target": "target_inflammatory_pathways",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "广泛用于各种炎症反应"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "target_inflammatory_pathways",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "强效抗炎药物，直接作用于炎症"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "target_inflammatory_pathways",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "干扰 T 细胞活性，影响免疫"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "target_inflammatory_pathways",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抗代谢药物，减轻免疫反应"
+        },
+        {
+          "source": "target_inflammatory_pathways",
+          "target": "disease_primary_membranoproliferative_glomerulonephritis",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "炎症和免疫反应在疾病中起重要作用"
+        },
+        {
+          "source": "pathway_immune_response",
+          "target": "disease_primary_membranoproliferative_glomerulonephritis",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "免疫反应和症状相关"
+        },
+        {
+          "source": "n_prednisone",
+          "target": "n_off_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏的旁路机制"
+        },
+        {
+          "source": "n_rituximab",
+          "target": "n_off_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏的旁路机制"
+        },
+        {
+          "source": "n_cyclophosphamide",
+          "target": "n_off_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏的旁路机制"
+        },
+        {
+          "source": "n_tacrolimus",
+          "target": "n_off_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏的旁路机制"
+        },
+        {
+          "source": "n_nsaids",
+          "target": "n_off_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏的旁路机制"
+        },
+        {
+          "source": "n_ace_inhibitors",
+          "target": "n_off_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏的旁路机制"
+        },
+        {
+          "source": "n_arbs",
+          "target": "n_off_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏的旁路机制"
+        },
+        {
+          "source": "n_diuretics",
+          "target": "n_off_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏的旁路机制"
+        },
+        {
+          "source": "n_immunosuppressants",
+          "target": "n_off_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏的旁路机制"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_off_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏的旁路机制"
+        },
+        {
+          "source": "n_cyclosporine",
+          "target": "n_off_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏的旁路机制"
+        },
+        {
+          "source": "n_methotrexate",
+          "target": "n_off_target",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾脏的旁路机制"
+        },
+        {
+          "source": "n_off_target",
+          "target": "n_risk_pathway",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "与肾脏风险通路相关"
+        },
+        {
+          "source": "n_risk_pathway",
+          "target": "n_adverse_phenotype",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致不良结果可能发生"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良结果将完全抵消预期获益"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良结果将完全抵消预期获益"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良结果将完全抵消预期获益"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良结果将完全抵消预期获益"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良结果将完全抵消预期获益"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良结果将完全抵消预期获益"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良结果将完全抵消预期获益"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良结果将完全抵消预期获益"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良结果将完全抵消预期获益"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良结果将完全抵消预期获益"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良结果将完全抵消预期获益"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若发生不良结果将完全抵消预期获益"
+        }
+      ],
+      "round_index": 3
+    },
+    "history": {
+      "round": 3
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65
+    },
+    "heuristic_priors": []
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H1_round3",
+        "key_assumptions": [
+          "Prednisone在炎症控制中潜在有效",
+          "现有不良反应风险显著并需监测"
+        ],
+        "caveats": [
+          "不良结果的风险高，可能完全抵消潜在益处"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H2_round3",
+        "key_assumptions": [
+          "靶向作用可能改善病理",
+          "不良反应需严格监控"
+        ],
+        "caveats": [
+          "安全性数据不足"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H3_round3",
+        "key_assumptions": [
+          "作为化疗药物的有效性",
+          "安全性问题需关注"
+        ],
+        "caveats": [
+          "治疗效果未被充分验证"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_tacrolimus",
+          "name": "Tacrolimus"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H4_round3",
+        "key_assumptions": [
+          "免疫抑制的理论有效性",
+          "追踪不良反应非常重要"
+        ],
+        "caveats": [
+          "缺乏临床证据支持"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H5",
+        "candidate": {
+          "id": "drug_nsaids",
+          "name": "NSAIDs"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H5_round3",
+        "key_assumptions": [
+          "炎症减轻可能有益",
+          "不良反应需进一步评估"
+        ],
+        "caveats": [
+          "安全性数据支持不足"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H6",
+        "candidate": {
+          "id": "drug_ace_inhibitors",
+          "name": "ACE inhibitors"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H6_round3",
+        "key_assumptions": [
+          "免疫机制影响的潜力",
+          "不良结果风险需重视"
+        ],
+        "caveats": [
+          "缺乏广泛的临床支持"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H7",
+        "candidate": {
+          "id": "drug_arbs",
+          "name": "ARBs"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H7_round3",
+        "key_assumptions": [
+          "抗炎作用可能带来的好处",
+          "安全性存在的隐患需考量"
+        ],
+        "caveats": [
+          "现有证据支持不足"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H8",
+        "candidate": {
+          "id": "drug_diuretics",
+          "name": "Diuretics"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H8_round3",
+        "key_assumptions": [
+          "对液体平衡影响的作用",
+          "密切监控可能的不良影响"
+        ],
+        "caveats": [
+          "安全性证据不足"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H9",
+        "candidate": {
+          "id": "drug_immunosuppressants",
+          "name": "Immunosuppressants"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H9_round3",
+        "key_assumptions": [
+          "炎症控制的有效性质",
+          "安全性需严格评估"
+        ],
+        "caveats": [
+          "临床证据支持不足"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H10",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H10_round3",
+        "key_assumptions": [
+          "强效抗炎性能通过控制症状",
+          "需分心监测潜在的不良反应"
+        ],
+        "caveats": [
+          "风险因素必须考虑"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H11",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H11_round3",
+        "key_assumptions": [
+          "免疫调节特性可能有益",
+          "不良反应需认真评估"
+        ],
+        "caveats": [
+          "缺乏足够临床支持"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H12",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H12_round3",
+        "key_assumptions": [
+          "免疫调节潜力的理论支持",
+          "不良反应将影响患者"
+        ],
+        "caveats": [
+          "现有数据不足"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "多种药物与不良结果相关，需严格风险评估",
+          "reason": "现有候选的安全风险较高，且支持数据薄弱"
+        }
+      ],
+      "remaining_gaps": [
+        "对现有方案的有效性和安全性缺乏完整的证据"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B"
+          ],
+          "impact_summary": "未有效提升安全性评估"
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "C",
+            "D"
+          ],
+          "impact_summary": "安全性问题依然突出"
+        }
+      ],
+      "lessons": [
+        "需重点关注伴随疗效的安全性问题",
+        "需平衡潜在益处与风险"
+      ]
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  }
+}

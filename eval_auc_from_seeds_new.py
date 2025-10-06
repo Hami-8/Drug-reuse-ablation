@@ -397,9 +397,9 @@ def main():
     ap.add_argument("--out_dir", help="单文件模式输出目录")
 
     # 自动模式
-    ap.add_argument("--root", type=str, default="runs_con_top50",
+    ap.add_argument("--root", type=str, default="runs_again",
                     help="runs_ablation 根目录（包含多个 ConfigTag 子目录）")
-    ap.add_argument("--out_root", type=str, default="eval_auc_runs_con_top50",
+    ap.add_argument("--out_root", type=str, default="eval_auc_runs_again",
                     help="自动模式评测输出根目录")
     ap.add_argument("--pos_ind", type=str, default="filtered_indication.csv")
     ap.add_argument("--all_ind", type=str, default="filtered_indication_all.csv")

@@ -1,0 +1,492 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Neurotransmitter disorders",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Drug",
+            "via": [
+              "Neurotransmitter"
+            ],
+            "to": "Disease",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_levodopa",
+          "type": "Drug",
+          "label": "Levodopa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rasagiline",
+          "type": "Drug",
+          "label": "Rasagiline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_selegiline",
+          "type": "Drug",
+          "label": "Selegiline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_amantadine",
+          "type": "Drug",
+          "label": "Amantadine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tetrabenazine",
+          "type": "Drug",
+          "label": "Tetrabenazine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methylphenidate",
+          "type": "Drug",
+          "label": "Methylphenidate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dextroamphetamine",
+          "type": "Drug",
+          "label": "Dextroamphetamine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clonidine",
+          "type": "Drug",
+          "label": "Clonidine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_buspirone",
+          "type": "Drug",
+          "label": "Buspirone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_aripiprazole",
+          "type": "Drug",
+          "label": "Aripiprazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_desvenlafaxine",
+          "type": "Drug",
+          "label": "Desvenlafaxine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_atomoxetine",
+          "type": "Drug",
+          "label": "Atomoxetine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nt_disorders",
+          "type": "Disease",
+          "label": "Neurotransmitter disorders",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot1",
+          "type": "Target",
+          "label": "OffTarget1",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot2",
+          "type": "Target",
+          "label": "OffTarget2",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp1",
+          "type": "Pathway",
+          "label": "RiskPathway1",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp2",
+          "type": "Pathway",
+          "label": "RiskPathway2",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv1",
+          "type": "Phenotype",
+          "label": "AdversePhenotype1",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv2",
+          "type": "Phenotype",
+          "label": "AdversePhenotype2",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_levodopa",
+          "target": "n_nt_disorders",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "用于多种神经递质疾病的经典药物"
+        },
+        {
+          "source": "drug_rasagiline",
+          "target": "n_nt_disorders",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "对帕金森病有良好效果"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "n_nt_disorders",
+          "relation": "supports",
+          "weight": 0.78,
+          "agent": "Proponent",
+          "rationale": "常用于抑郁及帕金森的治疗"
+        },
+        {
+          "source": "drug_amantadine",
+          "target": "n_nt_disorders",
+          "relation": "supports",
+          "weight": 0.76,
+          "agent": "Proponent",
+          "rationale": "有助于帕金森症状改善"
+        },
+        {
+          "source": "drug_tetrabenazine",
+          "target": "n_nt_disorders",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于运动障碍，尤其是亨廷顿病"
+        },
+        {
+          "source": "drug_methylphenidate",
+          "target": "n_nt_disorders",
+          "relation": "supports",
+          "weight": 0.72,
+          "agent": "Proponent",
+          "rationale": "用于多动症，影响神经递质"
+        },
+        {
+          "source": "drug_dextroamphetamine",
+          "target": "n_nt_disorders",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于注意缺陷多动障碍的治疗"
+        },
+        {
+          "source": "drug_clonidine",
+          "target": "n_nt_disorders",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "用于抗抑郁及焦虑"
+        },
+        {
+          "source": "drug_buspirone",
+          "target": "n_nt_disorders",
+          "relation": "supports",
+          "weight": 0.63,
+          "agent": "Proponent",
+          "rationale": "用于焦虑症的治疗"
+        },
+        {
+          "source": "drug_aripiprazole",
+          "target": "n_nt_disorders",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于精神分裂症及双相障碍"
+        },
+        {
+          "source": "drug_desvenlafaxine",
+          "target": "n_nt_disorders",
+          "relation": "supports",
+          "weight": 0.58,
+          "agent": "Proponent",
+          "rationale": "抗抑郁药，影响神经递质"
+        },
+        {
+          "source": "drug_atomoxetine",
+          "target": "n_nt_disorders",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "用于注意缺陷多动障碍"
+        },
+        {
+          "source": "drug_levodopa",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_rasagiline",
+          "target": "n_ot1",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "drug_selegiline",
+          "target": "n_ot2",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的旁路作用"
+        },
+        {
+          "source": "n_ot1",
+          "target": "n_rp1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_ot2",
+          "target": "n_rp2",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp1",
+          "target": "n_adv1",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_rp2",
+          "target": "n_adv2",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv1",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv2",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_dopamine_target",
+              "type": "Target",
+              "label": "Dopamine Receptor",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            },
+            {
+              "id": "n_serotonin_target",
+              "type": "Target",
+              "label": "Serotonin Receptor",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            },
+            {
+              "id": "n_pathway_dopamine",
+              "type": "Pathway",
+              "label": "Dopamine Pathway",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            },
+            {
+              "id": "n_pathway_serotonin",
+              "type": "Pathway",
+              "label": "Serotonin Pathway",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "drug_levodopa",
+              "target": "n_dopamine_target",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "直接作用于多巴胺受体"
+            },
+            {
+              "source": "drug_rasagiline",
+              "target": "n_dopamine_target",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "通过抑制单胺氧化酶增加多巴胺"
+            },
+            {
+              "source": "drug_selegiline",
+              "target": "n_dopamine_target",
+              "relation": "acts_on",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "增加多巴胺活性"
+            },
+            {
+              "source": "drug_methylphenidate",
+              "target": "n_dopamine_target",
+              "relation": "acts_on",
+              "weight": 0.72,
+              "agent": "Proponent",
+              "rationale": "通过影响多巴胺系统"
+            },
+            {
+              "source": "n_dopamine_target",
+              "target": "n_pathway_dopamine",
+              "relation": "involved_in",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "多巴胺通路的关键部件"
+            },
+            {
+              "source": "drug_buspirone",
+              "target": "n_serotonin_target",
+              "relation": "acts_on",
+              "weight": 0.65,
+              "agent": "Proponent",
+              "rationale": "影响血清素受体活性"
+            },
+            {
+              "source": "drug_desvenlafaxine",
+              "target": "n_serotonin_target",
+              "relation": "acts_on",
+              "weight": 0.63,
+              "agent": "Proponent",
+              "rationale": "用作多种抑郁症药物"
+            },
+            {
+              "source": "n_serotonin_target",
+              "target": "n_pathway_serotonin",
+              "relation": "involved_in",
+              "weight": 0.68,
+              "agent": "Proponent",
+              "rationale": "血清素相关通路的关键部件"
+            },
+            {
+              "source": "n_pathway_dopamine",
+              "target": "n_nt_disorders",
+              "relation": "causes",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "影响神经递质疾病"
+            },
+            {
+              "source": "n_pathway_serotonin",
+              "target": "n_nt_disorders",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "影响神经递质疾病"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已建立 Drug → Target → Pathway → Disease 的两条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [
+      "仍需评估沿用的药物的安全性与副作用"
+    ]
+  }
+}

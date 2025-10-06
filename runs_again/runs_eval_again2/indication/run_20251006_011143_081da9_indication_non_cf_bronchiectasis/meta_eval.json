@@ -1,0 +1,80 @@
+{
+  "subset": "indication",
+  "disease": "Non-CF bronchiectasis",
+  "relation": "indication",
+  "gold_drugs": [
+    "azli",
+    "brensocatib",
+    "ciprofloxacin dpi"
+  ],
+  "seeds_initial": [
+    "Bronchodilators",
+    "Antibiotics",
+    "Mucolytics",
+    "Corticosteroids",
+    "Hypertonic saline",
+    "Azithromycin",
+    "Dornase alfa",
+    "Ipratropium",
+    "Salbutamol",
+    "Tobramycin",
+    "Levofloxacin",
+    "Ambroxol"
+  ],
+  "seed_history": [
+    [
+      "Bronchodilators",
+      "Antibiotics",
+      "Mucolytics",
+      "Corticosteroids",
+      "Hypertonic saline",
+      "Azithromycin",
+      "Dornase alfa",
+      "Ipratropium",
+      "Salbutamol",
+      "Tobramycin",
+      "Levofloxacin",
+      "Ambroxol"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_bronchodilators",
+          "name": "Bronchodilators"
+        },
+        "score": 0.76,
+        "graph_snapshot_ref": "GE_H1_round2",
+        "key_assumptions": [
+          "Bronchodilators 通过气道放松改善呼吸功能",
+          "支持 Non-CF Bronchiectasis 的治疗适应症"
+        ],
+        "caveats": [
+          "尽管机制已建立，但对部分耐受性和长期效果的验证仍需关注"
+        ],
+        "confidence": "high"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Bronchodilators → Airway Relaxation → Respiratory Function Improvement → Symptom Relief",
+          "reason": "形成了完整的药理作用链，指向可治疗 Non-CF Bronchiectasis"
+        }
+      ],
+      "remaining_gaps": [
+        "部分药物（如抗生素和粘液溶解剂）的适应症证据不足"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Non-CF bronchiectasis'. Return only names.\n\n# Prior guidance for Explorer:\n- 维持现有假设的多样性，确保机制与疗效的覆盖\n\n# Heuristics:\n- When Non-CF bronchiectasis: then 优先考虑改善呼吸功能的药物，同时评估其副作用"
+}

@@ -1,0 +1,497 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Hereditary haemorrhagic telangiectasia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_anticoagulants",
+          "name": "Anticoagulants"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_warfarin",
+          "name": "Warfarin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_non_steroidal_anti_inflammatory_drugs_nsaids",
+          "name": "Non-steroidal anti-inflammatory drugs (NSAIDs)"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_clopidogrel",
+          "name": "Clopidogrel"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_heparin",
+          "name": "Heparin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_dabigatran",
+          "name": "Dabigatran"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_morphine",
+          "name": "Morphine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_rivaroxaban",
+          "name": "Rivaroxaban"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_indomethacin",
+          "name": "Indomethacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ticagrelor",
+          "name": "Ticagrelor"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot1",
+          "type": "Target",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot2",
+          "type": "Target",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot3",
+          "type": "Target",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot4",
+          "type": "Target",
+          "label": "NSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot5",
+          "type": "Target",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot6",
+          "type": "Target",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot7",
+          "type": "Target",
+          "label": "Heparin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot8",
+          "type": "Target",
+          "label": "Dabigatran",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot9",
+          "type": "Target",
+          "label": "Morphine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot10",
+          "type": "Target",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot11",
+          "type": "Target",
+          "label": "Indomethacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot12",
+          "type": "Target",
+          "label": "Ticagrelor",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Increased Bleeding Risk",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Hemorrhage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_ot1",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "抗凝药物通过影响凝血机制增加出血风险"
+        },
+        {
+          "source": "n_ot2",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "阿司匹林可引起胃肠道出血，尤其在患者有血管异常时"
+        },
+        {
+          "source": "n_ot3",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "华法林的抗凝作用易导致出血事故"
+        },
+        {
+          "source": "n_ot4",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "NSAIDs引起的出血风险因影响血小板功能而增大"
+        },
+        {
+          "source": "n_ot5",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "克拉格雷导致出血事件的风险增加"
+        },
+        {
+          "source": "n_ot6",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "布洛芬可能导致胃肠道穿孔和出血"
+        },
+        {
+          "source": "n_ot7",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "肝素与凝血作用相关，出血风险增高"
+        },
+        {
+          "source": "n_ot8",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "达比加群抗凝作用增加出血风险"
+        },
+        {
+          "source": "n_ot9",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "吗啡影响血压，但可能伴随其他出血风险"
+        },
+        {
+          "source": "n_ot10",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "顿比单反而得出血风险显著增加"
+        },
+        {
+          "source": "n_ot11",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "吲哚美辛与出血风险相关"
+        },
+        {
+          "source": "n_ot12",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "替卡格雷可能引起出血事件"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "出血风险导致潜在的出血表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "抗凝药物的出血风险与 Hérédity telangiectasia 患者的禁忌症相矛盾"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "阿司匹林的出血风险反对其在此病应用"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "华法林的出血风险表明该药物不适用于此病"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "NSAIDs 的出血风险与此病禁忌相关"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "克拉格雷和此病的相互作用可能致命"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "布洛芬的出血风险与此病不相容"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "肝素对此疾病患者的应用风险极高"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "达比加群与患者的出血风险相矛盾"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "吗啡可能在此病情中引发出血风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "顿比单反药物不适合此类患者"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "吲哚美辛的出血风险不应在此患者中使用"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "替卡格雷与这一疾病的风险关系明显"
+        }
+      ],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "drug_safety",
+          "pro_nodes": [
+            "n_ot1",
+            "n_ot2",
+            "n_ot3",
+            "n_ot4",
+            "n_ot5",
+            "n_ot6",
+            "n_ot7",
+            "n_ot8",
+            "n_ot9",
+            "n_ot10",
+            "n_ot11",
+            "n_ot12"
+          ],
+          "con_nodes": [
+            "n_adv"
+          ],
+          "note": "药物增加出血风险与遗传性出血性毛细血管扩张症相悖"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "所有抗凝药物均与漏洞风险相关，存在绝对禁忌",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "急性出血表型可能导致长期并发症，强调使用禁忌的重要性",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "药物的不良反应是否充分识别",
+      "禁忌与药物机制的直接关联是否合理"
+    ],
+    "falsification_tests": [
+      "是否有临床试验表明抗凝药物在此患者中是安全的？",
+      "是否有数据支持该药物在此病的有效应用？"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供详细的药物安全性数据以支撑假设",
+      "需评估患者人群中潜在的使用风险"
+    ]
+  }
+}

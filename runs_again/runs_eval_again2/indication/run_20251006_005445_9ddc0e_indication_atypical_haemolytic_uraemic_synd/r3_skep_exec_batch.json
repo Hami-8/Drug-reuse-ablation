@@ -1,0 +1,651 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Atypical haemolytic uraemic syndrome",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Eculizumab 的不良反应风险",
+            "expectation": "若风险存在，需在图中标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Ravulizumab 的不良反应风险",
+            "expectation": "若风险存在，需在图中标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Plasma exchange 的副作用",
+            "expectation": "若存在潜在风险，需标注相关 refutes 边",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ravulizumab",
+          "type": "Drug",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_plasma_exchange",
+          "type": "Drug",
+          "label": "Plasma exchange",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_complement_inhibitors",
+          "type": "Drug",
+          "label": "Complement Inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_supportive_care",
+          "type": "Drug",
+          "label": "Supportive care",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_ahus",
+          "type": "Disease",
+          "label": "Atypical haemolytic uraemic syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ravulizumab",
+          "type": "Drug",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_plasma_exchange",
+          "type": "Drug",
+          "label": "Plasma exchange",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_complement_inhibitors",
+          "type": "Drug",
+          "label": "Complement Inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_supportive_care",
+          "type": "Drug",
+          "label": "Supportive care",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_acanthopanax",
+          "type": "Drug",
+          "label": "Acanthopanax",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_tolvaptan",
+          "type": "Drug",
+          "label": "Tolvaptan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_immunosuppressants",
+          "type": "Drug",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_antiplatelet_drugs",
+          "type": "Drug",
+          "label": "Antiplatelet drugs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cytokine_inhibitors",
+          "type": "Drug",
+          "label": "Cytokine inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_risk_pathway",
+          "type": "Pathway",
+          "label": "Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adverse_phenotype",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Plasma exchange",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Complement Inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Supportive care",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Acanthopanax",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_acanthopanax",
+          "type": "Drug",
+          "label": "Acanthopanax",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Tolvaptan",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_tolvaptan",
+          "type": "Drug",
+          "label": "Tolvaptan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_immunosuppressants",
+          "type": "Drug",
+          "label": "Immunosuppressants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Antiplatelet drugs",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_antiplatelet_drugs",
+          "type": "Drug",
+          "label": "Antiplatelet drugs",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Cytokine inhibitors",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_cytokine_inhibitors",
+          "type": "Drug",
+          "label": "Cytokine inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_anticoagulants",
+          "type": "Drug",
+          "label": "Anticoagulants",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_eculizumab",
+          "target": "disease_ahus",
+          "relation": "supports",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "临床应用支持，针对 complement 系统"
+        },
+        {
+          "source": "drug_ravulizumab",
+          "target": "disease_ahus",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "新型 complement 抑制剂在 AHUS 中的应用"
+        },
+        {
+          "source": "drug_plasma_exchange",
+          "target": "disease_ahus",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常规治疗方法，临床知晓度高"
+        },
+        {
+          "source": "drug_complement_inhibitors",
+          "target": "disease_ahus",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与 AHUS 相关的靶向疗法"
+        },
+        {
+          "source": "drug_supportive_care",
+          "target": "disease_ahus",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "支持性治疗有助于改善症状"
+        },
+        {
+          "source": "n_eculizumab",
+          "target": "n_risk_pathway",
+          "relation": "affects",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响病理机制"
+        },
+        {
+          "source": "n_ravulizumab",
+          "target": "n_risk_pathway",
+          "relation": "affects",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响病理机制"
+        },
+        {
+          "source": "n_plasma_exchange",
+          "target": "n_risk_pathway",
+          "relation": "affects",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响病理机制"
+        },
+        {
+          "source": "n_complement_inhibitors",
+          "target": "n_risk_pathway",
+          "relation": "affects",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响病理机制"
+        },
+        {
+          "source": "n_supportive_care",
+          "target": "n_risk_pathway",
+          "relation": "affects",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能不直接改变病理"
+        },
+        {
+          "source": "n_acanthopanax",
+          "target": "n_risk_pathway",
+          "relation": "affects",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "作用机制不明确"
+        },
+        {
+          "source": "n_tolvaptan",
+          "target": "n_risk_pathway",
+          "relation": "affects",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响病理机制"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_risk_pathway",
+          "relation": "affects",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "潜在的副作用风险"
+        },
+        {
+          "source": "n_immunosuppressants",
+          "target": "n_risk_pathway",
+          "relation": "affects",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能增加感染风险"
+        },
+        {
+          "source": "n_antiplatelet_drugs",
+          "target": "n_risk_pathway",
+          "relation": "affects",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "不明确的影响"
+        },
+        {
+          "source": "n_cytokine_inhibitors",
+          "target": "n_risk_pathway",
+          "relation": "affects",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "副作用可能抵消益处"
+        },
+        {
+          "source": "n_anticoagulants",
+          "target": "n_risk_pathway",
+          "relation": "affects",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "出血风险的潜在增加"
+        },
+        {
+          "source": "n_risk_pathway",
+          "target": "n_adverse_phenotype",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在可抵消治疗效果"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在可抵消治疗效果"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在可抵消治疗效果"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在可抵消治疗效果"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在可抵消治疗效果"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在可抵消治疗效果"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在可抵消治疗效果"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在可抵消治疗效果"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在可抵消治疗效果"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在可抵消治疗效果"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在可抵消治疗效果"
+        },
+        {
+          "source": "n_adverse_phenotype",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险存在可抵消治疗效果"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成对 Eculizumab 不良反应风险的压力测试：高权重 refutes 边已连接至假设"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成对 Ravulizumab 不良反应风险的压力测试：高权重 refutes 边已连接至假设"
+      },
+      {
+        "action_ref": 2,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [],
+          "merge": [],
+          "set_weights": [],
+          "conflict_hotspots": []
+        },
+        "notes": "已完成对 Plasma exchange 副作用的压力测试：高权重 refutes 边已连接至假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": []
+  }
+}

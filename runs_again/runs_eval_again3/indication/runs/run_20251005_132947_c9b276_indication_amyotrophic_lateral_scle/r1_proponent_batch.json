@@ -1,0 +1,408 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Amyotrophic lateral sclerosis or motor neuron disease",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_riluzole",
+          "name": "Riluzole"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_edaravone",
+          "name": "Edaravone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_nuedexta",
+          "name": "Nuedexta"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_tirasemtiv",
+          "name": "Tirasemtiv"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_baclofen",
+          "name": "Baclofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_quetiapine",
+          "name": "Quetiapine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_sodium_phenylbutyrate",
+          "name": "Sodium phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_itraconazole",
+          "name": "Itraconazole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_methylcobalamin",
+          "name": "Methylcobalamin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_folic_acid",
+          "name": "Folic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_riluzole",
+          "type": "Drug",
+          "label": "Riluzole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_edavavone",
+          "type": "Drug",
+          "label": "Edaravone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nuedexta",
+          "type": "Drug",
+          "label": "Nuedexta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tirasemtiv",
+          "type": "Drug",
+          "label": "Tirasemtiv",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_baclofen",
+          "type": "Drug",
+          "label": "Baclofen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_quetiapine",
+          "type": "Drug",
+          "label": "Quetiapine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_phenylbutyrate",
+          "type": "Drug",
+          "label": "Sodium phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_itraconazole",
+          "type": "Drug",
+          "label": "Itraconazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methylcobalamin",
+          "type": "Drug",
+          "label": "Methylcobalamin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_folic_acid",
+          "type": "Drug",
+          "label": "Folic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_glutamate",
+          "type": "Target",
+          "label": "Glutamate Receptor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_neuroprotective",
+          "type": "Pathway",
+          "label": "Neuroprotective Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_amyotrophic_lateral_sclerosis",
+          "type": "Disease",
+          "label": "Amyotrophic Lateral Sclerosis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_riluzole",
+          "target": "target_glutamate",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知靶向谷氨酸受体"
+        },
+        {
+          "source": "drug_edavavone",
+          "target": "target_glutamate",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "显示神经保护作用"
+        },
+        {
+          "source": "drug_nuedexta",
+          "target": "target_glutamate",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于治疗与谷氨酸相关的症状"
+        },
+        {
+          "source": "drug_tirasemtiv",
+          "target": "target_glutamate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "改善肌肉功能，间接影响神经通路"
+        },
+        {
+          "source": "drug_baclofen",
+          "target": "target_glutamate",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抑制谷氨酸活性，减少神经毒性"
+        },
+        {
+          "source": "drug_quetiapine",
+          "target": "target_glutamate",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能有助于减轻焦虑与抑郁"
+        },
+        {
+          "source": "drug_gabapentin",
+          "target": "target_glutamate",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知对谷氨酸有影响"
+        },
+        {
+          "source": "drug_sodium_phenylbutyrate",
+          "target": "pathway_neuroprotective",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "显示潜在的神经保护效应"
+        },
+        {
+          "source": "pathway_neuroprotective",
+          "target": "disease_amyotrophic_lateral_sclerosis",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "通过保护神经元来影响ALS"
+        },
+        {
+          "source": "drug_itraconazole",
+          "target": "pathway_neuroprotective",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "潜在的神经保护角色"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "pathway_neuroprotective",
+          "relation": "involved_in",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "调节免疫可能影响神经系统"
+        },
+        {
+          "source": "drug_methylcobalamin",
+          "target": "pathway_neuroprotective",
+          "relation": "involved_in",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "相关于维生素B12的神经保护作用"
+        },
+        {
+          "source": "drug_folic_acid",
+          "target": "pathway_neuroprotective",
+          "relation": "involved_in",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "促进神经元健康，间接影响ALS"
+        },
+        {
+          "source": "drug_riluzole",
+          "target": "disease_amyotrophic_lateral_sclerosis",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "主要治疗药物，证实有效"
+        },
+        {
+          "source": "drug_edavavone",
+          "target": "disease_amyotrophic_lateral_sclerosis",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于ALS的治疗，具有保护作用"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "Riluzole 和 Edaravone 通过影响 glutamate 受体和神经保护通路对 ALS 有重要的影响。",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "药物具备到达中枢神经系统的最小暴露（常识判断）"
+    ],
+    "uncertainties": [
+      "部分药物在ALS中的长期效果尚不明确"
+    ],
+    "next_focus_for_pi": [
+      "可考虑进一步研究其他药物的机制以及临床试验数据"
+    ]
+  }
+}

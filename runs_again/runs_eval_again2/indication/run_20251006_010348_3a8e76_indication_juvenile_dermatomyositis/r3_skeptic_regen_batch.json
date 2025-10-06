@@ -1,0 +1,398 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Juvenile dermatomyositis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_intravenous_immunoglobulin",
+          "name": "Intravenous immunoglobulin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_hydroxychloroquine",
+          "name": "Hydroxychloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tacrolimus",
+          "name": "Tacrolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_belimumab",
+          "name": "Belimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_mtx",
+          "type": "Target",
+          "label": "OffTargetMtx",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mtx",
+          "type": "Pathway",
+          "label": "RiskPathwayMtx",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mtx",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMtx",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pred",
+          "type": "Target",
+          "label": "OffTargetPred",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pred",
+          "type": "Pathway",
+          "label": "RiskPathwayPred",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pred",
+          "type": "Phenotype",
+          "label": "AdversePhenotypePred",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aza",
+          "type": "Target",
+          "label": "OffTargetAza",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aza",
+          "type": "Pathway",
+          "label": "RiskPathwayAza",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aza",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAza",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mmf",
+          "type": "Target",
+          "label": "OffTargetMmf",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_mmf",
+          "type": "Pathway",
+          "label": "RiskPathwayMmf",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_mmf",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMmf",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_mtx",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对正常细胞可能产生副作用"
+        },
+        {
+          "source": "n_ot_mtx",
+          "target": "n_rp_mtx",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路可能激活"
+        },
+        {
+          "source": "n_rp_mtx",
+          "target": "n_adv_mtx",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_mtx",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，将抵消药物用途"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_pred",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引起代谢紊乱"
+        },
+        {
+          "source": "n_ot_pred",
+          "target": "n_rp_pred",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_pred",
+          "target": "n_adv_pred",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致体重增加等不良表型"
+        },
+        {
+          "source": "n_adv_pred",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此类副作用抵消使用效果"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_ot_aza",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "免疫抑制可能引发感染"
+        },
+        {
+          "source": "n_ot_aza",
+          "target": "n_rp_aza",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "感染风险相关通路激活"
+        },
+        {
+          "source": "n_rp_aza",
+          "target": "n_adv_aza",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发严重感染"
+        },
+        {
+          "source": "n_adv_aza",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险可能防碍治疗效果"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "n_ot_mmf",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能减弱免疫监视功能"
+        },
+        {
+          "source": "n_ot_mmf",
+          "target": "n_rp_mmf",
+          "relation": "involved_in",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "免疫抑制引发感染机制"
+        },
+        {
+          "source": "n_rp_mmf",
+          "target": "n_adv_mmf",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "导致严重感染等不良表型"
+        },
+        {
+          "source": "n_adv_mmf",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "此风险影响药物疗效"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "Methotrexate 可能导致严重肝损伤",
+        "confidence": "medium"
+      },
+      {
+        "id": "K2",
+        "text": "Prednisone 可能引起长期代谢综合征",
+        "confidence": "medium"
+      },
+      {
+        "id": "K3",
+        "text": "Azathioprine 可能增加感染风险",
+        "confidence": "medium"
+      },
+      {
+        "id": "K4",
+        "text": "Mycophenolate mofetil 的免疫抑制作用可能导致不可逆后果",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "所有药物的疗效与不良反应是否经过充分验证",
+      "安全性和疗效的长期平衡是否存在"
+    ],
+    "falsification_tests": [
+      "是否有补充证据支持长期安全性",
+      "是否能确认药物对特定人群的净获益"
+    ],
+    "next_focus_for_pi": [
+      "验证每种药物可能不良反应的临床证据",
+      "考量药物与共病治疗之间的相互作用"
+    ]
+  }
+}

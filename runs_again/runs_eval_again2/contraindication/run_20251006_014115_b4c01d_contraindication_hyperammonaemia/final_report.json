@@ -1,0 +1,1137 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Hyperammonaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_sodium_benzoate",
+          "name": "Sodium Benzoate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_lactulose",
+          "name": "Lactulose"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_ammonul",
+          "name": "Ammonul"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_carbaglu",
+          "name": "Carbaglu"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_l_carnitine",
+          "name": "L-Carnitine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_arginine",
+          "name": "Arginine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_n_acetylglutamate",
+          "name": "N-acetylglutamate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_phenylbutyrate",
+          "name": "Phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_glutamate",
+          "name": "Glutamate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_tetrahydrobiopterin",
+          "name": "Tetrahydrobiopterin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_citrulline",
+          "name": "Citrulline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_urea",
+          "name": "Urea"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.48,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 1.7,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Sodium Benzoate Risk",
+              "pro": [
+                "H1"
+              ],
+              "con": [
+                "n_adv_sb"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "对氨基酸代谢的干预显著支持机制推论"
+          ],
+          "safety_risk": [
+            "存在可能引发不良表型的风险路径"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "机制连通性不足，需进一步补充相关路径"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.48,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 1.7,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Lactulose Risk",
+              "pro": [
+                "H2"
+              ],
+              "con": [
+                "n_adv_lactulose"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "用于治疗氨中毒的机理符合相关性"
+          ],
+          "safety_risk": [
+            "存在潜在不良效果的风险路径"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "机制连通性不足，需进一步补充相关路径"
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.42,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 1.4,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "在氨中毒治疗中的支持证据有限"
+          ],
+          "safety_risk": [
+            "潜在风险影响使用安全"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏确切机制支持，需进一步的验证"
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.45,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 1.4,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "理论上可用于氨中毒治疗，证据缺乏"
+          ],
+          "safety_risk": [
+            "潜在的不良反应需关注"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏确切机制支持，需进一步的验证"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.4,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 1.4,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "使用过于局限，缺乏更广泛证据"
+          ],
+          "safety_risk": [
+            "可能存在联合处理时的安全性问题"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏确切机制支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.38,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 1.4,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "相关治疗证据缺乏"
+          ],
+          "safety_risk": [
+            "在高剂量使用时风险较高"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏确切机制支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.37,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 1.4,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "用于氨中毒的证据不足"
+          ],
+          "safety_risk": [
+            "安全性问题尚未解决"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏确切机制支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.39,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 1.4,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "理论机制不够明确"
+          ],
+          "safety_risk": [
+            "玩家风险路径的潜在性较高"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏确切机制支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.35,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 1.4,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "缺乏足够的临床研究支持"
+          ],
+          "safety_risk": [
+            "存在潜在的不良反应"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏确切机制支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.34,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 1.4,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "缺乏相关临床证据"
+          ],
+          "safety_risk": [
+            "可能存在的副作用"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏确切机制支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.31,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 1.4,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "支持机制不够完善"
+          ],
+          "safety_risk": [
+            "潜在的不安全因素"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏确切机制支持"
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.29,
+        "components": {
+          "mechanism_fit": 0.4,
+          "class_prior": 0.3,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.8,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.5
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 1.4,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "临床上缺乏相关支持"
+          ],
+          "safety_risk": [
+            "存在潜在风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": [
+          "缺乏确切机制支持"
+        ]
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H4",
+      "H3",
+      "H5",
+      "H8",
+      "H6",
+      "H7",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_sodium_benzoate",
+          "type": "Drug",
+          "label": "Sodium Benzoate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lactulose",
+          "type": "Drug",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ammonul",
+          "type": "Drug",
+          "label": "Ammonul",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_carbaglu",
+          "type": "Drug",
+          "label": "Carbaglu",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_l_carnitine",
+          "type": "Drug",
+          "label": "L-Carnitine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_arginine",
+          "type": "Drug",
+          "label": "Arginine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylglutamate",
+          "type": "Drug",
+          "label": "N-acetylglutamate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenylbutyrate",
+          "type": "Drug",
+          "label": "Phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_glutamate",
+          "type": "Drug",
+          "label": "Glutamate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tetrahydrobiopterin",
+          "type": "Drug",
+          "label": "Tetrahydrobiopterin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_citrulline",
+          "type": "Drug",
+          "label": "Citrulline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_urea",
+          "type": "Drug",
+          "label": "Urea",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta1",
+          "type": "Target",
+          "label": "TargetA1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ta2",
+          "type": "Target",
+          "label": "TargetA2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb1",
+          "type": "Pathway",
+          "label": "PathwayB1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb2",
+          "type": "Pathway",
+          "label": "PathwayB2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ph",
+          "type": "Phenotype",
+          "label": "PhenotypeX",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "HypothesisH1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "HypothesisH2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hyperamm",
+          "type": "Disease",
+          "label": "Hyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_sb",
+          "type": "Drug",
+          "label": "Sodium Benzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lactulose",
+          "type": "Drug",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ammonul",
+          "type": "Drug",
+          "label": "Ammonul",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_carbaglu",
+          "type": "Drug",
+          "label": "Carbaglu",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_l_carnitine",
+          "type": "Drug",
+          "label": "L-Carnitine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_arginine",
+          "type": "Drug",
+          "label": "Arginine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_n_acetylglutamate",
+          "type": "Drug",
+          "label": "N-acetylglutamate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_phenylbutyrate",
+          "type": "Drug",
+          "label": "Phenylbutyrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_glutamate",
+          "type": "Drug",
+          "label": "Glutamate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_tetrahydrobiopterin",
+          "type": "Drug",
+          "label": "Tetrahydrobiopterin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_citrulline",
+          "type": "Drug",
+          "label": "Citrulline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_urea",
+          "type": "Drug",
+          "label": "Urea",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sb",
+          "type": "Target",
+          "label": "OffTarget_Sodium_Benzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sb",
+          "type": "Pathway",
+          "label": "RiskPathway_Sodium_Benzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sb",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Sodium_Benzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_lactulose",
+          "type": "Target",
+          "label": "OffTarget_Lactulose",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_lactulose",
+          "type": "Pathway",
+          "label": "RiskPathway_Lactulose",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_lactulose",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_Lactulose",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Ammonul",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Carbaglu",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "L-Carnitine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Arginine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "N-acetylglutamate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Phenylbutyrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Glutamate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Tetrahydrobiopterin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Citrulline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Urea",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_sodium_benzoate",
+          "target": "n_ta1",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "支持对氨基酸代谢的干预效果"
+        },
+        {
+          "source": "drug_lactulose",
+          "target": "n_ta2",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "典型用于治疗氨中毒的药物"
+        },
+        {
+          "source": "n_ta1",
+          "target": "n_pb1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "相关机制通路涉及"
+        },
+        {
+          "source": "n_ta2",
+          "target": "n_pb2",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "相关机制通路涉及"
+        },
+        {
+          "source": "n_pb1",
+          "target": "n_ph",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响关键表型结果"
+        },
+        {
+          "source": "n_pb2",
+          "target": "n_ph",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "影响关键表型结果"
+        },
+        {
+          "source": "drug_sodium_benzoate",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "基于机制整合推论"
+        },
+        {
+          "source": "drug_lactulose",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "基于机制整合推论"
+        },
+        {
+          "source": "n_sb",
+          "target": "n_ot_sb",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在旁路作用增加风险"
+        },
+        {
+          "source": "n_ot_sb",
+          "target": "n_rp_sb",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险路径关联"
+        },
+        {
+          "source": "n_rp_sb",
+          "target": "n_adv_sb",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_sb",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，将抵消疗效"
+        },
+        {
+          "source": "n_lactulose",
+          "target": "n_ot_lactulose",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在旁路作用可能增加风险"
+        },
+        {
+          "source": "n_ot_lactulose",
+          "target": "n_rp_lactulose",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险路径关联"
+        },
+        {
+          "source": "n_rp_lactulose",
+          "target": "n_adv_lactulose",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良表型"
+        },
+        {
+          "source": "n_adv_lactulose",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果风险成立，将抵消疗效"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65
+    },
+    "heuristic_priors": []
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_sodium_benzoate",
+          "name": "Sodium Benzoate"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H1_round5",
+        "key_assumptions": [
+          "对氨基酸代谢的干预支持机制推论",
+          "潜在的安全风险需被考虑"
+        ],
+        "caveats": [
+          "不良表型的风险可能抵消有效性"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_lactulose",
+          "name": "Lactulose"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H2_round5",
+        "key_assumptions": [
+          "理论上符合氨中毒治疗的机理",
+          "潜在安全性问题需关注"
+        ],
+        "caveats": [
+          "不良效果风险可能影响临床应用"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_ammonul",
+          "name": "Ammonul"
+        },
+        "score": 0.42,
+        "graph_snapshot_ref": "GE_H3_round5",
+        "key_assumptions": [
+          "可用于氨中毒治疗的可能性"
+        ],
+        "caveats": [
+          "支持证据有限，风险需谨慎评估"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Risk pathways associated with Sodium Benzoate and Lactulose leading to adverse phenotypes",
+          "reason": "安全性主导因素对推荐的影响"
+        }
+      ],
+      "remaining_gaps": [
+        "缺乏机制支持的证据，需进一步验证"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  }
+}

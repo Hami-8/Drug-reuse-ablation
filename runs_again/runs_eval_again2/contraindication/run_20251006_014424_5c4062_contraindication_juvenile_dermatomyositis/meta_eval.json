@@ -1,0 +1,125 @@
+{
+  "subset": "contraindication",
+  "disease": "Juvenile dermatomyositis",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "3 mpdn pulse + csa + pdn",
+    "3 mpdn pulse + mtx + pdn",
+    "3 mpdn pulse + pdn",
+    "abatacept",
+    "abatacept subcutaneous",
+    "adalimumab",
+    "alendronate",
+    "anti-cd19 ucar-t cells",
+    "azathioprine",
+    "baricitinib",
+    "certolizumab",
+    "continue is",
+    "cyclosporine",
+    "denosumab",
+    "descartes-08",
+    "deucravacitinb",
+    "etanercept",
+    "golimumab",
+    "h.p. acthar gel",
+    "hydroxychloroquine",
+    "infliximab",
+    "leflunomide",
+    "methotrexate",
+    "methylprednisolone",
+    "mycophenolate",
+    "prednisolone",
+    "prednisone",
+    "rituximab",
+    "sodium thiosulfate",
+    "sulfasalazine",
+    "tacrolimus",
+    "tofacitinib",
+    "upadacitinib",
+    "withhold is"
+  ],
+  "seeds_initial": [
+    "Methotrexate",
+    "Corticosteroids",
+    "Hydroxychloroquine",
+    "Azathioprine",
+    "Cyclophosphamide",
+    "Dalfampridine",
+    "Mycophenolate mofetil",
+    "Prednisone",
+    "Topical retinoids",
+    "Interferon",
+    "Mupirocin",
+    "Minocycline"
+  ],
+  "seed_history": [
+    [
+      "Methotrexate",
+      "Corticosteroids",
+      "Hydroxychloroquine",
+      "Azathioprine",
+      "Cyclophosphamide",
+      "Dalfampridine",
+      "Mycophenolate mofetil",
+      "Prednisone",
+      "Topical retinoids",
+      "Interferon",
+      "Mupirocin",
+      "Minocycline"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_hydroxychloroquine",
+          "name": "Hydroxychloroquine"
+        },
+        "score": 0.06,
+        "graph_snapshot_ref": "GE_H3_round2",
+        "key_assumptions": [
+          "MOA→通路→表型链闭合",
+          "PK/BBB 可达性足够"
+        ],
+        "caveats": [
+          "安全性与长期疗效不明"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Adverse Effects",
+          "reason": "Drug的潜在不良影响与风险路径相连接，导致高冲突"
+        }
+      ],
+      "remaining_gaps": [
+        "多个候选的机制连通性普遍不足，未满足支持权重与独立路径的要求"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "impact_summary": "补齐了相互影响路径，提升不同药物间的合理性"
+        }
+      ],
+      "lessons": [
+        "对于潜在副作用较大的药物，谨慎立论并考虑替代方案",
+        "增加独立路径和作用机制的药物候选将有助于减少冲突"
+      ]
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that are contraindicated or could worsen the rare disease 'Juvenile dermatomyositis'. Return only names."
+}

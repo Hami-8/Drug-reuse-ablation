@@ -1,0 +1,837 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Generalised pustular psoriasis",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_acitretin",
+          "name": "Acitretin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_alefacept",
+          "name": "Alefacept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_apremilast",
+          "name": "Apremilast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_brodalumab",
+          "name": "Brodalumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_fumaric_acid_esters",
+          "name": "Fumaric acid esters"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_secukinumab",
+          "name": "Secukinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_tazarotene",
+          "name": "Tazarotene"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_ustekinumab",
+          "name": "Ustekinumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_acitretin",
+          "type": "Target",
+          "label": "OffTargetAcitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_acitretin",
+          "type": "Pathway",
+          "label": "RiskPathwayAcitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_acitretin",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAcitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_adalimumab",
+          "type": "Target",
+          "label": "OffTargetAdalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_adalimumab",
+          "type": "Pathway",
+          "label": "RiskPathwayAdalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_adalimumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAdalimumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_alefacept",
+          "type": "Target",
+          "label": "OffTargetAlefacept",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_alefacept",
+          "type": "Pathway",
+          "label": "RiskPathwayAlefacept",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_alefacept",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAlefacept",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_apremilast",
+          "type": "Target",
+          "label": "OffTargetApremilast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_apremilast",
+          "type": "Pathway",
+          "label": "RiskPathwayApremilast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_apremilast",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeApremilast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_brodalumab",
+          "type": "Target",
+          "label": "OffTargetBrodalumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_brodalumab",
+          "type": "Pathway",
+          "label": "RiskPathwayBrodalumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_brodalumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBrodalumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_etanercept",
+          "type": "Target",
+          "label": "OffTargetEtanercept",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_etanercept",
+          "type": "Pathway",
+          "label": "RiskPathwayEtanercept",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_etanercept",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeEtanercept",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fumaric_acid_esters",
+          "type": "Target",
+          "label": "OffTargetFumaricAcidEsters",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fumaric_acid_esters",
+          "type": "Pathway",
+          "label": "RiskPathwayFumaricAcidEsters",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fumaric_acid_esters",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeFumaricAcidEsters",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_infliximab",
+          "type": "Target",
+          "label": "OffTargetInfliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_infliximab",
+          "type": "Pathway",
+          "label": "RiskPathwayInfliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_infliximab",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeInfliximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_methotrexate",
+          "type": "Target",
+          "label": "OffTargetMethotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_methotrexate",
+          "type": "Pathway",
+          "label": "RiskPathwayMethotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_methotrexate",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeMethotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_secukinumab",
+          "type": "Target",
+          "label": "OffTargetSecukinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_secukinumab",
+          "type": "Pathway",
+          "label": "RiskPathwaySecukinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_secukinumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSecukinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tazarotene",
+          "type": "Target",
+          "label": "OffTargetTazarotene",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_tazarotene",
+          "type": "Pathway",
+          "label": "RiskPathwayTazarotene",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tazarotene",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTazarotene",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ustekinumab",
+          "type": "Target",
+          "label": "OffTargetUstekinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ustekinumab",
+          "type": "Pathway",
+          "label": "RiskPathwayUstekinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ustekinumab",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeUstekinumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_acitretin",
+          "target": "n_ot_acitretin",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁靶作用风险"
+        },
+        {
+          "source": "n_ot_acitretin",
+          "target": "n_rp_acitretin",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "关联的风险路径"
+        },
+        {
+          "source": "n_rp_acitretin",
+          "target": "n_adv_acitretin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性"
+        },
+        {
+          "source": "n_adv_acitretin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消疗效"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "n_ot_adalimumab",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁靶作用风险"
+        },
+        {
+          "source": "n_ot_adalimumab",
+          "target": "n_rp_adalimumab",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "关联的风险路径"
+        },
+        {
+          "source": "n_rp_adalimumab",
+          "target": "n_adv_adalimumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性"
+        },
+        {
+          "source": "n_adv_adalimumab",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消疗效"
+        },
+        {
+          "source": "drug_alefacept",
+          "target": "n_ot_alefacept",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁靶作用风险"
+        },
+        {
+          "source": "n_ot_alefacept",
+          "target": "n_rp_alefacept",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "关联的风险路径"
+        },
+        {
+          "source": "n_rp_alefacept",
+          "target": "n_adv_alefacept",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性"
+        },
+        {
+          "source": "n_adv_alefacept",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消疗效"
+        },
+        {
+          "source": "drug_apremilast",
+          "target": "n_ot_apremilast",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁靶作用风险"
+        },
+        {
+          "source": "n_ot_apremilast",
+          "target": "n_rp_apremilast",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "关联的风险路径"
+        },
+        {
+          "source": "n_rp_apremilast",
+          "target": "n_adv_apremilast",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性"
+        },
+        {
+          "source": "n_adv_apremilast",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消疗效"
+        },
+        {
+          "source": "drug_brodalumab",
+          "target": "n_ot_brodalumab",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁靶作用风险"
+        },
+        {
+          "source": "n_ot_brodalumab",
+          "target": "n_rp_brodalumab",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "关联的风险路径"
+        },
+        {
+          "source": "n_rp_brodalumab",
+          "target": "n_adv_brodalumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性"
+        },
+        {
+          "source": "n_adv_brodalumab",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消疗效"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "n_ot_etanercept",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁靶作用风险"
+        },
+        {
+          "source": "n_ot_etanercept",
+          "target": "n_rp_etanercept",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "关联的风险路径"
+        },
+        {
+          "source": "n_rp_etanercept",
+          "target": "n_adv_etanercept",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性"
+        },
+        {
+          "source": "n_adv_etanercept",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消疗效"
+        },
+        {
+          "source": "drug_fumaric_acid_esters",
+          "target": "n_ot_fumaric_acid_esters",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁靶作用风险"
+        },
+        {
+          "source": "n_ot_fumaric_acid_esters",
+          "target": "n_rp_fumaric_acid_esters",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "关联的风险路径"
+        },
+        {
+          "source": "n_rp_fumaric_acid_esters",
+          "target": "n_adv_fumaric_acid_esters",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性"
+        },
+        {
+          "source": "n_adv_fumaric_acid_esters",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消疗效"
+        },
+        {
+          "source": "drug_infliximab",
+          "target": "n_ot_infliximab",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁靶作用风险"
+        },
+        {
+          "source": "n_ot_infliximab",
+          "target": "n_rp_infliximab",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "关联的风险路径"
+        },
+        {
+          "source": "n_rp_infliximab",
+          "target": "n_adv_infliximab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性"
+        },
+        {
+          "source": "n_adv_infliximab",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消疗效"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_methotrexate",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁靶作用风险"
+        },
+        {
+          "source": "n_ot_methotrexate",
+          "target": "n_rp_methotrexate",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "关联的风险路径"
+        },
+        {
+          "source": "n_rp_methotrexate",
+          "target": "n_adv_methotrexate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性"
+        },
+        {
+          "source": "n_adv_methotrexate",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消疗效"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "n_ot_secukinumab",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁靶作用风险"
+        },
+        {
+          "source": "n_ot_secukinumab",
+          "target": "n_rp_secukinumab",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "关联的风险路径"
+        },
+        {
+          "source": "n_rp_secukinumab",
+          "target": "n_adv_secukinumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性"
+        },
+        {
+          "source": "n_adv_secukinumab",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消疗效"
+        },
+        {
+          "source": "drug_tazarotene",
+          "target": "n_ot_tazarotene",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁靶作用风险"
+        },
+        {
+          "source": "n_ot_tazarotene",
+          "target": "n_rp_tazarotene",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "关联的风险路径"
+        },
+        {
+          "source": "n_rp_tazarotene",
+          "target": "n_adv_tazarotene",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性"
+        },
+        {
+          "source": "n_adv_tazarotene",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消疗效"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "n_ot_ustekinumab",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在旁靶作用风险"
+        },
+        {
+          "source": "n_ot_ustekinumab",
+          "target": "n_rp_ustekinumab",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "关联的风险路径"
+        },
+        {
+          "source": "n_rp_ustekinumab",
+          "target": "n_adv_ustekinumab",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型的可能性"
+        },
+        {
+          "source": "n_adv_ustekinumab",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险可能抵消疗效"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "药物对皮肤炎症途径的影响是否确切",
+      "各药物的具体靶器官暴露是否充足"
+    ],
+    "falsification_tests": [
+      "是否有临床数据支持上述药物的疗效",
+      "是否存在任何已知的反证药物的不良反应"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供每个药物作用机制的详细数据",
+      "对识别的潜在风险进行深入分析"
+    ]
+  }
+}

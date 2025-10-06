@@ -1,0 +1,143 @@
+{
+  "subset": "contraindication",
+  "disease": "Hyperammonaemia",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "buphenyl",
+    "carglumic acid",
+    "disodium",
+    "drugs inducing hyperammonemia",
+    "fezagepras",
+    "glutamine",
+    "hpn-100",
+    "mnk-6105",
+    "napba",
+    "ornithine alpha ketoglutarate",
+    "ornithine phenylacetate",
+    "placebo intravenous infusion",
+    "ravicti",
+    "sodium benzoate",
+    "sodium phenylbutyrate",
+    "standard of care",
+    "tnp-2092 capsules",
+    "tnp-2092 placebo capsules",
+    "vitamin e"
+  ],
+  "seeds_initial": [
+    "Sodium Benzoate",
+    "Phenylbutyrate",
+    "Lactulose",
+    "N-acetylcysteine",
+    "Valproic Acid",
+    "Rifampin",
+    "Acetaminophen",
+    "Phenobarbital",
+    "Nitrofurantoin",
+    "Zonisamide",
+    "Topiramate",
+    "Sodium Valproate"
+  ],
+  "seed_history": [
+    [
+      "Sodium Benzoate",
+      "Phenylbutyrate",
+      "Lactulose",
+      "N-acetylcysteine",
+      "Valproic Acid",
+      "Rifampin",
+      "Acetaminophen",
+      "Phenobarbital",
+      "Nitrofurantoin",
+      "Zonisamide",
+      "Topiramate",
+      "Sodium Valproate"
+    ],
+    [
+      "Sodium Benzoate",
+      "Lactulose",
+      "Ammonul",
+      "Carbaglu",
+      "L-Carnitine",
+      "Arginine",
+      "N-acetylglutamate",
+      "Phenylbutyrate",
+      "Glutamate",
+      "Tetrahydrobiopterin",
+      "Citrulline",
+      "Urea"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_sodium_benzoate",
+          "name": "Sodium Benzoate"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H1_round5",
+        "key_assumptions": [
+          "对氨基酸代谢的干预支持机制推论",
+          "潜在的安全风险需被考虑"
+        ],
+        "caveats": [
+          "不良表型的风险可能抵消有效性"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_lactulose",
+          "name": "Lactulose"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H2_round5",
+        "key_assumptions": [
+          "理论上符合氨中毒治疗的机理",
+          "潜在安全性问题需关注"
+        ],
+        "caveats": [
+          "不良效果风险可能影响临床应用"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_ammonul",
+          "name": "Ammonul"
+        },
+        "score": 0.42,
+        "graph_snapshot_ref": "GE_H3_round5",
+        "key_assumptions": [
+          "可用于氨中毒治疗的可能性"
+        ],
+        "caveats": [
+          "支持证据有限，风险需谨慎评估"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Risk pathways associated with Sodium Benzoate and Lactulose leading to adverse phenotypes",
+          "reason": "安全性主导因素对推荐的影响"
+        }
+      ],
+      "remaining_gaps": [
+        "缺乏机制支持的证据，需进一步验证"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that are contraindicated or could worsen the rare disease 'Hyperammonaemia'. Return only names.\n\n# Prior guidance for Explorer:\n- Generate novel candidates that might provide additional detoxification pathways without overlapping existing ones.\n\n# Heuristics:\n- When Hyperammonaemia treatment: then Evaluate intervention efficacy versus documented adverse effects for holistic patient management."
+}

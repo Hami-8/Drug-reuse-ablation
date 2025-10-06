@@ -1,0 +1,115 @@
+{
+  "subset": "indication",
+  "disease": "Amyotrophic lateral sclerosis or motor neuron disease",
+  "relation": "indication",
+  "gold_drugs": [
+    "dextromethorphan + quinidine",
+    "escitalopram"
+  ],
+  "seeds_initial": [
+    "Riluzole",
+    "Edaravone",
+    "Nuedexta",
+    "Dexpramipexole",
+    "Lithium",
+    "Gabapentin",
+    "Tizanidine",
+    "Trihexyphenidyl",
+    "Methylcobalamin",
+    "Piracetam",
+    "Morphine",
+    "L-Carnitine"
+  ],
+  "seed_history": [
+    [
+      "Riluzole",
+      "Edaravone",
+      "Nuedexta",
+      "Dexpramipexole",
+      "Lithium",
+      "Gabapentin",
+      "Tizanidine",
+      "Trihexyphenidyl",
+      "Methylcobalamin",
+      "Piracetam",
+      "Morphine",
+      "L-Carnitine"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_riluzole",
+          "name": "Riluzole"
+        },
+        "score": 0.67,
+        "graph_snapshot_ref": "GE_H1_round5",
+        "key_assumptions": [
+          "Riluzole effectively acts on neurons",
+          "Established pathway to ALS"
+        ],
+        "caveats": [
+          "Potential off-target effects need further evaluation"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_edaravone",
+          "name": "Edaravone"
+        },
+        "score": 0.67,
+        "graph_snapshot_ref": "GE_H2_round5",
+        "key_assumptions": [
+          "Edaravone effectively acts on neurons",
+          "Established pathway to ALS"
+        ],
+        "caveats": [
+          "Potential off-target effects need further evaluation"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug → Target_Neurons → Pathway_Glial_Cell_Injury → Phenotype_Amyotrophic_Lateral_Sclerosis",
+          "reason": "Mechanistic pathways established with a strong support base"
+        }
+      ],
+      "remaining_gaps": [
+        "Risks associated with off-target effects need detailed investigation"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B"
+          ],
+          "impact_summary": "Identified pathways linking drugs to ALS pathology."
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "C",
+            "D"
+          ],
+          "impact_summary": "Supplemented evidence for neuronal target engagement."
+        }
+      ],
+      "lessons": [
+        "Continued focus on confirming off-target effects and their implications on efficacy."
+      ]
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Amyotrophic lateral sclerosis or motor neuron disease'. Return only names.\n\n# Heuristics:\n- When 评估药物对ALS的疗效: then 注意潜在的旁路与离靶效应，维持安全性优先\n- When 探查药物作用: then 持续监测临床数据以确认效果与安全性"
+}

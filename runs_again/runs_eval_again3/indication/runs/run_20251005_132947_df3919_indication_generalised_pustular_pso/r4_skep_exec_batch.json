@@ -1,0 +1,477 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Generalised pustular psoriasis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "Acitretin Potential Risks",
+            "expectation": "若存在不良反应，则在后续评估中降低其支持力度",
+            "assignee": "Skeptic"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_acitretin",
+          "type": "Drug",
+          "label": "Acitretin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_adalimumab",
+          "type": "Drug",
+          "label": "Adalimumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_apremilast",
+          "type": "Drug",
+          "label": "Apremilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_bimekizumab",
+          "type": "Drug",
+          "label": "Bimekizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_brodalumab",
+          "type": "Drug",
+          "label": "Brodalumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_etanercept",
+          "type": "Drug",
+          "label": "Etanercept",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ixekizumab",
+          "type": "Drug",
+          "label": "Ixekizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_methotrexate",
+          "type": "Drug",
+          "label": "Methotrexate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_secukinumab",
+          "type": "Drug",
+          "label": "Secukinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tazarotene",
+          "type": "Drug",
+          "label": "Tazarotene",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ustekinumab",
+          "type": "Drug",
+          "label": "Ustekinumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_generalised_pustular_psoriasis",
+          "type": "Disease",
+          "label": "Generalised pustular psoriasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_immune_response",
+          "type": "Target",
+          "label": "Immune Response",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_inflammatory_response",
+          "type": "Pathway",
+          "label": "Inflammatory Response Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_symptomatic_relief",
+          "type": "Phenotype",
+          "label": "Symptomatic Relief",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_skin_remission",
+          "type": "Phenotype",
+          "label": "Skin Remission",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_acitretin",
+          "type": "Target",
+          "label": "Acitretin Off-Target",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_acitretin",
+          "type": "Pathway",
+          "label": "Acitretin Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_acitretin",
+          "type": "Phenotype",
+          "label": "Adverse Effects of Acitretin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_acitretin",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用治疗在免疫调节上有效"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "靶向 TNF-α 的治疗策略"
+        },
+        {
+          "source": "drug_apremilast",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "抑制炎症通路的机制"
+        },
+        {
+          "source": "drug_bimekizumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "IL-17靶向作用"
+        },
+        {
+          "source": "drug_brodalumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "IL-17A拮抗剂"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "免疫抑制机制支持"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抑制炎症反应"
+        },
+        {
+          "source": "drug_ixekizumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "IL-17E 的抵抗并促进重建"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "作为传统治疗药物的有效性"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "针对 IL-17A 的特异性干预"
+        },
+        {
+          "source": "drug_tazarotene",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "调控分化的机制"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "target_immune_response",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "靶向 IL-12/23 的选择性"
+        },
+        {
+          "source": "target_immune_response",
+          "target": "pathway_inflammatory_response",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "支持的通路连接"
+        },
+        {
+          "source": "pathway_inflammatory_response",
+          "target": "d_generalised_pustular_psoriasis",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与通路在病理过程中的一致性"
+        },
+        {
+          "source": "drug_acitretin",
+          "target": "phenotype_symptomatic_relief",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知的临床表现改善"
+        },
+        {
+          "source": "drug_adalimumab",
+          "target": "phenotype_skin_remission",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "有效性证据强"
+        },
+        {
+          "source": "drug_apremilast",
+          "target": "phenotype_symptomatic_relief",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "机制的有效性总结"
+        },
+        {
+          "source": "drug_bimekizumab",
+          "target": "phenotype_skin_remission",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "靶向的有效性"
+        },
+        {
+          "source": "drug_brodalumab",
+          "target": "phenotype_symptomatic_relief",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "支持的临床证据"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "phenotype_symptomatic_relief",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "提高患者群体的好转率"
+        },
+        {
+          "source": "drug_etanercept",
+          "target": "phenotype_skin_remission",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "发挥快速生效"
+        },
+        {
+          "source": "drug_ixekizumab",
+          "target": "phenotype_skin_remission",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "针对于根据临床效果获得改善"
+        },
+        {
+          "source": "drug_methotrexate",
+          "target": "phenotype_symptomatic_relief",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知的改善作用"
+        },
+        {
+          "source": "drug_secukinumab",
+          "target": "phenotype_skin_remission",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可期待的病理改善"
+        },
+        {
+          "source": "drug_tazarotene",
+          "target": "phenotype_symptomatic_relief",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "局部疗法已知效果"
+        },
+        {
+          "source": "drug_ustekinumab",
+          "target": "phenotype_skin_remission",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "支持慢性病例治疗的有效性"
+        },
+        {
+          "source": "drug_acitretin",
+          "target": "n_ot_acitretin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的旁路作用导致不良反应"
+        },
+        {
+          "source": "n_ot_acitretin",
+          "target": "n_rp_acitretin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能通过非靶向途径导致风险"
+        },
+        {
+          "source": "n_rp_acitretin",
+          "target": "n_adv_acitretin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_acitretin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若存在此风险，则抵消潜在疗效"
+        }
+      ],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "conflict_hotspots": [
+            {
+              "topic": "Acitretin Potential Risks",
+              "pro_nodes": [
+                "drug_acitretin",
+                "phenotype_symptomatic_relief"
+              ],
+              "con_nodes": [
+                "n_rp_acitretin",
+                "n_adv_acitretin"
+              ],
+              "note": "潜在不良反应与疗效之间的矛盾"
+            }
+          ]
+        },
+        "notes": "已完成安全性压力测试：已将不良风险通过高权重边连到假设"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_conflicts": [
+      "不良反应的具体机制同仍需进一步阐明",
+      "存在对比其他药物的疗效尚不清晰"
+    ]
+  }
+}

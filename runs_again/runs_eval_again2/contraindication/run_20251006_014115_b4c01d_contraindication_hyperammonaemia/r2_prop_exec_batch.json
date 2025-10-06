@@ -1,0 +1,884 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Hyperammonaemia",
+      "relation": "contraindication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_sodium_benzoate",
+            "via": [
+              "target_urea_cycle"
+            ],
+            "to": "disease_hyperammonaemia",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_phenylbutyrate",
+            "via": [
+              "target_urea_cycle"
+            ],
+            "to": "disease_hyperammonaemia",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_sodium_benzoate",
+          "type": "Drug",
+          "label": "Sodium Benzoate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenylbutyrate",
+          "type": "Drug",
+          "label": "Phenylbutyrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lactulose",
+          "type": "Drug",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_valproic_acid",
+          "type": "Drug",
+          "label": "Valproic Acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rifampin",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_acetaminophen",
+          "type": "Drug",
+          "label": "Acetaminophen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nitrofurantoin",
+          "type": "Drug",
+          "label": "Nitrofurantoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_zonisamide",
+          "type": "Drug",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_urea_cycle",
+          "type": "Target",
+          "label": "Urea Cycle",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_ammonia_metabolism",
+          "type": "Pathway",
+          "label": "Ammonia Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_hyperammonaemia",
+          "type": "Disease",
+          "label": "Hyperammonaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_hyperammonaemia",
+          "type": "Disease",
+          "label": "Hyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_sb",
+          "type": "Drug",
+          "label": "Sodium Benzoate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_pb",
+          "type": "Drug",
+          "label": "Phenylbutyrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_lactulose",
+          "type": "Drug",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_valproic_acid",
+          "type": "Drug",
+          "label": "Valproic Acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rifampin",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_acetaminophen",
+          "type": "Drug",
+          "label": "Acetaminophen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_phenobarbital",
+          "type": "Drug",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_nitrofurantoin",
+          "type": "Drug",
+          "label": "Nitrofurantoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_zonisamide",
+          "type": "Drug",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_topiramate",
+          "type": "Drug",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_hyper",
+          "type": "Target",
+          "label": "OffTargetHyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_hyper",
+          "type": "Pathway",
+          "label": "RiskPathwayHyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_hyper",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeHyperammonaemia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Sodium Benzoate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Phenylbutyrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Lactulose",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Valproic Acid",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Acetaminophen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Phenobarbital",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Nitrofurantoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Zonisamide",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Topiramate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Sodium Valproate",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_sodium_benzoate",
+          "target": "target_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知对尿素循环的影响"
+        },
+        {
+          "source": "drug_phenylbutyrate",
+          "target": "target_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知对尿素循环的作用"
+        },
+        {
+          "source": "drug_lactulose",
+          "target": "target_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "通路内作用常识"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "target_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "在代谢中可能有帮助"
+        },
+        {
+          "source": "drug_valproic_acid",
+          "target": "target_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能干扰尿素循环"
+        },
+        {
+          "source": "drug_rifampin",
+          "target": "target_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响药物代谢"
+        },
+        {
+          "source": "drug_acetaminophen",
+          "target": "target_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能增加氨的生成"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "target_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响氨基转移酶活动"
+        },
+        {
+          "source": "drug_nitrofurantoin",
+          "target": "target_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "药物可能与氮代谢相关"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "target_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "对代谢有潜在影响"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "target_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "已知的作用机制"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "target_urea_cycle",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "可能影响氨代谢"
+        },
+        {
+          "source": "target_urea_cycle",
+          "target": "pathway_ammonia_metabolism",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "尿素循环与氨代谢直接相关"
+        },
+        {
+          "source": "pathway_ammonia_metabolism",
+          "target": "disease_hyperammonaemia",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "氨积累导致高氨血症"
+        },
+        {
+          "source": "drug_sodium_benzoate",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "支持对高氨血症的治疗潜力"
+        },
+        {
+          "source": "drug_phenylbutyrate",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "常用来治疗高氨血症"
+        },
+        {
+          "source": "drug_lactulose",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "有助于减少氨水平"
+        },
+        {
+          "source": "drug_n_acetylcysteine",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "可能有助于氨的清除"
+        },
+        {
+          "source": "drug_valproic_acid",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能会影响氮的代谢"
+        },
+        {
+          "source": "drug_rifampin",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与肝脏药物代谢相关"
+        },
+        {
+          "source": "drug_acetaminophen",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "已知对氨产生的影响"
+        },
+        {
+          "source": "drug_phenobarbital",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能影响高氨状态"
+        },
+        {
+          "source": "drug_nitrofurantoin",
+          "target": "H9",
+          "relation": "supports",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能有助于氮的清除"
+        },
+        {
+          "source": "drug_zonisamide",
+          "target": "H10",
+          "relation": "supports",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "潜在疗效的评估"
+        },
+        {
+          "source": "drug_topiramate",
+          "target": "H11",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "动态可能影响"
+        },
+        {
+          "source": "drug_sodium_valproate",
+          "target": "H12",
+          "relation": "supports",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "支持高氨血症的潜在治疗"
+        },
+        {
+          "source": "n_sb",
+          "target": "n_ot_hyper",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能干扰氨基酸代谢"
+        },
+        {
+          "source": "n_pb",
+          "target": "n_ot_hyper",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对氨基酸代谢影响"
+        },
+        {
+          "source": "n_lactulose",
+          "target": "n_ot_hyper",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能加剧氨的负担"
+        },
+        {
+          "source": "n_n_acetylcysteine",
+          "target": "n_ot_hyper",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "潜在的肝毒性问题"
+        },
+        {
+          "source": "n_valproic_acid",
+          "target": "n_ot_hyper",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知可能导致氨上升"
+        },
+        {
+          "source": "n_rifampin",
+          "target": "n_ot_hyper",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响肝脏酶功能"
+        },
+        {
+          "source": "n_acetaminophen",
+          "target": "n_ot_hyper",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "有肝毒性的潜在风险"
+        },
+        {
+          "source": "n_phenobarbital",
+          "target": "n_ot_hyper",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能影响代谢通路"
+        },
+        {
+          "source": "n_nitrofurantoin",
+          "target": "n_ot_hyper",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能影响肾功能与氨的排泄"
+        },
+        {
+          "source": "n_zonisamide",
+          "target": "n_ot_hyper",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能对肝肾功能有影响"
+        },
+        {
+          "source": "n_topiramate",
+          "target": "n_ot_hyper",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "干扰代谢"
+        },
+        {
+          "source": "n_sodium_valproate",
+          "target": "n_ot_hyper",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可导致氨增高"
+        },
+        {
+          "source": "n_ot_hyper",
+          "target": "n_rp_hyper",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "与风险路径相关"
+        },
+        {
+          "source": "n_rp_hyper",
+          "target": "n_adv_hyper",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_hyper",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消净获益"
+        },
+        {
+          "source": "n_adv_hyper",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "风险成立则不推荐"
+        },
+        {
+          "source": "n_adv_hyper",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "风险对效益的潜在影响"
+        },
+        {
+          "source": "n_adv_hyper",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "潜在风险影响疗效"
+        },
+        {
+          "source": "n_adv_hyper",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "增加氨水平的风险"
+        },
+        {
+          "source": "n_adv_hyper",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能影响肝肾功能"
+        },
+        {
+          "source": "n_adv_hyper",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "肝损伤风险"
+        },
+        {
+          "source": "n_adv_hyper",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能干扰代谢功能"
+        },
+        {
+          "source": "n_adv_hyper",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "慢性使用风险"
+        },
+        {
+          "source": "n_adv_hyper",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的肝毒性"
+        },
+        {
+          "source": "n_adv_hyper",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "影响代谢通路"
+        },
+        {
+          "source": "n_adv_hyper",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "影响氨代谢"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_hyper_cycle1",
+              "type": "Target",
+              "label": "Urea Cycle",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            },
+            {
+              "id": "n_hyper_path1",
+              "type": "Pathway",
+              "label": "Ammonia Metabolism",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "drug_sodium_benzoate",
+              "target": "n_hyper_cycle1",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "已知对尿素循环的影响"
+            },
+            {
+              "source": "n_hyper_cycle1",
+              "target": "n_hyper_path1",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "尿素循环与氨代谢直接相关"
+            },
+            {
+              "source": "n_hyper_path1",
+              "target": "disease_hyperammonaemia",
+              "relation": "causes",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "氨积累导致高氨血症"
+            },
+            {
+              "source": "drug_sodium_benzoate",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "支持对高氨血症的治疗潜力"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Sodium Benzoate→Urea Cycle→Ammonia Metabolism→Hyperammonaemia，形成2条不相交路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": [],
+    "next_focus_for_pi": [
+      "是否需要继续为 Phenylbutyrate 建立类似链条？"
+    ]
+  }
+}

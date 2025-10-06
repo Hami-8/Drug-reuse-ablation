@@ -1,0 +1,563 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Non-CF bronchiectasis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "n_azithromycin",
+            "via": [
+              "n_bacterial_infection",
+              "n_airway_inflammation"
+            ],
+            "to": "n_non_cf_bronchiectasis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "merge_claims",
+            "nodes": [
+              "H5",
+              "H6"
+            ],
+            "rationale": "治疗策略相似，可合并以减少冲突",
+            "assignee": "Proponent"
+          }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "n_dornase_alfa",
+            "via": [
+              "n_increased_mucus_production"
+            ],
+            "to": "n_non_cf_bronchiectasis",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_levofloxacin",
+          "type": "Drug",
+          "label": "Levofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_n_acetylcysteine",
+          "type": "Drug",
+          "label": "N-acetylcysteine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ipratropium_bromide",
+          "type": "Drug",
+          "label": "Ipratropium bromide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_roflumilast",
+          "type": "Drug",
+          "label": "Roflumilast",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tobramycin",
+          "type": "Drug",
+          "label": "Tobramycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ambroxol",
+          "type": "Drug",
+          "label": "Ambroxol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_erdafitinib",
+          "type": "Drug",
+          "label": "Erdafitinib",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fingolimod",
+          "type": "Drug",
+          "label": "Fingolimod",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pirfenidone",
+          "type": "Drug",
+          "label": "Pirfenidone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_solifenacin",
+          "type": "Drug",
+          "label": "Solifenacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_non_cf_bronchiectasis",
+          "type": "Disease",
+          "label": "Non-CF Bronchiectasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n airway_inflammation",
+          "type": "Pathway",
+          "label": "Airway Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_increased_mucus_production",
+          "type": "Pathway",
+          "label": "Increased Mucus Production",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_bacterial_infection",
+          "type": "Pathway",
+          "label": "Bacterial Infection",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_chronic_infection",
+          "type": "Pathway",
+          "label": "Chronic Infection",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_azithromycin",
+          "type": "Target",
+          "label": "Off-target Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_azithromycin",
+          "type": "Pathway",
+          "label": "Risk Pathway Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_azithromycin",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dornase_alfa",
+          "type": "Target",
+          "label": "Off-target Dornase alfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_dornase_alfa",
+          "type": "Pathway",
+          "label": "Risk Pathway Dornase alfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_dornase_alfa",
+          "type": "Phenotype",
+          "label": "Adverse Phenotype Dornase alfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_azithromycin",
+          "target": "n_bacterial_infection",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已被证实用于呼吸道感染"
+        },
+        {
+          "source": "n_dornase_alfa",
+          "target": "n_increased_mucus_production",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "用于降低粘稠痰液"
+        },
+        {
+          "source": "n_levofloxacin",
+          "target": "n_bacterial_infection",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "针对多种细菌感染有效"
+        },
+        {
+          "source": "n_n_acetylcysteine",
+          "target": "n_increased_mucus_production",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "有助于化痰"
+        },
+        {
+          "source": "n_ipratropium_bromide",
+          "target": "n_airway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "用于缓解气道炎症"
+        },
+        {
+          "source": "n_roflumilast",
+          "target": "n_airway_inflammation",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有效的抗炎作用"
+        },
+        {
+          "source": "n_tobramycin",
+          "target": "n_bacterial_infection",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "非囊性纤维化病人的使用"
+        },
+        {
+          "source": "n_ambroxol",
+          "target": "n_increased_mucus_production",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "促进呼吸道排痰"
+        },
+        {
+          "source": "n_non_cf_bronchiectasis",
+          "target": "n_bacterial_infection",
+          "relation": "involved_in",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "与细菌感染相关"
+        },
+        {
+          "source": "n_non_cf_bronchiectasis",
+          "target": "n_airway_inflammation",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "气道炎症是病理特征之一"
+        },
+        {
+          "source": "n_non_cf_bronchiectasis",
+          "target": "n_increased_mucus_production",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "增加痰液生产是疾病表现"
+        },
+        {
+          "source": "n_non_cf_bronchiectasis",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "基于多药物临床应用"
+        },
+        {
+          "source": "n_non_cf_bronchiectasis",
+          "target": "H2",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "有助于症状缓解"
+        },
+        {
+          "source": "n_non_cf_bronchiectasis",
+          "target": "H3",
+          "relation": "supports",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "针对细菌的治疗方案"
+        },
+        {
+          "source": "n_non_cf_bronchiectasis",
+          "target": "H4",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于症状改善"
+        },
+        {
+          "source": "n_non_cf_bronchiectasis",
+          "target": "H5",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "气道扩张药可能有益"
+        },
+        {
+          "source": "n_non_cf_bronchiectasis",
+          "target": "H6",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "对慢性炎症有积极效果"
+        },
+        {
+          "source": "n_non_cf_bronchiectasis",
+          "target": "H7",
+          "relation": "supports",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "针对感染治疗"
+        },
+        {
+          "source": "n_non_cf_bronchiectasis",
+          "target": "H8",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "有助于呼吸道分泌物清除"
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "n_ot_azithromycin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能的离靶作用影响肝脏"
+        },
+        {
+          "source": "n_ot_azithromycin",
+          "target": "n_rp_azithromycin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "引发不良副作用的风险通路"
+        },
+        {
+          "source": "n_rp_azithromycin",
+          "target": "n_adv_azithromycin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致肝毒性"
+        },
+        {
+          "source": "n_adv_azithromycin",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_dornase_alfa",
+          "target": "n_ot_dornase_alfa",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在的不良作用"
+        },
+        {
+          "source": "n_ot_dornase_alfa",
+          "target": "n_rp_dornase_alfa",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险路径可能导致耐药性"
+        },
+        {
+          "source": "n_rp_dornase_alfa",
+          "target": "n_adv_dornase_alfa",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_dornase_alfa",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若风险成立将抵消预期效益"
+        }
+      ],
+      "round_index": 3
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [
+            {
+              "id": "n_airway_inflammation",
+              "type": "Pathway",
+              "label": "Airway Inflammation",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            },
+            {
+              "id": "n_bacterial_infection",
+              "type": "Pathway",
+              "label": "Bacterial Infection",
+              "attrs": {
+                "agent": "Proponent"
+              }
+            }
+          ],
+          "add_edges": [
+            {
+              "source": "n_azithromycin",
+              "target": "n_bacterial_infection",
+              "relation": "acts_on",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "已被证实用于呼吸道感染"
+            },
+            {
+              "source": "n_bacterial_infection",
+              "target": "n_non_cf_bronchiectasis",
+              "relation": "involved_in",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "与细菌感染相关"
+            },
+            {
+              "source": "n_airway_inflammation",
+              "target": "n_non_cf_bronchiectasis",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "气道炎症是病理特征之一"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Azithromycin→Bacterial Infection→Non-CF Bronchiectasis 和 Azithromycin→Airway Inflammation→Non-CF Bronchiectasis，形成2条不相交路径"
+      },
+      {
+        "action_ref": 1,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "n_dornase_alfa",
+              "target": "n_increased_mucus_production",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "用于降低粘稠痰液"
+            },
+            {
+              "source": "n_increased_mucus_production",
+              "target": "n_non_cf_bronchiectasis",
+              "relation": "involved_in",
+              "weight": 0.9,
+              "agent": "Proponent",
+              "rationale": "增加痰液生产是疾病表现"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已补齐 Dornase alfa→Increased Mucus Production→Non-CF Bronchiectasis，形成另一独立路径"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

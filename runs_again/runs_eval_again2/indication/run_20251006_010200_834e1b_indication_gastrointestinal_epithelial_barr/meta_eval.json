@@ -1,0 +1,147 @@
+{
+  "subset": "indication",
+  "disease": "Gastrointestinal epithelial barrier disorders",
+  "relation": "indication",
+  "gold_drugs": [
+    "teduglutide"
+  ],
+  "seeds_initial": [
+    "Infliximab",
+    "Mesalazine",
+    "Budesonide",
+    "Azathioprine",
+    "Adalimumab",
+    "Tacrolimus",
+    "Natalizumab",
+    "Vedolizumab",
+    "Methotrexate",
+    "Ustekinumab",
+    "5-Aminosalicylic Acid",
+    "Oral Corticosteroids"
+  ],
+  "seed_history": [
+    [
+      "Infliximab",
+      "Mesalazine",
+      "Budesonide",
+      "Azathioprine",
+      "Adalimumab",
+      "Tacrolimus",
+      "Natalizumab",
+      "Vedolizumab",
+      "Methotrexate",
+      "Ustekinumab",
+      "5-Aminosalicylic Acid",
+      "Oral Corticosteroids"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "score": 0.64,
+        "graph_snapshot_ref": "GE_H1_round3",
+        "key_assumptions": [
+          "良好疗效的已知治疗药物",
+          "潜在不良反应可能会抵消效益"
+        ],
+        "caveats": [
+          "不良反应的风险尚需进一步验证"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_mesalazine",
+          "name": "Mesalazine"
+        },
+        "score": 0.64,
+        "graph_snapshot_ref": "GE_H2_round3",
+        "key_assumptions": [
+          "相关文献支持其用于该表型",
+          "潜在不良反应可能会抵消效益"
+        ],
+        "caveats": [
+          "不良反应的风险尚需进一步验证"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_budesonide",
+          "name": "Budesonide"
+        },
+        "score": 0.63,
+        "graph_snapshot_ref": "GE_H3_round3",
+        "key_assumptions": [
+          "临床应用常见，具有相似用途",
+          "潜在不良反应可能会抵消效益"
+        ],
+        "caveats": [
+          "不良反应的风险尚需进一步验证"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Phenotype (Gastrointestinal epithelial barrier disorders)",
+          "reason": "支持关系的存在，但需克服不良反应风险带来的挑战"
+        }
+      ],
+      "remaining_gaps": [
+        "未能清晰识别不良反应的具体机制及其对治疗效果的影响"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "impact_summary": "为多种候选药物在特定表型中治疗效果提供了文献支持"
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "E",
+            "F"
+          ],
+          "impact_summary": "加强了药物之间的比较与风险评估"
+        }
+      ],
+      "lessons": [
+        "确保对不良反应的风险进行全面评估，避免潜在的干扰",
+        "深入研究不同药物的作用机制以辨别其效用"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "聚焦于药物疗效和潜在不良反应的相互影响"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "提供不良反应的详细机制分析"
+      },
+      {
+        "role": "Explorer",
+        "patch": "探索新候选药物及其特殊机制以提高疗效"
+      }
+    ],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Gastrointestinal epithelial barrier disorders'. Return only names.\n\n# Prior guidance for Explorer:\n- 探索新型药物的潜在机制与风险，避免同质化\n\n# Heuristics:\n- When 炎症性肠病: then 评估各药物的长短期风险效应\n- When 药物作用机制: then 识别每种治疗方案的独特性并探索替代选项"
+}

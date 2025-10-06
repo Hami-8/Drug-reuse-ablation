@@ -1,0 +1,562 @@
+{
+  "input": {
+    "mode": "execute_actions",
+    "query": {
+      "entity": "Non-CF bronchiectasis",
+      "relation": "indication"
+    },
+    "items": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "add_mechanism_link",
+            "from": "Bronchodilators",
+            "via": [
+              "Airway Relaxation",
+              "Respiratory Function Improvement"
+            ],
+            "to": "Symptom Relief",
+            "success_criteria": "形成至少2条不相交路径",
+            "assignee": "Proponent"
+          }
+        ]
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_bronchodilators",
+          "type": "Drug",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_non_cf_bronchiectasis",
+          "type": "Disease",
+          "label": "Non-CF Bronchiectasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_airway_relaxation",
+          "type": "Target",
+          "label": "Airway Relaxation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_airway_inflammation",
+          "type": "Target",
+          "label": "Airway Inflammation",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_respiratory_function",
+          "type": "Pathway",
+          "label": "Respiratory Function Improvement",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_symptom_relief",
+          "type": "Phenotype",
+          "label": "Symptom Relief",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_mucolytics",
+          "type": "Drug",
+          "label": "Mucolytics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_hypertonic_saline",
+          "type": "Drug",
+          "label": "Hypertonic saline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ipratropium",
+          "type": "Drug",
+          "label": "Ipratropium",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_salbutamol",
+          "type": "Drug",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_tobramycin",
+          "type": "Drug",
+          "label": "Tobramycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_levofloxacin",
+          "type": "Drug",
+          "label": "Levofloxacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ambroxol",
+          "type": "Drug",
+          "label": "Ambroxol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_bronchodilators",
+          "type": "Drug",
+          "label": "Bronchodilators",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_antibiotics",
+          "type": "Drug",
+          "label": "Antibiotics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Mucolytics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_mucolytics",
+          "type": "Drug",
+          "label": "Mucolytics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Hypertonic saline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_hypertonic_saline",
+          "type": "Drug",
+          "label": "Hypertonic saline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_dornase_alfa",
+          "type": "Drug",
+          "label": "Dornase alfa",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Ipratropium",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ipratropium",
+          "type": "Drug",
+          "label": "Ipratropium",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_salbutamol",
+          "type": "Drug",
+          "label": "Salbutamol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Tobramycin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_tobramycin",
+          "type": "Drug",
+          "label": "Tobramycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Levofloxacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_levofloxacin",
+          "type": "Drug",
+          "label": "Levofloxacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Ambroxol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "drug_ambroxol",
+          "type": "Drug",
+          "label": "Ambroxol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_bronchodilators",
+          "target": "n_airway_relaxation",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "支撑气道放松的药理作用"
+        },
+        {
+          "source": "n_airway_relaxation",
+          "target": "n_respiratory_function",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "气道放松有助于改善呼吸功能"
+        },
+        {
+          "source": "n_respiratory_function",
+          "target": "n_symptom_relief",
+          "relation": "causes",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "改善呼吸功能可减轻症状"
+        },
+        {
+          "source": "n_bronchodilators",
+          "target": "H1",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "气道放松可支持治疗 Non-CF Bronchiectasis"
+        },
+        {
+          "source": "n_bronchodilators",
+          "target": "n_antibiotics",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能的次要适应症"
+        },
+        {
+          "source": "n_bronchodilators",
+          "target": "n_mucolytics",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能的辅助疗法"
+        },
+        {
+          "source": "n_mucolytics",
+          "target": "n_corticosteroids",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "联合使用可能存在"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "n_hypertonic_saline",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "临床使用间可能产生交互"
+        },
+        {
+          "source": "n_hypertonic_saline",
+          "target": "n_azithromycin",
+          "relation": "indicated_for",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "可能的误用情况"
+        },
+        {
+          "source": "n_azithromycin",
+          "target": "n_dornase_alfa",
+          "relation": "indicated_for",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "临床上或有重叠"
+        },
+        {
+          "source": "n_dornase_alfa",
+          "target": "n_ipratropium",
+          "relation": "indicated_for",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "潜在联合使用"
+        },
+        {
+          "source": "n_ipratropium",
+          "target": "n_salbutamol",
+          "relation": "indicated_for",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "常见联合治疗"
+        },
+        {
+          "source": "n_salbutamol",
+          "target": "n_tobramycin",
+          "relation": "indicated_for",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "联合用药可能"
+        },
+        {
+          "source": "n_tobramycin",
+          "target": "n_levofloxacin",
+          "relation": "indicated_for",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "交替使用可能"
+        },
+        {
+          "source": "n_levofloxacin",
+          "target": "n_ambroxol",
+          "relation": "indicated_for",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "可能的替代治疗"
+        }
+      ],
+      "round_index": 2
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "hypothesis_id": "H1",
+    "executed_actions": [
+      {
+        "action_ref": 0,
+        "status": "done",
+        "graph_updates": {
+          "add_nodes": [],
+          "add_edges": [
+            {
+              "source": "n_bronchodilators",
+              "target": "n_airway_relaxation",
+              "relation": "acts_on",
+              "weight": 0.85,
+              "agent": "Proponent",
+              "rationale": "支撑气道放松的药理作用"
+            },
+            {
+              "source": "n_airway_relaxation",
+              "target": "n_respiratory_function",
+              "relation": "involved_in",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "气道放松有助于改善呼吸功能"
+            },
+            {
+              "source": "n_respiratory_function",
+              "target": "n_symptom_relief",
+              "relation": "causes",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "改善呼吸功能可减轻症状"
+            },
+            {
+              "source": "n_bronchodilators",
+              "target": "n_airway_inflammation",
+              "relation": "acts_on",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "可降低气道炎症"
+            },
+            {
+              "source": "n_airway_inflammation",
+              "target": "n_respiratory_function",
+              "relation": "involved_in",
+              "weight": 0.75,
+              "agent": "Proponent",
+              "rationale": "减少炎症有助于改善呼吸功能"
+            },
+            {
+              "source": "n_airway_inflammation",
+              "target": "n_symptom_relief",
+              "relation": "causes",
+              "weight": 0.7,
+              "agent": "Proponent",
+              "rationale": "减少炎症可帮助缓解症状"
+            },
+            {
+              "source": "n_bronchodilators",
+              "target": "H1",
+              "relation": "supports",
+              "weight": 0.8,
+              "agent": "Proponent",
+              "rationale": "气道放松可支持治疗 Non-CF Bronchiectasis"
+            }
+          ],
+          "merge": [],
+          "set_weights": []
+        },
+        "notes": "已建立2条不相交路径，包括气道放松与气道炎症对症状缓解的影响"
+      }
+    ],
+    "unexecuted_actions": [],
+    "residual_gaps": []
+  }
+}

@@ -1,0 +1,836 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary lymphoedema",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_doxycycline",
+          "name": "Doxycycline"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_sirolimus",
+          "name": "Sirolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_tadalafil",
+          "name": "Tadalafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_pentoxifylline",
+          "name": "Pentoxifylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_benzopyrone",
+          "name": "Benzopyrone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_propranolol",
+          "name": "Propranolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_rivaroxaban",
+          "name": "Rivaroxaban"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_diuretics",
+          "name": "Diuretics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_sodium_chloride",
+          "name": "Sodium chloride"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_vasodilators",
+          "name": "Vasodilators"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_albendazole",
+          "name": "Albendazole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_doxy",
+          "type": "Target",
+          "label": "OffTargetDoxycycline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_doxy",
+          "type": "Pathway",
+          "label": "RiskPathwayDoxy",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_doxy",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeDoxy",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sirolimus",
+          "type": "Target",
+          "label": "OffTargetSirolimus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sirolimus",
+          "type": "Pathway",
+          "label": "RiskPathwaySirolimus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sirolimus",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSirolimus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tadalafil",
+          "type": "Target",
+          "label": "OffTargetTadalafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_tadalafil",
+          "type": "Pathway",
+          "label": "RiskPathwayTadalafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tadalafil",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeTadalafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pentoxifylline",
+          "type": "Target",
+          "label": "OffTargetPentoxifylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_pentoxifylline",
+          "type": "Pathway",
+          "label": "RiskPathwayPentoxifylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_pentoxifylline",
+          "type": "Phenotype",
+          "label": "AdversePhenotypePentoxifylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_benzopyrone",
+          "type": "Target",
+          "label": "OffTargetBenzopyrone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_benzopyrone",
+          "type": "Pathway",
+          "label": "RiskPathwayBenzopyrone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_benzopyrone",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeBenzopyrone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_propranolol",
+          "type": "Target",
+          "label": "OffTargetPropranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_propranolol",
+          "type": "Pathway",
+          "label": "RiskPathwayPropranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_propranolol",
+          "type": "Phenotype",
+          "label": "AdversePhenotypePropranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rivaroxaban",
+          "type": "Target",
+          "label": "OffTargetRivaroxaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rivaroxaban",
+          "type": "Pathway",
+          "label": "RiskPathwayRivaroxaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rivaroxaban",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeRivaroxaban",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_diuretics",
+          "type": "Target",
+          "label": "OffTargetDiuretics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_diuretics",
+          "type": "Pathway",
+          "label": "RiskPathwayDiuretics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_diuretics",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeDiuretics",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_corticosteroids",
+          "type": "Target",
+          "label": "OffTargetCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_corticosteroids",
+          "type": "Pathway",
+          "label": "RiskPathwayCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_corticosteroids",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeCorticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sodium_chloride",
+          "type": "Target",
+          "label": "OffTargetSodiumChloride",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_chloride",
+          "type": "Pathway",
+          "label": "RiskPathwaySodiumChloride",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sodium_chloride",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeSodiumChloride",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_vasodilators",
+          "type": "Target",
+          "label": "OffTargetVasodilators",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_vasodilators",
+          "type": "Pathway",
+          "label": "RiskPathwayVasodilators",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_vasodilators",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeVasodilators",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_albendazole",
+          "type": "Target",
+          "label": "OffTargetAlbendazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_albendazole",
+          "type": "Pathway",
+          "label": "RiskPathwayAlbendazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_albendazole",
+          "type": "Phenotype",
+          "label": "AdversePhenotypeAlbendazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_doxycycline",
+          "target": "n_ot_doxy",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶效果"
+        },
+        {
+          "source": "n_ot_doxy",
+          "target": "n_rp_doxy",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_doxy",
+          "target": "n_adv_doxy",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_doxy",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险证实将否定假设"
+        },
+        {
+          "source": "drug_sirolimus",
+          "target": "n_ot_sirolimus",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶效果"
+        },
+        {
+          "source": "n_ot_sirolimus",
+          "target": "n_rp_sirolimus",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_sirolimus",
+          "target": "n_adv_sirolimus",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_sirolimus",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险证实将否定假设"
+        },
+        {
+          "source": "drug_tadalafil",
+          "target": "n_ot_tadalafil",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶效果"
+        },
+        {
+          "source": "n_ot_tadalafil",
+          "target": "n_rp_tadalafil",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_tadalafil",
+          "target": "n_adv_tadalafil",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_tadalafil",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险证实将否定假设"
+        },
+        {
+          "source": "drug_pentoxifylline",
+          "target": "n_ot_pentoxifylline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶效果"
+        },
+        {
+          "source": "n_ot_pentoxifylline",
+          "target": "n_rp_pentoxifylline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_pentoxifylline",
+          "target": "n_adv_pentoxifylline",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_pentoxifylline",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险证实将否定假设"
+        },
+        {
+          "source": "drug_benzopyrone",
+          "target": "n_ot_benzopyrone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶效果"
+        },
+        {
+          "source": "n_ot_benzopyrone",
+          "target": "n_rp_benzopyrone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_benzopyrone",
+          "target": "n_adv_benzopyrone",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_benzopyrone",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险证实将否定假设"
+        },
+        {
+          "source": "drug_propranolol",
+          "target": "n_ot_propranolol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶效果"
+        },
+        {
+          "source": "n_ot_propranolol",
+          "target": "n_rp_propranolol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_propranolol",
+          "target": "n_adv_propranolol",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_propranolol",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险证实将否定假设"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "n_ot_rivaroxaban",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶效果"
+        },
+        {
+          "source": "n_ot_rivaroxaban",
+          "target": "n_rp_rivaroxaban",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_rivaroxaban",
+          "target": "n_adv_rivaroxaban",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_rivaroxaban",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险证实将否定假设"
+        },
+        {
+          "source": "drug_diuretics",
+          "target": "n_ot_diuretics",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶效果"
+        },
+        {
+          "source": "n_ot_diuretics",
+          "target": "n_rp_diuretics",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_diuretics",
+          "target": "n_adv_diuretics",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_diuretics",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险证实将否定假设"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_corticosteroids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶效果"
+        },
+        {
+          "source": "n_ot_corticosteroids",
+          "target": "n_rp_corticosteroids",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_corticosteroids",
+          "target": "n_adv_corticosteroids",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_corticosteroids",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险证实将否定假设"
+        },
+        {
+          "source": "drug_sodium_chloride",
+          "target": "n_ot_sodium_chloride",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶效果"
+        },
+        {
+          "source": "n_ot_sodium_chloride",
+          "target": "n_rp_sodium_chloride",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_sodium_chloride",
+          "target": "n_adv_sodium_chloride",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_sodium_chloride",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险证实将否定假设"
+        },
+        {
+          "source": "drug_vasodilators",
+          "target": "n_ot_vasodilators",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶效果"
+        },
+        {
+          "source": "n_ot_vasodilators",
+          "target": "n_rp_vasodilators",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_vasodilators",
+          "target": "n_adv_vasodilators",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_vasodilators",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险证实将否定假设"
+        },
+        {
+          "source": "drug_albendazole",
+          "target": "n_ot_albendazole",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶效果"
+        },
+        {
+          "source": "n_ot_albendazole",
+          "target": "n_rp_albendazole",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "潜在风险路径"
+        },
+        {
+          "source": "n_rp_albendazole",
+          "target": "n_adv_albendazole",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良反应"
+        },
+        {
+          "source": "n_adv_albendazole",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "风险证实将否定假设"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "每种药物都可能带来特定的非靶效应，需考虑潜在的不良反应",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "对目标病症的疗效尚无充分临床证据",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions_challenged": [
+      "各种药物的确切作用机制是否涉及主要淋巴水肿",
+      "存在显著的非靶向副作用和相互作用"
+    ],
+    "falsification_tests": [
+      "是否有临床试验结果显示任何药物对主要淋巴水肿的长期益处？",
+      "是否存在大规模病例报告显示特定的不良反应？"
+    ],
+    "next_focus_for_pi": [
+      "要求每种药物的详细副作用以及潜在药物相互作用的信息",
+      "审查现有关于主要淋巴水肿的治疗指南"
+    ]
+  }
+}

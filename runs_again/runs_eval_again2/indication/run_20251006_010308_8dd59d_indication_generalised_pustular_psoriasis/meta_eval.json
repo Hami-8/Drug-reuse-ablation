@@ -1,0 +1,190 @@
+{
+  "subset": "indication",
+  "disease": "Generalised pustular psoriasis",
+  "relation": "indication",
+  "gold_drugs": [
+    "certolizumab pegol",
+    "spesolimab"
+  ],
+  "seeds_initial": [
+    "Infliximab",
+    "Adalimumab",
+    "Apremilast",
+    "Acitretin",
+    "Methotrexate",
+    "Cyclosporine",
+    "Etanercept",
+    "Vedolizumab",
+    "Ustekinumab",
+    "Secukinumab",
+    "Brodalumab",
+    "Tazarotene"
+  ],
+  "seed_history": [
+    [
+      "Infliximab",
+      "Adalimumab",
+      "Apremilast",
+      "Acitretin",
+      "Methotrexate",
+      "Cyclosporine",
+      "Etanercept",
+      "Vedolizumab",
+      "Ustekinumab",
+      "Secukinumab",
+      "Brodalumab",
+      "Tazarotene"
+    ],
+    [
+      "Acitretin",
+      "Adalimumab",
+      "Apremilast",
+      "Brodalumab",
+      "Etanercept",
+      "Guselkumab",
+      "Infliximab",
+      "Ixekizumab",
+      "Methotrexate",
+      "Secukinumab",
+      "Tildrakizumab",
+      "Ustekinumab"
+    ],
+    [
+      "Acitretin",
+      "Adalimumab",
+      "Etanercept",
+      "Infliximab",
+      "Secukinumab",
+      "Ixekizumab",
+      "Austedo",
+      "Methotrexate",
+      "Cyclosporine",
+      "Tildrakizumab",
+      "Brodalumab",
+      "Ustekinumab"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_acitretin",
+          "name": "Acitretin"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Acitretin作用于IL-17A并已被用于治疗",
+          "潜在副作用风险需进一步验证"
+        ],
+        "caveats": [
+          "副作用风险较高，长期效果不明确"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_adalimumab",
+          "name": "Adalimumab"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Adalimumab靶向TNF-alpha以减少炎症",
+          "主要副作用风险需评估"
+        ],
+        "caveats": [
+          "长期疗效与安全性需进一步验证"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_etanercept",
+          "name": "Etanercept"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Etanercept靶向TNF-alpha并用于治疗此病",
+          "副作用风险是否可接受需确认"
+        ],
+        "caveats": [
+          "疗效尚需更多数据支持"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_infliximab",
+          "name": "Infliximab"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H4_round4",
+        "key_assumptions": [
+          "Infliximab通过抑制TNF-alpha发挥作用",
+          "与潜在副作用相关的风险需评估"
+        ],
+        "caveats": [
+          "需进一步验证使用安全性"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H5",
+        "candidate": {
+          "id": "drug_secukinumab",
+          "name": "Secukinumab"
+        },
+        "score": 0.48,
+        "graph_snapshot_ref": "GE_H5_round4",
+        "key_assumptions": [
+          "Secukinumab靶向IL-17A并显示帮助",
+          "副作用风险需明确"
+        ],
+        "caveats": [
+          "疗效与安全性待进一步解析"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Target→Pathway→Disease",
+          "reason": "主要候选药物靶向关键病理途径"
+        }
+      ],
+      "remaining_gaps": [
+        "副作用风险的具体评估",
+        "长期疗效数据不足"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "impact_summary": "帮助识别出有效的靶点"
+        }
+      ],
+      "lessons": [
+        "需优先关注副作用风险的研究",
+        "靶向IL-17A的药物需具备明确的有效性和安全性数据"
+      ]
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Generalised pustular psoriasis'. Return only names.\n\n# Prior guidance for Explorer:\n- 聚焦针对特定表型的药物机理和效果，避免不必要的资源浪费\n\n# Heuristics:\n- When 一般性药物反应: then 关注相关通路与表型适应性，评估效果\n- When 疗效数据缺乏: then 需要结合已有的案例或试验结果进行评估"
+}

@@ -1,0 +1,354 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Distal myopathies",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_doxorubicin",
+          "name": "Doxorubicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_chloroquine",
+          "name": "Chloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_quinine",
+          "name": "Quinine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_gabapentin",
+          "name": "Gabapentin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_vincristine",
+          "name": "Vincristine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_interferon",
+          "name": "Interferon"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_sodium_valproate",
+          "name": "Sodium valproate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_doxorubicin",
+          "type": "Drug",
+          "label": "Doxorubicin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cyclophosphamide",
+          "type": "Drug",
+          "label": "Cyclophosphamide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_chloroquine",
+          "type": "Drug",
+          "label": "Chloroquine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_quinine",
+          "type": "Drug",
+          "label": "Quinine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_gabapentin",
+          "type": "Drug",
+          "label": "Gabapentin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_carbamazepine",
+          "type": "Drug",
+          "label": "Carbamazepine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_vincristine",
+          "type": "Drug",
+          "label": "Vincristine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_interferon",
+          "type": "Drug",
+          "label": "Interferon",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_azathioprine",
+          "type": "Drug",
+          "label": "Azathioprine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_sodium_valproate",
+          "type": "Drug",
+          "label": "Sodium valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_distal_myopathies",
+          "type": "Disease",
+          "label": "Distal myopathies",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_corticosteroids",
+          "target": "n_distal_myopathies",
+          "relation": "inhibits",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "相关文献显示可能影响肌肉功能"
+        },
+        {
+          "source": "n_statins",
+          "target": "n_distal_myopathies",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "与肌肉损伤相关性"
+        },
+        {
+          "source": "n_doxorubicin",
+          "target": "n_distal_myopathies",
+          "relation": "inhibits",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "已知对肌肉有毒性"
+        },
+        {
+          "source": "n_cyclophosphamide",
+          "target": "n_distal_myopathies",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "可能影响肌肉功能"
+        },
+        {
+          "source": "n_chloroquine",
+          "target": "n_distal_myopathies",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "与肌肉损伤相关"
+        },
+        {
+          "source": "n_quinine",
+          "target": "n_distal_myopathies",
+          "relation": "inhibits",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "可能造成肌肉不适"
+        },
+        {
+          "source": "n_gabapentin",
+          "target": "n_distal_myopathies",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "副作用可能影响肌肉"
+        },
+        {
+          "source": "n_carbamazepine",
+          "target": "n_distal_myopathies",
+          "relation": "inhibits",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "与肌肉疲劳相关"
+        },
+        {
+          "source": "n_vincristine",
+          "target": "n_distal_myopathies",
+          "relation": "inhibits",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "已知对神经和肌肉的影响"
+        },
+        {
+          "source": "n_interferon",
+          "target": "n_distal_myopathies",
+          "relation": "inhibits",
+          "weight": 0.35,
+          "agent": "Proponent",
+          "rationale": "可能引起肌肉问题"
+        },
+        {
+          "source": "n_azathioprine",
+          "target": "n_distal_myopathies",
+          "relation": "inhibits",
+          "weight": 0.3,
+          "agent": "Proponent",
+          "rationale": "与肌肉毒性相关"
+        },
+        {
+          "source": "n_sodium_valproate",
+          "target": "n_distal_myopathies",
+          "relation": "inhibits",
+          "weight": 0.25,
+          "agent": "Proponent",
+          "rationale": "可能影响肌肉功能"
+        }
+      ]
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "多种药物可能对 distal myopathies 有负面影响",
+        "confidence": "medium"
+      }
+    ],
+    "assumptions": [
+      "这些药物在使用中有可能引起肌肉问题"
+    ],
+    "uncertainties": [
+      "个体差异对药物反应的影响尚未充分验证"
+    ],
+    "next_focus_for_pi": [
+      "需要进一步探索每种药物对 distal myopathies 的具体影响"
+    ]
+  }
+}

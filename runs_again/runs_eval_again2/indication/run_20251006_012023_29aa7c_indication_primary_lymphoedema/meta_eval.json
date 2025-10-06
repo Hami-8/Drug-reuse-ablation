@@ -1,0 +1,130 @@
+{
+  "subset": "indication",
+  "disease": "Primary lymphoedema",
+  "relation": "indication",
+  "gold_drugs": [
+    "chemotherapy"
+  ],
+  "seeds_initial": [
+    "Doxycycline",
+    "Sirolimus",
+    "Tadalafil",
+    "Pentoxifylline",
+    "Benzopyrone",
+    "Propranolol",
+    "Rivaroxaban",
+    "Diuretics",
+    "Corticosteroids",
+    "Sodium chloride",
+    "Vasodilators",
+    "Albendazole"
+  ],
+  "seed_history": [
+    [
+      "Doxycycline",
+      "Sirolimus",
+      "Tadalafil",
+      "Pentoxifylline",
+      "Benzopyrone",
+      "Propranolol",
+      "Rivaroxaban",
+      "Diuretics",
+      "Corticosteroids",
+      "Sodium chloride",
+      "Vasodilators",
+      "Albendazole"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_doxycycline",
+          "name": "Doxycycline"
+        },
+        "score": 0.76,
+        "graph_snapshot_ref": "GE_H1_round5",
+        "key_assumptions": [
+          "MOA→淋巴系统→淋巴调节通路链闭合",
+          "PK/BBB 可达性足够"
+        ],
+        "caveats": [
+          "安全性与长期疗效不明"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_sirolimus",
+          "name": "Sirolimus"
+        },
+        "score": 0.75,
+        "graph_snapshot_ref": "GE_H2_round5",
+        "key_assumptions": [
+          "MOA→淋巴系统→淋巴调节通路链闭合",
+          "PK/BBB 可达性足够"
+        ],
+        "caveats": [
+          "安全性与长期疗效不明"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Lymphatic System→Lymphatic Regulation Pathway→Primary Lymphoedema",
+          "reason": "机制闭环且有不相交备援路径"
+        }
+      ],
+      "remaining_gaps": [
+        "冲突热点的短期/长期效应差异未消解"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "impact_summary": "补齐了通路 X，path_disjointness↑"
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "E",
+            "F"
+          ],
+          "impact_summary": "安全性冲突仍高，建议剪枝"
+        }
+      ],
+      "lessons": [
+        "安全性主导的负面分值，需引入人群/PK 友好的替代类别",
+        "当机制连通性普遍缺失时，优先引入作用位点/通路不同的候选"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "优先构造≥2条不相交的机制路径；合并同义机制节点，减少稀释。"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "对安全性主题给出可证伪的最小事实点，并用高权重 refutes 边显式标注。"
+      },
+      {
+        "role": "Explorer",
+        "patch": "保持与 query.entity/relation 一致；去重；优先覆盖新的作用机制/组织定位；避免重复已存在候选。"
+      }
+    ],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Primary lymphoedema'. Return only names.\n\n# Heuristics:\n- When 淋巴水肿表型: then 重点关注药物引起的不良反应，确保有效性与安全性并重"
+}

@@ -1,0 +1,974 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Atypical haemolytic uraemic syndrome",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_eculizumab",
+          "name": "Eculizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ravulizumab",
+          "name": "Ravulizumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_avacopan",
+          "name": "Avacopan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_c5_inhibitor",
+          "name": "C5 Inhibitor"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_plasmapheresis",
+          "name": "Plasmapheresis"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_rituximab",
+          "name": "Rituximab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_tacrolimus",
+          "name": "Tacrolimus"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_complement_inhibitors",
+          "name": "Complement inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_eltrombopag",
+          "name": "Eltrombopag"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.69,
+        "components": {
+          "mechanism_fit": 0.85,
+          "class_prior": 0.65,
+          "pk_pd_feasibility": 0.7,
+          "indication_plausibility": 0.68,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.12,
+          "conflict_penalty": 0.06
+        },
+        "graph_signals": {
+          "support_weight": 1.55,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Eculizumab 通过补体抑制作用于该病"
+          ],
+          "safety_risk": [
+            "Skeptic 指出支持性证据不足以确认长期疗效"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.67,
+        "components": {
+          "mechanism_fit": 0.82,
+          "class_prior": 0.65,
+          "pk_pd_feasibility": 0.65,
+          "indication_plausibility": 0.65,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.06
+        },
+        "graph_signals": {
+          "support_weight": 1.45,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Ravulizumab 作为补体抑制剂与Eculizumab相似机制"
+          ],
+          "safety_risk": [
+            "潜在相同风险路线导致治疗效果不确定"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.64,
+        "components": {
+          "mechanism_fit": 0.78,
+          "class_prior": 0.6,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.65,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 1.2,
+          "contradiction_weight": 0.75,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Avacopan 通过调节补体途径作用于该疾病"
+          ],
+          "safety_risk": [
+            "缺乏长时间跟踪效果的研究"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.63,
+        "components": {
+          "mechanism_fit": 0.78,
+          "class_prior": 0.58,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.65,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.1,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 1.2,
+          "contradiction_weight": 0.75,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "C5 Inhibitor直接靶向补体系统"
+          ],
+          "safety_risk": [
+            "可能存在耐药或反跳现象"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.6,
+        "components": {
+          "mechanism_fit": 0.75,
+          "class_prior": 0.55,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.62,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.08,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 1.0,
+          "contradiction_weight": 0.7,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Corticosteroids常用于控制炎症"
+          ],
+          "safety_risk": [
+            "短期效益可能伴随长期风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.58,
+        "components": {
+          "mechanism_fit": 0.72,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.6,
+          "indication_plausibility": 0.6,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.08,
+          "conflict_penalty": 0.06
+        },
+        "graph_signals": {
+          "support_weight": 0.9,
+          "contradiction_weight": 0.68,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Plasmapheresis用于清除有害成分"
+          ],
+          "safety_risk": [
+            "疗效依赖于具体疾病表型"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.55,
+        "components": {
+          "mechanism_fit": 0.65,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.55,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.08,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.6,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Cyclosporine用于免疫调节"
+          ],
+          "safety_risk": [
+            "与常见共病存在潜在冲突"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.53,
+        "components": {
+          "mechanism_fit": 0.6,
+          "class_prior": 0.45,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.52,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.07,
+          "conflict_penalty": 0.05
+        },
+        "graph_signals": {
+          "support_weight": 0.75,
+          "contradiction_weight": 0.55,
+          "mechanistic_connectivity": true,
+          "path_disjointness": 2,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Rituximab可能改变疾病过程"
+          ],
+          "safety_risk": [
+            "缺乏针对该病症的全面临床数据"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.5,
+        "components": {
+          "mechanism_fit": 0.58,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.5,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.06,
+          "conflict_penalty": 0.04
+        },
+        "graph_signals": {
+          "support_weight": 0.7,
+          "contradiction_weight": 0.5,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Mycophenolate mofetil用于控制免疫反应"
+          ],
+          "safety_risk": [
+            "可能导致免疫抑制效果相关风险"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.48,
+        "components": {
+          "mechanism_fit": 0.55,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.48,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.06,
+          "conflict_penalty": 0.04
+        },
+        "graph_signals": {
+          "support_weight": 0.65,
+          "contradiction_weight": 0.45,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Tacrolimus作为免疫抑制剂"
+          ],
+          "safety_risk": [
+            "疗效依赖于剂量和个体反应"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.45,
+        "components": {
+          "mechanism_fit": 0.52,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.46,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.04
+        },
+        "graph_signals": {
+          "support_weight": 0.6,
+          "contradiction_weight": 0.45,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Complement inhibitors涉及该疾病"
+          ],
+          "safety_risk": [
+            "机制不明确，治疗链不清晰"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.4,
+        "components": {
+          "mechanism_fit": 0.45,
+          "class_prior": 0.4,
+          "pk_pd_feasibility": 0.5,
+          "indication_plausibility": 0.42,
+          "safety_risk": 0.2,
+          "graph_bonus": 0.04,
+          "conflict_penalty": 0.03
+        },
+        "graph_signals": {
+          "support_weight": 0.5,
+          "contradiction_weight": 0.4,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Eltrombopag理论上支持相关问题的管理"
+          ],
+          "safety_risk": [
+            "缺乏临床试验数据，疗效待证实"
+          ]
+        },
+        "confidence": "medium",
+        "uncertainties": []
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_ravulizumab",
+          "type": "Drug",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_avacopan",
+          "type": "Drug",
+          "label": "Avacopan",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_c5_inhibitor",
+          "type": "Drug",
+          "label": "C5 Inhibitor",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_complement_inhibitors",
+          "type": "Drug",
+          "label": "Complement inhibitors",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_eltrombopag",
+          "type": "Drug",
+          "label": "Eltrombopag",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "d_a_h_u_s",
+          "type": "Disease",
+          "label": "Atypical haemolytic uraemic syndrome",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_eculizumab",
+          "type": "Drug",
+          "label": "Eculizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ravulizumab",
+          "type": "Drug",
+          "label": "Ravulizumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_avacopan",
+          "type": "Drug",
+          "label": "Avacopan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_c5_inhibitor",
+          "type": "Drug",
+          "label": "C5 Inhibitor",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_corticosteroids",
+          "type": "Drug",
+          "label": "Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_plasmapheresis",
+          "type": "Drug",
+          "label": "Plasmapheresis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rituximab",
+          "type": "Drug",
+          "label": "Rituximab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_mycophenolate_mofetil",
+          "type": "Drug",
+          "label": "Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_tacrolimus",
+          "type": "Drug",
+          "label": "Tacrolimus",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_complement_inhibitors",
+          "type": "Drug",
+          "label": "Complement inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_eltrombopag",
+          "type": "Drug",
+          "label": "Eltrombopag",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_eculizumab",
+          "target": "d_a_h_u_s",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "已知炎症及补体抑制作用于此病"
+        },
+        {
+          "source": "drug_ravulizumab",
+          "target": "d_a_h_u_s",
+          "relation": "acts_on",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "与Eculizumab相似的补体抑制机制"
+        },
+        {
+          "source": "drug_avacopan",
+          "target": "d_a_h_u_s",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "调节补体途径，针对该疾病的理论基础"
+        },
+        {
+          "source": "drug_c5_inhibitor",
+          "target": "d_a_h_u_s",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "直接靶向补体系统"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "d_a_h_u_s",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "类固醇在控制炎症中常用"
+        },
+        {
+          "source": "drug_plasmapheresis",
+          "target": "d_a_h_u_s",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "清除血液中的有害成分"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "d_a_h_u_s",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "在免疫调节中应用"
+        },
+        {
+          "source": "drug_rituximab",
+          "target": "d_a_h_u_s",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "抗B细胞疗法可影响疾病过程"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "d_a_h_u_s",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于控制免疫反应的药物"
+        },
+        {
+          "source": "drug_tacrolimus",
+          "target": "d_a_h_u_s",
+          "relation": "acts_on",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "免疫抑制剂用于慢性病"
+        },
+        {
+          "source": "drug_complement_inhibitors",
+          "target": "d_a_h_u_s",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "补体抑制剂与疾病相关"
+        },
+        {
+          "source": "drug_eltrombopag",
+          "target": "d_a_h_u_s",
+          "relation": "acts_on",
+          "weight": 0.45,
+          "agent": "Proponent",
+          "rationale": "理论上支持输血相关问题的管理"
+        },
+        {
+          "source": "n_eculizumab",
+          "target": "H1",
+          "relation": "indicates",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "支持性证据不足以确认疗效"
+        },
+        {
+          "source": "n_ravulizumab",
+          "target": "H2",
+          "relation": "indicates",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "潜在相同风险路线对治疗效果不确定"
+        },
+        {
+          "source": "n_avacopan",
+          "target": "H3",
+          "relation": "indicates",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "缺乏长时间跟踪效果的研究"
+        },
+        {
+          "source": "n_c5_inhibitor",
+          "target": "H4",
+          "relation": "indicates",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "可能存在耐药或反跳现象"
+        },
+        {
+          "source": "n_corticosteroids",
+          "target": "H5",
+          "relation": "indicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "短期效益可能伴随长期风险"
+        },
+        {
+          "source": "n_plasmapheresis",
+          "target": "H6",
+          "relation": "indicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "疗效依赖于具体疾病表型"
+        },
+        {
+          "source": "n_cyclosporine",
+          "target": "H7",
+          "relation": "indicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与常见共病存在潜在冲突"
+        },
+        {
+          "source": "n_rituximab",
+          "target": "H8",
+          "relation": "indicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "缺乏针对该病症的全面临床数据"
+        },
+        {
+          "source": "n_mycophenolate_mofetil",
+          "target": "H9",
+          "relation": "indicates",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能导致免疫抑制效应相关风险"
+        },
+        {
+          "source": "n_tacrolimus",
+          "target": "H10",
+          "relation": "indicates",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "疗效依赖于剂量和个体反应"
+        },
+        {
+          "source": "n_complement_inhibitors",
+          "target": "H11",
+          "relation": "indicates",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "机制不明确，治疗链不清晰"
+        },
+        {
+          "source": "n_eltrombopag",
+          "target": "H12",
+          "relation": "indicates",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "缺乏临床试验数据，疗效待证实"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65
+    },
+    "heuristic_priors": []
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_eculizumab",
+          "name": "Eculizumab"
+        },
+        "score": 0.69,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Eculizumab通过补体抑制作用于aHUS",
+          "支持性证据可确认短期疗效"
+        ],
+        "caveats": [
+          "长期疗效尚未确立"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_ravulizumab",
+          "name": "Ravulizumab"
+        },
+        "score": 0.67,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Ravulizumab作为补体抑制剂与Eculizumab具有相似机制"
+        ],
+        "caveats": [
+          "潜在相同风险路线导致治疗效果不确定"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_avacopan",
+          "name": "Avacopan"
+        },
+        "score": 0.64,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Avacopan通过调节补体途径作用于该疾病"
+        ],
+        "caveats": [
+          "缺乏长期跟踪效果的研究"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Eculizumab与Ravulizumab通过补体抑制途径作用于aHUS",
+          "reason": "已知机制与有效性支持"
+        }
+      ],
+      "remaining_gaps": [
+        "各假设的长期疗效和安全性数据尚需补充"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": [
+        "需优先考虑具有明确机制并有支持性循证的候选药物"
+      ]
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "subset": "contraindication",
+  "disease": "Limb girdle muscular dystrophy",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "arry-371797",
+    "ascorbic acid",
+    "atyr1940",
+    "bay63-2521) + riociguat (adempas",
+    "bbp-418",
+    "coenzyme q10 + lisinopril",
+    "corticosteroid",
+    "cyclophosphamide",
+    "deflazacort",
+    "doxorubicin",
+    "frovatriptan",
+    "glucocorticoid",
+    "lenalidomide",
+    "myo-029",
+    "pf 06252616",
+    "pf-07265803",
+    "prednisone",
+    "raavrh74.mhck7.dysf.dv",
+    "rituximab",
+    "srp-9004",
+    "vincristine"
+  ],
+  "seeds_initial": [
+    "Corticosteroids",
+    "Dantrolene",
+    "Quinidine",
+    "Repaglinide",
+    "Simvastatin",
+    "Verapamil",
+    "Gemfibrozil",
+    "Fluconazole",
+    "Propranolol",
+    "Cimetidine",
+    "Furosemide",
+    "Ibuprofen"
+  ],
+  "seed_history": [
+    [
+      "Corticosteroids",
+      "Dantrolene",
+      "Quinidine",
+      "Repaglinide",
+      "Simvastatin",
+      "Verapamil",
+      "Gemfibrozil",
+      "Fluconazole",
+      "Propranolol",
+      "Cimetidine",
+      "Furosemide",
+      "Ibuprofen"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "score": 0.67,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Corticosteroids可能导致肌肉恶化",
+          "安全性风险未能有效克服"
+        ],
+        "caveats": [
+          "潜在副作用可能影响疗效",
+          "与疾病表现之间的因果关系仍需验证"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_dantrolene",
+          "name": "Dantrolene"
+        },
+        "score": 0.65,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Dantrolene可能加重肌肉功能障碍",
+          "安全性问题强调需谨慎使用"
+        ],
+        "caveats": [
+          "还需进一步的临床数据支持其使用"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_quinidine",
+          "name": "Quinidine"
+        },
+        "score": 0.62,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Quinidine可能影响肌肉收缩",
+          "需警惕心肌毒性"
+        ],
+        "caveats": [
+          "缺乏针对LGMD的具体临床研究"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_repaglinide",
+          "name": "Repaglinide"
+        },
+        "score": 0.6,
+        "graph_snapshot_ref": "GE_H4_round4",
+        "key_assumptions": [
+          "Repaglinide对肌肉代谢有潜在影响",
+          "涉及风险需进一步评估"
+        ],
+        "caveats": [
+          "临床证据不足以支持其安全性"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Disease (Corticosteroids→Limb girdle muscular dystrophy)",
+          "reason": "机制归因明确，但安全性问题需要进一步澄清"
+        }
+      ],
+      "remaining_gaps": [
+        "需进一步验证药物的长期使用及其副作用"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "impact_summary": "种子引入了潜在的药物候选，提升了整体理解"
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "E",
+            "F"
+          ],
+          "impact_summary": "补充了相关机制节点，但安全性问题依旧突出"
+        }
+      ],
+      "lessons": [
+        "关注药物的副作用及其对特定患者群体的影响",
+        "确保药物使用安全性与效果的平衡"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "尽量补充与副作用相关的机制信息，以支持假设"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "强调需要具体证据支持药物对LGMD影响的有效性"
+      },
+      {
+        "role": "Explorer",
+        "patch": "关注安全性相关的文献，以获取更多候选信息"
+      }
+    ],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that are contraindicated or could worsen the rare disease 'Limb girdle muscular dystrophy'. Return only names.\n\n# Prior guidance for Explorer:\n- 探索可替代药物或不同作用机制，以减少同类药物的重叠\n\n# Heuristics:\n- When 肌肉疾病相关: then 评估所有药物的长期风险及获益"
+}

@@ -1,0 +1,1621 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Severe hypertriglyceridaemia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_omega_3_fatty_acids",
+          "name": "Omega-3 fatty acids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_fibrates",
+          "name": "Fibrates"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_estrogen",
+          "name": "Estrogen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_thiazide_diuretics",
+          "name": "Thiazide diuretics"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_propofol",
+          "name": "Propofol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_glucocorticoids",
+          "name": "Glucocorticoids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_aminophylline",
+          "name": "Aminophylline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_isotretinoin",
+          "name": "Isotretinoin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.12,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "存在潜在的降脂机制，但在现有证据中缺乏明确路径"
+          ],
+          "safety_risk": [
+            "Skeptic 提到可能的风险，尤其是 AdverseOutcomeFenofibrate"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏直接证据连接药物与高甘油三酯血症影响"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.12,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "尽管 Gemfibrozil 显示出对甘油三酯的影响，但连接证据较弱"
+          ],
+          "safety_risk": [
+            "Skeptic 认为其可能导致不良结果，反驳了治疗效益"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏直接的临床证据来强调对疾病的影响"
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.12,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Niacin 有潜在的脂质调节机制，缺乏明确的支持数据"
+          ],
+          "safety_risk": [
+            "存在 Skeptic 提出的安全风险以及潜在的不良结果"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "与该疾病的直接相关性及其机制尚不清楚"
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.12,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Omega-3 脂肪酸显示出潜在的降脂作用，但证据支撑不足"
+          ],
+          "safety_risk": [
+            "Skeptic 提到的副作用对于药物应用形成质疑"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏紧密的机制连接及其在临床上的应用案例"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.12,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "作为类别的 fibrates 显示了多样性，但连接性差别较大"
+          ],
+          "safety_risk": [
+            "可能产生不良后果，Skeptic 的质疑使得其效能打折"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "不同药物作为一个类别的整体评估需要更多数据"
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.12,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "雌激素的代谢作用复杂，与降脂效果的直接关系不明确"
+          ],
+          "safety_risk": [
+            "Skeptic 认为可能的副作用进一步降低用途"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏强有力的证据来支撑其作用机制"
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.12,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "噻嗪类利尿剂对脂质代谢的影响存在争议，证据不足"
+          ],
+          "safety_risk": [
+            "存在 Skeptic 的反对意见，导致用途受到质疑"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "临床实践中的效益和风险不明确"
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.12,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Beta-blockers 的直接作用机制对甘油三酯的影响尚缺乏明确证据"
+          ],
+          "safety_risk": [
+            "Skeptic 提出的副作用可能抵消治疗效益，存在争议"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏有效支持其在该疾病指征中的使用"
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.12,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "对脂质代谢的影响存疑，尚需更多研究"
+          ],
+          "safety_risk": [
+            "Skeptic 强调潜在的不良后果，影响使用安全性"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺少实质性证据支撑其在降脂中的作用"
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.12,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "糖皮质激素影响脂肪代谢，但缺乏直接证据支持其指征"
+          ],
+          "safety_risk": [
+            "Skeptic 质疑其用于高甘油三酯的安全性"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "临床应用及其风险评估不够明确"
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.12,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Aminophylline 对脂质代谢的作用缺乏研究支持"
+          ],
+          "safety_risk": [
+            "存在 Skeptic 的意见反对其使用安全性"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏可靠的直接影响证据"
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.12,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.2,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.9,
+          "graph_bonus": 0,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 1.5,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 0,
+          "conflict_hotspots": []
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "异维A酸对脂质的影响仍不清晰，缺乏足够证据"
+          ],
+          "safety_risk": [
+            "Skeptic 提出的安全风险难以忽视"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "对该疾病直接影响的不确定性"
+        ]
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_gemfibrozil",
+          "type": "Drug",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_niacin",
+          "type": "Drug",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_omega_3_fatty_acids",
+          "type": "Drug",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fibrates",
+          "type": "Drug",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_estrogen",
+          "type": "Drug",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thiazide_diuretics",
+          "type": "Drug",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_propofol",
+          "type": "Drug",
+          "label": "Propofol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_glucocorticoids",
+          "type": "Drug",
+          "label": "Glucocorticoids",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_aminophylline",
+          "type": "Drug",
+          "label": "Aminophylline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_isotretinoin",
+          "type": "Drug",
+          "label": "Isotretinoin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_lipid_metabolism",
+          "type": "Target",
+          "label": "Lipid Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_lipid_regulation",
+          "type": "Pathway",
+          "label": "Lipid Regulation Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_severe_hypertriglyceridaemia",
+          "type": "Disease",
+          "label": "Severe Hypertriglyceridaemia",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_fenofibrate",
+          "type": "Target",
+          "label": "OffTargetFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fenofibrate",
+          "type": "Pathway",
+          "label": "RiskPathwayFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fenofibrate",
+          "type": "Phenotype",
+          "label": "AdverseOutcomeFenofibrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_gemfibrozil",
+          "type": "Target",
+          "label": "OffTargetGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_gemfibrozil",
+          "type": "Pathway",
+          "label": "RiskPathwayGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_gemfibrozil",
+          "type": "Phenotype",
+          "label": "AdverseOutcomeGemfibrozil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_niacin",
+          "type": "Target",
+          "label": "OffTargetNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_niacin",
+          "type": "Pathway",
+          "label": "RiskPathwayNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_niacin",
+          "type": "Phenotype",
+          "label": "AdverseOutcomeNiacin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_omega3",
+          "type": "Target",
+          "label": "OffTargetOmega3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_omega3",
+          "type": "Pathway",
+          "label": "RiskPathwayOmega3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_omega3",
+          "type": "Phenotype",
+          "label": "AdverseOutcomeOmega3",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fibrates",
+          "type": "Target",
+          "label": "OffTargetFibrates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fibrates",
+          "type": "Pathway",
+          "label": "RiskPathwayFibrates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fibrates",
+          "type": "Phenotype",
+          "label": "AdverseOutcomeFibrates",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_estrogen",
+          "type": "Target",
+          "label": "OffTargetEstrogen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_estrogen",
+          "type": "Pathway",
+          "label": "RiskPathwayEstrogen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_estrogen",
+          "type": "Phenotype",
+          "label": "AdverseOutcomeEstrogen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_thiazide",
+          "type": "Target",
+          "label": "OffTargetThiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_thiazide",
+          "type": "Pathway",
+          "label": "RiskPathwayThiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_thiazide",
+          "type": "Phenotype",
+          "label": "AdverseOutcomeThiazide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_beta_blockers",
+          "type": "Target",
+          "label": "OffTargetBetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_beta_blockers",
+          "type": "Pathway",
+          "label": "RiskPathwayBetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_beta_blockers",
+          "type": "Phenotype",
+          "label": "AdverseOutcomeBetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_propofol",
+          "type": "Target",
+          "label": "OffTargetPropofol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_propofol",
+          "type": "Pathway",
+          "label": "RiskPathwayPropofol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_propofol",
+          "type": "Phenotype",
+          "label": "AdverseOutcomePropofol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_glucocorticoids",
+          "type": "Target",
+          "label": "OffTargetGlucocorticoids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_glucocorticoids",
+          "type": "Pathway",
+          "label": "RiskPathwayGlucocorticoids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_glucocorticoids",
+          "type": "Phenotype",
+          "label": "AdverseOutcomeGlucocorticoids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aminophylline",
+          "type": "Target",
+          "label": "OffTargetAminophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_aminophylline",
+          "type": "Pathway",
+          "label": "RiskPathwayAminophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_aminophylline",
+          "type": "Phenotype",
+          "label": "AdverseOutcomeAminophylline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_isotretinoin",
+          "type": "Target",
+          "label": "OffTargetIsotretinoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_isotretinoin",
+          "type": "Pathway",
+          "label": "RiskPathwayIsotretinoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_isotretinoin",
+          "type": "Phenotype",
+          "label": "AdverseOutcomeIsotretinoin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "H1",
+          "type": "Hypothesis",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H2",
+          "type": "Hypothesis",
+          "label": "Gemfibrozil",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H3",
+          "type": "Hypothesis",
+          "label": "Niacin",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H4",
+          "type": "Hypothesis",
+          "label": "Omega-3 fatty acids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H5",
+          "type": "Hypothesis",
+          "label": "Fibrates",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H6",
+          "type": "Hypothesis",
+          "label": "Estrogen",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H7",
+          "type": "Hypothesis",
+          "label": "Thiazide diuretics",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H8",
+          "type": "Hypothesis",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H9",
+          "type": "Hypothesis",
+          "label": "Propofol",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H10",
+          "type": "Hypothesis",
+          "label": "Glucocorticoids",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H11",
+          "type": "Hypothesis",
+          "label": "Aminophylline",
+          "attrs": {
+            "agent": "PI"
+          }
+        },
+        {
+          "id": "H12",
+          "type": "Hypothesis",
+          "label": "Isotretinoin",
+          "attrs": {
+            "agent": "PI"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_fenofibrate",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Fenofibrate已证明对脂质代谢有影响"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Gemfibrozil对甘油三酯有显著降解作用"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Niacin已知可影响脂质水平"
+        },
+        {
+          "source": "drug_omega_3_fatty_acids",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "Omega-3脂肪酸显示出降低甘油三酯的能力"
+        },
+        {
+          "source": "drug_fibrates",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "Fibrates是降脂治疗的标准药物"
+        },
+        {
+          "source": "drug_estrogen",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "雌激素与脂质代谢存在相关性"
+        },
+        {
+          "source": "drug_thiazide_diuretics",
+          "target": "target_lipid_metabolism",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "噻嗪类利尿剂可影响脂质代谢"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "target_lipid_metabolism",
+          "relation": "inhibits",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "Beta-blockers已知会对脂肪酸氧化产生影响"
+        },
+        {
+          "source": "drug_propofol",
+          "target": "target_lipid_metabolism",
+          "relation": "inhibits",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "丙泊酚对脂质代谢的影响尚需进一步验证"
+        },
+        {
+          "source": "drug_glucocorticoids",
+          "target": "target_lipid_metabolism",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "糖皮质激素已被证明会影响脂类"
+        },
+        {
+          "source": "drug_aminophylline",
+          "target": "target_lipid_metabolism",
+          "relation": "inhibits",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "Aminophylline的具体作用机制尚不清楚"
+        },
+        {
+          "source": "drug_isotretinoin",
+          "target": "target_lipid_metabolism",
+          "relation": "inhibits",
+          "weight": 0.4,
+          "agent": "Proponent",
+          "rationale": "异维A酸对脂质代谢的影响需要更多研究"
+        },
+        {
+          "source": "target_lipid_metabolism",
+          "target": "pathway_lipid_regulation",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "脂质代谢参与脂质调节通路"
+        },
+        {
+          "source": "pathway_lipid_regulation",
+          "target": "disease_severe_hypertriglyceridaemia",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "脂质调节通路与重度高甘油三酯血症存在关联"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "n_ot_fenofibrate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响靶器官"
+        },
+        {
+          "source": "n_ot_fenofibrate",
+          "target": "n_rp_fenofibrate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_fenofibrate",
+          "target": "n_adv_fenofibrate",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_fenofibrate",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_gemfibrozil",
+          "target": "n_ot_gemfibrozil",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响靶器官"
+        },
+        {
+          "source": "n_ot_gemfibrozil",
+          "target": "n_rp_gemfibrozil",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_gemfibrozil",
+          "target": "n_adv_gemfibrozil",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_gemfibrozil",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_niacin",
+          "target": "n_ot_niacin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响靶器官"
+        },
+        {
+          "source": "n_ot_niacin",
+          "target": "n_rp_niacin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_niacin",
+          "target": "n_adv_niacin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_niacin",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_omega_3_fatty_acids",
+          "target": "n_ot_omega3",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响靶器官"
+        },
+        {
+          "source": "n_ot_omega3",
+          "target": "n_rp_omega3",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_omega3",
+          "target": "n_adv_omega3",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_omega3",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_fibrates",
+          "target": "n_ot_fibrates",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响靶器官"
+        },
+        {
+          "source": "n_ot_fibrates",
+          "target": "n_rp_fibrates",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_fibrates",
+          "target": "n_adv_fibrates",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_fibrates",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_estrogen",
+          "target": "n_ot_estrogen",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响靶器官"
+        },
+        {
+          "source": "n_ot_estrogen",
+          "target": "n_rp_estrogen",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_estrogen",
+          "target": "n_adv_estrogen",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_estrogen",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_thiazide_diuretics",
+          "target": "n_ot_thiazide",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响靶器官"
+        },
+        {
+          "source": "n_ot_thiazide",
+          "target": "n_rp_thiazide",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_thiazide",
+          "target": "n_adv_thiazide",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_thiazide",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_ot_beta_blockers",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响靶器官"
+        },
+        {
+          "source": "n_ot_beta_blockers",
+          "target": "n_rp_beta_blockers",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_beta_blockers",
+          "target": "n_adv_beta_blockers",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_beta_blockers",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_propofol",
+          "target": "n_ot_propofol",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响靶器官"
+        },
+        {
+          "source": "n_ot_propofol",
+          "target": "n_rp_propofol",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_propofol",
+          "target": "n_adv_propofol",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_propofol",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_glucocorticoids",
+          "target": "n_ot_glucocorticoids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响靶器官"
+        },
+        {
+          "source": "n_ot_glucocorticoids",
+          "target": "n_rp_glucocorticoids",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_glucocorticoids",
+          "target": "n_adv_glucocorticoids",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_glucocorticoids",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_aminophylline",
+          "target": "n_ot_aminophylline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响靶器官"
+        },
+        {
+          "source": "n_ot_aminophylline",
+          "target": "n_rp_aminophylline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_aminophylline",
+          "target": "n_adv_aminophylline",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_aminophylline",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        },
+        {
+          "source": "drug_isotretinoin",
+          "target": "n_ot_isotretinoin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响靶器官"
+        },
+        {
+          "source": "n_ot_isotretinoin",
+          "target": "n_rp_isotretinoin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "风险通路关联"
+        },
+        {
+          "source": "n_rp_isotretinoin",
+          "target": "n_adv_isotretinoin",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_isotretinoin",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若该风险成立，将抵消净获益"
+        }
+      ],
+      "round_index": 2
+    },
+    "history": {
+      "round": 2
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65
+    },
+    "heuristic_priors": []
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "score": 0.12,
+        "graph_snapshot_ref": "GE_H1_round2",
+        "key_assumptions": [
+          "潜在的降脂机制与高甘油三酯血症的关联性较弱",
+          "可能的安全性风险影响其有效性"
+        ],
+        "caveats": [
+          "缺乏有力的直接证据支持其用于重度高甘油三酯血症的应用"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "score": 0.12,
+        "graph_snapshot_ref": "GE_H2_round2",
+        "key_assumptions": [
+          "尽管有降脂作用，但安全性问题显著"
+        ],
+        "caveats": [
+          "与重度高甘油三酯血症的直接相关性不足"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "score": 0.12,
+        "graph_snapshot_ref": "GE_H3_round2",
+        "key_assumptions": [
+          "潜在的脂质调节机制尚需明确"
+        ],
+        "caveats": [
+          "安全性风险及疗效的不确定性"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug → Lipid Metabolism → Lipid Regulation Pathway → Severe Hypertriglyceridaemia",
+          "reason": "机制链条缺失，安全性问题加剧"
+        }
+      ],
+      "remaining_gaps": [
+        "针对每个候选药物缺少有效的支持性证据与临床关联"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [],
+          "impact_summary": "未能补齐机制链，所有候选均未有效支撑"
+        }
+      ],
+      "lessons": [
+        "注重候选药物的机制证据与安全性评估，尤其是与疗效直接相关的临床数据"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "提供更强有力的临床证据支持降低高甘油三酯血症的潜力"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "明确标出潜在的不良结果和安全性风险"
+      }
+    ],
+    "heuristics": []
+  }
+}

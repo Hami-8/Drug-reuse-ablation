@@ -1,0 +1,420 @@
+{
+  "input": {
+    "mode": "build_chain",
+    "query": {
+      "entity": "Osteogenesis imperfecta",
+      "relation": "indication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_bisphosphonates",
+          "name": "Bisphosphonates"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_teriparatide",
+          "name": "Teriparatide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_denosumab",
+          "name": "Denosumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_calcitonin",
+          "name": "Calcitonin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_pamidronate",
+          "name": "Pamidronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_zoledronic_acid",
+          "name": "Zoledronic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_risedronate",
+          "name": "Risedronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_alendronate",
+          "name": "Alendronate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_lanthanum_carbonate",
+          "name": "Lanthanum carbonate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_strontium_ranelate",
+          "name": "Strontium ranelate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_growth_hormone",
+          "name": "Growth hormone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_thyroid_hormone",
+          "name": "Thyroid hormone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 3
+    },
+    "constraints": {
+      "require_disjoint_paths": 2,
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "drug_bisphosphonates",
+          "type": "Drug",
+          "label": "Bisphosphonates",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_teriparatide",
+          "type": "Drug",
+          "label": "Teriparatide",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_denosumab",
+          "type": "Drug",
+          "label": "Denosumab",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_calcitonin",
+          "type": "Drug",
+          "label": "Calcitonin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_pamidronate",
+          "type": "Drug",
+          "label": "Pamidronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_zoledronic_acid",
+          "type": "Drug",
+          "label": "Zoledronic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_risedronate",
+          "type": "Drug",
+          "label": "Risedronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_alendronate",
+          "type": "Drug",
+          "label": "Alendronate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_lanthanum_carbonate",
+          "type": "Drug",
+          "label": "Lanthanum carbonate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_strontium_ranelate",
+          "type": "Drug",
+          "label": "Strontium ranelate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_growth_hormone",
+          "type": "Drug",
+          "label": "Growth hormone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_thyroid_hormone",
+          "type": "Drug",
+          "label": "Thyroid hormone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_bone_metabolism",
+          "type": "Target",
+          "label": "Bone Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_bone_health",
+          "type": "Pathway",
+          "label": "Bone Health Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_osteogenesis_imperfecta",
+          "type": "Disease",
+          "label": "Osteogenesis Imperfecta",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_bone_density",
+          "type": "Phenotype",
+          "label": "Bone Density Improvement",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_fracture_reduction",
+          "type": "Phenotype",
+          "label": "Fracture Risk Reduction",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_bisphosphonates",
+          "target": "target_bone_metabolism",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "传统用于骨代谢相关疾病"
+        },
+        {
+          "source": "drug_teriparatide",
+          "target": "target_bone_metabolism",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "促进骨形成的常用药物"
+        },
+        {
+          "source": "drug_denosumab",
+          "target": "target_bone_metabolism",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "抑制骨吸收的抗体治疗"
+        },
+        {
+          "source": "drug_calcitonin",
+          "target": "target_bone_metabolism",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "用于调节骨代谢的激素"
+        },
+        {
+          "source": "drug_pamidronate",
+          "target": "target_bone_metabolism",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "双膦酸盐家族成员"
+        },
+        {
+          "source": "drug_zoledronic_acid",
+          "target": "target_bone_metabolism",
+          "relation": "acts_on",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "用于骨质疏松治疗的双膦酸盐"
+        },
+        {
+          "source": "drug_risedronate",
+          "target": "target_bone_metabolism",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "影响骨代谢的药物"
+        },
+        {
+          "source": "drug_alendronate",
+          "target": "target_bone_metabolism",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "用于提升骨密度的药物"
+        },
+        {
+          "source": "drug_lanthanum_carbonate",
+          "target": "target_bone_metabolism",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "用于慢性肾病伴骨矿代谢异常的药物"
+        },
+        {
+          "source": "drug_strontium_ranelate",
+          "target": "target_bone_metabolism",
+          "relation": "acts_on",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "通过增强骨形成来改善骨质量"
+        },
+        {
+          "source": "drug_growth_hormone",
+          "target": "target_bone_metabolism",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "促进生长和骨健康的激素"
+        },
+        {
+          "source": "drug_thyroid_hormone",
+          "target": "target_bone_metabolism",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "影响骨代谢的内分泌因子"
+        },
+        {
+          "source": "target_bone_metabolism",
+          "target": "pathway_bone_health",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "与骨健康相关的通路"
+        },
+        {
+          "source": "pathway_bone_health",
+          "target": "disease_osteogenesis_imperfecta",
+          "relation": "involved_in",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "影响疾病表型的通路"
+        },
+        {
+          "source": "pathway_bone_health",
+          "target": "phenotype_bone_density",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "改善骨密度的效果"
+        },
+        {
+          "source": "pathway_bone_health",
+          "target": "phenotype_fracture_reduction",
+          "relation": "causes",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "降低骨折风险的效果"
+        }
+      ],
+      "merge": [],
+      "set_weights": []
+    },
+    "subconclusions": [
+      {
+        "id": "C1",
+        "text": "不同药物通过靶向骨代谢路径影响骨质疏松症的表型，并适合用于骨质疏松症治疗。",
+        "confidence": "high"
+      }
+    ],
+    "assumptions": [
+      "药物具备到达骨组织的有效浓度（常识判断）"
+    ],
+    "uncertainties": [
+      "长期效果和具体适应症需进一步验证"
+    ],
+    "next_focus_for_pi": [
+      "是否需要进一步挖掘其他非肽类骨健康药物的潜力？"
+    ]
+  }
+}

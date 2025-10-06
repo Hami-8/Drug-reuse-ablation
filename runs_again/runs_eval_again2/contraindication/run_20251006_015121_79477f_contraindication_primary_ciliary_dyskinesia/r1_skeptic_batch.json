@@ -1,0 +1,505 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_montelukast",
+          "name": "Montelukast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_timolol",
+          "name": "Timolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_dexamethasone",
+          "name": "Dexamethasone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_aspirin",
+          "name": "Aspirin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_naproxen",
+          "name": "Naproxen"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_ace_inhibitors",
+          "name": "ACE inhibitors"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_albuterol",
+          "name": "Albuterol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_codeine",
+          "name": "Codeine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_morphine",
+          "name": "Morphine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_pc",
+          "type": "Disease",
+          "label": "Primary ciliary dyskinesia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_azithromycin",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_montelukast",
+          "type": "Drug",
+          "label": "Montelukast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_timolol",
+          "type": "Drug",
+          "label": "Timolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_dexamethasone",
+          "type": "Drug",
+          "label": "Dexamethasone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ibuprofen",
+          "type": "Drug",
+          "label": "Ibuprofen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_naproxen",
+          "type": "Drug",
+          "label": "Naproxen",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_beta_blockers",
+          "type": "Drug",
+          "label": "Beta-blockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ace_inhibitors",
+          "type": "Drug",
+          "label": "ACE inhibitors",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_albuterol",
+          "type": "Drug",
+          "label": "Albuterol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_codeine",
+          "type": "Drug",
+          "label": "Codeine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_morphine",
+          "type": "Drug",
+          "label": "Morphine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot",
+          "type": "Target",
+          "label": "OffTargetX",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp1",
+          "type": "Pathway",
+          "label": "RiskPathway1",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp2",
+          "type": "Pathway",
+          "label": "RiskPathway2",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotype",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "n_azithromycin",
+          "target": "n_pc",
+          "relation": "contraindicates",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能加重呼吸道症状"
+        },
+        {
+          "source": "n_montelukast",
+          "target": "n_pc",
+          "relation": "contraindicates",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能产生反应性气道问题"
+        },
+        {
+          "source": "n_timolol",
+          "target": "n_pc",
+          "relation": "contraindicates",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "对气道平滑肌产生反向作用"
+        },
+        {
+          "source": "n_dexamethasone",
+          "target": "n_pc",
+          "relation": "contraindicates",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "抑制免疫反应可能引发感染"
+        },
+        {
+          "source": "n_aspirin",
+          "target": "n_pc",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致气道不稳定或出血"
+        },
+        {
+          "source": "n_ibuprofen",
+          "target": "n_pc",
+          "relation": "contraindicates",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与呼吸道反应相关"
+        },
+        {
+          "source": "n_naproxen",
+          "target": "n_pc",
+          "relation": "contraindicates",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能影响气道的安全性"
+        },
+        {
+          "source": "n_beta_blockers",
+          "target": "n_pc",
+          "relation": "contraindicates",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能引发气道收缩"
+        },
+        {
+          "source": "n_ace_inhibitors",
+          "target": "n_pc",
+          "relation": "contraindicates",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "可能引发咳嗽或加重呼吸道症状"
+        },
+        {
+          "source": "n_albuterol",
+          "target": "n_pc",
+          "relation": "contraindicates",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "可能导致不良气道反应"
+        },
+        {
+          "source": "n_codeine",
+          "target": "n_pc",
+          "relation": "contraindicates",
+          "weight": 0.55,
+          "agent": "Skeptic",
+          "rationale": "可能影响呼吸功能"
+        },
+        {
+          "source": "n_morphine",
+          "target": "n_pc",
+          "relation": "contraindicates",
+          "weight": 0.55,
+          "agent": "Skeptic",
+          "rationale": "可能导致呼吸抑制"
+        },
+        {
+          "source": "n_ot",
+          "target": "n_rp1",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与可能的风险通路相关"
+        },
+        {
+          "source": "n_rp1",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能引发不良表型"
+        },
+        {
+          "source": "n_rp2",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能引发另一个风险环路"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能无益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能无益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能无益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能无益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能无益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能无益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能无益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能无益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能无益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能无益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能无益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，可能无益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [],
+    "assumptions_challenged": [
+      "所有药物在此病症下的安全性是否经过充分验证",
+      "可能的药物与病理机制的相互作用是否被低估"
+    ],
+    "falsification_tests": [
+      "是否存在明确的临床试验数据支持上述药物的使用安全性",
+      "呼吸道反应是否在临床上被广泛记录并验证"
+    ],
+    "next_focus_for_pi": [
+      "要求 Proponent 提供安全性的临床证据",
+      "要求进一步阐明禁忌的分子机制和临床相关性"
+    ]
+  }
+}

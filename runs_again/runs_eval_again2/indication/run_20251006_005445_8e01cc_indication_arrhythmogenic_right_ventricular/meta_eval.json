@@ -1,0 +1,140 @@
+{
+  "subset": "indication",
+  "disease": "Arrhythmogenic Right Ventricular Cardiomyopathy",
+  "relation": "indication",
+  "gold_drugs": [
+    "flecainide pill"
+  ],
+  "seeds_initial": [
+    "Sotalol",
+    "Amiodarone",
+    "Dofetilide",
+    "Beta-Blockers",
+    "Flecainide",
+    "Propafenone",
+    "Digoxin",
+    "Ivabradine",
+    "Lisinopril",
+    "Carvedilol",
+    "Atenolol",
+    "Dexamethasone"
+  ],
+  "seed_history": [
+    [
+      "Sotalol",
+      "Amiodarone",
+      "Dofetilide",
+      "Beta-Blockers",
+      "Flecainide",
+      "Propafenone",
+      "Digoxin",
+      "Ivabradine",
+      "Lisinopril",
+      "Carvedilol",
+      "Atenolol",
+      "Dexamethasone"
+    ],
+    [
+      "Sotalol",
+      "Dronedarone",
+      "Amiodarone",
+      "Procainamide",
+      "Flecainide",
+      "Beta-Blockers",
+      "Adenosine",
+      "Digoxin",
+      "Quinidine",
+      "Ivabradine",
+      "Mexiletine",
+      "Disopyramide"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_sotalol",
+          "name": "Sotalol"
+        },
+        "score": 0.73,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "作用于离子通道并改善心脏电生理",
+          "支持与不良反应的关联待进一步评估"
+        ],
+        "caveats": [
+          "潜在的不良反应风险需明确",
+          "靶点相似性可能导致相互作用"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_dronedarone",
+          "name": "Dronedarone"
+        },
+        "score": 0.69,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "调节离子通道的机制支持电生理改善",
+          "需注意潜在不良效应"
+        ],
+        "caveats": [
+          "需要更多临床数据支持其靶点效果"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_amiodarone",
+          "name": "Amiodarone"
+        },
+        "score": 0.65,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "影响β-肾上腺素受体支持心脏电生理稳定",
+          "需确认长期疗效及适应症"
+        ],
+        "caveats": [
+          "潜在安全隐患需重视"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Target (Ion Channels)→Pathway→Disease (Arrhythmogenic Right Ventricular Cardiomyopathy)",
+          "reason": "机制与心脏电生理关联明确，高支持权重的证据链"
+        }
+      ],
+      "remaining_gaps": [
+        "安全性问题关联多个药物，需进一步验证和明确"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": []
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "需更多研究以明确安全性和潜在不良反应"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "关注靶点交叉与不良反应的临床后果"
+      },
+      {
+        "role": "Explorer",
+        "patch": "优先关注新型药物的独特机制，以避免重复性"
+      }
+    ],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Arrhythmogenic Right Ventricular Cardiomyopathy'. Return only names.\n\n# Prior guidance for Explorer:\n- 保持较强的安全性与有效性验证，为后续药物再评估提供基础\n\n# Heuristics:\n- When 心律失常患者: then 评估药物的长期疗效与安全性需同步进行\n- When 新药物引入: then 明确其机制及主要副作用，确保有可靠的临床支持"
+}

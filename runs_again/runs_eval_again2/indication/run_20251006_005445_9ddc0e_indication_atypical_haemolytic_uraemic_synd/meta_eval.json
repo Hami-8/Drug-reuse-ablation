@@ -1,0 +1,126 @@
+{
+  "subset": "indication",
+  "disease": "Atypical haemolytic uraemic syndrome",
+  "relation": "indication",
+  "gold_drugs": [
+    "eculizumab"
+  ],
+  "seeds_initial": [
+    "Eculizumab",
+    "Ravulizumab",
+    "Plasma exchange",
+    "Complement Inhibitors",
+    "Supportive care",
+    "Acanthopanax",
+    "Tolvaptan",
+    "Corticosteroids",
+    "Immunosuppressants",
+    "Antiplatelet drugs",
+    "Cytokine inhibitors",
+    "Anticoagulants"
+  ],
+  "seed_history": [
+    [
+      "Eculizumab",
+      "Ravulizumab",
+      "Plasma exchange",
+      "Complement Inhibitors",
+      "Supportive care",
+      "Acanthopanax",
+      "Tolvaptan",
+      "Corticosteroids",
+      "Immunosuppressants",
+      "Antiplatelet drugs",
+      "Cytokine inhibitors",
+      "Anticoagulants"
+    ],
+    [
+      "Eculizumab",
+      "Ravulizumab",
+      "Avacopan",
+      "C5 Inhibitor",
+      "Corticosteroids",
+      "Plasmapheresis",
+      "Cyclosporine",
+      "Rituximab",
+      "Mycophenolate mofetil",
+      "Tacrolimus",
+      "Complement inhibitors",
+      "Eltrombopag"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_eculizumab",
+          "name": "Eculizumab"
+        },
+        "score": 0.69,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Eculizumab通过补体抑制作用于aHUS",
+          "支持性证据可确认短期疗效"
+        ],
+        "caveats": [
+          "长期疗效尚未确立"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_ravulizumab",
+          "name": "Ravulizumab"
+        },
+        "score": 0.67,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Ravulizumab作为补体抑制剂与Eculizumab具有相似机制"
+        ],
+        "caveats": [
+          "潜在相同风险路线导致治疗效果不确定"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_avacopan",
+          "name": "Avacopan"
+        },
+        "score": 0.64,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Avacopan通过调节补体途径作用于该疾病"
+        ],
+        "caveats": [
+          "缺乏长期跟踪效果的研究"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Eculizumab与Ravulizumab通过补体抑制途径作用于aHUS",
+          "reason": "已知机制与有效性支持"
+        }
+      ],
+      "remaining_gaps": [
+        "各假设的长期疗效和安全性数据尚需补充"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": [
+        "需优先考虑具有明确机制并有支持性循证的候选药物"
+      ]
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Atypical haemolytic uraemic syndrome'. Return only names.\n\n# Heuristics:\n- When Atypical haemolytic uraemic syndrome: then 重点关注补体抑制与免疫机制的相互作用"
+}

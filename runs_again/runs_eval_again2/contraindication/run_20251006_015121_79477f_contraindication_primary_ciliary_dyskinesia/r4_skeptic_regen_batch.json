@@ -1,0 +1,563 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Primary ciliary dyskinesia",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_aminoglycosides",
+          "name": "Aminoglycosides"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_beta_blockers",
+          "name": "Beta-blockers"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_clarithromycin",
+          "name": "Clarithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_dextromethorphan",
+          "name": "Dextromethorphan"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_metformin",
+          "name": "Metformin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_nivolumab",
+          "name": "Nivolumab"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_nsaids",
+          "name": "NSAIDs"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_propranolol",
+          "name": "Propranolol"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_rifampicin",
+          "name": "Rifampicin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_sulfonamides",
+          "name": "Sulfonamides"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_verapamil",
+          "name": "Verapamil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_zafirlukast",
+          "name": "Zafirlukast"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 4
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_aminoglycosides",
+          "type": "Target",
+          "label": "OffTarget_Aminoglycosides",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_beta_blockers",
+          "type": "Target",
+          "label": "OffTarget_BetaBlockers",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_clarithromycin",
+          "type": "Target",
+          "label": "OffTarget_Clarithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dextromethorphan",
+          "type": "Target",
+          "label": "OffTarget_Dextromethorphan",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_metformin",
+          "type": "Target",
+          "label": "OffTarget_Metformin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nivolumab",
+          "type": "Target",
+          "label": "OffTarget_Nivolumab",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_nsaids",
+          "type": "Target",
+          "label": "OffTarget_NSAIDs",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_propranolol",
+          "type": "Target",
+          "label": "OffTarget_Propranolol",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rifampicin",
+          "type": "Target",
+          "label": "OffTarget_Rifampicin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sulfonamides",
+          "type": "Target",
+          "label": "OffTarget_Sulfonamides",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_verapamil",
+          "type": "Target",
+          "label": "OffTarget_Verapamil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_zafirlukast",
+          "type": "Target",
+          "label": "OffTarget_Zafirlukast",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "RiskPathway_AdverseEffects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "AdversePhenotype_PrimaryCiliaryDyskinesia",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_aminoglycosides",
+          "target": "n_ot_aminoglycosides",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "可能导致耳毒性，影响呼吸功能"
+        },
+        {
+          "source": "drug_beta_blockers",
+          "target": "n_ot_beta_blockers",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能导致支气管收缩"
+        },
+        {
+          "source": "drug_clarithromycin",
+          "target": "n_ot_clarithromycin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能造成气道感染加重"
+        },
+        {
+          "source": "drug_dextromethorphan",
+          "target": "n_ot_dextromethorphan",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响黏液排出"
+        },
+        {
+          "source": "drug_metformin",
+          "target": "n_ot_metformin",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "潜在影响呼吸代谢"
+        },
+        {
+          "source": "drug_nivolumab",
+          "target": "n_ot_nivolumab",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响免疫反应"
+        },
+        {
+          "source": "drug_nsaids",
+          "target": "n_ot_nsaids",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能增加呼吸道不良反应"
+        },
+        {
+          "source": "drug_propranolol",
+          "target": "n_ot_propranolol",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响支气管功能"
+        },
+        {
+          "source": "drug_rifampicin",
+          "target": "n_ot_rifampicin",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "影响药物代谢"
+        },
+        {
+          "source": "drug_sulfonamides",
+          "target": "n_ot_sulfonamides",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能导致过敏反应"
+        },
+        {
+          "source": "drug_verapamil",
+          "target": "n_ot_verapamil",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能造成呼吸抑制"
+        },
+        {
+          "source": "drug_zafirlukast",
+          "target": "n_ot_zafirlukast",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "可能影响气道反应"
+        },
+        {
+          "source": "n_ot_aminoglycosides",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "关联耳毒性与呼吸功能问题"
+        },
+        {
+          "source": "n_ot_beta_blockers",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与支气管收缩相关"
+        },
+        {
+          "source": "n_ot_clarithromycin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与气道感染关系"
+        },
+        {
+          "source": "n_ot_dextromethorphan",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与黏液排出困难有关"
+        },
+        {
+          "source": "n_ot_metformin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "与代谢影响相关"
+        },
+        {
+          "source": "n_ot_nivolumab",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与免疫反应关联"
+        },
+        {
+          "source": "n_ot_nsaids",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与呼吸道症状相关"
+        },
+        {
+          "source": "n_ot_propranolol",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "支气管功能影响"
+        },
+        {
+          "source": "n_ot_rifampicin",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "药物代谢干扰"
+        },
+        {
+          "source": "n_ot_sulfonamides",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "过敏反应相关"
+        },
+        {
+          "source": "n_ot_verapamil",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "呼吸抑制风险"
+        },
+        {
+          "source": "n_ot_zafirlukast",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "气道反应风险"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致主要纤毛功能障碍"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消阿米卡星的获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消β受体拮抗剂的获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "若风险成立，将抵消克拉霉素的获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "若风险成立，将抵消右美沙芬的获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "若风险成立，将抵消二甲双胍的获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "若风险成立，将抵消尼伏单抗的获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若风险成立，将抵消NSAIDs的获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "若风险成立，将抵消普萘洛尔的获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "若风险成立，将抵消利福平的获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "若风险成立，将抵消磺胺类药物的获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "若风险成立，将抵消维拉帕米的获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "若风险成立，将抵消扎菲卢卡斯的获益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": []
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "所有列出的药物可能引发与主要纤毛功能障碍相关的不良事件。",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "这些药物的作用机制可能涉及气道功能影响，需谨慎使用。",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "所有药物的安全性是否足以用于原纤毛功能障碍患者",
+      "潜在不良反应是否被充分考虑"
+    ],
+    "falsification_tests": [
+      "是否有临床数据支持这些药物在纤毛功能障碍患者中的安全性？",
+      "是否有证据表明这些药物能改善症状而不加重病情？"
+    ],
+    "next_focus_for_pi": [
+      "提供临床试验数据以支持使用这些药物的安全性",
+      "考虑进一步的机制研究以明确这些药物在此人群中的作用"
+    ]
+  }
+}

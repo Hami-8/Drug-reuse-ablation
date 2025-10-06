@@ -1,0 +1,110 @@
+{
+  "subset": "contraindication",
+  "disease": "Bardet-Biedl Syndrome",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "administered subcutaneously [sc] + once daily. + setmelanotide",
+    "metformin",
+    "setmelanotide"
+  ],
+  "seeds_initial": [
+    "Ibuprofen",
+    "Digoxin",
+    "Acetazolamide",
+    "Naproxen",
+    "Gentamicin",
+    "Thiazide Diuretics",
+    "Propranolol",
+    "Methotrexate",
+    "Sodium Chloride",
+    "Fluoroquinolones",
+    "Lithium",
+    "Amiodarone"
+  ],
+  "seed_history": [
+    [
+      "Ibuprofen",
+      "Digoxin",
+      "Acetazolamide",
+      "Naproxen",
+      "Gentamicin",
+      "Thiazide Diuretics",
+      "Propranolol",
+      "Methotrexate",
+      "Sodium Chloride",
+      "Fluoroquinolones",
+      "Lithium",
+      "Amiodarone"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_ibuprofen",
+          "name": "Ibuprofen"
+        },
+        "score": 0.68,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Ibuprofen 被确认与 Bardet-Biedl Syndrome 之间存在禁忌关系",
+          "潜在的副作用风险已被识别"
+        ],
+        "caveats": [
+          "可能风险需进一步分析以确认其临床意义"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_digoxin",
+          "name": "Digoxin"
+        },
+        "score": 0.68,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Digoxin 被确认与 Bardet-Biedl Syndrome 之间存在禁忌关系",
+          "潜在的副作用风险已被识别"
+        ],
+        "caveats": [
+          "可能风险需进一步分析以确认其临床意义"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_acetazolamide",
+          "name": "Acetazolamide"
+        },
+        "score": 0.62,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Acetazolamide 被确认与 Bardet-Biedl Syndrome 之间存在禁忌关系",
+          "可能影响电解质平衡的风险已被识别"
+        ],
+        "caveats": [
+          "可能风险需进一步分析以确认其临床意义"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Disease (contraindication) → Adverse Phenotype",
+          "reason": "所有推荐药物存在已知的禁忌关系，且与不良表型相关联"
+        }
+      ],
+      "remaining_gaps": [
+        "需更详细的临床样本数据支持每种药物的安全性评估"
+      ]
+    },
+    "heuristics": [],
+    "prompt_patches": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that are contraindicated or could worsen the rare disease 'Bardet-Biedl Syndrome'. Return only names.\n\n# Prior guidance for Explorer:\n- 扩展对现有药物的机制解释，考虑更广范围的适用性与效果\n\n# Heuristics:\n- When Bardet-Biedl Syndrome患者: then 应优先考虑避免可能加重肾功能的药物"
+}

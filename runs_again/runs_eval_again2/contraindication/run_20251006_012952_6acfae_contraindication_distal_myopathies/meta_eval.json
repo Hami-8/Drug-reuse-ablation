@@ -1,0 +1,160 @@
+{
+  "subset": "contraindication",
+  "disease": "Distal myopathies",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "aceneuramic acid extended-release",
+    "aceneuramic acid extended-release tablets",
+    "cyproheptadine",
+    "danicamtiv",
+    "dexamethasone",
+    "immune globulin",
+    "liposomal bupivacaine",
+    "mannac",
+    "npc-09",
+    "npc-09 placebo",
+    "placebo for cyproheptadine",
+    "sa-er",
+    "sa-ir",
+    "sialic acid extended release",
+    "sialic acid extended release tables",
+    "sialic acid extended release tablets",
+    "tranexamic acid"
+  ],
+  "seeds_initial": [
+    "Corticosteroids",
+    "Statins",
+    "Doxorubicin",
+    "Cyclophosphamide",
+    "Chloroquine",
+    "Quinine",
+    "Gabapentin",
+    "Carbamazepine",
+    "Vincristine",
+    "Interferon",
+    "Azathioprine",
+    "Sodium valproate"
+  ],
+  "seed_history": [
+    [
+      "Corticosteroids",
+      "Statins",
+      "Doxorubicin",
+      "Cyclophosphamide",
+      "Chloroquine",
+      "Quinine",
+      "Gabapentin",
+      "Carbamazepine",
+      "Vincristine",
+      "Interferon",
+      "Azathioprine",
+      "Sodium valproate"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "score": 0.68,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Corticosteroids 通过抑制肌肉功能影响 Distal myopathies",
+          "安全性风险需进一步确认"
+        ],
+        "caveats": [
+          "需明确长期使用对肌肉的具体影响"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_statins",
+          "name": "Statins"
+        },
+        "score": 0.64,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Statins 可能与肌肉损伤相关",
+          "需更深入了解与 Distal myopathies 的临床关联"
+        ],
+        "caveats": [
+          "安全性数据尚待验证"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_doxorubicin",
+          "name": "Doxorubicin"
+        },
+        "score": 0.61,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Doxorubicin 与 Distal myopathies 的抑制路径已建立",
+          "需评估相关肌肉毒性"
+        ],
+        "caveats": [
+          "长期安全性问题仍需关注"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "score": 0.59,
+        "graph_snapshot_ref": "GE_H4_round4",
+        "key_assumptions": [
+          "Cyclophosphamide 可能影响肌肉功能",
+          "需 Skeptic 证实对肌肉功能的不良影响"
+        ],
+        "caveats": [
+          "未知长期影响"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Corticosteroids→Distal myopathies",
+          "reason": "一致性由多条支持路径验证"
+        },
+        {
+          "pattern": "Statins→Distal myopathies",
+          "reason": "存在明确的抑制作用路径"
+        }
+      ],
+      "remaining_gaps": [
+        "需要对各候选药物的安全性进行进一步的定量分析"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "Corticosteroids"
+          ],
+          "impact_summary": "奠定了 Distal myopathies 的安全性/疗效基础"
+        }
+      ],
+      "lessons": [
+        "不同药物的安全性及功效需长期跟踪监测",
+        "对于潜在抑制作用需引入临床证据以加以证实"
+      ]
+    },
+    "prompt_patches": [],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that are contraindicated or could worsen the rare disease 'Distal myopathies'. Return only names.\n\n# Heuristics:\n- When 针对肌肉相关疾病: then 优先评估药物的长期安全性与潜在副作用"
+}

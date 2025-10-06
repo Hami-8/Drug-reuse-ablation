@@ -1,0 +1,135 @@
+{
+  "subset": "indication",
+  "disease": "Primary ciliary dyskinesia",
+  "relation": "indication",
+  "gold_drugs": [
+    "albuterol",
+    "vx-371"
+  ],
+  "seeds_initial": [
+    "Dornase alfa",
+    "Azithromycin",
+    "N-acetylcysteine",
+    "Ceratain",
+    "Salbutamol",
+    "Prednisone",
+    "Montelukast",
+    "Fluticasone",
+    "Ipratropium",
+    "Ranitidine",
+    "Albuterol",
+    "Terbutaline"
+  ],
+  "seed_history": [
+    [
+      "Dornase alfa",
+      "Azithromycin",
+      "N-acetylcysteine",
+      "Ceratain",
+      "Salbutamol",
+      "Prednisone",
+      "Montelukast",
+      "Fluticasone",
+      "Ipratropium",
+      "Ranitidine",
+      "Albuterol",
+      "Terbutaline"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_dornase_alfa",
+          "name": "Dornase alfa"
+        },
+        "score": 0.67,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "机制支持与风险通路存在冲突"
+        ],
+        "caveats": [
+          "安全性与潜在不良反应需进一步评估"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "score": 0.56,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "有效机制支持与潜在反应需评估"
+        ],
+        "caveats": [
+          "缺乏长期使用的安全性数据"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_n_acetylcysteine",
+          "name": "N-acetylcysteine"
+        },
+        "score": 0.55,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "稀释机制支持与反应需评估"
+        ],
+        "caveats": [
+          "安全使用与疗效数据匮乏"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_ceratain",
+          "name": "Ceratain"
+        },
+        "score": 0.53,
+        "graph_snapshot_ref": "GE_H4_round4",
+        "key_assumptions": [
+          "相关靶点与通路有一定机制支持"
+        ],
+        "caveats": [
+          "机制有效性仍需探索"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Target→Pathway→Disease",
+          "reason": "机制与靶点支持，但需检讨风险通路"
+        }
+      ],
+      "remaining_gaps": [
+        "风险通路与疗效关系不明确"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "通过补充证据支持风险通路的可靠性"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "强调长期安全性与剂量调整方面的数据不足"
+      },
+      {
+        "role": "Explorer",
+        "patch": "优先选择机制更为明确且临床证据充分的候选药物"
+      }
+    ],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Primary ciliary dyskinesia'. Return only names.\n\n# Prior guidance for Explorer:\n- 增加多样化候选药物，特别是在影响机制上，避免重复已有的候选。\n\n# Heuristics:\n- When 针对实施的新药物: then 明确不良反应风险，应纳入持续监测。\n- When 当前候选药物存在风险: then 必须在评估其疗效时，考虑不良表现对治疗的影响。"
+}

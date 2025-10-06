@@ -1,0 +1,1721 @@
+{
+  "input": {
+    "mode": "report_and_evolve",
+    "query": {
+      "entity": "Neonatal cholestasis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_cholic_acid",
+          "name": "Cholic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_ursodeoxycholic_acid",
+          "name": "Ursodeoxycholic acid"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_metronidazole",
+          "name": "Metronidazole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_rifampin",
+          "name": "Rifampin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_tetracycline",
+          "name": "Tetracycline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_erythromycin",
+          "name": "Erythromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_azithromycin",
+          "name": "Azithromycin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_fluconazole",
+          "name": "Fluconazole"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_cyclosporine",
+          "name": "Cyclosporine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_sodium_phenylbutyrate",
+          "name": "Sodium phenylbutyrate"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "scores": [
+      {
+        "hypothesis_id": "H1",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects of Cholic acid in neonatal cholestasis",
+              "pro": [
+                "n_h1"
+              ],
+              "con": [
+                "n_adv_cholic"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Cholic acid 可能影响胆汁酸代谢，理论上支持该假设。"
+          ],
+          "safety_risk": [
+            "可能导致不良表型，如胆汁淤积加重。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏更明确的机制连接和支持证据。"
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects of Ursodeoxycholic acid in neonatal cholestasis",
+              "pro": [
+                "n_h2"
+              ],
+              "con": [
+                "n_adv_ursodeoxycholic"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Ursodeoxycholic acid 可能影响胆汁排泄，理论上支持该假设。"
+          ],
+          "safety_risk": [
+            "可能导致不良表型，如胆汁淤积加重。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏更明确的机制连接和支持证据。"
+        ]
+      },
+      {
+        "hypothesis_id": "H3",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects of Sildenafil in neonatal cholestasis",
+              "pro": [
+                "n_h3"
+              ],
+              "con": [
+                "n_adv_sildenafil"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Sildenafil 可能影响胆汁排泄，理论上支持该假设。"
+          ],
+          "safety_risk": [
+            "可能导致不良表型，如胆汁淤积加重。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏更明确的机制连接和支持证据。"
+        ]
+      },
+      {
+        "hypothesis_id": "H4",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects of Metronidazole in neonatal cholestasis",
+              "pro": [
+                "n_h4"
+              ],
+              "con": [
+                "n_adv_metronidazole"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Metronidazole 可能影响肝脏功能，理论上支持该假设。"
+          ],
+          "safety_risk": [
+            "可能导致不良表型，如胆汁淤积加重。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏更明确的机制连接和支持证据。"
+        ]
+      },
+      {
+        "hypothesis_id": "H5",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects of Rifampin in neonatal cholestasis",
+              "pro": [
+                "n_h5"
+              ],
+              "con": [
+                "n_adv_rifampin"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Rifampin 可能影响肝脏功能，理论上支持该假设。"
+          ],
+          "safety_risk": [
+            "可能导致不良表型，如胆汁淤积加重。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏更明确的机制连接和支持证据。"
+        ]
+      },
+      {
+        "hypothesis_id": "H6",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects of Tetracycline in neonatal cholestasis",
+              "pro": [
+                "n_h6"
+              ],
+              "con": [
+                "n_adv_tetracycline"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Tetracycline 可能影响肝脏功能，理论上支持该假设。"
+          ],
+          "safety_risk": [
+            "可能导致不良表型，如胆汁淤积加重。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏更明确的机制连接和支持证据。"
+        ]
+      },
+      {
+        "hypothesis_id": "H7",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects of Erythromycin in neonatal cholestasis",
+              "pro": [
+                "n_h7"
+              ],
+              "con": [
+                "n_adv_erythromycin"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Erythromycin 可能影响肝脏功能，理论上支持该假设。"
+          ],
+          "safety_risk": [
+            "可能导致不良表型，如胆汁淤积加重。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏更明确的机制连接和支持证据。"
+        ]
+      },
+      {
+        "hypothesis_id": "H8",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects of Azithromycin in neonatal cholestasis",
+              "pro": [
+                "n_h8"
+              ],
+              "con": [
+                "n_adv_azithromycin"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Azithromycin 可能影响肝脏功能，理论上支持该假设。"
+          ],
+          "safety_risk": [
+            "可能导致不良表型，如胆汁淤积加重。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏更明确的机制连接和支持证据。"
+        ]
+      },
+      {
+        "hypothesis_id": "H9",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects of Fluconazole in neonatal cholestasis",
+              "pro": [
+                "n_h9"
+              ],
+              "con": [
+                "n_adv_fluconazole"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Fluconazole 可能影响肝脏功能，理论上支持该假设。"
+          ],
+          "safety_risk": [
+            "可能导致不良表型，如胆汁淤积加重。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏更明确的机制连接和支持证据。"
+        ]
+      },
+      {
+        "hypothesis_id": "H10",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects of Prednisone in neonatal cholestasis",
+              "pro": [
+                "n_h10"
+              ],
+              "con": [
+                "n_adv_prednisone"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Prednisone 可能影响肝脏功能，理论上支持该假设。"
+          ],
+          "safety_risk": [
+            "可能导致不良表型，如胆汁淤积加重。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏更明确的机制连接和支持证据。"
+        ]
+      },
+      {
+        "hypothesis_id": "H11",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects of Cyclosporine in neonatal cholestasis",
+              "pro": [
+                "n_h11"
+              ],
+              "con": [
+                "n_adv_cyclosporine"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Cyclosporine 可能影响肝脏功能，理论上支持该假设。"
+          ],
+          "safety_risk": [
+            "可能导致不良表型，如胆汁淤积加重。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏更明确的机制连接和支持证据。"
+        ]
+      },
+      {
+        "hypothesis_id": "H12",
+        "score": 0.15,
+        "components": {
+          "mechanism_fit": 0.3,
+          "class_prior": 0.5,
+          "pk_pd_feasibility": 0.4,
+          "indication_plausibility": 0.1,
+          "safety_risk": 0.5,
+          "graph_bonus": 0.05,
+          "conflict_penalty": 0.85
+        },
+        "graph_signals": {
+          "support_weight": 0.8,
+          "contradiction_weight": 0.85,
+          "mechanistic_connectivity": false,
+          "path_disjointness": 1,
+          "conflict_hotspots": [
+            {
+              "topic": "Adverse effects of Sodium phenylbutyrate in neonatal cholestasis",
+              "pro": [
+                "n_h12"
+              ],
+              "con": [
+                "n_adv_sodium_phenylbutyrate"
+              ]
+            }
+          ]
+        },
+        "rationales": {
+          "mechanism_fit": [
+            "Sodium phenylbutyrate 可能影响肝脏功能，理论上支持该假设。"
+          ],
+          "safety_risk": [
+            "可能导致不良表型，如胆汁淤积加重。"
+          ]
+        },
+        "confidence": "low",
+        "uncertainties": [
+          "缺乏更明确的机制连接和支持证据。"
+        ]
+      }
+    ],
+    "ranking": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7",
+      "H8",
+      "H9",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "n_ca",
+          "type": "Drug",
+          "label": "Cholic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_uda",
+          "type": "Drug",
+          "label": "Ursodeoxycholic acid",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_silda",
+          "type": "Drug",
+          "label": "Sildenafil",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_met",
+          "type": "Drug",
+          "label": "Metronidazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_rif",
+          "type": "Drug",
+          "label": "Rifampin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_tetra",
+          "type": "Drug",
+          "label": "Tetracycline",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ery",
+          "type": "Drug",
+          "label": "Erythromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_azi",
+          "type": "Drug",
+          "label": "Azithromycin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_fluconazole",
+          "type": "Drug",
+          "label": "Fluconazole",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pred",
+          "type": "Drug",
+          "label": "Prednisone",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cyclosporine",
+          "type": "Drug",
+          "label": "Cyclosporine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_pb",
+          "type": "Pathway",
+          "label": "Bile Acid Metabolism",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_nc",
+          "type": "Phenotype",
+          "label": "Neonatal cholestasis",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h1",
+          "type": "Hypothesis",
+          "label": "H1",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h2",
+          "type": "Hypothesis",
+          "label": "H2",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h3",
+          "type": "Hypothesis",
+          "label": "H3",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h4",
+          "type": "Hypothesis",
+          "label": "H4",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h5",
+          "type": "Hypothesis",
+          "label": "H5",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h6",
+          "type": "Hypothesis",
+          "label": "H6",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h7",
+          "type": "Hypothesis",
+          "label": "H7",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h8",
+          "type": "Hypothesis",
+          "label": "H8",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h9",
+          "type": "Hypothesis",
+          "label": "H9",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h10",
+          "type": "Hypothesis",
+          "label": "H10",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h11",
+          "type": "Hypothesis",
+          "label": "H11",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_h12",
+          "type": "Hypothesis",
+          "label": "H12",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_ot_cholic",
+          "type": "Target",
+          "label": "Off-target effects of Cholic acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cholic",
+          "type": "Pathway",
+          "label": "Risk pathway associated with Cholic acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cholic",
+          "type": "Phenotype",
+          "label": "Adverse effects of Cholic acid in neonatal cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ursodeoxycholic",
+          "type": "Target",
+          "label": "Off-target effects of Ursodeoxycholic acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_ursodeoxycholic",
+          "type": "Pathway",
+          "label": "Risk pathway associated with Ursodeoxycholic acid",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_ursodeoxycholic",
+          "type": "Phenotype",
+          "label": "Adverse effects of Ursodeoxycholic acid in neonatal cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sildenafil",
+          "type": "Target",
+          "label": "Off-target effects of Sildenafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sildenafil",
+          "type": "Pathway",
+          "label": "Risk pathway associated with Sildenafil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sildenafil",
+          "type": "Phenotype",
+          "label": "Adverse effects of Sildenafil in neonatal cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_metronidazole",
+          "type": "Target",
+          "label": "Off-target effects of Metronidazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_metronidazole",
+          "type": "Pathway",
+          "label": "Risk pathway associated with Metronidazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_metronidazole",
+          "type": "Phenotype",
+          "label": "Adverse effects of Metronidazole in neonatal cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_rifampin",
+          "type": "Target",
+          "label": "Off-target effects of Rifampin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_rifampin",
+          "type": "Pathway",
+          "label": "Risk pathway associated with Rifampin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_rifampin",
+          "type": "Phenotype",
+          "label": "Adverse effects of Rifampin in neonatal cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_tetracycline",
+          "type": "Target",
+          "label": "Off-target effects of Tetracycline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_tetracycline",
+          "type": "Pathway",
+          "label": "Risk pathway associated with Tetracycline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_tetracycline",
+          "type": "Phenotype",
+          "label": "Adverse effects of Tetracycline in neonatal cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_erythromycin",
+          "type": "Target",
+          "label": "Off-target effects of Erythromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_erythromycin",
+          "type": "Pathway",
+          "label": "Risk pathway associated with Erythromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_erythromycin",
+          "type": "Phenotype",
+          "label": "Adverse effects of Erythromycin in neonatal cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_azithromycin",
+          "type": "Target",
+          "label": "Off-target effects of Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_azithromycin",
+          "type": "Pathway",
+          "label": "Risk pathway associated with Azithromycin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_azithromycin",
+          "type": "Phenotype",
+          "label": "Adverse effects of Azithromycin in neonatal cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_fluconazole",
+          "type": "Target",
+          "label": "Off-target effects of Fluconazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_fluconazole",
+          "type": "Pathway",
+          "label": "Risk pathway associated with Fluconazole",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_fluconazole",
+          "type": "Phenotype",
+          "label": "Adverse effects of Fluconazole in neonatal cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_prednisone",
+          "type": "Target",
+          "label": "Off-target effects of Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_prednisone",
+          "type": "Pathway",
+          "label": "Risk pathway associated with Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_prednisone",
+          "type": "Phenotype",
+          "label": "Adverse effects of Prednisone in neonatal cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclosporine",
+          "type": "Target",
+          "label": "Off-target effects of Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_cyclosporine",
+          "type": "Pathway",
+          "label": "Risk pathway associated with Cyclosporine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_cyclosporine",
+          "type": "Phenotype",
+          "label": "Adverse effects of Cyclosporine in neonatal cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_sodium_phenylbutyrate",
+          "type": "Target",
+          "label": "Off-target effects of Sodium phenylbutyrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp_sodium_phenylbutyrate",
+          "type": "Pathway",
+          "label": "Risk pathway associated with Sodium phenylbutyrate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv_sodium_phenylbutyrate",
+          "type": "Phenotype",
+          "label": "Adverse effects of Sodium phenylbutyrate in neonatal cholestasis",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "n_ca",
+          "target": "n_pb",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "已知调节胆汁酸代谢"
+        },
+        {
+          "source": "n_uda",
+          "target": "n_pb",
+          "relation": "modulates",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "同类药物用于胆汁淤积治疗"
+        },
+        {
+          "source": "n_silda",
+          "target": "n_pb",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "可能影响胆汁排泄"
+        },
+        {
+          "source": "n_met",
+          "target": "n_nc",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知与肝脏相关的副作用"
+        },
+        {
+          "source": "n_rif",
+          "target": "n_nc",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与肝功能有关的药物"
+        },
+        {
+          "source": "n_tetra",
+          "target": "n_nc",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "可能影响肝脏功能"
+        },
+        {
+          "source": "n_ery",
+          "target": "n_nc",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "肝代谢相关药物"
+        },
+        {
+          "source": "n_azi",
+          "target": "n_nc",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "同类药物可能影响肝功能"
+        },
+        {
+          "source": "n_fluconazole",
+          "target": "n_nc",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "与肝脏功能相关"
+        },
+        {
+          "source": "n_pred",
+          "target": "n_nc",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "激素调节与肝功能"
+        },
+        {
+          "source": "n_cyclosporine",
+          "target": "n_nc",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Proponent",
+          "rationale": "免疫抑制剂与肝功能"
+        },
+        {
+          "source": "drug_cholic_acid",
+          "target": "n_ot_cholic",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向器官"
+        },
+        {
+          "source": "n_ot_cholic",
+          "target": "n_rp_cholic",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_cholic",
+          "target": "n_adv_cholic",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_cholic",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，将消解假设益处"
+        },
+        {
+          "source": "drug_ursodeoxycholic_acid",
+          "target": "n_ot_ursodeoxycholic",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向器官"
+        },
+        {
+          "source": "n_ot_ursodeoxycholic",
+          "target": "n_rp_ursodeoxycholic",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_ursodeoxycholic",
+          "target": "n_adv_ursodeoxycholic",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_ursodeoxycholic",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，将消解假设益处"
+        },
+        {
+          "source": "drug_sildenafil",
+          "target": "n_ot_sildenafil",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向器官"
+        },
+        {
+          "source": "n_ot_sildenafil",
+          "target": "n_rp_sildenafil",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_sildenafil",
+          "target": "n_adv_sildenafil",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_sildenafil",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，将消解假设益处"
+        },
+        {
+          "source": "drug_metronidazole",
+          "target": "n_ot_metronidazole",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向器官"
+        },
+        {
+          "source": "n_ot_metronidazole",
+          "target": "n_rp_metronidazole",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_metronidazole",
+          "target": "n_adv_metronidazole",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_metronidazole",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，将消解假设益处"
+        },
+        {
+          "source": "drug_rifampin",
+          "target": "n_ot_rifampin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向器官"
+        },
+        {
+          "source": "n_ot_rifampin",
+          "target": "n_rp_rifampin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_rifampin",
+          "target": "n_adv_rifampin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_rifampin",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，将消解假设益处"
+        },
+        {
+          "source": "drug_tetracycline",
+          "target": "n_ot_tetracycline",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向器官"
+        },
+        {
+          "source": "n_ot_tetracycline",
+          "target": "n_rp_tetracycline",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_tetracycline",
+          "target": "n_adv_tetracycline",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_tetracycline",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，将消解假设益处"
+        },
+        {
+          "source": "drug_erythromycin",
+          "target": "n_ot_erythromycin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向器官"
+        },
+        {
+          "source": "n_ot_erythromycin",
+          "target": "n_rp_erythromycin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_erythromycin",
+          "target": "n_adv_erythromycin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_erythromycin",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，将消解假设益处"
+        },
+        {
+          "source": "drug_azithromycin",
+          "target": "n_ot_azithromycin",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向器官"
+        },
+        {
+          "source": "n_ot_azithromycin",
+          "target": "n_rp_azithromycin",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_azithromycin",
+          "target": "n_adv_azithromycin",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_azithromycin",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，将消解假设益处"
+        },
+        {
+          "source": "drug_fluconazole",
+          "target": "n_ot_fluconazole",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向器官"
+        },
+        {
+          "source": "n_ot_fluconazole",
+          "target": "n_rp_fluconazole",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_fluconazole",
+          "target": "n_adv_fluconazole",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_fluconazole",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，将消解假设益处"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_prednisone",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向器官"
+        },
+        {
+          "source": "n_ot_prednisone",
+          "target": "n_rp_prednisone",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_prednisone",
+          "target": "n_adv_prednisone",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_prednisone",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，将消解假设益处"
+        },
+        {
+          "source": "drug_cyclosporine",
+          "target": "n_ot_cyclosporine",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向器官"
+        },
+        {
+          "source": "n_ot_cyclosporine",
+          "target": "n_rp_cyclosporine",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_cyclosporine",
+          "target": "n_adv_cyclosporine",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_cyclosporine",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，将消解假设益处"
+        },
+        {
+          "source": "drug_sodium_phenylbutyrate",
+          "target": "n_ot_sodium_phenylbutyrate",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "可能影响非靶向器官"
+        },
+        {
+          "source": "n_ot_sodium_phenylbutyrate",
+          "target": "n_rp_sodium_phenylbutyrate",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路相关"
+        },
+        {
+          "source": "n_rp_sodium_phenylbutyrate",
+          "target": "n_adv_sodium_phenylbutyrate",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv_sodium_phenylbutyrate",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如风险成立，将消解假设益处"
+        }
+      ],
+      "round_index": 4
+    },
+    "history": {
+      "round": 4
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_cholic_acid",
+          "name": "Cholic acid"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Cholic acid 可能会通过调节胆汁酸代谢影响肝功能",
+          "安全性风险存在且未得到充分解决"
+        ],
+        "caveats": [
+          "缺乏明确的机制连接与支持证据",
+          "不良表型如胆汁淤积风险未消除"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_ursodeoxycholic_acid",
+          "name": "Ursodeoxycholic acid"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Ursodeoxycholic acid 可能通过影响胆汁排泄影响临床结果",
+          "安全性风险存在且未得到充分解决"
+        ],
+        "caveats": [
+          "缺乏明确的机制连接与支持证据",
+          "不良表型如胆汁淤积风险未消除"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_sildenafil",
+          "name": "Sildenafil"
+        },
+        "score": 0.15,
+        "graph_snapshot_ref": "GE_H3_round4",
+        "key_assumptions": [
+          "Sildenafil 可能通过影响胆汁排泄影响临床结果",
+          "安全性风险存在且未得到充分解决"
+        ],
+        "caveats": [
+          "缺乏明确的机制连接与支持证据",
+          "不良表型如胆汁淤积风险未消除"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "药物→非靶向器官影响→可能导致不良反应",
+          "reason": "多种候选存在相似的机制与安全性风险问题，重点在于未解决的胆汁淤积风险"
+        }
+      ],
+      "remaining_gaps": [
+        "缺乏明确的机制连接与支持证据",
+        "各候选药物的具体作用机制与潜在副作用需更深入探讨"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [],
+      "lessons": [
+        "需更关注药物的不良反应及其对新生儿胆汁淤积的影响",
+        "强化机制连接的证据收集"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "提供更确凿的机制证据，优先解决与胆汁淤积相关的安全性问题。"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "对每种药物的不良反应进行更全面的评估，并提供潜在影响的证据。"
+      }
+    ],
+    "heuristics": [
+      {
+        "when": "药物影响胆汁酸代谢",
+        "then": "关注可能导致的胆汁淤积风险及相应的替代药物"
+      }
+    ]
+  }
+}

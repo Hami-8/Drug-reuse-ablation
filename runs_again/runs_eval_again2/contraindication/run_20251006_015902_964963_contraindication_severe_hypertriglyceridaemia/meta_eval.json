@@ -1,0 +1,165 @@
+{
+  "subset": "contraindication",
+  "disease": "Severe hypertriglyceridaemia",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "akr-963",
+    "ari-3037mo",
+    "aro-apoc3",
+    "capre",
+    "cat-2003",
+    "conservative treatment",
+    "corn oil",
+    "dr10624 injection",
+    "epanova",
+    "epanova () + lovaza ()",
+    "ethyl icosapentate",
+    "evinacumab",
+    "fenofibrate",
+    "fish oil",
+    "gemcabene",
+    "insulin",
+    "isis apoc-iii rx",
+    "k-877",
+    "lcq908",
+    "lovaza",
+    "mat9001",
+    "metformin eicosapentaenoate",
+    "metformin hcl + vascepa",
+    "mibavademab",
+    "olezarsen",
+    "olive oil",
+    "omefas",
+    "omega-3-acid ethyl esters 90 soft capsules",
+    "pegozafermin",
+    "placebo",
+    "placebo of fenofibrate",
+    "placebo of fish oil",
+    "placebo of lcq908",
+    "plozasiran",
+    "plozasiran injection",
+    "sc401b 2 capsules",
+    "sc401b 4 capsules",
+    "sc401b 6 capsules",
+    "sterile normal saline (0.9% nacl)"
+  ],
+  "seeds_initial": [
+    "Fenofibrate",
+    "Gemfibrozil",
+    "Niacin",
+    "Omega-3 fatty acids",
+    "Fibrates",
+    "Estrogen",
+    "Thiazide diuretics",
+    "Beta-blockers",
+    "Propofol",
+    "Glucocorticoids",
+    "Aminophylline",
+    "Isotretinoin"
+  ],
+  "seed_history": [
+    [
+      "Fenofibrate",
+      "Gemfibrozil",
+      "Niacin",
+      "Omega-3 fatty acids",
+      "Fibrates",
+      "Estrogen",
+      "Thiazide diuretics",
+      "Beta-blockers",
+      "Propofol",
+      "Glucocorticoids",
+      "Aminophylline",
+      "Isotretinoin"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_fenofibrate",
+          "name": "Fenofibrate"
+        },
+        "score": 0.12,
+        "graph_snapshot_ref": "GE_H1_round2",
+        "key_assumptions": [
+          "潜在的降脂机制与高甘油三酯血症的关联性较弱",
+          "可能的安全性风险影响其有效性"
+        ],
+        "caveats": [
+          "缺乏有力的直接证据支持其用于重度高甘油三酯血症的应用"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_gemfibrozil",
+          "name": "Gemfibrozil"
+        },
+        "score": 0.12,
+        "graph_snapshot_ref": "GE_H2_round2",
+        "key_assumptions": [
+          "尽管有降脂作用，但安全性问题显著"
+        ],
+        "caveats": [
+          "与重度高甘油三酯血症的直接相关性不足"
+        ],
+        "confidence": "low"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_niacin",
+          "name": "Niacin"
+        },
+        "score": 0.12,
+        "graph_snapshot_ref": "GE_H3_round2",
+        "key_assumptions": [
+          "潜在的脂质调节机制尚需明确"
+        ],
+        "caveats": [
+          "安全性风险及疗效的不确定性"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug → Lipid Metabolism → Lipid Regulation Pathway → Severe Hypertriglyceridaemia",
+          "reason": "机制链条缺失，安全性问题加剧"
+        }
+      ],
+      "remaining_gaps": [
+        "针对每个候选药物缺少有效的支持性证据与临床关联"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [],
+          "impact_summary": "未能补齐机制链，所有候选均未有效支撑"
+        }
+      ],
+      "lessons": [
+        "注重候选药物的机制证据与安全性评估，尤其是与疗效直接相关的临床数据"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "提供更强有力的临床证据支持降低高甘油三酯血症的潜力"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "明确标出潜在的不良结果和安全性风险"
+      }
+    ],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that are contraindicated or could worsen the rare disease 'Severe hypertriglyceridaemia'. Return only names.\n\n# Heuristics:\n- When 高甘油三酯表型: then 特别考虑与不良反应及对疗效的综合影响。\n- When 评估药物安全性: then 需系统检验现有临床数据以增强信服力。"
+}

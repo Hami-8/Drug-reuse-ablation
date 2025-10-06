@@ -1,0 +1,216 @@
+{
+  "subset": "contraindication",
+  "disease": "Epileptic encephalopathy",
+  "relation": "contraindication",
+  "gold_drugs": [
+    "anti-epileptic drugs",
+    "anti-seizure medication",
+    "bexicaserin + lp352",
+    "bmb-101",
+    "cannabis + medical",
+    "cannimed® 1:20",
+    "cysteamine",
+    "day prax-562 + kg",
+    "elsunersen",
+    "enzalutamide",
+    "etx101",
+    "fenfluramine",
+    "ganaxolone",
+    "gene therapy",
+    "glycerol phenylbutyrate + ml [ravicti]",
+    "ketogenic diet",
+    "levetiracetam",
+    "lp352",
+    "matching placebo",
+    "melatonin",
+    "memantine",
+    "nbi-827104",
+    "nbi-921352",
+    "omt-28",
+    "prax-222 - fixed doses",
+    "prax-222 - initial ascending doses",
+    "prax-222 - initial dose",
+    "prax-222 - optional ascending doses",
+    "prax-562",
+    "rufinamide",
+    "soticlestat",
+    "stiripentol",
+    "stiripentol capsule (diacomit®)",
+    "stiripentol oral suspension (diacomit®)",
+    "stk-001",
+    "stk-001 - multiple ascending doses",
+    "stk-001 - single ascending doses",
+    "tak-935",
+    "tsha-105",
+    "vatiquinone",
+    "xen496",
+    "zinc dihydrate",
+    "zorevunersen",
+    "zx008"
+  ],
+  "seeds_initial": [
+    "Carbamazepine",
+    "Phenytoin",
+    "Sodium valproate",
+    "Lamotrigine",
+    "Topiramate",
+    "Oxcarbazepine",
+    "Gabapentin",
+    "Pregabalin",
+    "Tiagabine",
+    "Lacosamide",
+    "Zonisamide",
+    "Clobazam"
+  ],
+  "seed_history": [
+    [
+      "Carbamazepine",
+      "Phenytoin",
+      "Sodium valproate",
+      "Lamotrigine",
+      "Topiramate",
+      "Oxcarbazepine",
+      "Gabapentin",
+      "Pregabalin",
+      "Tiagabine",
+      "Lacosamide",
+      "Zonisamide",
+      "Clobazam"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_carbamazepine",
+          "name": "Carbamazepine"
+        },
+        "score": 0.76,
+        "graph_snapshot_ref": "GE_H1_round5",
+        "key_assumptions": [
+          "Carbamazepine禁忌指示根据已有文献支持",
+          "潜在负面表型需考虑"
+        ],
+        "caveats": [
+          "缺乏具体临床案例支持该药的contraindication"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_phenytoin",
+          "name": "Phenytoin"
+        },
+        "score": 0.74,
+        "graph_snapshot_ref": "GE_H2_round5",
+        "key_assumptions": [
+          "Phenytoin与癫痫性脑病相关的风险需进一步验证"
+        ],
+        "caveats": [
+          "需更多研究确认该药的安全性"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H3",
+        "candidate": {
+          "id": "drug_sodium_valproate",
+          "name": "Sodium valproate"
+        },
+        "score": 0.72,
+        "graph_snapshot_ref": "GE_H3_round5",
+        "key_assumptions": [
+          "部分情况下Sodium valproate被认为不可用"
+        ],
+        "caveats": [
+          "需进一步确认支持此结论的数据"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H4",
+        "candidate": {
+          "id": "drug_lamotrigine",
+          "name": "Lamotrigine"
+        },
+        "score": 0.68,
+        "graph_snapshot_ref": "GE_H4_round5",
+        "key_assumptions": [
+          "Lamotrigine在与癫痫性脑病的相互作用方面需监测反应"
+        ],
+        "caveats": [
+          "缺乏大量随机试验数据来支持此风险"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "hypothesis_id": "H5",
+        "candidate": {
+          "id": "drug_topiramate",
+          "name": "Topiramate"
+        },
+        "score": 0.66,
+        "graph_snapshot_ref": "GE_H5_round5",
+        "key_assumptions": [
+          "Topiramate的风险需谨慎评估"
+        ],
+        "caveats": [
+          "临床证据相对有限"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→contraindication→Disease",
+          "reason": "各药物对癫痫性脑病的禁忌在文献中有支持"
+        }
+      ],
+      "remaining_gaps": [
+        "还需进一步的数据支持不同药物禁忌的具体临床案例"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "impact_summary": "补齐了通路 X，path_disjointness↑"
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "E",
+            "F"
+          ],
+          "impact_summary": "药物禁忌的风险仍需明确，建议个体化评估"
+        }
+      ],
+      "lessons": [
+        "权衡禁忌风险与潜在利益应综合考虑临床背景",
+        "数据缺口应引导新的临床研究方向"
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "继续查阅关于特定药物对癫痫性脑病的最新研究数据"
+      },
+      {
+        "role": "Skeptic",
+        "patch": "明确标注可证伪的临床症状与反应，从而避免误导"
+      }
+    ],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that are contraindicated or could worsen the rare disease 'Epileptic encephalopathy'. Return only names.\n\n# Prior guidance for Explorer:\n- Focus on alternatives that provide clear mechanistic differences and better side effect profiles.\n\n# Heuristics:\n- When considering drugs for epileptic encephalopathy: then Evaluate existing safety profiles and adverse reactions closely."
+}

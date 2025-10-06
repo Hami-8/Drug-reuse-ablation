@@ -1,0 +1,136 @@
+{
+  "subset": "indication",
+  "disease": "Noonan syndrome",
+  "relation": "indication",
+  "gold_drugs": [
+    "somatropin"
+  ],
+  "seeds_initial": [
+    "Growth hormone",
+    "Somatropin",
+    "Albuterol",
+    "Epinephrine",
+    "Aspirin",
+    "Propranolol",
+    "Hydroxyurea",
+    "Rasburicase",
+    "Levothyroxine",
+    "Enalapril",
+    "Clonidine",
+    "Atomoxetine"
+  ],
+  "seed_history": [
+    [
+      "Growth hormone",
+      "Somatropin",
+      "Albuterol",
+      "Epinephrine",
+      "Aspirin",
+      "Propranolol",
+      "Hydroxyurea",
+      "Rasburicase",
+      "Levothyroxine",
+      "Enalapril",
+      "Clonidine",
+      "Atomoxetine"
+    ]
+  ],
+  "final_report": {
+    "final_recommendations": [
+      {
+        "hypothesis_id": "H1",
+        "candidate": {
+          "id": "drug_growth_hormone",
+          "name": "Growth hormone"
+        },
+        "score": 0.77,
+        "graph_snapshot_ref": "GE_H1_round4",
+        "key_assumptions": [
+          "Growth hormone directly acts on growth hormone receptor",
+          "Impacts growth-related diseases"
+        ],
+        "caveats": [
+          "Potential counteracting factors to efficacy not fully resolved"
+        ],
+        "confidence": "high"
+      },
+      {
+        "hypothesis_id": "H2",
+        "candidate": {
+          "id": "drug_somatropin",
+          "name": "Somatropin"
+        },
+        "score": 0.76,
+        "graph_snapshot_ref": "GE_H2_round4",
+        "key_assumptions": [
+          "Somatropin is a synthetic form of growth hormone",
+          "Targets the same receptors as growth hormone"
+        ],
+        "caveats": [
+          "Potential counteracting factors to efficacy not fully resolved"
+        ],
+        "confidence": "high"
+      }
+    ],
+    "audit_report": {
+      "decisive_graph_motifs": [
+        {
+          "pattern": "Drug→Target→Pathway→Disease",
+          "reason": "Mechanistic pathways are clearly established for both Growth hormone and Somatropin"
+        }
+      ],
+      "remaining_gaps": [
+        "Potential adverse effects and counteracting efficacy factors not fully established"
+      ]
+    },
+    "seed_retrospective": {
+      "batches": [
+        {
+          "round": 1,
+          "seeds": [
+            "A",
+            "B"
+          ],
+          "impact_summary": "Identified initial connections to growth hormone pathways."
+        },
+        {
+          "round": 2,
+          "seeds": [
+            "C",
+            "D"
+          ],
+          "impact_summary": "Highlighted potential adverse effects and conflicting pathways."
+        },
+        {
+          "round": 3,
+          "seeds": [
+            "E",
+            "F"
+          ],
+          "impact_summary": "Strengthened existing connections, reduced conflict."
+        }
+      ],
+      "lessons": [
+        "Established effective connections increase indication plausibility.",
+        "Ongoing assessment of adverse effects is crucial in the context of treatment efficacy."
+      ]
+    },
+    "prompt_patches": [
+      {
+        "role": "Proponent",
+        "patch": "Focus on establishing direct mechanistic links to Noonan syndrome."
+      },
+      {
+        "role": "Skeptic",
+        "patch": "Identify and explicitly document any potential counteracting pathways."
+      },
+      {
+        "role": "Explorer",
+        "patch": "Ensure that new candidates are diverse in mechanism and address unique aspects of Noonan syndrome."
+      }
+    ],
+    "heuristics": []
+  },
+  "experience_used": true,
+  "explorer_prompt": "List drugs that could be indicated for the rare disease 'Noonan syndrome'. Return only names.\n\n# Prior guidance for Explorer:\n- 保持与Noonan表型一致的药物选择；关注不同生长路径的替代药物\n\n# Heuristics:\n- When 考虑Noonan症候群: then 评估影响生长和心血管系统的药物"
+}

@@ -1,0 +1,1049 @@
+{
+  "input": {
+    "mode": "revise",
+    "query": {
+      "entity": "Familial cerebral small vessel disease",
+      "relation": "contraindication"
+    },
+    "tegraph_snapshot": {
+      "nodes": [
+        {
+          "id": "drug_aspirin",
+          "type": "Drug",
+          "label": "Aspirin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_clopidogrel",
+          "type": "Drug",
+          "label": "Clopidogrel",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_warfarin",
+          "type": "Drug",
+          "label": "Warfarin",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_dabigatran",
+          "type": "Drug",
+          "label": "Dabigatran",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_rivaroxaban",
+          "type": "Drug",
+          "label": "Rivaroxaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_apixaban",
+          "type": "Drug",
+          "label": "Apixaban",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_statins",
+          "type": "Drug",
+          "label": "Statins",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_fenofibrate",
+          "type": "Drug",
+          "label": "Fenofibrate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_metoprolol",
+          "type": "Drug",
+          "label": "Metoprolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_propranolol",
+          "type": "Drug",
+          "label": "Propranolol",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_nimodipine",
+          "type": "Drug",
+          "label": "Nimodipine",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "drug_valproate",
+          "type": "Drug",
+          "label": "Valproate",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "disease_fcsvd",
+          "type": "Disease",
+          "label": "Familial cerebral small vessel disease",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "target_impairment",
+          "type": "Target",
+          "label": "Impairment",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "pathway_vascular",
+          "type": "Pathway",
+          "label": "Vascular Impairment Pathway",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "phenotype_stroke",
+          "type": "Phenotype",
+          "label": "Stroke",
+          "attrs": {
+            "agent": "Proponent"
+          }
+        },
+        {
+          "id": "n_cvds",
+          "type": "Disease",
+          "label": "Cerebral Small Vessel Disease",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Increased Risk of Hemorrhage",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "drug_aspirin",
+          "target": "target_impairment",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知对血管功能有影响"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "target_impairment",
+          "relation": "inhibits",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "已知对血管功能有影响"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "target_impairment",
+          "relation": "inhibits",
+          "weight": 0.78,
+          "agent": "Proponent",
+          "rationale": "已知对血管功能有影响"
+        },
+        {
+          "source": "drug_dabigatran",
+          "target": "target_impairment",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知对血管功能有影响"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "target_impairment",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知对血管功能有影响"
+        },
+        {
+          "source": "drug_apixaban",
+          "target": "target_impairment",
+          "relation": "inhibits",
+          "weight": 0.75,
+          "agent": "Proponent",
+          "rationale": "已知对血管功能有影响"
+        },
+        {
+          "source": "drug_statins",
+          "target": "target_impairment",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "改善血管功能的常识"
+        },
+        {
+          "source": "disease_fcsvd",
+          "target": "pathway_vascular",
+          "relation": "involved_in",
+          "weight": 0.9,
+          "agent": "Proponent",
+          "rationale": "血管病变与该病相关"
+        },
+        {
+          "source": "pathway_vascular",
+          "target": "phenotype_stroke",
+          "relation": "causes",
+          "weight": 0.85,
+          "agent": "Proponent",
+          "rationale": "通路与中风明显相关"
+        },
+        {
+          "source": "drug_fenofibrate",
+          "target": "target_impairment",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "潜在的血脂调节机制"
+        },
+        {
+          "source": "drug_metoprolol",
+          "target": "target_impairment",
+          "relation": "inhibits",
+          "weight": 0.65,
+          "agent": "Proponent",
+          "rationale": "已知对心血管有影响"
+        },
+        {
+          "source": "drug_propranolol",
+          "target": "target_impairment",
+          "relation": "inhibits",
+          "weight": 0.6,
+          "agent": "Proponent",
+          "rationale": "已知对心血管有影响"
+        },
+        {
+          "source": "drug_nimodipine",
+          "target": "target_impairment",
+          "relation": "inhibits",
+          "weight": 0.58,
+          "agent": "Proponent",
+          "rationale": "已知有改善血管的作用"
+        },
+        {
+          "source": "drug_valproate",
+          "target": "target_impairment",
+          "relation": "modulates",
+          "weight": 0.55,
+          "agent": "Proponent",
+          "rationale": "潜在的抗炎作用可能涉及血管"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "disease_fcsvd",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "影响 FCSVD 相关的血管通路"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "disease_fcsvd",
+          "relation": "supports",
+          "weight": 0.8,
+          "agent": "Proponent",
+          "rationale": "影响 FCSVD 相关的血管通路"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "disease_fcsvd",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响 FCSVD 相关的血管通路"
+        },
+        {
+          "source": "drug_dabigatran",
+          "target": "disease_fcsvd",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响 FCSVD 相关的血管通路"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "disease_fcsvd",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响 FCSVD 相关的血管通路"
+        },
+        {
+          "source": "drug_apixaban",
+          "target": "disease_fcsvd",
+          "relation": "supports",
+          "weight": 0.7,
+          "agent": "Proponent",
+          "rationale": "影响 FCSVD 相关的血管通路"
+        },
+        {
+          "source": "drug_aspirin",
+          "target": "n_cvds",
+          "relation": "contraindicated_in",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "已知增加出血风险"
+        },
+        {
+          "source": "drug_clopidogrel",
+          "target": "n_cvds",
+          "relation": "contraindicated_in",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "增加出血风险"
+        },
+        {
+          "source": "drug_warfarin",
+          "target": "n_cvds",
+          "relation": "contraindicated_in",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险显著增加"
+        },
+        {
+          "source": "drug_dabigatran",
+          "target": "n_cvds",
+          "relation": "contraindicated_in",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "与出血风险相关"
+        },
+        {
+          "source": "drug_rivaroxaban",
+          "target": "n_cvds",
+          "relation": "contraindicated_in",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "有出血风险"
+        },
+        {
+          "source": "drug_apixaban",
+          "target": "n_cvds",
+          "relation": "contraindicated_in",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可引起出血问题"
+        },
+        {
+          "source": "drug_statins",
+          "target": "n_cvds",
+          "relation": "may_exacerbate",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的对脑血管健康有害"
+        },
+        {
+          "source": "n_cvds",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.9,
+          "agent": "Skeptic",
+          "rationale": "脑小血管病导致出血风险增加"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "如果药物引起出血，将抵消效益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险抵消益处"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险影响治疗效果"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "可能抵消任何治疗效果"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "出血风险显著"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "疗效可能被出血风险掩盖"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可能影响整体安全性"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "潜在的问题"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "可引起不良后果"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "干扰治疗效果"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "增加风险"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "尽量减少使用"
+        }
+      ],
+      "round_index": 3
+    },
+    "history": {
+      "round": 3,
+      "last_scores": [
+        {
+          "hypothesis_id": "H1",
+          "score": 0.23,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.85,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 1.65,
+            "contradiction_weight": 1.45,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 2,
+            "conflict_hotspots": [
+              {
+                "topic": "出血风险",
+                "pro": [
+                  "n_cvds"
+                ],
+                "con": [
+                  "n_adv"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "适用于血管功能影响的已知作用机制"
+            ],
+            "safety_risk": [
+              "引发出血风险的证据在图中显著"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "对安全性的评估受限于尚无长期数据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H2",
+          "score": 0.23,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.85,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 1.65,
+            "contradiction_weight": 1.45,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 2,
+            "conflict_hotspots": [
+              {
+                "topic": "出血风险",
+                "pro": [
+                  "n_cvds"
+                ],
+                "con": [
+                  "n_adv"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "适用于血管功能影响的已知作用机制"
+            ],
+            "safety_risk": [
+              "引发出血风险的证据在图中显著"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "对安全性的评估受限于尚无长期数据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H3",
+          "score": 0.23,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.85,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 1.65,
+            "contradiction_weight": 1.45,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 2,
+            "conflict_hotspots": [
+              {
+                "topic": "出血风险",
+                "pro": [
+                  "n_cvds"
+                ],
+                "con": [
+                  "n_adv"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "适用于血管功能影响的已知作用机制"
+            ],
+            "safety_risk": [
+              "引发出血风险的证据在图中显著"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "对安全性的评估受限于尚无长期数据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H4",
+          "score": 0.23,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.85,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 1.65,
+            "contradiction_weight": 1.45,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 2,
+            "conflict_hotspots": [
+              {
+                "topic": "出血风险",
+                "pro": [
+                  "n_cvds"
+                ],
+                "con": [
+                  "n_adv"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "适用于血管功能影响的已知作用机制"
+            ],
+            "safety_risk": [
+              "引发出血风险的证据在图中显著"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "对安全性的评估受限于尚无长期数据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H5",
+          "score": 0.23,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.85,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 1.65,
+            "contradiction_weight": 1.45,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 2,
+            "conflict_hotspots": [
+              {
+                "topic": "出血风险",
+                "pro": [
+                  "n_cvds"
+                ],
+                "con": [
+                  "n_adv"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "适用于血管功能影响的已知作用机制"
+            ],
+            "safety_risk": [
+              "引发出血风险的证据在图中显著"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "对安全性的评估受限于尚无长期数据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H6",
+          "score": 0.23,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.85,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 1.65,
+            "contradiction_weight": 1.45,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 2,
+            "conflict_hotspots": [
+              {
+                "topic": "出血风险",
+                "pro": [
+                  "n_cvds"
+                ],
+                "con": [
+                  "n_adv"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "适用于血管功能影响的已知作用机制"
+            ],
+            "safety_risk": [
+              "引发出血风险的证据在图中显著"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "对安全性的评估受限于尚无长期数据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H7",
+          "score": 0.23,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.85,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 1.65,
+            "contradiction_weight": 1.45,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 2,
+            "conflict_hotspots": [
+              {
+                "topic": "出血风险",
+                "pro": [
+                  "n_cvds"
+                ],
+                "con": [
+                  "n_adv"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "适用于血管功能影响的已知作用机制"
+            ],
+            "safety_risk": [
+              "引发出血风险的证据在图中显著"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "对安全性的评估受限于尚无长期数据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H8",
+          "score": 0.23,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.85,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 1.65,
+            "contradiction_weight": 1.45,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 2,
+            "conflict_hotspots": [
+              {
+                "topic": "出血风险",
+                "pro": [
+                  "n_cvds"
+                ],
+                "con": [
+                  "n_adv"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "适用于血管功能影响的已知作用机制"
+            ],
+            "safety_risk": [
+              "引发出血风险的证据在图中显著"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "对安全性的评估受限于尚无长期数据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H9",
+          "score": 0.23,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.85,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 1.65,
+            "contradiction_weight": 1.45,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 2,
+            "conflict_hotspots": [
+              {
+                "topic": "出血风险",
+                "pro": [
+                  "n_cvds"
+                ],
+                "con": [
+                  "n_adv"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "适用于血管功能影响的已知作用机制"
+            ],
+            "safety_risk": [
+              "引发出血风险的证据在图中显著"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "对安全性的评估受限于尚无长期数据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H10",
+          "score": 0.23,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.85,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 1.65,
+            "contradiction_weight": 1.45,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 2,
+            "conflict_hotspots": [
+              {
+                "topic": "出血风险",
+                "pro": [
+                  "n_cvds"
+                ],
+                "con": [
+                  "n_adv"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "适用于血管功能影响的已知作用机制"
+            ],
+            "safety_risk": [
+              "引发出血风险的证据在图中显著"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "对安全性的评估受限于尚无长期数据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H11",
+          "score": 0.23,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.85,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 1.65,
+            "contradiction_weight": 1.45,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 2,
+            "conflict_hotspots": [
+              {
+                "topic": "出血风险",
+                "pro": [
+                  "n_cvds"
+                ],
+                "con": [
+                  "n_adv"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "适用于血管功能影响的已知作用机制"
+            ],
+            "safety_risk": [
+              "引发出血风险的证据在图中显著"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "对安全性的评估受限于尚无长期数据支持"
+          ]
+        },
+        {
+          "hypothesis_id": "H12",
+          "score": 0.23,
+          "components": {
+            "mechanism_fit": 0.5,
+            "class_prior": 0.4,
+            "pk_pd_feasibility": 0.6,
+            "indication_plausibility": 0.5,
+            "safety_risk": 0.85,
+            "graph_bonus": 0.1,
+            "conflict_penalty": 0.05
+          },
+          "graph_signals": {
+            "support_weight": 1.65,
+            "contradiction_weight": 1.45,
+            "mechanistic_connectivity": false,
+            "path_disjointness": 2,
+            "conflict_hotspots": [
+              {
+                "topic": "出血风险",
+                "pro": [
+                  "n_cvds"
+                ],
+                "con": [
+                  "n_adv"
+                ]
+              }
+            ]
+          },
+          "rationales": {
+            "mechanism_fit": [
+              "适用于血管功能影响的已知作用机制"
+            ],
+            "safety_risk": [
+              "引发出血风险的证据在图中显著"
+            ]
+          },
+          "confidence": "low",
+          "uncertainties": [
+            "对安全性的评估受限于尚无长期数据支持"
+          ]
+        }
+      ]
+    },
+    "thresholds": {
+      "stop_delta": 0.03,
+      "saturation_ratio": 0.65,
+      "weights": {
+        "path_disjointness": 1.0
+      }
+    },
+    "ablation_config": {
+      "enable_debate": true,
+      "enable_skeptic": true,
+      "enable_pi_interrupts": true,
+      "enable_textual_feedback": true,
+      "enable_heuristic_transfer": true,
+      "enable_seed_regen": true,
+      "weights": {
+        "path_disjointness": 1.0
+      },
+      "mode": "graph"
+    }
+  },
+  "output": {
+    "revisions": [
+      {
+        "hypothesis_id": "H1",
+        "graph_actions": [
+          {
+            "type": "stress_test_safety",
+            "topic": "出血风险",
+            "expectation": "若风险成立，标注高权重 refutes 边",
+            "assignee": "Skeptic"
+          },
+          {
+            "type": "add_mechanism_link",
+            "from": "drug_fenofibrate",
+            "via": [],
+            "to": "target_impairment",
+            "success_criteria": "与经验证的禁忌药物无重叠",
+            "assignee": "Proponent"
+          },
+          {
+            "type": "add_disjoint_path",
+            "from": "drug_statins",
+            "to": "target_impairment",
+            "success_criteria": "增加与现有假设的路径独立性",
+            "assignee": "Proponent"
+          }
+        ],
+        "debate_focus": [
+          "对比各药物对血管损伤的长期影响",
+          "明确如何减少出血风险与临床利益间的冲突"
+        ]
+      }
+    ],
+    "pruned_hypotheses": [],
+    "new_subhypotheses": [],
+    "seed_request": {
+      "should_regenerate": false,
+      "reason": "支持和反对的出血风险证据集中，待进一步探索机制与安全性信息以改善现有假设的独立性。",
+      "n": 4
+    }
+  }
+}

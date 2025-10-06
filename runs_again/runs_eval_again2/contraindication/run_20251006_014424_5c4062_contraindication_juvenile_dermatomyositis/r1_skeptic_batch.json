@@ -1,0 +1,594 @@
+{
+  "input": {
+    "mode": "build_counterchain",
+    "query": {
+      "entity": "Juvenile dermatomyositis",
+      "relation": "contraindication"
+    },
+    "hypotheses": [
+      {
+        "id": "H1",
+        "candidate": {
+          "id": "drug_methotrexate",
+          "name": "Methotrexate"
+        },
+        "mechanism_outline": "",
+        "priority": 1.0
+      },
+      {
+        "id": "H2",
+        "candidate": {
+          "id": "drug_corticosteroids",
+          "name": "Corticosteroids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.95
+      },
+      {
+        "id": "H3",
+        "candidate": {
+          "id": "drug_hydroxychloroquine",
+          "name": "Hydroxychloroquine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.9
+      },
+      {
+        "id": "H4",
+        "candidate": {
+          "id": "drug_azathioprine",
+          "name": "Azathioprine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.85
+      },
+      {
+        "id": "H5",
+        "candidate": {
+          "id": "drug_cyclophosphamide",
+          "name": "Cyclophosphamide"
+        },
+        "mechanism_outline": "",
+        "priority": 0.8
+      },
+      {
+        "id": "H6",
+        "candidate": {
+          "id": "drug_dalfampridine",
+          "name": "Dalfampridine"
+        },
+        "mechanism_outline": "",
+        "priority": 0.75
+      },
+      {
+        "id": "H7",
+        "candidate": {
+          "id": "drug_mycophenolate_mofetil",
+          "name": "Mycophenolate mofetil"
+        },
+        "mechanism_outline": "",
+        "priority": 0.7
+      },
+      {
+        "id": "H8",
+        "candidate": {
+          "id": "drug_prednisone",
+          "name": "Prednisone"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6499999999999999
+      },
+      {
+        "id": "H9",
+        "candidate": {
+          "id": "drug_topical_retinoids",
+          "name": "Topical retinoids"
+        },
+        "mechanism_outline": "",
+        "priority": 0.6
+      },
+      {
+        "id": "H10",
+        "candidate": {
+          "id": "drug_interferon",
+          "name": "Interferon"
+        },
+        "mechanism_outline": "",
+        "priority": 0.55
+      },
+      {
+        "id": "H11",
+        "candidate": {
+          "id": "drug_mupirocin",
+          "name": "Mupirocin"
+        },
+        "mechanism_outline": "",
+        "priority": 0.5
+      },
+      {
+        "id": "H12",
+        "candidate": {
+          "id": "drug_minocycline",
+          "name": "Minocycline"
+        },
+        "mechanism_outline": "",
+        "priority": 0.44999999999999996
+      }
+    ],
+    "tegraph_snapshot": {
+      "nodes": [],
+      "edges": [],
+      "round_index": 1
+    },
+    "constraints": {
+      "max_new_nodes": 50,
+      "max_new_edges": 64,
+      "batched": true
+    }
+  },
+  "output": {
+    "graph_updates": {
+      "add_nodes": [
+        {
+          "id": "n_ot_mtx",
+          "type": "Target",
+          "label": "Off-target Methotrexate",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cort",
+          "type": "Target",
+          "label": "Off-target Corticosteroids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_hcq",
+          "type": "Target",
+          "label": "Off-target Hydroxychloroquine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_aza",
+          "type": "Target",
+          "label": "Off-target Azathioprine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_cyclo",
+          "type": "Target",
+          "label": "Off-target Cyclophosphamide",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_dalf",
+          "type": "Target",
+          "label": "Off-target Dalfampridine",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mmf",
+          "type": "Target",
+          "label": "Off-target Mycophenolate mofetil",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_pred",
+          "type": "Target",
+          "label": "Off-target Prednisone",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_ret",
+          "type": "Target",
+          "label": "Off-target Topical retinoids",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_interferon",
+          "type": "Target",
+          "label": "Off-target Interferon",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mupi",
+          "type": "Target",
+          "label": "Off-target Mupirocin",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_ot_mino",
+          "type": "Target",
+          "label": "Off-target Minocycline",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_rp",
+          "type": "Pathway",
+          "label": "Risk Pathway",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        },
+        {
+          "id": "n_adv",
+          "type": "Phenotype",
+          "label": "Adverse Effects",
+          "attrs": {
+            "agent": "Skeptic"
+          }
+        }
+      ],
+      "add_edges": [
+        {
+          "source": "drug_methotrexate",
+          "target": "n_ot_mtx",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Methotrexate可能影响非靶器官"
+        },
+        {
+          "source": "drug_corticosteroids",
+          "target": "n_ot_cort",
+          "relation": "acts_on",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "Corticosteroids可能影响非靶器官"
+        },
+        {
+          "source": "drug_hydroxychloroquine",
+          "target": "n_ot_hcq",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Hydroxychloroquine可能影响非靶器官"
+        },
+        {
+          "source": "drug_azathioprine",
+          "target": "n_ot_aza",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Azathioprine可能影响非靶器官"
+        },
+        {
+          "source": "drug_cyclophosphamide",
+          "target": "n_ot_cyclo",
+          "relation": "acts_on",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "Cyclophosphamide可能影响非靶器官"
+        },
+        {
+          "source": "drug_dalfampridine",
+          "target": "n_ot_dalf",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "Dalfampridine可能影响非靶器官"
+        },
+        {
+          "source": "drug_mycophenolate_mofetil",
+          "target": "n_ot_mmf",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "Mycophenolate mofetil可能影响非靶器官"
+        },
+        {
+          "source": "drug_prednisone",
+          "target": "n_ot_pred",
+          "relation": "acts_on",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "Prednisone可能影响非靶器官"
+        },
+        {
+          "source": "drug_topical_retinoids",
+          "target": "n_ot_ret",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "Topical retinoids可能影响非靶器官"
+        },
+        {
+          "source": "drug_interferon",
+          "target": "n_ot_interferon",
+          "relation": "acts_on",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "Interferon可能影响非靶器官"
+        },
+        {
+          "source": "drug_mupirocin",
+          "target": "n_ot_mupi",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "Mupirocin可能影响非靶器官"
+        },
+        {
+          "source": "drug_minocycline",
+          "target": "n_ot_mino",
+          "relation": "acts_on",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "Minocycline可能影响非靶器官"
+        },
+        {
+          "source": "n_ot_mtx",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_ot_cort",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_ot_hcq",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_ot_aza",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_ot_cyclo",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_ot_dalf",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_ot_mmf",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_ot_pred",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.5,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_ot_ret",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_ot_interferon",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.4,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_ot_mupi",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.3,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_ot_mino",
+          "target": "n_rp",
+          "relation": "involved_in",
+          "weight": 0.3,
+          "agent": "Skeptic",
+          "rationale": "与风险通路关联"
+        },
+        {
+          "source": "n_rp",
+          "target": "n_adv",
+          "relation": "causes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "导致不良表型"
+        },
+        {
+          "source": "n_adv",
+          "target": "H1",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，将抵消药物获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H2",
+          "relation": "refutes",
+          "weight": 0.85,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，将抵消药物获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H3",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，将抵消药物获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H4",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，将抵消药物获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H5",
+          "relation": "refutes",
+          "weight": 0.8,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，将抵消药物获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H6",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，将抵消药物获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H7",
+          "relation": "refutes",
+          "weight": 0.75,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，将抵消药物获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H8",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，将抵消药物获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H9",
+          "relation": "refutes",
+          "weight": 0.7,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，将抵消药物获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H10",
+          "relation": "refutes",
+          "weight": 0.65,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，将抵消药物获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H11",
+          "relation": "refutes",
+          "weight": 0.6,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，将抵消药物获益"
+        },
+        {
+          "source": "n_adv",
+          "target": "H12",
+          "relation": "refutes",
+          "weight": 0.55,
+          "agent": "Skeptic",
+          "rationale": "若存在风险，将抵消药物获益"
+        }
+      ],
+      "merge": [],
+      "set_weights": [],
+      "conflict_hotspots": [
+        {
+          "topic": "潜在禁忌药物与皮肤病风险",
+          "pro_nodes": [
+            "n_rp"
+          ],
+          "con_nodes": [
+            "H1",
+            "H2",
+            "H3",
+            "H4",
+            "H5",
+            "H6",
+            "H7",
+            "H8",
+            "H9",
+            "H10",
+            "H11",
+            "H12"
+          ],
+          "note": "各药物疗效与风险显著冲突"
+        }
+      ]
+    },
+    "counterclaims": [
+      {
+        "id": "K1",
+        "text": "Methotrexate及其他药物可能导致皮肤不良反应或加重病情",
+        "confidence": "high"
+      },
+      {
+        "id": "K2",
+        "text": "药物可能影响其他免疫机制，导致反效果",
+        "confidence": "high"
+      }
+    ],
+    "assumptions_challenged": [
+      "各药物在青少年皮肤病中的安全性是否得到充分验证",
+      "药物与青少年特有病理是否相兼容"
+    ],
+    "falsification_tests": [
+      "存在否定Methotrexate等药物对青少年皮肤病影响的任何数据？",
+      "是否有临床证据支持药物在此症状下的有效性？"
+    ],
+    "next_focus_for_pi": [
+      "要求更具体的青少年安全性数据或临床试验结果",
+      "对抗冲突热点进行进一步探索或数据支持"
+    ]
+  }
+}
